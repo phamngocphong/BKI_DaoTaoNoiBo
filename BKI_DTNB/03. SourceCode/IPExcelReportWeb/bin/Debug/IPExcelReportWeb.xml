@@ -1,0 +1,38 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+IPExcelReportWeb
+</name>
+</assembly>
+<members>
+<member name="M:IPExcelReportWeb.CExportColumnFactory.CreateExportColumnAsp(System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Dùng trong ASP.NET
+ </summary>
+	<param name="i_iGridCol"></param>
+	<param name="i_iSheetCol"></param>
+	<param name="i_iSheetStartRow"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:IPExcelReportWeb.CObjectExportColumn.ExportWithoutFixedRowsAsp">
+	<summary>
+ Dùng trong ASP.NET
+ </summary>
+	<remarks></remarks>
+</member><member name="P:IPExcelReportWeb.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:IPExcelReportWeb.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:IPExcelReportWeb.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

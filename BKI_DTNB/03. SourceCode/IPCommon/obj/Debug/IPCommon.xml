@@ -1,0 +1,38 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+IPCommon
+</name>
+</assembly>
+<members>
+<member name="M:IP.Core.IPCommon.CGridUtils.grid_Double_Click(System.Object,System.EventArgs)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Dùng để Collapse-Expand khi Double Click vào Dòng node group
+ </summary>
+	<remarks>
+ Được gọi ở sự kiện Double lên Dòng node group
+ </remarks>
+	<history>
+ 	[tronghv]	03/03/2014	Edited
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:IP.Core.IPCommon.CGridUtils.AddSave_Excel_Handlers(C1.Win.C1FlexGrid.C1FlexGrid)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Thêm chức năng Save cho grid
+ </summary>
+	<param name="i_fg"></param>
+	<remarks>
+ Thường được gọi tại format control
+ </remarks>
+	<history>
+ 	[tund]	26/04/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member>
+</members>
+</doc>

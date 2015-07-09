@@ -1,0 +1,134 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="BKI_QLTTQuocAnh.DS.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="BKI_QLTTQuocAnhConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=BKI_QLTTQuocAnh;Initial Catalog=BKI_QLTTQuocAnh;Persist Security Info=True;User ID=sa;Password=sa123456&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=BKI_QLTTQuocAnh;Initial Catalog=BKI_QLTTQuocAnh;Persist Security Info=True;User ID=sa;Password=sa123456</Value>
+    </Setting>
+    <Setting Name="BKI_QLTTQuocAnhConnectionString1" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=.;Initial Catalog=BKI_QLTTQuocAnh;User ID=sa;Password=sa&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=.;Initial Catalog=BKI_QLTTQuocAnh;User ID=sa;Password=sa</Value>
+    </Setting>
+    <Setting Name="BKI_QLTTQuocAnhConnectionString2" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=.\TNT;Initial Catalog=BKI_QLTTQuocAnh;Persist Security Info=True;User ID=sa;Password=sa&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=.\TNT;Initial Catalog=BKI_QLTTQuocAnh;Persist Security Info=True;User ID=sa;Password=sa</Value>
+    </Setting>
+    <Setting Name="BKI_QLTTQuocAnhConnectionString3" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=HNC\TNT;Initial Catalog=BKI_QLTTQuocAnh;User ID=sa;Password=sa&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=HNC\TNT;Initial Catalog=BKI_QLTTQuocAnh;User ID=sa;Password=sa</Value>
+    </Setting>
+    <Setting Name="masterConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=DATATSRV;Initial Catalog=master;Persist Security Info=True;User ID=bkindex;Password=bkindex&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=DATATSRV;Initial Catalog=master;Persist Security Info=True;User ID=bkindex;Password=bkindex</Value>
+    </Setting>
+    <Setting Name="BKI_QLTTQuocAnhConnectionString4" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=DATATSRV;Initial Catalog=BKI_QLTTQuocAnh;Persist Security Info=True;User ID=bkindex;Password=bkindex&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=DATATSRV;Initial Catalog=BKI_QLTTQuocAnh;Persist Security Info=True;User ID=bkindex;Password=bkindex</Value>
+    </Setting>
+    <Setting Name="BKI_QLTTQuocAnhConnectionString5" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=QUYETNT-PC\SQLEXPRESS;Initial Catalog=BKI_QLTTQuocAnh;User ID=sa;Password=sa&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=QUYETNT-PC\SQLEXPRESS;Initial Catalog=BKI_QLTTQuocAnh;User ID=sa;Password=sa</Value>
+    </Setting>
+    <Setting Name="BKI_QLTTQuocAnhConnectionString6" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=LENOVO-PC\SQLEXPRESS;Initial Catalog=BKI_QLTTQuocAnh;Persist Security Info=True;User ID=sa;Password=123456&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=LENOVO-PC\SQLEXPRESS;Initial Catalog=BKI_QLTTQuocAnh;Persist Security Info=True;User ID=sa;Password=123456</Value>
+    </Setting>
+    <Setting Name="BKI_QLTTQuocAnhConnectionString7" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=.\SQL2008;Initial Catalog=BKI_QLTTQuocAnh;Persist Security Info=True;User ID=sa;Password=sa&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=.\SQL2008;Initial Catalog=BKI_QLTTQuocAnh;Persist Security Info=True;User ID=sa;Password=sa</Value>
+    </Setting>
+    <Setting Name="BKI_QLTTQuocAnh_2ConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=LENOVO-PC\SQLEXPRESS;Initial Catalog=BKI_QLTTQuocAnh_2;Persist Security Info=True;User ID=sa;Password=123456&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=LENOVO-PC\SQLEXPRESS;Initial Catalog=BKI_QLTTQuocAnh_2;Persist Security Info=True;User ID=sa;Password=123456</Value>
+    </Setting>
+    <Setting Name="QuanLyTTQuocAnhConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=TUND\SQLEXPRESS;Initial Catalog=QuanLyTTQuocAnh;User ID=sa;Password=sa&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=TUND\SQLEXPRESS;Initial Catalog=QuanLyTTQuocAnh;User ID=sa;Password=sa</Value>
+    </Setting>
+    <Setting Name="QuanLyTTQuocAnhConnectionString1" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=HAIHD\SQLEXPRESS;Initial Catalog=QuanLyTTQuocAnh;User ID=sa;Password=123456&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=HAIHD\SQLEXPRESS;Initial Catalog=QuanLyTTQuocAnh;User ID=sa;Password=123456</Value>
+    </Setting>
+    <Setting Name="QuanLyTTQuocAnhVer2ConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=HAIHD\SQLEXPRESS;Initial Catalog=QuanLyTTQuocAnhVer2;User ID=sa;Password=123456&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=HAIHD\SQLEXPRESS;Initial Catalog=QuanLyTTQuocAnhVer2;User ID=sa;Password=123456</Value>
+    </Setting>
+    <Setting Name="QuanLyTTQuocAnhConnectionString2" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=NGV\SQL2005;Initial Catalog=QuanLyTTQuocAnh;Persist Security Info=True;User ID=sa;Password=sa&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=NGV\SQL2005;Initial Catalog=QuanLyTTQuocAnh;Persist Security Info=True;User ID=sa;Password=sa</Value>
+    </Setting>
+    <Setting Name="QuanLyTTQuocAnhConnectionString3" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=HAPPYMAN\SQLEXPRESS;Initial Catalog=QuanLyTTQuocAnh;Persist Security Info=True;User ID=sa;Password=sa&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=HAPPYMAN\SQLEXPRESS;Initial Catalog=QuanLyTTQuocAnh;Persist Security Info=True;User ID=sa;Password=sa</Value>
+    </Setting>
+    <Setting Name="QuanLyTTQuocAnh_FinalConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=HAPPYMAN\SQLEXPRESS;Initial Catalog=QuanLyTTQuocAnh_Final;Persist Security Info=True;User ID=sa;Password=sa&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=HAPPYMAN\SQLEXPRESS;Initial Catalog=QuanLyTTQuocAnh_Final;Persist Security Info=True;User ID=sa;Password=sa</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

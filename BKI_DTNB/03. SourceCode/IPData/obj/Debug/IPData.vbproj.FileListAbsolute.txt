@@ -1,0 +1,7 @@
+D:\BKI_DTNB\03. SourceCode\IPData\bin\IPData.dll.config
+D:\BKI_DTNB\03. SourceCode\IPData\bin\IPData.dll
+D:\BKI_DTNB\03. SourceCode\IPData\bin\IPData.pdb
+D:\BKI_DTNB\03. SourceCode\IPData\bin\IPData.xml
+D:\BKI_DTNB\03. SourceCode\IPData\obj\Debug\IPData.dll
+D:\BKI_DTNB\03. SourceCode\IPData\obj\Debug\IPData.xml
+D:\BKI_DTNB\03. SourceCode\IPData\obj\Debug\IPData.pdb

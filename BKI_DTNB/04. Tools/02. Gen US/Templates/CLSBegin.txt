@@ -1,0 +1,5 @@
+namespace BKI_QLTTQuocAnh.US{
+
+public class US_<TABLE_NAME> : US_Object
+{
+	private const string c_TableName = "<TABLE_NAME>";

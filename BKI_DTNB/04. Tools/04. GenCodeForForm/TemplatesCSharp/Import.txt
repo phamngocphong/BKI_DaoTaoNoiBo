@@ -1,0 +1,21 @@
+﻿using System;
+using System.Data;
+using System.Drawing;
+using System.Collections;
+using System.ComponentModel;
+using System.Windows.Forms;
+
+using IP.Core.IPCommon;
+using IP.Core.IPException;
+using IP.Core.IPData;
+using IP.Core.IPUserService;
+using IP.Core.IPSystemAdmin;
+
+using BKI_QLTTQuocAnh.US;
+using BKI_QLTTQuocAnh.DS;
+using BKI_QLTTQuocAnh.DS.CDBNames;
+
+using C1.Win.C1FlexGrid;
+
+namespace BKI_QLTTQuocAnh
+{

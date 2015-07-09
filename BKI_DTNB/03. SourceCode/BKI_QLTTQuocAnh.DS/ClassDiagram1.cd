@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BKI_QLTTQuocAnh.DS.CDBNames.LOAI_TU_DIEN" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AICAAAgAAAAAABBBBAAAACCAAAIIAAAAAAAAAAAAgAg=</HashCode>
+      <FileName>CDBNames.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BKI_QLTTQuocAnh.DS.CDBNames.SU_KIEN" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAQAAAAAAAgAAAAAAQAAAAgAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>CDBNames.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BKI_QLTTQuocAnh.DS.CDBNames.CM_DM_TU_DIEN" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAYAAAAQAABAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>CDBNames.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BKI_QLTTQuocAnh.DS.CDBNames.CM_DM_LOAI_TD" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAgAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CDBNames.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BKI_QLTTQuocAnh.DS.CDBNames.HT_NGUOI_SU_DUNG" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAABEgAIBAAAIAAAADAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CDBNames.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BKI_QLTTQuocAnh.DS.CDBNames.HT_CHUC_NANG" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAhgAAAAAAAAgAAAAAAAACAIIAAAAAAAA=</HashCode>
+      <FileName>CDBNames.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BKI_QLTTQuocAnh.DS.CDBNames.HT_QUYEN_GROUP" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAEAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CDBNames.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BKI_QLTTQuocAnh.DS.CDBNames.HT_USER_GROUP" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAgAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>CDBNames.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BKI_QLTTQuocAnh.DS.CDBNames.V_HT_USER_DV_QUAN_LY" Collapsed="true">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAACgAAAAAAAAAAAAAFAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CDBNames.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BKI_QLTTQuocAnh.DS.CDBNames.CM_COMPANY_INFO" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAgAAAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CDBNames.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BKI_QLTTQuocAnh.DS.CDBNames.V_GD_QUA_TRINH_LAM_VIEC" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAABIQKRAAAAJAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CDBNames.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BKI_QLTTQuocAnh.DS.CDBNames.V_GD_TRANG_THAI_LAO_DONG" Collapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAEAAAAIAARAAAAJAAAAAAAAgAAgAAgAAAAA=</HashCode>
+      <FileName>CDBNames.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BKI_QLTTQuocAnh.DS.CDBNames.V_GD_HOP_DONG_LAO_DONG" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAIAARAAAIJAAAAAAAAgAAgAAoAAAAA=</HashCode>
+      <FileName>CDBNames.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BKI_QLTTQuocAnh.DS.DS_HT_NHOM_NGUOI_SU_DUNG" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAwAAAAJABAAAQAAAAAkCQBgAAAAAAAEABhA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BKI_QLTTQuocAnh.DS.DS_HT_PHAN_QUYEN_CHO_NHOM" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAwAAAIJABAAAQAAAAAgCQBgAAAAAAAEABBI=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BKI_QLTTQuocAnh.DS.DS_HT_PHAN_QUYEN_HE_THONG" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABwAAAAJABAAAQAACAAgCQBgAAAAAAAEABBg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BKI_QLTTQuocAnh.DS.DS_V_GD_HOP_DONG_LAO_DONG" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAwAAAAJABAAAQAAAAAgCQBgAgAAAAgEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BKI_QLTTQuocAnh.DS.DS_V_GD_QUA_TRINH_LAM_VIEC" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAwABAAJABAAAQAAAAAgCQBgAAAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BKI_QLTTQuocAnh.DS.DS_V_GD_TRANG_THAI_LAO_DONG" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAwEAAAJABAAAQACAAAgCQBgAAAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BKI_QLTTQuocAnh.DS.DS_HT_NHOM_NGUOI_SU_DUNGTableAdapters.HT_NHOM_NGUOI_SU_DUNGTableAdapter" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BKI_QLTTQuocAnh.DS.DS_HT_NHOM_NGUOI_SU_DUNGTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAiAAAABABAEBBAAAMAAgAAACgAAAAAQAAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BKI_QLTTQuocAnh.DS.DS_HT_PHAN_QUYEN_CHO_NHOMTableAdapters.HT_PHAN_QUYEN_CHO_NHOMTableAdapter" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BKI_QLTTQuocAnh.DS.DS_HT_PHAN_QUYEN_CHO_NHOMTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAABAJAEBAAAAMAAgAAACgAAAACQAAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BKI_QLTTQuocAnh.DS.DS_HT_PHAN_QUYEN_HE_THONGTableAdapters.HT_PHAN_QUYEN_HE_THONGTableAdapter" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BKI_QLTTQuocAnh.DS.DS_HT_PHAN_QUYEN_HE_THONGTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAABABAEBAAAAMAAgAAACgAAAAAQAACAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BKI_QLTTQuocAnh.DS.DataSet1TableAdapters.V_GD_HOP_DONG_LAO_DONGTableAdapter" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BKI_QLTTQuocAnh.DS.DataSet1TableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAABABAEBAAAAMAAgAAACgAAAAAQAAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BKI_QLTTQuocAnh.DS.DS_V_GD_QUA_TRINH_LAM_VIECTableAdapters.V_GD_QUA_TRINH_LAM_VIECTableAdapter" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BKI_QLTTQuocAnh.DS.DS_V_GD_QUA_TRINH_LAM_VIECTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAABABAEBAAAAMAAgAAACgAAAAAQAAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BKI_QLTTQuocAnh.DS.DS_V_GD_TRANG_THAI_LAO_DONGTableAdapters.V_GD_TRANG_THAI_LAO_DONGTableAdapter" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BKI_QLTTQuocAnh.DS.DS_V_GD_TRANG_THAI_LAO_DONGTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAABABAEBAAAAMAAgAAACgAAAAAQAAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BKI_QLTTQuocAnh.DS.Properties.Settings" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="BKI_QLTTQuocAnh.DS.CDBNames.e_loai_tu_dien" Collapsed="true">
+    <Position X="0.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIqAAAgAAAAJEBBDBAASADCggAIIAABAAAAAAAAAgAg=</HashCode>
+      <FileName>CDBNames.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="BKI_QLTTQuocAnh.DS.CDBNames.e_user_group" Collapsed="true">
+    <Position X="2.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAACAAAAgAAAAAEAQAABAAAAAAAAAA=</HashCode>
+      <FileName>CDBNames.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

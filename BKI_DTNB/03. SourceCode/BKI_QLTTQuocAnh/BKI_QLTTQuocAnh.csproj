@@ -1,0 +1,422 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B91F4BE2-5024-4012-A4A8-4E52E8609778}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BKI_QLTTQuocAnh</RootNamespace>
+    <AssemblyName>BKI_QLTTQuocAnh</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.Common, Version=1.0.20031.116, Culture=neutral, PublicKeyToken=e272bb32d11b1948">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\C1.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1FlexGrid, Version=2.5.20044.189, Culture=neutral, PublicKeyToken=c9c7ad9c0a5706c9">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\C1.Win.C1FlexGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1FlexGrid.Classic, Version=2.5.20044.189, Culture=neutral, PublicKeyToken=c9c7ad9c0a5706c9">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\C1.Win.C1FlexGrid.Classic.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Input">
+      <HintPath>..\DLL\C1.Win.C1Input.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=11.0.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v13.1, Version=13.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v12.2.Core, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v13.1, Version=13.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v13.1, Version=13.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v13.1, Version=13.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SQL Server\110\SDK\Assemblies\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SQL Server\110\SDK\Assemblies\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SQL Server\110\SDK\Assemblies\Microsoft.SqlServer.Smo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlEnum, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SQL Server\110\SDK\Assemblies\Microsoft.SqlServer.SqlEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="SiSButton, Version=1.0.1494.35082, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\SiSButton.dll</HintPath>
+    </Reference>
+    <Reference Include="SiSMenu">
+      <HintPath>..\DLL\SiSMenu.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddTab.cs" />
+    <Compile Include="ApplicationControl.cs" />
+    <Compile Include="CCommon.cs" />
+    <Compile Include="f399_MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f399_MainMenu.designer.cs">
+      <DependentUpon>f399_MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeThong\collection.cs" />
+    <Compile Include="HeThong\f306_HT_USER_GROUP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\f306_HT_USER_GROUP_DE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\f306_HT_USER_GROUP_DE.Designer.cs">
+      <DependentUpon>f306_HT_USER_GROUP_DE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeThong\f308_DOI_MAT_KHAU_NGUOI_SD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\f308_DOI_MAT_KHAU_NGUOI_SD.designer.cs">
+      <DependentUpon>f308_DOI_MAT_KHAU_NGUOI_SD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeThong\f990_ht_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\f992_phan_quyen_he_thong_de.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\f992_phan_quyen_he_thong_de.Designer.cs">
+      <DependentUpon>f992_phan_quyen_he_thong_de.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeThong\f993_phan_quyen_he_thong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\f994_phan_quyen_detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\f994_phan_quyen_detail.Designer.cs">
+      <DependentUpon>f994_phan_quyen_detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeThong\f995_ht_phan_quyen_cho_nhom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\f995_ht_phan_quyen_cho_nhom.Designer.cs">
+      <DependentUpon>f995_ht_phan_quyen_cho_nhom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f400_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f400_Main.Designer.cs">
+      <DependentUpon>f400_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeThong\f998_ht_nguoi_su_dung_de.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\f999_ht_nguoi_su_dung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\BackupDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\BackupDB.Designer.cs">
+      <DependentUpon>BackupDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="f388_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f388_main.Designer.cs">
+      <DependentUpon>f388_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormControls.cs" />
+    <EmbeddedResource Include="f399_MainMenu.resx">
+      <DependentUpon>f399_MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\f306_HT_USER_GROUP.resx">
+      <DependentUpon>f306_HT_USER_GROUP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\f306_HT_USER_GROUP_DE.resx">
+      <DependentUpon>f306_HT_USER_GROUP_DE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\f308_DOI_MAT_KHAU_NGUOI_SD.resx">
+      <DependentUpon>f308_DOI_MAT_KHAU_NGUOI_SD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\f990_ht_form.resx">
+      <DependentUpon>f990_ht_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\f992_phan_quyen_he_thong_de.resx">
+      <DependentUpon>f992_phan_quyen_he_thong_de.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\f993_phan_quyen_he_thong.resx">
+      <DependentUpon>f993_phan_quyen_he_thong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\f994_phan_quyen_detail.resx">
+      <DependentUpon>f994_phan_quyen_detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\f995_ht_phan_quyen_cho_nhom.resx">
+      <DependentUpon>f995_ht_phan_quyen_cho_nhom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f400_Main.resx">
+      <DependentUpon>f400_Main.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\f998_ht_nguoi_su_dung_de.resx">
+      <DependentUpon>f998_ht_nguoi_su_dung_de.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\f999_ht_nguoi_su_dung.resx">
+      <DependentUpon>f999_ht_nguoi_su_dung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\BackupDB.resx">
+      <DependentUpon>BackupDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f388_main.resx">
+      <DependentUpon>f388_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BKI_QLTTQuocAnh.DS\BKI_QLTTQuocAnh.DS.csproj">
+      <Project>{4AEBA63F-E5B5-4D0C-B1B5-E6BCB13E1B5A}</Project>
+      <Name>BKI_QLTTQuocAnh.DS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BKI_QLTTQuocAnh.US\BKI_QLTTQuocAnh.US.csproj">
+      <Project>{CAFDA83F-D091-49BF-816F-F7A7A72C68EC}</Project>
+      <Name>BKI_QLTTQuocAnh.US</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IPBusinessService\IPBusinessService.vbproj">
+      <Project>{73CA732C-2CFB-4A14-B0B9-F43763B1C2F3}</Project>
+      <Name>IPBusinessService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IPCommon\IPCommon.vbproj">
+      <Project>{2A74F1D1-C0EE-41FE-A708-A83B285ACCF2}</Project>
+      <Name>IPCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IPData\IPData.vbproj">
+      <Project>{9ACEDD70-FDA2-44D8-A004-3A7EAF86A954}</Project>
+      <Name>IPData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IPExcelReport\IPExcelReport.vbproj">
+      <Project>{957C06D0-FF42-4C7A-B5E8-7E15C1522B59}</Project>
+      <Name>IPExcelReport</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IPExcelWebReport\IPExcelWebReport.vbproj">
+      <Project>{AB5E4EFF-2002-4309-AE0B-EE58A1C28DF1}</Project>
+      <Name>IPExcelWebReport</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IPException\IPException.vbproj">
+      <Project>{B73156C2-7034-4DEA-A308-5E1782FF8DB4}</Project>
+      <Name>IPException</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IPSystemAdmin\IPSystemAdmin.vbproj">
+      <Project>{455CD3A5-79BA-480A-B9BD-D4A7DDA397A8}</Project>
+      <Name>IPSystemAdmin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IPUserService\IPUserService.vbproj">
+      <Project>{B490EA92-2990-4CBB-B58B-12901AFCCCB5}</Project>
+      <Name>IPUserService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hopstarter-Sleek-Xp-Basic-Close-2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aha-Soft-Security-Secrecy.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hopstarter-Soft-Scraps-User-Group.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hopstarter-Soft-Scraps-User-Group1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ampeross-Qetto-2-Settings.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Custom-Icon-Design-Pretty-Office-2-Man.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons8-Ios7-Household-Room.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Designbolts-Monsters-University-Monsters-Character-Young-Mikes.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons8-Windows-8-Users-Enter-2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425904361_23923.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425904406_289616.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425904521_438788.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425904625_416404.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425904783_54524.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425904874_44824.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425905213_379332.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425905405_243979.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Designbolts-Monsters-University-Monsters-Character-Young-Mikes1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425905592_196740.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons8-Ios7-Household-Room1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425904832_45433.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425904874_448241.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425905865_103845.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425905897_25350.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425904521_4387881.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425906136_315167.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425906224_17014.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425906098_24333.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425912499_173055.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-web.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425905897_253501.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo luyen thi V4.0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Benjigarner-Softdimension-Excel.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

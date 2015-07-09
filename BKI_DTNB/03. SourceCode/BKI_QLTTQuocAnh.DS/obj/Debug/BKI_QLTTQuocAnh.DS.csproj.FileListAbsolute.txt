@@ -1,0 +1,6 @@
+D:\BKI_DTNB\03. SourceCode\BKI_QLTTQuocAnh.DS\bin\Debug\BKI_QLTTQuocAnh.DS.dll.config
+D:\BKI_DTNB\03. SourceCode\BKI_QLTTQuocAnh.DS\bin\Debug\BKI_QLTTQuocAnh.DS.dll
+D:\BKI_DTNB\03. SourceCode\BKI_QLTTQuocAnh.DS\bin\Debug\BKI_QLTTQuocAnh.DS.pdb
+D:\BKI_DTNB\03. SourceCode\BKI_QLTTQuocAnh.DS\obj\Debug\BKI_QLTTQuocAnh.DS.csprojResolveAssemblyReference.cache
+D:\BKI_DTNB\03. SourceCode\BKI_QLTTQuocAnh.DS\obj\Debug\BKI_QLTTQuocAnh.DS.dll
+D:\BKI_DTNB\03. SourceCode\BKI_QLTTQuocAnh.DS\obj\Debug\BKI_QLTTQuocAnh.DS.pdb

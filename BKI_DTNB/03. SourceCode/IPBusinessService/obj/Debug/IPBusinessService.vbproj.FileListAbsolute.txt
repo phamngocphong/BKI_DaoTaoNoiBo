@@ -1,0 +1,10 @@
+D:\BKI_DTNB\03. SourceCode\IPBusinessService\bin\IPBusinessService.dll
+D:\BKI_DTNB\03. SourceCode\IPBusinessService\bin\IPBusinessService.pdb
+D:\BKI_DTNB\03. SourceCode\IPBusinessService\bin\IPBusinessService.xml
+D:\BKI_DTNB\03. SourceCode\IPBusinessService\bin\IPException.dll
+D:\BKI_DTNB\03. SourceCode\IPBusinessService\bin\IPException.pdb
+D:\BKI_DTNB\03. SourceCode\IPBusinessService\bin\IPException.xml
+D:\BKI_DTNB\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.vbprojResolveAssemblyReference.cache
+D:\BKI_DTNB\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.dll
+D:\BKI_DTNB\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.xml
+D:\BKI_DTNB\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.pdb

@@ -1,0 +1,6 @@
+D:\BKI_DTNB\03. SourceCode\IPException\bin\IPException.dll
+D:\BKI_DTNB\03. SourceCode\IPException\bin\IPException.pdb
+D:\BKI_DTNB\03. SourceCode\IPException\bin\IPException.xml
+D:\BKI_DTNB\03. SourceCode\IPException\obj\Debug\IPException.dll
+D:\BKI_DTNB\03. SourceCode\IPException\obj\Debug\IPException.xml
+D:\BKI_DTNB\03. SourceCode\IPException\obj\Debug\IPException.pdb

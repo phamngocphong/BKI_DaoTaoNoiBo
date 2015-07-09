@@ -1,0 +1,12 @@
+D:\BKI_DTNB\03. SourceCode\IPExcelWebReport\bin\IPExcelWebReport.dll
+D:\BKI_DTNB\03. SourceCode\IPExcelWebReport\bin\IPExcelWebReport.pdb
+D:\BKI_DTNB\03. SourceCode\IPExcelWebReport\bin\IPExcelWebReport.xml
+D:\BKI_DTNB\03. SourceCode\IPExcelWebReport\bin\C1.Win.C1FlexGrid.dll
+D:\BKI_DTNB\03. SourceCode\IPExcelWebReport\bin\Interop.Excel.dll
+D:\BKI_DTNB\03. SourceCode\IPExcelWebReport\bin\Interop.Microsoft.Office.Core.dll
+D:\BKI_DTNB\03. SourceCode\IPExcelWebReport\bin\Interop.Office.dll
+D:\BKI_DTNB\03. SourceCode\IPExcelWebReport\bin\C1.Common.dll
+D:\BKI_DTNB\03. SourceCode\IPExcelWebReport\obj\Debug\IPExcelWebReport.dll
+D:\BKI_DTNB\03. SourceCode\IPExcelWebReport\obj\Debug\IPExcelWebReport.xml
+D:\BKI_DTNB\03. SourceCode\IPExcelWebReport\obj\Debug\IPExcelWebReport.pdb
+D:\BKI_DTNB\03. SourceCode\IPExcelWebReport\obj\Debug\IPExcelWebReport.vbprojResolveAssemblyReference.cache

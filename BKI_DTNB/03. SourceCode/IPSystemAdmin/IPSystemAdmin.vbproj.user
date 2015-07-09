@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastOpenVersion>7.10.3077</LastOpenVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ReferencePath>E:\QUANG_WORK\Auction Work\SourceCode\DLL\;E:\QUANG_WORK\Auction Work\SourceCode\;C:\Auction\AUCTION_WORK\SourceCode\DLL\;D:\ERP_GROUP\IPCore\DLL\;C:\IP\Common\;C:\IPHanisco\Common\;E:\IPCore\DLL\;E:\AUCTION_WORK\SourceCode\IPCore\DLL\;D:\Save\Hoc tap\AUCTION_WORK\SourceCode\DLL\;E:\AUCTION_WORK\SourceCode\DLL\;D:\CMIT\AUCTION_WORK\SourceCode\DLL\;F:\QUANG_WORK\SourceCode\DLL\;E:\QUANG_WORK\auction_work\SourceCode\DLL\;E:\QUANG_WORK\SourceCode\DLL\;F:\QUANG_WORK\AUCTION_WORK\SourceCode\DLL\;G:\Exercises\VS.NET\AUCTION_WORK\SourceCode\DLL\;E:\QUANG_WORK\Auction Work\THU_DO_SourceCode\DLL\;E:\QUANG_WORK\Auction Work\THU_DO_PROJECT\SourceCode\DLL\;F:\QUANG_WORK\AUCTION_WORK\SourceCodeCKTD\DLL\;E:\QUANG_WORK\Auction Work\THU_DO_PROJECT\SourceCodeCKTD\DLL\;C:\QUANG_WORK\Auction_work\SourceCodeCKTD\DLL\;C:\Auction_work\SourceCodeCKTD\DLL\;C:\Auction_work_Thu_Do\SourceCodeCKTD\DLL\;C:\Auction_work\Auction_work_Thu_Do\SourceCodeCKTD\DLL\;D:\I4U's Project\Auction\SourceCodeCKTD\DLL\;D:\Projects\Auction\SourceCodeCKTD\DLL\;D:\My Projects\1.Auction\SourceCodeCKTD\DLL\;D:\Projects\1.Auction\SourceCodeCKTD\DLL\;D:\HocTap\Projects\1.Auction\SourceCodeCKTD\DLL\</ReferencePath>
+    <CopyProjectDestinationFolder>
+    </CopyProjectDestinationFolder>
+    <CopyProjectUncPath>
+    </CopyProjectUncPath>
+    <CopyProjectOption>0</CopyProjectOption>
+    <ProjectView>ShowAllFiles</ProjectView>
+    <ProjectTrust>0</ProjectTrust>
+    <PublishUrlHistory />
+    <InstallUrlHistory />
+    <SupportUrlHistory />
+    <UpdateUrlHistory />
+    <BootstrapperUrlHistory />
+    <ErrorReportUrlHistory />
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <EnableASPDebugging>false</EnableASPDebugging>
+    <EnableASPXDebugging>false</EnableASPXDebugging>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <EnableSQLServerDebugging>false</EnableSQLServerDebugging>
+    <RemoteDebugEnabled>false</RemoteDebugEnabled>
+    <RemoteDebugMachine>
+    </RemoteDebugMachine>
+    <StartAction>Project</StartAction>
+    <StartArguments>
+    </StartArguments>
+    <StartPage>
+    </StartPage>
+    <StartProgram>
+    </StartProgram>
+    <StartURL>
+    </StartURL>
+    <StartWorkingDirectory>
+    </StartWorkingDirectory>
+    <StartWithIE>true</StartWithIE>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <EnableASPDebugging>false</EnableASPDebugging>
+    <EnableASPXDebugging>false</EnableASPXDebugging>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <EnableSQLServerDebugging>false</EnableSQLServerDebugging>
+    <RemoteDebugEnabled>false</RemoteDebugEnabled>
+    <RemoteDebugMachine>
+    </RemoteDebugMachine>
+    <StartAction>Project</StartAction>
+    <StartArguments>
+    </StartArguments>
+    <StartPage>
+    </StartPage>
+    <StartProgram>
+    </StartProgram>
+    <StartURL>
+    </StartURL>
+    <StartWorkingDirectory>
+    </StartWorkingDirectory>
+    <StartWithIE>true</StartWithIE>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'PersonalBuild|AnyCPU' ">
+    <EnableASPDebugging>false</EnableASPDebugging>
+    <EnableASPXDebugging>false</EnableASPXDebugging>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <EnableSQLServerDebugging>false</EnableSQLServerDebugging>
+    <RemoteDebugEnabled>false</RemoteDebugEnabled>
+    <RemoteDebugMachine>
+    </RemoteDebugMachine>
+    <StartAction>Project</StartAction>
+    <StartArguments>
+    </StartArguments>
+    <StartPage>
+    </StartPage>
+    <StartProgram>
+    </StartProgram>
+    <StartURL>
+    </StartURL>
+    <StartWorkingDirectory>
+    </StartWorkingDirectory>
+    <StartWithIE>true</StartWithIE>
+  </PropertyGroup>
+</Project>

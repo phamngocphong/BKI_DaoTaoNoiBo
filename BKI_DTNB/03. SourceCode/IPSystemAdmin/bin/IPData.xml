@@ -1,0 +1,167 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+IPData
+</name>
+</assembly>
+<members>
+<member name="T:IP.Core.IPData.DS_HT_PHAN_QUYEN_DETAIL.HT_PHAN_QUYEN_DETAILDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:IP.Core.IPData.DS_HT_PHAN_QUYEN_DETAIL.HT_PHAN_QUYEN_DETAILRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:IP.Core.IPData.DS_HT_PHAN_QUYEN_DETAIL.HT_PHAN_QUYEN_DETAILRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:IP.Core.IPData.DS_HT_PHAN_QUYEN_DETAIL">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:IP.Core.IPData.DS_HT_PHAN_QUYEN_DETAILTableAdapters.HT_PHAN_QUYEN_DETAILTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:IP.Core.IPData.DS_HT_PHAN_QUYEN_DETAILTableAdapters.TableAdapterManager.UpdateUpdatedRows(IP.Core.IPData.DS_HT_PHAN_QUYEN_DETAIL,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:IP.Core.IPData.DS_HT_PHAN_QUYEN_DETAILTableAdapters.TableAdapterManager.UpdateInsertedRows(IP.Core.IPData.DS_HT_PHAN_QUYEN_DETAIL,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:IP.Core.IPData.DS_HT_PHAN_QUYEN_DETAILTableAdapters.TableAdapterManager.UpdateDeletedRows(IP.Core.IPData.DS_HT_PHAN_QUYEN_DETAIL,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:IP.Core.IPData.DS_HT_PHAN_QUYEN_DETAILTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:IP.Core.IPData.DS_HT_PHAN_QUYEN_DETAILTableAdapters.TableAdapterManager.UpdateAll(IP.Core.IPData.DS_HT_PHAN_QUYEN_DETAIL)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:IP.Core.IPData.DS_HT_PHAN_QUYEN_DETAILTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:IP.Core.IPData.DS_HT_PHAN_QUYEN_DETAILTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:IP.Core.IPData.DS_HT_PHAN_QUYEN_DETAILTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:IP.Core.IPData.DS_HT_THAM_SO_HE_THONG.HT_THAM_SO_HE_THONGDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:IP.Core.IPData.DS_HT_THAM_SO_HE_THONG.HT_THAM_SO_HE_THONGRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:IP.Core.IPData.DS_HT_THAM_SO_HE_THONG.HT_THAM_SO_HE_THONGRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:IP.Core.IPData.DS_HT_THAM_SO_HE_THONG">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:IP.Core.IPData.DS_HT_NGAY_TRONG_TUAN.HT_NGAY_TRONG_TUANDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:IP.Core.IPData.DS_HT_NGAY_TRONG_TUAN.HT_NGAY_TRONG_TUANRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:IP.Core.IPData.DS_HT_NGAY_TRONG_TUAN.HT_NGAY_TRONG_TUANRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:IP.Core.IPData.DS_HT_NGAY_TRONG_TUAN">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:IP.Core.IPData.DS_CM_DM_LOAI_TD.CM_DM_LOAI_TDDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:IP.Core.IPData.DS_CM_DM_LOAI_TD.CM_DM_LOAI_TDRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:IP.Core.IPData.DS_CM_DM_LOAI_TD.CM_DM_LOAI_TDRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:IP.Core.IPData.DS_CM_DM_LOAI_TD">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:IP.Core.IPData.DS_LICENSESOFTWARE.LICENSESOFTWAREDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:IP.Core.IPData.DS_LICENSESOFTWARE.LICENSESOFTWARERow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:IP.Core.IPData.DS_LICENSESOFTWARE.LICENSESOFTWARERowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:IP.Core.IPData.DS_LICENSESOFTWARE">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:IP.Core.IPData.DS_CM_DM_TU_DIEN.CM_DM_TU_DIENDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:IP.Core.IPData.DS_CM_DM_TU_DIEN.CM_DM_TU_DIENRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:IP.Core.IPData.DS_CM_DM_TU_DIEN.CM_DM_TU_DIENRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:IP.Core.IPData.DS_CM_DM_TU_DIEN">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:IP.Core.IPData.DS_CM_DM_TU_DIENTableAdapters.CM_DM_TU_DIENTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:IP.Core.IPData.DS_HT_NGUOI_SU_DUNG.HT_NGUOI_SU_DUNGDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:IP.Core.IPData.DS_HT_NGUOI_SU_DUNG.HT_NGUOI_SU_DUNGRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:IP.Core.IPData.DS_HT_NGUOI_SU_DUNG.HT_NGUOI_SU_DUNGRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:IP.Core.IPData.DS_HT_NGUOI_SU_DUNG">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:IP.Core.IPData.DS_HT_NGUOI_SU_DUNGTableAdapters.HT_NGUOI_SU_DUNGTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+</members>
+</doc>

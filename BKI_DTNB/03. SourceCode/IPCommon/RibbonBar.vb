@@ -1,0 +1,4 @@
+﻿
+Class RibbonBar
+
+End Class

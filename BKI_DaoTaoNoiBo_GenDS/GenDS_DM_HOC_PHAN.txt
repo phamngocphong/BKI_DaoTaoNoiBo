@@ -1,0 +1,7 @@
+public class DM_HOC_PHAN {
+   public const string ID =  "ID";
+   public const string MA_HOC_PHAN =  "MA_HOC_PHAN";
+   public const string TEN_HOC_PHAN =  "TEN_HOC_PHAN";
+   public const string SO_LUONG_YEU_CAU =  "SO_LUONG_YEU_CAU";
+   public const string BAT_BUOC_YN =  "BAT_BUOC_YN";
+}

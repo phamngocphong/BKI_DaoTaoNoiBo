@@ -1,0 +1,5 @@
+public class DM_NGACH {
+   public const string ID =  "ID";
+   public const string MA_NGACH =  "MA_NGACH";
+   public const string TEN_NGACH =  "TEN_NGACH";
+}

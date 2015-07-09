@@ -1,0 +1,5 @@
+public class DM_DAI {
+   public const string ID =  "ID";
+   public const string MA_DAI =  "MA_DAI";
+   public const string TEN_DAI =  "TEN_DAI";
+}

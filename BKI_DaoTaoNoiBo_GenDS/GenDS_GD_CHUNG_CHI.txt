@@ -1,0 +1,13 @@
+public class GD_CHUNG_CHI {
+   public const string ID =  "ID";
+   public const string ID_NHAN_SU =  "ID_NHAN_SU";
+   public const string ID_GD_DIEM =  "ID_GD_DIEM";
+   public const string SO_CHUNG_CHI =  "SO_CHUNG_CHI";
+   public const string NGAY_BAT_DAU =  "NGAY_BAT_DAU";
+   public const string NGAY_KET_THUC =  "NGAY_KET_THUC";
+   public const string NGAY_LAP =  "NGAY_LAP";
+   public const string NGAY_SUA =  "NGAY_SUA";
+   public const string NGUOI_LAP =  "NGUOI_LAP";
+   public const string NGUOI_SUA =  "NGUOI_SUA";
+   public const string DA_XOA =  "DA_XOA";
+}

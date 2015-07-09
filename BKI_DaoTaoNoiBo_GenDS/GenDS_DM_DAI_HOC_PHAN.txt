@@ -1,0 +1,5 @@
+public class DM_DAI_HOC_PHAN {
+   public const string ID =  "ID";
+   public const string ID_PHONG_DAI =  "ID_PHONG_DAI";
+   public const string ID_HOC_PHAN =  "ID_HOC_PHAN";
+}

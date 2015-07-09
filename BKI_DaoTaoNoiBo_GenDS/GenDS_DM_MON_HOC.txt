@@ -1,0 +1,6 @@
+public class DM_MON_HOC {
+   public const string ID =  "ID";
+   public const string MA_MON_HOC =  "MA_MON_HOC";
+   public const string TEN_MON_HOC =  "TEN_MON_HOC";
+   public const string DON_VI_GIANG_DAY =  "DON_VI_GIANG_DAY";
+}

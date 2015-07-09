@@ -1,0 +1,5 @@
+public class DM_HOC_PHAN_TIEN_QUYET {
+   public const string ID =  "ID";
+   public const string ID_MON_HOC =  "ID_MON_HOC";
+   public const string ID_MON_HOC_TIEN_QUYET =  "ID_MON_HOC_TIEN_QUYET";
+}

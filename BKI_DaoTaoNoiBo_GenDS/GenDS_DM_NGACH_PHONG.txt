@@ -1,0 +1,6 @@
+public class DM_NGACH_PHONG {
+   public const string ID =  "ID";
+   public const string KHU_VUC =  "KHU_VUC";
+   public const string ID_NGACH =  "ID_NGACH";
+   public const string ID_PHONG =  "ID_PHONG";
+}

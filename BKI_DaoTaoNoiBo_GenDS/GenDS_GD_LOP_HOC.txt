@@ -1,0 +1,13 @@
+public class GD_LOP_HOC {
+   public const string ID =  "ID";
+   public const string MA_LOP_HOC =  "MA_LOP_HOC";
+   public const string THOI_GIAN =  "THOI_GIAN";
+   public const string DIA_DIEM =  "DIA_DIEM";
+   public const string SO_LUONG =  "SO_LUONG";
+   public const string ID_MON_HOC =  "ID_MON_HOC";
+   public const string NGAY_LAP =  "NGAY_LAP";
+   public const string NGAY_SUA =  "NGAY_SUA";
+   public const string NGUOI_LAP =  "NGUOI_LAP";
+   public const string NGUOI_SUA =  "NGUOI_SUA";
+   public const string DA_XOA =  "DA_XOA";
+}

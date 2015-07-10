@@ -54,6 +54,76 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
+    <Compile Include="DS_DM_DAI.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_DM_DAI.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_DM_DAI_HOC_PHAN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_DM_DAI_HOC_PHAN.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_DM_HOC_PHAN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_DM_HOC_PHAN.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_DM_HOC_PHAN_MON_HOC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_DM_HOC_PHAN_MON_HOC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_DM_HOC_PHAN_TIEN_QUYET.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_DM_HOC_PHAN_TIEN_QUYET.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_DM_MON_HOC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_DM_MON_HOC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_DM_NGACH.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_DM_NGACH.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_DM_NGACH_PHONG.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_DM_NGACH_PHONG.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_DM_PHONG_DAI.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_DM_PHONG_DAI.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_DM_PHONG_HOC_PHAN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_DM_PHONG_HOC_PHAN.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_DM_VERSION_MON_HOC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_DM_VERSION_MON_HOC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_GD_CHUNG_CHI.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_GD_CHUNG_CHI.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_GD_DIEM.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_GD_DIEM.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_GD_LOP_HOC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_GD_LOP_HOC.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_HT_FORM.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -84,6 +154,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_HT_USER_GROUP.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_PHONG_HOC_PHAN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_PHONG_HOC_PHAN.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -106,6 +181,160 @@
     </None>
     <None Include="DS_CM_DM_TU_DIEN.xss">
       <DependentUpon>DS_CM_DM_TU_DIEN.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_DAI.xsc">
+      <DependentUpon>DS_DM_DAI.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_DAI.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_DM_DAI.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_DM_DAI.xss">
+      <DependentUpon>DS_DM_DAI.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_DAI_HOC_PHAN.xsc">
+      <DependentUpon>DS_DM_DAI_HOC_PHAN.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_DAI_HOC_PHAN.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_DM_DAI_HOC_PHAN.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_DM_DAI_HOC_PHAN.xss">
+      <DependentUpon>DS_DM_DAI_HOC_PHAN.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_HOC_PHAN.xsc">
+      <DependentUpon>DS_DM_HOC_PHAN.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_HOC_PHAN.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_DM_HOC_PHAN.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_DM_HOC_PHAN.xss">
+      <DependentUpon>DS_DM_HOC_PHAN.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_HOC_PHAN_MON_HOC.xsc">
+      <DependentUpon>DS_DM_HOC_PHAN_MON_HOC.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_HOC_PHAN_MON_HOC.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_DM_HOC_PHAN_MON_HOC.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_DM_HOC_PHAN_MON_HOC.xss">
+      <DependentUpon>DS_DM_HOC_PHAN_MON_HOC.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_HOC_PHAN_TIEN_QUYET.xsc">
+      <DependentUpon>DS_DM_HOC_PHAN_TIEN_QUYET.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_HOC_PHAN_TIEN_QUYET.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_DM_HOC_PHAN_TIEN_QUYET.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_DM_HOC_PHAN_TIEN_QUYET.xss">
+      <DependentUpon>DS_DM_HOC_PHAN_TIEN_QUYET.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_MON_HOC.xsc">
+      <DependentUpon>DS_DM_MON_HOC.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_MON_HOC.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_DM_MON_HOC.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_DM_MON_HOC.xss">
+      <DependentUpon>DS_DM_MON_HOC.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_NGACH.xsc">
+      <DependentUpon>DS_DM_NGACH.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_NGACH.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_DM_NGACH.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_DM_NGACH.xss">
+      <DependentUpon>DS_DM_NGACH.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_NGACH_PHONG.xsc">
+      <DependentUpon>DS_DM_NGACH_PHONG.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_NGACH_PHONG.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_DM_NGACH_PHONG.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_DM_NGACH_PHONG.xss">
+      <DependentUpon>DS_DM_NGACH_PHONG.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_PHONG_DAI.xsc">
+      <DependentUpon>DS_DM_PHONG_DAI.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_PHONG_DAI.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_DM_PHONG_DAI.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_DM_PHONG_DAI.xss">
+      <DependentUpon>DS_DM_PHONG_DAI.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_PHONG_HOC_PHAN.xsc">
+      <DependentUpon>DS_DM_PHONG_HOC_PHAN.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_PHONG_HOC_PHAN.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_DM_PHONG_HOC_PHAN.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_DM_PHONG_HOC_PHAN.xss">
+      <DependentUpon>DS_DM_PHONG_HOC_PHAN.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_VERSION_MON_HOC.xsc">
+      <DependentUpon>DS_DM_VERSION_MON_HOC.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_VERSION_MON_HOC.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_DM_VERSION_MON_HOC.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_DM_VERSION_MON_HOC.xss">
+      <DependentUpon>DS_DM_VERSION_MON_HOC.xsd</DependentUpon>
+    </None>
+    <None Include="DS_GD_CHUNG_CHI.xsc">
+      <DependentUpon>DS_GD_CHUNG_CHI.xsd</DependentUpon>
+    </None>
+    <None Include="DS_GD_CHUNG_CHI.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_GD_CHUNG_CHI.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_GD_CHUNG_CHI.xss">
+      <DependentUpon>DS_GD_CHUNG_CHI.xsd</DependentUpon>
+    </None>
+    <None Include="DS_GD_DIEM.xsc">
+      <DependentUpon>DS_GD_DIEM.xsd</DependentUpon>
+    </None>
+    <None Include="DS_GD_DIEM.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_GD_DIEM.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_GD_DIEM.xss">
+      <DependentUpon>DS_GD_DIEM.xsd</DependentUpon>
+    </None>
+    <None Include="DS_GD_LOP_HOC.xsc">
+      <DependentUpon>DS_GD_LOP_HOC.xsd</DependentUpon>
+    </None>
+    <None Include="DS_GD_LOP_HOC.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_GD_LOP_HOC.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_GD_LOP_HOC.xss">
+      <DependentUpon>DS_GD_LOP_HOC.xsd</DependentUpon>
     </None>
     <None Include="DS_HT_FORM.xsc">
       <DependentUpon>DS_HT_FORM.xsd</DependentUpon>
@@ -172,6 +401,17 @@
     </None>
     <None Include="DS_HT_USER_GROUP.xss">
       <DependentUpon>DS_HT_USER_GROUP.xsd</DependentUpon>
+    </None>
+    <None Include="DS_PHONG_HOC_PHAN.xsc">
+      <DependentUpon>DS_PHONG_HOC_PHAN.xsd</DependentUpon>
+    </None>
+    <None Include="DS_PHONG_HOC_PHAN.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_PHONG_HOC_PHAN.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_PHONG_HOC_PHAN.xss">
+      <DependentUpon>DS_PHONG_HOC_PHAN.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -126,12 +126,6 @@
     <Compile Include="AddTab.cs" />
     <Compile Include="ApplicationControl.cs" />
     <Compile Include="CCommon.cs" />
-    <Compile Include="F205_TAO_MOI_LOP_HOC.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="F205_TAO_MOI_LOP_HOC.Designer.cs">
-      <DependentUpon>F205_TAO_MOI_LOP_HOC.cs</DependentUpon>
-    </Compile>
     <Compile Include="F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +196,12 @@
     <Compile Include="NghiepVu\BackupDB.Designer.cs">
       <DependentUpon>BackupDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="NghiepVu\F205_TAO_MOI_LOP_HOC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\F205_TAO_MOI_LOP_HOC.Designer.cs">
+      <DependentUpon>F205_TAO_MOI_LOP_HOC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -215,9 +215,6 @@
       <DependentUpon>f388_main.cs</DependentUpon>
     </Compile>
     <Compile Include="WinFormControls.cs" />
-    <EmbeddedResource Include="F205_TAO_MOI_LOP_HOC.resx">
-      <DependentUpon>F205_TAO_MOI_LOP_HOC.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC.resx">
       <DependentUpon>F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC.cs</DependentUpon>
     </EmbeddedResource>
@@ -260,6 +257,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\BackupDB.resx">
       <DependentUpon>BackupDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\F205_TAO_MOI_LOP_HOC.resx">
+      <DependentUpon>F205_TAO_MOI_LOP_HOC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

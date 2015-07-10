@@ -196,6 +196,10 @@
     <Compile Include="NghiepVu\BackupDB.Designer.cs">
       <DependentUpon>BackupDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="NghiepVu\F205_TAO_MOI_LOP_HOC.cs" />
+    <Compile Include="NghiepVu\F205_TAO_MOI_LOP_HOC.designer.cs">
+      <DependentUpon>F205_TAO_MOI_LOP_HOC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -251,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\BackupDB.resx">
       <DependentUpon>BackupDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\F205_TAO_MOI_LOP_HOC.resx">
+      <DependentUpon>F205_TAO_MOI_LOP_HOC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

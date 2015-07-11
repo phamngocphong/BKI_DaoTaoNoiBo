@@ -196,12 +196,13 @@
             // 
             // m_cmd_dm_hs
             // 
-            this.m_cmd_dm_hs.Caption = "Học sinh";
+            this.m_cmd_dm_hs.Caption = "Học phần";
             this.m_cmd_dm_hs.Glyph = global::BKI_QLTTQuocAnh.Properties.Resources.Designbolts_Monsters_University_Monsters_Character_Young_Mikes;
             this.m_cmd_dm_hs.Id = 7;
             this.m_cmd_dm_hs.Name = "m_cmd_dm_hs";
             this.m_cmd_dm_hs.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.m_cmd_dm_hs.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_dm_hs_ItemClick);
             // 
             // m_cmd_nhap_hoc
             // 
@@ -432,7 +433,6 @@
             this.ribbonPageGroup3});
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "DANH MỤC";
-            this.ribbonPage2.Visible = false;
             // 
             // ribbonPageGroup3
             // 

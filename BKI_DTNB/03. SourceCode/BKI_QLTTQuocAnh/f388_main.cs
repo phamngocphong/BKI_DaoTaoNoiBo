@@ -185,6 +185,20 @@ namespace BKI_QLTTQuocAnh
             }
         }
 
+        private void m_cmd_dm_hs_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                frm_DM_HOC_PHAN v_frm = new frm_DM_HOC_PHAN();
+                v_frm.Show();
+            }
+            catch (Exception v_e)
+            {
+                
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
       
 
       

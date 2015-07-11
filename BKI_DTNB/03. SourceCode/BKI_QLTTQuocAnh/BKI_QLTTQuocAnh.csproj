@@ -138,6 +138,9 @@
     <Compile Include="f399_MainMenu.designer.cs">
       <DependentUpon>f399_MainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="DanhMuc\f102_danh_muc_hoc_phan.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="HeThong\collection.cs" />
     <Compile Include="HeThong\f306_HT_USER_GROUP.cs">
       <SubType>Form</SubType>
@@ -220,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="f399_MainMenu.resx">
       <DependentUpon>f399_MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\f102_danh_muc_hoc_phan.resx">
+      <DependentUpon>f102_danh_muc_hoc_phan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HeThong\f306_HT_USER_GROUP.resx">
       <DependentUpon>f306_HT_USER_GROUP.cs</DependentUpon>

@@ -37,7 +37,7 @@
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.m_cbo_mon_hoc = new System.Windows.Forms.ComboBox();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.m_cmd_tao_lop = new DevExpress.XtraEditors.SimpleButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -134,26 +134,27 @@
             this.m_cbo_mon_hoc.Size = new System.Drawing.Size(142, 21);
             this.m_cbo_mon_hoc.TabIndex = 12;
             // 
-            // simpleButton1
+            // m_cmd_tao_lop
             // 
-            this.simpleButton1.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(3)))), ((int)(((byte)(53)))));
-            this.simpleButton1.Appearance.Options.UseForeColor = true;
-            this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.simpleButton1.Image = global::BKI_QLTTQuocAnh.Properties.Resources._1425906136_315167;
-            this.simpleButton1.ImageIndex = 2;
-            this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.simpleButton1.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
-            this.simpleButton1.Location = new System.Drawing.Point(579, 2);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Padding = new System.Windows.Forms.Padding(1);
-            this.simpleButton1.Size = new System.Drawing.Size(108, 33);
-            this.simpleButton1.TabIndex = 14;
-            this.simpleButton1.Text = "Tạo lớp học";
+            this.m_cmd_tao_lop.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(3)))), ((int)(((byte)(53)))));
+            this.m_cmd_tao_lop.Appearance.Options.UseForeColor = true;
+            this.m_cmd_tao_lop.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.m_cmd_tao_lop.Image = global::BKI_QLTTQuocAnh.Properties.Resources._1425906136_315167;
+            this.m_cmd_tao_lop.ImageIndex = 2;
+            this.m_cmd_tao_lop.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.m_cmd_tao_lop.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
+            this.m_cmd_tao_lop.Location = new System.Drawing.Point(579, 2);
+            this.m_cmd_tao_lop.Margin = new System.Windows.Forms.Padding(4);
+            this.m_cmd_tao_lop.Name = "m_cmd_tao_lop";
+            this.m_cmd_tao_lop.Padding = new System.Windows.Forms.Padding(1);
+            this.m_cmd_tao_lop.Size = new System.Drawing.Size(108, 33);
+            this.m_cmd_tao_lop.TabIndex = 14;
+            this.m_cmd_tao_lop.Text = "Tạo lớp học";
+            this.m_cmd_tao_lop.Click += new System.EventHandler(this.m_cmd_tao_lop_Click);
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.simpleButton1);
+            this.panel2.Controls.Add(this.m_cmd_tao_lop);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(2, 404);
             this.panel2.Name = "panel2";
@@ -218,8 +219,6 @@
             this.c_id.Caption = "ID";
             this.c_id.FieldName = "ID";
             this.c_id.Name = "c_id";
-            this.c_id.Visible = true;
-            this.c_id.VisibleIndex = 1;
             // 
             // gridColumn1
             // 
@@ -227,7 +226,7 @@
             this.gridColumn1.FieldName = "MA_NV";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 2;
+            this.gridColumn1.VisibleIndex = 1;
             // 
             // gridColumn2
             // 
@@ -235,7 +234,7 @@
             this.gridColumn2.FieldName = "HO_DEM";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 3;
+            this.gridColumn2.VisibleIndex = 2;
             // 
             // gridColumn3
             // 
@@ -243,7 +242,7 @@
             this.gridColumn3.FieldName = "TEN";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 4;
+            this.gridColumn3.VisibleIndex = 3;
             // 
             // gridColumn4
             // 
@@ -251,7 +250,7 @@
             this.gridColumn4.FieldName = "EMAIL_CA_NHAN";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 5;
+            this.gridColumn4.VisibleIndex = 4;
             // 
             // gridColumn5
             // 
@@ -259,7 +258,7 @@
             this.gridColumn5.FieldName = "DI_DONG";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 6;
+            this.gridColumn5.VisibleIndex = 5;
             // 
             // F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC
             // 
@@ -295,7 +294,7 @@
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox m_cbo_mon_hoc;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton m_cmd_tao_lop;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;

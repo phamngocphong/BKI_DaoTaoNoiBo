@@ -207,7 +207,8 @@ namespace BKI_QLTTQuocAnh
             try
             {
                 F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC v_f = new F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC();
-                v_f.ShowDialog();
+                v_f.MdiParent = this;
+                v_f.Show();
             }
             catch (Exception v_e)
             {

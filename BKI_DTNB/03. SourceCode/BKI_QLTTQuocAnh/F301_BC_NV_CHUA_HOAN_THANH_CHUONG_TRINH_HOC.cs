@@ -40,5 +40,13 @@ namespace BKI_QLTTQuocAnh
             v_us.FillDatasetTheoMonHoc(v_ds, 466);
             m_grc.DataSource = v_ds.Tables[0];
         }
+
+        private void m_cmd_tao_lop_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < m_grv.SelectedRowsCount; i++)
+            {
+                
+            }
+        }
     }
 }

@@ -278,12 +278,13 @@
             // 
             // m_cmd_tai_chinh_hs
             // 
-            this.m_cmd_tai_chinh_hs.Caption = "Tài chính HS";
+            this.m_cmd_tai_chinh_hs.Caption = "Nhân viên phải học môn";
             this.m_cmd_tai_chinh_hs.Glyph = global::BKI_QLTTQuocAnh.Properties.Resources._1425905592_196740;
             this.m_cmd_tai_chinh_hs.Id = 17;
             this.m_cmd_tai_chinh_hs.Name = "m_cmd_tai_chinh_hs";
             this.m_cmd_tai_chinh_hs.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.m_cmd_tai_chinh_hs.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_tai_chinh_hs_ItemClick);
             // 
             // m_cmd_tai_chinh_hs_lm
             // 

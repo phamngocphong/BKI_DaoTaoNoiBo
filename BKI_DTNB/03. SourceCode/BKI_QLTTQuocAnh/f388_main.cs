@@ -202,5 +202,17 @@ namespace BKI_QLTTQuocAnh
       
 
       
+        private void m_cmd_tai_chinh_hs_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC v_f = new F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC();
+                v_f.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
     }
 }

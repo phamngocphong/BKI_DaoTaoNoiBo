@@ -36,17 +36,31 @@
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.m_cbo_mon_hoc = new System.Windows.Forms.ComboBox();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.m_grc = new DevExpress.XtraGrid.GridControl();
+            this.m_grv = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.c_id = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_grc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_grv)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(99, 22);
+            this.label2.Location = new System.Drawing.Point(91, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(508, 19);
             this.label2.TabIndex = 3;
@@ -55,7 +69,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(54, 72);
+            this.label3.Location = new System.Drawing.Point(116, 63);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 13);
             this.label3.TabIndex = 5;
@@ -64,7 +78,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(112, 69);
+            this.comboBox1.Location = new System.Drawing.Point(174, 60);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(141, 21);
             this.comboBox1.TabIndex = 6;
@@ -72,7 +86,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(285, 72);
+            this.label4.Location = new System.Drawing.Point(347, 63);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 13);
             this.label4.TabIndex = 7;
@@ -81,7 +95,7 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(355, 72);
+            this.comboBox2.Location = new System.Drawing.Point(417, 63);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(142, 21);
             this.comboBox2.TabIndex = 8;
@@ -89,7 +103,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(52, 107);
+            this.label5.Location = new System.Drawing.Point(114, 98);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 13);
             this.label5.TabIndex = 9;
@@ -98,7 +112,7 @@
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(112, 104);
+            this.comboBox3.Location = new System.Drawing.Point(174, 95);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(141, 21);
             this.comboBox3.TabIndex = 10;
@@ -106,27 +120,19 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(285, 107);
+            this.label6.Location = new System.Drawing.Point(347, 98);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(49, 13);
             this.label6.TabIndex = 11;
             this.label6.Text = "Môn học";
             // 
-            // comboBox4
+            // m_cbo_mon_hoc
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(355, 104);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(142, 21);
-            this.comboBox4.TabIndex = 12;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 147);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(679, 217);
-            this.dataGridView1.TabIndex = 13;
+            this.m_cbo_mon_hoc.FormattingEnabled = true;
+            this.m_cbo_mon_hoc.Location = new System.Drawing.Point(417, 95);
+            this.m_cbo_mon_hoc.Name = "m_cbo_mon_hoc";
+            this.m_cbo_mon_hoc.Size = new System.Drawing.Size(142, 21);
+            this.m_cbo_mon_hoc.TabIndex = 12;
             // 
             // simpleButton1
             // 
@@ -137,7 +143,7 @@
             this.simpleButton1.ImageIndex = 2;
             this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.simpleButton1.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
-            this.simpleButton1.Location = new System.Drawing.Point(584, 392);
+            this.simpleButton1.Location = new System.Drawing.Point(579, 2);
             this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Padding = new System.Windows.Forms.Padding(1);
@@ -145,29 +151,136 @@
             this.simpleButton1.TabIndex = 14;
             this.simpleButton1.Text = "Tạo lớp học";
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.simpleButton1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(2, 404);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(697, 38);
+            this.panel2.TabIndex = 17;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.m_cbo_mon_hoc);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.comboBox3);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(2, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(697, 132);
+            this.panel1.TabIndex = 18;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.m_grc);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(2, 134);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(697, 270);
+            this.panel3.TabIndex = 19;
+            // 
+            // m_grc
+            // 
+            this.m_grc.Cursor = System.Windows.Forms.Cursors.Default;
+            this.m_grc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.m_grc.Location = new System.Drawing.Point(0, 0);
+            this.m_grc.MainView = this.m_grv;
+            this.m_grc.Name = "m_grc";
+            this.m_grc.Size = new System.Drawing.Size(697, 270);
+            this.m_grc.TabIndex = 0;
+            this.m_grc.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.m_grv});
+            // 
+            // m_grv
+            // 
+            this.m_grv.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.c_id,
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn3,
+            this.gridColumn4,
+            this.gridColumn5});
+            this.m_grv.GridControl = this.m_grc;
+            this.m_grv.Name = "m_grv";
+            this.m_grv.OptionsSelection.MultiSelect = true;
+            this.m_grv.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
+            this.m_grv.OptionsSelection.ResetSelectionClickOutsideCheckboxSelector = true;
+            // 
+            // c_id
+            // 
+            this.c_id.Caption = "ID";
+            this.c_id.FieldName = "ID";
+            this.c_id.Name = "c_id";
+            this.c_id.Visible = true;
+            this.c_id.VisibleIndex = 1;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Mã nhân viên";
+            this.gridColumn1.FieldName = "MA_NV";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 2;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Họ đệm";
+            this.gridColumn2.FieldName = "HO_DEM";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 3;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "Tên";
+            this.gridColumn3.FieldName = "TEN";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 4;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "Email";
+            this.gridColumn4.FieldName = "EMAIL_CA_NHAN";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 5;
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "Di động";
+            this.gridColumn5.FieldName = "DI_DONG";
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 6;
+            // 
             // F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(701, 444);
-            this.Controls.Add(this.simpleButton1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Name = "F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC";
             this.Padding = new System.Windows.Forms.Padding(2);
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC_Load);
+            this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.m_grc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_grv)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -181,8 +294,18 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox m_cbo_mon_hoc;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel3;
+        private DevExpress.XtraGrid.GridControl m_grc;
+        private DevExpress.XtraGrid.Views.Grid.GridView m_grv;
+        private DevExpress.XtraGrid.Columns.GridColumn c_id;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
     }
 }

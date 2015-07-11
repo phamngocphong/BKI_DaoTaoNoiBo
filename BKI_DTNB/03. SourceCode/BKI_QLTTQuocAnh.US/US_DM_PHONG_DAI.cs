@@ -9,7 +9,7 @@
 
 namespace BKI_QLTTQuocAnh.US
 {
-    using BKI_QLTTQuocAnh.DS;
+using BKI_QLTTQuocAnh.DS;
 using IP.Core.IPCommon;
 using IP.Core.IPUserService;
 using System.Data.SqlClient;

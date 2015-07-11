@@ -130,5 +130,12 @@ public class US_DM_MON_HOC : US_Object
 		pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
 	}
 #endregion
+
+    public void FillDatasetTheoMonHoc(DataSet op_ds, decimal ip_id_mon_hoc)
+    {
+        CStoredProc v_cstore = new CStoredProc("get_danh_sach_nhan_vien_chua_hoc_mon");
+        v_cstore.addDecimalInputParam("@ID_MON_HOC", ip_id_mon_hoc);
+        v_cstore.fillDataSetByCommand(this, op_ds);
+    }
 }
 }

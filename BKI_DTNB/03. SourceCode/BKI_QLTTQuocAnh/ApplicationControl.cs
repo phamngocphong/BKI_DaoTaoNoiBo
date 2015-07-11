@@ -7,7 +7,6 @@ using IP.Core.IPSystemAdmin;
 using IP.Core.IPBusinessService;
 using IP.Core.IPUserService;
 using BKI_QLTTQuocAnh;
-using Form_menu;
 using BKI_QLTTQuocAnh.NghiepVu;
 
 

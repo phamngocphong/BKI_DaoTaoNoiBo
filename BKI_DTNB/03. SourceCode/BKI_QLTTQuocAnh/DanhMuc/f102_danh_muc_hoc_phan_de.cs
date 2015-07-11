@@ -69,7 +69,14 @@ namespace BKI_QLTTQuocAnh.DanhMuc
         private void form_2_us_object() {
           m_us_dm_hoc_phan.strMA_HOC_PHAN = m_txt_ma_hoc_phan.Text;
             m_us_dm_hoc_phan.strTEN_HOC_PHAN = m_txt_ma_hoc_phan.Text;
-            m_us_dm_hoc_phan.dcSO_LUONG_YEU_CAU =decimal.Parse(m_txt_so_luong_mon_hoc_yeu_cau.Text);
+            if (m_txt_so_luong_mon_hoc_yeu_cau.Text.Trim() == "")
+            {
+                m_us_dm_hoc_phan.IsSO_LUONG_YEU_CAUNull();
+            }
+            else
+            {
+                m_us_dm_hoc_phan.dcSO_LUONG_YEU_CAU = CIPConvert.ToDecimal(m_txt_so_luong_mon_hoc_yeu_cau.Text.Trim());
+            }
             if (chk_bat_buoc.Checked)
                 m_us_dm_hoc_phan.strBAT_BUOC_YN = "Y";
             else m_us_dm_hoc_phan.strBAT_BUOC_YN = "N";

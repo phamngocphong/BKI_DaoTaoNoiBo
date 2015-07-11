@@ -196,7 +196,9 @@
     <Compile Include="NghiepVu\BackupDB.Designer.cs">
       <DependentUpon>BackupDB.cs</DependentUpon>
     </Compile>
-    <Compile Include="NghiepVu\F205_TAO_MOI_LOP_HOC.cs" />
+    <Compile Include="NghiepVu\F205_TAO_MOI_LOP_HOC.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="NghiepVu\F205_TAO_MOI_LOP_HOC.designer.cs">
       <DependentUpon>F205_TAO_MOI_LOP_HOC.cs</DependentUpon>
     </Compile>

@@ -143,6 +143,7 @@
             this.m_cmd_doi_mat_khau.Name = "m_cmd_doi_mat_khau";
             this.m_cmd_doi_mat_khau.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.m_cmd_doi_mat_khau.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_doi_mat_khau_ItemClick);
             // 
             // m_cmd_thoat
             // 
@@ -152,6 +153,7 @@
             this.m_cmd_thoat.Name = "m_cmd_thoat";
             this.m_cmd_thoat.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.m_cmd_thoat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_thoat_ItemClick);
             // 
             // m_cmd_nguoi_sd
             // 
@@ -161,6 +163,7 @@
             this.m_cmd_nguoi_sd.Name = "m_cmd_nguoi_sd";
             this.m_cmd_nguoi_sd.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.m_cmd_nguoi_sd.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_nguoi_sd_ItemClick);
             // 
             // m_cmd_nhom_nguoi_su_dung
             // 
@@ -170,6 +173,7 @@
             this.m_cmd_nhom_nguoi_su_dung.Name = "m_cmd_nhom_nguoi_su_dung";
             this.m_cmd_nhom_nguoi_su_dung.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.m_cmd_nhom_nguoi_su_dung.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_nhom_nguoi_su_dung_ItemClick);
             // 
             // m_cmd_phan_quyen_nhom
             // 
@@ -179,6 +183,7 @@
             this.m_cmd_phan_quyen_nhom.Name = "m_cmd_phan_quyen_nhom";
             this.m_cmd_phan_quyen_nhom.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.m_cmd_phan_quyen_nhom.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_phan_quyen_nhom_ItemClick);
             // 
             // m_cmd_dm_lop_mon
             // 
@@ -377,6 +382,7 @@
             this.m_cmd_backup_restore.Name = "m_cmd_backup_restore";
             this.m_cmd_backup_restore.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.m_cmd_backup_restore.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_backup_restore_ItemClick);
             // 
             // m_cmd_ds_hs_theo_lm
             // 

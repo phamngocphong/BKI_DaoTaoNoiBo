@@ -243,6 +243,7 @@ namespace BKI_QLTTQuocAnh
             this.m_txt_tim_kiem.Name = "m_txt_tim_kiem";
             this.m_txt_tim_kiem.Size = new System.Drawing.Size(373, 20);
             this.m_txt_tim_kiem.TabIndex = 22;
+            this.m_txt_tim_kiem.TextChanged += new System.EventHandler(this.m_txt_tim_kiem_TextChanged);
             // 
             // label2
             // 
@@ -324,7 +325,7 @@ namespace BKI_QLTTQuocAnh
 		private void load_data_2_grid(){						
 			m_ds = new DS_DM_HOC_PHAN();	
 		    
-			m_us.FillDataset(m_ds);
+			m_us.FillDataset(m_ds," where ma_hoc_phan LIKE '%"+ m_txt_tim_kiem.Text.Trim().ToLower()+"%'" );
 			m_fg.Redraw = false;
 			CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
 			m_fg.Redraw = true;
@@ -457,6 +458,11 @@ namespace BKI_QLTTQuocAnh
 			catch (Exception v_e){
 				CSystemLog_301.ExceptionHandle(v_e);
 			}
+        }
+
+        private void m_txt_tim_kiem_TextChanged(object sender, EventArgs e)
+        {
+            load_data_2_grid();
         }
 
 

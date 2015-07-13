@@ -39,7 +39,7 @@ namespace BKI_QLTTQuocAnh
         {
             US_DM_MON_HOC v_us = new US_DM_MON_HOC();
             DataSet v_ds = new DataSet();
-            DataTable v_dt = new DataTable();
+           DataTable v_dt = new DataTable();
             v_ds.Tables.Add(v_dt);
             v_us.FillDatasetTheoMonHoc(v_ds, 466);
             m_grc.DataSource = v_ds.Tables[0];

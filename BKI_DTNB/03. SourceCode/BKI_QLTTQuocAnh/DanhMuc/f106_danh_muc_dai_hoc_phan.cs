@@ -219,7 +219,11 @@ namespace BKI_QLTTQuocAnh
 
 		#region Data Structure
 		private enum e_col_Number{
-			MA_DAI = 1,MA_HOC_PHAN = 3,TEN_DAI = 2,TEN_HOC_PHAN = 4
+			MA_DAI = 1
+,MA_HOC_PHAN = 3
+,TEN_DAI = 2
+,TEN_HOC_PHAN = 4
+
 		}			
 		#endregion
 
@@ -244,7 +248,11 @@ namespace BKI_QLTTQuocAnh
 		}	
 		private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg){
 			Hashtable v_htb = new Hashtable();
-			v_htb.Add(V_DAI_HOC_PHAN.MA_DAI, e_col_Number.MA_DAI);			v_htb.Add(V_DAI_HOC_PHAN.MA_HOC_PHAN, e_col_Number.MA_HOC_PHAN);			v_htb.Add(V_DAI_HOC_PHAN.TEN_DAI, e_col_Number.TEN_DAI);			v_htb.Add(V_DAI_HOC_PHAN.TEN_HOC_PHAN, e_col_Number.TEN_HOC_PHAN);									
+			v_htb.Add(V_DAI_HOC_PHAN.MA_DAI, e_col_Number.MA_DAI);
+			v_htb.Add(V_DAI_HOC_PHAN.MA_HOC_PHAN, e_col_Number.MA_HOC_PHAN);
+			v_htb.Add(V_DAI_HOC_PHAN.TEN_DAI, e_col_Number.TEN_DAI);
+			v_htb.Add(V_DAI_HOC_PHAN.TEN_HOC_PHAN, e_col_Number.TEN_HOC_PHAN);
+									
 			ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg,v_htb,m_ds.V_DAI_HOC_PHAN.NewRow());
 			return v_obj_trans;			
 		}

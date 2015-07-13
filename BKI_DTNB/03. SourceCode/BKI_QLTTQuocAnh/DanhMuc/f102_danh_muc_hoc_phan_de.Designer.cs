@@ -84,6 +84,8 @@
             // 
             // m_txt_so_luong_mon_hoc_yeu_cau
             // 
+            this.m_txt_so_luong_mon_hoc_yeu_cau.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.m_txt_so_luong_mon_hoc_yeu_cau.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.m_txt_so_luong_mon_hoc_yeu_cau.Location = new System.Drawing.Point(182, 121);
             this.m_txt_so_luong_mon_hoc_yeu_cau.Name = "m_txt_so_luong_mon_hoc_yeu_cau";
             this.m_txt_so_luong_mon_hoc_yeu_cau.Size = new System.Drawing.Size(163, 20);

@@ -21,6 +21,7 @@ using IP.Core.IPSystemAdmin;
 using BKI_QLTTQuocAnh.US;
 using BKI_QLTTQuocAnh.DS;
 using BKI_QLTTQuocAnh.DS.CDBNames;
+using BKI_QLTTQuocAnh.DanhMuc;
 
 using C1.Win.C1FlexGrid;
 
@@ -51,7 +52,7 @@ namespace BKI_QLTTQuocAnh
 			//
 			// TODO: Add any constructor code after InitializeComponent call
 			//
-			format_controls();
+			//format_controls();
 		}
 
 		/// <summary>
@@ -145,6 +146,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_insert.TabIndex = 12;
             this.m_cmd_insert.Text = "&Thêm";
+            this.m_cmd_insert.Click += new System.EventHandler(this.m_cmd_insert_Click);
             // 
             // m_cmd_update
             // 
@@ -160,6 +162,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_update.TabIndex = 13;
             this.m_cmd_update.Text = "&Sửa";
+            this.m_cmd_update.Click += new System.EventHandler(this.m_cmd_update_Click);
             // 
             // m_cmd_view
             // 
@@ -175,6 +178,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_view.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_view.TabIndex = 21;
             this.m_cmd_view.Text = "Xem";
+            this.m_cmd_view.Click += new System.EventHandler(this.m_cmd_view_Click);
             // 
             // m_cmd_delete
             // 
@@ -190,6 +194,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_delete.TabIndex = 14;
             this.m_cmd_delete.Text = "&Xoá";
+            this.m_cmd_delete.Click += new System.EventHandler(this.m_cmd_delete_Click);
             // 
             // m_cmd_exit
             // 
@@ -205,6 +210,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_exit.TabIndex = 11;
             this.m_cmd_exit.Text = "Thoát (Esc)";
+            this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_view_Click);
             // 
             // m_fg
             // 
@@ -222,6 +228,7 @@ namespace BKI_QLTTQuocAnh
             this.ClientSize = new System.Drawing.Size(686, 409);
             this.Controls.Add(this.m_fg);
             this.Controls.Add(this.m_pnl_out_place_dm);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "f108_danh_muc_ngach";
             this.Text = "f108_danh_muc_ngach";
             this.Load += new System.EventHandler(this.f108_danh_muc_ngach_Load);
@@ -240,7 +247,9 @@ namespace BKI_QLTTQuocAnh
 
 		#region Data Structure
 		private enum e_col_Number{
-			TEN_NGACH = 2,MA_NGACH = 1
+			TEN_NGACH = 2
+,MA_NGACH = 1
+
 		}			
 		#endregion
 
@@ -265,7 +274,9 @@ namespace BKI_QLTTQuocAnh
 		}	
 		private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg){
 			Hashtable v_htb = new Hashtable();
-			v_htb.Add(DM_NGACH.TEN_NGACH, e_col_Number.TEN_NGACH);			v_htb.Add(DM_NGACH.MA_NGACH, e_col_Number.MA_NGACH);									
+			v_htb.Add(DM_NGACH.TEN_NGACH, e_col_Number.TEN_NGACH);
+			v_htb.Add(DM_NGACH.MA_NGACH, e_col_Number.MA_NGACH);
+									
 			ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg,v_htb,m_ds.DM_NGACH.NewRow());
 			return v_obj_trans;			
 		}
@@ -293,18 +304,19 @@ namespace BKI_QLTTQuocAnh
 		}
 
 
-		private void insert_dm_ngach(){			
-		//	f108_danh_muc_ngach_DE v_fDE = new  f108_danh_muc_ngach_DE();								
-		//	v_fDE.display();
+		private void insert_dm_ngach(){
+            f108_danh_muc_ngach_de v_f = new f108_danh_muc_ngach_de();
+            v_f.display_for_insert();
 			load_data_2_grid();
 		}
 
+     
 		private void update_dm_ngach(){			
 			if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
 			if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;			
 			grid2us_object(m_us, m_fg.Row);
-		//	f108_danh_muc_ngach_DE v_fDE = new f108_danh_muc_ngach_DE();
-		//	v_fDE.display(m_us);
+            f108_danh_muc_ngach_de v_f = new f108_danh_muc_ngach_de();
+            v_f.display_for_update(m_us);
 			load_data_2_grid();
 		}
 				
@@ -403,6 +415,8 @@ namespace BKI_QLTTQuocAnh
 				CSystemLog_301.ExceptionHandle(v_e);
 			}
 		}
+
+      
 
 	}
 }

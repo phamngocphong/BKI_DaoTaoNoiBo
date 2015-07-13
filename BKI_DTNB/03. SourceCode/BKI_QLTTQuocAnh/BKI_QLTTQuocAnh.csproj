@@ -69,6 +69,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DLL\DevExpress.Data.v14.1.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.Printing.v14.1.Core, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DLL\DevExpress.Utils.v14.1.dll</HintPath>
@@ -114,6 +115,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Printing" />
+    <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
@@ -151,6 +153,12 @@
     </Compile>
     <Compile Include="DanhMuc\f108_danh_muc_ngach.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\f108_danh_muc_ngach_de.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\f108_danh_muc_ngach_de.Designer.cs">
+      <DependentUpon>f108_danh_muc_ngach_de.cs</DependentUpon>
     </Compile>
     <Compile Include="DanhMuc\f109_danh_muc_dai.cs">
       <SubType>Form</SubType>
@@ -264,6 +272,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f108_danh_muc_ngach.resx">
       <DependentUpon>f108_danh_muc_ngach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\f108_danh_muc_ngach_de.resx">
+      <DependentUpon>f108_danh_muc_ngach_de.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f109_danh_muc_dai.resx">
       <DependentUpon>f109_danh_muc_dai.cs</DependentUpon>

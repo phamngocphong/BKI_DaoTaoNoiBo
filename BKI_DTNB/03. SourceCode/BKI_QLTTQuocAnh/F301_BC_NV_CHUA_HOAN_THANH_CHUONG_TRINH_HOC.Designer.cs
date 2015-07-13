@@ -49,6 +49,7 @@
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.m_txt_ma_mon_hoc = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -163,6 +164,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.m_txt_ma_mon_hoc);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.comboBox1);
@@ -260,6 +262,15 @@
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 5;
             // 
+            // m_txt_ma_mon_hoc
+            // 
+            this.m_txt_ma_mon_hoc.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.m_txt_ma_mon_hoc.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.m_txt_ma_mon_hoc.Location = new System.Drawing.Point(57, 35);
+            this.m_txt_ma_mon_hoc.Name = "m_txt_ma_mon_hoc";
+            this.m_txt_ma_mon_hoc.Size = new System.Drawing.Size(138, 20);
+            this.m_txt_ma_mon_hoc.TabIndex = 13;
+            // 
             // F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -306,5 +317,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private System.Windows.Forms.TextBox m_txt_ma_mon_hoc;
     }
 }

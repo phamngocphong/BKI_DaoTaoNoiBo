@@ -15,7 +15,7 @@ using IP.Core.IPUserService;
 using System.Data.SqlClient;
 using System.Data;
 using System;
-    using BKI_QLTTQuocAnh.DS.CDBNames;
+using BKI_QLTTQuocAnh.DS.CDBNames;
 
 public class US_DM_DAI : US_Object
 {

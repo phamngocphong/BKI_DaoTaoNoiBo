@@ -98,5 +98,28 @@ namespace BKI_QLTTQuocAnh
                 ip_obj_cbo_trang_thai.SelectedIndex = 0;
             }
         }
+
+        public static void load_data_to_auto_complete_source(string ip_str_table_name, string ip_str_column_name, TextBox ip_txt) {
+            US_DUNG_CHUNG v_us = new US_DUNG_CHUNG();
+            DataSet v_ds = new DataSet();
+            DataTable v_dt = new DataTable();
+            v_ds.Tables.Add(v_dt);
+            v_us.FillDatasetWithProc(v_ds, ip_str_table_name, ip_str_column_name);
+            for (int i = 0; i < v_ds.Tables[0].Rows.Count; i++)
+            {
+                DataRow v_dr = v_ds.Tables[0].Rows[i];
+                ip_txt.AutoCompleteCustomSource.Add(v_dr[ip_str_column_name].ToString());
+            }
+        }
+    }
+
+    public class US_DUNG_CHUNG : US_Object {
+        public void FillDatasetWithProc(DataSet op_ds, string ip_str_table_name, string ip_str_column_name)
+        {
+            CStoredProc v_cstore = new CStoredProc("get_data_to_dataset_with_table_name_and_column_name");
+            v_cstore.addNVarcharInputParam("@TABLE_NAME", ip_str_table_name);
+            v_cstore.addNVarcharInputParam("@COLUMN_NAME", ip_str_column_name);
+            v_cstore.fillDataSetByCommand(this, op_ds);
+        }
     }
 }

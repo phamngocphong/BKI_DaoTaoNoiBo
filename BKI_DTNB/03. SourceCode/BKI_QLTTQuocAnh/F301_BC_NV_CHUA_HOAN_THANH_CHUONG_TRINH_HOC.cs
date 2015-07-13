@@ -26,6 +26,7 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
+                WinFormControls.load_data_to_auto_complete_source("DM_MON_HOC", "MA_MON_HOC", m_txt_ma_mon_hoc);
                 load_data_2_grid();
             }
             catch (Exception v_e)

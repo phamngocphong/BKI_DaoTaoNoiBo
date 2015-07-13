@@ -134,6 +134,9 @@
     <Compile Include="DanhMuc\f102_danh_muc_hoc_phan_de.Designer.cs">
       <DependentUpon>f102_danh_muc_hoc_phan_de.cs</DependentUpon>
     </Compile>
+    <Compile Include="DanhMuc\f107_danh_muc_lop_hoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +226,9 @@
     <EmbeddedResource Include="DanhMuc\f102_danh_muc_hoc_phan_de.resx">
       <DependentUpon>f102_danh_muc_hoc_phan_de.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\f107_danh_muc_lop_hoc.resx">
+      <DependentUpon>f107_danh_muc_lop_hoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC.resx">
       <DependentUpon>F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC.cs</DependentUpon>
     </EmbeddedResource>
@@ -276,6 +282,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="f388_main.resx">
       <DependentUpon>f388_main.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="App.config">
       <SubType>Designer</SubType>

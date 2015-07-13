@@ -159,6 +159,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_PHONG_HOC_PHAN.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_V_GD_LOP_MON.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_GD_LOP_MON.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -412,6 +417,17 @@
     </None>
     <None Include="DS_PHONG_HOC_PHAN.xss">
       <DependentUpon>DS_PHONG_HOC_PHAN.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_GD_LOP_MON.xsc">
+      <DependentUpon>DS_V_GD_LOP_MON.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_GD_LOP_MON.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_GD_LOP_MON.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_GD_LOP_MON.xss">
+      <DependentUpon>DS_V_GD_LOP_MON.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

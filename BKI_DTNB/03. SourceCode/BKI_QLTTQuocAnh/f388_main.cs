@@ -12,6 +12,7 @@ using BKI_QLTTQuocAnh.US;
 using BKI_QLTTQuocAnh.HeThong;
 using BKI_QLTTQuocAnh.NghiepVu;
 using IP.Core.IPSystemAdmin;
+using BKI_QLTTQuocAnh.DanhMuc;
 namespace BKI_QLTTQuocAnh
 {
     public partial class f388_main : DevExpress.XtraBars.Ribbon.RibbonForm
@@ -189,8 +190,9 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                frm_DM_HOC_PHAN v_frm = new frm_DM_HOC_PHAN();
-                v_frm.Show();
+                frm_DM_HOC_PHAN v_f = new frm_DM_HOC_PHAN();
+                v_f.MdiParent = this;
+                v_f.Show();
             }
             catch (Exception v_e)
             {
@@ -213,6 +215,22 @@ namespace BKI_QLTTQuocAnh
             catch (Exception v_e)
             {
                 CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                frm_V_GD_LOP_MON v_f = new frm_V_GD_LOP_MON();
+                v_f.MdiParent = this;
+                v_f.Show();
+
+            }
+            catch (Exception ex)
+            {
+
+                CSystemLog_301.ExceptionHandle(ex);
             }
         }
     }

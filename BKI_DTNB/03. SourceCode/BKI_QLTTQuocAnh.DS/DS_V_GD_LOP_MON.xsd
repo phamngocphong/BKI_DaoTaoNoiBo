@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_V_GD_LOP_MON" targetNamespace="http://tempuri.org/DS_V_GD_LOP_MON.xsd" xmlns:mstns="http://tempuri.org/DS_V_GD_LOP_MON.xsd" xmlns="http://tempuri.org/DS_V_GD_LOP_MON.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DAO_TAO_NOI_BOConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DAO_TAO_NOI_BOConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BKI_QLTTQuocAnh.DS.Properties.Settings.GlobalReference.Default.DAO_TAO_NOI_BOConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_GD_LOP_MONTableAdapter" GeneratorDataComponentClassName="V_GD_LOP_MONTableAdapter" Name="V_GD_LOP_MON" UserDataComponentName="V_GD_LOP_MONTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DAO_TAO_NOI_BOConnectionString (Settings)" DbObjectName="DAO_TAO_NOI_BO.dbo.V_GD_LOP_MON" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT MA_LOP_HOC, MA_MON_HOC, TEN_MON_HOC, DON_VI_GIANG_DAY, THOI_GIAN, DIA_DIEM, SO_LUONG FROM dbo.V_GD_LOP_MON</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MA_LOP_HOC" DataSetColumn="MA_LOP_HOC" />
+              <Mapping SourceColumn="MA_MON_HOC" DataSetColumn="MA_MON_HOC" />
+              <Mapping SourceColumn="TEN_MON_HOC" DataSetColumn="TEN_MON_HOC" />
+              <Mapping SourceColumn="DON_VI_GIANG_DAY" DataSetColumn="DON_VI_GIANG_DAY" />
+              <Mapping SourceColumn="THOI_GIAN" DataSetColumn="THOI_GIAN" />
+              <Mapping SourceColumn="DIA_DIEM" DataSetColumn="DIA_DIEM" />
+              <Mapping SourceColumn="SO_LUONG" DataSetColumn="SO_LUONG" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_V_GD_LOP_MON" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_V_GD_LOP_MON" msprop:Generator_UserDSName="DS_V_GD_LOP_MON">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="V_GD_LOP_MON" msprop:Generator_TableClassName="V_GD_LOP_MONDataTable" msprop:Generator_TableVarName="tableV_GD_LOP_MON" msprop:Generator_TablePropName="V_GD_LOP_MON" msprop:Generator_RowDeletingName="V_GD_LOP_MONRowDeleting" msprop:Generator_RowChangingName="V_GD_LOP_MONRowChanging" msprop:Generator_RowEvHandlerName="V_GD_LOP_MONRowChangeEventHandler" msprop:Generator_RowDeletedName="V_GD_LOP_MONRowDeleted" msprop:Generator_UserTableName="V_GD_LOP_MON" msprop:Generator_RowChangedName="V_GD_LOP_MONRowChanged" msprop:Generator_RowEvArgName="V_GD_LOP_MONRowChangeEvent" msprop:Generator_RowClassName="V_GD_LOP_MONRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MA_LOP_HOC" msprop:Generator_ColumnVarNameInTable="columnMA_LOP_HOC" msprop:Generator_ColumnPropNameInRow="MA_LOP_HOC" msprop:Generator_ColumnPropNameInTable="MA_LOP_HOCColumn" msprop:Generator_UserColumnName="MA_LOP_HOC">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MA_MON_HOC" msprop:Generator_ColumnVarNameInTable="columnMA_MON_HOC" msprop:Generator_ColumnPropNameInRow="MA_MON_HOC" msprop:Generator_ColumnPropNameInTable="MA_MON_HOCColumn" msprop:Generator_UserColumnName="MA_MON_HOC">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TEN_MON_HOC" msprop:Generator_ColumnVarNameInTable="columnTEN_MON_HOC" msprop:Generator_ColumnPropNameInRow="TEN_MON_HOC" msprop:Generator_ColumnPropNameInTable="TEN_MON_HOCColumn" msprop:Generator_UserColumnName="TEN_MON_HOC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DON_VI_GIANG_DAY" msprop:Generator_ColumnVarNameInTable="columnDON_VI_GIANG_DAY" msprop:Generator_ColumnPropNameInRow="DON_VI_GIANG_DAY" msprop:Generator_ColumnPropNameInTable="DON_VI_GIANG_DAYColumn" msprop:Generator_UserColumnName="DON_VI_GIANG_DAY" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="THOI_GIAN" msprop:Generator_ColumnVarNameInTable="columnTHOI_GIAN" msprop:Generator_ColumnPropNameInRow="THOI_GIAN" msprop:Generator_ColumnPropNameInTable="THOI_GIANColumn" msprop:Generator_UserColumnName="THOI_GIAN" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DIA_DIEM" msprop:Generator_ColumnVarNameInTable="columnDIA_DIEM" msprop:Generator_ColumnPropNameInRow="DIA_DIEM" msprop:Generator_ColumnPropNameInTable="DIA_DIEMColumn" msprop:Generator_UserColumnName="DIA_DIEM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SO_LUONG" msprop:Generator_ColumnVarNameInTable="columnSO_LUONG" msprop:Generator_ColumnPropNameInRow="SO_LUONG" msprop:Generator_ColumnPropNameInTable="SO_LUONGColumn" msprop:Generator_UserColumnName="SO_LUONG" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

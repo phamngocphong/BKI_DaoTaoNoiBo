@@ -72,9 +72,12 @@
     <Compile Include="US_HT_PHAN_QUYEN_DETAIL.cs" />
     <Compile Include="US_HT_PHAN_QUYEN_HE_THONG.cs" />
     <Compile Include="US_HT_USER_GROUP.cs" />
+    <Compile Include="US_V_DAI_HOC_PHAN.cs" />
     <Compile Include="US_V_GD_LOP_MON.cs" />
     <Compile Include="US_V_HOC_PHAN_MON_HOC.cs" />
     <Compile Include="US_V_NGACH_PHONG.cs" />
+    <Compile Include="US_V_PHONG_DAI.cs" />
+    <Compile Include="US_V_PHONG_HOC_PHAN.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BKI_QLTTQuocAnh.DS\BKI_QLTTQuocAnh.DS.csproj">

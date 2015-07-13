@@ -360,4 +360,29 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string TEN_DON_VI = "TEN_DON_VI";
     }
 
+    public class V_PHONG_DAI
+    {
+        public const string MA_DON_VI = "MA_DON_VI";
+        public const string TEN_DON_VI = "TEN_DON_VI";
+        public const string MA_DAI = "MA_DAI";
+        public const string TEN_DAI = "TEN_DAI";
+    }
+
+
+    public class V_PHONG_HOC_PHAN
+    {
+        public const string MA_DON_VI = "MA_DON_VI";
+        public const string TEN_DON_VI = "TEN_DON_VI";
+        public const string MA_HOC_PHAN = "MA_HOC_PHAN";
+        public const string TEN_HOC_PHAN = "TEN_HOC_PHAN";
+    }
+
+    public class V_DAI_HOC_PHAN
+    {
+        public const string MA_DAI = "MA_DAI";
+        public const string TEN_DAI = "TEN_DAI";
+        public const string MA_HOC_PHAN = "MA_HOC_PHAN";
+        public const string TEN_HOC_PHAN = "TEN_HOC_PHAN";
+    }
+
 }

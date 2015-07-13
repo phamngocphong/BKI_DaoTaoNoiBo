@@ -296,5 +296,50 @@ namespace BKI_QLTTQuocAnh
                 CSystemLog_301.ExceptionHandle(ex);
             }
         }
+
+        private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                f104_danh_muc_phong_dai v_f = new f104_danh_muc_phong_dai();
+                v_f.MdiParent = this;
+                v_f.Show();
+            }
+            catch (Exception ex)
+            {
+
+                CSystemLog_301.ExceptionHandle(ex);
+            }
+        }
+
+        private void m_cmd_phong_hoc_phan_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                f105_danh_muc_phong_hoc_phan v_f = new f105_danh_muc_phong_hoc_phan();
+                v_f.MdiParent = this;
+                v_f.Show();
+            }
+            catch (Exception ex)
+            {
+
+                CSystemLog_301.ExceptionHandle(ex);
+            }
+        }
+
+        private void m_cmd_dai_hoc_phan_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                f106_danh_muc_dai_hoc_phan v_f = new f106_danh_muc_dai_hoc_phan();
+                v_f.MdiParent = this;
+                v_f.Show();
+            }
+            catch (Exception ex)
+            {
+
+                CSystemLog_301.ExceptionHandle(ex);
+            }
+        }
     }
 }

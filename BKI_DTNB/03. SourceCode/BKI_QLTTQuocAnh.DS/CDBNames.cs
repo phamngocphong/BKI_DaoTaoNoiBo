@@ -343,7 +343,20 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string SO_LUONG = "SO_LUONG";
     }
 
+    public class V_HOC_PHAN_MON_HOC
+    {
+        public const string MA_HOC_PHAN = "MA_HOC_PHAN";
+        public const string TEN_HOC_PHAN = "TEN_HOC_PHAN";
+        public const string MA_MON_HOC = "MA_MON_HOC";
+        public const string TEN_MON_HOC = "TEN_MON_HOC";
+    }
 
-  
+    public class V_NGACH_PHONG
+    {
+        public const string MA_NGACH = "MA_NGACH";
+        public const string TEN_NGACH = "TEN_NGACH";
+        public const string MA_DON_VI = "MA_DON_VI";
+        public const string TEN_DON_VI = "TEN_DON_VI";
+    }
 
 }

@@ -164,6 +164,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_GD_LOP_MON.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_V_HOC_PHAN_MON_HOC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_HOC_PHAN_MON_HOC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_V_NGACH_PHONG.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_NGACH_PHONG.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -428,6 +438,28 @@
     </None>
     <None Include="DS_V_GD_LOP_MON.xss">
       <DependentUpon>DS_V_GD_LOP_MON.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_HOC_PHAN_MON_HOC.xsc">
+      <DependentUpon>DS_V_HOC_PHAN_MON_HOC.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_HOC_PHAN_MON_HOC.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_HOC_PHAN_MON_HOC.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_HOC_PHAN_MON_HOC.xss">
+      <DependentUpon>DS_V_HOC_PHAN_MON_HOC.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_NGACH_PHONG.xsc">
+      <DependentUpon>DS_V_NGACH_PHONG.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_NGACH_PHONG.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_NGACH_PHONG.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_NGACH_PHONG.xss">
+      <DependentUpon>DS_V_NGACH_PHONG.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

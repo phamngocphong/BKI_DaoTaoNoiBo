@@ -134,7 +134,19 @@
     <Compile Include="DanhMuc\f102_danh_muc_hoc_phan_de.Designer.cs">
       <DependentUpon>f102_danh_muc_hoc_phan_de.cs</DependentUpon>
     </Compile>
+    <Compile Include="DanhMuc\f103_danh_muc_ngach_phong.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DanhMuc\f107_danh_muc_lop_hoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\f108_danh_muc_ngach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\f109_danh_muc_dai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\f110_danh_muc_hoc_phan_mon_hoc.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC.cs">
@@ -226,8 +238,20 @@
     <EmbeddedResource Include="DanhMuc\f102_danh_muc_hoc_phan_de.resx">
       <DependentUpon>f102_danh_muc_hoc_phan_de.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\f103_danh_muc_ngach_phong.resx">
+      <DependentUpon>f103_danh_muc_ngach_phong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f107_danh_muc_lop_hoc.resx">
       <DependentUpon>f107_danh_muc_lop_hoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\f108_danh_muc_ngach.resx">
+      <DependentUpon>f108_danh_muc_ngach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\f109_danh_muc_dai.resx">
+      <DependentUpon>f109_danh_muc_dai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\f110_danh_muc_hoc_phan_mon_hoc.resx">
+      <DependentUpon>f110_danh_muc_hoc_phan_mon_hoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC.resx">
       <DependentUpon>F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC.cs</DependentUpon>

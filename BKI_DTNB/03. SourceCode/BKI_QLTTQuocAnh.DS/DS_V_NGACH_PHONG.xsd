@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_V_NGACH_PHONG" targetNamespace="http://tempuri.org/DS_V_NGACH_PHONG.xsd" xmlns:mstns="http://tempuri.org/DS_V_NGACH_PHONG.xsd" xmlns="http://tempuri.org/DS_V_NGACH_PHONG.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DAO_TAO_NOI_BOConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DAO_TAO_NOI_BOConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BKI_QLTTQuocAnh.DS.Properties.Settings.GlobalReference.Default.DAO_TAO_NOI_BOConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_NGACH_PHONGTableAdapter" GeneratorDataComponentClassName="V_NGACH_PHONGTableAdapter" Name="V_NGACH_PHONG" UserDataComponentName="V_NGACH_PHONGTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DAO_TAO_NOI_BOConnectionString (Settings)" DbObjectName="DAO_TAO_NOI_BO.dbo.V_NGACH_PHONG" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT MA_NGACH, TEN_NGACH, MA_DON_VI, TEN_DON_VI FROM dbo.V_NGACH_PHONG</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MA_NGACH" DataSetColumn="MA_NGACH" />
+              <Mapping SourceColumn="TEN_NGACH" DataSetColumn="TEN_NGACH" />
+              <Mapping SourceColumn="MA_DON_VI" DataSetColumn="MA_DON_VI" />
+              <Mapping SourceColumn="TEN_DON_VI" DataSetColumn="TEN_DON_VI" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_V_NGACH_PHONG" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_V_NGACH_PHONG" msprop:Generator_UserDSName="DS_V_NGACH_PHONG">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="V_NGACH_PHONG" msprop:Generator_TableClassName="V_NGACH_PHONGDataTable" msprop:Generator_TableVarName="tableV_NGACH_PHONG" msprop:Generator_TablePropName="V_NGACH_PHONG" msprop:Generator_RowDeletingName="V_NGACH_PHONGRowDeleting" msprop:Generator_RowChangingName="V_NGACH_PHONGRowChanging" msprop:Generator_RowEvHandlerName="V_NGACH_PHONGRowChangeEventHandler" msprop:Generator_RowDeletedName="V_NGACH_PHONGRowDeleted" msprop:Generator_UserTableName="V_NGACH_PHONG" msprop:Generator_RowChangedName="V_NGACH_PHONGRowChanged" msprop:Generator_RowEvArgName="V_NGACH_PHONGRowChangeEvent" msprop:Generator_RowClassName="V_NGACH_PHONGRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MA_NGACH" msprop:Generator_ColumnVarNameInTable="columnMA_NGACH" msprop:Generator_ColumnPropNameInRow="MA_NGACH" msprop:Generator_ColumnPropNameInTable="MA_NGACHColumn" msprop:Generator_UserColumnName="MA_NGACH">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TEN_NGACH" msprop:Generator_ColumnVarNameInTable="columnTEN_NGACH" msprop:Generator_ColumnPropNameInRow="TEN_NGACH" msprop:Generator_ColumnPropNameInTable="TEN_NGACHColumn" msprop:Generator_UserColumnName="TEN_NGACH">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MA_DON_VI" msprop:Generator_ColumnVarNameInTable="columnMA_DON_VI" msprop:Generator_ColumnPropNameInRow="MA_DON_VI" msprop:Generator_ColumnPropNameInTable="MA_DON_VIColumn" msprop:Generator_UserColumnName="MA_DON_VI">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TEN_DON_VI" msprop:Generator_ColumnVarNameInTable="columnTEN_DON_VI" msprop:Generator_ColumnPropNameInRow="TEN_DON_VI" msprop:Generator_ColumnPropNameInTable="TEN_DON_VIColumn" msprop:Generator_UserColumnName="TEN_DON_VI" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

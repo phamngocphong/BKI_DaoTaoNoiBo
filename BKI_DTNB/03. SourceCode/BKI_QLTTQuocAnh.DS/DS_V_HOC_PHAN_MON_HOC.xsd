@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_V_HOC_PHAN_MON_HOC" targetNamespace="http://tempuri.org/DS_V_HOC_PHAN_MON_HOC.xsd" xmlns:mstns="http://tempuri.org/DS_V_HOC_PHAN_MON_HOC.xsd" xmlns="http://tempuri.org/DS_V_HOC_PHAN_MON_HOC.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DAO_TAO_NOI_BOConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DAO_TAO_NOI_BOConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BKI_QLTTQuocAnh.DS.Properties.Settings.GlobalReference.Default.DAO_TAO_NOI_BOConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_HOC_PHAN_MON_HOCTableAdapter" GeneratorDataComponentClassName="V_HOC_PHAN_MON_HOCTableAdapter" Name="V_HOC_PHAN_MON_HOC" UserDataComponentName="V_HOC_PHAN_MON_HOCTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DAO_TAO_NOI_BOConnectionString (Settings)" DbObjectName="DAO_TAO_NOI_BO.dbo.V_HOC_PHAN_MON_HOC" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT MA_HOC_PHAN, TEN_HOC_PHAN, MA_MON_HOC, TEN_MON_HOC FROM dbo.V_HOC_PHAN_MON_HOC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MA_HOC_PHAN" DataSetColumn="MA_HOC_PHAN" />
+              <Mapping SourceColumn="TEN_HOC_PHAN" DataSetColumn="TEN_HOC_PHAN" />
+              <Mapping SourceColumn="MA_MON_HOC" DataSetColumn="MA_MON_HOC" />
+              <Mapping SourceColumn="TEN_MON_HOC" DataSetColumn="TEN_MON_HOC" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_V_HOC_PHAN_MON_HOC" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_V_HOC_PHAN_MON_HOC" msprop:Generator_UserDSName="DS_V_HOC_PHAN_MON_HOC">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="V_HOC_PHAN_MON_HOC" msprop:Generator_TableClassName="V_HOC_PHAN_MON_HOCDataTable" msprop:Generator_TableVarName="tableV_HOC_PHAN_MON_HOC" msprop:Generator_TablePropName="V_HOC_PHAN_MON_HOC" msprop:Generator_RowDeletingName="V_HOC_PHAN_MON_HOCRowDeleting" msprop:Generator_RowChangingName="V_HOC_PHAN_MON_HOCRowChanging" msprop:Generator_RowEvHandlerName="V_HOC_PHAN_MON_HOCRowChangeEventHandler" msprop:Generator_RowDeletedName="V_HOC_PHAN_MON_HOCRowDeleted" msprop:Generator_UserTableName="V_HOC_PHAN_MON_HOC" msprop:Generator_RowChangedName="V_HOC_PHAN_MON_HOCRowChanged" msprop:Generator_RowEvArgName="V_HOC_PHAN_MON_HOCRowChangeEvent" msprop:Generator_RowClassName="V_HOC_PHAN_MON_HOCRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MA_HOC_PHAN" msprop:Generator_ColumnVarNameInTable="columnMA_HOC_PHAN" msprop:Generator_ColumnPropNameInRow="MA_HOC_PHAN" msprop:Generator_ColumnPropNameInTable="MA_HOC_PHANColumn" msprop:Generator_UserColumnName="MA_HOC_PHAN">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TEN_HOC_PHAN" msprop:Generator_ColumnVarNameInTable="columnTEN_HOC_PHAN" msprop:Generator_ColumnPropNameInRow="TEN_HOC_PHAN" msprop:Generator_ColumnPropNameInTable="TEN_HOC_PHANColumn" msprop:Generator_UserColumnName="TEN_HOC_PHAN">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MA_MON_HOC" msprop:Generator_ColumnVarNameInTable="columnMA_MON_HOC" msprop:Generator_ColumnPropNameInRow="MA_MON_HOC" msprop:Generator_ColumnPropNameInTable="MA_MON_HOCColumn" msprop:Generator_UserColumnName="MA_MON_HOC">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TEN_MON_HOC" msprop:Generator_ColumnVarNameInTable="columnTEN_MON_HOC" msprop:Generator_ColumnPropNameInRow="TEN_MON_HOC" msprop:Generator_ColumnPropNameInTable="TEN_MON_HOCColumn" msprop:Generator_UserColumnName="TEN_MON_HOC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -315,6 +315,7 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string NGUOI_LAP = "NGUOI_LAP";
         public const string NGUOI_SUA = "NGUOI_SUA";
         public const string DA_XOA = "DA_XOA";
+        public const string HOC_XONG_YN = "HOC_XONG_YN";
     }
 
     public class GD_LOP_HOC

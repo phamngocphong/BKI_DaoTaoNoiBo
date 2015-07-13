@@ -130,6 +130,21 @@
     <Compile Include="AddTab.cs" />
     <Compile Include="ApplicationControl.cs" />
     <Compile Include="CCommon.cs" />
+    <Compile Include="DanhMuc\f109_danh_muc_dai_de.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\f109_danh_muc_dai_de.Designer.cs">
+      <DependentUpon>f109_danh_muc_dai_de.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\f101_danh_muc_mon_hoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\f101_danh_muc_mon_hoc_de.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\f101_danh_muc_mon_hoc_de.Designer.cs">
+      <DependentUpon>f101_danh_muc_mon_hoc_de.cs</DependentUpon>
+    </Compile>
     <Compile Include="DanhMuc\f102_danh_muc_hoc_phan_de.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,6 +267,15 @@
       <DependentUpon>f388_main.cs</DependentUpon>
     </Compile>
     <Compile Include="WinFormControls.cs" />
+    <EmbeddedResource Include="DanhMuc\f109_danh_muc_dai_de.resx">
+      <DependentUpon>f109_danh_muc_dai_de.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\f101_danh_muc_mon_hoc.resx">
+      <DependentUpon>f101_danh_muc_mon_hoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\f101_danh_muc_mon_hoc_de.resx">
+      <DependentUpon>f101_danh_muc_mon_hoc_de.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f102_danh_muc_hoc_phan_de.resx">
       <DependentUpon>f102_danh_muc_hoc_phan_de.cs</DependentUpon>
     </EmbeddedResource>

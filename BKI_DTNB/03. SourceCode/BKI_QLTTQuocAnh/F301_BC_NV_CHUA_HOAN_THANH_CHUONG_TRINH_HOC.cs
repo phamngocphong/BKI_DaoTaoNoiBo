@@ -26,7 +26,7 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                WinFormControls.load_data_to_combobox("DM_MON_HOC", "ID", "MA_MON_HOC", "", WinFormControls.eTAT_CA.NO, m_cbo_mon_hoc);
+                WinFormControls.load_data_to_combobox("DM_NGACH", "ID", "TEN_NGACH", "", WinFormControls.eTAT_CA.NO, m_cbo_ngach);
                 load_data_2_grid();
             }
             catch (Exception v_e)
@@ -134,6 +134,36 @@ namespace BKI_QLTTQuocAnh
         private void m_cmd_search_Click(object sender, EventArgs e)
         {
             load_data_2_grid();
+        }
+
+        private void m_cbo_ngach_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            load_data_2_cbo_phong();
+        }
+
+        private void load_data_2_cbo_phong()
+        {
+            WinFormControls.load_data_to_combobox_with_query(m_cbo_phong, "ID", "TEN_DON_VI", WinFormControls.eTAT_CA.NO, "SELECT DDV.ID, DDV.TEN_DON_VI FROM DM_NGACH_PHONG AS dnp, DM_DON_VI AS ddv WHERE DDV.ID = DNP.ID_PHONG AND dnp.ID_NGACH = " + m_cbo_ngach.SelectedValue.ToString());
+        }
+
+        private void m_cbo_phong_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            load_data_2_cbo_hoc_phan();
+        }
+
+        private void load_data_2_cbo_hoc_phan()
+        {
+            WinFormControls.load_data_to_combobox_with_query(m_cbo_hoc_phan, "ID", "TEN_HOC_PHAN", WinFormControls.eTAT_CA.NO, "SELECT DHP.ID, dhp.TEN_HOC_PHAN FROM DM_PHONG_HOC_PHAN AS dphp, DM_HOC_PHAN AS dhp WHERE dphp.ID_HOC_PHAN = dhp.ID AND dphp.ID_PHONG = " + m_cbo_phong.SelectedValue.ToString());
+        }
+
+        private void m_cbo_hoc_phan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            load_data_2_cbo_mon_hoc();
+        }
+
+        private void load_data_2_cbo_mon_hoc()
+        {
+            WinFormControls.load_data_to_combobox_with_query(m_cbo_mon_hoc, "ID", "TEN_MON_HOC", WinFormControls.eTAT_CA.NO, "SELECT DMH.ID, dmh.TEN_MON_HOC FROM DM_HOC_PHAN_MON_HOC AS dhpmh, DM_MON_HOC AS dmh WHERE dhpmh.ID_MON_HOC = dmh.ID AND ID_HOC_PHAN = " + m_cbo_hoc_phan.SelectedValue.ToString());
         }
     }
 }

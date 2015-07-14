@@ -30,16 +30,17 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.m_cbo_ngach = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.m_cbo_phong = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.m_cbo_hoc_phan = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.m_cbo_mon_hoc = new System.Windows.Forms.ComboBox();
             this.m_cmd_tao_lop = new DevExpress.XtraEditors.SimpleButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.m_cmd_search = new DevExpress.XtraEditors.SimpleButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.m_grc = new DevExpress.XtraGrid.GridControl();
             this.m_grv = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -49,7 +50,6 @@
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.m_cmd_search = new DevExpress.XtraEditors.SimpleButton();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -76,13 +76,14 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Ngạch";
             // 
-            // comboBox1
+            // m_cbo_ngach
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(174, 60);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(141, 21);
-            this.comboBox1.TabIndex = 6;
+            this.m_cbo_ngach.FormattingEnabled = true;
+            this.m_cbo_ngach.Location = new System.Drawing.Point(174, 60);
+            this.m_cbo_ngach.Name = "m_cbo_ngach";
+            this.m_cbo_ngach.Size = new System.Drawing.Size(141, 21);
+            this.m_cbo_ngach.TabIndex = 6;
+            this.m_cbo_ngach.SelectedIndexChanged += new System.EventHandler(this.m_cbo_ngach_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -93,13 +94,14 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Phòng/Ban";
             // 
-            // comboBox2
+            // m_cbo_phong
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(417, 63);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(142, 21);
-            this.comboBox2.TabIndex = 8;
+            this.m_cbo_phong.FormattingEnabled = true;
+            this.m_cbo_phong.Location = new System.Drawing.Point(417, 63);
+            this.m_cbo_phong.Name = "m_cbo_phong";
+            this.m_cbo_phong.Size = new System.Drawing.Size(142, 21);
+            this.m_cbo_phong.TabIndex = 8;
+            this.m_cbo_phong.SelectedIndexChanged += new System.EventHandler(this.m_cbo_phong_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -110,13 +112,14 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Học phần";
             // 
-            // comboBox3
+            // m_cbo_hoc_phan
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(174, 95);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(141, 21);
-            this.comboBox3.TabIndex = 10;
+            this.m_cbo_hoc_phan.FormattingEnabled = true;
+            this.m_cbo_hoc_phan.Location = new System.Drawing.Point(174, 95);
+            this.m_cbo_hoc_phan.Name = "m_cbo_hoc_phan";
+            this.m_cbo_hoc_phan.Size = new System.Drawing.Size(141, 21);
+            this.m_cbo_hoc_phan.TabIndex = 10;
+            this.m_cbo_hoc_phan.SelectedIndexChanged += new System.EventHandler(this.m_cbo_hoc_phan_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -167,18 +170,36 @@
             this.panel1.Controls.Add(this.m_cmd_search);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.m_cbo_ngach);
             this.panel1.Controls.Add(this.m_cbo_mon_hoc);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.comboBox3);
+            this.panel1.Controls.Add(this.m_cbo_phong);
+            this.panel1.Controls.Add(this.m_cbo_hoc_phan);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(2, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(697, 132);
             this.panel1.TabIndex = 18;
+            // 
+            // m_cmd_search
+            // 
+            this.m_cmd_search.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(3)))), ((int)(((byte)(53)))));
+            this.m_cmd_search.Appearance.Options.UseForeColor = true;
+            this.m_cmd_search.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.m_cmd_search.Image = global::BKI_QLTTQuocAnh.Properties.Resources._1425906136_315167;
+            this.m_cmd_search.ImageIndex = 2;
+            this.m_cmd_search.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.m_cmd_search.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
+            this.m_cmd_search.Location = new System.Drawing.Point(585, 92);
+            this.m_cmd_search.Margin = new System.Windows.Forms.Padding(4);
+            this.m_cmd_search.Name = "m_cmd_search";
+            this.m_cmd_search.Padding = new System.Windows.Forms.Padding(1);
+            this.m_cmd_search.Size = new System.Drawing.Size(108, 33);
+            this.m_cmd_search.TabIndex = 15;
+            this.m_cmd_search.Text = "Search";
+            this.m_cmd_search.Click += new System.EventHandler(this.m_cmd_search_Click);
             // 
             // panel3
             // 
@@ -262,24 +283,6 @@
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 5;
             // 
-            // m_cmd_search
-            // 
-            this.m_cmd_search.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(3)))), ((int)(((byte)(53)))));
-            this.m_cmd_search.Appearance.Options.UseForeColor = true;
-            this.m_cmd_search.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.m_cmd_search.Image = global::BKI_QLTTQuocAnh.Properties.Resources._1425906136_315167;
-            this.m_cmd_search.ImageIndex = 2;
-            this.m_cmd_search.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.m_cmd_search.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
-            this.m_cmd_search.Location = new System.Drawing.Point(585, 92);
-            this.m_cmd_search.Margin = new System.Windows.Forms.Padding(4);
-            this.m_cmd_search.Name = "m_cmd_search";
-            this.m_cmd_search.Padding = new System.Windows.Forms.Padding(1);
-            this.m_cmd_search.Size = new System.Drawing.Size(108, 33);
-            this.m_cmd_search.TabIndex = 15;
-            this.m_cmd_search.Text = "Search";
-            this.m_cmd_search.Click += new System.EventHandler(this.m_cmd_search_Click);
-            // 
             // F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -307,11 +310,11 @@
 
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox m_cbo_ngach;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox m_cbo_phong;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox m_cbo_hoc_phan;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox m_cbo_mon_hoc;
         private DevExpress.XtraEditors.SimpleButton m_cmd_tao_lop;

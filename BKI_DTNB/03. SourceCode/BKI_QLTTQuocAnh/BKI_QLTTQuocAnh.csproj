@@ -196,6 +196,7 @@
     <Compile Include="DanhMuc\f110_danh_muc_hoc_phan_mon_hoc_de.Designer.cs">
       <DependentUpon>f110_danh_muc_hoc_phan_mon_hoc_de.cs</DependentUpon>
     </Compile>
+    <Compile Include="f101_danh_muc_hoc_phan_mon_hoc.cs" />
     <Compile Include="F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC.cs">
       <SubType>Form</SubType>
     </Compile>

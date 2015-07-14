@@ -356,7 +356,7 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                f110_danh_muc_hoc_phan_mon_hoc v_f = new f110_danh_muc_hoc_phan_mon_hoc();
+                f101_danh_muc_mon_hoc v_f = new f101_danh_muc_mon_hoc();
                 v_f.MdiParent = this;
                 v_f.Show();
             }

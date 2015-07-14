@@ -121,5 +121,11 @@ namespace BKI_QLTTQuocAnh
             v_cstore.addNVarcharInputParam("@COLUMN_NAME", ip_str_column_name);
             v_cstore.fillDataSetByCommand(this, op_ds);
         }
+
+        public void FillDatasetGDChiTietChucVu(DataSet op_ds)
+        {
+            CStoredProc v_cstore = new CStoredProc("get_chi_tiet_chuc_vu");
+            v_cstore.fillDataSetByCommand(this, op_ds);
+        }
     }
 }

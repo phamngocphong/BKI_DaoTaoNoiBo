@@ -13,6 +13,7 @@ using BKI_QLTTQuocAnh.HeThong;
 using BKI_QLTTQuocAnh.NghiepVu;
 using IP.Core.IPSystemAdmin;
 using BKI_QLTTQuocAnh.DanhMuc;
+using BKI_QLTTQuocAnh.BaoCao;
 namespace BKI_QLTTQuocAnh
 {
     public partial class f388_main : DevExpress.XtraBars.Ribbon.RibbonForm
@@ -208,8 +209,10 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC v_f = new F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC();
-                v_f.MdiParent = this;
+                //F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC v_f = new F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC();
+                //v_f.MdiParent = this;
+                //v_f.Show();
+                F303_Ket_qua_dao_tao v_f = new F303_Ket_qua_dao_tao();
                 v_f.Show();
             }
             catch (Exception v_e)

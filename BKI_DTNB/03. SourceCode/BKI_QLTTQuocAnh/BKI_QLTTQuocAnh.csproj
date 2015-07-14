@@ -70,6 +70,8 @@
       <HintPath>..\DLL\DevExpress.Data.v14.1.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Printing.v14.1.Core, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v14.1.Core, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v14.1.Core, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DLL\DevExpress.Utils.v14.1.dll</HintPath>
@@ -86,6 +88,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DLL\DevExpress.XtraGrid.v14.1.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files\Microsoft SQL Server\110\SDK\Assemblies\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
@@ -129,6 +132,12 @@
   <ItemGroup>
     <Compile Include="AddTab.cs" />
     <Compile Include="ApplicationControl.cs" />
+    <Compile Include="BaoCao\F303_Ket_qua_dao_tao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\F303_Ket_qua_dao_tao.Designer.cs">
+      <DependentUpon>F303_Ket_qua_dao_tao.cs</DependentUpon>
+    </Compile>
     <Compile Include="CCommon.cs" />
     <Compile Include="DanhMuc\f109_danh_muc_dai_de.cs">
       <SubType>Form</SubType>
@@ -275,6 +284,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f101_danh_muc_mon_hoc_de.resx">
       <DependentUpon>f101_danh_muc_mon_hoc_de.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\F303_Ket_qua_dao_tao.resx">
+      <DependentUpon>F303_Ket_qua_dao_tao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f102_danh_muc_hoc_phan_de.resx">
       <DependentUpon>f102_danh_muc_hoc_phan_de.cs</DependentUpon>

@@ -15,7 +15,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 {
     public partial class F301_Tao_lop : Form
     {
-        int m_dc_id_mon_hoc;
+        decimal m_dc_id_mon_hoc;
         decimal m_dc_so_hoc_vien;
 
         public F301_Tao_lop()
@@ -23,7 +23,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             InitializeComponent();
         }
 
-        public decimal Display(int ip_dc_so_hoc_vien, int ip_dc_id_mon_hoc)
+        public decimal Display(decimal ip_dc_so_hoc_vien, decimal ip_dc_id_mon_hoc)
         {
             m_dc_id_mon_hoc = ip_dc_id_mon_hoc;
             m_dc_so_hoc_vien = ip_dc_so_hoc_vien;

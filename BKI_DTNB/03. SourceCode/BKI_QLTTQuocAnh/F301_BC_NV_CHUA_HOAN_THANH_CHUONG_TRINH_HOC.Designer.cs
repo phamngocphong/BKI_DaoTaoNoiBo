@@ -49,7 +49,7 @@
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.m_txt_ma_mon_hoc = new System.Windows.Forms.TextBox();
+            this.m_cmd_search = new DevExpress.XtraEditors.SimpleButton();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -164,7 +164,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.m_txt_ma_mon_hoc);
+            this.panel1.Controls.Add(this.m_cmd_search);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.comboBox1);
@@ -262,14 +262,23 @@
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 5;
             // 
-            // m_txt_ma_mon_hoc
+            // m_cmd_search
             // 
-            this.m_txt_ma_mon_hoc.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.m_txt_ma_mon_hoc.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.m_txt_ma_mon_hoc.Location = new System.Drawing.Point(57, 35);
-            this.m_txt_ma_mon_hoc.Name = "m_txt_ma_mon_hoc";
-            this.m_txt_ma_mon_hoc.Size = new System.Drawing.Size(138, 20);
-            this.m_txt_ma_mon_hoc.TabIndex = 13;
+            this.m_cmd_search.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(3)))), ((int)(((byte)(53)))));
+            this.m_cmd_search.Appearance.Options.UseForeColor = true;
+            this.m_cmd_search.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.m_cmd_search.Image = global::BKI_QLTTQuocAnh.Properties.Resources._1425906136_315167;
+            this.m_cmd_search.ImageIndex = 2;
+            this.m_cmd_search.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.m_cmd_search.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
+            this.m_cmd_search.Location = new System.Drawing.Point(585, 92);
+            this.m_cmd_search.Margin = new System.Windows.Forms.Padding(4);
+            this.m_cmd_search.Name = "m_cmd_search";
+            this.m_cmd_search.Padding = new System.Windows.Forms.Padding(1);
+            this.m_cmd_search.Size = new System.Drawing.Size(108, 33);
+            this.m_cmd_search.TabIndex = 15;
+            this.m_cmd_search.Text = "Search";
+            this.m_cmd_search.Click += new System.EventHandler(this.m_cmd_search_Click);
             // 
             // F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC
             // 
@@ -317,6 +326,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
-        private System.Windows.Forms.TextBox m_txt_ma_mon_hoc;
+        private DevExpress.XtraEditors.SimpleButton m_cmd_search;
     }
 }

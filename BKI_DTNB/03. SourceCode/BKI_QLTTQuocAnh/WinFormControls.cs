@@ -111,6 +111,25 @@ namespace BKI_QLTTQuocAnh
                 ip_txt.AutoCompleteCustomSource.Add(v_dr[ip_str_column_name].ToString());
             }
         }
+
+        public static void load_data_to_combobox(string ip_str_table_name, string ip_str_value_field, string ip_str_display_field, string ip_str_condition, eTAT_CA ip_e_tat_ca,ComboBox ip_cbo) {
+            US_DUNG_CHUNG v_us = new US_DUNG_CHUNG();
+            DataSet v_ds = new DataSet();
+            DataTable v_dt = new DataTable();
+            v_ds.Tables.Add(v_dt);
+            v_us.FillDatasetCBO(v_ds, ip_str_table_name, ip_str_value_field, ip_str_display_field, ip_str_condition);
+            ip_cbo.DataSource = v_ds.Tables[0];
+            ip_cbo.DisplayMember = ip_str_display_field;
+            ip_cbo.ValueMember = ip_str_value_field;
+            if (ip_e_tat_ca == eTAT_CA.YES)
+            {
+                DataRow v_dr = v_ds.Tables[0].NewRow();
+                v_dr[0] = -1;
+                v_dr[1] = "------ Tất cả ------";
+                v_ds.Tables[0].Rows.InsertAt(v_dr, 0);
+                ip_cbo.SelectedIndex = 0;
+            }
+        }
     }
 
     public class US_DUNG_CHUNG : US_Object {
@@ -125,6 +144,23 @@ namespace BKI_QLTTQuocAnh
         public void FillDatasetGDChiTietChucVu(DataSet op_ds)
         {
             CStoredProc v_cstore = new CStoredProc("get_chi_tiet_chuc_vu");
+            v_cstore.fillDataSetByCommand(this, op_ds);
+        }
+
+        internal void FillDatasetCBO(DataSet op_ds, string ip_str_table_name, string ip_str_value_field, string ip_str_display_field, string ip_str_condition)
+        {
+            CStoredProc v_cstore = new CStoredProc("get_data_for_cbo");
+            v_cstore.addNVarcharInputParam("@TABLE_NAME", ip_str_table_name);
+            v_cstore.addNVarcharInputParam("@COLUMN_VALUE", ip_str_value_field);
+            v_cstore.addNVarcharInputParam("@COLUMN_DISPLAY", ip_str_display_field);
+            v_cstore.addNVarcharInputParam("@CONDITION", ip_str_condition);
+            v_cstore.fillDataSetByCommand(this, op_ds);
+        }
+
+        internal void FillDatasetWithTableName(DataSet op_ds, string ip_str_table_name)
+        {
+            CStoredProc v_cstore = new CStoredProc("get_data_from_table");
+            v_cstore.addNVarcharInputParam("@TABLE_NAME", ip_str_table_name);
             v_cstore.fillDataSetByCommand(this, op_ds);
         }
     }

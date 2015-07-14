@@ -26,7 +26,7 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                WinFormControls.load_data_to_auto_complete_source("DM_MON_HOC", "MA_MON_HOC", m_txt_ma_mon_hoc);
+                WinFormControls.load_data_to_combobox("DM_MON_HOC", "ID", "MA_MON_HOC", "", WinFormControls.eTAT_CA.NO, m_cbo_mon_hoc);
                 load_data_2_grid();
             }
             catch (Exception v_e)
@@ -39,9 +39,9 @@ namespace BKI_QLTTQuocAnh
         {
             US_DM_MON_HOC v_us = new US_DM_MON_HOC();
             DataSet v_ds = new DataSet();
-           DataTable v_dt = new DataTable();
+            DataTable v_dt = new DataTable();
             v_ds.Tables.Add(v_dt);
-            v_us.FillDatasetTheoMonHoc(v_ds, 466);
+            v_us.FillDatasetTheoMonHoc(v_ds, CIPConvert.ToDecimal(m_cbo_mon_hoc.SelectedValue));
             m_grc.DataSource = v_ds.Tables[0];
         }
 
@@ -50,7 +50,7 @@ namespace BKI_QLTTQuocAnh
             try
             {
                 F301_Tao_lop v_f = new F301_Tao_lop();
-                decimal v_so_luong_hoc_vien = v_f.Display(m_grv.SelectedRowsCount, 466);
+                decimal v_so_luong_hoc_vien = v_f.Display(m_grv.SelectedRowsCount, CIPConvert.ToDecimal(m_cbo_mon_hoc.SelectedValue));
                 if (v_f.DialogResult == System.Windows.Forms.DialogResult.OK)
                 {
                     List<decimal> v_lst_id_lop  = taoLopHoc(v_so_luong_hoc_vien);
@@ -70,7 +70,7 @@ namespace BKI_QLTTQuocAnh
         {
             m_so_luong_hoc_vien = v_so_luong_hoc_vien;
             decimal v_dc_so_hoc_vien = m_grv.SelectedRowsCount;
-            decimal v_dc_id_mon_hoc = 466;
+            decimal v_dc_id_mon_hoc = CIPConvert.ToDecimal(m_cbo_mon_hoc.SelectedValue);
             List<decimal> v_lst_id_lop = new List<decimal>();
             var v_mon_hoc = new US_DM_MON_HOC(v_dc_id_mon_hoc);
             while (v_dc_so_hoc_vien > 0)
@@ -114,7 +114,7 @@ namespace BKI_QLTTQuocAnh
             US_GD_LOP_HOC v_us_gd_lop_hoc = new US_GD_LOP_HOC();
             DS_GD_LOP_HOC v_ds_gd_lop_hoc = new DS_GD_LOP_HOC();
             v_ds_gd_lop_hoc.EnforceConstraints = false;
-            v_us_gd_lop_hoc.FillDataset(v_ds_gd_lop_hoc, " where id_mon_hoc = 466");
+            v_us_gd_lop_hoc.FillDataset(v_ds_gd_lop_hoc, " where id_mon_hoc = " + m_cbo_mon_hoc.SelectedValue);
             for (int i = 0; i < v_ds_gd_lop_hoc.Tables[0].Rows.Count; i++)
             {
                 US_GD_DIEM v_us = new US_GD_DIEM();
@@ -129,6 +129,11 @@ namespace BKI_QLTTQuocAnh
                     v_us.Update();
                 }
             }
+        }
+
+        private void m_cmd_search_Click(object sender, EventArgs e)
+        {
+            load_data_2_grid();
         }
     }
 }

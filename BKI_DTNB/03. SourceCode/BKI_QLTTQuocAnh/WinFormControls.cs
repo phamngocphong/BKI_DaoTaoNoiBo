@@ -141,9 +141,10 @@ namespace BKI_QLTTQuocAnh
             v_cstore.fillDataSetByCommand(this, op_ds);
         }
 
-        public void FillDatasetGDChiTietChucVu(DataSet op_ds)
+        public void FillDatasetGDChiTietChucVu(DataSet op_ds, DateTime ip_dat)
         {
-            CStoredProc v_cstore = new CStoredProc("get_chi_tiet_chuc_vu");
+            CStoredProc v_cstore = new CStoredProc("rpt_tinh_hinh_dao_tao");
+            v_cstore.addDatetimeInputParam("@ngay",ip_dat );
             v_cstore.fillDataSetByCommand(this, op_ds);
         }
 

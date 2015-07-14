@@ -14,11 +14,10 @@ namespace BKI_QLTTQuocAnh.BaoCao
 {
     public partial class F303_Ket_qua_dao_tao : Form
     {
-        PivotGridField fieldChucVu;
-        PivotGridField fieldDonVi;
-        PivotGridField fieldLoaiCV;
-        PivotGridField fieldID;
-        PivotGridField fieldIDNhanVien;
+        PivotGridField fieldMaNV;
+        PivotGridField fieldTenMonHoc;
+        PivotGridField fieldTenTrangThai;
+       
 
         public F303_Ket_qua_dao_tao()
         {
@@ -33,18 +32,16 @@ namespace BKI_QLTTQuocAnh.BaoCao
 
         private void init_pivot_grid()
         {
-            fieldChucVu = new PivotGridField("ID_CHUC_VU", PivotArea.RowArea);
-            fieldChucVu.Caption = "ID CHUC VU";
-            fieldDonVi = new PivotGridField("ID_DON_VI", PivotArea.RowArea);
-            fieldDonVi.Caption = "ID DON VI";
-            fieldLoaiCV = new PivotGridField("ID_LOAI_CV", PivotArea.RowArea);
-            fieldLoaiCV.Caption = "ID LOAI CV";
-            fieldID = new PivotGridField("ID", PivotArea.DataArea);
-            fieldID.Caption = "ID";
-            fieldID.SummaryType = DevExpress.Data.PivotGrid.PivotSummaryType.Count;
-            fieldIDNhanVien = new PivotGridField("ID_NHAN_SU", PivotArea.RowArea);
-            fieldIDNhanVien.Caption = "ID NHAN SU";
-            pivotGridControl1.Fields.AddRange(new PivotGridField[] { fieldChucVu, fieldDonVi, fieldLoaiCV, fieldID, fieldIDNhanVien });
+            //fieldMaNV = new PivotGridField("MA_NV", PivotArea.RowArea);
+            //fieldMaNV.Caption = "MA_NHAN_VIEN";
+            fieldTenMonHoc = new PivotGridField("TEN_MON_HOC", PivotArea.RowArea);
+            fieldTenMonHoc.Caption = "Tên môn học";
+            fieldTenTrangThai = new PivotGridField("TEN_TRANG_THAI", PivotArea.ColumnArea);
+            fieldTenTrangThai.Caption = "Trạng thái";
+            fieldMaNV = new PivotGridField("MA_NV",PivotArea.DataArea);
+            fieldMaNV.SummaryType = DevExpress.Data.PivotGrid.PivotSummaryType.Count;
+
+            pivotGridControl1.Fields.AddRange(new PivotGridField[] { fieldMaNV, fieldTenMonHoc, fieldTenTrangThai });
         }
 
         private void load_data_to_pivot_grid()
@@ -53,8 +50,25 @@ namespace BKI_QLTTQuocAnh.BaoCao
             DataSet v_ds = new DataSet();
             DataTable v_dt = new DataTable();
             v_ds.Tables.Add(v_dt);
-            v_us.FillDatasetGDChiTietChucVu(v_ds);
+            v_ds.EnforceConstraints = false;
+            v_us.FillDatasetGDChiTietChucVu(v_ds, m_dat.Value);
             pivotGridControl1.DataSource = v_ds.Tables[0];
+        }
+
+        private void m_cmd_hien_thi_Click(object sender, EventArgs e)
+        {
+            load_data_to_pivot_grid();
+        }
+
+        private void pivotGridControl1_CellDoubleClick(object sender, PivotCellEventArgs e)
+        {
+            Form v_f = new Form();
+            DataGrid v_dg = new DataGrid();
+            v_f.Controls.Add(v_dg);
+            v_dg.Dock = DockStyle.Fill;
+            v_dg.DataSource = e.CreateDrillDownDataSource();
+            v_f.ShowDialog();
+            v_f.Dispose();
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f388_main));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.m_cmd_doi_mat_khau = new DevExpress.XtraBars.BarButtonItem();
@@ -90,7 +91,9 @@
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.MdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager();
+            this.MdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.m_gb_mon_hoc = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.m_cmd_mon_Hoc = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MdiManager)).BeginInit();
             this.SuspendLayout();
@@ -139,9 +142,10 @@
             this.barButtonItem3,
             this.barButtonItem4,
             this.m_cmd_phong_hoc_phan,
-            this.m_cmd_dai_hoc_phan});
+            this.m_cmd_dai_hoc_phan,
+            this.m_cmd_mon_Hoc});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 45;
+            this.ribbon.MaxItemId = 46;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -534,7 +538,8 @@
             this.ribbonPageGroup15,
             this.ribbonPageGroup16,
             this.ribbonPageGroup17,
-            this.ribbonPageGroup18});
+            this.ribbonPageGroup18,
+            this.m_gb_mon_hoc});
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "DANH MỤC";
             // 
@@ -673,6 +678,21 @@
             // 
             this.MdiManager.MdiParent = this;
             // 
+            // m_gb_mon_hoc
+            // 
+            this.m_gb_mon_hoc.ItemLinks.Add(this.m_cmd_mon_Hoc);
+            this.m_gb_mon_hoc.Name = "m_gb_mon_hoc";
+            // 
+            // m_cmd_mon_Hoc
+            // 
+            this.m_cmd_mon_Hoc.Caption = "Môn học";
+            this.m_cmd_mon_Hoc.Glyph = ((System.Drawing.Image)(resources.GetObject("m_cmd_mon_Hoc.Glyph")));
+            this.m_cmd_mon_Hoc.Id = 45;
+            this.m_cmd_mon_Hoc.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("m_cmd_mon_Hoc.LargeGlyph")));
+            this.m_cmd_mon_Hoc.LargeWidth = 70;
+            this.m_cmd_mon_Hoc.Name = "m_cmd_mon_Hoc";
+            this.m_cmd_mon_Hoc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_mon_Hoc_ItemClick);
+            // 
             // f388_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -758,5 +778,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup17;
         private DevExpress.XtraBars.BarButtonItem m_cmd_dai_hoc_phan;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup18;
+        private DevExpress.XtraBars.BarButtonItem m_cmd_mon_Hoc;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup m_gb_mon_hoc;
     }
 }

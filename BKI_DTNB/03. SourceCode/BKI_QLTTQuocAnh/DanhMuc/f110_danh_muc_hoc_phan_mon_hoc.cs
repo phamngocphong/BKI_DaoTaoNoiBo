@@ -76,9 +76,8 @@ namespace BKI_QLTTQuocAnh
 		/// </summary>
 		private void InitializeComponent()
 		{
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f110_danh_muc_hoc_phan_mon_hoc));
-            this.ImageList = new System.Windows.Forms.ImageList(this.components);
+            this.ImageList = new System.Windows.Forms.ImageList();
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
             this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
             this.m_cmd_update = new SIS.Controls.Button.SiSButton();
@@ -223,7 +222,7 @@ namespace BKI_QLTTQuocAnh
             this.Controls.Add(this.m_fg);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Name = "f110_danh_muc_hoc_phan_mon_hoc";
-            this.Text = "f110_danh_muc_hoc_phan_mon_hoc";
+            this.Text = "F110 - Danh mục Học phần/Môn học";
             this.Load += new System.EventHandler(this.f110_danh_muc_hoc_phan_mon_hoc_Load);
             this.m_pnl_out_place_dm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();

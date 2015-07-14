@@ -37,7 +37,7 @@ namespace BKI_QLTTQuocAnh
 
         private void load_data_2_grid()
         {
-            US_DM_MON_HOC v_us = new US_DM_MON_HOC();
+            US_DM_MON_HOC v_us = new US_DM_MON_HOC();//Khai báo US
             DataSet v_ds = new DataSet();
             DataTable v_dt = new DataTable();
             v_ds.Tables.Add(v_dt);

@@ -138,6 +138,12 @@
     <Compile Include="BaoCao\F303_Ket_qua_dao_tao.Designer.cs">
       <DependentUpon>F303_Ket_qua_dao_tao.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaoCao\f305_BAO_CAO_CHUNG_CHI_HET_HAN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\f305_BAO_CAO_CHUNG_CHI_HET_HAN.Designer.cs">
+      <DependentUpon>f305_BAO_CAO_CHUNG_CHI_HET_HAN.cs</DependentUpon>
+    </Compile>
     <Compile Include="CCommon.cs" />
     <Compile Include="DanhMuc\f109_danh_muc_dai_de.cs">
       <SubType>Form</SubType>
@@ -289,6 +295,9 @@
       <DependentUpon>f388_main.cs</DependentUpon>
     </Compile>
     <Compile Include="WinFormControls.cs" />
+    <EmbeddedResource Include="BaoCao\f305_BAO_CAO_CHUNG_CHI_HET_HAN.resx">
+      <DependentUpon>f305_BAO_CAO_CHUNG_CHI_HET_HAN.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f109_danh_muc_dai_de.resx">
       <DependentUpon>f109_danh_muc_dai_de.cs</DependentUpon>
     </EmbeddedResource>

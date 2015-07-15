@@ -372,5 +372,12 @@ namespace BKI_QLTTQuocAnh
             v_f.MdiParent = this;
             v_f.Show();
         }
+
+        private void m_cmd_thuc_thu_nv_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            f305_BAO_CAO_CHUNG_CHI_HET_HAN v_f = new f305_BAO_CAO_CHUNG_CHI_HET_HAN();
+            v_f.MdiParent = this;
+            v_f.Show();
+        }
     }
 }

@@ -360,12 +360,14 @@
             // 
             // m_cmd_thuc_thu_nv
             // 
-            this.m_cmd_thuc_thu_nv.Caption = "Thực thu theo NV";
+            this.m_cmd_thuc_thu_nv.Caption = "Chứng chỉ hết hạn";
             this.m_cmd_thuc_thu_nv.Glyph = global::BKI_QLTTQuocAnh.Properties.Resources._1425906224_17014;
             this.m_cmd_thuc_thu_nv.Id = 23;
+            this.m_cmd_thuc_thu_nv.LargeWidth = 70;
             this.m_cmd_thuc_thu_nv.Name = "m_cmd_thuc_thu_nv";
             this.m_cmd_thuc_thu_nv.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.m_cmd_thuc_thu_nv.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_thuc_thu_nv_ItemClick);
             // 
             // m_cmd_ds_phieu
             // 

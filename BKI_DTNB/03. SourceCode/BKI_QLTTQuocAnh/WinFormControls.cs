@@ -203,5 +203,12 @@ namespace BKI_QLTTQuocAnh
             v_cstore.addNVarcharInputParam("@SQL_QUERY", ip_query);
             v_cstore.fillDataSetByCommand(this, op_ds);
         }
+
+        internal void FillDatasetChungChiHetHan(DataSet v_ds, DateTime dateTime)
+        {
+            CStoredProc v_cstore = new CStoredProc("get_chung_chi_het_han_theo_ngach");
+            v_cstore.addDatetimeInputParam("@ngay",dateTime );
+            v_cstore.fillDataSetByCommand(this, v_ds);
+        }
     }
 }

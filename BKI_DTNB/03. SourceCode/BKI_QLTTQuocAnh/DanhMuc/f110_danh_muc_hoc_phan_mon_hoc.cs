@@ -23,6 +23,7 @@ using BKI_QLTTQuocAnh.DS;
 using BKI_QLTTQuocAnh.DS.CDBNames;
 
 using C1.Win.C1FlexGrid;
+using BKI_QLTTQuocAnh.DanhMuc;
 
 namespace BKI_QLTTQuocAnh
 {
@@ -76,8 +77,9 @@ namespace BKI_QLTTQuocAnh
 		/// </summary>
 		private void InitializeComponent()
 		{
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f110_danh_muc_hoc_phan_mon_hoc));
-            this.ImageList = new System.Windows.Forms.ImageList();
+            this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
             this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
             this.m_cmd_update = new SIS.Controls.Button.SiSButton();
@@ -144,6 +146,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_insert.TabIndex = 12;
             this.m_cmd_insert.Text = "&Thêm";
+            this.m_cmd_insert.Click += new System.EventHandler(this.m_cmd_insert_Click);
             // 
             // m_cmd_update
             // 
@@ -159,6 +162,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_update.TabIndex = 13;
             this.m_cmd_update.Text = "&Sửa";
+            this.m_cmd_update.Click += new System.EventHandler(this.m_cmd_update_Click);
             // 
             // m_cmd_view
             // 
@@ -174,6 +178,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_view.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_view.TabIndex = 21;
             this.m_cmd_view.Text = "Xem";
+            this.m_cmd_view.Click += new System.EventHandler(this.m_cmd_view_Click);
             // 
             // m_cmd_delete
             // 
@@ -189,6 +194,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_delete.TabIndex = 14;
             this.m_cmd_delete.Text = "&Xoá";
+            this.m_cmd_delete.Click += new System.EventHandler(this.m_cmd_delete_Click);
             // 
             // m_cmd_exit
             // 
@@ -204,6 +210,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_exit.TabIndex = 11;
             this.m_cmd_exit.Text = "Thoát (Esc)";
+            this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_exit_Click);
             // 
             // m_fg
             // 
@@ -300,9 +307,9 @@ namespace BKI_QLTTQuocAnh
 		}
 
 
-		private void insert_v_hoc_phan_mon_hoc(){			
-		//	f110_danh_muc_hoc_phan_mon_hoc_DE v_fDE = new  f110_danh_muc_hoc_phan_mon_hoc_DE();								
-		//	v_fDE.display();
+		private void insert_v_hoc_phan_mon_hoc(){
+            //f110_danh_muc_hoc_phan_mon_hoc_de v_fDE = new f110_danh_muc_hoc_phan_mon_hoc_de();
+            //v_fDE.display_for_insert();
 			load_data_2_grid();
 		}
 
@@ -310,8 +317,8 @@ namespace BKI_QLTTQuocAnh
 			if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
 			if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;			
 			grid2us_object(m_us, m_fg.Row);
-		//	f110_danh_muc_hoc_phan_mon_hoc_DE v_fDE = new f110_danh_muc_hoc_phan_mon_hoc_DE();
-		//	v_fDE.display(m_us);
+            //f110_danh_muc_hoc_phan_mon_hoc_de v_fDE = new f110_danh_muc_hoc_phan_mon_hoc_de();
+            //v_fDE.display_for_update(m_us);
 			load_data_2_grid();
 		}
 				
@@ -339,8 +346,8 @@ namespace BKI_QLTTQuocAnh
 			if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
 			if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
 			grid2us_object(m_us, m_fg.Row);
-		//	f110_danh_muc_hoc_phan_mon_hoc_DE v_fDE = new f110_danh_muc_hoc_phan_mon_hoc_DE();			
-		//	v_fDE.display(m_us);
+            //f110_danh_muc_hoc_phan_mon_hoc_de v_fDE = new f110_danh_muc_hoc_phan_mon_hoc_de();
+            //v_fDE.display_for_view(m_us);
 		}
 		private void set_define_events(){
 			m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);

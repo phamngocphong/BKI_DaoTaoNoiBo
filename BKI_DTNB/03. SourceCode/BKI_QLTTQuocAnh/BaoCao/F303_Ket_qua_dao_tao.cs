@@ -27,7 +27,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
         private void F303_Ket_qua_dao_tao_Load(object sender, EventArgs e)
         {
             init_pivot_grid();
-            load_data_to_pivot_grid();
+          
         }
 
         private void init_pivot_grid()

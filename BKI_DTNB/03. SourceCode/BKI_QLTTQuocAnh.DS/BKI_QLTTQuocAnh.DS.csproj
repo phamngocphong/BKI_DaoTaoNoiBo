@@ -59,6 +59,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_DAI_HOC_PHAN.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_DM_DAI.cs">
+      <DependentUpon>DS_DM_DAI.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DS_DM_DAI.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

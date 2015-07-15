@@ -133,11 +133,5 @@ public class US_V_HOC_PHAN_MON_HOC : US_Object
 	}
 #endregion
 
-    public void FillDatasetTheoHocPhan(DataSet v_ds, decimal ip_id_hoc_phan)
-    {
-        CStoredProc v_cstore = new CStoredProc("get_danh_sach_mon_hoc_theo_hoc_phan");
-        v_cstore.addDecimalInputParam("@id_hoc_phan", ip_id_hoc_phan);
-        v_cstore.fillDataSetByCommand(this, v_ds);
-    }
 }
 }

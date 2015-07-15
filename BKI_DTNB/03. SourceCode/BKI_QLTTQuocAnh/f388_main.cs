@@ -224,7 +224,7 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                frm_V_GD_LOP_MON v_f = new frm_V_GD_LOP_MON();
+                frm_GD_LOP_MON v_f = new frm_GD_LOP_MON();
                 v_f.MdiParent = this;
                 v_f.Show();
 

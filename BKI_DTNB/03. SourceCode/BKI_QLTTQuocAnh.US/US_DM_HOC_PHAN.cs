@@ -150,5 +150,6 @@ public class US_DM_HOC_PHAN : US_Object
 		pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
 	}
 #endregion
+
 }
 }

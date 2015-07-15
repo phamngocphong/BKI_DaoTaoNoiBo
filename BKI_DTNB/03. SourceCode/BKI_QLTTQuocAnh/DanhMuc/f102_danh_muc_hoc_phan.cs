@@ -39,10 +39,11 @@ namespace BKI_QLTTQuocAnh
 		internal SIS.Controls.Button.SiSButton m_cmd_update;
 		internal SIS.Controls.Button.SiSButton m_cmd_insert;
 		internal SIS.Controls.Button.SiSButton m_cmd_exit;
-		internal SIS.Controls.Button.SiSButton m_cmd_view;
-        private Label label1;
+        internal SIS.Controls.Button.SiSButton m_cmd_view;
         private TextBox m_txt_tim_kiem;
         private Label label2;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
+        private Label label1;
 		private System.ComponentModel.IContainer components;
 
 		public frm_DM_HOC_PHAN()
@@ -90,11 +91,14 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
-            this.label1 = new System.Windows.Forms.Label();
             this.m_txt_tim_kiem = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.label1 = new System.Windows.Forms.Label();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ImageList
@@ -220,26 +224,15 @@ namespace BKI_QLTTQuocAnh
             // m_fg
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
-            this.m_fg.Location = new System.Drawing.Point(0, 117);
+            this.m_fg.Location = new System.Drawing.Point(0, 104);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(678, 258);
+            this.m_fg.Size = new System.Drawing.Size(678, 271);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.ForeColor = System.Drawing.Color.Maroon;
-            this.label1.Location = new System.Drawing.Point(29, 70);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 16);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Tìm kiếm";
-            // 
             // m_txt_tim_kiem
             // 
-            this.m_txt_tim_kiem.Location = new System.Drawing.Point(122, 69);
+            this.m_txt_tim_kiem.Location = new System.Drawing.Point(133, 53);
             this.m_txt_tim_kiem.Name = "m_txt_tim_kiem";
             this.m_txt_tim_kiem.Size = new System.Drawing.Size(373, 20);
             this.m_txt_tim_kiem.TabIndex = 22;
@@ -248,22 +241,42 @@ namespace BKI_QLTTQuocAnh
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.BackColor = System.Drawing.SystemColors.Control;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.ForeColor = System.Drawing.Color.Maroon;
-            this.label2.Location = new System.Drawing.Point(234, 20);
+            this.label2.Location = new System.Drawing.Point(219, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(216, 24);
             this.label2.TabIndex = 23;
             this.label2.Text = "DANH MỤC HỌC PHẦN";
             // 
+            // panelControl1
+            // 
+            this.panelControl1.Controls.Add(this.label2);
+            this.panelControl1.Controls.Add(this.label1);
+            this.panelControl1.Controls.Add(this.m_txt_tim_kiem);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(686, 98);
+            this.panelControl1.TabIndex = 24;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.ForeColor = System.Drawing.Color.Maroon;
+            this.label1.Location = new System.Drawing.Point(64, 54);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 16);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Tìm kiếm";
+            // 
             // frm_DM_HOC_PHAN
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.ClientSize = new System.Drawing.Size(686, 417);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.m_txt_tim_kiem);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.m_fg);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Name = "frm_DM_HOC_PHAN";
@@ -271,8 +284,10 @@ namespace BKI_QLTTQuocAnh
             this.Load += new System.EventHandler(this.frm_DM_HOC_PHAN_Load);
             this.m_pnl_out_place_dm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
+            this.panelControl1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
 		}
 		#endregion

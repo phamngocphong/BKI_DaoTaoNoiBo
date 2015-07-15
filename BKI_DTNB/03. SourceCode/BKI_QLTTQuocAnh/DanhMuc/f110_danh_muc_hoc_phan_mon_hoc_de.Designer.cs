@@ -232,7 +232,7 @@
             this.Controls.Add(this.groupControl1);
             this.Name = "f110_danh_muc_hoc_phan_mon_hoc_de";
             this.Text = "F110 - Chi tiết học phần/môn học";
-            this.Load += new System.EventHandler(this.f110_danh_muc_hoc_phan_mon_hoc_de_LOAD);
+            //this.Load += new System.EventHandler(this.f110_danh_muc_hoc_phan_mon_hoc_de_LOAD);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();

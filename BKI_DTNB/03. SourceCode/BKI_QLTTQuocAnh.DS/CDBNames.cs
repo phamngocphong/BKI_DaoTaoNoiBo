@@ -258,6 +258,13 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string TEN_NGACH = "TEN_NGACH";
     }
 
+    public class DM_NGACH_DAI
+    {
+        public const string ID = "ID";
+        public const string ID_NGACH = "ID_NGACH";
+        public const string ID_DAI = "ID_DAI";
+    }
+
     public class DM_NGACH_PHONG
     {
         public const string ID = "ID";
@@ -265,6 +272,14 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string ID_NGACH = "ID_NGACH";
         public const string ID_PHONG = "ID_PHONG";
     }
+
+    public class DM_NGHIEP_VU_MON_HOC
+    {
+        public const string ID = "ID";
+        public const string ID_NGHIEP_VU = "ID_NGHIEP_VU";
+        public const string ID_MON_HOC = "ID_MON_HOC";
+    }
+
 
     public class DM_PHONG_DAI
     {
@@ -318,7 +333,7 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string HOC_XONG_YN = "HOC_XONG_YN";
     }
 
-    public class GD_LOP_HOC
+    public class GD_LOP_MON
     {
         public const string ID = "ID";
         public const string MA_LOP_HOC = "MA_LOP_HOC";
@@ -333,16 +348,6 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string DA_XOA = "DA_XOA";
     }
 
-    public class V_GD_LOP_MON
-    {
-        public const string MA_LOP_HOC = "MA_LOP_HOC";
-        public const string MA_MON_HOC = "MA_MON_HOC";
-        public const string TEN_MON_HOC = "TEN_MON_HOC";
-        public const string DON_VI_GIANG_DAY = "DON_VI_GIANG_DAY";
-        public const string THOI_GIAN = "THOI_GIAN";
-        public const string DIA_DIEM = "DIA_DIEM";
-        public const string SO_LUONG = "SO_LUONG";
-    }
 
     public class V_HOC_PHAN_MON_HOC
     {

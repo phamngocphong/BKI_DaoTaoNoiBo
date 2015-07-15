@@ -43,6 +43,8 @@ namespace BKI_QLTTQuocAnh
         private Label m_lbl_search;
         private TextBox m_txt_tim_kiem;
         private Label label1;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
 		private System.ComponentModel.IContainer components;
 
 		public f101_danh_muc_mon_hoc()
@@ -93,8 +95,12 @@ namespace BKI_QLTTQuocAnh
             this.m_lbl_search = new System.Windows.Forms.Label();
             this.m_txt_tim_kiem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ImageList
@@ -135,7 +141,7 @@ namespace BKI_QLTTQuocAnh
             this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 373);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(686, 36);
+            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(689, 36);
             this.m_pnl_out_place_dm.TabIndex = 19;
             // 
             // m_cmd_insert
@@ -147,7 +153,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_insert.ImageIndex = 2;
             this.m_cmd_insert.ImageList = this.ImageList;
-            this.m_cmd_insert.Location = new System.Drawing.Point(330, 4);
+            this.m_cmd_insert.Location = new System.Drawing.Point(333, 4);
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_insert.TabIndex = 12;
@@ -163,7 +169,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_update.ImageIndex = 3;
             this.m_cmd_update.ImageList = this.ImageList;
-            this.m_cmd_update.Location = new System.Drawing.Point(418, 4);
+            this.m_cmd_update.Location = new System.Drawing.Point(421, 4);
             this.m_cmd_update.Name = "m_cmd_update";
             this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_update.TabIndex = 13;
@@ -195,7 +201,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_delete.ImageIndex = 4;
             this.m_cmd_delete.ImageList = this.ImageList;
-            this.m_cmd_delete.Location = new System.Drawing.Point(506, 4);
+            this.m_cmd_delete.Location = new System.Drawing.Point(509, 4);
             this.m_cmd_delete.Name = "m_cmd_delete";
             this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_delete.TabIndex = 14;
@@ -211,7 +217,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(594, 4);
+            this.m_cmd_exit.Location = new System.Drawing.Point(597, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_exit.TabIndex = 11;
@@ -221,9 +227,10 @@ namespace BKI_QLTTQuocAnh
             // m_fg
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
-            this.m_fg.Location = new System.Drawing.Point(0, 103);
+            this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.m_fg.Location = new System.Drawing.Point(0, 0);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(686, 270);
+            this.m_fg.Size = new System.Drawing.Size(689, 373);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
             // 
@@ -232,7 +239,7 @@ namespace BKI_QLTTQuocAnh
             this.m_lbl_search.AutoSize = true;
             this.m_lbl_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.m_lbl_search.ForeColor = System.Drawing.Color.Maroon;
-            this.m_lbl_search.Location = new System.Drawing.Point(75, 70);
+            this.m_lbl_search.Location = new System.Drawing.Point(98, 51);
             this.m_lbl_search.Name = "m_lbl_search";
             this.m_lbl_search.Size = new System.Drawing.Size(63, 16);
             this.m_lbl_search.TabIndex = 21;
@@ -242,7 +249,7 @@ namespace BKI_QLTTQuocAnh
             // 
             this.m_txt_tim_kiem.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.m_txt_tim_kiem.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.m_txt_tim_kiem.Location = new System.Drawing.Point(152, 67);
+            this.m_txt_tim_kiem.Location = new System.Drawing.Point(167, 50);
             this.m_txt_tim_kiem.Name = "m_txt_tim_kiem";
             this.m_txt_tim_kiem.Size = new System.Drawing.Size(390, 20);
             this.m_txt_tim_kiem.TabIndex = 22;
@@ -253,19 +260,36 @@ namespace BKI_QLTTQuocAnh
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.ForeColor = System.Drawing.Color.Maroon;
-            this.label1.Location = new System.Drawing.Point(252, 21);
+            this.label1.Location = new System.Drawing.Point(239, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(182, 24);
             this.label1.TabIndex = 23;
             this.label1.Text = "Danh mục môn học";
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(270, 28);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(28, 16);
+            this.flowLayoutPanel1.TabIndex = 24;
+            // 
+            // panelControl1
+            // 
+            this.panelControl1.Controls.Add(this.label1);
+            this.panelControl1.Controls.Add(this.m_lbl_search);
+            this.panelControl1.Controls.Add(this.m_txt_tim_kiem);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(689, 90);
+            this.panelControl1.TabIndex = 25;
+            // 
             // f101_danh_muc_mon_hoc
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(686, 409);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.m_txt_tim_kiem);
-            this.Controls.Add(this.m_lbl_search);
+            this.ClientSize = new System.Drawing.Size(689, 409);
+            this.Controls.Add(this.panelControl1);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.m_fg);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Name = "f101_danh_muc_mon_hoc";
@@ -273,8 +297,10 @@ namespace BKI_QLTTQuocAnh
             this.Load += new System.EventHandler(this.f101_danh_muc_mon_hoc_Load);
             this.m_pnl_out_place_dm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
+            this.panelControl1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
 		}
 		#endregion

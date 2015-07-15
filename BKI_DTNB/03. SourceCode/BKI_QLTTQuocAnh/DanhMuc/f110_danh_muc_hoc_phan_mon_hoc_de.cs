@@ -18,29 +18,29 @@ namespace BKI_QLTTQuocAnh.DanhMuc
         {
             InitializeComponent();
         }
-        private void f110_danh_muc_hoc_phan_mon_hoc_de_LOAD(object sender, EventArgs e)
-        {
-            try
-            {
-                WinFormControls.load_data_to_combobox("DM_HOC_PHAN", "ID", "TEN_HOC_PHAN", "", WinFormControls.eTAT_CA.NO, m_cbo_ma_hoc_phan);
-                load_data_to_grid();
-            }
-            catch (Exception v_e)
-            {
+        //private void f110_danh_muc_hoc_phan_mon_hoc_de_LOAD(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        WinFormControls.load_data_to_combobox("DM_HOC_PHAN", "ID", "TEN_HOC_PHAN", "", WinFormControls.eTAT_CA.NO, m_cbo_ma_hoc_phan);
+        //        load_data_to_grid();
+        //    }
+        //    catch (Exception v_e)
+        //    {
 
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-        }
+        //        CSystemLog_301.ExceptionHandle(v_e);
+        //    }
+        //}
 
-        private void load_data_to_grid()
-        {
-            US_V_HOC_PHAN_MON_HOC v_us = new US_V_HOC_PHAN_MON_HOC();
-            DataSet v_ds = new DataSet();
-            DataTable v_dt = new DataTable();
-            v_ds.Tables.Add(v_dt);
-            v_us.FillDatasetTheoHocPhan(v_ds, CIPConvert.ToDecimal(m_cbo_ma_hoc_phan.SelectedValue));
-            m_grc.DataSource = v_ds.Tables[0];
-        }
+        //private void load_data_to_grid()
+        //{
+        //    US_V_HOC_PHAN_MON_HOC v_us = new US_V_HOC_PHAN_MON_HOC();
+        //    DataSet v_ds = new DataSet();
+        //    DataTable v_dt = new DataTable();
+        //    v_ds.Tables.Add(v_dt);
+        //    v_us.FillDatasetTheoHocPhan(v_ds, CIPConvert.ToDecimal(m_cbo_ma_hoc_phan.SelectedValue));
+        //    m_grc.DataSource = v_ds.Tables[0];
+        //}
        
         #region Public Interface
         //public void display_for_insert()

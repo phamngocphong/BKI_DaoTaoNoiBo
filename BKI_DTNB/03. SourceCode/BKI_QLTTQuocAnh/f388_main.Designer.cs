@@ -67,7 +67,7 @@
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.m_cmd_phong_hoc_phan = new DevExpress.XtraBars.BarButtonItem();
             this.m_cmd_dai_hoc_phan = new DevExpress.XtraBars.BarButtonItem();
-            this.m_cmd_mon_Hoc = new DevExpress.XtraBars.BarButtonItem();
+            this.m_cmd_mon_hoc = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -141,7 +141,7 @@
             this.barButtonItem4,
             this.m_cmd_phong_hoc_phan,
             this.m_cmd_dai_hoc_phan,
-            this.m_cmd_mon_Hoc});
+            this.m_cmd_mon_hoc});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.MaxItemId = 46;
             this.ribbon.Name = "ribbon";
@@ -431,7 +431,7 @@
             this.m_cmd_lop_mon.LargeGlyph = global::BKI_QLTTQuocAnh.Properties.Resources._1425904406_289616;
             this.m_cmd_lop_mon.LargeWidth = 70;
             this.m_cmd_lop_mon.Name = "m_cmd_lop_mon";
-            this.m_cmd_lop_mon.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
+            this.m_cmd_lop_mon.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_lop_mon_ItemClick);
             // 
             // m_cmd_ngach
             // 
@@ -497,15 +497,15 @@
             this.m_cmd_dai_hoc_phan.Name = "m_cmd_dai_hoc_phan";
             this.m_cmd_dai_hoc_phan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_dai_hoc_phan_ItemClick);
             // 
-            // m_cmd_mon_Hoc
+            // m_cmd_mon_hoc
             // 
-            this.m_cmd_mon_Hoc.Caption = "Môn học";
-            this.m_cmd_mon_Hoc.Glyph = ((System.Drawing.Image)(resources.GetObject("m_cmd_mon_Hoc.Glyph")));
-            this.m_cmd_mon_Hoc.Id = 45;
-            this.m_cmd_mon_Hoc.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("m_cmd_mon_Hoc.LargeGlyph")));
-            this.m_cmd_mon_Hoc.LargeWidth = 70;
-            this.m_cmd_mon_Hoc.Name = "m_cmd_mon_Hoc";
-            this.m_cmd_mon_Hoc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_mon_Hoc_ItemClick);
+            this.m_cmd_mon_hoc.Caption = "Môn học";
+            this.m_cmd_mon_hoc.Glyph = ((System.Drawing.Image)(resources.GetObject("m_cmd_mon_hoc.Glyph")));
+            this.m_cmd_mon_hoc.Id = 45;
+            this.m_cmd_mon_hoc.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("m_cmd_mon_hoc.LargeGlyph")));
+            this.m_cmd_mon_hoc.LargeWidth = 70;
+            this.m_cmd_mon_hoc.Name = "m_cmd_mon_hoc";
+            this.m_cmd_mon_hoc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_mon_hoc_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -594,7 +594,7 @@
             // 
             // m_gb_mon_hoc
             // 
-            this.m_gb_mon_hoc.ItemLinks.Add(this.m_cmd_mon_Hoc);
+            this.m_gb_mon_hoc.ItemLinks.Add(this.m_cmd_mon_hoc);
             this.m_gb_mon_hoc.Name = "m_gb_mon_hoc";
             // 
             // ribbonPage3
@@ -770,7 +770,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup17;
         private DevExpress.XtraBars.BarButtonItem m_cmd_dai_hoc_phan;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup18;
-        private DevExpress.XtraBars.BarButtonItem m_cmd_mon_Hoc;
+        private DevExpress.XtraBars.BarButtonItem m_cmd_mon_hoc;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup m_gb_mon_hoc;
     }
 }

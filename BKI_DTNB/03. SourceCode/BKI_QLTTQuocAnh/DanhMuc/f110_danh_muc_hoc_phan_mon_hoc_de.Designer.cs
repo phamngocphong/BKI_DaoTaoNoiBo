@@ -41,17 +41,16 @@
             this.c_ma_hoc_phan = new DevExpress.XtraGrid.Columns.GridColumn();
             this.c_ten_hoc_phan = new DevExpress.XtraGrid.Columns.GridColumn();
             this.m_cmd_add = new DevExpress.XtraEditors.SimpleButton();
-            this.m_cbo_ten_mon_hoc = new DevExpress.XtraEditors.ComboBoxEdit();
             this.m_cbo_ten_hoc_phan = new System.Windows.Forms.ComboBox();
             this.m_cbo_ma_hoc_phan = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.m_cmd_luu = new DevExpress.XtraEditors.SimpleButton();
             this.m_cmd_huy = new DevExpress.XtraEditors.SimpleButton();
+            this.m_cbo_ten_mon_hoc = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_grc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.m_cbo_ten_mon_hoc.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -75,11 +74,11 @@
             // groupControl1
             // 
             this.groupControl1.CaptionImage = ((System.Drawing.Image)(resources.GetObject("groupControl1.CaptionImage")));
+            this.groupControl1.Controls.Add(this.m_cbo_ten_mon_hoc);
             this.groupControl1.Controls.Add(this.m_cbo_ma_mon_hoc);
             this.groupControl1.Controls.Add(this.label4);
             this.groupControl1.Controls.Add(this.m_grc);
             this.groupControl1.Controls.Add(this.m_cmd_add);
-            this.groupControl1.Controls.Add(this.m_cbo_ten_mon_hoc);
             this.groupControl1.Controls.Add(this.m_cbo_ten_hoc_phan);
             this.groupControl1.Controls.Add(this.m_cbo_ma_hoc_phan);
             this.groupControl1.Controls.Add(this.label3);
@@ -98,6 +97,7 @@
             this.m_cbo_ma_mon_hoc.Name = "m_cbo_ma_mon_hoc";
             this.m_cbo_ma_mon_hoc.Size = new System.Drawing.Size(148, 21);
             this.m_cbo_ma_mon_hoc.TabIndex = 9;
+  ;
             // 
             // label4
             // 
@@ -131,32 +131,32 @@
             // 
             // c_ma_mon_hoc
             // 
-            this.c_ma_mon_hoc.Caption = "Mã môn học";
-            this.c_ma_mon_hoc.FieldName = "MA_MON_HOC";
+            this.c_ma_mon_hoc.Caption = "Mã học phần";
+            this.c_ma_mon_hoc.FieldName = "Ma_hoc_phan";
             this.c_ma_mon_hoc.Name = "c_ma_mon_hoc";
             this.c_ma_mon_hoc.Visible = true;
             this.c_ma_mon_hoc.VisibleIndex = 0;
             // 
             // c_ten_mon_hoc
             // 
-            this.c_ten_mon_hoc.Caption = "Tên môn học";
-            this.c_ten_mon_hoc.FieldName = "TEN_MON_HOC";
+            this.c_ten_mon_hoc.Caption = "Tên học phần";
+            this.c_ten_mon_hoc.FieldName = "Ten_hoc_phan";
             this.c_ten_mon_hoc.Name = "c_ten_mon_hoc";
             this.c_ten_mon_hoc.Visible = true;
             this.c_ten_mon_hoc.VisibleIndex = 1;
             // 
             // c_ma_hoc_phan
             // 
-            this.c_ma_hoc_phan.Caption = "Mã học phần";
-            this.c_ma_hoc_phan.FieldName = "MA_HOC_PHAN";
+            this.c_ma_hoc_phan.Caption = "Mã môn học";
+            this.c_ma_hoc_phan.FieldName = "Ma_mon_hoc";
             this.c_ma_hoc_phan.Name = "c_ma_hoc_phan";
             this.c_ma_hoc_phan.Visible = true;
             this.c_ma_hoc_phan.VisibleIndex = 2;
             // 
             // c_ten_hoc_phan
             // 
-            this.c_ten_hoc_phan.Caption = "Tên học phần";
-            this.c_ten_hoc_phan.FieldName = "TEN_HOC_PHAN";
+            this.c_ten_hoc_phan.Caption = "Tên môn học";
+            this.c_ten_hoc_phan.FieldName = "Ten_mon_hoc";
             this.c_ten_hoc_phan.Name = "c_ten_hoc_phan";
             this.c_ten_hoc_phan.Visible = true;
             this.c_ten_hoc_phan.VisibleIndex = 3;
@@ -169,15 +169,6 @@
             this.m_cmd_add.Size = new System.Drawing.Size(148, 35);
             this.m_cmd_add.TabIndex = 6;
             this.m_cmd_add.Text = "Thêm vào danh sách";
-            // 
-            // m_cbo_ten_mon_hoc
-            // 
-            this.m_cbo_ten_mon_hoc.Location = new System.Drawing.Point(407, 111);
-            this.m_cbo_ten_mon_hoc.Name = "m_cbo_ten_mon_hoc";
-            this.m_cbo_ten_mon_hoc.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.m_cbo_ten_mon_hoc.Size = new System.Drawing.Size(219, 20);
-            this.m_cbo_ten_mon_hoc.TabIndex = 5;
             // 
             // m_cbo_ten_hoc_phan
             // 
@@ -194,6 +185,7 @@
             this.m_cbo_ma_hoc_phan.Name = "m_cbo_ma_hoc_phan";
             this.m_cbo_ma_hoc_phan.Size = new System.Drawing.Size(147, 21);
             this.m_cbo_ma_hoc_phan.TabIndex = 3;
+            this.m_cbo_ma_hoc_phan.SelectedIndexChanged += new System.EventHandler(this.m_cbo_ma_hoc_phan_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -222,6 +214,14 @@
             this.m_cmd_huy.TabIndex = 4;
             this.m_cmd_huy.Text = " HỦY";
             // 
+            // m_cbo_ten_mon_hoc
+            // 
+            this.m_cbo_ten_mon_hoc.FormattingEnabled = true;
+            this.m_cbo_ten_mon_hoc.Location = new System.Drawing.Point(407, 111);
+            this.m_cbo_ten_mon_hoc.Name = "m_cbo_ten_mon_hoc";
+            this.m_cbo_ten_mon_hoc.Size = new System.Drawing.Size(219, 21);
+            this.m_cbo_ten_mon_hoc.TabIndex = 10;
+            // 
             // f110_danh_muc_hoc_phan_mon_hoc_de
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -238,7 +238,6 @@
             this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_grc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.m_cbo_ten_mon_hoc.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -253,7 +252,6 @@
         private DevExpress.XtraGrid.GridControl m_grc;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.SimpleButton m_cmd_add;
-        private DevExpress.XtraEditors.ComboBoxEdit m_cbo_ten_mon_hoc;
         private System.Windows.Forms.ComboBox m_cbo_ten_hoc_phan;
         private System.Windows.Forms.ComboBox m_cbo_ma_hoc_phan;
         private System.Windows.Forms.Label label3;
@@ -263,5 +261,6 @@
         internal DevExpress.XtraGrid.Columns.GridColumn c_ma_mon_hoc;
         private DevExpress.XtraGrid.Columns.GridColumn c_ma_hoc_phan;
         private DevExpress.XtraGrid.Columns.GridColumn c_ten_hoc_phan;
+        private System.Windows.Forms.ComboBox m_cbo_ten_mon_hoc;
     }
 }

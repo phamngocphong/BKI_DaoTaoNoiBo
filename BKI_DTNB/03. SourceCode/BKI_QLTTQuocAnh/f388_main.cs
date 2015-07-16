@@ -220,7 +220,7 @@ namespace BKI_QLTTQuocAnh
             }
         }
 
-        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        private void m_cmd_lop_mon_ItemClick(object sender, ItemClickEventArgs e)
         {
             try
             {
@@ -386,6 +386,11 @@ namespace BKI_QLTTQuocAnh
             F207_Nhap_diem v_f = new F207_Nhap_diem();
             v_f.MdiParent = this;
             v_f.Show();
+        }
+
+        private void m_cmd_mon_hoc_ItemClick(object sender, ItemClickEventArgs e)
+        {
+           
         }
     }
 }

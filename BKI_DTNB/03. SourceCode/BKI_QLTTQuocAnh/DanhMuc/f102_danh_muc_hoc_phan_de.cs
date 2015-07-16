@@ -96,7 +96,9 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             
             m_us_dm_hoc_phan = m_us;
             us_object_2_form();
-            btn_luu.Enabled = false;
+            m_cmd_luu
+                
+                .Enabled = false;
             this.ShowDialog();
         }
 
@@ -108,25 +110,25 @@ namespace BKI_QLTTQuocAnh.DanhMuc
 
         #endregion
         #region Events
-        private void btn_luu_Click(object sender, EventArgs e)
+
+        #endregion
+
+
+        private void m_cmd_luu_Click(object sender, EventArgs e)
         {
             try
             {
                 save_data();
-           
+
             }
             catch (Exception ex)
             {
 
                 CSystemLog_301.ExceptionHandle(ex);
             }
-                
-
-            
         }
-        #endregion
 
-        private void btn_huy_Click(object sender, EventArgs e)
+        private void m_cmd_huy_Click(object sender, EventArgs e)
         {
             try
             {

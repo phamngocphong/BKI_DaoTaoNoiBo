@@ -32,13 +32,23 @@ namespace BKI_QLTTQuocAnh
 	public class frm_GD_LOP_MON : System.Windows.Forms.Form
 	{
 		internal System.Windows.Forms.ImageList ImageList;
-		internal System.Windows.Forms.Panel m_pnl_out_place_dm;
-		private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
+        internal System.Windows.Forms.Panel m_pnl_out_place_dm;
 		internal SIS.Controls.Button.SiSButton m_cmd_delete;
 		internal SIS.Controls.Button.SiSButton m_cmd_update;
 		internal SIS.Controls.Button.SiSButton m_cmd_insert;
 		internal SIS.Controls.Button.SiSButton m_cmd_exit;
 		internal SIS.Controls.Button.SiSButton m_cmd_view;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraGrid.GridControl m_grc;
+        private DevExpress.XtraGrid.Views.Grid.GridView m_grv;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
 		private System.ComponentModel.IContainer components;
 
 		public frm_GD_LOP_MON()
@@ -85,9 +95,22 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_view = new SIS.Controls.Button.SiSButton();
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
-            this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.m_grc = new DevExpress.XtraGrid.GridControl();
+            this.m_grv = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.m_pnl_out_place_dm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_grc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_grv)).BeginInit();
             this.SuspendLayout();
             // 
             // ImageList
@@ -128,7 +151,7 @@ namespace BKI_QLTTQuocAnh
             this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 373);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(686, 36);
+            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(619, 36);
             this.m_pnl_out_place_dm.TabIndex = 19;
             // 
             // m_cmd_insert
@@ -140,7 +163,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_insert.ImageIndex = 2;
             this.m_cmd_insert.ImageList = this.ImageList;
-            this.m_cmd_insert.Location = new System.Drawing.Point(330, 4);
+            this.m_cmd_insert.Location = new System.Drawing.Point(263, 4);
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_insert.TabIndex = 12;
@@ -155,7 +178,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_update.ImageIndex = 3;
             this.m_cmd_update.ImageList = this.ImageList;
-            this.m_cmd_update.Location = new System.Drawing.Point(418, 4);
+            this.m_cmd_update.Location = new System.Drawing.Point(351, 4);
             this.m_cmd_update.Name = "m_cmd_update";
             this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_update.TabIndex = 13;
@@ -185,7 +208,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_delete.ImageIndex = 4;
             this.m_cmd_delete.ImageList = this.ImageList;
-            this.m_cmd_delete.Location = new System.Drawing.Point(506, 4);
+            this.m_cmd_delete.Location = new System.Drawing.Point(439, 4);
             this.m_cmd_delete.Name = "m_cmd_delete";
             this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_delete.TabIndex = 14;
@@ -200,33 +223,127 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(594, 4);
+            this.m_cmd_exit.Location = new System.Drawing.Point(527, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_exit.TabIndex = 11;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             // 
-            // m_fg
+            // panelControl1
             // 
-            this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
-            this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_fg.Location = new System.Drawing.Point(0, 0);
-            this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(686, 373);
-            this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
-            this.m_fg.TabIndex = 20;
+            this.panelControl1.Controls.Add(this.labelControl1);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(619, 62);
+            this.panelControl1.TabIndex = 20;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelControl1.Location = new System.Drawing.Point(213, 12);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(173, 19);
+            this.labelControl1.TabIndex = 0;
+            this.labelControl1.Text = "DANH MỤC  LỚP HỌC";
+            // 
+            // m_grc
+            // 
+            this.m_grc.Cursor = System.Windows.Forms.Cursors.Default;
+            this.m_grc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.m_grc.Location = new System.Drawing.Point(0, 62);
+            this.m_grc.MainView = this.m_grv;
+            this.m_grc.Name = "m_grc";
+            this.m_grc.Size = new System.Drawing.Size(619, 311);
+            this.m_grc.TabIndex = 21;
+            this.m_grc.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.m_grv});
+            // 
+            // m_grv
+            // 
+            this.m_grv.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn3,
+            this.gridColumn4,
+            this.gridColumn5,
+            this.gridColumn6,
+            this.gridColumn7});
+            this.m_grv.GridControl = this.m_grc;
+            this.m_grv.Name = "m_grv";
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Mã lớp học";
+            this.gridColumn1.FieldName = "MA_LOP_HOC";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Mã môn học";
+            this.gridColumn2.FieldName = "MA_MON_HOC";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 1;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "Tên môn học";
+            this.gridColumn3.FieldName = "TEN_MON_HOC";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 2;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "Thời gian";
+            this.gridColumn4.FieldName = "THOI_GIAN";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 3;
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "DIA_DIEM";
+            this.gridColumn5.FieldName = "DIA_DIEM";
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 4;
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "Số lượng";
+            this.gridColumn6.FieldName = "SO_LUONG";
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 5;
+            // 
+            // gridColumn7
+            // 
+            this.gridColumn7.Caption = "Đơn vị giảng dạy";
+            this.gridColumn7.FieldName = "DON_VI_GIANG_DAY";
+            this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.Visible = true;
+            this.gridColumn7.VisibleIndex = 6;
             // 
             // frm_GD_LOP_MON
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(686, 409);
-            this.Controls.Add(this.m_fg);
+            this.ClientSize = new System.Drawing.Size(619, 409);
+            this.Controls.Add(this.m_grc);
+            this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Name = "frm_GD_LOP_MON";
             this.Text = "frm_GD_LOP_MON";
             this.Load += new System.EventHandler(this.frm_GD_LOP_MON_Load);
             this.m_pnl_out_place_dm.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
+            this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_grc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_grv)).EndInit();
             this.ResumeLayout(false);
 
 		}
@@ -257,168 +374,31 @@ namespace BKI_QLTTQuocAnh
 		US_GD_LOP_MON m_us = new US_GD_LOP_MON();
 		#endregion
 
-		#region Private Methods
-		private void format_controls(){
-			CControlFormat.setFormStyle(this, new CAppContext_201());
-			CControlFormat.setC1FlexFormat(m_fg);
-			CGridUtils.AddSave_Excel_Handlers(m_fg);
-            			CGridUtils.AddSearch_Handlers(m_fg);
-			set_define_events();
-			this.KeyPreview = true;		
-		}
-		private void set_initial_form_load(){						
-			m_obj_trans = get_trans_object(m_fg);
-			load_data_2_grid();		
-		}	
-		private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg){
-			Hashtable v_htb = new Hashtable();
-			v_htb.Add(GD_LOP_MON.SO_LUONG, e_col_Number.SO_LUONG);
-			
-			v_htb.Add(GD_LOP_MON.DIA_DIEM, e_col_Number.DIA_DIEM);
-			
-			v_htb.Add(GD_LOP_MON.THOI_GIAN, e_col_Number.THOI_GIAN);
-			
-			v_htb.Add(GD_LOP_MON.MA_LOP_HOC, e_col_Number.MA_LOP_HOC);
-									
-			ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg,v_htb,m_ds.GD_LOP_MON.NewRow());
-			return v_obj_trans;			
-		}
-		private void load_data_2_grid(){						
-			m_ds = new DS_GD_LOP_MON();			
-			m_us.FillDataset(m_ds);
-			m_fg.Redraw = false;
-			CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
-			m_fg.Redraw = true;
-		}
-		private void grid2us_object(US_GD_LOP_MON i_us
-			, int i_grid_row) {
-			DataRow v_dr;
-			v_dr = (DataRow) m_fg.Rows[i_grid_row].UserData;
-			m_obj_trans.GridRow2DataRow(i_grid_row,v_dr);
-			i_us.DataRow2Me(v_dr);
-		}
-
-
-        private void us_object2grid(US_GD_LOP_MON i_us
-            , int i_grid_row)
+        private void frm_GD_LOP_MON_Load(object sender, EventArgs e)
         {
-            DataRow v_dr = (DataRow)m_fg.Rows[i_grid_row].UserData;
-            i_us.Me2DataRow(v_dr);
-            m_obj_trans.DataRow2GridRow(v_dr, i_grid_row);
+            load_data_2_grid();
         }
 
+        private void load_data_2_grid()
+        {
+            US_DUNG_CHUNG v_us = new US_DUNG_CHUNG();
+            DataSet v_ds = new DataSet();
+            v_ds.Tables.Add(new DataTable());
 
-		private void insert_GD_LOP_MON(){			
-		//	frm_GD_LOP_MON_DE v_fDE = new  frm_GD_LOP_MON_DE();								
-		//	v_fDE.display();
-			load_data_2_grid();
-		}
+            v_us.FillDatasetWithTableName(v_ds, "V_GD_LOP_MON");
+            m_grc.DataSource = v_ds.Tables[0];
+        }
 
-		private void update_GD_LOP_MON(){			
-			if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
-			if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;			
-			grid2us_object(m_us, m_fg.Row);
-		//	frm_GD_LOP_MON_DE v_fDE = new frm_GD_LOP_MON_DE();
-		//	v_fDE.display(m_us);
-			load_data_2_grid();
-		}
-				
-		private void delete_GD_LOP_MON(){
-			if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
-			if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
-			if (BaseMessages.askUser_DataCouldBeDeleted(8) != BaseMessages.IsDataCouldBeDeleted.CouldBeDeleted)  return;
-			US_GD_LOP_MON v_us = new US_GD_LOP_MON();
-			grid2us_object(v_us, m_fg.Row);
-			try {			
-				v_us.BeginTransaction();    											
-				v_us.Delete();                      								
-				v_us.CommitTransaction();
-				m_fg.Rows.Remove(m_fg.Row);				
-			}
-			catch (Exception v_e) {
-				v_us.Rollback();
-				CDBExceptionHandler v_objErrHandler = new CDBExceptionHandler(v_e,
-					new CDBClientDBExceptionInterpret());
-				v_objErrHandler.showErrorMessage();
-			}
-		}
+		
+		
+       
 
-		private void view_GD_LOP_MON(){			
-			if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
-			if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
-			grid2us_object(m_us, m_fg.Row);
-		//	frm_GD_LOP_MON_DE v_fDE = new frm_GD_LOP_MON_DE();			
-		//	v_fDE.display(m_us);
-		}
-		private void set_define_events(){
-			m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
-			m_cmd_insert.Click += new EventHandler(m_cmd_insert_Click);
-			m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
-			m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
-			m_cmd_view.Click += new EventHandler(m_cmd_view_Click);
-		}
-		#endregion
-
-//
-		//
-		//		EVENT HANLDERS
-		//
-		//
-		private void frm_GD_LOP_MON_Load(object sender, System.EventArgs e) {
-			try{
-				set_initial_form_load();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
+     
 		
 		}
 
-		private void m_cmd_exit_Click(object sender, EventArgs e) {
-			try{
-				this.Close();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
+      
 
-		private void m_cmd_insert_Click(object sender, EventArgs e) {
-			try{
-				insert_GD_LOP_MON();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
-
-		private void m_cmd_update_Click(object sender, EventArgs e) {
-			try{
-				update_GD_LOP_MON();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
-
-		private void m_cmd_delete_Click(object sender, EventArgs e) {
-			try{
-				delete_GD_LOP_MON();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
-
-		private void m_cmd_view_Click(object sender, EventArgs e) {
-			try{
-				view_GD_LOP_MON();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
-
-	}
+	
 }
 

@@ -288,7 +288,7 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                f103_danh_muc_ngach_phong v_f = new f103_danh_muc_ngach_phong();
+                f103_danh_muc_nghiep_vu_phong v_f = new f103_danh_muc_nghiep_vu_phong();
                 v_f.MdiParent = this;
                 v_f.Show();
             }
@@ -303,7 +303,7 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                f104_danh_muc_phong_dai v_f = new f104_danh_muc_phong_dai();
+                f104_danh_muc_ngach_ngach_con v_f = new f104_danh_muc_ngach_ngach_con();
                 v_f.MdiParent = this;
                 v_f.Show();
             }

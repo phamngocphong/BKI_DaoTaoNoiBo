@@ -24,6 +24,7 @@ using BKI_QLTTQuocAnh.DS.CDBNames;
 using BKI_QLTTQuocAnh.DanhMuc;
 
 using C1.Win.C1FlexGrid;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace BKI_QLTTQuocAnh
 {
@@ -47,6 +48,7 @@ namespace BKI_QLTTQuocAnh
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
 		private System.ComponentModel.IContainer components;
 
 		public f101_danh_muc_mon_hoc()
@@ -98,6 +100,7 @@ namespace BKI_QLTTQuocAnh
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.m_grc = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -265,11 +268,23 @@ namespace BKI_QLTTQuocAnh
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn4,
             this.gridColumn1,
             this.gridColumn2,
             this.gridColumn3});
             this.gridView1.GridControl = this.m_grc;
             this.gridView1.Name = "gridView1";
+            this.gridView1.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.gridView1_PopupMenuShowing);
+            this.gridView1.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.gridView1_CustomUnboundColumnData);
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "STT";
+            this.gridColumn4.FieldName = "gridColumn4";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 0;
             // 
             // gridColumn1
             // 
@@ -277,7 +292,7 @@ namespace BKI_QLTTQuocAnh
             this.gridColumn1.FieldName = "MA_MON_HOC";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.VisibleIndex = 1;
             // 
             // gridColumn2
             // 
@@ -285,7 +300,7 @@ namespace BKI_QLTTQuocAnh
             this.gridColumn2.FieldName = "TEN_MON_HOC";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.VisibleIndex = 2;
             // 
             // gridColumn3
             // 
@@ -293,7 +308,7 @@ namespace BKI_QLTTQuocAnh
             this.gridColumn3.FieldName = "DON_VI_GIANG_DAY";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.VisibleIndex = 3;
             // 
             // f101_danh_muc_mon_hoc
             // 
@@ -451,6 +466,26 @@ namespace BKI_QLTTQuocAnh
             v_ds.Tables.Add(new DataTable());
             v_us.FillDatasetWithTableName(v_ds, "DM_MON_HOC");
             m_grc.DataSource = v_ds.Tables[0];
+        }
+
+        private void gridView1_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
+        {
+            if (e.IsGetData)
+                e.Value = e.ListSourceRowIndex + 1;
+        }
+
+        private void gridView1_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
+        {
+            GridView view = sender as GridView;
+            // Check whether a row is right-clicked.
+            if (e.MenuType == DevExpress.XtraGrid.Views.Grid.GridMenuType.Row)
+            {
+                int rowHandle = e.HitInfo.RowHandle;
+                // Delete existing menu items, if any.
+                e.Menu.Items.Clear();
+                // Add a submenu with a single menu item.
+                e.Menu.Items.Add(WinFormControls.CreateRowSubMenu(view, rowHandle));
+            }
         }
 		
 		

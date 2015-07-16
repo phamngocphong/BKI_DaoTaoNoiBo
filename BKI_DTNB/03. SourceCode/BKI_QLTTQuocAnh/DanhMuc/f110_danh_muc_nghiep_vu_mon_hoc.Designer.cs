@@ -28,78 +28,129 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f110_danh_muc_nghiep_vu_mon_hoc));
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.m_grc = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.c_ma_mon_hoc = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.c_ten_mon_hoc = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.c_ma_hoc_phan = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.c_ten_hoc_phan = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.m_cmd_luu = new DevExpress.XtraEditors.SimpleButton();
+            this.m_cmd_huy = new DevExpress.XtraEditors.SimpleButton();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_grc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
+            // groupControl1
+            // 
+            this.groupControl1.CaptionImage = ((System.Drawing.Image)(resources.GetObject("groupControl1.CaptionImage")));
+            this.groupControl1.Controls.Add(this.m_grc);
+            this.groupControl1.Location = new System.Drawing.Point(12, 12);
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.Size = new System.Drawing.Size(711, 435);
+            this.groupControl1.TabIndex = 2;
+            this.groupControl1.Text = "CHI TIẾT HỌC PHẦN/MÔN HỌC";
+            // 
             // m_grc
             // 
             this.m_grc.Cursor = System.Windows.Forms.Cursors.Default;
-            this.m_grc.Location = new System.Drawing.Point(12, 12);
+            this.m_grc.Location = new System.Drawing.Point(2, 43);
             this.m_grc.MainView = this.gridView1;
             this.m_grc.Name = "m_grc";
-            this.m_grc.Size = new System.Drawing.Size(617, 351);
-            this.m_grc.TabIndex = 8;
+            this.m_grc.Size = new System.Drawing.Size(707, 390);
+            this.m_grc.TabIndex = 7;
             this.m_grc.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
-            this.gridColumn2,
-            this.gridColumn3,
-            this.gridColumn4});
+            this.c_ma_mon_hoc,
+            this.c_ten_mon_hoc,
+            this.c_ma_hoc_phan,
+            this.c_ten_hoc_phan,
+            this.gridColumn1});
             this.gridView1.GridControl = this.m_grc;
             this.gridView1.Name = "gridView1";
+            this.gridView1.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.gridView1_PopupMenuShowing);
+            this.gridView1.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.gridView1_CustomUnboundColumnData);
+            // 
+            // c_ma_mon_hoc
+            // 
+            this.c_ma_mon_hoc.Caption = "Mã nghiệp vụ";
+            this.c_ma_mon_hoc.FieldName = "MA_NGHIEP__VU";
+            this.c_ma_mon_hoc.Name = "c_ma_mon_hoc";
+            this.c_ma_mon_hoc.Visible = true;
+            this.c_ma_mon_hoc.VisibleIndex = 1;
+            // 
+            // c_ten_mon_hoc
+            // 
+            this.c_ten_mon_hoc.Caption = "Tên nghiệp vụ";
+            this.c_ten_mon_hoc.FieldName = "TEN_NGHIEP_VU";
+            this.c_ten_mon_hoc.Name = "c_ten_mon_hoc";
+            this.c_ten_mon_hoc.Visible = true;
+            this.c_ten_mon_hoc.VisibleIndex = 2;
+            // 
+            // c_ma_hoc_phan
+            // 
+            this.c_ma_hoc_phan.Caption = "Mã môn học";
+            this.c_ma_hoc_phan.FieldName = "MA_MON_HOC";
+            this.c_ma_hoc_phan.Name = "c_ma_hoc_phan";
+            this.c_ma_hoc_phan.Visible = true;
+            this.c_ma_hoc_phan.VisibleIndex = 3;
+            // 
+            // c_ten_hoc_phan
+            // 
+            this.c_ten_hoc_phan.Caption = "Tên môn học";
+            this.c_ten_hoc_phan.FieldName = "TEN_MON_HOC";
+            this.c_ten_hoc_phan.Name = "c_ten_hoc_phan";
+            this.c_ten_hoc_phan.Visible = true;
+            this.c_ten_hoc_phan.VisibleIndex = 4;
+            // 
+            // m_cmd_luu
+            // 
+            this.m_cmd_luu.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_luu.Image")));
+            this.m_cmd_luu.Location = new System.Drawing.Point(236, 451);
+            this.m_cmd_luu.Name = "m_cmd_luu";
+            this.m_cmd_luu.Size = new System.Drawing.Size(83, 36);
+            this.m_cmd_luu.TabIndex = 3;
+            this.m_cmd_luu.Text = "LƯU";
+            // 
+            // m_cmd_huy
+            // 
+            this.m_cmd_huy.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_huy.Image")));
+            this.m_cmd_huy.Location = new System.Drawing.Point(406, 453);
+            this.m_cmd_huy.Name = "m_cmd_huy";
+            this.m_cmd_huy.Size = new System.Drawing.Size(79, 36);
+            this.m_cmd_huy.TabIndex = 4;
+            this.m_cmd_huy.Text = " HỦY";
             // 
             // gridColumn1
             // 
-            this.gridColumn1.Caption = "Mã nghiệp vụ";
-            this.gridColumn1.FieldName = "MA_NGHIEP_VU";
+            this.gridColumn1.Caption = "STT";
+            this.gridColumn1.FieldName = "gridColumn1";
             this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
             // 
-            // gridColumn2
-            // 
-            this.gridColumn2.Caption = "Tên nghiệp vụ";
-            this.gridColumn2.FieldName = "TEN_NGHIEP_VU";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
-            // 
-            // gridColumn3
-            // 
-            this.gridColumn3.Caption = "Mã môn học";
-            this.gridColumn3.FieldName = "MA_MON_HOC";
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
-            // 
-            // gridColumn4
-            // 
-            this.gridColumn4.Caption = "Tên môn học";
-            this.gridColumn4.FieldName = "TEN_MON_HOC";
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
-            // 
-            // f110_danh_muc_nghiep_vu_mon_hoc
+            // f110_danh_muc_nghiep_vu_mon_hoc_de
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(641, 375);
-            this.Controls.Add(this.m_grc);
-            this.Name = "f110_danh_muc_nghiep_vu_mon_hoc";
-            this.Text = "f110_dm_nghiep_vu_mon_hoc";
+            this.ClientSize = new System.Drawing.Size(728, 501);
+            this.Controls.Add(this.m_cmd_huy);
+            this.Controls.Add(this.m_cmd_luu);
+            this.Controls.Add(this.groupControl1);
+            this.Name = "f110_danh_muc_nghiep_vu_mon_hoc_de";
+            this.Text = "F110 - Chi tiết nghiệp vụ/môn học";
             this.Load += new System.EventHandler(this.f110_danh_muc_nghiep_vu_mon_hoc_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_grc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
@@ -108,11 +159,15 @@
 
         #endregion
 
+        private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraGrid.GridControl m_grc;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraEditors.SimpleButton m_cmd_luu;
+        private DevExpress.XtraEditors.SimpleButton m_cmd_huy;
+        private DevExpress.XtraGrid.Columns.GridColumn c_ten_mon_hoc;
+        internal DevExpress.XtraGrid.Columns.GridColumn c_ma_mon_hoc;
+        private DevExpress.XtraGrid.Columns.GridColumn c_ma_hoc_phan;
+        private DevExpress.XtraGrid.Columns.GridColumn c_ten_hoc_phan;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
     }
 }

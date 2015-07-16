@@ -24,6 +24,7 @@ using BKI_QLTTQuocAnh.DS.CDBNames;
 
 using C1.Win.C1FlexGrid;
 using BKI_QLTTQuocAnh.DanhMuc;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace BKI_QLTTQuocAnh
 {
@@ -43,6 +44,7 @@ namespace BKI_QLTTQuocAnh
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
 		private System.ComponentModel.IContainer components;
 
 		public f109_danh_muc_dai()
@@ -93,6 +95,7 @@ namespace BKI_QLTTQuocAnh
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_grc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -153,7 +156,6 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_insert.TabIndex = 12;
             this.m_cmd_insert.Text = "&Thêm";
-            //this.m_cmd_insert.Click += new System.EventHandler(this.m_cmd_insert_Click);
             // 
             // m_cmd_update
             // 
@@ -169,7 +171,6 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_update.TabIndex = 13;
             this.m_cmd_update.Text = "&Sửa";
-            //this.m_cmd_update.Click += new System.EventHandler(this.m_cmd_update_Click);
             // 
             // m_cmd_view
             // 
@@ -185,7 +186,6 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_view.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_view.TabIndex = 21;
             this.m_cmd_view.Text = "Xem";
-            //this.m_cmd_view.Click += new System.EventHandler(this.m_cmd_view_Click);
             // 
             // m_cmd_delete
             // 
@@ -201,7 +201,6 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_delete.TabIndex = 14;
             this.m_cmd_delete.Text = "&Xoá";
-            //this.m_cmd_delete.Click += new System.EventHandler(this.m_cmd_delete_Click);
             // 
             // m_cmd_exit
             // 
@@ -217,7 +216,6 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_exit.TabIndex = 11;
             this.m_cmd_exit.Text = "Thoát (Esc)";
-            //this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_exit_Click);
             // 
             // m_grc
             // 
@@ -234,9 +232,12 @@ namespace BKI_QLTTQuocAnh
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
-            this.gridColumn2});
+            this.gridColumn2,
+            this.gridColumn3});
             this.gridView1.GridControl = this.m_grc;
             this.gridView1.Name = "gridView1";
+            this.gridView1.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.gridView1_PopupMenuShowing);
+            this.gridView1.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.gridView1_CustomUnboundColumnData);
             // 
             // gridColumn1
             // 
@@ -244,7 +245,7 @@ namespace BKI_QLTTQuocAnh
             this.gridColumn1.FieldName = "MA_DAI";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.VisibleIndex = 1;
             // 
             // gridColumn2
             // 
@@ -252,7 +253,16 @@ namespace BKI_QLTTQuocAnh
             this.gridColumn2.FieldName = "TEN_DAI";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.VisibleIndex = 2;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "STT";
+            this.gridColumn3.FieldName = "gridColumn3";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 0;
             // 
             // f109_danh_muc_dai
             // 
@@ -399,6 +409,27 @@ namespace BKI_QLTTQuocAnh
             v_us.FillDatasetWithTableName(v_ds, "DM_DAI");
             m_grc.DataSource = v_ds.Tables[0];
 
+        }
+
+        private void gridView1_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
+        {
+
+            if (e.IsGetData)
+                e.Value = e.ListSourceRowIndex + 1;
+        }
+
+        private void gridView1_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
+        {
+            GridView view = sender as GridView;
+            // Check whether a row is right-clicked.
+            if (e.MenuType == DevExpress.XtraGrid.Views.Grid.GridMenuType.Row)
+            {
+                int rowHandle = e.HitInfo.RowHandle;
+                // Delete existing menu items, if any.
+                e.Menu.Items.Clear();
+                // Add a submenu with a single menu item.
+                e.Menu.Items.Add(WinFormControls.CreateRowSubMenu(view, rowHandle));
+            }
         }
 
 //

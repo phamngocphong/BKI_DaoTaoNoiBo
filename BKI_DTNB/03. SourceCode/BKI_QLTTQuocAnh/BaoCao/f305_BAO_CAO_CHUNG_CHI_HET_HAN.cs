@@ -32,16 +32,16 @@ namespace BKI_QLTTQuocAnh.BaoCao
         {
             fieldTenMonHoc = new PivotGridField("TEN_MON_HOC", PivotArea.RowArea);
             fieldTenMonHoc.Caption = "Tên môn học";
-            fieldTenNgach = new PivotGridField("TEN_NGACH", PivotArea.ColumnArea);
-            fieldTenNgach.Caption = "Tên ngạch";
+            //fieldTenNgach = new PivotGridField("TEN_NGACH", PivotArea.ColumnArea);
+            //fieldTenNgach.Caption = "Tên ngạch";
             fieldIDNHANVIEN = new PivotGridField("ID_NHAN_VIEN", PivotArea.DataArea);
             fieldIDNHANVIEN.SummaryType = DevExpress.Data.PivotGrid.PivotSummaryType.Count;
-            fieldTenNghiepVu = new PivotGridField("TEN_NGHIEP_VU", PivotArea.RowArea);
-            fieldTenNghiepVu.Caption = "Tên nghiệp vụ";
-            fieldTenKhuVuc = new PivotGridField("TEN", PivotArea.ColumnArea);
-            fieldTenKhuVuc.Caption = "Khu vực";
+            //fieldTenNghiepVu = new PivotGridField("TEN_NGHIEP_VU", PivotArea.RowArea);
+            //fieldTenNghiepVu.Caption = "Tên nghiệp vụ";
+            //fieldTenKhuVuc = new PivotGridField("TEN", PivotArea.ColumnArea);
+            //fieldTenKhuVuc.Caption = "Khu vực";
 
-            pivotGridControl1.Fields.AddRange(new PivotGridField[] { fieldIDNHANVIEN, fieldTenMonHoc, fieldTenNgach, fieldTenKhuVuc, fieldTenNghiepVu });
+            pivotGridControl1.Fields.AddRange(new PivotGridField[] { fieldIDNHANVIEN, fieldTenMonHoc });
         }
 
         private void load_data_to_pivot_grid()
@@ -87,7 +87,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
         {
 
             if (e.ValueType == DevExpress.XtraPivotGrid.PivotGridValueType.GrandTotal)
-                if (e.DisplayText == "Grand Total")
+                if (e.DisplayText == "Grand Total" || e.DisplayText=="Count")
                     e.DisplayText = "Tổng";
                 else
                     e.DisplayText = e.DataField.SummaryType.ToString();

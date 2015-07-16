@@ -36,6 +36,8 @@
             this.m_cbo_mon_hoc = new System.Windows.Forms.ComboBox();
             this.m_cmd_tao_lop = new DevExpress.XtraEditors.SimpleButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.m_cmd_xuat_pdf = new DevExpress.XtraEditors.SimpleButton();
+            this.m_cmd_xuat_excel = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,8 +53,6 @@
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.m_cmd_xuat_excel = new DevExpress.XtraEditors.SimpleButton();
-            this.m_cmd_xuat_pdf = new DevExpress.XtraEditors.SimpleButton();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -134,6 +134,42 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(697, 38);
             this.panel2.TabIndex = 17;
+            // 
+            // m_cmd_xuat_pdf
+            // 
+            this.m_cmd_xuat_pdf.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(3)))), ((int)(((byte)(53)))));
+            this.m_cmd_xuat_pdf.Appearance.Options.UseForeColor = true;
+            this.m_cmd_xuat_pdf.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.m_cmd_xuat_pdf.Image = global::BKI_QLTTQuocAnh.Properties.Resources._1425906136_315167;
+            this.m_cmd_xuat_pdf.ImageIndex = 2;
+            this.m_cmd_xuat_pdf.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.m_cmd_xuat_pdf.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
+            this.m_cmd_xuat_pdf.Location = new System.Drawing.Point(347, 2);
+            this.m_cmd_xuat_pdf.Margin = new System.Windows.Forms.Padding(4);
+            this.m_cmd_xuat_pdf.Name = "m_cmd_xuat_pdf";
+            this.m_cmd_xuat_pdf.Padding = new System.Windows.Forms.Padding(1);
+            this.m_cmd_xuat_pdf.Size = new System.Drawing.Size(108, 33);
+            this.m_cmd_xuat_pdf.TabIndex = 16;
+            this.m_cmd_xuat_pdf.Text = "Xuất PDF";
+            this.m_cmd_xuat_pdf.Click += new System.EventHandler(this.m_cmd_xuat_pdf_Click);
+            // 
+            // m_cmd_xuat_excel
+            // 
+            this.m_cmd_xuat_excel.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(3)))), ((int)(((byte)(53)))));
+            this.m_cmd_xuat_excel.Appearance.Options.UseForeColor = true;
+            this.m_cmd_xuat_excel.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.m_cmd_xuat_excel.Image = global::BKI_QLTTQuocAnh.Properties.Resources._1425906136_315167;
+            this.m_cmd_xuat_excel.ImageIndex = 2;
+            this.m_cmd_xuat_excel.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.m_cmd_xuat_excel.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
+            this.m_cmd_xuat_excel.Location = new System.Drawing.Point(463, 2);
+            this.m_cmd_xuat_excel.Margin = new System.Windows.Forms.Padding(4);
+            this.m_cmd_xuat_excel.Name = "m_cmd_xuat_excel";
+            this.m_cmd_xuat_excel.Padding = new System.Windows.Forms.Padding(1);
+            this.m_cmd_xuat_excel.Size = new System.Drawing.Size(108, 33);
+            this.m_cmd_xuat_excel.TabIndex = 15;
+            this.m_cmd_xuat_excel.Text = "Xuất excel";
+            this.m_cmd_xuat_excel.Click += new System.EventHandler(this.m_cmd_xuat_excel_Click);
             // 
             // panel1
             // 
@@ -291,42 +327,6 @@
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 6;
-            // 
-            // m_cmd_xuat_excel
-            // 
-            this.m_cmd_xuat_excel.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(3)))), ((int)(((byte)(53)))));
-            this.m_cmd_xuat_excel.Appearance.Options.UseForeColor = true;
-            this.m_cmd_xuat_excel.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.m_cmd_xuat_excel.Image = global::BKI_QLTTQuocAnh.Properties.Resources._1425906136_315167;
-            this.m_cmd_xuat_excel.ImageIndex = 2;
-            this.m_cmd_xuat_excel.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.m_cmd_xuat_excel.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
-            this.m_cmd_xuat_excel.Location = new System.Drawing.Point(463, 2);
-            this.m_cmd_xuat_excel.Margin = new System.Windows.Forms.Padding(4);
-            this.m_cmd_xuat_excel.Name = "m_cmd_xuat_excel";
-            this.m_cmd_xuat_excel.Padding = new System.Windows.Forms.Padding(1);
-            this.m_cmd_xuat_excel.Size = new System.Drawing.Size(108, 33);
-            this.m_cmd_xuat_excel.TabIndex = 15;
-            this.m_cmd_xuat_excel.Text = "Xuất excel";
-            this.m_cmd_xuat_excel.Click += new System.EventHandler(this.m_cmd_xuat_excel_Click);
-            // 
-            // m_cmd_xuat_pdf
-            // 
-            this.m_cmd_xuat_pdf.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(3)))), ((int)(((byte)(53)))));
-            this.m_cmd_xuat_pdf.Appearance.Options.UseForeColor = true;
-            this.m_cmd_xuat_pdf.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.m_cmd_xuat_pdf.Image = global::BKI_QLTTQuocAnh.Properties.Resources._1425906136_315167;
-            this.m_cmd_xuat_pdf.ImageIndex = 2;
-            this.m_cmd_xuat_pdf.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.m_cmd_xuat_pdf.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
-            this.m_cmd_xuat_pdf.Location = new System.Drawing.Point(347, 2);
-            this.m_cmd_xuat_pdf.Margin = new System.Windows.Forms.Padding(4);
-            this.m_cmd_xuat_pdf.Name = "m_cmd_xuat_pdf";
-            this.m_cmd_xuat_pdf.Padding = new System.Windows.Forms.Padding(1);
-            this.m_cmd_xuat_pdf.Size = new System.Drawing.Size(108, 33);
-            this.m_cmd_xuat_pdf.TabIndex = 16;
-            this.m_cmd_xuat_pdf.Text = "Xuất PDF";
-            this.m_cmd_xuat_pdf.Click += new System.EventHandler(this.m_cmd_xuat_pdf_Click);
             // 
             // gridColumn6
             // 

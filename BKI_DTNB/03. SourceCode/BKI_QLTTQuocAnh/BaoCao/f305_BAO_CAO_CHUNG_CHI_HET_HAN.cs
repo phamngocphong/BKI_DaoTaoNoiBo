@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraPivotGrid;
+using IP.Core.IPCommon;
 
 namespace BKI_QLTTQuocAnh.BaoCao
 {
     public partial class f305_BAO_CAO_CHUNG_CHI_HET_HAN : Form
     {
-        PivotGridField fieldIDNHANSU;
+        PivotGridField fieldIDNHANVIEN;
         PivotGridField fieldTenMonHoc;
         PivotGridField fieldTenNgach;
+        PivotGridField fieldTenNghiepVu;
+        PivotGridField fieldTenKhuVuc;
        
         public f305_BAO_CAO_CHUNG_CHI_HET_HAN()
         {
@@ -31,10 +34,14 @@ namespace BKI_QLTTQuocAnh.BaoCao
             fieldTenMonHoc.Caption = "Tên môn học";
             fieldTenNgach = new PivotGridField("TEN_NGACH", PivotArea.ColumnArea);
             fieldTenNgach.Caption = "Tên ngạch";
-            fieldIDNHANSU = new PivotGridField("ID_NHAN_SU", PivotArea.DataArea);
-            fieldIDNHANSU.SummaryType = DevExpress.Data.PivotGrid.PivotSummaryType.Count;
+            fieldIDNHANVIEN = new PivotGridField("ID_NHAN_VIEN", PivotArea.DataArea);
+            fieldIDNHANVIEN.SummaryType = DevExpress.Data.PivotGrid.PivotSummaryType.Count;
+            fieldTenNghiepVu = new PivotGridField("TEN_NGHIEP_VU", PivotArea.RowArea);
+            fieldTenNghiepVu.Caption = "Tên nghiệp vụ";
+            fieldTenKhuVuc = new PivotGridField("TEN", PivotArea.ColumnArea);
+            fieldTenKhuVuc.Caption = "Khu vực";
 
-            pivotGridControl1.Fields.AddRange(new PivotGridField[] { fieldIDNHANSU, fieldTenMonHoc, fieldTenNgach });
+            pivotGridControl1.Fields.AddRange(new PivotGridField[] { fieldIDNHANVIEN, fieldTenMonHoc, fieldTenNgach, fieldTenKhuVuc, fieldTenNghiepVu });
         }
 
         private void load_data_to_pivot_grid()
@@ -50,7 +57,16 @@ namespace BKI_QLTTQuocAnh.BaoCao
 
         private void m_cmd_hien_thi_Click(object sender, EventArgs e)
         {
-            load_data_to_pivot_grid();
+            try
+            {
+                load_data_to_pivot_grid();
+            }
+            catch (Exception ex)
+            {
+
+                CSystemLog_301.ExceptionHandle(ex);
+            }
+            
         }
 
         private void pivotGridControl1_CellDoubleClick(object sender, PivotCellEventArgs e)

@@ -23,6 +23,7 @@ using BKI_QLTTQuocAnh.DS;
 using BKI_QLTTQuocAnh.DS.CDBNames;
 
 using C1.Win.C1FlexGrid;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace BKI_QLTTQuocAnh
 {
@@ -49,6 +50,7 @@ namespace BKI_QLTTQuocAnh
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
 		private System.ComponentModel.IContainer components;
 
 		public frm_GD_LOP_MON()
@@ -106,6 +108,7 @@ namespace BKI_QLTTQuocAnh
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -241,11 +244,11 @@ namespace BKI_QLTTQuocAnh
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelControl1.Location = new System.Drawing.Point(213, 12);
+            this.labelControl1.Location = new System.Drawing.Point(5, 12);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(173, 19);
+            this.labelControl1.Size = new System.Drawing.Size(176, 19);
             this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "DANH MỤC  LỚP HỌC";
+            this.labelControl1.Text = "DANH MỤC  LỚP MÔN";
             // 
             // m_grc
             // 
@@ -268,9 +271,12 @@ namespace BKI_QLTTQuocAnh
             this.gridColumn4,
             this.gridColumn5,
             this.gridColumn6,
-            this.gridColumn7});
+            this.gridColumn7,
+            this.gridColumn8});
             this.m_grv.GridControl = this.m_grc;
             this.m_grv.Name = "m_grv";
+            this.m_grv.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.m_grv_PopupMenuShowing);
+            this.m_grv.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.m_grv_CustomUnboundColumnData);
             // 
             // gridColumn1
             // 
@@ -278,7 +284,7 @@ namespace BKI_QLTTQuocAnh
             this.gridColumn1.FieldName = "MA_LOP_HOC";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.VisibleIndex = 1;
             // 
             // gridColumn2
             // 
@@ -286,7 +292,7 @@ namespace BKI_QLTTQuocAnh
             this.gridColumn2.FieldName = "MA_MON_HOC";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.VisibleIndex = 2;
             // 
             // gridColumn3
             // 
@@ -294,7 +300,7 @@ namespace BKI_QLTTQuocAnh
             this.gridColumn3.FieldName = "TEN_MON_HOC";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.VisibleIndex = 3;
             // 
             // gridColumn4
             // 
@@ -302,7 +308,7 @@ namespace BKI_QLTTQuocAnh
             this.gridColumn4.FieldName = "THOI_GIAN";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
+            this.gridColumn4.VisibleIndex = 4;
             // 
             // gridColumn5
             // 
@@ -310,7 +316,7 @@ namespace BKI_QLTTQuocAnh
             this.gridColumn5.FieldName = "DIA_DIEM";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 4;
+            this.gridColumn5.VisibleIndex = 5;
             // 
             // gridColumn6
             // 
@@ -318,7 +324,7 @@ namespace BKI_QLTTQuocAnh
             this.gridColumn6.FieldName = "SO_LUONG";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 5;
+            this.gridColumn6.VisibleIndex = 6;
             // 
             // gridColumn7
             // 
@@ -326,7 +332,16 @@ namespace BKI_QLTTQuocAnh
             this.gridColumn7.FieldName = "DON_VI_GIANG_DAY";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 6;
+            this.gridColumn7.VisibleIndex = 7;
+            // 
+            // gridColumn8
+            // 
+            this.gridColumn8.Caption = "STT";
+            this.gridColumn8.FieldName = "gridColumn8";
+            this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
+            this.gridColumn8.Visible = true;
+            this.gridColumn8.VisibleIndex = 0;
             // 
             // frm_GD_LOP_MON
             // 
@@ -387,6 +402,26 @@ namespace BKI_QLTTQuocAnh
 
             v_us.FillDatasetWithTableName(v_ds, "V_GD_LOP_MON");
             m_grc.DataSource = v_ds.Tables[0];
+        }
+
+        private void m_grv_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
+        {
+            if (e.IsGetData)
+                e.Value = e.ListSourceRowIndex + 1;
+        }
+
+        private void m_grv_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
+        {
+            GridView view = sender as GridView;
+            // Check whether a row is right-clicked.
+            if (e.MenuType == DevExpress.XtraGrid.Views.Grid.GridMenuType.Row)
+            {
+                int rowHandle = e.HitInfo.RowHandle;
+                // Delete existing menu items, if any.
+                e.Menu.Items.Clear();
+                // Add a submenu with a single menu item.
+                e.Menu.Items.Add(WinFormControls.CreateRowSubMenu(view, rowHandle));
+            }
         }
 
 		

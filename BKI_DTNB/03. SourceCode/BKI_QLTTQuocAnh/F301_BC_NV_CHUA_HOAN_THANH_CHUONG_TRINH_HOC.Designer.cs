@@ -243,6 +243,7 @@
             this.m_grv.OptionsSelection.MultiSelect = true;
             this.m_grv.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
             this.m_grv.OptionsSelection.ResetSelectionClickOutsideCheckboxSelector = true;
+            this.m_grv.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.m_grv_PopupMenuShowing);
             this.m_grv.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.m_grv_CustomUnboundColumnData);
             // 
             // c_id

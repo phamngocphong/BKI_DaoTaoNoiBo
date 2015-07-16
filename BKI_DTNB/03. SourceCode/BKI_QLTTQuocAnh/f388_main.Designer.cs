@@ -698,7 +698,7 @@
             this.Name = "f388_main";
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;
-            this.Text = "PHẦN MỀM QUẢN LÝ TÀI CHÍNH TRUNG TÂM QUỐC ANH";
+            this.Text = "PHẦN MỀM QUẢN LÝ ĐÀO TẠO NỘI BỘ - TOPICA";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MdiManager)).EndInit();

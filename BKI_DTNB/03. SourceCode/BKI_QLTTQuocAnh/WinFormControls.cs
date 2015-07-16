@@ -13,6 +13,8 @@ using IP.Core.IPUserService;
 using BKI_QLTTQuocAnh.DS;
 using BKI_QLTTQuocAnh.US;
 using BKI_QLTTQuocAnh.DS.CDBNames;
+using DevExpress.Utils.Menu;
+using DevExpress.XtraGrid.Views.Grid;
 
 
 namespace BKI_QLTTQuocAnh
@@ -162,6 +164,72 @@ namespace BKI_QLTTQuocAnh
                 ip_cbo.SelectedIndex = 0;
             }
         }
+
+        #region Report
+        static GridView m_grv;
+        public static DXMenuItem CreateRowSubMenu(GridView view, int rowHandle)
+        {
+            m_grv = view;
+            DXSubMenuItem subMenu = new DXSubMenuItem("Báo cáo");
+            DXMenuItem menuItemReportXLS = new DXMenuItem("&Báo cáo XLS", new EventHandler(ExportXLSClick));
+            DXMenuItem menuItemReportPDF = new DXMenuItem("&Báo cáo PDF", new EventHandler(ExportPDFClick));
+            DXMenuItem menuItemReportHTML = new DXMenuItem("&Báo cáo HTML", new EventHandler(ExportHTMLClick));
+            DXMenuItem menuItemReportDOC = new DXMenuItem("&Báo cáo TXT", new EventHandler(ExportDOCClick));
+            subMenu.Items.Add(menuItemReportXLS);
+            subMenu.Items.Add(menuItemReportPDF);
+            subMenu.Items.Add(menuItemReportHTML);
+            subMenu.Items.Add(menuItemReportDOC);
+            return subMenu;
+        }
+
+        private static void ExportPDFClick(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = "PDF files (*.pdf)|*.pdf|All files (*.*)|*.*";
+            saveFileDialog1.RestoreDirectory = true;
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                m_grv.ExportToPdf(saveFileDialog1.FileName);
+                MessageBox.Show("Lưu báo cáo thành công");
+            }
+        }
+
+        private static void ExportHTMLClick(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = "html files (*.html)|*.html|All files (*.*)|*.*";
+            saveFileDialog1.RestoreDirectory = true;
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                m_grv.ExportToHtml(saveFileDialog1.FileName);
+                MessageBox.Show("Lưu báo cáo thành công");
+            }
+        }
+
+        private static void ExportDOCClick(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            saveFileDialog1.RestoreDirectory = true;
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                m_grv.ExportToText(saveFileDialog1.FileName);
+                MessageBox.Show("Lưu báo cáo thành công");
+            }
+        }
+
+        private static void ExportXLSClick(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = "xls files (*.xls)|*.xls|All files (*.*)|*.*";
+            saveFileDialog1.RestoreDirectory = true;
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                m_grv.ExportToXls(saveFileDialog1.FileName);
+                MessageBox.Show("Lưu báo cáo thành công");
+            }
+        }
+        #endregion
     }
 
     public class US_DUNG_CHUNG : US_Object {

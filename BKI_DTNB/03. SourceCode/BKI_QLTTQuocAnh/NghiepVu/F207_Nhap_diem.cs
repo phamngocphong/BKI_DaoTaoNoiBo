@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using BKI_QLTTQuocAnh.US;
 using IP.Core.IPCommon;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace BKI_QLTTQuocAnh.NghiepVu
 {
@@ -59,6 +60,20 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             catch (Exception v_e)
             {
                 CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_grv_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
+        {
+            GridView view = sender as GridView;
+            // Check whether a row is right-clicked.
+            if (e.MenuType == DevExpress.XtraGrid.Views.Grid.GridMenuType.Row)
+            {
+                int rowHandle = e.HitInfo.RowHandle;
+                // Delete existing menu items, if any.
+                e.Menu.Items.Clear();
+                // Add a submenu with a single menu item.
+                e.Menu.Items.Add(WinFormControls.CreateRowSubMenu(view, rowHandle));
             }
         }
     }

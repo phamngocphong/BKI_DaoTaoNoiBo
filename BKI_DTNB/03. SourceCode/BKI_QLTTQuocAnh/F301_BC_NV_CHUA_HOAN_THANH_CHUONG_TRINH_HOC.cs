@@ -149,7 +149,7 @@ namespace BKI_QLTTQuocAnh
 
         private void load_data_2_cbo_mon_hoc()
         {
-            WinFormControls.load_data_to_combobox_with_query(m_cbo_mon_hoc, "ID", "MON_HOC", WinFormControls.eTAT_CA.YES, "SELECT DISTINCT dmh.ID, dmh.MA_MON_HOC + ' - '+ dmh.TEN_MON_HOC AS MON_HOC FROM DM_MON_HOC AS dmh, DM_NGHIEP_VU_MON_HOC AS dnvmh WHERE dmh.ID =dnvmh.ID_MON_HOC AND (dnvmh.ID_NGHIEP_VU = "+ m_cbo_nghiep_vu.SelectedValue +" OR "+ m_cbo_nghiep_vu.SelectedValue +" = -1)");
+            WinFormControls.load_data_to_combobox_with_query(m_cbo_mon_hoc, "ID", "MON_HOC", WinFormControls.eTAT_CA.NO, "SELECT DISTINCT dmh.ID, dmh.MA_MON_HOC + ' - '+ dmh.TEN_MON_HOC AS MON_HOC FROM DM_MON_HOC AS dmh, DM_NGHIEP_VU_MON_HOC AS dnvmh WHERE dmh.ID =dnvmh.ID_MON_HOC AND (dnvmh.ID_NGHIEP_VU = "+ m_cbo_nghiep_vu.SelectedValue +" OR "+ m_cbo_nghiep_vu.SelectedValue +" = -1)");
         }
 
         private void m_cbo_dia_phuong_SelectedIndexChanged(object sender, EventArgs e)
@@ -190,6 +190,12 @@ namespace BKI_QLTTQuocAnh
                 m_grv.ExportToHtml(saveFileDialog1.FileName);
                 MessageBox.Show("Lưu báo cáo thành công");
             }
+        }
+
+        private void m_grv_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
+        {
+            if (e.IsGetData)
+                e.Value = e.ListSourceRowIndex + 1;
         }
     }
 }

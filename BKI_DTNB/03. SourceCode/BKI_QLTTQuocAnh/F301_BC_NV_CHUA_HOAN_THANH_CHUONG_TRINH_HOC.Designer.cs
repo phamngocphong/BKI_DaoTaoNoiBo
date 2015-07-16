@@ -53,6 +53,7 @@
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.m_cmd_xuat_excel = new DevExpress.XtraEditors.SimpleButton();
             this.m_cmd_xuat_pdf = new DevExpress.XtraEditors.SimpleButton();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -235,12 +236,14 @@
             this.gridColumn2,
             this.gridColumn3,
             this.gridColumn4,
-            this.gridColumn5});
+            this.gridColumn5,
+            this.gridColumn6});
             this.m_grv.GridControl = this.m_grc;
             this.m_grv.Name = "m_grv";
             this.m_grv.OptionsSelection.MultiSelect = true;
             this.m_grv.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
             this.m_grv.OptionsSelection.ResetSelectionClickOutsideCheckboxSelector = true;
+            this.m_grv.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.m_grv_CustomUnboundColumnData);
             // 
             // c_id
             // 
@@ -254,7 +257,7 @@
             this.gridColumn1.FieldName = "MA_NV";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 1;
+            this.gridColumn1.VisibleIndex = 2;
             // 
             // gridColumn2
             // 
@@ -262,7 +265,7 @@
             this.gridColumn2.FieldName = "HO_DEM";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 2;
+            this.gridColumn2.VisibleIndex = 3;
             // 
             // gridColumn3
             // 
@@ -270,7 +273,7 @@
             this.gridColumn3.FieldName = "TEN";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 3;
+            this.gridColumn3.VisibleIndex = 4;
             // 
             // gridColumn4
             // 
@@ -278,7 +281,7 @@
             this.gridColumn4.FieldName = "EMAIL_CA_NHAN";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 4;
+            this.gridColumn4.VisibleIndex = 5;
             // 
             // gridColumn5
             // 
@@ -286,7 +289,7 @@
             this.gridColumn5.FieldName = "DI_DONG";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 5;
+            this.gridColumn5.VisibleIndex = 6;
             // 
             // m_cmd_xuat_excel
             // 
@@ -323,6 +326,15 @@
             this.m_cmd_xuat_pdf.TabIndex = 16;
             this.m_cmd_xuat_pdf.Text = "Xuất PDF";
             this.m_cmd_xuat_pdf.Click += new System.EventHandler(this.m_cmd_xuat_pdf_Click);
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "STT";
+            this.gridColumn6.FieldName = "gridColumn6";
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 1;
             // 
             // F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC
             // 
@@ -373,5 +385,6 @@
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.SimpleButton m_cmd_xuat_excel;
         private DevExpress.XtraEditors.SimpleButton m_cmd_xuat_pdf;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
     }
 }

@@ -257,10 +257,11 @@ namespace BKI_QLTTQuocAnh
             // m_grc
             // 
             this.m_grc.Cursor = System.Windows.Forms.Cursors.Default;
-            this.m_grc.Location = new System.Drawing.Point(0, 50);
+            this.m_grc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.m_grc.Location = new System.Drawing.Point(0, 44);
             this.m_grc.MainView = this.gridView1;
             this.m_grc.Name = "m_grc";
-            this.m_grc.Size = new System.Drawing.Size(685, 321);
+            this.m_grc.Size = new System.Drawing.Size(689, 329);
             this.m_grc.TabIndex = 26;
             this.m_grc.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});

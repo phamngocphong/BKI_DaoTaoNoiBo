@@ -220,10 +220,11 @@ namespace BKI_QLTTQuocAnh
             // m_grc
             // 
             this.m_grc.Cursor = System.Windows.Forms.Cursors.Default;
-            this.m_grc.Location = new System.Drawing.Point(13, 13);
+            this.m_grc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.m_grc.Location = new System.Drawing.Point(0, 0);
             this.m_grc.MainView = this.gridView1;
             this.m_grc.Name = "m_grc";
-            this.m_grc.Size = new System.Drawing.Size(669, 354);
+            this.m_grc.Size = new System.Drawing.Size(686, 373);
             this.m_grc.TabIndex = 20;
             this.m_grc.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -271,7 +272,7 @@ namespace BKI_QLTTQuocAnh
             this.Controls.Add(this.m_grc);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Name = "f109_danh_muc_dai";
-            this.Text = "f109_danh_muc_dai";
+            this.Text = "F109 - Danh mục đai";
             this.Load += new System.EventHandler(this.f109_danh_muc_dai_Load);
             this.m_pnl_out_place_dm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_grc)).EndInit();

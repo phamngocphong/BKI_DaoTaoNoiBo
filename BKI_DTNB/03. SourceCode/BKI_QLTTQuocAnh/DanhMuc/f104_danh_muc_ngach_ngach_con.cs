@@ -46,7 +46,6 @@ namespace BKI_QLTTQuocAnh
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
 		private System.ComponentModel.IContainer components;
 
 		public f104_danh_muc_ngach_ngach_con()
@@ -95,12 +94,11 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_grc = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.label1 = new System.Windows.Forms.Label();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_grc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -225,10 +223,11 @@ namespace BKI_QLTTQuocAnh
             // m_grc
             // 
             this.m_grc.Cursor = System.Windows.Forms.Cursors.Default;
-            this.m_grc.Location = new System.Drawing.Point(4, 57);
+            this.m_grc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.m_grc.Location = new System.Drawing.Point(0, 0);
             this.m_grc.MainView = this.gridView1;
             this.m_grc.Name = "m_grc";
-            this.m_grc.Size = new System.Drawing.Size(678, 310);
+            this.m_grc.Size = new System.Drawing.Size(686, 373);
             this.m_grc.TabIndex = 20;
             this.m_grc.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -239,23 +238,11 @@ namespace BKI_QLTTQuocAnh
             this.gridColumn1,
             this.gridColumn2,
             this.gridColumn3,
-            this.gridColumn4,
-            this.gridColumn5});
+            this.gridColumn4});
             this.gridView1.GridControl = this.m_grc;
             this.gridView1.Name = "gridView1";
             this.gridView1.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.gridView1_PopupMenuShowing);
             this.gridView1.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.gridView1_CustomUnboundColumnData);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.ForeColor = System.Drawing.Color.Maroon;
-            this.label1.Location = new System.Drawing.Point(226, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(247, 19);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Danh mục Ngạch - Ngạch Con";
             // 
             // gridColumn1
             // 
@@ -290,13 +277,16 @@ namespace BKI_QLTTQuocAnh
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
             // 
-            // gridColumn5
+            // label1
             // 
-            this.gridColumn5.Caption = "Tên ngạch con";
-            this.gridColumn5.FieldName = "TEN_NGACH_CON";
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 4;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.ForeColor = System.Drawing.Color.Maroon;
+            this.label1.Location = new System.Drawing.Point(226, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(247, 19);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Danh mục Ngạch - Ngạch Con";
             // 
             // f104_danh_muc_ngach_ngach_con
             // 

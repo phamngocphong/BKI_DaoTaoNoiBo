@@ -65,7 +65,7 @@
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
-            this.m_cmd_phong_hoc_phan = new DevExpress.XtraBars.BarButtonItem();
+            this.m_cmd_nghiep_vu = new DevExpress.XtraBars.BarButtonItem();
             this.m_cmd_dai_hoc_phan = new DevExpress.XtraBars.BarButtonItem();
             this.m_cmd_mon_hoc = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -139,7 +139,7 @@
             this.barButtonItem2,
             this.barButtonItem3,
             this.barButtonItem4,
-            this.m_cmd_phong_hoc_phan,
+            this.m_cmd_nghiep_vu,
             this.m_cmd_dai_hoc_phan,
             this.m_cmd_mon_hoc});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
@@ -453,7 +453,7 @@
             // 
             // barButtonItem2
             // 
-            this.barButtonItem2.Caption = "Học phần- Môn học";
+            this.barButtonItem2.Caption = "Nghiệp vụ - Môn học";
             this.barButtonItem2.Id = 40;
             this.barButtonItem2.LargeGlyph = global::BKI_QLTTQuocAnh.Properties.Resources._1425905592_196740;
             this.barButtonItem2.LargeWidth = 70;
@@ -465,7 +465,7 @@
             this.barButtonItem3.Caption = "Ngạch- Phòng";
             this.barButtonItem3.Id = 41;
             this.barButtonItem3.LargeGlyph = global::BKI_QLTTQuocAnh.Properties.Resources._1425905865_103845;
-            this.barButtonItem3.LargeWidth = 90;
+            this.barButtonItem3.LargeWidth = 70;
             this.barButtonItem3.Name = "barButtonItem3";
             this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
             // 
@@ -478,15 +478,15 @@
             this.barButtonItem4.Name = "barButtonItem4";
             this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
             // 
-            // m_cmd_phong_hoc_phan
+            // m_cmd_nghiep_vu
             // 
-            this.m_cmd_phong_hoc_phan.Caption = "Phòng- Học phần";
-            this.m_cmd_phong_hoc_phan.CloseRadialMenuOnItemClick = true;
-            this.m_cmd_phong_hoc_phan.Id = 43;
-            this.m_cmd_phong_hoc_phan.LargeGlyph = global::BKI_QLTTQuocAnh.Properties.Resources._1425905897_25350;
-            this.m_cmd_phong_hoc_phan.LargeWidth = 70;
-            this.m_cmd_phong_hoc_phan.Name = "m_cmd_phong_hoc_phan";
-            this.m_cmd_phong_hoc_phan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_phong_hoc_phan_ItemClick);
+            this.m_cmd_nghiep_vu.Caption = "Nghiệp vụ";
+            this.m_cmd_nghiep_vu.CloseRadialMenuOnItemClick = true;
+            this.m_cmd_nghiep_vu.Id = 43;
+            this.m_cmd_nghiep_vu.LargeGlyph = global::BKI_QLTTQuocAnh.Properties.Resources._1425905897_25350;
+            this.m_cmd_nghiep_vu.LargeWidth = 70;
+            this.m_cmd_nghiep_vu.Name = "m_cmd_nghiep_vu";
+            this.m_cmd_nghiep_vu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_nghiep_vu_ItemClick);
             // 
             // m_cmd_dai_hoc_phan
             // 
@@ -584,7 +584,7 @@
             // 
             // ribbonPageGroup17
             // 
-            this.ribbonPageGroup17.ItemLinks.Add(this.m_cmd_phong_hoc_phan);
+            this.ribbonPageGroup17.ItemLinks.Add(this.m_cmd_nghiep_vu);
             this.ribbonPageGroup17.Name = "ribbonPageGroup17";
             // 
             // ribbonPageGroup18
@@ -766,7 +766,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup15;
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup16;
-        private DevExpress.XtraBars.BarButtonItem m_cmd_phong_hoc_phan;
+        private DevExpress.XtraBars.BarButtonItem m_cmd_nghiep_vu;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup17;
         private DevExpress.XtraBars.BarButtonItem m_cmd_dai_hoc_phan;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup18;

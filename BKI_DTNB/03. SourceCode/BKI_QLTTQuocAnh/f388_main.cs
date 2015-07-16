@@ -272,7 +272,7 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                f110_danh_muc_hoc_phan_mon_hoc v_f = new f110_danh_muc_hoc_phan_mon_hoc();
+                f110_danh_muc_nghiep_vu_mon_hoc v_f = new f110_danh_muc_nghiep_vu_mon_hoc();
                 v_f.MdiParent = this;
                 v_f.Show();
             }
@@ -314,21 +314,6 @@ namespace BKI_QLTTQuocAnh
             }
         }
 
-        private void m_cmd_phong_hoc_phan_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            try
-            {
-                f105_danh_muc_phong_hoc_phan v_f = new f105_danh_muc_phong_hoc_phan();
-                v_f.MdiParent = this;
-                v_f.Show();
-            }
-            catch (Exception ex)
-            {
-
-                CSystemLog_301.ExceptionHandle(ex);
-            }
-        }
-
         private void m_cmd_dai_hoc_phan_ItemClick(object sender, ItemClickEventArgs e)
         {
             try
@@ -351,12 +336,11 @@ namespace BKI_QLTTQuocAnh
             v_f.Show();
         }
 
-        private void m_cmd_mon_Hoc_ItemClick(object sender, ItemClickEventArgs e)
+        private void m_cmd_mon_hoc_ItemClick(object sender, ItemClickEventArgs e)
         {
             try
             {
-               // f101_danh_muc_mon_hoc v_f = new f101_danh_muc_mon_hoc();
-                f110_danh_muc_hoc_phan_mon_hoc_de v_f = new f110_danh_muc_hoc_phan_mon_hoc_de();
+                f101_danh_muc_mon_hoc v_f = new f101_danh_muc_mon_hoc();
                 v_f.MdiParent = this;
                 v_f.Show();
             }
@@ -388,9 +372,20 @@ namespace BKI_QLTTQuocAnh
             v_f.Show();
         }
 
-        private void m_cmd_mon_hoc_ItemClick(object sender, ItemClickEventArgs e)
+
+        private void m_cmd_nghiep_vu_ItemClick(object sender, ItemClickEventArgs e)
         {
-           
+            try
+            {
+                f111_danh_muc_nghiep_vu v_f = new f111_danh_muc_nghiep_vu();
+                v_f.MdiParent = this;
+                v_f.Show();
+            }
+            catch (Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
     }
 }

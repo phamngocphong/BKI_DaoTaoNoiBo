@@ -33,13 +33,16 @@ namespace BKI_QLTTQuocAnh
 	public class f109_danh_muc_dai : System.Windows.Forms.Form
 	{
 		internal System.Windows.Forms.ImageList ImageList;
-		internal System.Windows.Forms.Panel m_pnl_out_place_dm;
-		private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
+        internal System.Windows.Forms.Panel m_pnl_out_place_dm;
 		internal SIS.Controls.Button.SiSButton m_cmd_delete;
 		internal SIS.Controls.Button.SiSButton m_cmd_update;
 		internal SIS.Controls.Button.SiSButton m_cmd_insert;
 		internal SIS.Controls.Button.SiSButton m_cmd_exit;
 		internal SIS.Controls.Button.SiSButton m_cmd_view;
+        private DevExpress.XtraGrid.GridControl m_grc;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
 		private System.ComponentModel.IContainer components;
 
 		public f109_danh_muc_dai()
@@ -86,9 +89,13 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_view = new SIS.Controls.Button.SiSButton();
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
-            this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
+            this.m_grc = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.m_pnl_out_place_dm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_grc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // ImageList
@@ -146,7 +153,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_insert.TabIndex = 12;
             this.m_cmd_insert.Text = "&Thêm";
-            this.m_cmd_insert.Click += new System.EventHandler(this.m_cmd_insert_Click);
+            //this.m_cmd_insert.Click += new System.EventHandler(this.m_cmd_insert_Click);
             // 
             // m_cmd_update
             // 
@@ -162,7 +169,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_update.TabIndex = 13;
             this.m_cmd_update.Text = "&Sửa";
-            this.m_cmd_update.Click += new System.EventHandler(this.m_cmd_update_Click);
+            //this.m_cmd_update.Click += new System.EventHandler(this.m_cmd_update_Click);
             // 
             // m_cmd_view
             // 
@@ -178,7 +185,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_view.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_view.TabIndex = 21;
             this.m_cmd_view.Text = "Xem";
-            this.m_cmd_view.Click += new System.EventHandler(this.m_cmd_view_Click);
+            //this.m_cmd_view.Click += new System.EventHandler(this.m_cmd_view_Click);
             // 
             // m_cmd_delete
             // 
@@ -194,7 +201,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_delete.TabIndex = 14;
             this.m_cmd_delete.Text = "&Xoá";
-            this.m_cmd_delete.Click += new System.EventHandler(this.m_cmd_delete_Click);
+            //this.m_cmd_delete.Click += new System.EventHandler(this.m_cmd_delete_Click);
             // 
             // m_cmd_exit
             // 
@@ -210,29 +217,55 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_exit.TabIndex = 11;
             this.m_cmd_exit.Text = "Thoát (Esc)";
-            this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_exit_Click);
+            //this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_exit_Click);
             // 
-            // m_fg
+            // m_grc
             // 
-            this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
-            this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_fg.Location = new System.Drawing.Point(0, 0);
-            this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(686, 373);
-            this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
-            this.m_fg.TabIndex = 20;
+            this.m_grc.Cursor = System.Windows.Forms.Cursors.Default;
+            this.m_grc.Location = new System.Drawing.Point(13, 13);
+            this.m_grc.MainView = this.gridView1;
+            this.m_grc.Name = "m_grc";
+            this.m_grc.Size = new System.Drawing.Size(669, 354);
+            this.m_grc.TabIndex = 20;
+            this.m_grc.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn2});
+            this.gridView1.GridControl = this.m_grc;
+            this.gridView1.Name = "gridView1";
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Mã đai";
+            this.gridColumn1.FieldName = "MA_DAI";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Tên đai";
+            this.gridColumn2.FieldName = "TEN_DAI";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 1;
             // 
             // f109_danh_muc_dai
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.ClientSize = new System.Drawing.Size(686, 409);
-            this.Controls.Add(this.m_fg);
+            this.Controls.Add(this.m_grc);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Name = "f109_danh_muc_dai";
             this.Text = "f109_danh_muc_dai";
             this.Load += new System.EventHandler(this.f109_danh_muc_dai_Load);
             this.m_pnl_out_place_dm.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_grc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
 		}
@@ -259,160 +292,174 @@ namespace BKI_QLTTQuocAnh
 		#endregion
 
 		#region Private Methods
-		private void format_controls(){
-			CControlFormat.setFormStyle(this, new CAppContext_201());
-			CControlFormat.setC1FlexFormat(m_fg);
-			CGridUtils.AddSave_Excel_Handlers(m_fg);
-            			CGridUtils.AddSearch_Handlers(m_fg);
-			set_define_events();
-			this.KeyPreview = true;		
-		}
-		private void set_initial_form_load(){						
-			m_obj_trans = get_trans_object(m_fg);
-			load_data_2_grid();		
-		}	
-		private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg){
-			Hashtable v_htb = new Hashtable();
-			v_htb.Add(DM_DAI.MA_DAI, e_col_Number.MA_DAI);
-			v_htb.Add(DM_DAI.TEN_DAI, e_col_Number.TEN_DAI);
+        //private void format_controls(){
+        //    CControlFormat.setFormStyle(this, new CAppContext_201());
+        //    CControlFormat.setC1FlexFormat(m_fg);
+        //    CGridUtils.AddSave_Excel_Handlers(m_fg);
+        //                CGridUtils.AddSearch_Handlers(m_fg);
+        //    set_define_events();
+        //    this.KeyPreview = true;		
+        //}
+        //private void set_initial_form_load(){						
+        //    m_obj_trans = get_trans_object(m_fg);
+        //    load_data_2_grid();		
+        //}	
+        //private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg){
+        //    Hashtable v_htb = new Hashtable();
+        //    v_htb.Add(DM_DAI.MA_DAI, e_col_Number.MA_DAI);
+        //    v_htb.Add(DM_DAI.TEN_DAI, e_col_Number.TEN_DAI);
 									
-			ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg,v_htb,m_ds.DM_DAI.NewRow());
-			return v_obj_trans;			
-		}
-		private void load_data_2_grid(){						
-			m_ds = new DS_DM_DAI();			
-			m_us.FillDataset(m_ds);
-			m_fg.Redraw = false;
-			CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
-			m_fg.Redraw = true;
-		}
-		private void grid2us_object(US_DM_DAI i_us
-			, int i_grid_row) {
-			DataRow v_dr;
-			v_dr = (DataRow) m_fg.Rows[i_grid_row].UserData;
-			m_obj_trans.GridRow2DataRow(i_grid_row,v_dr);
-			i_us.DataRow2Me(v_dr);
-		}
+        //    ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg,v_htb,m_ds.DM_DAI.NewRow());
+        //    return v_obj_trans;			
+        //}
+        //private void load_data_2_grid(){						
+        //    m_ds = new DS_DM_DAI();			
+        //    m_us.FillDataset(m_ds);
+        //    m_fg.Redraw = false;
+        //    CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
+        //    m_fg.Redraw = true;
+        //}
+        //private void grid2us_object(US_DM_DAI i_us
+        //    , int i_grid_row) {
+        //    DataRow v_dr;
+        //    v_dr = (DataRow) m_fg.Rows[i_grid_row].UserData;
+        //    m_obj_trans.GridRow2DataRow(i_grid_row,v_dr);
+        //    i_us.DataRow2Me(v_dr);
+        //}
 
 	
-		private void us_object2grid(US_DM_DAI i_us
-			, int i_grid_row) {
-			DataRow v_dr = (DataRow) m_fg.Rows[i_grid_row].UserData;
-			i_us.Me2DataRow(v_dr);
-			m_obj_trans.DataRow2GridRow(v_dr, i_grid_row);
-		}
+        //private void us_object2grid(US_DM_DAI i_us
+        //    , int i_grid_row) {
+        //    DataRow v_dr = (DataRow) m_fg.Rows[i_grid_row].UserData;
+        //    i_us.Me2DataRow(v_dr);
+        //    m_obj_trans.DataRow2GridRow(v_dr, i_grid_row);
+        //}
 
 
-		private void insert_dm_dai(){
-            f109_danh_muc_dai_de v_fDE = new f109_danh_muc_dai_de();
-            v_fDE.display_for_insert();
-			load_data_2_grid();
-		}
+        //private void insert_dm_dai(){
+        //    f109_danh_muc_dai_de v_fDE = new f109_danh_muc_dai_de();
+        //    v_fDE.display_for_insert();
+        //    load_data_2_grid();
+        //}
 
-		private void update_dm_dai(){			
-			if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
-			if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;			
-			grid2us_object(m_us, m_fg.Row);
-            f109_danh_muc_dai_de v_fDE = new f109_danh_muc_dai_de();
-            v_fDE.display_for_update(m_us);
-			load_data_2_grid();
-		}
+        //private void update_dm_dai(){			
+        //    if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+        //    if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;			
+        //    grid2us_object(m_us, m_fg.Row);
+        //    f109_danh_muc_dai_de v_fDE = new f109_danh_muc_dai_de();
+        //    v_fDE.display_for_update(m_us);
+        //    load_data_2_grid();
+        //}
 				
-		private void delete_dm_dai(){
-			if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
-			if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
-			if (BaseMessages.askUser_DataCouldBeDeleted(8) != BaseMessages.IsDataCouldBeDeleted.CouldBeDeleted)  return;
-			US_DM_DAI v_us = new US_DM_DAI();
-			grid2us_object(v_us, m_fg.Row);
-			try {			
-				v_us.BeginTransaction();    											
-				v_us.Delete();                      								
-				v_us.CommitTransaction();
-				m_fg.Rows.Remove(m_fg.Row);				
-			}
-			catch (Exception v_e) {
-				v_us.Rollback();
-				CDBExceptionHandler v_objErrHandler = new CDBExceptionHandler(v_e,
-					new CDBClientDBExceptionInterpret());
-				v_objErrHandler.showErrorMessage();
-			}
-		}
+        //private void delete_dm_dai(){
+        //    if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+        //    if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+        //    if (BaseMessages.askUser_DataCouldBeDeleted(8) != BaseMessages.IsDataCouldBeDeleted.CouldBeDeleted)  return;
+        //    US_DM_DAI v_us = new US_DM_DAI();
+        //    grid2us_object(v_us, m_fg.Row);
+        //    try {			
+        //        v_us.BeginTransaction();    											
+        //        v_us.Delete();                      								
+        //        v_us.CommitTransaction();
+        //        m_fg.Rows.Remove(m_fg.Row);				
+        //    }
+        //    catch (Exception v_e) {
+        //        v_us.Rollback();
+        //        CDBExceptionHandler v_objErrHandler = new CDBExceptionHandler(v_e,
+        //            new CDBClientDBExceptionInterpret());
+        //        v_objErrHandler.showErrorMessage();
+        //    }
+        //}
 
-		private void view_dm_dai(){			
-			if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
-			if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
-			grid2us_object(m_us, m_fg.Row);
-            f109_danh_muc_dai_de v_fDE = new f109_danh_muc_dai_de();
-            v_fDE.display_for_view(m_us);
-		}
-		private void set_define_events(){
-			m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
-			m_cmd_insert.Click += new EventHandler(m_cmd_insert_Click);
-			m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
-			m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
-			m_cmd_view.Click += new EventHandler(m_cmd_view_Click);
-		}
+        //private void view_dm_dai(){			
+        //    if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+        //    if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+        //    grid2us_object(m_us, m_fg.Row);
+        //    f109_danh_muc_dai_de v_fDE = new f109_danh_muc_dai_de();
+        //    v_fDE.display_for_view(m_us);
+        //}
+        //private void set_define_events(){
+        //    m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
+        //    m_cmd_insert.Click += new EventHandler(m_cmd_insert_Click);
+        //    m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
+        //    m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
+        //    m_cmd_view.Click += new EventHandler(m_cmd_view_Click);
+        //}
 		#endregion
+        private void f109_danh_muc_dai_Load(object sender, System.EventArgs e)
+        {
+            load_data_2_grid();
+        }
+
+        private void load_data_2_grid()
+        {
+            US_DUNG_CHUNG v_us = new US_DUNG_CHUNG();
+            DataSet v_ds = new DataSet();
+            v_ds.Tables.Add(new DataTable());
+            v_us.FillDatasetWithTableName(v_ds, "DM_DAI");
+            m_grc.DataSource = v_ds.Tables[0];
+
+        }
 
 //
-		//
-		//		EVENT HANLDERS
-		//
-		//
-		private void f109_danh_muc_dai_Load(object sender, System.EventArgs e) {
-			try{
-				set_initial_form_load();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
+        ////
+        ////		EVENT HANLDERS
+        ////
+        ////
+        //private void f109_danh_muc_dai_Load(object sender, System.EventArgs e) {
+        //    try{
+        //        set_initial_form_load();
+        //    }
+        //    catch (Exception v_e){
+        //        CSystemLog_301.ExceptionHandle(v_e);
+        //    }
 		
-		}
+        //}
 
-		private void m_cmd_exit_Click(object sender, EventArgs e) {
-			try{
-				this.Close();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
+        //private void m_cmd_exit_Click(object sender, EventArgs e) {
+        //    try{
+        //        this.Close();
+        //    }
+        //    catch (Exception v_e){
+        //        CSystemLog_301.ExceptionHandle(v_e);
+        //    }
+        //}
 
-		private void m_cmd_insert_Click(object sender, EventArgs e) {
-			try{
-				insert_dm_dai();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
+        //private void m_cmd_insert_Click(object sender, EventArgs e) {
+        //    try{
+        //        insert_dm_dai();
+        //    }
+        //    catch (Exception v_e){
+        //        CSystemLog_301.ExceptionHandle(v_e);
+        //    }
+        //}
 
-		private void m_cmd_update_Click(object sender, EventArgs e) {
-			try{
-				update_dm_dai();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
+        //private void m_cmd_update_Click(object sender, EventArgs e) {
+        //    try{
+        //        update_dm_dai();
+        //    }
+        //    catch (Exception v_e){
+        //        CSystemLog_301.ExceptionHandle(v_e);
+        //    }
+        //}
 
-		private void m_cmd_delete_Click(object sender, EventArgs e) {
-			try{
-				delete_dm_dai();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
+        //private void m_cmd_delete_Click(object sender, EventArgs e) {
+        //    try{
+        //        delete_dm_dai();
+        //    }
+        //    catch (Exception v_e){
+        //        CSystemLog_301.ExceptionHandle(v_e);
+        //    }
+        //}
 
-		private void m_cmd_view_Click(object sender, EventArgs e) {
-			try{
-				view_dm_dai();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
+        //private void m_cmd_view_Click(object sender, EventArgs e) {
+        //    try{
+        //        view_dm_dai();
+        //    }
+        //    catch (Exception v_e){
+        //        CSystemLog_301.ExceptionHandle(v_e);
+        //    }
+        //}
 
 	}
 }

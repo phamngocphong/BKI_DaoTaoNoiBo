@@ -24,6 +24,7 @@ using BKI_QLTTQuocAnh.DS.CDBNames;
 
 using C1.Win.C1FlexGrid;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.Utils.Menu;
 
 namespace BKI_QLTTQuocAnh
 {
@@ -421,19 +422,17 @@ namespace BKI_QLTTQuocAnh
                 e.Menu.Items.Clear();
                 // Add a submenu with a single menu item.
                 e.Menu.Items.Add(WinFormControls.CreateRowSubMenu(view, rowHandle));
+                DXMenuItem menuItemAssign = new DXMenuItem("&Assign học viên", new EventHandler(AssignHVClick));
+                e.Menu.Items.Add(menuItemAssign);
             }
         }
 
-		
-		
-       
-
-     
-		
-		}
-
-      
-
-	
+        private void AssignHVClick(object sender, EventArgs e)
+        {
+            F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC v_f = new F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC();
+            var v_data_row = m_grv.GetDataRow(m_grv.FocusedRowHandle);
+            v_f.display(CIPConvert.ToDecimal(v_data_row["ID"].ToString()), CIPConvert.ToDecimal(v_data_row["ID_MON_HOC"].ToString()));
+        }
+	}
 }
 

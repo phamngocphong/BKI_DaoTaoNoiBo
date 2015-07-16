@@ -299,6 +299,12 @@
     <Compile Include="NghiepVu\F207_Nhap_diem_DE.Designer.cs">
       <DependentUpon>F207_Nhap_diem_DE.cs</DependentUpon>
     </Compile>
+    <Compile Include="NghiepVu\F301_Assign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\F301_Assign.Designer.cs">
+      <DependentUpon>F301_Assign.cs</DependentUpon>
+    </Compile>
     <Compile Include="NghiepVu\F301_Tao_lop.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -419,6 +425,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\F207_Nhap_diem_DE.resx">
       <DependentUpon>F207_Nhap_diem_DE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\F301_Assign.resx">
+      <DependentUpon>F301_Assign.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\F301_Tao_lop.resx">
       <DependentUpon>F301_Tao_lop.cs</DependentUpon>

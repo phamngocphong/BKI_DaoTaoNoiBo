@@ -36,7 +36,7 @@
             this.m_cbo_mon_hoc = new System.Windows.Forms.ComboBox();
             this.m_cmd_tao_lop = new DevExpress.XtraEditors.SimpleButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.m_cmd_xuat_pdf = new DevExpress.XtraEditors.SimpleButton();
+            this.m_cmd_assign = new DevExpress.XtraEditors.SimpleButton();
             this.m_cmd_xuat_excel = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -126,7 +126,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.m_cmd_xuat_pdf);
+            this.panel2.Controls.Add(this.m_cmd_assign);
             this.panel2.Controls.Add(this.m_cmd_xuat_excel);
             this.panel2.Controls.Add(this.m_cmd_tao_lop);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -135,23 +135,23 @@
             this.panel2.Size = new System.Drawing.Size(697, 38);
             this.panel2.TabIndex = 17;
             // 
-            // m_cmd_xuat_pdf
+            // m_cmd_assign
             // 
-            this.m_cmd_xuat_pdf.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(3)))), ((int)(((byte)(53)))));
-            this.m_cmd_xuat_pdf.Appearance.Options.UseForeColor = true;
-            this.m_cmd_xuat_pdf.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.m_cmd_xuat_pdf.Image = global::BKI_QLTTQuocAnh.Properties.Resources._1425906136_315167;
-            this.m_cmd_xuat_pdf.ImageIndex = 2;
-            this.m_cmd_xuat_pdf.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.m_cmd_xuat_pdf.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
-            this.m_cmd_xuat_pdf.Location = new System.Drawing.Point(347, 2);
-            this.m_cmd_xuat_pdf.Margin = new System.Windows.Forms.Padding(4);
-            this.m_cmd_xuat_pdf.Name = "m_cmd_xuat_pdf";
-            this.m_cmd_xuat_pdf.Padding = new System.Windows.Forms.Padding(1);
-            this.m_cmd_xuat_pdf.Size = new System.Drawing.Size(108, 33);
-            this.m_cmd_xuat_pdf.TabIndex = 16;
-            this.m_cmd_xuat_pdf.Text = "Xuất PDF";
-            this.m_cmd_xuat_pdf.Click += new System.EventHandler(this.m_cmd_xuat_pdf_Click);
+            this.m_cmd_assign.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(3)))), ((int)(((byte)(53)))));
+            this.m_cmd_assign.Appearance.Options.UseForeColor = true;
+            this.m_cmd_assign.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.m_cmd_assign.Image = global::BKI_QLTTQuocAnh.Properties.Resources._1425906136_315167;
+            this.m_cmd_assign.ImageIndex = 2;
+            this.m_cmd_assign.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.m_cmd_assign.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
+            this.m_cmd_assign.Location = new System.Drawing.Point(215, 2);
+            this.m_cmd_assign.Margin = new System.Windows.Forms.Padding(4);
+            this.m_cmd_assign.Name = "m_cmd_assign";
+            this.m_cmd_assign.Padding = new System.Windows.Forms.Padding(1);
+            this.m_cmd_assign.Size = new System.Drawing.Size(240, 33);
+            this.m_cmd_assign.TabIndex = 16;
+            this.m_cmd_assign.Text = "Assign học viên vào lớp đã có";
+            this.m_cmd_assign.Click += new System.EventHandler(this.m_cmd_assign_Click);
             // 
             // m_cmd_xuat_excel
             // 
@@ -385,7 +385,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.SimpleButton m_cmd_xuat_excel;
-        private DevExpress.XtraEditors.SimpleButton m_cmd_xuat_pdf;
+        private DevExpress.XtraEditors.SimpleButton m_cmd_assign;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
     }
 }

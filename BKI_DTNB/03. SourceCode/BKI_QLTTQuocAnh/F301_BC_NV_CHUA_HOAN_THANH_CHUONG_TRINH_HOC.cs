@@ -18,6 +18,9 @@ namespace BKI_QLTTQuocAnh
 {
     public partial class F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC : Form
     {
+        decimal m_dc_id_lop_mon = -1;
+        decimal m_dc_id_mon_hoc = -1;
+
         public F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC()
         {
             InitializeComponent();
@@ -55,8 +58,9 @@ namespace BKI_QLTTQuocAnh
                 if (v_f.DialogResult == System.Windows.Forms.DialogResult.OK)
                 {
                     List<decimal> v_lst_id_lop  = taoLopHoc(v_so_luong_hoc_vien);
-                    assignHV(v_lst_id_lop);
+                    assignHV(v_lst_id_lop, v_so_luong_hoc_vien);
                     MessageBox.Show("Đã assign học viên vào các lớp học");
+                    load_data_2_grid();
                 }
             }
             catch (Exception v_e)
@@ -91,7 +95,7 @@ namespace BKI_QLTTQuocAnh
             return v_lst_id_lop;
         }
 
-        private void assignHV(List<decimal> ip_lst_id_lop)
+        private void assignHV(List<decimal> ip_lst_id_lop, decimal ip_so_luong_hv)
         {
             decimal v_id_lop = ip_lst_id_lop[0];
             for (int i = 0; i < m_grv.SelectedRowsCount; i++)
@@ -100,7 +104,7 @@ namespace BKI_QLTTQuocAnh
                     US_GD_DIEM v_us = new US_GD_DIEM();
                     var v_data_row = m_grv.GetDataRow(m_grv.GetSelectedRows()[i]);
 
-                    v_us.dcID_LOP_HOC = ip_lst_id_lop[(int)(i / m_so_luong_hoc_vien)];
+                    v_us.dcID_LOP_HOC = ip_lst_id_lop[(int)(i / ip_so_luong_hv)];
                     v_us.dcID_NHAN_VIEN = CIPConvert.ToDecimal(v_data_row[0].ToString());
                     v_us.strQUA_MON = "N";
                     v_us.strHOC_XONG_YN = "N";
@@ -125,8 +129,9 @@ namespace BKI_QLTTQuocAnh
                 v_us.FillDataset(v_ds, " where id_nhan_vien = " + ip_dc_id_nhan_vien.ToString() + " and id_lop_hoc = " + v_dr[GD_LOP_MON.ID]);
                 for (int j = 0; j < v_ds.Tables[0].Rows.Count; j++)
                 {
-                    DataRow v_dr_diem = v_ds.Tables[0].Rows[i];
-                    v_us = new US_GD_DIEM(CIPConvert.ToDecimal(v_dr[GD_DIEM.ID].ToString()));
+                    DataRow v_dr_diem = v_ds.Tables[0].Rows[j];
+                    decimal v_id_gd_diem = CIPConvert.ToDecimal(v_dr_diem[GD_DIEM.ID].ToString()); 
+                    v_us = new US_GD_DIEM(v_id_gd_diem);
                     v_us.strDA_XOA = "Y";
                     v_us.Update();
                 }
@@ -180,19 +185,6 @@ namespace BKI_QLTTQuocAnh
             }
         }
 
-        private void m_cmd_xuat_pdf_Click(object sender, EventArgs e)
-        {
-            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-            //saveFileDialog1.Filter = "xls files (*.xls)|*.xls|All files (*.*)|*.*";
-            saveFileDialog1.RestoreDirectory = true;
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                //m_grv.ExportToPdf(saveFileDialog1.FileName);
-                m_grv.ExportToHtml(saveFileDialog1.FileName);
-                MessageBox.Show("Lưu báo cáo thành công");
-            }
-        }
-
         private void m_grv_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
         {
             if (e.IsGetData)
@@ -210,6 +202,43 @@ namespace BKI_QLTTQuocAnh
                 e.Menu.Items.Clear();
                 // Add a submenu with a single menu item.
                 e.Menu.Items.Add(WinFormControls.CreateRowSubMenu(view, rowHandle));
+            }
+        }
+
+        public void display(decimal ip_dc_lop_mon, decimal ip_dc_mon_hoc)
+        {
+            m_dc_id_lop_mon = ip_dc_lop_mon;
+            m_dc_id_mon_hoc = ip_dc_mon_hoc;
+            this.Show();
+            this.m_cbo_mon_hoc.SelectedValue = ip_dc_mon_hoc;
+            load_data_2_grid();
+        }
+
+        private void m_cmd_assign_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                F301_Assign v_f = new F301_Assign();
+                if (m_dc_id_lop_mon == -1)
+                {
+                    m_dc_id_mon_hoc = CIPConvert.ToDecimal(m_cbo_mon_hoc.SelectedValue.ToString());
+                    v_f.Display(m_dc_id_mon_hoc, ref m_dc_id_lop_mon);
+                }
+                else
+                {
+                    v_f.Display(m_dc_id_lop_mon, m_dc_id_mon_hoc);
+                }
+                if (v_f.DialogResult == System.Windows.Forms.DialogResult.OK)
+                {
+                    List<decimal> v_lst_id_lop = new List<decimal>();
+                    v_lst_id_lop.Add(m_dc_id_lop_mon);
+                    assignHV(v_lst_id_lop, m_grv.SelectedRowsCount);
+                    load_data_2_grid();
+                }
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
             }
         }
     }

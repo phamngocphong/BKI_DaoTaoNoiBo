@@ -45,6 +45,7 @@ namespace BKI_QLTTQuocAnh
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
 		private System.ComponentModel.IContainer components;
 
 		public f108_danh_muc_ngach()
@@ -96,6 +97,7 @@ namespace BKI_QLTTQuocAnh
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_grc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -220,10 +222,11 @@ namespace BKI_QLTTQuocAnh
             // m_grc
             // 
             this.m_grc.Cursor = System.Windows.Forms.Cursors.Default;
-            this.m_grc.Location = new System.Drawing.Point(13, 13);
+            this.m_grc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.m_grc.Location = new System.Drawing.Point(0, 0);
             this.m_grc.MainView = this.gridView1;
             this.m_grc.Name = "m_grc";
-            this.m_grc.Size = new System.Drawing.Size(669, 354);
+            this.m_grc.Size = new System.Drawing.Size(686, 373);
             this.m_grc.TabIndex = 20;
             this.m_grc.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -233,9 +236,13 @@ namespace BKI_QLTTQuocAnh
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
             this.gridColumn2,
-            this.gridColumn3});
+            this.gridColumn3,
+            this.gridColumn4});
             this.gridView1.GridControl = this.m_grc;
+            this.gridView1.GroupCount = 1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn4, DevExpress.Data.ColumnSortOrder.Ascending)});
             this.gridView1.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.gridView1_PopupMenuShowing);
             this.gridView1.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.gridView1_CustomUnboundColumnData);
             // 
@@ -263,6 +270,14 @@ namespace BKI_QLTTQuocAnh
             this.gridColumn3.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 0;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "Mã ngạch cấp trên";
+            this.gridColumn4.FieldName = "MA_NGACH_CAP_TREN";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 3;
             // 
             // f108_danh_muc_ngach
             // 
@@ -414,7 +429,7 @@ namespace BKI_QLTTQuocAnh
             US_DUNG_CHUNG v_us = new US_DUNG_CHUNG();
             DataSet v_ds = new DataSet();
             v_ds.Tables.Add(new DataTable());
-            v_us.FillDatasetWithTableName(v_ds, "DM_NGACH");
+            v_us.FillDatasetWithTableName(v_ds, "V_DM_NGACH");
             m_grc.DataSource = v_ds.Tables[0];
         }
 

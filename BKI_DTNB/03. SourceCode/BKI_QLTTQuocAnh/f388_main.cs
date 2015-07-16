@@ -380,5 +380,12 @@ namespace BKI_QLTTQuocAnh
             v_f.MdiParent = this;
             v_f.Show();
         }
+
+        private void m_cmd_nghi_hoc_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            F207_Nhap_diem v_f = new F207_Nhap_diem();
+            v_f.MdiParent = this;
+            v_f.Show();
+        }
     }
 }

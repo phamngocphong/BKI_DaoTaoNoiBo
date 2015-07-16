@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f388_main));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.m_cmd_doi_mat_khau = new DevExpress.XtraBars.BarButtonItem();
@@ -39,7 +40,6 @@
             this.m_cmd_dm_hs = new DevExpress.XtraBars.BarButtonItem();
             this.m_cmd_nhap_hoc = new DevExpress.XtraBars.BarButtonItem();
             this.m_cmd_nghi_hoc = new DevExpress.XtraBars.BarButtonItem();
-            this.m_cmd_cap_nhat_hs = new DevExpress.XtraBars.BarButtonItem();
             this.m_cmd_diem_danh = new DevExpress.XtraBars.BarButtonItem();
             this.m_cmd_lap_phai_thu_le = new DevExpress.XtraBars.BarButtonItem();
             this.m_cmd_lap_phai_thu_tu_dong = new DevExpress.XtraBars.BarButtonItem();
@@ -92,7 +92,7 @@
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.MdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager();
+            this.MdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MdiManager)).BeginInit();
             this.SuspendLayout();
@@ -114,7 +114,6 @@
             this.m_cmd_dm_hs,
             this.m_cmd_nhap_hoc,
             this.m_cmd_nghi_hoc,
-            this.m_cmd_cap_nhat_hs,
             this.m_cmd_diem_danh,
             this.m_cmd_lap_phai_thu_le,
             this.m_cmd_lap_phai_thu_tu_dong,
@@ -230,7 +229,7 @@
             // 
             // m_cmd_nhap_hoc
             // 
-            this.m_cmd_nhap_hoc.Caption = "Nhập học";
+            this.m_cmd_nhap_hoc.Caption = "Assign học viên";
             this.m_cmd_nhap_hoc.Glyph = global::BKI_QLTTQuocAnh.Properties.Resources.Icons8_Windows_8_Users_Enter_2;
             this.m_cmd_nhap_hoc.Id = 8;
             this.m_cmd_nhap_hoc.Name = "m_cmd_nhap_hoc";
@@ -240,21 +239,13 @@
             // 
             // m_cmd_nghi_hoc
             // 
-            this.m_cmd_nghi_hoc.Caption = "Nghỉ học";
+            this.m_cmd_nghi_hoc.Caption = "Cập nhật điểm cho học viên";
             this.m_cmd_nghi_hoc.Glyph = global::BKI_QLTTQuocAnh.Properties.Resources._1425904361_23923;
             this.m_cmd_nghi_hoc.Id = 9;
             this.m_cmd_nghi_hoc.Name = "m_cmd_nghi_hoc";
             this.m_cmd_nghi_hoc.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            // 
-            // m_cmd_cap_nhat_hs
-            // 
-            this.m_cmd_cap_nhat_hs.Caption = "Cập nhật thông tin HS";
-            this.m_cmd_cap_nhat_hs.Glyph = global::BKI_QLTTQuocAnh.Properties.Resources._1425904406_289616;
-            this.m_cmd_cap_nhat_hs.Id = 10;
-            this.m_cmd_cap_nhat_hs.Name = "m_cmd_cap_nhat_hs";
-            this.m_cmd_cap_nhat_hs.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
-            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.m_cmd_nghi_hoc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_nghi_hoc_ItemClick);
             // 
             // m_cmd_diem_danh
             // 
@@ -620,7 +611,6 @@
             // 
             this.ribbonPageGroup4.ItemLinks.Add(this.m_cmd_nhap_hoc);
             this.ribbonPageGroup4.ItemLinks.Add(this.m_cmd_nghi_hoc);
-            this.ribbonPageGroup4.ItemLinks.Add(this.m_cmd_cap_nhat_hs);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "Học sinh ra vào";
             // 
@@ -740,7 +730,6 @@
         private DevExpress.XtraBars.BarButtonItem m_cmd_dm_hs;
         private DevExpress.XtraBars.BarButtonItem m_cmd_nhap_hoc;
         private DevExpress.XtraBars.BarButtonItem m_cmd_nghi_hoc;
-        private DevExpress.XtraBars.BarButtonItem m_cmd_cap_nhat_hs;
         private DevExpress.XtraBars.BarButtonItem m_cmd_diem_danh;
         private DevExpress.XtraBars.BarButtonItem m_cmd_lap_phai_thu_le;
         private DevExpress.XtraBars.BarButtonItem m_cmd_lap_phai_thu_tu_dong;

@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC));
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.m_cbo_ngach = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.m_cbo_phong = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.m_cbo_hoc_phan = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.m_cbo_mon_hoc = new System.Windows.Forms.ComboBox();
             this.m_cmd_tao_lop = new DevExpress.XtraEditors.SimpleButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.m_cbo_nghiep_vu = new System.Windows.Forms.ComboBox();
+            this.m_cbo_dia_phuong = new System.Windows.Forms.ComboBox();
             this.m_cmd_search = new DevExpress.XtraEditors.SimpleButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.m_grc = new DevExpress.XtraGrid.GridControl();
@@ -50,6 +51,8 @@
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.m_cmd_xuat_excel = new DevExpress.XtraEditors.SimpleButton();
+            this.m_cmd_xuat_pdf = new DevExpress.XtraEditors.SimpleButton();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -70,7 +73,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(116, 63);
+            this.label3.Location = new System.Drawing.Point(342, 61);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 13);
             this.label3.TabIndex = 5;
@@ -79,52 +82,16 @@
             // m_cbo_ngach
             // 
             this.m_cbo_ngach.FormattingEnabled = true;
-            this.m_cbo_ngach.Location = new System.Drawing.Point(174, 60);
+            this.m_cbo_ngach.Location = new System.Drawing.Point(400, 58);
             this.m_cbo_ngach.Name = "m_cbo_ngach";
             this.m_cbo_ngach.Size = new System.Drawing.Size(141, 21);
             this.m_cbo_ngach.TabIndex = 6;
             this.m_cbo_ngach.SelectedIndexChanged += new System.EventHandler(this.m_cbo_ngach_SelectedIndexChanged);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(347, 63);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Phòng/Ban";
-            // 
-            // m_cbo_phong
-            // 
-            this.m_cbo_phong.FormattingEnabled = true;
-            this.m_cbo_phong.Location = new System.Drawing.Point(417, 63);
-            this.m_cbo_phong.Name = "m_cbo_phong";
-            this.m_cbo_phong.Size = new System.Drawing.Size(142, 21);
-            this.m_cbo_phong.TabIndex = 8;
-            this.m_cbo_phong.SelectedIndexChanged += new System.EventHandler(this.m_cbo_phong_SelectedIndexChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(114, 98);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 13);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Học phần";
-            // 
-            // m_cbo_hoc_phan
-            // 
-            this.m_cbo_hoc_phan.FormattingEnabled = true;
-            this.m_cbo_hoc_phan.Location = new System.Drawing.Point(174, 95);
-            this.m_cbo_hoc_phan.Name = "m_cbo_hoc_phan";
-            this.m_cbo_hoc_phan.Size = new System.Drawing.Size(141, 21);
-            this.m_cbo_hoc_phan.TabIndex = 10;
-            this.m_cbo_hoc_phan.SelectedIndexChanged += new System.EventHandler(this.m_cbo_hoc_phan_SelectedIndexChanged);
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(347, 98);
+            this.label6.Location = new System.Drawing.Point(330, 98);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(49, 13);
             this.label6.TabIndex = 11;
@@ -133,7 +100,7 @@
             // m_cbo_mon_hoc
             // 
             this.m_cbo_mon_hoc.FormattingEnabled = true;
-            this.m_cbo_mon_hoc.Location = new System.Drawing.Point(417, 95);
+            this.m_cbo_mon_hoc.Location = new System.Drawing.Point(400, 95);
             this.m_cbo_mon_hoc.Name = "m_cbo_mon_hoc";
             this.m_cbo_mon_hoc.Size = new System.Drawing.Size(142, 21);
             this.m_cbo_mon_hoc.TabIndex = 12;
@@ -158,6 +125,8 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.m_cmd_xuat_pdf);
+            this.panel2.Controls.Add(this.m_cmd_xuat_excel);
             this.panel2.Controls.Add(this.m_cmd_tao_lop);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(2, 404);
@@ -167,38 +136,74 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.m_cbo_nghiep_vu);
+            this.panel1.Controls.Add(this.m_cbo_dia_phuong);
             this.panel1.Controls.Add(this.m_cmd_search);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.m_cbo_ngach);
             this.panel1.Controls.Add(this.m_cbo_mon_hoc);
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.m_cbo_phong);
-            this.panel1.Controls.Add(this.m_cbo_hoc_phan);
-            this.panel1.Controls.Add(this.label5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(2, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(697, 132);
             this.panel1.TabIndex = 18;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(91, 98);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(56, 13);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Nghiệp vụ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(85, 61);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 13);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Địa phương";
+            // 
+            // m_cbo_nghiep_vu
+            // 
+            this.m_cbo_nghiep_vu.FormattingEnabled = true;
+            this.m_cbo_nghiep_vu.Location = new System.Drawing.Point(169, 95);
+            this.m_cbo_nghiep_vu.Name = "m_cbo_nghiep_vu";
+            this.m_cbo_nghiep_vu.Size = new System.Drawing.Size(121, 21);
+            this.m_cbo_nghiep_vu.TabIndex = 17;
+            this.m_cbo_nghiep_vu.SelectedIndexChanged += new System.EventHandler(this.m_cbo_nghiep_vu_SelectedIndexChanged);
+            // 
+            // m_cbo_dia_phuong
+            // 
+            this.m_cbo_dia_phuong.FormattingEnabled = true;
+            this.m_cbo_dia_phuong.Location = new System.Drawing.Point(169, 58);
+            this.m_cbo_dia_phuong.Name = "m_cbo_dia_phuong";
+            this.m_cbo_dia_phuong.Size = new System.Drawing.Size(121, 21);
+            this.m_cbo_dia_phuong.TabIndex = 16;
+            this.m_cbo_dia_phuong.SelectedIndexChanged += new System.EventHandler(this.m_cbo_dia_phuong_SelectedIndexChanged);
+            // 
             // m_cmd_search
             // 
             this.m_cmd_search.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(3)))), ((int)(((byte)(53)))));
             this.m_cmd_search.Appearance.Options.UseForeColor = true;
             this.m_cmd_search.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.m_cmd_search.Image = global::BKI_QLTTQuocAnh.Properties.Resources._1425906136_315167;
+            this.m_cmd_search.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_search.Image")));
             this.m_cmd_search.ImageIndex = 2;
             this.m_cmd_search.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.m_cmd_search.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
-            this.m_cmd_search.Location = new System.Drawing.Point(585, 92);
+            this.m_cmd_search.Location = new System.Drawing.Point(579, 83);
             this.m_cmd_search.Margin = new System.Windows.Forms.Padding(4);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Padding = new System.Windows.Forms.Padding(1);
             this.m_cmd_search.Size = new System.Drawing.Size(108, 33);
             this.m_cmd_search.TabIndex = 15;
-            this.m_cmd_search.Text = "Search";
+            this.m_cmd_search.Text = "Tìm kiếm";
             this.m_cmd_search.Click += new System.EventHandler(this.m_cmd_search_Click);
             // 
             // panel3
@@ -283,6 +288,42 @@
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 5;
             // 
+            // m_cmd_xuat_excel
+            // 
+            this.m_cmd_xuat_excel.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(3)))), ((int)(((byte)(53)))));
+            this.m_cmd_xuat_excel.Appearance.Options.UseForeColor = true;
+            this.m_cmd_xuat_excel.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.m_cmd_xuat_excel.Image = global::BKI_QLTTQuocAnh.Properties.Resources._1425906136_315167;
+            this.m_cmd_xuat_excel.ImageIndex = 2;
+            this.m_cmd_xuat_excel.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.m_cmd_xuat_excel.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
+            this.m_cmd_xuat_excel.Location = new System.Drawing.Point(463, 2);
+            this.m_cmd_xuat_excel.Margin = new System.Windows.Forms.Padding(4);
+            this.m_cmd_xuat_excel.Name = "m_cmd_xuat_excel";
+            this.m_cmd_xuat_excel.Padding = new System.Windows.Forms.Padding(1);
+            this.m_cmd_xuat_excel.Size = new System.Drawing.Size(108, 33);
+            this.m_cmd_xuat_excel.TabIndex = 15;
+            this.m_cmd_xuat_excel.Text = "Xuất excel";
+            this.m_cmd_xuat_excel.Click += new System.EventHandler(this.m_cmd_xuat_excel_Click);
+            // 
+            // m_cmd_xuat_pdf
+            // 
+            this.m_cmd_xuat_pdf.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(3)))), ((int)(((byte)(53)))));
+            this.m_cmd_xuat_pdf.Appearance.Options.UseForeColor = true;
+            this.m_cmd_xuat_pdf.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.m_cmd_xuat_pdf.Image = global::BKI_QLTTQuocAnh.Properties.Resources._1425906136_315167;
+            this.m_cmd_xuat_pdf.ImageIndex = 2;
+            this.m_cmd_xuat_pdf.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.m_cmd_xuat_pdf.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
+            this.m_cmd_xuat_pdf.Location = new System.Drawing.Point(347, 2);
+            this.m_cmd_xuat_pdf.Margin = new System.Windows.Forms.Padding(4);
+            this.m_cmd_xuat_pdf.Name = "m_cmd_xuat_pdf";
+            this.m_cmd_xuat_pdf.Padding = new System.Windows.Forms.Padding(1);
+            this.m_cmd_xuat_pdf.Size = new System.Drawing.Size(108, 33);
+            this.m_cmd_xuat_pdf.TabIndex = 16;
+            this.m_cmd_xuat_pdf.Text = "Xuất PDF";
+            this.m_cmd_xuat_pdf.Click += new System.EventHandler(this.m_cmd_xuat_pdf_Click);
+            // 
             // F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -311,10 +352,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox m_cbo_ngach;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox m_cbo_phong;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox m_cbo_hoc_phan;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox m_cbo_mon_hoc;
         private DevExpress.XtraEditors.SimpleButton m_cmd_tao_lop;
@@ -330,5 +367,11 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraEditors.SimpleButton m_cmd_search;
+        private System.Windows.Forms.ComboBox m_cbo_dia_phuong;
+        private System.Windows.Forms.ComboBox m_cbo_nghiep_vu;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.SimpleButton m_cmd_xuat_excel;
+        private DevExpress.XtraEditors.SimpleButton m_cmd_xuat_pdf;
     }
 }

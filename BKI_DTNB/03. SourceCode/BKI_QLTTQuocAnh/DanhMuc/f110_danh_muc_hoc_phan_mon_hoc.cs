@@ -52,7 +52,7 @@ namespace BKI_QLTTQuocAnh
 			//
 			// TODO: Add any constructor code after InitializeComponent call
 			//
-			format_controls();
+			//format_controls();
 		}
 
 		/// <summary>

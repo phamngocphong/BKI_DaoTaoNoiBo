@@ -21,7 +21,7 @@ using IP.Core.IPSystemAdmin;
 using BKI_QLTTQuocAnh.US;
 using BKI_QLTTQuocAnh.DS;
 using BKI_QLTTQuocAnh.DS.CDBNames;
-
+using BKI_QLTTQuocAnh.NghiepVu;
 using C1.Win.C1FlexGrid;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.Utils.Menu;
@@ -424,7 +424,24 @@ namespace BKI_QLTTQuocAnh
                 e.Menu.Items.Add(WinFormControls.CreateRowSubMenu(view, rowHandle));
                 DXMenuItem menuItemAssign = new DXMenuItem("&Assign học viên", new EventHandler(AssignHVClick));
                 e.Menu.Items.Add(menuItemAssign);
+                DXMenuItem menuItemHienThi = new DXMenuItem("&Xem các học viên của lớp này", new EventHandler(XemHVClick));
+                e.Menu.Items.Add(menuItemHienThi);
             }
+        }
+
+        private void XemHVClick(object sender, EventArgs e)
+        {
+            try
+            {
+                F206_Nhan_vien_lop_hoc v_f = new F206_Nhan_vien_lop_hoc();
+                var v_data_row = m_grv.GetDataRow(m_grv.FocusedRowHandle);
+                v_f.display(CIPConvert.ToDecimal(v_data_row["ID"].ToString()));
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+            
         }
 
         private void AssignHVClick(object sender, EventArgs e)
@@ -435,4 +452,3 @@ namespace BKI_QLTTQuocAnh
         }
 	}
 }
-

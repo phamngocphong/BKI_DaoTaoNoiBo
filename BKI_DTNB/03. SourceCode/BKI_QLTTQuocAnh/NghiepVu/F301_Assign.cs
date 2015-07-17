@@ -50,7 +50,10 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             m_b_trang_thai = false;
             m_dc_id_mon_hoc = ip_dc_id_mon_hoc;
             this.ShowDialog();
-            ip_dc_id_lop_mon = CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue.ToString());
+            if (DialogResult == System.Windows.Forms.DialogResult.OK)
+            {
+                ip_dc_id_lop_mon = CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue.ToString());    
+            }
         }
 
         private void m_cmd_update_Click(object sender, EventArgs e)

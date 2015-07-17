@@ -31,5 +31,12 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             v_us.FillDatasetWithTableName(v_ds, "V_GD_HOC_VIEN_LOP_HOC");
             m_grc.DataSource = v_ds.Tables[0];
         }
+
+        public void display(decimal ip_dc_ma_lop_mon)
+        {
+            this.Show();
+            load_data_2_grid();
+            m_grv.ActiveFilterString = "[ID] = "+ ip_dc_ma_lop_mon.ToString();
+        }
     }
 }

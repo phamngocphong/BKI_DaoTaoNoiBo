@@ -211,6 +211,7 @@ namespace BKI_QLTTQuocAnh
             m_dc_id_mon_hoc = ip_dc_mon_hoc;
             this.Show();
             this.m_cbo_mon_hoc.SelectedValue = ip_dc_mon_hoc;
+            m_cbo_mon_hoc.Enabled = false;
             load_data_2_grid();
         }
 

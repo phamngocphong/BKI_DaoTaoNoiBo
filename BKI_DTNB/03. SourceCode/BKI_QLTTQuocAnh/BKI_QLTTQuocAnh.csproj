@@ -213,6 +213,12 @@
     <Compile Include="DanhMuc\f112_danh_muc_ngach_nghiep_vu.Designer.cs">
       <DependentUpon>f112_danh_muc_ngach_nghiep_vu.cs</DependentUpon>
     </Compile>
+    <Compile Include="DanhMuc\f115_tong_quan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\f115_tong_quan.Designer.cs">
+      <DependentUpon>f115_tong_quan.cs</DependentUpon>
+    </Compile>
     <Compile Include="f101_danh_muc_hoc_phan_mon_hoc.cs" />
     <Compile Include="F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC.cs">
       <SubType>Form</SubType>
@@ -374,6 +380,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f112_danh_muc_ngach_nghiep_vu.resx">
       <DependentUpon>f112_danh_muc_ngach_nghiep_vu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\f115_tong_quan.resx">
+      <DependentUpon>f115_tong_quan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC.resx">
       <DependentUpon>F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC.cs</DependentUpon>

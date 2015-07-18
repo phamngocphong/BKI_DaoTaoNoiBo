@@ -33,17 +33,20 @@
             this.m_dat = new System.Windows.Forms.DateTimePicker();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.m_cmd_hien_thi = new DevExpress.XtraEditors.SimpleButton();
+            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
+            this.panelControl2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pivotGridControl1
             // 
             this.pivotGridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pivotGridControl1.Location = new System.Drawing.Point(0, 50);
+            this.pivotGridControl1.Location = new System.Drawing.Point(2, 2);
             this.pivotGridControl1.Name = "pivotGridControl1";
-            this.pivotGridControl1.Size = new System.Drawing.Size(483, 212);
+            this.pivotGridControl1.Size = new System.Drawing.Size(479, 208);
             this.pivotGridControl1.TabIndex = 5;
             this.pivotGridControl1.FieldValueDisplayText += new DevExpress.XtraPivotGrid.PivotFieldDisplayTextEventHandler(this.pivotGridControl1_FieldValueDisplayText);
             this.pivotGridControl1.CellDoubleClick += new DevExpress.XtraPivotGrid.PivotCellEventHandler(this.pivotGridControl1_CellDoubleClick);
@@ -75,12 +78,21 @@
             this.m_cmd_hien_thi.Text = "Hiển thị";
             this.m_cmd_hien_thi.Click += new System.EventHandler(this.m_cmd_hien_thi_Click);
             // 
+            // panelControl2
+            // 
+            this.panelControl2.Controls.Add(this.pivotGridControl1);
+            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl2.Location = new System.Drawing.Point(0, 50);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(483, 212);
+            this.panelControl2.TabIndex = 6;
+            // 
             // f305_BAO_CAO_CHUNG_CHI_HET_HAN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(483, 262);
-            this.Controls.Add(this.pivotGridControl1);
+            this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Name = "f305_BAO_CAO_CHUNG_CHI_HET_HAN";
             this.Text = "f305_BAO_CAO_CHUNG_CHI_HET_HAN";
@@ -88,6 +100,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
+            this.panelControl2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -98,5 +112,6 @@
         private System.Windows.Forms.DateTimePicker m_dat;
         private DevExpress.XtraEditors.SimpleButton m_cmd_hien_thi;
         private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraEditors.PanelControl panelControl2;
     }
 }

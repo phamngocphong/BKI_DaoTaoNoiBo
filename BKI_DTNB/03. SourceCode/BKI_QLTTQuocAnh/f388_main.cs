@@ -402,5 +402,20 @@ namespace BKI_QLTTQuocAnh
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
+
+        private void m_cmd_tong_quan_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                f115_tong_quan v_f = new f115_tong_quan();
+                v_f.MdiParent = this;
+                v_f.Show();
+            }
+            catch (Exception ex)
+            {
+
+                CSystemLog_301.ExceptionHandle(ex);
+            }
+        }
     }
 }

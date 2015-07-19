@@ -54,6 +54,8 @@
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.c_trung_tam = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.c_trang_thai = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -273,12 +275,18 @@
             this.gridColumn3,
             this.gridColumn4,
             this.gridColumn5,
-            this.gridColumn6});
+            this.gridColumn6,
+            this.c_trung_tam,
+            this.c_trang_thai});
             this.m_grv.GridControl = this.m_grc;
+            this.m_grv.GroupCount = 2;
             this.m_grv.Name = "m_grv";
             this.m_grv.OptionsSelection.MultiSelect = true;
             this.m_grv.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
             this.m_grv.OptionsSelection.ResetSelectionClickOutsideCheckboxSelector = true;
+            this.m_grv.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.c_trung_tam, DevExpress.Data.ColumnSortOrder.Ascending),
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn4, DevExpress.Data.ColumnSortOrder.Ascending)});
             this.m_grv.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.m_grv_PopupMenuShowing);
             this.m_grv.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.m_grv_CustomUnboundColumnData);
             // 
@@ -294,28 +302,28 @@
             this.gridColumn1.FieldName = "MA_NV";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 2;
+            this.gridColumn1.VisibleIndex = 1;
             // 
             // gridColumn2
             // 
-            this.gridColumn2.Caption = "Họ đệm";
-            this.gridColumn2.FieldName = "HO_DEM";
+            this.gridColumn2.Caption = "Họ tên";
+            this.gridColumn2.FieldName = "HO_TEN";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 3;
+            this.gridColumn2.VisibleIndex = 2;
             // 
             // gridColumn3
             // 
-            this.gridColumn3.Caption = "Tên";
-            this.gridColumn3.FieldName = "TEN";
+            this.gridColumn3.Caption = "Email";
+            this.gridColumn3.FieldName = "EMAIL";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 4;
+            this.gridColumn3.VisibleIndex = 3;
             // 
             // gridColumn4
             // 
-            this.gridColumn4.Caption = "Email";
-            this.gridColumn4.FieldName = "EMAIL_CA_NHAN";
+            this.gridColumn4.Caption = "Chức vụ";
+            this.gridColumn4.FieldName = "TEN";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 5;
@@ -326,7 +334,7 @@
             this.gridColumn5.FieldName = "DI_DONG";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 6;
+            this.gridColumn5.VisibleIndex = 4;
             // 
             // gridColumn6
             // 
@@ -334,8 +342,22 @@
             this.gridColumn6.FieldName = "gridColumn6";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 1;
+            // 
+            // c_trung_tam
+            // 
+            this.c_trung_tam.Caption = "Trung tâm";
+            this.c_trung_tam.FieldName = "MA_TRUNG_TAM";
+            this.c_trung_tam.Name = "c_trung_tam";
+            this.c_trung_tam.Visible = true;
+            this.c_trung_tam.VisibleIndex = 7;
+            // 
+            // c_trang_thai
+            // 
+            this.c_trang_thai.Caption = "Trang thai";
+            this.c_trang_thai.FieldName = "TRANG_THAI";
+            this.c_trang_thai.Name = "c_trang_thai";
+            this.c_trang_thai.Visible = true;
+            this.c_trang_thai.VisibleIndex = 5;
             // 
             // F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC
             // 
@@ -387,5 +409,7 @@
         private DevExpress.XtraEditors.SimpleButton m_cmd_xuat_excel;
         private DevExpress.XtraEditors.SimpleButton m_cmd_assign;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+        private DevExpress.XtraGrid.Columns.GridColumn c_trung_tam;
+        private DevExpress.XtraGrid.Columns.GridColumn c_trang_thai;
     }
 }

@@ -139,7 +139,9 @@ namespace BKI_QLTTQuocAnh
             }
         }
 
-        internal static void load_data_to_combobox_with_query(ComboBox ip_cbo, string ip_str_value_field, string ip_str_display_field, eTAT_CA ip_e_tat_ca, string ip_query)
+        
+
+        public static void load_data_to_combobox_with_query(ComboBox ip_cbo, string ip_str_value_field, string ip_str_display_field, eTAT_CA ip_e_tat_ca, string ip_query)
         {
             US_DUNG_CHUNG v_us = new US_DUNG_CHUNG();
             DataSet v_ds = new DataSet();
@@ -244,7 +246,7 @@ namespace BKI_QLTTQuocAnh
         public void FillDatasetGDChiTietChucVu(DataSet op_ds, DateTime ip_dat)
         {
             CStoredProc v_cstore = new CStoredProc("rpt_tinh_hinh_dao_tao");
-            v_cstore.addDatetimeInputParam("@ngay",ip_dat );
+            v_cstore.addDatetimeInputParam("@ip_dat_ngay_bao_cao",ip_dat );
             v_cstore.fillDataSetByCommand(this, op_ds);
         }
 

@@ -224,9 +224,9 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                //frm_GD_LOP_MON v_f = new frm_GD_LOP_MON();
-                //v_f.MdiParent = this;
-                //v_f.Show();
+                f208_gd_lop_mon v_f = new f208_gd_lop_mon();
+                v_f.MdiParent = this;
+                v_f.Show();
 
             }
             catch (Exception ex)

@@ -233,6 +233,18 @@
     <Compile Include="NghiepVu\F207_Nhap_diem_DE.Designer.cs">
       <DependentUpon>F207_Nhap_diem_DE.cs</DependentUpon>
     </Compile>
+    <Compile Include="NghiepVu\f208_gd_lop_mon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\f208_gd_lop_mon.Designer.cs">
+      <DependentUpon>f208_gd_lop_mon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NghiepVu\F208_gd_lop_mon_de.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\F208_gd_lop_mon_de.Designer.cs">
+      <DependentUpon>F208_gd_lop_mon_de.cs</DependentUpon>
+    </Compile>
     <Compile Include="NghiepVu\F301_Assign.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -314,6 +326,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\F207_Nhap_diem_DE.resx">
       <DependentUpon>F207_Nhap_diem_DE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\f208_gd_lop_mon.resx">
+      <DependentUpon>f208_gd_lop_mon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\F208_gd_lop_mon_de.resx">
+      <DependentUpon>F208_gd_lop_mon_de.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\F301_Assign.resx">
       <DependentUpon>F301_Assign.cs</DependentUpon>

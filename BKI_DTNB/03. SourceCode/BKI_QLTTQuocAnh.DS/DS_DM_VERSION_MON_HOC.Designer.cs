@@ -285,10 +285,6 @@ namespace BKI_QLTTQuocAnh.DS {
             
             private global::System.Data.DataColumn columnMA_VERSION;
             
-            private global::System.Data.DataColumn columnLOAI_THOI_GIAN_HET_HAN;
-            
-            private global::System.Data.DataColumn columnAP_DUNG_TU;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public DM_VERSION_MON_HOCDataTable() {
@@ -348,22 +344,6 @@ namespace BKI_QLTTQuocAnh.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn LOAI_THOI_GIAN_HET_HANColumn {
-                get {
-                    return this.columnLOAI_THOI_GIAN_HET_HAN;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn AP_DUNG_TUColumn {
-                get {
-                    return this.columnAP_DUNG_TU;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -399,14 +379,12 @@ namespace BKI_QLTTQuocAnh.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DM_VERSION_MON_HOCRow AddDM_VERSION_MON_HOCRow(decimal ID_MON_HOC, string MA_VERSION, string LOAI_THOI_GIAN_HET_HAN, System.DateTime AP_DUNG_TU) {
+            public DM_VERSION_MON_HOCRow AddDM_VERSION_MON_HOCRow(decimal ID_MON_HOC, string MA_VERSION) {
                 DM_VERSION_MON_HOCRow rowDM_VERSION_MON_HOCRow = ((DM_VERSION_MON_HOCRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         ID_MON_HOC,
-                        MA_VERSION,
-                        LOAI_THOI_GIAN_HET_HAN,
-                        AP_DUNG_TU};
+                        MA_VERSION};
                 rowDM_VERSION_MON_HOCRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDM_VERSION_MON_HOCRow);
                 return rowDM_VERSION_MON_HOCRow;
@@ -439,8 +417,6 @@ namespace BKI_QLTTQuocAnh.DS {
                 this.columnID = base.Columns["ID"];
                 this.columnID_MON_HOC = base.Columns["ID_MON_HOC"];
                 this.columnMA_VERSION = base.Columns["MA_VERSION"];
-                this.columnLOAI_THOI_GIAN_HET_HAN = base.Columns["LOAI_THOI_GIAN_HET_HAN"];
-                this.columnAP_DUNG_TU = base.Columns["AP_DUNG_TU"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -452,10 +428,6 @@ namespace BKI_QLTTQuocAnh.DS {
                 base.Columns.Add(this.columnID_MON_HOC);
                 this.columnMA_VERSION = new global::System.Data.DataColumn("MA_VERSION", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMA_VERSION);
-                this.columnLOAI_THOI_GIAN_HET_HAN = new global::System.Data.DataColumn("LOAI_THOI_GIAN_HET_HAN", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLOAI_THOI_GIAN_HET_HAN);
-                this.columnAP_DUNG_TU = new global::System.Data.DataColumn("AP_DUNG_TU", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAP_DUNG_TU);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AutoIncrement = true;
@@ -467,8 +439,6 @@ namespace BKI_QLTTQuocAnh.DS {
                 this.columnID_MON_HOC.AllowDBNull = false;
                 this.columnMA_VERSION.AllowDBNull = false;
                 this.columnMA_VERSION.MaxLength = 35;
-                this.columnLOAI_THOI_GIAN_HET_HAN.MaxLength = 15;
-                this.columnAP_DUNG_TU.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -641,46 +611,6 @@ namespace BKI_QLTTQuocAnh.DS {
                     this[this.tableDM_VERSION_MON_HOC.MA_VERSIONColumn] = value;
                 }
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string LOAI_THOI_GIAN_HET_HAN {
-                get {
-                    try {
-                        return ((string)(this[this.tableDM_VERSION_MON_HOC.LOAI_THOI_GIAN_HET_HANColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'LOAI_THOI_GIAN_HET_HAN\' in table \'DM_VERSION_MON_HOC\' is DB" +
-                                "Null.", e);
-                    }
-                }
-                set {
-                    this[this.tableDM_VERSION_MON_HOC.LOAI_THOI_GIAN_HET_HANColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime AP_DUNG_TU {
-                get {
-                    return ((global::System.DateTime)(this[this.tableDM_VERSION_MON_HOC.AP_DUNG_TUColumn]));
-                }
-                set {
-                    this[this.tableDM_VERSION_MON_HOC.AP_DUNG_TUColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsLOAI_THOI_GIAN_HET_HANNull() {
-                return this.IsNull(this.tableDM_VERSION_MON_HOC.LOAI_THOI_GIAN_HET_HANColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetLOAI_THOI_GIAN_HET_HANNull() {
-                this[this.tableDM_VERSION_MON_HOC.LOAI_THOI_GIAN_HET_HANColumn] = global::System.Convert.DBNull;
-            }
         }
         
         /// <summary>
@@ -845,43 +775,33 @@ namespace BKI_QLTTQuocAnh.DS.DS_DM_VERSION_MON_HOCTableAdapters {
             tableMapping.ColumnMappings.Add("ID", "ID");
             tableMapping.ColumnMappings.Add("ID_MON_HOC", "ID_MON_HOC");
             tableMapping.ColumnMappings.Add("MA_VERSION", "MA_VERSION");
-            tableMapping.ColumnMappings.Add("LOAI_THOI_GIAN_HET_HAN", "LOAI_THOI_GIAN_HET_HAN");
-            tableMapping.ColumnMappings.Add("AP_DUNG_TU", "AP_DUNG_TU");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[DM_VERSION_MON_HOC] WHERE (([ID] = @Original_ID) AND ([ID_MON_HOC] = @Original_ID_MON_HOC) AND ([MA_VERSION] = @Original_MA_VERSION) AND ((@IsNull_LOAI_THOI_GIAN_HET_HAN = 1 AND [LOAI_THOI_GIAN_HET_HAN] IS NULL) OR ([LOAI_THOI_GIAN_HET_HAN] = @Original_LOAI_THOI_GIAN_HET_HAN)) AND ([AP_DUNG_TU] = @Original_AP_DUNG_TU))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[DM_VERSION_MON_HOC] WHERE (([ID] = @Original_ID) AND ([ID_MON_" +
+                "HOC] = @Original_ID_MON_HOC) AND ([MA_VERSION] = @Original_MA_VERSION))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_MON_HOC", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "ID_MON_HOC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MA_VERSION", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MA_VERSION", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_LOAI_THOI_GIAN_HET_HAN", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LOAI_THOI_GIAN_HET_HAN", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LOAI_THOI_GIAN_HET_HAN", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LOAI_THOI_GIAN_HET_HAN", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AP_DUNG_TU", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AP_DUNG_TU", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[DM_VERSION_MON_HOC] ([ID_MON_HOC], [MA_VERSION], [LOAI_THOI_GIAN_HET_HAN], [AP_DUNG_TU]) VALUES (@ID_MON_HOC, @MA_VERSION, @LOAI_THOI_GIAN_HET_HAN, @AP_DUNG_TU);
-SELECT ID, ID_MON_HOC, MA_VERSION, LOAI_THOI_GIAN_HET_HAN, AP_DUNG_TU FROM DM_VERSION_MON_HOC WHERE (ID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[DM_VERSION_MON_HOC] ([ID_MON_HOC], [MA_VERSION]) VALUES (@ID_M" +
+                "ON_HOC, @MA_VERSION);\r\nSELECT ID, ID_MON_HOC, MA_VERSION FROM DM_VERSION_MON_HOC" +
+                " WHERE (ID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_MON_HOC", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "ID_MON_HOC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MA_VERSION", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MA_VERSION", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LOAI_THOI_GIAN_HET_HAN", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LOAI_THOI_GIAN_HET_HAN", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AP_DUNG_TU", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AP_DUNG_TU", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[DM_VERSION_MON_HOC] SET [ID_MON_HOC] = @ID_MON_HOC, [MA_VERSION] = @MA_VERSION, [LOAI_THOI_GIAN_HET_HAN] = @LOAI_THOI_GIAN_HET_HAN, [AP_DUNG_TU] = @AP_DUNG_TU WHERE (([ID] = @Original_ID) AND ([ID_MON_HOC] = @Original_ID_MON_HOC) AND ([MA_VERSION] = @Original_MA_VERSION) AND ((@IsNull_LOAI_THOI_GIAN_HET_HAN = 1 AND [LOAI_THOI_GIAN_HET_HAN] IS NULL) OR ([LOAI_THOI_GIAN_HET_HAN] = @Original_LOAI_THOI_GIAN_HET_HAN)) AND ([AP_DUNG_TU] = @Original_AP_DUNG_TU));
-SELECT ID, ID_MON_HOC, MA_VERSION, LOAI_THOI_GIAN_HET_HAN, AP_DUNG_TU FROM DM_VERSION_MON_HOC WHERE (ID = @ID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[DM_VERSION_MON_HOC] SET [ID_MON_HOC] = @ID_MON_HOC, [MA_VERSION] = @MA_VERSION WHERE (([ID] = @Original_ID) AND ([ID_MON_HOC] = @Original_ID_MON_HOC) AND ([MA_VERSION] = @Original_MA_VERSION));
+SELECT ID, ID_MON_HOC, MA_VERSION FROM DM_VERSION_MON_HOC WHERE (ID = @ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_MON_HOC", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "ID_MON_HOC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MA_VERSION", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MA_VERSION", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LOAI_THOI_GIAN_HET_HAN", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LOAI_THOI_GIAN_HET_HAN", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AP_DUNG_TU", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AP_DUNG_TU", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_MON_HOC", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "ID_MON_HOC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MA_VERSION", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MA_VERSION", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_LOAI_THOI_GIAN_HET_HAN", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LOAI_THOI_GIAN_HET_HAN", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LOAI_THOI_GIAN_HET_HAN", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LOAI_THOI_GIAN_HET_HAN", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AP_DUNG_TU", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AP_DUNG_TU", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 18, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -898,8 +818,7 @@ SELECT ID, ID_MON_HOC, MA_VERSION, LOAI_THOI_GIAN_HET_HAN, AP_DUNG_TU FROM DM_VE
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, ID_MON_HOC, MA_VERSION, LOAI_THOI_GIAN_HET_HAN, AP_DUNG_TU FROM dbo.DM" +
-                "_VERSION_MON_HOC";
+            this._commandCollection[0].CommandText = "SELECT ID, ID_MON_HOC, MA_VERSION FROM dbo.DM_VERSION_MON_HOC";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -960,7 +879,7 @@ SELECT ID, ID_MON_HOC, MA_VERSION, LOAI_THOI_GIAN_HET_HAN, AP_DUNG_TU FROM DM_VE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(decimal Original_ID, decimal Original_ID_MON_HOC, string Original_MA_VERSION, string Original_LOAI_THOI_GIAN_HET_HAN, System.DateTime Original_AP_DUNG_TU) {
+        public virtual int Delete(decimal Original_ID, decimal Original_ID_MON_HOC, string Original_MA_VERSION) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((decimal)(Original_ID));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((decimal)(Original_ID_MON_HOC));
             if ((Original_MA_VERSION == null)) {
@@ -969,15 +888,6 @@ SELECT ID, ID_MON_HOC, MA_VERSION, LOAI_THOI_GIAN_HET_HAN, AP_DUNG_TU FROM DM_VE
             else {
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_MA_VERSION));
             }
-            if ((Original_LOAI_THOI_GIAN_HET_HAN == null)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_LOAI_THOI_GIAN_HET_HAN));
-            }
-            this.Adapter.DeleteCommand.Parameters[5].Value = ((System.DateTime)(Original_AP_DUNG_TU));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -998,7 +908,7 @@ SELECT ID, ID_MON_HOC, MA_VERSION, LOAI_THOI_GIAN_HET_HAN, AP_DUNG_TU FROM DM_VE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(decimal ID_MON_HOC, string MA_VERSION, string LOAI_THOI_GIAN_HET_HAN, System.DateTime AP_DUNG_TU) {
+        public virtual int Insert(decimal ID_MON_HOC, string MA_VERSION) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((decimal)(ID_MON_HOC));
             if ((MA_VERSION == null)) {
                 throw new global::System.ArgumentNullException("MA_VERSION");
@@ -1006,13 +916,6 @@ SELECT ID, ID_MON_HOC, MA_VERSION, LOAI_THOI_GIAN_HET_HAN, AP_DUNG_TU FROM DM_VE
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(MA_VERSION));
             }
-            if ((LOAI_THOI_GIAN_HET_HAN == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(LOAI_THOI_GIAN_HET_HAN));
-            }
-            this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(AP_DUNG_TU));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1033,7 +936,7 @@ SELECT ID, ID_MON_HOC, MA_VERSION, LOAI_THOI_GIAN_HET_HAN, AP_DUNG_TU FROM DM_VE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(decimal ID_MON_HOC, string MA_VERSION, string LOAI_THOI_GIAN_HET_HAN, System.DateTime AP_DUNG_TU, decimal Original_ID, decimal Original_ID_MON_HOC, string Original_MA_VERSION, string Original_LOAI_THOI_GIAN_HET_HAN, System.DateTime Original_AP_DUNG_TU, decimal ID) {
+        public virtual int Update(decimal ID_MON_HOC, string MA_VERSION, decimal Original_ID, decimal Original_ID_MON_HOC, string Original_MA_VERSION, decimal ID) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((decimal)(ID_MON_HOC));
             if ((MA_VERSION == null)) {
                 throw new global::System.ArgumentNullException("MA_VERSION");
@@ -1041,31 +944,15 @@ SELECT ID, ID_MON_HOC, MA_VERSION, LOAI_THOI_GIAN_HET_HAN, AP_DUNG_TU FROM DM_VE
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(MA_VERSION));
             }
-            if ((LOAI_THOI_GIAN_HET_HAN == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(LOAI_THOI_GIAN_HET_HAN));
-            }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(AP_DUNG_TU));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((decimal)(Original_ID));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((decimal)(Original_ID_MON_HOC));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((decimal)(Original_ID));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((decimal)(Original_ID_MON_HOC));
             if ((Original_MA_VERSION == null)) {
                 throw new global::System.ArgumentNullException("Original_MA_VERSION");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_MA_VERSION));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_MA_VERSION));
             }
-            if ((Original_LOAI_THOI_GIAN_HET_HAN == null)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_LOAI_THOI_GIAN_HET_HAN));
-            }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(Original_AP_DUNG_TU));
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((decimal)(ID));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((decimal)(ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1086,8 +973,8 @@ SELECT ID, ID_MON_HOC, MA_VERSION, LOAI_THOI_GIAN_HET_HAN, AP_DUNG_TU FROM DM_VE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(decimal ID_MON_HOC, string MA_VERSION, string LOAI_THOI_GIAN_HET_HAN, System.DateTime AP_DUNG_TU, decimal Original_ID, decimal Original_ID_MON_HOC, string Original_MA_VERSION, string Original_LOAI_THOI_GIAN_HET_HAN, System.DateTime Original_AP_DUNG_TU) {
-            return this.Update(ID_MON_HOC, MA_VERSION, LOAI_THOI_GIAN_HET_HAN, AP_DUNG_TU, Original_ID, Original_ID_MON_HOC, Original_MA_VERSION, Original_LOAI_THOI_GIAN_HET_HAN, Original_AP_DUNG_TU, Original_ID);
+        public virtual int Update(decimal ID_MON_HOC, string MA_VERSION, decimal Original_ID, decimal Original_ID_MON_HOC, string Original_MA_VERSION) {
+            return this.Update(ID_MON_HOC, MA_VERSION, Original_ID, Original_ID_MON_HOC, Original_MA_VERSION, Original_ID);
         }
     }
     

@@ -300,8 +300,7 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string ID = "ID";
         public const string ID_MON_HOC = "ID_MON_HOC";
         public const string MA_VERSION = "MA_VERSION";
-        public const string LOAI_THOI_GIAN_HET_HAN = "LOAI_THOI_GIAN_HET_HAN";
-        public const string AP_DUNG_TU = "AP_DUNG_TU";
+      
     }
 
     public class GD_CHUNG_CHI

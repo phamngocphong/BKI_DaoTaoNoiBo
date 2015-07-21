@@ -417,5 +417,20 @@ namespace BKI_QLTTQuocAnh
                 CSystemLog_301.ExceptionHandle(ex);
             }
         }
+
+        private void m_cmd_chung_chi_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                F209_gd_chung_chi  v_f= new F209_gd_chung_chi();
+                v_f.MdiParent = this;
+                v_f.Show();
+            }
+            catch (Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
     }
 }

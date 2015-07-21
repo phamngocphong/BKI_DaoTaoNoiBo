@@ -76,6 +76,8 @@
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.m_cmd_ds_hs_theo_lm = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.m_cmd_chung_chi = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MdiManager)).BeginInit();
             this.SuspendLayout();
@@ -123,9 +125,10 @@
             this.m_cmd_dai_hoc_phan,
             this.m_cmd_mon_hoc,
             this.m_cmd_ngach_nghiep_vu,
-            this.m_cmd_tong_quan});
+            this.m_cmd_tong_quan,
+            this.m_cmd_chung_chi});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 48;
+            this.ribbon.MaxItemId = 49;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -476,7 +479,8 @@
             // ribbonPage3
             // 
             this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup4});
+            this.ribbonPageGroup4,
+            this.ribbonPageGroup6});
             this.ribbonPage3.Name = "ribbonPage3";
             this.ribbonPage3.Text = "NGHIỆP VỤ";
             // 
@@ -524,6 +528,22 @@
             // 
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
             this.ribbonPageGroup8.Text = "Theo lớp môn";
+            // 
+            // ribbonPageGroup6
+            // 
+            this.ribbonPageGroup6.ItemLinks.Add(this.m_cmd_chung_chi);
+            this.ribbonPageGroup6.Name = "ribbonPageGroup6";
+            this.ribbonPageGroup6.Text = "Quản lý chứng chỉ";
+            // 
+            // m_cmd_chung_chi
+            // 
+            this.m_cmd_chung_chi.Caption = "Chứng chỉ";
+            this.m_cmd_chung_chi.Glyph = ((System.Drawing.Image)(resources.GetObject("m_cmd_chung_chi.Glyph")));
+            this.m_cmd_chung_chi.Id = 48;
+            this.m_cmd_chung_chi.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("m_cmd_chung_chi.LargeGlyph")));
+            this.m_cmd_chung_chi.LargeWidth = 150;
+            this.m_cmd_chung_chi.Name = "m_cmd_chung_chi";
+            this.m_cmd_chung_chi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_chung_chi_ItemClick);
             // 
             // f388_main
             // 
@@ -594,5 +614,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup11;
         private DevExpress.XtraBars.BarButtonItem m_cmd_tong_quan;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
+        private DevExpress.XtraBars.BarButtonItem m_cmd_chung_chi;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
     }
 }

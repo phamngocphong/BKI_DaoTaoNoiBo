@@ -40,8 +40,11 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             {
                 string v_da_hoc_xong = "";
                 string v_da_qua_mon = "";
+                decimal v_diem_chuyen_can = -1;
+                decimal v_diem_giua_ky = -1;
+                decimal v_diem_cuoi_ky = -1;
                 F207_Nhap_diem_DE v_f = new F207_Nhap_diem_DE();
-                v_f.display(ref v_da_hoc_xong, ref v_da_qua_mon);
+                v_f.display(ref v_da_hoc_xong, ref v_da_qua_mon, ref v_diem_chuyen_can, ref v_diem_giua_ky, ref v_diem_cuoi_ky);
                 if (v_f.DialogResult == System.Windows.Forms.DialogResult.OK)
                 {
                     for (int i = 0; i < m_grv.SelectedRowsCount; i++)
@@ -50,6 +53,9 @@ namespace BKI_QLTTQuocAnh.NghiepVu
                         US_GD_DIEM v_us = new US_GD_DIEM(CIPConvert.ToDecimal(v_data_row["ID"].ToString()));
                         v_us.strQUA_MON = v_da_qua_mon;
                         v_us.strHOC_XONG_YN = v_da_hoc_xong;
+                        v_us.dcDIEM_CHUYEN_CAN = v_diem_chuyen_can;
+                        v_us.dcDIEM_KIEM_TRA = v_diem_giua_ky;
+                        v_us.dcDIEM_THI = v_diem_cuoi_ky;
                         v_us.datNGAY_SUA = DateTime.Now.Date;
                         v_us.Update();
                     }

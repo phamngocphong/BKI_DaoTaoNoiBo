@@ -43,6 +43,7 @@
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.c_ma_nv = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.m_grc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv)).BeginInit();
             this.m_pnl_out_place_dm.SuspendLayout();
@@ -68,50 +69,51 @@
             this.c_ma_mon_hoc,
             this.c_hoc_xong,
             this.c_qua_mon,
-            this.c_ma_lop_hoc});
+            this.c_ma_lop_hoc,
+            this.c_ma_nv});
             this.m_grv.GridControl = this.m_grc;
             this.m_grv.GroupCount = 3;
             this.m_grv.Name = "m_grv";
             this.m_grv.OptionsSelection.MultiSelect = true;
             this.m_grv.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
             this.m_grv.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.c_hoc_xong, DevExpress.Data.ColumnSortOrder.Ascending),
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.c_ma_mon_hoc, DevExpress.Data.ColumnSortOrder.Ascending),
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.c_ma_lop_hoc, DevExpress.Data.ColumnSortOrder.Ascending),
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.c_hoc_xong, DevExpress.Data.ColumnSortOrder.Ascending)});
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.c_ma_lop_hoc, DevExpress.Data.ColumnSortOrder.Ascending)});
             this.m_grv.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.m_grv_PopupMenuShowing);
             // 
             // c_ten_nhan_vien
             // 
             this.c_ten_nhan_vien.Caption = "Tên nhân viên";
-            this.c_ten_nhan_vien.FieldName = "TEN_NHAN_VIEN";
+            this.c_ten_nhan_vien.FieldName = "HO_TEN";
             this.c_ten_nhan_vien.Name = "c_ten_nhan_vien";
             this.c_ten_nhan_vien.Visible = true;
-            this.c_ten_nhan_vien.VisibleIndex = 1;
+            this.c_ten_nhan_vien.VisibleIndex = 2;
             this.c_ten_nhan_vien.Width = 83;
             // 
             // c_ma_mon_hoc
             // 
             this.c_ma_mon_hoc.Caption = "Mã môn học";
-            this.c_ma_mon_hoc.FieldName = "TEN_MON_HOC";
+            this.c_ma_mon_hoc.FieldName = "MA_MON_HOC";
             this.c_ma_mon_hoc.Name = "c_ma_mon_hoc";
             this.c_ma_mon_hoc.Visible = true;
-            this.c_ma_mon_hoc.VisibleIndex = 1;
+            this.c_ma_mon_hoc.VisibleIndex = 3;
             // 
             // c_hoc_xong
             // 
             this.c_hoc_xong.Caption = "Trạng thái";
-            this.c_hoc_xong.FieldName = "TRANG_THAI_HOC_XONG";
+            this.c_hoc_xong.FieldName = "HOC_XONG";
             this.c_hoc_xong.Name = "c_hoc_xong";
             this.c_hoc_xong.Visible = true;
-            this.c_hoc_xong.VisibleIndex = 1;
+            this.c_hoc_xong.VisibleIndex = 3;
             // 
             // c_qua_mon
             // 
             this.c_qua_mon.Caption = "Kết quả";
-            this.c_qua_mon.FieldName = "TEN";
+            this.c_qua_mon.FieldName = "QUA_MON";
             this.c_qua_mon.Name = "c_qua_mon";
             this.c_qua_mon.Visible = true;
-            this.c_qua_mon.VisibleIndex = 2;
+            this.c_qua_mon.VisibleIndex = 3;
             // 
             // c_ma_lop_hoc
             // 
@@ -207,6 +209,14 @@
             this.panel2.Size = new System.Drawing.Size(769, 322);
             this.panel2.TabIndex = 22;
             // 
+            // c_ma_nv
+            // 
+            this.c_ma_nv.Caption = "Mã nhân viên";
+            this.c_ma_nv.FieldName = "MA_NV";
+            this.c_ma_nv.Name = "c_ma_nv";
+            this.c_ma_nv.Visible = true;
+            this.c_ma_nv.VisibleIndex = 1;
+            // 
             // F207_Nhap_diem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -241,5 +251,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn c_hoc_xong;
         private DevExpress.XtraGrid.Columns.GridColumn c_qua_mon;
         private DevExpress.XtraGrid.Columns.GridColumn c_ma_lop_hoc;
+        private DevExpress.XtraGrid.Columns.GridColumn c_ma_nv;
     }
 }

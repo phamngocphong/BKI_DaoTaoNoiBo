@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using BKI_QLTTQuocAnh.US;
+using IP.Core.IPCommon;
 
 namespace BKI_QLTTQuocAnh.NghiepVu
 {
@@ -63,13 +64,16 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             this.Close();
         }
 
-        public void display(ref string v_da_hoc_xong,ref string v_da_qua_mon)
+        public void display(ref string v_da_hoc_xong,ref string v_da_qua_mon, ref decimal diem_chuyen_can, ref decimal diem_giua_ky, ref decimal diem_cuoi_ky)
         {
             m_da_hoc_xong = v_da_hoc_xong;
             m_da_qua_mon = v_da_qua_mon;
             this.ShowDialog();
             v_da_qua_mon = m_da_qua_mon;
             v_da_hoc_xong = m_da_hoc_xong;
+            diem_chuyen_can = CIPConvert.ToDecimal(m_txt_chuyen_can.Text);
+            diem_giua_ky = CIPConvert.ToDecimal(m_txt_giua_ky.Text);
+            diem_cuoi_ky = CIPConvert.ToDecimal(m_txt_cuoi_ky.Text);
         }
     }
 }

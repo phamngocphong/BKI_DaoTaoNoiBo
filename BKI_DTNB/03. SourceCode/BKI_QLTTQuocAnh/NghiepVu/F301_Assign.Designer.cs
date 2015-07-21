@@ -42,7 +42,7 @@
             // m_cbo_lop_mon
             // 
             this.m_cbo_lop_mon.FormattingEnabled = true;
-            this.m_cbo_lop_mon.Location = new System.Drawing.Point(99, 17);
+            this.m_cbo_lop_mon.Location = new System.Drawing.Point(106, 22);
             this.m_cbo_lop_mon.Name = "m_cbo_lop_mon";
             this.m_cbo_lop_mon.Size = new System.Drawing.Size(186, 21);
             this.m_cbo_lop_mon.TabIndex = 0;
@@ -50,7 +50,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 20);
+            this.label1.Location = new System.Drawing.Point(12, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 13);
             this.label1.TabIndex = 1;
@@ -88,7 +88,7 @@
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_update);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 55);
+            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 69);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(304, 36);
@@ -131,7 +131,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(304, 91);
+            this.ClientSize = new System.Drawing.Size(304, 105);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.m_cbo_lop_mon);

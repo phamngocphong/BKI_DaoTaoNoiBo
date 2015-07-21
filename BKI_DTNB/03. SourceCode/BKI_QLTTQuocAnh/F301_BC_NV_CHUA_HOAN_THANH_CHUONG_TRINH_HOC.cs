@@ -53,11 +53,13 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
+                decimal v_dc_id_version_mon=-1;
+                decimal v_dc_diem_qua_mon = -1;
                 F301_Tao_lop v_f = new F301_Tao_lop();
-                decimal v_so_luong_hoc_vien = v_f.Display(m_grv.SelectedRowsCount, CIPConvert.ToDecimal(m_cbo_mon_hoc.SelectedValue));
+                decimal v_so_luong_hoc_vien = v_f.Display(m_grv.SelectedRowsCount, CIPConvert.ToDecimal(m_cbo_mon_hoc.SelectedValue), ref v_dc_id_version_mon, ref v_dc_diem_qua_mon);
                 if (v_f.DialogResult == System.Windows.Forms.DialogResult.OK)
                 {
-                    List<decimal> v_lst_id_lop  = taoLopHoc(v_so_luong_hoc_vien);
+                    List<decimal> v_lst_id_lop = taoLopHoc(v_so_luong_hoc_vien, v_dc_id_version_mon, v_dc_diem_qua_mon);
                     assignHV(v_lst_id_lop, v_so_luong_hoc_vien);
                     MessageBox.Show("Đã assign học viên vào các lớp học");
                     load_data_2_grid();
@@ -71,7 +73,7 @@ namespace BKI_QLTTQuocAnh
 
         decimal m_so_luong_hoc_vien;
 
-        private List<decimal> taoLopHoc(decimal v_so_luong_hoc_vien)
+        private List<decimal> taoLopHoc(decimal v_so_luong_hoc_vien, decimal ip_dc_id_version_mon, decimal ip_dc_diem_qua_mon)
         {
             m_so_luong_hoc_vien = v_so_luong_hoc_vien;
             decimal v_dc_so_hoc_vien = m_grv.SelectedRowsCount;
@@ -81,10 +83,11 @@ namespace BKI_QLTTQuocAnh
             while (v_dc_so_hoc_vien > 0)
             {
                 US_GD_LOP_MON v_us = new US_GD_LOP_MON();
-                v_us.dcID_MON_HOC = v_dc_id_mon_hoc;
+                v_us.dcID_VERSION_MON_HOC = ip_dc_id_version_mon;
+                v_us.dcDIEM_QUA_MON = ip_dc_diem_qua_mon;
                 v_us.dcSO_LUONG = v_so_luong_hoc_vien;
                 v_us.strDA_XOA = "N";
-                v_us.strMA_LOP_HOC = "FAKE-" + new US_DM_MON_HOC(v_us.dcID_MON_HOC).strMA_MON_HOC + DateTime.Now.Date.ToShortDateString() + new Random().Next(10,99);
+                v_us.strMA_LOP_HOC = "FAKE-" + v_mon_hoc.strMA_MON_HOC + DateTime.Now.Date.ToShortDateString() + new Random().Next(10, 99);
                 v_us.strNGUOI_LAP = "admin";
                 v_us.IsNGUOI_SUANull();
                 v_us.Insert();
@@ -104,7 +107,7 @@ namespace BKI_QLTTQuocAnh
                     US_GD_DIEM v_us = new US_GD_DIEM();
                     var v_data_row = m_grv.GetDataRow(m_grv.GetSelectedRows()[i]);
 
-                    v_us.dcID_LOP_HOC = ip_lst_id_lop[(int)(i / ip_so_luong_hv)];
+                    v_us.dcID_LOP_MON = ip_lst_id_lop[(int)(i / ip_so_luong_hv)];
                     v_us.dcID_NHAN_VIEN = CIPConvert.ToDecimal(v_data_row[0].ToString());
                     v_us.strQUA_MON = "N";
                     v_us.strHOC_XONG_YN = "N";
@@ -120,13 +123,13 @@ namespace BKI_QLTTQuocAnh
             US_GD_LOP_MON v_us_gd_LOP_MON = new US_GD_LOP_MON();
             DS_GD_LOP_MON v_ds_gd_LOP_MON = new DS_GD_LOP_MON();
             v_ds_gd_LOP_MON.EnforceConstraints = false;
-            v_us_gd_LOP_MON.FillDataset(v_ds_gd_LOP_MON, " where id_mon_hoc = " + m_cbo_mon_hoc.SelectedValue);
+            v_us_gd_LOP_MON.FillDataset(v_ds_gd_LOP_MON, " WHERE ID_VERSION_MON_HOC IN (SELECT ID_VERSION_MON_HOC FROM DM_VERSION_MON_HOC WHERE ID_MON_HOC = " + m_cbo_mon_hoc.SelectedValue + ")");
             for (int i = 0; i < v_ds_gd_LOP_MON.Tables[0].Rows.Count; i++)
             {
                 US_GD_DIEM v_us = new US_GD_DIEM();
                 DS_GD_DIEM v_ds = new DS_GD_DIEM();
                 DataRow v_dr = v_ds_gd_LOP_MON.Tables[0].Rows[i];
-                v_us.FillDataset(v_ds, " where id_nhan_vien = " + ip_dc_id_nhan_vien.ToString() + " and id_lop_hoc = " + v_dr[GD_LOP_MON.ID]);
+                v_us.FillDataset(v_ds, " where id_nhan_vien = " + ip_dc_id_nhan_vien.ToString() + " and id_lop_mon = " + v_dr[GD_LOP_MON.ID]);
                 for (int j = 0; j < v_ds.Tables[0].Rows.Count; j++)
                 {
                     DataRow v_dr_diem = v_ds.Tables[0].Rows[j];

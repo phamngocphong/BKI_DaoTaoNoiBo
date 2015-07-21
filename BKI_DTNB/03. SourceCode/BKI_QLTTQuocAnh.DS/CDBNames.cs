@@ -323,16 +323,18 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
     {
         public const string ID = "ID";
         public const string ID_NHAN_VIEN = "ID_NHAN_VIEN";
-        public const string ID_LOP_HOC = "ID_LOP_HOC";
+        public const string ID_LOP_MON = "ID_LOP_MON";
+        public const string DIEM_CHUYEN_CAN = "DIEM_CHUYEN_CAN";
+        public const string DIEM_KIEM_TRA = "DIEM_KIEM_TRA";
+        public const string DIEM_THI = "DIEM_THI";
         public const string QUA_MON = "QUA_MON";
+        public const string HOC_XONG_YN = "HOC_XONG_YN";
         public const string NGAY_LAP = "NGAY_LAP";
         public const string NGAY_SUA = "NGAY_SUA";
         public const string NGUOI_LAP = "NGUOI_LAP";
         public const string NGUOI_SUA = "NGUOI_SUA";
         public const string DA_XOA = "DA_XOA";
-        public const string HOC_XONG_YN = "HOC_XONG_YN";
     }
-
     public class GD_LOP_MON
     {
         public const string ID = "ID";
@@ -340,7 +342,8 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string THOI_GIAN = "THOI_GIAN";
         public const string DIA_DIEM = "DIA_DIEM";
         public const string SO_LUONG = "SO_LUONG";
-        public const string ID_MON_HOC = "ID_MON_HOC";
+        public const string ID_VERSION_MON_HOC = "ID_VERSION_MON_HOC";
+        public const string DIEM_QUA_MON = "DIEM_QUA_MON";
         public const string NGAY_LAP = "NGAY_LAP";
         public const string NGAY_SUA = "NGAY_SUA";
         public const string NGUOI_LAP = "NGUOI_LAP";

@@ -38,6 +38,10 @@
             this.m_cmd_huy = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.m_cbo_version = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.m_txt_diem_qua_mon = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -135,13 +139,17 @@
             this.panel1.Controls.Add(this.m_cmd_huy);
             this.panel1.Controls.Add(this.m_cmd_tao_lop);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 147);
+            this.panel1.Location = new System.Drawing.Point(0, 207);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(718, 41);
             this.panel1.TabIndex = 17;
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.m_txt_diem_qua_mon);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.m_cbo_version);
+            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.m_lbl_mon_hoc);
             this.panel2.Controls.Add(this.m_txt_so_hoc_vien_1_lop);
             this.panel2.Controls.Add(this.label4);
@@ -151,14 +159,47 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(718, 147);
+            this.panel2.Size = new System.Drawing.Size(718, 207);
             this.panel2.TabIndex = 18;
+            // 
+            // m_cbo_version
+            // 
+            this.m_cbo_version.FormattingEnabled = true;
+            this.m_cbo_version.Location = new System.Drawing.Point(365, 118);
+            this.m_cbo_version.Name = "m_cbo_version";
+            this.m_cbo_version.Size = new System.Drawing.Size(100, 21);
+            this.m_cbo_version.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(234, 118);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Version";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(231, 155);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(75, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Điểm qua môn";
+            // 
+            // m_txt_diem_qua_mon
+            // 
+            this.m_txt_diem_qua_mon.Location = new System.Drawing.Point(365, 157);
+            this.m_txt_diem_qua_mon.Name = "m_txt_diem_qua_mon";
+            this.m_txt_diem_qua_mon.Size = new System.Drawing.Size(100, 20);
+            this.m_txt_diem_qua_mon.TabIndex = 9;
             // 
             // F301_Tao_lop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(718, 188);
+            this.ClientSize = new System.Drawing.Size(718, 248);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "F301_Tao_lop";
@@ -182,5 +223,9 @@
         private DevExpress.XtraEditors.SimpleButton m_cmd_huy;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ComboBox m_cbo_version;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox m_txt_diem_qua_mon;
+        private System.Windows.Forms.Label label5;
     }
 }

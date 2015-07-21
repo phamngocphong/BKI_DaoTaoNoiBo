@@ -22,7 +22,14 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 
         private void F206_Nhan_vien_lop_hoc_Load(object sender, EventArgs e)
         {
-            load_data_2_grid();
+            try
+            {
+                load_data_2_grid();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         private void load_data_2_grid()
@@ -45,15 +52,22 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 
         private void m_cmd_delete_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < m_grv.SelectedRowsCount; i++)
+            try
             {
-                var v_dr = m_grv.GetDataRow(m_grv.GetSelectedRows()[i]);
-                US_GD_DIEM v_us = new US_GD_DIEM(CIPConvert.ToDecimal(v_dr["ID"].ToString()));
-                v_us.strDA_XOA = "Y";
-                v_us.Update();
+                for (int i = 0; i < m_grv.SelectedRowsCount; i++)
+                {
+                    var v_dr = m_grv.GetDataRow(m_grv.GetSelectedRows()[i]);
+                    US_GD_DIEM v_us = new US_GD_DIEM(CIPConvert.ToDecimal(v_dr["ID"].ToString()));
+                    v_us.strDA_XOA = "Y";
+                    v_us.Update();
+                }
+                MessageBox.Show("Đã xóa " + m_grv.SelectedRowsCount.ToString() + " học viên.");
+                load_data_2_grid();
             }
-            MessageBox.Show("Đã xóa " + m_grv.SelectedRowsCount.ToString() + " học viên.");
-            load_data_2_grid();
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }            
         }
 
         private void m_cmd_insert_Click(object sender, EventArgs e)

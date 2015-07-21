@@ -52,30 +52,15 @@
     <Compile Include="US_CM_DM_TU_DIEN.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="US_DM_DAI.cs" />
-    <Compile Include="US_DM_DAI_HOC_PHAN.cs" />
-    <Compile Include="US_DM_HOC_PHAN.cs" />
-    <Compile Include="US_DM_HOC_PHAN_MON_HOC.cs" />
-    <Compile Include="US_DM_HOC_PHAN_TIEN_QUYET.cs" />
     <Compile Include="US_DM_MON_HOC.cs" />
-    <Compile Include="US_DM_NGACH.cs" />
-    <Compile Include="US_DM_NGACH_DAI.cs" />
-    <Compile Include="US_DM_NGACH_PHONG.cs" />
-    <Compile Include="US_DM_NGHIEP_VU_MON_HOC.cs" />
-    <Compile Include="US_DM_PHONG_DAI.cs" />
-    <Compile Include="US_DM_PHONG_HOC_PHAN.cs" />
-    <Compile Include="US_DM_VERSION_MON_HOC.cs" />
+    <Compile Include="US_GD_DIEM.cs" />
+    <Compile Include="US_GD_LOP_MON.cs" />
     <Compile Include="US_HT_FORM.cs" />
     <Compile Include="US_HT_NHOM_NGUOI_SU_DUNG.cs" />
     <Compile Include="US_HT_PHAN_QUYEN_CHO_NHOM.cs" />
     <Compile Include="US_HT_PHAN_QUYEN_DETAIL.cs" />
     <Compile Include="US_HT_PHAN_QUYEN_HE_THONG.cs" />
     <Compile Include="US_HT_USER_GROUP.cs" />
-    <Compile Include="US_V_DAI_HOC_PHAN.cs" />
-    <Compile Include="US_V_HOC_PHAN_MON_HOC.cs" />
-    <Compile Include="US_V_NGACH_PHONG.cs" />
-    <Compile Include="US_V_PHONG_DAI.cs" />
-    <Compile Include="US_V_PHONG_HOC_PHAN.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BKI_QLTTQuocAnh.DS\BKI_QLTTQuocAnh.DS.csproj">

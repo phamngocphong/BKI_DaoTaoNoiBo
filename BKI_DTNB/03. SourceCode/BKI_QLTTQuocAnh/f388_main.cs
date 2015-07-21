@@ -191,9 +191,9 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                frm_DM_HOC_PHAN v_f = new frm_DM_HOC_PHAN();
-                v_f.MdiParent = this;
-                v_f.Show();
+                //frm_DM_HOC_PHAN v_f = new frm_DM_HOC_PHAN();
+                //v_f.MdiParent = this;
+                //v_f.Show();
             }
             catch (Exception v_e)
             {
@@ -224,9 +224,9 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                frm_GD_LOP_MON v_f = new frm_GD_LOP_MON();
-                v_f.MdiParent = this;
-                v_f.Show();
+                //frm_GD_LOP_MON v_f = new frm_GD_LOP_MON();
+                //v_f.MdiParent = this;
+                //v_f.Show();
 
             }
             catch (Exception ex)
@@ -240,9 +240,9 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                f108_danh_muc_ngach v_f = new f108_danh_muc_ngach();
-                v_f.MdiParent = this;
-                v_f.Show();
+                //f108_danh_muc_ngach v_f = new f108_danh_muc_ngach();
+                //v_f.MdiParent = this;
+                //v_f.Show();
             }
             catch (Exception ex)
             {
@@ -256,9 +256,9 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                f109_danh_muc_dai v_f = new f109_danh_muc_dai();
-                v_f.MdiParent = this;
-                v_f.Show();
+                //f109_danh_muc_dai v_f = new f109_danh_muc_dai();
+                //v_f.MdiParent = this;
+                //v_f.Show();
             }
             catch (Exception ex)
             {
@@ -272,9 +272,9 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                f110_danh_muc_nghiep_vu_mon_hoc v_f = new f110_danh_muc_nghiep_vu_mon_hoc();
-                v_f.MdiParent = this;
-                v_f.Show();
+                //f110_danh_muc_nghiep_vu_mon_hoc v_f = new f110_danh_muc_nghiep_vu_mon_hoc();
+                //v_f.MdiParent = this;
+                //v_f.Show();
             }
             catch (Exception ex)
             {
@@ -288,9 +288,9 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                f103_danh_muc_nghiep_vu_phong v_f = new f103_danh_muc_nghiep_vu_phong();
-                v_f.MdiParent = this;
-                v_f.Show();
+                //f103_danh_muc_nghiep_vu_phong v_f = new f103_danh_muc_nghiep_vu_phong();
+                //v_f.MdiParent = this;
+                //v_f.Show();
             }
             catch (Exception ex)
             {
@@ -303,9 +303,9 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                f104_danh_muc_ngach_ngach_con v_f = new f104_danh_muc_ngach_ngach_con();
-                v_f.MdiParent = this;
-                v_f.Show();
+                //f104_danh_muc_ngach_ngach_con v_f = new f104_danh_muc_ngach_ngach_con();
+                //v_f.MdiParent = this;
+                //v_f.Show();
             }
             catch (Exception ex)
             {
@@ -318,9 +318,9 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                f106_danh_muc_dai_hoc_phan v_f = new f106_danh_muc_dai_hoc_phan();
-                v_f.MdiParent = this;
-                v_f.Show();
+                //f106_danh_muc_dai_hoc_phan v_f = new f106_danh_muc_dai_hoc_phan();
+                //v_f.MdiParent = this;
+                //v_f.Show();
             }
             catch (Exception ex)
             {
@@ -340,9 +340,9 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                f101_danh_muc_mon_hoc v_f = new f101_danh_muc_mon_hoc();
-                v_f.MdiParent = this;
-                v_f.Show();
+                //f101_danh_muc_mon_hoc v_f = new f101_danh_muc_mon_hoc();
+                //v_f.MdiParent = this;
+                //v_f.Show();
             }
             catch (Exception ex)
             {
@@ -377,9 +377,9 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                f111_danh_muc_nghiep_vu v_f = new f111_danh_muc_nghiep_vu();
-                v_f.MdiParent = this;
-                v_f.Show();
+                //f111_danh_muc_nghiep_vu v_f = new f111_danh_muc_nghiep_vu();
+                //v_f.MdiParent = this;
+                //v_f.Show();
             }
             catch (Exception v_e)
             {
@@ -392,9 +392,9 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                f112_danh_muc_ngach_nghiep_vu v_f = new f112_danh_muc_ngach_nghiep_vu();
-                v_f.MdiParent = this;
-                v_f.Show();
+                //f112_danh_muc_ngach_nghiep_vu v_f = new f112_danh_muc_ngach_nghiep_vu();
+                //v_f.MdiParent = this;
+                //v_f.Show();
             }
             catch (Exception v_e)
             {

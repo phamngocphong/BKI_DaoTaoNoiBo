@@ -7,16 +7,16 @@
 /// Create User Service Class for DM_MON_HOC
 /// </summary>
 
-namespace BKI_QLTTQuocAnh.US
-{
-    using BKI_QLTTQuocAnh.DS;
+
+using BKI_QLTTQuocAnh.DS;
 using IP.Core.IPCommon;
 using IP.Core.IPUserService;
 using System.Data.SqlClient;
 using System.Data;
 using System;
 
-
+namespace BKI_QLTTQuocAnh.US
+{
 public class US_DM_MON_HOC : US_Object
 {
 	private const string c_TableName = "DM_MON_HOC";
@@ -131,11 +131,11 @@ public class US_DM_MON_HOC : US_Object
 	}
 #endregion
 
-    public void FillDatasetTheoMonHoc(DataSet op_ds, decimal ip_id_mon_hoc)
+    public void FillDatasetTheoMonHoc(DataSet v_ds, decimal ip_id_mon_hoc)
     {
-        CStoredProc v_cstore = new CStoredProc("get_danh_sach_nhan_vien_chua_hoc_mon");
-        v_cstore.addDecimalInputParam("@ID_MON_HOC", ip_id_mon_hoc);
-        v_cstore.fillDataSetByCommand(this, op_ds);
+        CStoredProc v_store = new CStoredProc("get_danh_sach_nhan_vien_chua_hoc_mon");
+        v_store.addDecimalInputParam("@ID_MON_HOC", ip_id_mon_hoc);
+        v_store.fillDataSetByCommand(this,v_ds);
     }
 }
 }

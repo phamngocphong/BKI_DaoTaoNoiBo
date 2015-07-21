@@ -31,7 +31,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 
         private void F301_Assign_Load(object sender, EventArgs e)
         {
-            WinFormControls.load_data_to_combobox("GD_LOP_MON", "ID", "MA_LOP_HOC", " where id_mon_hoc = " + m_dc_id_mon_hoc.ToString(), WinFormControls.eTAT_CA.NO, m_cbo_lop_mon);
+            WinFormControls.load_data_to_combobox("GD_LOP_MON", "ID", "MA_LOP_HOC", " WHERE ID_VERSION_MON_HOC IN (SELECT ID FROM DM_VERSION_MON_HOC WHERE ID_MON_HOC = " + m_dc_id_mon_hoc.ToString()+")", WinFormControls.eTAT_CA.NO, m_cbo_lop_mon);
             if (m_b_trang_thai)
             {
                 m_cbo_lop_mon.SelectedValue = m_dc_id_lop_mon;

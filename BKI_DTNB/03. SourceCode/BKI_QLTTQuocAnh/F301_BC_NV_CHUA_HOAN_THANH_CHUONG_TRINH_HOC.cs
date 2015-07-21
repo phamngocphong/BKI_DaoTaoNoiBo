@@ -13,6 +13,7 @@ using IP.Core.IPCommon;
 using DevExpress.XtraGrid.Views.Grid;
 using BKI_QLTTQuocAnh.NghiepVu;
 using DevExpress.Utils.Menu;
+using BKI_QLTTQuocAnh.DanhMuc;
 
 namespace BKI_QLTTQuocAnh
 {
@@ -53,7 +54,7 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                decimal v_dc_id_version_mon=-1;
+                decimal v_dc_id_version_mon = -1;
                 decimal v_dc_diem_qua_mon = -1;
                 F301_Tao_lop v_f = new F301_Tao_lop();
                 decimal v_so_luong_hoc_vien = v_f.Display(m_grv.SelectedRowsCount, CIPConvert.ToDecimal(m_cbo_mon_hoc.SelectedValue), ref v_dc_id_version_mon, ref v_dc_diem_qua_mon);
@@ -68,7 +69,7 @@ namespace BKI_QLTTQuocAnh
             catch (Exception v_e)
             {
                 CSystemLog_301.ExceptionHandle(v_e);
-            }            
+            }
         }
 
         decimal m_so_luong_hoc_vien;
@@ -103,7 +104,8 @@ namespace BKI_QLTTQuocAnh
             decimal v_id_lop = ip_lst_id_lop[0];
             for (int i = 0; i < m_grv.SelectedRowsCount; i++)
             {
-                if (m_grv.GetSelectedRows()[i] >= 0){
+                if (m_grv.GetSelectedRows()[i] >= 0)
+                {
                     US_GD_DIEM v_us = new US_GD_DIEM();
                     var v_data_row = m_grv.GetDataRow(m_grv.GetSelectedRows()[i]);
 
@@ -114,7 +116,7 @@ namespace BKI_QLTTQuocAnh
                     v_us.strDA_XOA = "N";
                     updateNhanVienMonHoc(v_us.dcID_NHAN_VIEN);
                     v_us.Insert();
-                }                
+                }
             }
         }
 
@@ -133,7 +135,7 @@ namespace BKI_QLTTQuocAnh
                 for (int j = 0; j < v_ds.Tables[0].Rows.Count; j++)
                 {
                     DataRow v_dr_diem = v_ds.Tables[0].Rows[j];
-                    decimal v_id_gd_diem = CIPConvert.ToDecimal(v_dr_diem[GD_DIEM.ID].ToString()); 
+                    decimal v_id_gd_diem = CIPConvert.ToDecimal(v_dr_diem[GD_DIEM.ID].ToString());
                     v_us = new US_GD_DIEM(v_id_gd_diem);
                     v_us.strDA_XOA = "Y";
                     v_us.Update();
@@ -153,12 +155,12 @@ namespace BKI_QLTTQuocAnh
 
         private void load_data_2_cbo_nghiep_vu()
         {
-            WinFormControls.load_data_to_combobox_with_query(m_cbo_nghiep_vu, "ID", "TEN_NGHIEP_VU", WinFormControls.eTAT_CA.YES, "SELECT DNV.ID, dnv.TEN_NGHIEP_VU FROM DM_NGHIEP_VU AS dnv, DM_NGACH_NGHIEP_VU AS dncnv WHERE dncnv.ID_NGHIEP_VU = dnv.ID AND dncnv.ID_NGACH = "+ m_cbo_ngach.SelectedValue +" OR "+ m_cbo_ngach.SelectedValue +" = -1");
+            WinFormControls.load_data_to_combobox_with_query(m_cbo_nghiep_vu, "ID", "TEN_NGHIEP_VU", WinFormControls.eTAT_CA.YES, "SELECT DNV.ID, dnv.TEN_NGHIEP_VU FROM DM_NGHIEP_VU AS dnv, DM_NGACH_NGHIEP_VU AS dncnv WHERE dncnv.ID_NGHIEP_VU = dnv.ID AND dncnv.ID_NGACH = " + m_cbo_ngach.SelectedValue + " OR " + m_cbo_ngach.SelectedValue + " = -1");
         }
 
         private void load_data_2_cbo_mon_hoc()
         {
-            WinFormControls.load_data_to_combobox_with_query(m_cbo_mon_hoc, "ID", "MON_HOC", WinFormControls.eTAT_CA.NO, "SELECT DISTINCT dmh.ID, dmh.MA_MON_HOC + ' - '+ dmh.TEN_MON_HOC AS MON_HOC FROM DM_MON_HOC AS dmh, DM_NGHIEP_VU_MON_HOC AS dnvmh WHERE dmh.ID =dnvmh.ID_MON_HOC AND (dnvmh.ID_NGHIEP_VU = "+ m_cbo_nghiep_vu.SelectedValue +" OR "+ m_cbo_nghiep_vu.SelectedValue +" = -1)");
+            WinFormControls.load_data_to_combobox_with_query(m_cbo_mon_hoc, "ID", "MON_HOC", WinFormControls.eTAT_CA.NO, "SELECT DISTINCT dmh.ID, dmh.MA_MON_HOC + ' - '+ dmh.TEN_MON_HOC AS MON_HOC FROM DM_MON_HOC AS dmh, DM_NGHIEP_VU_MON_HOC AS dnvmh WHERE dmh.ID =dnvmh.ID_MON_HOC AND (dnvmh.ID_NGHIEP_VU = " + m_cbo_nghiep_vu.SelectedValue + " OR " + m_cbo_nghiep_vu.SelectedValue + " = -1)");
         }
 
         private void m_cbo_dia_phuong_SelectedIndexChanged(object sender, EventArgs e)

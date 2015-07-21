@@ -32,6 +32,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             v_ds.Tables.Add(v_dt);
             v_us.FillDatasetWithTableName(v_ds, "V_GD_LOP_MON");
             m_grc.DataSource = v_ds.Tables[0];
+            m_grv.ExpandAllGroups();
         }
 
         private void m_cmd_insert_Click(object sender, EventArgs e)

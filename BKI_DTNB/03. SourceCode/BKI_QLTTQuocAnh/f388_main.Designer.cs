@@ -375,7 +375,7 @@
             // 
             // m_cmd_nghiep_vu
             // 
-            this.m_cmd_nghiep_vu.Caption = "Nghiệp vụ";
+            this.m_cmd_nghiep_vu.Caption = "Nhập điểm từ XLSX";
             this.m_cmd_nghiep_vu.CloseRadialMenuOnItemClick = true;
             this.m_cmd_nghiep_vu.Id = 43;
             this.m_cmd_nghiep_vu.LargeGlyph = global::BKI_QLTTQuocAnh.Properties.Resources._1425905897_25350;
@@ -463,7 +463,6 @@
             // 
             // ribbonPageGroup13
             // 
-            this.ribbonPageGroup13.ItemLinks.Add(this.m_cmd_nghiep_vu);
             this.ribbonPageGroup13.ItemLinks.Add(this.m_cmd_ngach);
             this.ribbonPageGroup13.ItemLinks.Add(this.barButtonItem1);
             this.ribbonPageGroup13.ItemLinks.Add(this.m_cmd_mon_hoc);
@@ -489,6 +488,7 @@
             this.ribbonPageGroup4.ItemLinks.Add(this.m_cmd_lop_mon);
             this.ribbonPageGroup4.ItemLinks.Add(this.m_cmd_nhap_hoc);
             this.ribbonPageGroup4.ItemLinks.Add(this.m_cmd_nghi_hoc);
+            this.ribbonPageGroup4.ItemLinks.Add(this.m_cmd_nghiep_vu);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "Quản lý lớp môn";
             // 

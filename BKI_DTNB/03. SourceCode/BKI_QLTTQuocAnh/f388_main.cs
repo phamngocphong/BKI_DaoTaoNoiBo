@@ -377,6 +377,16 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
+                string v_str_path = "";
+                F210_Nhap_diem_xlsx_de v_f_de = new F210_Nhap_diem_xlsx_de();
+                
+                v_f_de.display(ref v_str_path);
+                if (v_f_de.DialogResult == System.Windows.Forms.DialogResult.OK)
+                {
+                    F210_Nhap_diem_xlsx v_f = new F210_Nhap_diem_xlsx();
+                    v_f.MdiParent = this;
+                    v_f.display(v_str_path);
+                }
                 //f111_danh_muc_nghiep_vu v_f = new f111_danh_muc_nghiep_vu();
                 //v_f.MdiParent = this;
                 //v_f.Show();

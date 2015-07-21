@@ -15,6 +15,8 @@ using BKI_QLTTQuocAnh.US;
 using BKI_QLTTQuocAnh.DS.CDBNames;
 using DevExpress.Utils.Menu;
 using DevExpress.XtraGrid.Views.Grid;
+using System.Configuration;
+using System.Data.OleDb;
 
 
 namespace BKI_QLTTQuocAnh
@@ -139,8 +141,6 @@ namespace BKI_QLTTQuocAnh
             }
         }
 
-        
-
         public static void load_data_to_combobox_with_query(ComboBox ip_cbo, string ip_str_value_field, string ip_str_display_field, eTAT_CA ip_e_tat_ca, string ip_query)
         {
             US_DUNG_CHUNG v_us = new US_DUNG_CHUNG();
@@ -165,6 +165,29 @@ namespace BKI_QLTTQuocAnh
             {
                 ip_cbo.SelectedIndex = 0;
             }
+        }
+
+        public static void load_xls_to_gridview(string ip_str_path, DevExpress.XtraGrid.GridControl ip_grc) {
+            string conStr = "";
+            conStr = ConfigurationManager.ConnectionStrings["Excel07ConString"].ConnectionString;
+            conStr = String.Format(conStr, ip_str_path, "Yes");
+            OleDbConnection con = new OleDbConnection(conStr);
+            OleDbCommand ExcelCommand = new OleDbCommand();
+            ExcelCommand.Connection = con;
+            con.Open();
+            DataTable ExcelDataSet = new DataTable();
+            ExcelDataSet = con.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, null);
+            DataTable dt = new DataTable();
+            if (ExcelDataSet != null && ExcelDataSet.Rows.Count > 0)
+            {
+                string SheetName = ExcelDataSet.Rows[0]["TABLE_NAME"].ToString(); // get sheetname
+                ExcelCommand.CommandText = "SELECT * From [" + SheetName + "]";
+                OleDbDataAdapter ExcelAdapter = new OleDbDataAdapter(ExcelCommand);
+                ExcelAdapter.SelectCommand = ExcelCommand;
+                ExcelAdapter.Fill(dt);
+            }
+            con.Close();
+            ip_grc.DataSource = dt;
         }
 
         #region Report

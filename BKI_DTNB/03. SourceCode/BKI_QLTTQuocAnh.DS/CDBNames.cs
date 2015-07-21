@@ -306,7 +306,6 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
     public class GD_CHUNG_CHI
     {
         public const string ID = "ID";
-        public const string ID_NHAN_SU = "ID_NHAN_SU";
         public const string ID_GD_DIEM = "ID_GD_DIEM";
         public const string SO_CHUNG_CHI = "SO_CHUNG_CHI";
         public const string NGAY_BAT_DAU = "NGAY_BAT_DAU";
@@ -317,6 +316,7 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string NGUOI_SUA = "NGUOI_SUA";
         public const string DA_XOA = "DA_XOA";
     }
+
 
     public class GD_DIEM
     {
@@ -348,6 +348,19 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string NGUOI_LAP = "NGUOI_LAP";
         public const string NGUOI_SUA = "NGUOI_SUA";
         public const string DA_XOA = "DA_XOA";
+    }
+    public class V_GD_CHUNG_CHI
+    {
+        public const string ID = "ID";
+        public const string NGAY_BAT_DAU = "NGAY_BAT_DAU";
+        public const string NGAY_KET_THUC = "NGAY_KET_THUC";
+        public const string SO_CHUNG_CHI = "SO_CHUNG_CHI";
+        public const string TEN_MON_HOC = "TEN_MON_HOC";
+        public const string MA_VERSION = "MA_VERSION";
+        public const string MA_NV = "MA_NV";
+        public const string HO_TEN = "HO_TEN";
+        public const string TRANG_THAI = "TRANG_THAI";
+        public const string ID_GD_DIEM = "ID_GD_DIEM";
     }
 
 

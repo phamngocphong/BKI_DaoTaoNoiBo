@@ -183,6 +183,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_DAI_HOC_PHAN.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_V_GD_CHUNG_CHI.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_GD_CHUNG_CHI.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_V_HOC_PHAN_MON_HOC.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -500,6 +505,17 @@
     </None>
     <None Include="DS_V_DAI_HOC_PHAN.xss">
       <DependentUpon>DS_V_DAI_HOC_PHAN.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_GD_CHUNG_CHI.xsc">
+      <DependentUpon>DS_V_GD_CHUNG_CHI.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_GD_CHUNG_CHI.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_GD_CHUNG_CHI.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_GD_CHUNG_CHI.xss">
+      <DependentUpon>DS_V_GD_CHUNG_CHI.xsd</DependentUpon>
     </None>
     <None Include="DS_V_HOC_PHAN_MON_HOC.xsc">
       <DependentUpon>DS_V_HOC_PHAN_MON_HOC.xsd</DependentUpon>

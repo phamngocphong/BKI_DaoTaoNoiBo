@@ -251,6 +251,12 @@
     <Compile Include="NghiepVu\F209_gd_chung_chi.Designer.cs">
       <DependentUpon>F209_gd_chung_chi.cs</DependentUpon>
     </Compile>
+    <Compile Include="NghiepVu\F209_gd_chung_chi_de.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\F209_gd_chung_chi_de.Designer.cs">
+      <DependentUpon>F209_gd_chung_chi_de.cs</DependentUpon>
+    </Compile>
     <Compile Include="NghiepVu\F301_Assign.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -341,6 +347,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\F209_gd_chung_chi.resx">
       <DependentUpon>F209_gd_chung_chi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\F209_gd_chung_chi_de.resx">
+      <DependentUpon>F209_gd_chung_chi_de.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\F301_Assign.resx">
       <DependentUpon>F301_Assign.cs</DependentUpon>

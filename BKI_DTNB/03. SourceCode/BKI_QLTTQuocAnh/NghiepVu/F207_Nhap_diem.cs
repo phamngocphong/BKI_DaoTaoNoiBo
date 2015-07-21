@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using BKI_QLTTQuocAnh.US;
 using IP.Core.IPCommon;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.Utils.Menu;
 
 namespace BKI_QLTTQuocAnh.NghiepVu
 {
@@ -80,7 +81,16 @@ namespace BKI_QLTTQuocAnh.NghiepVu
                 e.Menu.Items.Clear();
                 // Add a submenu with a single menu item.
                 e.Menu.Items.Add(WinFormControls.CreateRowSubMenu(view, rowHandle));
+                DXMenuItem v_menu_item = new DXMenuItem("&Cấp chứng chỉ cho học viên này", new EventHandler(CapChungChiClick));
+                e.Menu.Items.Add(v_menu_item);
             }
+        }
+
+        private void CapChungChiClick(object sender, EventArgs e)
+        {
+            var v_dt_row = m_grv.GetDataRow(m_grv.FocusedRowHandle);
+            US_GD_DIEM v_us = new US_GD_DIEM(CIPConvert.ToDecimal(v_dt_row["ID"].ToString()));
+            
         }
     }
 }

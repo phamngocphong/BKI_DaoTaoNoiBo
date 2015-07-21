@@ -8,6 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 using BKI_QLTTQuocAnh.US;
 using IP.Core.IPCommon;
+using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.Utils.Menu;
 namespace BKI_QLTTQuocAnh.NghiepVu
 {
     public partial class f208_gd_lop_mon : Form
@@ -75,6 +77,30 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             }
           
             load_data_2_grid();
+        }
+
+        private void m_grv_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
+        {
+            GridView view = sender as GridView;
+            // Check whether a row is right-clicked.
+            if (e.MenuType == DevExpress.XtraGrid.Views.Grid.GridMenuType.Row)
+            {
+                int rowHandle = e.HitInfo.RowHandle;
+                // Delete existing menu items, if any.
+                e.Menu.Items.Clear();
+                // Add a submenu with a single menu item.
+                e.Menu.Items.Add(WinFormControls.CreateRowSubMenu(view, rowHandle));
+                DXMenuItem v_menu_item = new DXMenuItem("&Xem danh sách học viên của lớp môn", new EventHandler(XemNhanVienClick));
+                e.Menu.Items.Add(v_menu_item);
+            }
+        }
+
+        private void XemNhanVienClick(object sender, EventArgs e)
+        {
+            var v_dr= m_grv.GetDataRow(m_grv.FocusedRowHandle);
+
+            F206_Nhan_vien_lop_hoc v_f = new F206_Nhan_vien_lop_hoc();
+            v_f.display(CIPConvert.ToDecimal(v_dr["ID"].ToString()));
         }
     }
 }

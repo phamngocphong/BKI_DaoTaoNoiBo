@@ -20,9 +20,21 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         DataEntryFormMode m_e_form_mode;
         US_V_GD_CHUNG_CHI m_us = new US_V_GD_CHUNG_CHI();
         US_GD_CHUNG_CHI m_us_gd_chung_chi = new US_GD_CHUNG_CHI();
+        US_V_GD_DIEM m_us_v_gd_diem = new US_V_GD_DIEM();
+        bool v_trang_thai;
         public F209_gd_chung_chi_de()
         {
             InitializeComponent();
+        }
+        public void us_v_gd_diem_to_form(US_V_GD_DIEM v_us_gd_diem)
+        {
+            m_txt_ma_nhan_vien.Text = v_us_gd_diem.strMA_NV;
+            m_txt_ten_nhan_vien.Text = v_us_gd_diem.strHO_TEN;
+            m_txt_ten_mon_hoc.Text = v_us_gd_diem.strTEN_MON_HOC;
+            m_txt_ma_version.Text = v_us_gd_diem.strMA_VERSION;
+            m_dc_id_gd_diem = v_us_gd_diem.dcID;
+            v_trang_thai = false;
+
         }
         public void form_to_us()
         {
@@ -34,9 +46,14 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             m_us_gd_chung_chi.strNGUOI_LAP = "admin";
             m_us_gd_chung_chi.IsNGUOI_SUANull();
             m_us_gd_chung_chi.strDA_XOA = "N";
-            m_us_gd_chung_chi.dcID = m_dc_id_gd_chung_chi;
+            
             m_us_gd_chung_chi.dcID_GD_DIEM = m_dc_id_gd_diem;
             m_us_gd_chung_chi.strSO_CHUNG_CHI = m_txt_so_chung_chi.Text;
+            if (v_trang_thai == true)
+            {
+                m_us_gd_chung_chi.dcID = m_dc_id_gd_chung_chi;
+            }
+
            
         }
 
@@ -65,7 +82,16 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         private void savedata()
         {
             form_to_us();
-            m_us_gd_chung_chi.Update();
+            switch(m_e_form_mode)
+            {
+                case DataEntryFormMode.InsertDataState:
+                    m_us_gd_chung_chi.Insert();
+                    break;
+                case DataEntryFormMode.UpdateDataState:
+                    m_us_gd_chung_chi.Update();
+                    break;
+            }
+            
             MessageBox.Show("Lưu chứng chỉ thành công!");
         }
 
@@ -84,6 +110,15 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         private void m_cmd_thoat_Click(object sender, EventArgs e)
         {
             this.Close();
+            v_trang_thai = true;
+        }
+
+        internal void dislay_for_insert(US_V_GD_DIEM v_us)
+        {
+            us_v_gd_diem_to_form(v_us);
+            m_e_form_mode = DataEntryFormMode.InsertDataState;
+            
+            this.ShowDialog();
         }
     }
 }

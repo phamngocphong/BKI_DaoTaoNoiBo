@@ -89,8 +89,9 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         private void CapChungChiClick(object sender, EventArgs e)
         {
             var v_dt_row = m_grv.GetDataRow(m_grv.FocusedRowHandle);
-            US_GD_DIEM v_us = new US_GD_DIEM(CIPConvert.ToDecimal(v_dt_row["ID"].ToString()));
-            
+            US_V_GD_DIEM v_us = new US_V_GD_DIEM(CIPConvert.ToDecimal(v_dt_row["ID"].ToString()));
+            F209_gd_chung_chi_de v_f = new F209_gd_chung_chi_de();
+            v_f.dislay_for_insert(v_us);
         }
     }
 }

@@ -41,6 +41,8 @@
             this.m_cmd_thoat = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.m_txt_so_chung_chi = new System.Windows.Forms.TextBox();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.m_txt_ma_nhan_vien = new System.Windows.Forms.TextBox();
             this.m_txt_ten_nhan_vien = new System.Windows.Forms.TextBox();
             this.m_dat_thoi_gian_ket_thuc = new System.Windows.Forms.DateTimePicker();
@@ -48,8 +50,6 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.m_txt_ten_mon_hoc = new System.Windows.Forms.TextBox();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.m_txt_so_chung_chi = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -77,6 +77,7 @@
             // 
             // m_txt_trang_thai
             // 
+            this.m_txt_trang_thai.Enabled = false;
             this.m_txt_trang_thai.Location = new System.Drawing.Point(454, 165);
             this.m_txt_trang_thai.Name = "m_txt_trang_thai";
             this.m_txt_trang_thai.Size = new System.Drawing.Size(233, 20);
@@ -178,6 +179,21 @@
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "THÔNG TIN CHỨNG CHỈ";
             // 
+            // m_txt_so_chung_chi
+            // 
+            this.m_txt_so_chung_chi.Location = new System.Drawing.Point(115, 165);
+            this.m_txt_so_chung_chi.Name = "m_txt_so_chung_chi";
+            this.m_txt_so_chung_chi.Size = new System.Drawing.Size(186, 20);
+            this.m_txt_so_chung_chi.TabIndex = 18;
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Location = new System.Drawing.Point(24, 168);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(61, 13);
+            this.labelControl7.TabIndex = 17;
+            this.labelControl7.Text = "Số chứng chỉ";
+            // 
             // m_txt_ma_nhan_vien
             // 
             this.m_txt_ma_nhan_vien.Enabled = false;
@@ -233,21 +249,6 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Mã nhân viên";
             // 
-            // labelControl7
-            // 
-            this.labelControl7.Location = new System.Drawing.Point(24, 168);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(61, 13);
-            this.labelControl7.TabIndex = 17;
-            this.labelControl7.Text = "Số chứng chỉ";
-            // 
-            // m_txt_so_chung_chi
-            // 
-            this.m_txt_so_chung_chi.Location = new System.Drawing.Point(115, 165);
-            this.m_txt_so_chung_chi.Name = "m_txt_so_chung_chi";
-            this.m_txt_so_chung_chi.Size = new System.Drawing.Size(186, 20);
-            this.m_txt_so_chung_chi.TabIndex = 18;
-            // 
             // F209_gd_chung_chi_de
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -255,6 +256,7 @@
             this.ClientSize = new System.Drawing.Size(723, 365);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "F209_gd_chung_chi_de";
             this.Text = "F209_gd_chung_chi_de";
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();

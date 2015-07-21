@@ -348,6 +348,27 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string NGUOI_LAP = "NGUOI_LAP";
         public const string NGUOI_SUA = "NGUOI_SUA";
         public const string DA_XOA = "DA_XOA";
+
+    }
+    public class V_GD_DIEM
+    {
+        public const string ID_NHAN_VIEN = "ID_NHAN_VIEN";
+        public const string HO_TEN = "HO_TEN";
+        public const string MA_TRUNG_TAM = "MA_TRUNG_TAM";
+        public const string ID_MON_HOC = "ID_MON_HOC";
+        public const string MA_MON_HOC = "MA_MON_HOC";
+        public const string MA_LOP_HOC = "MA_LOP_HOC";
+        public const string ID_LOP_MON = "ID_LOP_MON";
+        public const string ID = "ID";
+        public const string DIEM_CHUYEN_CAN = "DIEM_CHUYEN_CAN";
+        public const string DIEM_KIEM_TRA = "DIEM_KIEM_TRA";
+        public const string DIEM_THI = "DIEM_THI";
+        public const string HOC_XONG = "HOC_XONG";
+        public const string QUA_MON = "QUA_MON";
+        public const string MA_NV = "MA_NV";
+        public const string DA_XOA = "DA_XOA";
+        public const string TEN_MON_HOC = "TEN_MON_HOC";
+        public const string MA_VERSSION = "MA_VERSION";
     }
     public class V_GD_CHUNG_CHI
     {

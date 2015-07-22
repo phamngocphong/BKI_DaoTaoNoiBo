@@ -14,6 +14,8 @@ namespace BKI_QLTTQuocAnh.NghiepVu
     public partial class F208_gd_lop_mon_de : Form
     {
         decimal m_dc_id_mon_hoc = -1;
+        decimal m_dc_ma_ten_mon_hoc = -1;
+        decimal m_dc_id_version = -1;
         DataEntryFormMode m_e_form_mode;
         US_GD_LOP_MON m_us = new US_GD_LOP_MON();
         public F208_gd_lop_mon_de()
@@ -25,11 +27,14 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         private void F208_gd_lop_mon_de_Load(object sender, EventArgs e)
         {
             load_data_2_cbo();
+
         }
 
         private void load_data_2_cbo()
         {
             WinFormControls.load_data_to_combobox("DM_MON_HOC", "ID", "MA_MON_HOC", "", WinFormControls.eTAT_CA.NO, m_cbo_ma_ten_mon_hoc);
+            m_cbo_ma_ten_mon_hoc.SelectedValue = m_dc_ma_ten_mon_hoc;
+
         }
 
         public void m_cbo_ma_ten_mon_hoc_SelectedIndexChanged(object sender, EventArgs e)
@@ -41,6 +46,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         private void load_data_2_cbo_version()
         {
             WinFormControls.load_data_to_combobox("DM_VERSION_MON_HOC", "ID", "MA_VERSION", " WHERE ID_MON_HOC=" + m_dc_id_mon_hoc.ToString(), WinFormControls.eTAT_CA.NO, m_cbo_version);
+            m_cbo_version.SelectedValue = m_dc_id_version;
         }
         public void form_to_us()
         {
@@ -58,7 +64,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             m_us.dcID_VERSION_MON_HOC = CIPConvert.ToDecimal(m_cbo_version.SelectedValue.ToString());
         }
 
-        public void us_to_form(US_GD_LOP_MON ip_us)
+        public void us_to_form(US_GD_LOP_MON ip_us, decimal ip_selected)
         {
 
             m_us = ip_us;
@@ -67,7 +73,10 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             m_txt_diem_qua_mon.Text = m_us.dcDIEM_QUA_MON.ToString();
             m_txt_dia_diem.Text = m_us.strDIA_DIEM;
             m_txt_so_luong.Text = m_us.dcSO_LUONG.ToString();
-            m_cbo_version.SelectedValue = m_us.dcID_VERSION_MON_HOC;
+            //m_cbo_version.SelectedValue = m_us.dcID_VERSION_MON_HOC;
+            //m_cbo_ma_ten_mon_hoc.SelectedValue = ip_selected;
+            m_dc_id_version = m_us.dcID_VERSION_MON_HOC;
+            m_dc_ma_ten_mon_hoc = ip_selected;
         }
 
 
@@ -80,9 +89,9 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 
 
 
-        internal void Update_form(US_GD_LOP_MON ip_us)
+        internal void Update_form(US_GD_LOP_MON ip_us, decimal ip_selected)
         {
-            us_to_form(ip_us);
+            us_to_form(ip_us, ip_selected);
             m_e_form_mode = DataEntryFormMode.UpdateDataState;
             this.ShowDialog();
         }

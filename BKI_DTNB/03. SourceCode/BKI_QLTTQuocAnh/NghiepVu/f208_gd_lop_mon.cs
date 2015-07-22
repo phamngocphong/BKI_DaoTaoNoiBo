@@ -10,6 +10,8 @@ using BKI_QLTTQuocAnh.US;
 using IP.Core.IPCommon;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.Utils.Menu;
+using BKI_QLTTQuocAnh.DS;
+using BKI_QLTTQuocAnh.DS.CDBNames;
 namespace BKI_QLTTQuocAnh.NghiepVu
 {
     public partial class f208_gd_lop_mon : Form
@@ -56,7 +58,15 @@ namespace BKI_QLTTQuocAnh.NghiepVu
                // var m_row = m_grv.SelectedRowsCount - 1;
                 var v_data_row = m_grv.GetDataRow(m_grv.FocusedRowHandle);
                 US_GD_LOP_MON v_us = new US_GD_LOP_MON(CIPConvert.ToDecimal(v_data_row["ID"].ToString()));
-                v_f.Update_form(v_us);
+                US_DM_VERSION_MON_HOC us_version = new US_DM_VERSION_MON_HOC();
+                DS_DM_VERSION_MON_HOC v_ds_version = new DS_DM_VERSION_MON_HOC();
+                v_ds_version.EnforceConstraints = false;
+                us_version.FillDataset(v_ds_version,"where ID="+ v_data_row["ID_VERSION_MON_HOC"].ToString());
+                DataRow v_d_r = v_ds_version.Tables[0].Rows[0];
+                decimal v_id_version = CIPConvert.ToDecimal(v_d_r[DM_VERSION_MON_HOC.ID].ToString());
+                us_version = new US_DM_VERSION_MON_HOC(v_id_version);
+                decimal v_index_selected = CIPConvert.ToDecimal(us_version.dcID_MON_HOC.ToString());
+                v_f.Update_form(v_us, v_index_selected);
                 load_data_2_grid();
             }
             catch (Exception ex)

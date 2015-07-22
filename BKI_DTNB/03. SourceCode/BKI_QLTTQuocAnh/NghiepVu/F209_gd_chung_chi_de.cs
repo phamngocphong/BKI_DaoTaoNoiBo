@@ -21,7 +21,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         US_V_GD_CHUNG_CHI m_us = new US_V_GD_CHUNG_CHI();
         US_GD_CHUNG_CHI m_us_gd_chung_chi = new US_GD_CHUNG_CHI();
         US_V_GD_DIEM m_us_v_gd_diem = new US_V_GD_DIEM();
-        bool v_trang_thai;
+        bool v_trang_thai=true;
         public F209_gd_chung_chi_de()
         {
             InitializeComponent();
@@ -109,8 +109,9 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         }
         private void m_cmd_thoat_Click(object sender, EventArgs e)
         {
-            this.Close();
             v_trang_thai = true;
+            this.Close();
+            
         }
 
         internal void dislay_for_insert(US_V_GD_DIEM v_us)

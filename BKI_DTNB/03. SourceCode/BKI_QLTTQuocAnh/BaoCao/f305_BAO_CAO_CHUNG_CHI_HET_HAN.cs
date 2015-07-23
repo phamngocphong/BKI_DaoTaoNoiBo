@@ -71,18 +71,18 @@ namespace BKI_QLTTQuocAnh.BaoCao
 
         private void pivotGridControl1_CellDoubleClick(object sender, PivotCellEventArgs e)
         {
-            Form v_f = new Form();
-            DataGrid v_dg = new DataGrid();
-            v_f.Controls.Add(v_dg);
-            v_dg.Dock = DockStyle.Fill;
-            v_dg.DataSource = e.CreateDrillDownDataSource();
-            v_f.ShowDialog();
-            v_f.Dispose();
+            //Form v_f = new Form();
+            //DataGrid v_dg = new DataGrid();
+            F305_bao_cao_chung_chi_het_han_de v_f1 = new F305_bao_cao_chung_chi_het_han_de();
+            v_f1.display(e.CreateDrillDownDataSource());
+            //v_f1.v_grc.DataSource = e.CreateDrillDownDataSource();
+            //v_f.Controls.Add(v_dg);
+            //v_dg.Dock = DockStyle.Fill;
+            //v_dg.DataSource = e.CreateDrillDownDataSource();
+            //v_f.Dispose();
+            //v_f1.ShowDialog();
+            //v_f1.Dispose();
         }
-
-     
-        
-
         //private void pivotGridControl1_FieldValueDisplayText(object sender, PivotFieldDisplayTextEventArgs e)
         //{
 

@@ -153,6 +153,12 @@
     <Compile Include="BaoCao\f305_BAO_CAO_CHUNG_CHI_HET_HAN.Designer.cs">
       <DependentUpon>f305_BAO_CAO_CHUNG_CHI_HET_HAN.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaoCao\F305_bao_cao_chung_chi_het_han_de.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\F305_bao_cao_chung_chi_het_han_de.Designer.cs">
+      <DependentUpon>F305_bao_cao_chung_chi_het_han_de.cs</DependentUpon>
+    </Compile>
     <Compile Include="BaoCao\XtraForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -327,6 +333,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\F303_Ket_qua_dao_tao.resx">
       <DependentUpon>F303_Ket_qua_dao_tao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\F305_bao_cao_chung_chi_het_han_de.resx">
+      <DependentUpon>F305_bao_cao_chung_chi_het_han_de.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\XtraForm.resx">
       <DependentUpon>XtraForm.cs</DependentUpon>

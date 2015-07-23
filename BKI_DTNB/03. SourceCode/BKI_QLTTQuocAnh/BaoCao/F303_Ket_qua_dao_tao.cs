@@ -58,6 +58,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
 
             fieldIDNHANSU = new PivotGridField("ID_NHAN_SU",PivotArea.DataArea);
             fieldIDNHANSU.SummaryType = DevExpress.Data.PivotGrid.PivotSummaryType.Count;
+            fieldIDNHANSU.Caption = "Nhân viên";
 
             pivotGridControl1.Fields.AddRange(new PivotGridField[] { fieldIDNHANSU, fieldTenMonHoc, fieldTenTrangThai });
         }

@@ -95,7 +95,7 @@
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Name = "F303_Ket_qua_dao_tao";
-            this.Text = "F303_Ket_qua_dao_tao";
+            this.Text = "F303 - Báo cáo kết quả đào tạo";
             this.Load += new System.EventHandler(this.F303_Ket_qua_dao_tao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();

@@ -81,13 +81,8 @@ namespace BKI_QLTTQuocAnh.BaoCao
 
         private void pivotGridControl1_CellDoubleClick(object sender, PivotCellEventArgs e)
         {
-            Form v_f = new Form();
-            DataGrid v_dg = new DataGrid();
-            v_f.Controls.Add(v_dg);
-            v_dg.Dock = DockStyle.Fill;
-            v_dg.DataSource = e.CreateDrillDownDataSource();
-            v_f.ShowDialog();
-            v_f.Dispose();
+            F303_ket_qua_dao_tao_de v_f = new F303_ket_qua_dao_tao_de();
+            v_f.display(e.CreateDrillDownDataSource());
         }
 
         private void pivotGridControl1_FieldValueDisplayText(object sender, PivotFieldDisplayTextEventArgs e)

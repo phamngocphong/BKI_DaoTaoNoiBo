@@ -48,7 +48,6 @@
             this.pivotGridControl1.Name = "pivotGridControl1";
             this.pivotGridControl1.Size = new System.Drawing.Size(479, 208);
             this.pivotGridControl1.TabIndex = 5;
-           // this.pivotGridControl1.FieldValueDisplayText += new DevExpress.XtraPivotGrid.PivotFieldDisplayTextEventHandler(this.pivotGridControl1_FieldValueDisplayText);
             this.pivotGridControl1.CellDoubleClick += new DevExpress.XtraPivotGrid.PivotCellEventHandler(this.pivotGridControl1_CellDoubleClick);
             // 
             // m_dat
@@ -95,7 +94,7 @@
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Name = "f305_BAO_CAO_CHUNG_CHI_HET_HAN";
-            this.Text = "f305_BAO_CAO_CHUNG_CHI_HET_HAN";
+            this.Text = "F305 - Báo cáo chứng chỉ hết hạn";
             this.Load += new System.EventHandler(this.f305_BAO_CAO_CHUNG_CHI_HET_HAN_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();

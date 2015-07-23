@@ -38,17 +38,17 @@
             this.m_cmd_huy = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.m_txt_diem_qua_mon = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.m_cbo_version = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.m_txt_diem_qua_mon = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // m_txt_so_hoc_vien_1_lop
             // 
-            this.m_txt_so_hoc_vien_1_lop.Location = new System.Drawing.Point(365, 80);
+            this.m_txt_so_hoc_vien_1_lop.Location = new System.Drawing.Point(208, 80);
             this.m_txt_so_hoc_vien_1_lop.Name = "m_txt_so_hoc_vien_1_lop";
             this.m_txt_so_hoc_vien_1_lop.Size = new System.Drawing.Size(100, 20);
             this.m_txt_so_hoc_vien_1_lop.TabIndex = 0;
@@ -56,7 +56,7 @@
             // m_lbl_mon_hoc
             // 
             this.m_lbl_mon_hoc.AutoSize = true;
-            this.m_lbl_mon_hoc.Location = new System.Drawing.Point(362, 26);
+            this.m_lbl_mon_hoc.Location = new System.Drawing.Point(205, 26);
             this.m_lbl_mon_hoc.Name = "m_lbl_mon_hoc";
             this.m_lbl_mon_hoc.Size = new System.Drawing.Size(49, 13);
             this.m_lbl_mon_hoc.TabIndex = 1;
@@ -65,7 +65,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(231, 55);
+            this.label2.Location = new System.Drawing.Point(55, 55);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 13);
             this.label2.TabIndex = 2;
@@ -74,7 +74,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(231, 26);
+            this.label1.Location = new System.Drawing.Point(55, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 3;
@@ -83,7 +83,7 @@
             // m_lbl_so_luong_hoc_vien
             // 
             this.m_lbl_so_luong_hoc_vien.AutoSize = true;
-            this.m_lbl_so_luong_hoc_vien.Location = new System.Drawing.Point(362, 55);
+            this.m_lbl_so_luong_hoc_vien.Location = new System.Drawing.Point(205, 55);
             this.m_lbl_so_luong_hoc_vien.Name = "m_lbl_so_luong_hoc_vien";
             this.m_lbl_so_luong_hoc_vien.Size = new System.Drawing.Size(93, 13);
             this.m_lbl_so_luong_hoc_vien.TabIndex = 4;
@@ -92,7 +92,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(231, 83);
+            this.label4.Location = new System.Drawing.Point(55, 83);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 13);
             this.label4.TabIndex = 5;
@@ -107,7 +107,7 @@
             this.m_cmd_tao_lop.ImageIndex = 2;
             this.m_cmd_tao_lop.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.m_cmd_tao_lop.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
-            this.m_cmd_tao_lop.Location = new System.Drawing.Point(488, 4);
+            this.m_cmd_tao_lop.Location = new System.Drawing.Point(28, 4);
             this.m_cmd_tao_lop.Margin = new System.Windows.Forms.Padding(4);
             this.m_cmd_tao_lop.Name = "m_cmd_tao_lop";
             this.m_cmd_tao_lop.Padding = new System.Windows.Forms.Padding(1);
@@ -125,7 +125,7 @@
             this.m_cmd_huy.ImageIndex = 2;
             this.m_cmd_huy.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.m_cmd_huy.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
-            this.m_cmd_huy.Location = new System.Drawing.Point(604, 4);
+            this.m_cmd_huy.Location = new System.Drawing.Point(198, 4);
             this.m_cmd_huy.Margin = new System.Windows.Forms.Padding(4);
             this.m_cmd_huy.Name = "m_cmd_huy";
             this.m_cmd_huy.Padding = new System.Windows.Forms.Padding(1);
@@ -141,7 +141,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 207);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(718, 41);
+            this.panel1.Size = new System.Drawing.Size(337, 41);
             this.panel1.TabIndex = 17;
             // 
             // panel2
@@ -159,13 +159,29 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(718, 207);
+            this.panel2.Size = new System.Drawing.Size(337, 207);
             this.panel2.TabIndex = 18;
+            // 
+            // m_txt_diem_qua_mon
+            // 
+            this.m_txt_diem_qua_mon.Location = new System.Drawing.Point(208, 137);
+            this.m_txt_diem_qua_mon.Name = "m_txt_diem_qua_mon";
+            this.m_txt_diem_qua_mon.Size = new System.Drawing.Size(100, 20);
+            this.m_txt_diem_qua_mon.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(55, 140);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(75, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Điểm qua môn";
             // 
             // m_cbo_version
             // 
             this.m_cbo_version.FormattingEnabled = true;
-            this.m_cbo_version.Location = new System.Drawing.Point(365, 118);
+            this.m_cbo_version.Location = new System.Drawing.Point(208, 107);
             this.m_cbo_version.Name = "m_cbo_version";
             this.m_cbo_version.Size = new System.Drawing.Size(100, 21);
             this.m_cbo_version.TabIndex = 7;
@@ -173,37 +189,21 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(234, 118);
+            this.label3.Location = new System.Drawing.Point(55, 110);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "Version";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(231, 155);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Điểm qua môn";
-            // 
-            // m_txt_diem_qua_mon
-            // 
-            this.m_txt_diem_qua_mon.Location = new System.Drawing.Point(365, 157);
-            this.m_txt_diem_qua_mon.Name = "m_txt_diem_qua_mon";
-            this.m_txt_diem_qua_mon.Size = new System.Drawing.Size(100, 20);
-            this.m_txt_diem_qua_mon.TabIndex = 9;
-            // 
             // F301_Tao_lop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(718, 248);
+            this.ClientSize = new System.Drawing.Size(337, 248);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "F301_Tao_lop";
-            this.Text = "F301_Tao_lop";
+            this.Text = "F301 - Tạo lớp";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

@@ -216,7 +216,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "F205_TAO_MOI_LOP_HOC";
-            this.Text = "F205_TAO_MOI_LOP_HOC";
+            this.Text = "F205 - Tạo mới lớp học";
             this.Load += new System.EventHandler(this.F205_TAO_MOI_LOP_HOC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

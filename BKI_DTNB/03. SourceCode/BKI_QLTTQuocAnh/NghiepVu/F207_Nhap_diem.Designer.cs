@@ -37,13 +37,13 @@
             this.c_hoc_xong = new DevExpress.XtraGrid.Columns.GridColumn();
             this.c_qua_mon = new DevExpress.XtraGrid.Columns.GridColumn();
             this.c_ma_lop_hoc = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.c_ma_nv = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
             this.m_cmd_update = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.c_ma_nv = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.m_grc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv)).BeginInit();
             this.m_pnl_out_place_dm.SuspendLayout();
@@ -122,6 +122,14 @@
             this.c_ma_lop_hoc.Name = "c_ma_lop_hoc";
             this.c_ma_lop_hoc.Visible = true;
             this.c_ma_lop_hoc.VisibleIndex = 3;
+            // 
+            // c_ma_nv
+            // 
+            this.c_ma_nv.Caption = "Mã nhân viên";
+            this.c_ma_nv.FieldName = "MA_NV";
+            this.c_ma_nv.Name = "c_ma_nv";
+            this.c_ma_nv.Visible = true;
+            this.c_ma_nv.VisibleIndex = 1;
             // 
             // ImageList
             // 
@@ -209,14 +217,6 @@
             this.panel2.Size = new System.Drawing.Size(769, 322);
             this.panel2.TabIndex = 22;
             // 
-            // c_ma_nv
-            // 
-            this.c_ma_nv.Caption = "Mã nhân viên";
-            this.c_ma_nv.FieldName = "MA_NV";
-            this.c_ma_nv.Name = "c_ma_nv";
-            this.c_ma_nv.Visible = true;
-            this.c_ma_nv.VisibleIndex = 1;
-            // 
             // F207_Nhap_diem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,7 +226,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Name = "F207_Nhap_diem";
-            this.Text = "F207_Nhap_diem";
+            this.Text = "F207 - Nhập điểm";
             this.Load += new System.EventHandler(this.F207_Nhap_diem_Load);
             ((System.ComponentModel.ISupportInitialize)(this.m_grc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv)).EndInit();

@@ -286,7 +286,7 @@
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Name = "f208_gd_lop_mon";
-            this.Text = "f208_gd_lop_mon";
+            this.Text = "F208 - Danh sách lớp môn học";
             this.Load += new System.EventHandler(this.f208_gd_lop_mon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.m_grc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv)).EndInit();

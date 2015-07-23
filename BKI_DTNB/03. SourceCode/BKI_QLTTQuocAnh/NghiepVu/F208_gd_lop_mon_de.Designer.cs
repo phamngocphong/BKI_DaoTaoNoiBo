@@ -236,7 +236,7 @@
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Name = "F208_gd_lop_mon_de";
-            this.Text = "F208_gd_lop_mon_de";
+            this.Text = "F208 - Chi tiết lớp môn học";
             this.Load += new System.EventHandler(this.F208_gd_lop_mon_de_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);

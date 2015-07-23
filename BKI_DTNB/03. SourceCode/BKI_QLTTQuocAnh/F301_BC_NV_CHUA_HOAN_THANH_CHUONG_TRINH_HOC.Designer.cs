@@ -369,7 +369,7 @@
             this.Name = "F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC";
             this.Padding = new System.Windows.Forms.Padding(2);
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Text = "F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC";
+            this.Text = "F301 - Báo cáo nhân viên chưa hoàn thành chương trình học";
             this.Load += new System.EventHandler(this.F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC_Load);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

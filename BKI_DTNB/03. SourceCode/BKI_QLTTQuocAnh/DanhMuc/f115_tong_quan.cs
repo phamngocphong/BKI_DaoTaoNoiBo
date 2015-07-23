@@ -44,6 +44,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             ArrayList v_arr_list = new ArrayList();
             v_arr_list.Add(new iParameter("iP_tieu_de_bao_cao", "BAO CAO DANH MUC MON HOC"));
             v_arr_list.Add(new iParameter("iP_trung_tam", "TO HOP GIAO DUC TOPICA"));
+            v_arr_list.Add(new iParameter("iP_date_time", "Hà Nội, ngày 23 tháng 7 năm 2015"));
             BKI_QLTTQuocAnh.BaoCao.RPT_XtraReport v_xr = new BKI_QLTTQuocAnh.BaoCao.RPT_XtraReport(m_ds, m_grv, v_arr_list, System.Drawing.Printing.PaperKind.A4, true);
             ReportPrintTool v_xrpt = new ReportPrintTool(v_xr);
             v_xrpt.ShowPreview();

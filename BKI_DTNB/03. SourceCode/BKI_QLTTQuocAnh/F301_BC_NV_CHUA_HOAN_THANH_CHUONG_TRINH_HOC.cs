@@ -194,8 +194,9 @@ namespace BKI_QLTTQuocAnh
                 //    MessageBox.Show("Lưu báo cáo thành công");
                 //}
                 ArrayList v_arr_list = new ArrayList();
-                v_arr_list.Add(new iParameter("iP_tieu_de_bao_cao","BAO CAO NHAN VIEN CHUA HOC MON X"));
-                v_arr_list.Add(new iParameter("iP_trung_tam","TO HOP GIAO DUC TOPICA"));
+                v_arr_list.Add(new iParameter("iP_tieu_de_bao_cao","Báo cáo nhân viên chưa học môn " + m_cbo_mon_hoc.Text));
+                v_arr_list.Add(new iParameter("iP_trung_tam","TỔ HỢP GIÁO DỤC TOPICA"));
+                v_arr_list.Add(new iParameter("iP_date_time", "Hà Nội, ngày " + DateTime.Now.Date.ToShortDateString()));
                 BKI_QLTTQuocAnh.BaoCao.RPT_XtraReport v_xr = new BKI_QLTTQuocAnh.BaoCao.RPT_XtraReport(m_ds, m_grv,v_arr_list, System.Drawing.Printing.PaperKind.A4, true);
                 ReportPrintTool v_xrpt = new ReportPrintTool(v_xr);
                 v_xrpt.ShowPreview();

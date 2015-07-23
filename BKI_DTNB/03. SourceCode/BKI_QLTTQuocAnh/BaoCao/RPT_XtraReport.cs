@@ -40,6 +40,10 @@ namespace BKI_QLTTQuocAnh.BaoCao
                     ((XRLabel)this.FindControl(v_parameter.ParameterName, true)).Text = v_parameter.ParameterValue;
                 }
             }
+            int pagewidth = (PageWidth - (Margins.Left + Margins.Right) - (m_count_group_col + 1) * 20);
+            iP_tieu_de_bao_cao.Width = pagewidth - (m_count_group_col + 1) * 20;
+            iP_tieu_de_bao_cao.Location = new Point(0 + (m_count_group_col + 1) * 20, 50);
+            iP_tieu_de_bao_cao.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
         }
         private void ReportGroupBand(GridView ip_grv)
         {

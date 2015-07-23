@@ -14,6 +14,9 @@ using DevExpress.XtraGrid.Views.Grid;
 using BKI_QLTTQuocAnh.NghiepVu;
 using DevExpress.Utils.Menu;
 using BKI_QLTTQuocAnh.DanhMuc;
+using BKI_QLTTQuocAnh.BaoCao;
+using DevExpress.XtraReports.UI;
+using System.Collections;
 
 namespace BKI_QLTTQuocAnh
 {
@@ -21,7 +24,7 @@ namespace BKI_QLTTQuocAnh
     {
         decimal m_dc_id_lop_mon = -1;
         decimal m_dc_id_mon_hoc = -1;
-
+        DataSet m_ds = new DataSet();
         public F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC()
         {
             InitializeComponent();
@@ -43,11 +46,11 @@ namespace BKI_QLTTQuocAnh
         private void load_data_2_grid()
         {
             US_DM_MON_HOC v_us = new US_DM_MON_HOC();//Khai báo US
-            DataSet v_ds = new DataSet();
+            //DataSet v_ds = new DataSet();
             DataTable v_dt = new DataTable();
-            v_ds.Tables.Add(v_dt);
-            v_us.FillDatasetTheoMonHoc(v_ds, CIPConvert.ToDecimal(m_cbo_mon_hoc.SelectedValue));
-            m_grc.DataSource = v_ds.Tables[0];
+            m_ds.Tables.Add(v_dt);
+            v_us.FillDatasetTheoMonHoc(m_ds, CIPConvert.ToDecimal(m_cbo_mon_hoc.SelectedValue));
+            m_grc.DataSource = m_ds.Tables[0];
         }
 
         private void m_cmd_tao_lop_Click(object sender, EventArgs e)
@@ -180,13 +183,26 @@ namespace BKI_QLTTQuocAnh
 
         private void m_cmd_xuat_excel_Click(object sender, EventArgs e)
         {
-            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-            saveFileDialog1.Filter = "xls files (*.xls)|*.xls|All files (*.*)|*.*";
-            saveFileDialog1.RestoreDirectory = true;
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            try
             {
-                m_grv.ExportToXls(saveFileDialog1.FileName);
-                MessageBox.Show("Lưu báo cáo thành công");
+                //SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+                //saveFileDialog1.Filter = "xls files (*.xls)|*.xls|All files (*.*)|*.*";
+                //saveFileDialog1.RestoreDirectory = true;
+                //if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                //{
+                //    m_grv.ExportToXls(saveFileDialog1.FileName);
+                //    MessageBox.Show("Lưu báo cáo thành công");
+                //}
+                ArrayList v_arr_list = new ArrayList();
+                v_arr_list.Add(new iParameter("iP_tieu_de_bao_cao","BAO CAO NHAN VIEN CHUA HOC MON X"));
+                v_arr_list.Add(new iParameter("iP_trung_tam","TO HOP GIAO DUC TOPICA"));
+                BKI_QLTTQuocAnh.BaoCao.RPT_XtraReport v_xr = new BKI_QLTTQuocAnh.BaoCao.RPT_XtraReport(m_ds, m_grv,v_arr_list, System.Drawing.Printing.PaperKind.A4, true);
+                ReportPrintTool v_xrpt = new ReportPrintTool(v_xr);
+                v_xrpt.ShowPreview();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 

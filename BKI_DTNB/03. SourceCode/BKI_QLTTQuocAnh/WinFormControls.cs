@@ -17,6 +17,7 @@ using DevExpress.Utils.Menu;
 using DevExpress.XtraGrid.Views.Grid;
 using System.Configuration;
 using System.Data.OleDb;
+using DevExpress.XtraReports.UI;
 
 
 namespace BKI_QLTTQuocAnh
@@ -302,6 +303,17 @@ namespace BKI_QLTTQuocAnh
             CStoredProc v_cstore = new CStoredProc("get_chung_chi_het_han_theo_ngach");
             v_cstore.addDatetimeInputParam("@ngay",dateTime );
             v_cstore.fillDataSetByCommand(this, v_ds);
+        }
+    }
+
+    public class iParameter
+    {
+        public string ParameterName { get; set; }
+        public string ParameterValue { get; set; }
+
+        public iParameter(string ip_name, string ip_value) {
+            ParameterName = ip_name;
+            ParameterValue = ip_value;
         }
     }
 }

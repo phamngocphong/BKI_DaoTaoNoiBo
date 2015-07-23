@@ -15,8 +15,8 @@ namespace BKI_QLTTQuocAnh.BaoCao
     {
         PivotGridField fieldIDNHANVIEN;
         PivotGridField fieldTenMonHoc;
-        PivotGridField fieldTenNgach;
-        PivotGridField fieldTenNghiepVu;
+        PivotGridField fieldTenPhong;
+        PivotGridField fieldChucVu;
         PivotGridField fieldTenKhuVuc;
        
         public f305_BAO_CAO_CHUNG_CHI_HET_HAN()
@@ -31,17 +31,17 @@ namespace BKI_QLTTQuocAnh.BaoCao
         public void init_pivot_grid()
         {
             fieldTenMonHoc = new PivotGridField("TEN_MON_HOC", PivotArea.RowArea);
-            fieldTenMonHoc.Caption = "Tên môn học";
-            //fieldTenNgach = new PivotGridField("TEN_NGACH", PivotArea.ColumnArea);
-            //fieldTenNgach.Caption = "Tên ngạch";
+            fieldTenMonHoc.Caption = "TÊN MÔN HỌC";
+            fieldTenPhong = new PivotGridField("TEN_PHONG", PivotArea.ColumnArea);
+            fieldTenPhong.Caption = "Tên PHÒNG";
             fieldIDNHANVIEN = new PivotGridField("ID", PivotArea.DataArea);
             fieldIDNHANVIEN.SummaryType = DevExpress.Data.PivotGrid.PivotSummaryType.Count;
-            //fieldTenNghiepVu = new PivotGridField("TEN_NGHIEP_VU", PivotArea.RowArea);
-            //fieldTenNghiepVu.Caption = "Tên nghiệp vụ";
+            fieldChucVu = new PivotGridField("CHUC_VU", PivotArea.RowArea);
+            fieldChucVu.Caption = "CHỨC VỤ";
             //fieldTenKhuVuc = new PivotGridField("TEN", PivotArea.ColumnArea);
             //fieldTenKhuVuc.Caption = "Khu vực";
 
-            pivotGridControl1.Fields.AddRange(new PivotGridField[] { fieldIDNHANVIEN, fieldTenMonHoc });
+            pivotGridControl1.Fields.AddRange(new PivotGridField[] { fieldTenMonHoc, fieldTenPhong, fieldChucVu, fieldIDNHANVIEN });
         }
 
         private void load_data_to_pivot_grid()
@@ -83,14 +83,14 @@ namespace BKI_QLTTQuocAnh.BaoCao
      
         
 
-        private void pivotGridControl1_FieldValueDisplayText(object sender, PivotFieldDisplayTextEventArgs e)
-        {
+        //private void pivotGridControl1_FieldValueDisplayText(object sender, PivotFieldDisplayTextEventArgs e)
+        //{
 
-            if (e.ValueType == DevExpress.XtraPivotGrid.PivotGridValueType.GrandTotal)
-                if (e.DisplayText == "Grand Total" || e.DisplayText=="Count")
-                    e.DisplayText = "Tổng";
-                else
-                    e.DisplayText = e.DataField.SummaryType.ToString();
-        }
+        //    if (e.ValueType == DevExpress.XtraPivotGrid.PivotGridValueType.GrandTotal)
+        //        if (e.DisplayText == "Grand Total" || e.DisplayText=="Count")
+        //            e.DisplayText = "Tổng";
+        //        else
+        //            e.DisplayText = e.DataField.SummaryType.ToString();
+        //}
     }
 }

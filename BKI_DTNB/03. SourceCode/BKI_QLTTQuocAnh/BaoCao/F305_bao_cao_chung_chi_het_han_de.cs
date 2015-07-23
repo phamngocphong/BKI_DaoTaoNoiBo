@@ -36,7 +36,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
         }
 
         public void display(PivotDrillDownDataSource ip_ds) 
-            {
+        {
             m_grc.DataSource = ip_ds;
             this.ShowDialog();
         }

@@ -60,10 +60,11 @@ Public Class f101_Dang_Nhap
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(f101_Dang_Nhap))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.m_btnOK = New SIS.Controls.Button.SiSButton()
-        Me.ImageList = New System.Windows.Forms.ImageList()
+        Me.ImageList = New System.Windows.Forms.ImageList(Me.components)
         Me.m_btnCancel = New SIS.Controls.Button.SiSButton()
         Me.m_txtMatKhau = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -184,7 +185,7 @@ Public Class f101_Dang_Nhap
         Me.GroupBox1.Size = New System.Drawing.Size(302, 162)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Đăng nhập - Hệ thống quản lý tài chính"
+        Me.GroupBox1.Text = "Đăng nhập - Hệ thống quản lý đào tạo nội bộ"
         '
         'Panel2
         '

@@ -47,6 +47,7 @@ namespace BKI_QLTTQuocAnh
         {
             US_DM_MON_HOC v_us = new US_DM_MON_HOC();//Khai báo US
             //DataSet v_ds = new DataSet();
+            m_ds.Clear();
             DataTable v_dt = new DataTable();
             m_ds.Tables.Add(v_dt);
             v_us.FillDatasetTheoMonHoc(m_ds, CIPConvert.ToDecimal(m_cbo_mon_hoc.SelectedValue));
@@ -60,7 +61,7 @@ namespace BKI_QLTTQuocAnh
                 decimal v_dc_id_version_mon = -1;
                 decimal v_dc_diem_qua_mon = -1;
                 F301_Tao_lop v_f = new F301_Tao_lop();
-                decimal v_so_luong_hoc_vien = v_f.Display(m_grv.SelectedRowsCount, CIPConvert.ToDecimal(m_cbo_mon_hoc.SelectedValue), ref v_dc_id_version_mon, ref v_dc_diem_qua_mon);
+                decimal v_so_luong_hoc_vien = v_f.Display(GetSelectedRows(m_grv).Count, CIPConvert.ToDecimal(m_cbo_mon_hoc.SelectedValue), ref v_dc_id_version_mon, ref v_dc_diem_qua_mon);
                 if (v_f.DialogResult == System.Windows.Forms.DialogResult.OK)
                 {
                     List<decimal> v_lst_id_lop = taoLopHoc(v_so_luong_hoc_vien, v_dc_id_version_mon, v_dc_diem_qua_mon);
@@ -75,12 +76,24 @@ namespace BKI_QLTTQuocAnh
             }
         }
 
+        private List<int> GetSelectedRows(GridView view)
+        {
+            List<int> v_lst = new List<int>();
+            int[] rows = m_grv.GetSelectedRows();
+            for (int i = 0; i < rows.Length; i++)
+                if (!m_grv.IsGroupRow(rows[i]))
+                {
+                    v_lst.Add(rows[i]);
+                }
+            return v_lst;
+        }
+
         decimal m_so_luong_hoc_vien;
 
         private List<decimal> taoLopHoc(decimal v_so_luong_hoc_vien, decimal ip_dc_id_version_mon, decimal ip_dc_diem_qua_mon)
         {
             m_so_luong_hoc_vien = v_so_luong_hoc_vien;
-            decimal v_dc_so_hoc_vien = m_grv.SelectedRowsCount;
+            decimal v_dc_so_hoc_vien = GetSelectedRows(m_grv).Count;
             decimal v_dc_id_mon_hoc = CIPConvert.ToDecimal(m_cbo_mon_hoc.SelectedValue);
             List<decimal> v_lst_id_lop = new List<decimal>();
             var v_mon_hoc = new US_DM_MON_HOC(v_dc_id_mon_hoc);
@@ -105,21 +118,21 @@ namespace BKI_QLTTQuocAnh
         private void assignHV(List<decimal> ip_lst_id_lop, decimal ip_so_luong_hv)
         {
             decimal v_id_lop = ip_lst_id_lop[0];
-            for (int i = 0; i < m_grv.SelectedRowsCount; i++)
+            var v_lst = GetSelectedRows(m_grv);
+            for (int i = 0; i < v_lst.Count; i++)
             {
-                if (m_grv.GetSelectedRows()[i] >= 0)
-                {
-                    US_GD_DIEM v_us = new US_GD_DIEM();
-                    var v_data_row = m_grv.GetDataRow(m_grv.GetSelectedRows()[i]);
+                US_GD_DIEM v_us = new US_GD_DIEM();
+                var v_data_row = m_grv.GetDataRow(v_lst[i]);
 
-                    v_us.dcID_LOP_MON = ip_lst_id_lop[(int)(i / ip_so_luong_hv)];
-                    v_us.dcID_NHAN_VIEN = CIPConvert.ToDecimal(v_data_row[0].ToString());
-                    v_us.strQUA_MON = "N";
-                    v_us.strHOC_XONG_YN = "N";
-                    v_us.strDA_XOA = "N";
-                    updateNhanVienMonHoc(v_us.dcID_NHAN_VIEN);
-                    v_us.Insert();
-                }
+                v_us.dcID_LOP_MON = ip_lst_id_lop[(int)(i / ip_so_luong_hv)];
+                v_us.dcID_NHAN_VIEN = CIPConvert.ToDecimal(v_data_row[0].ToString());
+                v_us.strQUA_MON = "N";
+                v_us.strHOC_XONG_YN = "N";
+                v_us.strDA_XOA = "N";
+                v_us.datNGAY_LAP = DateTime.Now.Date;
+                v_us.datNGAY_SUA = DateTime.Now.Date;
+                updateNhanVienMonHoc(v_us.dcID_NHAN_VIEN);
+                v_us.Insert();
             }
         }
 
@@ -128,7 +141,7 @@ namespace BKI_QLTTQuocAnh
             US_GD_LOP_MON v_us_gd_LOP_MON = new US_GD_LOP_MON();
             DS_GD_LOP_MON v_ds_gd_LOP_MON = new DS_GD_LOP_MON();
             v_ds_gd_LOP_MON.EnforceConstraints = false;
-            v_us_gd_LOP_MON.FillDataset(v_ds_gd_LOP_MON, " WHERE ID_VERSION_MON_HOC IN (SELECT ID_VERSION_MON_HOC FROM DM_VERSION_MON_HOC WHERE ID_MON_HOC = " + m_cbo_mon_hoc.SelectedValue + ")");
+            v_us_gd_LOP_MON.FillDataset(v_ds_gd_LOP_MON, " WHERE ID_VERSION_MON_HOC IN (SELECT ID FROM DM_VERSION_MON_HOC WHERE ID_MON_HOC = " + m_cbo_mon_hoc.SelectedValue + ")");
             for (int i = 0; i < v_ds_gd_LOP_MON.Tables[0].Rows.Count; i++)
             {
                 US_GD_DIEM v_us = new US_GD_DIEM();
@@ -255,7 +268,8 @@ namespace BKI_QLTTQuocAnh
                 {
                     List<decimal> v_lst_id_lop = new List<decimal>();
                     v_lst_id_lop.Add(m_dc_id_lop_mon);
-                    assignHV(v_lst_id_lop, m_grv.SelectedRowsCount);
+                    assignHV(v_lst_id_lop, GetSelectedRows(m_grv).Count);
+                    MessageBox.Show("Assign thành công học viên vào lớp môn.");
                     load_data_2_grid();
                 }
             }
@@ -263,6 +277,16 @@ namespace BKI_QLTTQuocAnh
             {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
+        }
+
+        private void m_grv_GroupRowCollapsing(object sender, DevExpress.XtraGrid.Views.Base.RowAllowEventArgs e)
+        {
+            //e.Allow = false;
+        }
+
+        private void m_grv_EndGrouping(object sender, EventArgs e)
+        {
+            //m_grv.ExpandAllGroups();
         }
     }
 }

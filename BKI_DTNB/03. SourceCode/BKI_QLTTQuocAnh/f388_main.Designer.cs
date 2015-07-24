@@ -61,6 +61,7 @@
             this.m_cmd_mon_hoc = new DevExpress.XtraBars.BarButtonItem();
             this.m_cmd_ngach_nghiep_vu = new DevExpress.XtraBars.BarButtonItem();
             this.m_cmd_tong_quan = new DevExpress.XtraBars.BarButtonItem();
+            this.m_cmd_chung_chi = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -70,14 +71,13 @@
             this.ribbonPageGroup14 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.MdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.m_cmd_ds_hs_theo_lm = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.m_cmd_chung_chi = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MdiManager)).BeginInit();
             this.SuspendLayout();
@@ -423,6 +423,16 @@
             this.m_cmd_tong_quan.Name = "m_cmd_tong_quan";
             this.m_cmd_tong_quan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_tong_quan_ItemClick);
             // 
+            // m_cmd_chung_chi
+            // 
+            this.m_cmd_chung_chi.Caption = "Chứng chỉ";
+            this.m_cmd_chung_chi.Glyph = ((System.Drawing.Image)(resources.GetObject("m_cmd_chung_chi.Glyph")));
+            this.m_cmd_chung_chi.Id = 48;
+            this.m_cmd_chung_chi.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("m_cmd_chung_chi.LargeGlyph")));
+            this.m_cmd_chung_chi.LargeWidth = 150;
+            this.m_cmd_chung_chi.Name = "m_cmd_chung_chi";
+            this.m_cmd_chung_chi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_chung_chi_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -492,6 +502,12 @@
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "Quản lý lớp môn";
             // 
+            // ribbonPageGroup6
+            // 
+            this.ribbonPageGroup6.ItemLinks.Add(this.m_cmd_chung_chi);
+            this.ribbonPageGroup6.Name = "ribbonPageGroup6";
+            this.ribbonPageGroup6.Text = "Quản lý chứng chỉ";
+            // 
             // ribbonPage4
             // 
             this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -529,22 +545,6 @@
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
             this.ribbonPageGroup8.Text = "Theo lớp môn";
             // 
-            // ribbonPageGroup6
-            // 
-            this.ribbonPageGroup6.ItemLinks.Add(this.m_cmd_chung_chi);
-            this.ribbonPageGroup6.Name = "ribbonPageGroup6";
-            this.ribbonPageGroup6.Text = "Quản lý chứng chỉ";
-            // 
-            // m_cmd_chung_chi
-            // 
-            this.m_cmd_chung_chi.Caption = "Chứng chỉ";
-            this.m_cmd_chung_chi.Glyph = ((System.Drawing.Image)(resources.GetObject("m_cmd_chung_chi.Glyph")));
-            this.m_cmd_chung_chi.Id = 48;
-            this.m_cmd_chung_chi.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("m_cmd_chung_chi.LargeGlyph")));
-            this.m_cmd_chung_chi.LargeWidth = 150;
-            this.m_cmd_chung_chi.Name = "m_cmd_chung_chi";
-            this.m_cmd_chung_chi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_chung_chi_ItemClick);
-            // 
             // f388_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -559,6 +559,7 @@
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "PHẦN MỀM QUẢN LÝ ĐÀO TẠO NỘI BỘ - TOPICA";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.f388_main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MdiManager)).EndInit();
             this.ResumeLayout(false);

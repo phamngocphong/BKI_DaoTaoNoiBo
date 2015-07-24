@@ -304,6 +304,13 @@ namespace BKI_QLTTQuocAnh
             v_cstore.addDatetimeInputParam("@ngay",dateTime );
             v_cstore.fillDataSetByCommand(this, v_ds);
         }
+
+        internal void FillDatasetSQLInjection(DataSet v_ds, string p)
+        {
+            CStoredProc v_cstore = new CStoredProc("sqlInjection");
+            v_cstore.addNVarcharInputParam("@str_query", p);
+            v_cstore.fillDataSetByCommand(this, v_ds);
+        }
     }
 
     public class iParameter

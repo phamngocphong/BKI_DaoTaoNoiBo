@@ -442,5 +442,10 @@ namespace BKI_QLTTQuocAnh
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
+
+        private void f388_main_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

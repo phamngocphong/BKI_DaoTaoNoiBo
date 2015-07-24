@@ -12,7 +12,7 @@
               <DbSource ConnectionRef="DAO_TAO_NOI_BOConnectionString (Settings)" DbObjectName="DAO_TAO_NOI_BO.dbo.V_GD_CHUNG_CHI" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT ID, NGAY_BAT_DAU, NGAY_KET_THUC, SO_CHUNG_CHI, TEN_MON_HOC, MA_VERSION, MA_NV, HO_TEN, TRANG_THAI, ID_GD_DIEM FROM dbo.V_GD_CHUNG_CHI</CommandText>
+                    <CommandText>SELECT ID, NGAY_BAT_DAU, NGAY_KET_THUC, SO_CHUNG_CHI, TEN_MON_HOC, MA_VERSION, MA_NV, HO_TEN, TRANG_THAI, ID_GD_DIEM, NGAY_LAP FROM dbo.V_GD_CHUNG_CHI</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -29,6 +29,7 @@
               <Mapping SourceColumn="HO_TEN" DataSetColumn="HO_TEN" />
               <Mapping SourceColumn="TRANG_THAI" DataSetColumn="TRANG_THAI" />
               <Mapping SourceColumn="ID_GD_DIEM" DataSetColumn="ID_GD_DIEM" />
+              <Mapping SourceColumn="NGAY_LAP" DataSetColumn="NGAY_LAP" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -89,6 +90,7 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="ID_GD_DIEM" msprop:Generator_ColumnVarNameInTable="columnID_GD_DIEM" msprop:Generator_ColumnPropNameInRow="ID_GD_DIEM" msprop:Generator_ColumnPropNameInTable="ID_GD_DIEMColumn" msprop:Generator_UserColumnName="ID_GD_DIEM" type="xs:decimal" />
+              <xs:element name="NGAY_LAP" msprop:Generator_ColumnVarNameInTable="columnNGAY_LAP" msprop:Generator_ColumnPropNameInRow="NGAY_LAP" msprop:Generator_ColumnPropNameInTable="NGAY_LAPColumn" msprop:Generator_UserColumnName="NGAY_LAP" type="xs:dateTime" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

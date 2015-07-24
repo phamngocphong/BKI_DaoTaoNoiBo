@@ -216,7 +216,7 @@ namespace BKI_QLTTQuocAnh
             }
             catch (Exception v_e)
             {
-                CSystemLog_301.ExceptionHandle(v_e);
+                CSystemLog_301.ExceptionHandle(v_e);           
             }
         }
 

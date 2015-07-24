@@ -41,12 +41,12 @@ namespace BKI_QLTTQuocAnh.NghiepVu
           
             m_us_gd_chung_chi.datNGAY_BAT_DAU = m_dat_thoi_gian_bat_dau.Value;
             m_us_gd_chung_chi.datNGAY_KET_THUC = m_dat_thoi_gian_ket_thuc.Value;
-            m_us_gd_chung_chi.datNGAY_LAP = DateTime.Now.Date;
+            m_us_gd_chung_chi.datNGAY_LAP = m_dat_ngay_lap.Value;
             m_us_gd_chung_chi.datNGAY_SUA = DateTime.Now.Date;
             m_us_gd_chung_chi.strNGUOI_LAP = "admin";
             m_us_gd_chung_chi.IsNGUOI_SUANull();
             m_us_gd_chung_chi.strDA_XOA = "N";
-            
+        
             m_us_gd_chung_chi.dcID_GD_DIEM = m_dc_id_gd_diem;
             m_us_gd_chung_chi.strSO_CHUNG_CHI = m_txt_so_chung_chi.Text;
             if (v_trang_thai == true)
@@ -64,6 +64,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             m_txt_ten_nhan_vien.Text = m_us.strHO_TEN;
             m_txt_ten_mon_hoc.Text = m_us.strTEN_MON_HOC;
             m_txt_ma_version.Text = m_us.strMA_VERSION;
+            m_dat_ngay_lap.Value = m_us.datNGAY_LAP;
             m_dat_thoi_gian_bat_dau.Value = m_us.datNGAY_BAT_DAU;
             m_dat_thoi_gian_ket_thuc.Value = m_us.datNGAY_KET_THUC;
             m_txt_trang_thai.Text = m_us.strTRANG_THAI;

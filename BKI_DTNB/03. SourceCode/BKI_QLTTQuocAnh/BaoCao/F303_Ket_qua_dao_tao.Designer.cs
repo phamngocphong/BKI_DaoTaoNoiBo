@@ -53,6 +53,8 @@
             // 
             // m_dat
             // 
+            this.m_dat.CustomFormat = "dd/MM/yyyy";
+            this.m_dat.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.m_dat.Location = new System.Drawing.Point(56, 20);
             this.m_dat.Name = "m_dat";
             this.m_dat.Size = new System.Drawing.Size(200, 20);

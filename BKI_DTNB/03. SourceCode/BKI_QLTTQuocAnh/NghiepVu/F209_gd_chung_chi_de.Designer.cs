@@ -50,6 +50,8 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.m_txt_ten_mon_hoc = new System.Windows.Forms.TextBox();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.m_dat_ngay_lap = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -70,7 +72,9 @@
             // 
             // m_dat_thoi_gian_bat_dau
             // 
-            this.m_dat_thoi_gian_bat_dau.Location = new System.Drawing.Point(115, 215);
+            this.m_dat_thoi_gian_bat_dau.CustomFormat = "dd/MM/yyyy";
+            this.m_dat_thoi_gian_bat_dau.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.m_dat_thoi_gian_bat_dau.Location = new System.Drawing.Point(115, 187);
             this.m_dat_thoi_gian_bat_dau.Name = "m_dat_thoi_gian_bat_dau";
             this.m_dat_thoi_gian_bat_dau.Size = new System.Drawing.Size(186, 20);
             this.m_dat_thoi_gian_bat_dau.TabIndex = 13;
@@ -78,7 +82,7 @@
             // m_txt_trang_thai
             // 
             this.m_txt_trang_thai.Enabled = false;
-            this.m_txt_trang_thai.Location = new System.Drawing.Point(454, 165);
+            this.m_txt_trang_thai.Location = new System.Drawing.Point(454, 140);
             this.m_txt_trang_thai.Name = "m_txt_trang_thai";
             this.m_txt_trang_thai.Size = new System.Drawing.Size(233, 20);
             this.m_txt_trang_thai.TabIndex = 12;
@@ -86,14 +90,14 @@
             // m_txt_ma_version
             // 
             this.m_txt_ma_version.Enabled = false;
-            this.m_txt_ma_version.Location = new System.Drawing.Point(454, 115);
+            this.m_txt_ma_version.Location = new System.Drawing.Point(454, 95);
             this.m_txt_ma_version.Name = "m_txt_ma_version";
             this.m_txt_ma_version.Size = new System.Drawing.Size(233, 20);
             this.m_txt_ma_version.TabIndex = 10;
             // 
             // label11
             // 
-            this.label11.Location = new System.Drawing.Point(351, 168);
+            this.label11.Location = new System.Drawing.Point(354, 143);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(49, 13);
             this.label11.TabIndex = 9;
@@ -101,7 +105,7 @@
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(350, 220);
+            this.labelControl6.Location = new System.Drawing.Point(350, 193);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(85, 13);
             this.labelControl6.TabIndex = 8;
@@ -109,7 +113,7 @@
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(24, 220);
+            this.labelControl5.Location = new System.Drawing.Point(25, 193);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(83, 13);
             this.labelControl5.TabIndex = 7;
@@ -117,7 +121,7 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(351, 118);
+            this.labelControl4.Location = new System.Drawing.Point(351, 98);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(52, 13);
             this.labelControl4.TabIndex = 6;
@@ -156,6 +160,8 @@
             // groupControl1
             // 
             this.groupControl1.CaptionImage = ((System.Drawing.Image)(resources.GetObject("groupControl1.CaptionImage")));
+            this.groupControl1.Controls.Add(this.m_dat_ngay_lap);
+            this.groupControl1.Controls.Add(this.labelControl8);
             this.groupControl1.Controls.Add(this.m_txt_so_chung_chi);
             this.groupControl1.Controls.Add(this.labelControl7);
             this.groupControl1.Controls.Add(this.m_txt_ma_nhan_vien);
@@ -181,14 +187,14 @@
             // 
             // m_txt_so_chung_chi
             // 
-            this.m_txt_so_chung_chi.Location = new System.Drawing.Point(115, 165);
+            this.m_txt_so_chung_chi.Location = new System.Drawing.Point(115, 140);
             this.m_txt_so_chung_chi.Name = "m_txt_so_chung_chi";
             this.m_txt_so_chung_chi.Size = new System.Drawing.Size(186, 20);
             this.m_txt_so_chung_chi.TabIndex = 18;
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(24, 168);
+            this.labelControl7.Location = new System.Drawing.Point(25, 143);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(61, 13);
             this.labelControl7.TabIndex = 17;
@@ -197,7 +203,7 @@
             // m_txt_ma_nhan_vien
             // 
             this.m_txt_ma_nhan_vien.Enabled = false;
-            this.m_txt_ma_nhan_vien.Location = new System.Drawing.Point(115, 64);
+            this.m_txt_ma_nhan_vien.Location = new System.Drawing.Point(115, 51);
             this.m_txt_ma_nhan_vien.Name = "m_txt_ma_nhan_vien";
             this.m_txt_ma_nhan_vien.Size = new System.Drawing.Size(186, 20);
             this.m_txt_ma_nhan_vien.TabIndex = 16;
@@ -205,21 +211,23 @@
             // m_txt_ten_nhan_vien
             // 
             this.m_txt_ten_nhan_vien.Enabled = false;
-            this.m_txt_ten_nhan_vien.Location = new System.Drawing.Point(454, 64);
+            this.m_txt_ten_nhan_vien.Location = new System.Drawing.Point(454, 51);
             this.m_txt_ten_nhan_vien.Name = "m_txt_ten_nhan_vien";
             this.m_txt_ten_nhan_vien.Size = new System.Drawing.Size(233, 20);
             this.m_txt_ten_nhan_vien.TabIndex = 15;
             // 
             // m_dat_thoi_gian_ket_thuc
             // 
-            this.m_dat_thoi_gian_ket_thuc.Location = new System.Drawing.Point(454, 214);
+            this.m_dat_thoi_gian_ket_thuc.CustomFormat = "dd/MM/yyyy";
+            this.m_dat_thoi_gian_ket_thuc.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.m_dat_thoi_gian_ket_thuc.Location = new System.Drawing.Point(454, 186);
             this.m_dat_thoi_gian_ket_thuc.Name = "m_dat_thoi_gian_ket_thuc";
             this.m_dat_thoi_gian_ket_thuc.Size = new System.Drawing.Size(233, 20);
             this.m_dat_thoi_gian_ket_thuc.TabIndex = 14;
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(25, 118);
+            this.labelControl3.Location = new System.Drawing.Point(25, 98);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(61, 13);
             this.labelControl3.TabIndex = 5;
@@ -227,7 +235,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(351, 67);
+            this.labelControl2.Location = new System.Drawing.Point(350, 54);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(68, 13);
             this.labelControl2.TabIndex = 3;
@@ -236,18 +244,35 @@
             // m_txt_ten_mon_hoc
             // 
             this.m_txt_ten_mon_hoc.Enabled = false;
-            this.m_txt_ten_mon_hoc.Location = new System.Drawing.Point(115, 115);
+            this.m_txt_ten_mon_hoc.Location = new System.Drawing.Point(115, 95);
             this.m_txt_ten_mon_hoc.Name = "m_txt_ten_mon_hoc";
             this.m_txt_ten_mon_hoc.Size = new System.Drawing.Size(186, 20);
             this.m_txt_ten_mon_hoc.TabIndex = 1;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(24, 67);
+            this.labelControl1.Location = new System.Drawing.Point(25, 54);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(64, 13);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Mã nhân viên";
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Location = new System.Drawing.Point(25, 244);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(42, 13);
+            this.labelControl8.TabIndex = 19;
+            this.labelControl8.Text = "Ngày lập";
+            // 
+            // m_dat_ngay_lap
+            // 
+            this.m_dat_ngay_lap.CustomFormat = "dd/MM/yyyy";
+            this.m_dat_ngay_lap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.m_dat_ngay_lap.Location = new System.Drawing.Point(115, 238);
+            this.m_dat_ngay_lap.Name = "m_dat_ngay_lap";
+            this.m_dat_ngay_lap.Size = new System.Drawing.Size(186, 20);
+            this.m_dat_ngay_lap.TabIndex = 20;
             // 
             // F209_gd_chung_chi_de
             // 
@@ -293,5 +318,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private System.Windows.Forms.TextBox m_txt_so_chung_chi;
         private DevExpress.XtraEditors.LabelControl labelControl7;
+        private System.Windows.Forms.DateTimePicker m_dat_ngay_lap;
+        private DevExpress.XtraEditors.LabelControl labelControl8;
     }
 }

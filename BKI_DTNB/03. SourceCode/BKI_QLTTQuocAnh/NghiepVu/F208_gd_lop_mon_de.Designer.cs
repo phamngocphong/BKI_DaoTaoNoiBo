@@ -82,6 +82,8 @@
             // 
             // m_dat_thoi_gian
             // 
+            this.m_dat_thoi_gian.CustomFormat = "dd/MM/yyyy";
+            this.m_dat_thoi_gian.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.m_dat_thoi_gian.Location = new System.Drawing.Point(115, 168);
             this.m_dat_thoi_gian.Name = "m_dat_thoi_gian";
             this.m_dat_thoi_gian.Size = new System.Drawing.Size(140, 20);

@@ -63,6 +63,27 @@ public class US_V_GD_CHUNG_CHI : US_Object
 	{
 		pm_objDR["NGAY_BAT_DAU"] = System.Convert.DBNull;
 	}
+    public DateTime datNGAY_LAP
+    {
+        get
+        {
+            return CNull.RowNVLDate(pm_objDR, "NGAY_LAP", IPConstants.c_DefaultDate);
+        }
+        set
+        {
+            pm_objDR["NGAY_LAP"] = value;
+        }
+    }
+
+    public bool IsNGAY_LAPNull()
+    {
+        return pm_objDR.IsNull("NGAY_LAP");
+    }
+
+    public void SetNGAY_LAPNull()
+    {
+        pm_objDR["NGAY_LAP"] = System.Convert.DBNull;
+    }
 
 	public DateTime datNGAY_KET_THUC
 	{

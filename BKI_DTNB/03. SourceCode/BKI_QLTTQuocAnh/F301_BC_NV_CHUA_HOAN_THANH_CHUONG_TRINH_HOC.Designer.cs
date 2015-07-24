@@ -354,7 +354,7 @@
             // 
             // c_trang_thai
             // 
-            this.c_trang_thai.Caption = "Trang thai";
+            this.c_trang_thai.Caption = "Trạng thái";
             this.c_trang_thai.FieldName = "TRANG_THAI";
             this.c_trang_thai.Name = "c_trang_thai";
             this.c_trang_thai.Visible = true;

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+IPExcelReport
+</name>
+</assembly>
+<members>
+<member name="M:IP.Core.IPExcelReport.CExportColumnFactory.CreateExportColumnAsp(System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Dùng trong ASP.NET
+ </summary>
+	<param name="i_iGridCol"></param>
+	<param name="i_iSheetCol"></param>
+	<param name="i_iSheetStartRow"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:IP.Core.IPExcelReport.CObjectExportColumn.ExportWithoutFixedRowsAsp">
+	<summary>
+ Dùng trong ASP.NET
+ </summary>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

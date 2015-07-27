@@ -79,7 +79,13 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             m_dc_ma_ten_mon_hoc = ip_selected;
         }
 
-
+        private bool check_validate_data_is_OK()
+        {
+           if((m_txt_dia_diem.Text=="")||(m_txt_diem_qua_mon.Text=="")||(m_txt_so_luong.Text=="")||(m_txt_ma_lop.Text=="")||(m_cbo_version.SelectedValue==null)||(m_cbo_ma_ten_mon_hoc.SelectedValue==null))
+                return false;
+            else
+            return true;
+        }
 
         internal void Insert_form()
         {
@@ -98,26 +104,52 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 
         private void savedata()
         {
-            form_to_us();
-            switch (m_e_form_mode)
+            if (check_validate_data_is_OK() != true)
             {
-                case DataEntryFormMode.InsertDataState:
-                    m_us.Insert();
-                    break;
-                case DataEntryFormMode.UpdateDataState:
-                    m_us.Update();
-                    break;
-                default:
-                    break;
+                MessageBox.Show("Vui lòng nhập đầy đủ dữ liệu!");
 
-                    
             }
-            MessageBox.Show("Lưu lớp môn thành công!");
-        }
+            else 
+            {
+                form_to_us();
+                switch (m_e_form_mode)
+                {
+                    case DataEntryFormMode.InsertDataState:
+                        m_us.Insert();
+                        break;
+                    case DataEntryFormMode.UpdateDataState:
+                        m_us.Update();
+                        break;
+                    default:
+                        break;
 
+
+                }
+                MessageBox.Show("Lưu lớp môn thành công!");
+                this.Close();
+            }
+           
+        }
+        //public bool kiem_tra_dien_thong_tin()
+        //{
+        //    if (m_cbo_ma_ten_mon_hoc.SelectedValue == null)
+        //        return false;
+        //    if (m_cbo_version.SelectedText == null)
+        //        return false;
+        //    if (m_txt_dia_diem.Text == null)
+        //        return false;
+        //    if (m_txt_ma_lop.Text == null)
+        //        return false;
+        //    if (m_txt_so_luong.Text == null)
+        //        return false;
+        //    if (m_txt_diem_qua_mon == null)
+        //        return false;
+        //}
         private void m_cmd_luu_Click(object sender, EventArgs e)
         {
+            //if (kiem_tra_dien_thong_tin().Equals == true)
             try
+
             {
                 savedata();
             }

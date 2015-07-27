@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F208_gd_lop_mon_de));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.m_dat_thoi_gian = new System.Windows.Forms.DateTimePicker();
             this.m_txt_diem_qua_mon = new System.Windows.Forms.TextBox();
             this.m_txt_dia_diem = new System.Windows.Forms.TextBox();
@@ -59,6 +65,12 @@
             // groupControl1
             // 
             this.groupControl1.CaptionImage = ((System.Drawing.Image)(resources.GetObject("groupControl1.CaptionImage")));
+            this.groupControl1.Controls.Add(this.labelControl13);
+            this.groupControl1.Controls.Add(this.labelControl12);
+            this.groupControl1.Controls.Add(this.labelControl11);
+            this.groupControl1.Controls.Add(this.labelControl10);
+            this.groupControl1.Controls.Add(this.labelControl9);
+            this.groupControl1.Controls.Add(this.labelControl7);
             this.groupControl1.Controls.Add(this.m_dat_thoi_gian);
             this.groupControl1.Controls.Add(this.m_txt_diem_qua_mon);
             this.groupControl1.Controls.Add(this.m_txt_dia_diem);
@@ -80,18 +92,72 @@
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "THÔNG TIN LỚP MÔN";
             // 
+            // labelControl13
+            // 
+            this.labelControl13.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.labelControl13.Location = new System.Drawing.Point(107, 67);
+            this.labelControl13.Name = "labelControl13";
+            this.labelControl13.Size = new System.Drawing.Size(14, 13);
+            this.labelControl13.TabIndex = 25;
+            this.labelControl13.Text = "(*)";
+            // 
+            // labelControl12
+            // 
+            this.labelControl12.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.labelControl12.Location = new System.Drawing.Point(394, 67);
+            this.labelControl12.Name = "labelControl12";
+            this.labelControl12.Size = new System.Drawing.Size(14, 13);
+            this.labelControl12.TabIndex = 24;
+            this.labelControl12.Text = "(*)";
+            // 
+            // labelControl11
+            // 
+            this.labelControl11.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.labelControl11.Location = new System.Drawing.Point(401, 118);
+            this.labelControl11.Name = "labelControl11";
+            this.labelControl11.Size = new System.Drawing.Size(14, 13);
+            this.labelControl11.TabIndex = 23;
+            this.labelControl11.Text = "(*)";
+            // 
+            // labelControl10
+            // 
+            this.labelControl10.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.labelControl10.Location = new System.Drawing.Point(394, 168);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(14, 13);
+            this.labelControl10.TabIndex = 22;
+            this.labelControl10.Text = "(*)";
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.labelControl9.Location = new System.Drawing.Point(62, 118);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(14, 13);
+            this.labelControl9.TabIndex = 21;
+            this.labelControl9.Text = "(*)";
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.labelControl7.Location = new System.Drawing.Point(98, 221);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(14, 13);
+            this.labelControl7.TabIndex = 19;
+            this.labelControl7.Text = "(*)";
+            // 
             // m_dat_thoi_gian
             // 
             this.m_dat_thoi_gian.CustomFormat = "dd/MM/yyyy";
             this.m_dat_thoi_gian.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.m_dat_thoi_gian.Location = new System.Drawing.Point(115, 168);
+            this.m_dat_thoi_gian.Location = new System.Drawing.Point(138, 168);
             this.m_dat_thoi_gian.Name = "m_dat_thoi_gian";
             this.m_dat_thoi_gian.Size = new System.Drawing.Size(140, 20);
             this.m_dat_thoi_gian.TabIndex = 13;
             // 
             // m_txt_diem_qua_mon
             // 
-            this.m_txt_diem_qua_mon.Location = new System.Drawing.Point(115, 218);
+            this.m_txt_diem_qua_mon.Location = new System.Drawing.Point(138, 221);
             this.m_txt_diem_qua_mon.Name = "m_txt_diem_qua_mon";
             this.m_txt_diem_qua_mon.Size = new System.Drawing.Size(140, 20);
             this.m_txt_diem_qua_mon.TabIndex = 12;
@@ -169,7 +235,7 @@
             // m_cbo_ma_ten_mon_hoc
             // 
             this.m_cbo_ma_ten_mon_hoc.FormattingEnabled = true;
-            this.m_cbo_ma_ten_mon_hoc.Location = new System.Drawing.Point(115, 64);
+            this.m_cbo_ma_ten_mon_hoc.Location = new System.Drawing.Point(138, 64);
             this.m_cbo_ma_ten_mon_hoc.Name = "m_cbo_ma_ten_mon_hoc";
             this.m_cbo_ma_ten_mon_hoc.Size = new System.Drawing.Size(140, 21);
             this.m_cbo_ma_ten_mon_hoc.TabIndex = 2;
@@ -177,7 +243,7 @@
             // 
             // m_txt_ma_lop
             // 
-            this.m_txt_ma_lop.Location = new System.Drawing.Point(115, 115);
+            this.m_txt_ma_lop.Location = new System.Drawing.Point(138, 115);
             this.m_txt_ma_lop.Name = "m_txt_ma_lop";
             this.m_txt_ma_lop.Size = new System.Drawing.Size(140, 20);
             this.m_txt_ma_lop.TabIndex = 1;
@@ -272,6 +338,12 @@
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.SimpleButton m_cmd_huy;
+        private DevExpress.XtraEditors.LabelControl labelControl13;
+        private DevExpress.XtraEditors.LabelControl labelControl12;
+        private DevExpress.XtraEditors.LabelControl labelControl11;
+        private DevExpress.XtraEditors.LabelControl labelControl10;
+        private DevExpress.XtraEditors.LabelControl labelControl9;
+        private DevExpress.XtraEditors.LabelControl labelControl7;
 
     }
 }

@@ -9,6 +9,8 @@ using System.Windows.Forms;
 using IP.Core.IPCommon;
 using BKI_QLTTQuocAnh.US;
 using BKI_QLTTQuocAnh.DS;
+using System.Data.SqlClient;
+using System.Configuration;
 namespace BKI_QLTTQuocAnh.NghiepVu
 {
     public partial class F208_gd_lop_mon_de : Form
@@ -78,6 +80,23 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             m_dc_id_version = m_us.dcID_VERSION_MON_HOC;
             m_dc_ma_ten_mon_hoc = ip_selected;
         }
+        private bool check_validate_ma_lop(string ip_ma_lop)
+        {
+           
+            US_DUNG_CHUNG v_us_dc = new US_DUNG_CHUNG();
+            DataSet v_ds = new DataSet();
+            v_ds.Tables.Add(new DataTable());
+            v_us_dc.FillDatasetWithQuery(v_ds, "SELECT MA_LOP_HOC FROM GD_LOP_MON ");
+            //DataRow m_dt_r=v_ds.Tables[0].Rows[0];
+            for (int i = 0; i <= v_ds.Tables[0].Rows.Count; i++)
+            {
+                DataRow m_dt_r = v_ds.Tables[0].Rows[i];
+                if (ip_ma_lop == m_dt_r["MA_LOP_HOC"].ToString())
+                    return false;
+            }
+            return true;
+
+        }
         private bool check_validate_time_is_ok()
         {
             if (m_dat_thoi_gian.Value < DateTime.Now)
@@ -119,26 +138,33 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             {
                 if (check_validate_time_is_ok() != true)
                 {
-                    MessageBox.Show("Vui lòng nhập thời gian lớn hơn hiện tại");
+                    MessageBox.Show("Vui lòng nhập lại thời gian lớn hơn hiện tại");
                 }
                 else
                 {
-                    form_to_us();
-                    switch (m_e_form_mode)
+                    if (check_validate_ma_lop(m_txt_ma_lop.Text) != true)
                     {
-                        case DataEntryFormMode.InsertDataState:
-                            m_us.Insert();
-                            break;
-                        case DataEntryFormMode.UpdateDataState:
-                            m_us.Update();
-                            break;
-                        default:
-                            break;
-
-
+                        MessageBox.Show("Trùng mã lớp học. Vui lòng nhập lại");
                     }
-                    MessageBox.Show("Lưu lớp môn thành công!");
-                    this.Close();
+                    else
+                    {
+                        form_to_us();
+                        switch (m_e_form_mode)
+                        {
+                            case DataEntryFormMode.InsertDataState:
+                                m_us.Insert();
+                                break;
+                            case DataEntryFormMode.UpdateDataState:
+                                m_us.Update();
+                                break;
+                            default:
+                                break;
+
+
+                        }
+                        MessageBox.Show("Lưu lớp môn thành công!");
+                        this.Close();
+                    }
                 }
             }
            

@@ -78,11 +78,17 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             m_dc_id_version = m_us.dcID_VERSION_MON_HOC;
             m_dc_ma_ten_mon_hoc = ip_selected;
         }
-
+        private bool check_validate_time_is_ok()
+        {
+            if (m_dat_thoi_gian.Value < DateTime.Now)
+                return false;
+            else
+                return true;
+        }
         private bool check_validate_data_is_OK()
         {
            if((m_txt_dia_diem.Text=="")||(m_txt_diem_qua_mon.Text=="")||(m_txt_so_luong.Text=="")||(m_txt_ma_lop.Text=="")||(m_cbo_version.SelectedValue==null)||(m_cbo_ma_ten_mon_hoc.SelectedValue==null))
-                return false;
+            return false;
             else
             return true;
         }
@@ -109,24 +115,31 @@ namespace BKI_QLTTQuocAnh.NghiepVu
                 MessageBox.Show("Vui lòng nhập đầy đủ dữ liệu!");
 
             }
-            else 
+            else
             {
-                form_to_us();
-                switch (m_e_form_mode)
+                if (check_validate_time_is_ok() != true)
                 {
-                    case DataEntryFormMode.InsertDataState:
-                        m_us.Insert();
-                        break;
-                    case DataEntryFormMode.UpdateDataState:
-                        m_us.Update();
-                        break;
-                    default:
-                        break;
-
-
+                    MessageBox.Show("Vui lòng nhập thời gian lớn hơn hiện tại");
                 }
-                MessageBox.Show("Lưu lớp môn thành công!");
-                this.Close();
+                else
+                {
+                    form_to_us();
+                    switch (m_e_form_mode)
+                    {
+                        case DataEntryFormMode.InsertDataState:
+                            m_us.Insert();
+                            break;
+                        case DataEntryFormMode.UpdateDataState:
+                            m_us.Update();
+                            break;
+                        default:
+                            break;
+
+
+                    }
+                    MessageBox.Show("Lưu lớp môn thành công!");
+                    this.Close();
+                }
             }
            
         }

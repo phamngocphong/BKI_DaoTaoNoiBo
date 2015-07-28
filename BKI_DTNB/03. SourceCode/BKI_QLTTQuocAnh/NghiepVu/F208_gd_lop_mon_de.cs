@@ -97,6 +97,16 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             return true;
 
         }
+        private bool check_validate_data_type() 
+        {
+            string diem_qua_mon = m_txt_diem_qua_mon.Text;
+            string so_luong_hoc_vien = m_txt_so_luong.Text;
+            decimal value;
+            if ((Decimal.TryParse(diem_qua_mon, out value)) && (Decimal.TryParse(so_luong_hoc_vien, out value)))
+                return true;
+            else
+                return false;
+        }
         private bool check_validate_time_is_ok()
         {
             if (m_dat_thoi_gian.Value < DateTime.Now)
@@ -142,28 +152,36 @@ namespace BKI_QLTTQuocAnh.NghiepVu
                 }
                 else
                 {
-                    if (check_validate_ma_lop(m_txt_ma_lop.Text) != true)
+                    if (check_validate_data_type() != true)
                     {
-                        MessageBox.Show("Trùng mã lớp học. Vui lòng nhập lại");
+                        MessageBox.Show("Vui lòng nhập kiểu số cho Số Lượng và Điểm Qua Môn");
+
                     }
                     else
                     {
-                        form_to_us();
-                        switch (m_e_form_mode)
+                        if (check_validate_ma_lop(m_txt_ma_lop.Text) != true)
                         {
-                            case DataEntryFormMode.InsertDataState:
-                                m_us.Insert();
-                                break;
-                            case DataEntryFormMode.UpdateDataState:
-                                m_us.Update();
-                                break;
-                            default:
-                                break;
-
-
+                            MessageBox.Show("Trùng mã lớp học. Vui lòng nhập lại");
                         }
-                        MessageBox.Show("Lưu lớp môn thành công!");
-                        this.Close();
+                        else
+                        {
+                            form_to_us();
+                            switch (m_e_form_mode)
+                            {
+                                case DataEntryFormMode.InsertDataState:
+                                    m_us.Insert();
+                                    break;
+                                case DataEntryFormMode.UpdateDataState:
+                                    m_us.Update();
+                                    break;
+                                default:
+                                    break;
+
+
+                            }
+                            MessageBox.Show("Lưu lớp môn thành công!");
+                            this.Close();
+                        }
                     }
                 }
             }

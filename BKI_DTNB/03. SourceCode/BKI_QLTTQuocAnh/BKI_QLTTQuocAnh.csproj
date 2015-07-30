@@ -309,6 +309,18 @@
     <Compile Include="NghiepVu\F210_Nhap_diem_xlsx_de.Designer.cs">
       <DependentUpon>F210_Nhap_diem_xlsx_de.cs</DependentUpon>
     </Compile>
+    <Compile Include="NghiepVu\F211_Nhan_vien_nghiep_vu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\F211_Nhan_vien_nghiep_vu.Designer.cs">
+      <DependentUpon>F211_Nhan_vien_nghiep_vu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NghiepVu\F211_Nhan_vien_nghiep_vu_de.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\F211_Nhan_vien_nghiep_vu_de.Designer.cs">
+      <DependentUpon>F211_Nhan_vien_nghiep_vu_de.cs</DependentUpon>
+    </Compile>
     <Compile Include="NghiepVu\F301_Assign.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -423,6 +435,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\F210_Nhap_diem_xlsx_de.resx">
       <DependentUpon>F210_Nhap_diem_xlsx_de.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\F211_Nhan_vien_nghiep_vu.resx">
+      <DependentUpon>F211_Nhan_vien_nghiep_vu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\F211_Nhan_vien_nghiep_vu_de.resx">
+      <DependentUpon>F211_Nhan_vien_nghiep_vu_de.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\F301_Assign.resx">
       <DependentUpon>F301_Assign.cs</DependentUpon>

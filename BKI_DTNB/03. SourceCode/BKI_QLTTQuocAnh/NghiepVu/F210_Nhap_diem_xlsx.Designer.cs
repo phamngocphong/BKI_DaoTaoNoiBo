@@ -43,6 +43,7 @@
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
             this.m_cmd_update = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.m_grc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv)).BeginInit();
             this.m_pnl_out_place_dm.SuspendLayout();
@@ -69,7 +70,8 @@
             this.gridColumn4,
             this.gridColumn5,
             this.gridColumn6,
-            this.gridColumn7});
+            this.gridColumn7,
+            this.gridColumn8});
             this.m_grv.GridControl = this.m_grc;
             this.m_grv.Name = "m_grv";
             this.m_grv.OptionsSelection.MultiSelect = true;
@@ -94,10 +96,10 @@
             // gridColumn3
             // 
             this.gridColumn3.Caption = "Tên nhân viên";
-            this.gridColumn3.FieldName = "HO_TEN";
+            this.gridColumn3.FieldName = "TEN";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 3;
+            this.gridColumn3.VisibleIndex = 4;
             // 
             // gridColumn4
             // 
@@ -105,7 +107,7 @@
             this.gridColumn4.FieldName = "DIEM_CHUYEN_CAN";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 4;
+            this.gridColumn4.VisibleIndex = 5;
             // 
             // gridColumn5
             // 
@@ -113,7 +115,7 @@
             this.gridColumn5.FieldName = "DIEM_KIEM_TRA";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 5;
+            this.gridColumn5.VisibleIndex = 6;
             // 
             // gridColumn6
             // 
@@ -121,7 +123,7 @@
             this.gridColumn6.FieldName = "DIEM_THI";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 6;
+            this.gridColumn6.VisibleIndex = 7;
             // 
             // gridColumn7
             // 
@@ -129,7 +131,7 @@
             this.gridColumn7.FieldName = "KET_QUA";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 7;
+            this.gridColumn7.VisibleIndex = 8;
             // 
             // ImageList
             // 
@@ -200,6 +202,14 @@
             this.m_cmd_exit.TabIndex = 11;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             // 
+            // gridColumn8
+            // 
+            this.gridColumn8.Caption = "Họ đệm";
+            this.gridColumn8.FieldName = "HO_DEM";
+            this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.Visible = true;
+            this.gridColumn8.VisibleIndex = 3;
+            // 
             // F210_Nhap_diem_xlsx
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,5 +242,6 @@
         internal System.Windows.Forms.Panel m_pnl_out_place_dm;
         internal SIS.Controls.Button.SiSButton m_cmd_update;
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
     }
 }

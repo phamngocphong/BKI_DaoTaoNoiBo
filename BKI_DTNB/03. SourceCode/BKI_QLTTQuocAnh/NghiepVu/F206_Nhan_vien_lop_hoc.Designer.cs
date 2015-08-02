@@ -45,6 +45,7 @@
             this.m_cmd_view = new SIS.Controls.Button.SiSButton();
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.m_grc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv)).BeginInit();
             this.m_pnl_out_place_dm.SuspendLayout();
@@ -71,9 +72,10 @@
             this.c_ma_nv,
             this.c_ho_ten,
             this.c_ten_mon,
-            this.c_ma_trung_tam});
+            this.c_ma_trung_tam,
+            this.gridColumn1});
             this.m_grv.GridControl = this.m_grc;
-            this.m_grv.GroupCount = 3;
+            this.m_grv.GroupCount = 2;
             this.m_grv.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "MA_NV", null, "(Count={0})")});
             this.m_grv.Name = "m_grv";
@@ -81,8 +83,7 @@
             this.m_grv.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
             this.m_grv.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.c_ten_mon, DevExpress.Data.ColumnSortOrder.Ascending),
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.c_ma_lop_hoc, DevExpress.Data.ColumnSortOrder.Ascending),
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.c_ma_trung_tam, DevExpress.Data.ColumnSortOrder.Ascending)});
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.c_ma_lop_hoc, DevExpress.Data.ColumnSortOrder.Ascending)});
             // 
             // c_id
             // 
@@ -92,7 +93,7 @@
             // 
             // c_ma_lop_hoc
             // 
-            this.c_ma_lop_hoc.Caption = "Mã lớp học";
+            this.c_ma_lop_hoc.Caption = "MÃ LỚP HỌC";
             this.c_ma_lop_hoc.FieldName = "MA_LOP_HOC";
             this.c_ma_lop_hoc.Name = "c_ma_lop_hoc";
             this.c_ma_lop_hoc.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
@@ -102,13 +103,13 @@
             // 
             // c_id_nhan_vien
             // 
-            this.c_id_nhan_vien.Caption = "ID nhân viên";
+            this.c_id_nhan_vien.Caption = "ID NHÂN VIÊN";
             this.c_id_nhan_vien.FieldName = "ID_NHAN_VIEN";
             this.c_id_nhan_vien.Name = "c_id_nhan_vien";
             // 
             // c_ma_nv
             // 
-            this.c_ma_nv.Caption = "Mã nhân viên";
+            this.c_ma_nv.Caption = "MÃ NHÂN VIÊN";
             this.c_ma_nv.FieldName = "MA_NV";
             this.c_ma_nv.Name = "c_ma_nv";
             this.c_ma_nv.Visible = true;
@@ -117,27 +118,27 @@
             // 
             // c_ho_ten
             // 
-            this.c_ho_ten.Caption = "Họ tên";
-            this.c_ho_ten.FieldName = "HO_TEN";
+            this.c_ho_ten.Caption = "HỌ ĐỆM";
+            this.c_ho_ten.FieldName = "HO_DEM";
             this.c_ho_ten.Name = "c_ho_ten";
             this.c_ho_ten.Visible = true;
             this.c_ho_ten.VisibleIndex = 2;
             // 
             // c_ten_mon
             // 
-            this.c_ten_mon.Caption = "Tên môn";
-            this.c_ten_mon.FieldName = "TEN_MON";
+            this.c_ten_mon.Caption = "TÊN MÔN";
+            this.c_ten_mon.FieldName = "TEN_MON_HOC";
             this.c_ten_mon.Name = "c_ten_mon";
             this.c_ten_mon.Visible = true;
             this.c_ten_mon.VisibleIndex = 3;
             // 
             // c_ma_trung_tam
             // 
-            this.c_ma_trung_tam.Caption = "Mã trung tâm";
+            this.c_ma_trung_tam.Caption = "MÃ TRUNG TÂM";
             this.c_ma_trung_tam.FieldName = "MA_TRUNG_TAM";
             this.c_ma_trung_tam.Name = "c_ma_trung_tam";
             this.c_ma_trung_tam.Visible = true;
-            this.c_ma_trung_tam.VisibleIndex = 0;
+            this.c_ma_trung_tam.VisibleIndex = 4;
             // 
             // ImageList
             // 
@@ -241,6 +242,14 @@
             this.m_cmd_exit.TabIndex = 11;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "TÊN";
+            this.gridColumn1.FieldName = "TEN";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 3;
+            // 
             // F206_Nhan_vien_lop_hoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -275,5 +284,6 @@
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
         private DevExpress.XtraGrid.Columns.GridColumn c_ten_mon;
         private DevExpress.XtraGrid.Columns.GridColumn c_ma_trung_tam;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
     }
 }

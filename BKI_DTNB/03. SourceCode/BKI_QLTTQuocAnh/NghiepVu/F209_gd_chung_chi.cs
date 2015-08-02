@@ -48,7 +48,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa bản ghi này không?", "Cảnh báo", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                v_us.Delete();
+                v_us.strDA_XOA = "Y";
             }
 
             load_data_2_grid();

@@ -426,4 +426,14 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string TEN_HOC_PHAN = "TEN_HOC_PHAN";
     }
 
+    public class DM_NHAN_SU_NGHIEP_VU
+    {
+        public const string ID = "ID";
+        public const string ID_NHAN_SU = "ID_NHAN_SU";
+        public const string ID_NGHIEP_VU = "ID_NGHIEP_VU";
+        public const string NGHIEP_VU_CHINH_YN = "NGHIEP_VU_CHINH_YN";
+        public const string NGHIEP_VU_HOC_THEM_YN = "NGHIEP_VU_HOC_THEM_YN";
+        public const string DA_XOA_YN = "DA_XOA_YN";
+    }
+
 }

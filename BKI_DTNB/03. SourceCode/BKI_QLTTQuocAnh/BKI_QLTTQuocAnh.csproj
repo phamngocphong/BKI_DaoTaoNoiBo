@@ -287,6 +287,18 @@
     <Compile Include="NghiepVu\BackupDB.Designer.cs">
       <DependentUpon>BackupDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="NghiepVu\F112_nhan_su_nghiep_vu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\F112_nhan_su_nghiep_vu.Designer.cs">
+      <DependentUpon>F112_nhan_su_nghiep_vu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NghiepVu\F112_nhan_su_nghiep_vu_de.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\F112_nhan_su_nghiep_vu_de.Designer.cs">
+      <DependentUpon>F112_nhan_su_nghiep_vu_de.cs</DependentUpon>
+    </Compile>
     <Compile Include="NghiepVu\F205_TAO_MOI_LOP_HOC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -446,6 +458,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\BackupDB.resx">
       <DependentUpon>BackupDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\F112_nhan_su_nghiep_vu.resx">
+      <DependentUpon>F112_nhan_su_nghiep_vu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\F112_nhan_su_nghiep_vu_de.resx">
+      <DependentUpon>F112_nhan_su_nghiep_vu_de.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\F205_TAO_MOI_LOP_HOC.resx">
       <DependentUpon>F205_TAO_MOI_LOP_HOC.cs</DependentUpon>

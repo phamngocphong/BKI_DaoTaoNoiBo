@@ -161,7 +161,16 @@ namespace BKI_QLTTQuocAnh
 
         private void m_cmd_search_Click(object sender, EventArgs e)//Click vào nút tìm kiếm
         {
-            load_data_2_grid();
+            try
+            {
+                load_data_2_grid();
+            }
+            catch (Exception ex)
+            {
+
+                CSystemLog_301.ExceptionHandle(ex);
+            }
+            
         }
 
         private void m_cbo_ngach_SelectedIndexChanged(object sender, EventArgs e)//Combobox ngạch thay đổi giá trị

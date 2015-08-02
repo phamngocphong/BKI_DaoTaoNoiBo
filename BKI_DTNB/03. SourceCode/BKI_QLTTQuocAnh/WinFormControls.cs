@@ -274,6 +274,12 @@ namespace BKI_QLTTQuocAnh
             v_cstore.fillDataSetByCommand(this, op_ds);
         }
 
+        public void FillDatasetVNghiepVuMonHoc(DataSet op_ds)
+        {
+            CStoredProc v_cstore = new CStoredProc("get_danh_sach_nhan_vien_nghiep_vu");
+            v_cstore.fillDataSetByCommand(this, op_ds);
+        }
+
         internal void FillDatasetCBO(DataSet op_ds, string ip_str_table_name, string ip_str_value_field, string ip_str_display_field, string ip_str_condition)
         {
             CStoredProc v_cstore = new CStoredProc("get_data_for_cbo");
@@ -290,6 +296,7 @@ namespace BKI_QLTTQuocAnh
             v_cstore.addNVarcharInputParam("@TABLE_NAME", ip_str_table_name);
             v_cstore.fillDataSetByCommand(this, op_ds);
         }
+
 
         internal void FillDatasetWithQuery(DataSet op_ds, string ip_query)
         {

@@ -447,5 +447,20 @@ namespace BKI_QLTTQuocAnh
         {
 
         }
+
+        private void m_cmd_nhan_vien_nghiep_vu_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                F112_nhan_su_nghiep_vu v_f = new F112_nhan_su_nghiep_vu();
+                v_f.MdiParent = this;
+                v_f.Show();
+            }
+            catch (Exception ex)
+            {
+
+                CSystemLog_301.ExceptionHandle(ex);
+            }
+        }
     }
 }

@@ -53,6 +53,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="US_DM_MON_HOC.cs" />
+    <Compile Include="US_DM_NHAN_SU_NGHIEP_VU.cs" />
     <Compile Include="US_DM_VERSION_MON_HOC.cs" />
     <Compile Include="US_GD_CHUNG_CHI.cs" />
     <Compile Include="US_GD_DIEM.cs" />

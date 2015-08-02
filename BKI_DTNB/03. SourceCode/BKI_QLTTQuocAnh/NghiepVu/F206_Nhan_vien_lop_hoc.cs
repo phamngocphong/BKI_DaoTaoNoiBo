@@ -72,9 +72,20 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 
         private void m_cmd_insert_Click(object sender, EventArgs e)
         {
+            try
+            {
+                var v_dr = m_grv.GetDataRow(m_grv.GetSelectedRows()[0]);
+                  
             F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC v_f = new F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC();
             v_f.ShowDialog();
             load_data_2_grid();
+            }
+            catch (Exception ex)
+            {
+                CSystemLog_301.ExceptionHandle(ex);
+               
+            }
+         ;
         }
     }
 }

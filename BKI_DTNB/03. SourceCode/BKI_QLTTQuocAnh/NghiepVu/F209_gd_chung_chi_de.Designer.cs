@@ -41,6 +41,8 @@
             this.m_cmd_thoat = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.m_dat_ngay_lap = new System.Windows.Forms.DateTimePicker();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.m_txt_so_chung_chi = new System.Windows.Forms.TextBox();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.m_txt_ma_nhan_vien = new System.Windows.Forms.TextBox();
@@ -50,8 +52,6 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.m_txt_ten_mon_hoc = new System.Windows.Forms.TextBox();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.m_dat_ngay_lap = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -185,6 +185,23 @@
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "THÔNG TIN CHỨNG CHỈ";
             // 
+            // m_dat_ngay_lap
+            // 
+            this.m_dat_ngay_lap.CustomFormat = "dd/MM/yyyy";
+            this.m_dat_ngay_lap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.m_dat_ngay_lap.Location = new System.Drawing.Point(115, 238);
+            this.m_dat_ngay_lap.Name = "m_dat_ngay_lap";
+            this.m_dat_ngay_lap.Size = new System.Drawing.Size(186, 20);
+            this.m_dat_ngay_lap.TabIndex = 20;
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Location = new System.Drawing.Point(25, 244);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(42, 13);
+            this.labelControl8.TabIndex = 19;
+            this.labelControl8.Text = "Ngày lập";
+            // 
             // m_txt_so_chung_chi
             // 
             this.m_txt_so_chung_chi.Location = new System.Drawing.Point(115, 140);
@@ -256,23 +273,6 @@
             this.labelControl1.Size = new System.Drawing.Size(64, 13);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Mã nhân viên";
-            // 
-            // labelControl8
-            // 
-            this.labelControl8.Location = new System.Drawing.Point(25, 244);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(42, 13);
-            this.labelControl8.TabIndex = 19;
-            this.labelControl8.Text = "Ngày lập";
-            // 
-            // m_dat_ngay_lap
-            // 
-            this.m_dat_ngay_lap.CustomFormat = "dd/MM/yyyy";
-            this.m_dat_ngay_lap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.m_dat_ngay_lap.Location = new System.Drawing.Point(115, 238);
-            this.m_dat_ngay_lap.Name = "m_dat_ngay_lap";
-            this.m_dat_ngay_lap.Size = new System.Drawing.Size(186, 20);
-            this.m_dat_ngay_lap.TabIndex = 20;
             // 
             // F209_gd_chung_chi_de
             // 

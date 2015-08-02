@@ -113,6 +113,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_DM_NGHIEP_VU_MON_HOC.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_DM_NHAN_SU_NGHIEP_VU.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_DM_NHAN_SU_NGHIEP_VU.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_DM_PHONG_DAI.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -356,6 +361,17 @@
     </None>
     <None Include="DS_DM_NGHIEP_VU_MON_HOC.xss">
       <DependentUpon>DS_DM_NGHIEP_VU_MON_HOC.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_NHAN_SU_NGHIEP_VU.xsc">
+      <DependentUpon>DS_DM_NHAN_SU_NGHIEP_VU.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_NHAN_SU_NGHIEP_VU.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_DM_NHAN_SU_NGHIEP_VU.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_DM_NHAN_SU_NGHIEP_VU.xss">
+      <DependentUpon>DS_DM_NHAN_SU_NGHIEP_VU.xsd</DependentUpon>
     </None>
     <None Include="DS_DM_PHONG_DAI.xsc">
       <DependentUpon>DS_DM_PHONG_DAI.xsd</DependentUpon>

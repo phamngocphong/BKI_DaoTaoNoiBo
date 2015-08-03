@@ -209,6 +209,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             try
             {
                 savedata();
+                this.Close();
             }
             catch (Exception ex)
             {

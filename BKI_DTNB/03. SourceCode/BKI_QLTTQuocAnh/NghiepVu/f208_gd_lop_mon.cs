@@ -57,8 +57,9 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             {
                 F208_gd_lop_mon_de v_f = new F208_gd_lop_mon_de();
                // var m_row = m_grv.SelectedRowsCount - 1;
-                var v_data_row = m_grv.GetDataRow(m_grv.FocusedRowHandle);
-                US_GD_LOP_MON v_us = new US_GD_LOP_MON(CIPConvert.ToDecimal(v_data_row["ID"].ToString()));
+               // var v_data_row = m_grv.GetDataRow(m_grv.FocusedRowHandle);
+                var v_data_row = m_grv.GetDataRow(m_grv.GetSelectedRows()[0]);
+                var v_us = new US_GD_LOP_MON(CIPConvert.ToDecimal(v_data_row["ID"].ToString()));
                 US_DM_VERSION_MON_HOC us_version = new US_DM_VERSION_MON_HOC();
                 DS_DM_VERSION_MON_HOC v_ds_version = new DS_DM_VERSION_MON_HOC();
                 v_ds_version.EnforceConstraints = false;

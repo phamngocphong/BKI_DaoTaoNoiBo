@@ -18,7 +18,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         decimal m_dc_id_mon_hoc = -1;
         decimal m_dc_ma_ten_mon_hoc = -1;
         decimal m_dc_id_version = -1;
-        string m_ma_lop="";
+        string m_ma_lop = "";
         DataEntryFormMode m_e_form_mode;
         US_GD_LOP_MON m_us = new US_GD_LOP_MON();
         public F208_gd_lop_mon_de()
@@ -83,8 +83,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         }
         private bool check_validate_ma_lop(string ip_ma_lop)
         {
-            if (ip_ma_lop != "")
-            {
+
                 US_DUNG_CHUNG v_us_dc = new US_DUNG_CHUNG();
                 DataSet v_ds = new DataSet();
                 v_ds.Tables.Add(new DataTable());
@@ -97,11 +96,8 @@ namespace BKI_QLTTQuocAnh.NghiepVu
                         return false;
                 }
                 return true;
-            }
-            else return true;
-
         }
-        private bool check_validate_data_type() 
+        private bool check_validate_data_type()
         {
             string diem_qua_mon = m_txt_diem_qua_mon.Text;
             string so_luong_hoc_vien = m_txt_so_luong.Text;
@@ -120,10 +116,10 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         }
         private bool check_validate_data_is_OK()
         {
-           if((m_txt_dia_diem.Text=="")||(m_txt_diem_qua_mon.Text=="")||(m_txt_so_luong.Text=="")||(m_txt_ma_lop.Text=="")||(m_cbo_version.SelectedValue==null)||(m_cbo_ma_ten_mon_hoc.SelectedValue==null))
-            return false;
+            if ((m_txt_dia_diem.Text == "") || (m_txt_diem_qua_mon.Text == "") || (m_txt_so_luong.Text == "") || (m_txt_ma_lop.Text == "") || (m_cbo_version.SelectedValue == null) || (m_cbo_ma_ten_mon_hoc.SelectedValue == null))
+                return false;
             else
-            return true;
+                return true;
         }
 
         internal void Insert_form(bool ip_trang_thai)
@@ -155,71 +151,62 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         }
         private void kiem_tra_ngay_thang()
         {
-                if (check_validate_time_is_ok() != true)
-                {
-                    MessageBox.Show("Vui lòng nhập lại thời gian lớn hơn hiện tại");
-                }
-                else
-                {
-                    kiem_tra_du_lieu_kieu_so();
-                }
+            if (check_validate_time_is_ok() != true)
+            {
+                MessageBox.Show("Vui lòng nhập lại thời gian lớn hơn hiện tại");
+            }
+            else
+            {
+                kiem_tra_du_lieu_kieu_so();
+            }
         }
+
         private void kiem_tra_du_lieu_kieu_so()
         {
-                    if (check_validate_data_type() != true)
-                    {
-                        MessageBox.Show("Vui lòng nhập kiểu số cho Số Lượng và Điểm Qua Môn");
+            if (check_validate_data_type() != true)
+            {
+                MessageBox.Show("Vui lòng nhập kiểu số cho Số Lượng và Điểm Qua Môn");
 
-                    }
-                    else
-                    {
-                        kiem_tra_trung_ma_lop();
-                    }
+            }
+            else
+            {
+                kiem_tra_trung_ma_lop();
+            }
         }
+
         private void kiem_tra_trung_ma_lop()
         {
-                        if (check_validate_ma_lop(m_ma_lop) != true)
-                        {
-                            MessageBox.Show("Trùng mã lóp. Vui lòng nhập lại");
-                        }
-                        else
-                        {
-                            form_to_us();
-                            switch (m_e_form_mode)
-                            {
-                                case DataEntryFormMode.InsertDataState:
-                                    m_us.Insert();
-                                    break;
-                                case DataEntryFormMode.UpdateDataState:
-                                    m_us.Update();
-                                    break;
-                            }
-                            MessageBox.Show("Lưu lớp môn thành công!");
-                            this.Close();
-
-                        }
            
+                form_to_us();
+                try
+                {
+                    switch (m_e_form_mode)
+                    {
+                        case DataEntryFormMode.InsertDataState:
+                            m_us.Insert();
+                            break;
+                        case DataEntryFormMode.UpdateDataState:
+                            m_us.Update();
+                            break;
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                     MessageBox.Show("Trùng mã lớp. Xin vui lòng nhập lại thông tin!");
+                }
+               
+               // MessageBox.Show("Lưu lớp môn thành công!");
+
+            
+
+            this.Close();
         }
-        //public bool kiem_tra_dien_thong_tin()
-        //{
-        //    if (m_cbo_ma_ten_mon_hoc.SelectedValue == null)
-        //        return false;
-        //    if (m_cbo_version.SelectedText == null)
-        //        return false;
-        //    if (m_txt_dia_diem.Text == null)
-        //        return false;
-        //    if (m_txt_ma_lop.Text == null)
-        //        return false;
-        //    if (m_txt_so_luong.Text == null)
-        //        return false;
-        //    if (m_txt_diem_qua_mon == null)
-        //        return false;
-        //}
+      
         private void m_cmd_luu_Click(object sender, EventArgs e)
         {
-            //if (kiem_tra_dien_thong_tin().Equals == true)
+          
             try
-
             {
                 savedata();
             }

@@ -267,7 +267,7 @@ namespace BKI_QLTTQuocAnh
             v_cstore.fillDataSetByCommand(this, op_ds);
         }
 
-        public void FillDatasetGDChiTietChucVu(DataSet op_ds, DateTime ip_dat)
+        public void FillDatasetTinhHinhDaoTao(DataSet op_ds, DateTime ip_dat)
         {
             CStoredProc v_cstore = new CStoredProc("rpt_tinh_hinh_dao_tao");
             v_cstore.addDatetimeInputParam("@ip_dat_ngay_bao_cao",ip_dat );

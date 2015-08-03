@@ -30,11 +30,11 @@
         {
             this.m_grc = new DevExpress.XtraGrid.GridControl();
             this.m_grv = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.m_grc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv)).BeginInit();
             this.SuspendLayout();
@@ -54,28 +54,21 @@
             // m_grv
             // 
             this.m_grv.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
             this.gridColumn2,
             this.gridColumn3,
             this.gridColumn4,
-            this.gridColumn10});
+            this.gridColumn10,
+            this.gridColumn1});
             this.m_grv.GridControl = this.m_grc;
             this.m_grv.GroupCount = 1;
             this.m_grv.Name = "m_grv";
             this.m_grv.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn1, DevExpress.Data.ColumnSortOrder.Ascending)});
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Caption = "Mã môn học";
-            this.gridColumn1.FieldName = "MA_MON_HOC";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn2, DevExpress.Data.ColumnSortOrder.Ascending)});
+            this.m_grv.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.m_grv_PopupMenuShowing);
             // 
             // gridColumn2
             // 
-            this.gridColumn2.Caption = "Tên môn học";
+            this.gridColumn2.Caption = "TÊN MÔN HỌC";
             this.gridColumn2.FieldName = "TEN_MON_HOC";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
@@ -83,27 +76,35 @@
             // 
             // gridColumn3
             // 
-            this.gridColumn3.Caption = "Mã nhân viên";
+            this.gridColumn3.Caption = "MÃ NHÂN VIÊN";
             this.gridColumn3.FieldName = "MA_NV";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 1;
+            this.gridColumn3.VisibleIndex = 0;
             // 
             // gridColumn4
             // 
-            this.gridColumn4.Caption = "Tên nhân viên";
-            this.gridColumn4.FieldName = "HO_TEN";
+            this.gridColumn4.Caption = "TÊN";
+            this.gridColumn4.FieldName = "TEN_NHAN_VIEN";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 2;
             // 
             // gridColumn10
             // 
-            this.gridColumn10.Caption = "Trung tâm";
-            this.gridColumn10.FieldName = "TEN_PHONG";
+            this.gridColumn10.Caption = "TRUNG TÂM";
+            this.gridColumn10.FieldName = "MA_TRUNG_TAM";
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 3;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "HỌ ĐỆM";
+            this.gridColumn1.FieldName = "HO_DEM";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 1;
             // 
             // F303_ket_qua_dao_tao_de
             // 
@@ -124,10 +125,10 @@
 
         private DevExpress.XtraGrid.GridControl m_grc;
         private DevExpress.XtraGrid.Views.Grid.GridView m_grv;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
     }
 }

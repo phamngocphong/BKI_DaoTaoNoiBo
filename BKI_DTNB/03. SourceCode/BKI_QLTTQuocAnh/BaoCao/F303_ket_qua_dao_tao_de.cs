@@ -10,6 +10,7 @@ using BKI_QLTTQuocAnh.DS;
 using BKI_QLTTQuocAnh.US;
 using DevExpress.XtraGrid;
 using DevExpress.XtraPivotGrid;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace BKI_QLTTQuocAnh.BaoCao
 {
@@ -29,6 +30,20 @@ namespace BKI_QLTTQuocAnh.BaoCao
         {
             m_grc.DataSource = ip_ds;
             this.ShowDialog();
+        }
+
+        private void m_grv_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
+        {
+            GridView view = sender as GridView;
+            // Check whether a row is right-clicked.
+            if (e.MenuType == DevExpress.XtraGrid.Views.Grid.GridMenuType.Row)
+            {
+                int rowHandle = e.HitInfo.RowHandle;
+                // Delete existing menu items, if any.
+                e.Menu.Items.Clear();
+                // Add a submenu with a single menu item.
+                e.Menu.Items.Add(WinFormControls.CreateRowSubMenu(view, rowHandle));
+            }
         }
     }
 }

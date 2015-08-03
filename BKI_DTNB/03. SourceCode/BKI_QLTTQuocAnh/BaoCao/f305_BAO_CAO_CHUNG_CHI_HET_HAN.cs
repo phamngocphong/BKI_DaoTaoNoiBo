@@ -32,8 +32,8 @@ namespace BKI_QLTTQuocAnh.BaoCao
         {
             fieldTenMonHoc = new PivotGridField("TEN_MON_HOC", PivotArea.RowArea);
             fieldTenMonHoc.Caption = "TÊN MÔN HỌC";
-            fieldTenPhong = new PivotGridField("TEN_PHONG", PivotArea.ColumnArea);
-            fieldTenPhong.Caption = "Tên PHÒNG";
+            fieldTenPhong = new PivotGridField("TEN_TRUNG_TAM", PivotArea.ColumnArea);
+            fieldTenPhong.Caption = "TÊN TRUNG TÂM";
             fieldIDNHANVIEN = new PivotGridField("ID", PivotArea.DataArea);
             fieldIDNHANVIEN.SummaryType = DevExpress.Data.PivotGrid.PivotSummaryType.Count;
             fieldChucVu = new PivotGridField("CHUC_VU", PivotArea.RowArea);

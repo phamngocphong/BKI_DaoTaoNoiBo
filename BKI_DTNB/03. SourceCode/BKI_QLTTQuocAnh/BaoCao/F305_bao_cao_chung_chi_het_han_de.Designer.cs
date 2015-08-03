@@ -77,7 +77,7 @@
             // gridColumn2
             // 
             this.gridColumn2.Caption = "Tên nhân viên";
-            this.gridColumn2.FieldName = "HO_TEN";
+            this.gridColumn2.FieldName = "TEN_NHAN_VIEN";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 2;
@@ -85,7 +85,7 @@
             // gridColumn3
             // 
             this.gridColumn3.Caption = "Trung tâm";
-            this.gridColumn3.FieldName = "TEN_PHONG";
+            this.gridColumn3.FieldName = "TEN_TRUNG_TAM";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;

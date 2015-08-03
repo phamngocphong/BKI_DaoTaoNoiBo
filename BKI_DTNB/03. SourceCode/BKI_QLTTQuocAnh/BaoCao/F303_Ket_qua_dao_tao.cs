@@ -70,7 +70,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             DataTable v_dt = new DataTable();
             v_ds.Tables.Add(v_dt);
             v_ds.EnforceConstraints = false;
-            v_us.FillDatasetGDChiTietChucVu(v_ds, m_dat.Value);
+            v_us.FillDatasetTinhHinhDaoTao(v_ds, m_dat.Value);
             pivotGridControl1.DataSource = v_ds.Tables[0];
         }
 

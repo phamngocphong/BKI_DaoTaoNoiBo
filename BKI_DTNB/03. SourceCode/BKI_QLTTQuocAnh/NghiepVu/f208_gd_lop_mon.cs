@@ -16,6 +16,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 {
     public partial class f208_gd_lop_mon : Form
     {
+        public bool m_trang_thai_insert= true;
         public f208_gd_lop_mon()
         {
             InitializeComponent();
@@ -39,14 +40,14 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 
         private void m_cmd_insert_Click(object sender, EventArgs e)
         {
-            Insert_to_form();
+            Insert_to_form(m_trang_thai_insert);
         }
 
-        private void Insert_to_form()
+        private void Insert_to_form(bool ip_trang_thai)
         {
             F208_gd_lop_mon_de v_f = new F208_gd_lop_mon_de();
-          
-            v_f.Insert_form();
+
+            v_f.Insert_form(ip_trang_thai);
             load_data_2_grid();
         }
 

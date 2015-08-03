@@ -18,6 +18,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         decimal m_dc_id_mon_hoc = -1;
         decimal m_dc_ma_ten_mon_hoc = -1;
         decimal m_dc_id_version = -1;
+        string m_ma_lop="";
         DataEntryFormMode m_e_form_mode;
         US_GD_LOP_MON m_us = new US_GD_LOP_MON();
         public F208_gd_lop_mon_de()
@@ -68,7 +69,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 
         public void us_to_form(US_GD_LOP_MON ip_us, decimal ip_selected)
         {
-
+            m_ma_lop = m_us.strMA_LOP_HOC;
             m_us = ip_us;
             m_txt_ma_lop.Text = m_us.strMA_LOP_HOC;
             m_dat_thoi_gian.Value = m_us.datTHOI_GIAN;
@@ -82,19 +83,22 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         }
         private bool check_validate_ma_lop(string ip_ma_lop)
         {
-           
-            US_DUNG_CHUNG v_us_dc = new US_DUNG_CHUNG();
-            DataSet v_ds = new DataSet();
-            v_ds.Tables.Add(new DataTable());
-            v_us_dc.FillDatasetWithQuery(v_ds, "SELECT MA_LOP_HOC FROM GD_LOP_MON ");
-            //DataRow m_dt_r=v_ds.Tables[0].Rows[0];
-            for (int i = 0; i <= v_ds.Tables[0].Rows.Count; i++)
+            if (ip_ma_lop != "")
             {
-                DataRow m_dt_r = v_ds.Tables[0].Rows[i];
-                if (ip_ma_lop == m_dt_r["MA_LOP_HOC"].ToString())
-                    return false;
+                US_DUNG_CHUNG v_us_dc = new US_DUNG_CHUNG();
+                DataSet v_ds = new DataSet();
+                v_ds.Tables.Add(new DataTable());
+                v_us_dc.FillDatasetWithQuery(v_ds, "SELECT MA_LOP_HOC FROM GD_LOP_MON ");
+                //DataRow m_dt_r=v_ds.Tables[0].Rows[0];
+                for (int i = 0; i <= v_ds.Tables[0].Rows.Count; i++)
+                {
+                    DataRow m_dt_r = v_ds.Tables[0].Rows[i];
+                    if (ip_ma_lop == m_dt_r["MA_LOP_HOC"].ToString())
+                        return false;
+                }
+                return true;
             }
-            return true;
+            else return true;
 
         }
         private bool check_validate_data_type() 
@@ -122,7 +126,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             return true;
         }
 
-        internal void Insert_form()
+        internal void Insert_form(bool ip_trang_thai)
         {
             m_e_form_mode = DataEntryFormMode.InsertDataState;
             this.ShowDialog();
@@ -146,12 +150,22 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             }
             else
             {
+                kiem_tra_ngay_thang();
+            }
+        }
+        private void kiem_tra_ngay_thang()
+        {
                 if (check_validate_time_is_ok() != true)
                 {
                     MessageBox.Show("Vui lòng nhập lại thời gian lớn hơn hiện tại");
                 }
                 else
                 {
+                    kiem_tra_du_lieu_kieu_so();
+                }
+        }
+        private void kiem_tra_du_lieu_kieu_so()
+        {
                     if (check_validate_data_type() != true)
                     {
                         MessageBox.Show("Vui lòng nhập kiểu số cho Số Lượng và Điểm Qua Môn");
@@ -159,9 +173,14 @@ namespace BKI_QLTTQuocAnh.NghiepVu
                     }
                     else
                     {
-                        if (check_validate_ma_lop(m_txt_ma_lop.Text) != true)
+                        kiem_tra_trung_ma_lop();
+                    }
+        }
+        private void kiem_tra_trung_ma_lop()
+        {
+                        if (check_validate_ma_lop(m_ma_lop) != true)
                         {
-                            MessageBox.Show("Trùng mã lớp học. Vui lòng nhập lại");
+                            MessageBox.Show("Trùng mã lóp. Vui lòng nhập lại");
                         }
                         else
                         {
@@ -174,17 +193,11 @@ namespace BKI_QLTTQuocAnh.NghiepVu
                                 case DataEntryFormMode.UpdateDataState:
                                     m_us.Update();
                                     break;
-                                default:
-                                    break;
-
-
                             }
                             MessageBox.Show("Lưu lớp môn thành công!");
                             this.Close();
+
                         }
-                    }
-                }
-            }
            
         }
         //public bool kiem_tra_dien_thong_tin()

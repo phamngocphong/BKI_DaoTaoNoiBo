@@ -284,6 +284,7 @@
             this.m_cmd_huy.Size = new System.Drawing.Size(98, 41);
             this.m_cmd_huy.TabIndex = 1;
             this.m_cmd_huy.Text = "Thoát";
+            this.m_cmd_huy.Click += new System.EventHandler(this.m_cmd_huy_Click);
             // 
             // m_cmd_luu
             // 

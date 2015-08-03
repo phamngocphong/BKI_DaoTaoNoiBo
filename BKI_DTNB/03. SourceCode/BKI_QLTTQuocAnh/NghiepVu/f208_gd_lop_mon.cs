@@ -115,5 +115,10 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             F206_Nhan_vien_lop_hoc v_f = new F206_Nhan_vien_lop_hoc();
             v_f.display(CIPConvert.ToDecimal(v_dr["ID"].ToString()));
         }
+
+        private void m_cmd_exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

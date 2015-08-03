@@ -93,5 +93,10 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             F209_gd_chung_chi_de v_f = new F209_gd_chung_chi_de();
             v_f.dislay_for_insert(v_us);
         }
+
+        private void m_cmd_exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

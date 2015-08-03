@@ -50,5 +50,10 @@ namespace BKI_QLTTQuocAnh.NghiepVu
                 WinFormControls.load_data_to_combobox("DM_NGHIEP_VU", "id", "ma_nghiep_vu + ' - ' + ten_nghiep_vu", "", WinFormControls.eTAT_CA.NO, m_cbo_nghiep_vu);
             }
         }
+
+        private void m_cmd_exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

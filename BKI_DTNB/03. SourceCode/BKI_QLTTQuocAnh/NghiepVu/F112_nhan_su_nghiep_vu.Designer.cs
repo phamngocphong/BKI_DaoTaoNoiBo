@@ -41,8 +41,8 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
-            this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
+            this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             ((System.ComponentModel.ISupportInitialize)(this.m_grc)).BeginInit();
@@ -156,6 +156,22 @@
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(611, 45);
             this.m_pnl_out_place_dm.TabIndex = 23;
             // 
+            // m_cmd_insert
+            // 
+            this.m_cmd_insert.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_insert.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_insert.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_insert.Dock = System.Windows.Forms.DockStyle.Right;
+            this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_insert.ImageIndex = 2;
+            this.m_cmd_insert.ImageList = this.ImageList;
+            this.m_cmd_insert.Location = new System.Drawing.Point(163, 4);
+            this.m_cmd_insert.Name = "m_cmd_insert";
+            this.m_cmd_insert.Size = new System.Drawing.Size(178, 37);
+            this.m_cmd_insert.TabIndex = 12;
+            this.m_cmd_insert.Text = "&Thêm nghiệp vụ";
+            this.m_cmd_insert.Click += new System.EventHandler(this.m_cmd_insert_Click);
+            // 
             // ImageList
             // 
             this.ImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ImageList.ImageStream")));
@@ -182,22 +198,6 @@
             this.ImageList.Images.SetKeyName(19, "");
             this.ImageList.Images.SetKeyName(20, "");
             this.ImageList.Images.SetKeyName(21, "");
-            // 
-            // m_cmd_insert
-            // 
-            this.m_cmd_insert.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_insert.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_insert.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_insert.Dock = System.Windows.Forms.DockStyle.Right;
-            this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_insert.ImageIndex = 2;
-            this.m_cmd_insert.ImageList = this.ImageList;
-            this.m_cmd_insert.Location = new System.Drawing.Point(163, 4);
-            this.m_cmd_insert.Name = "m_cmd_insert";
-            this.m_cmd_insert.Size = new System.Drawing.Size(178, 37);
-            this.m_cmd_insert.TabIndex = 12;
-            this.m_cmd_insert.Text = "&Thêm nghiệp vụ";
-            this.m_cmd_insert.Click += new System.EventHandler(this.m_cmd_insert_Click);
             // 
             // m_cmd_delete
             // 
@@ -229,6 +229,7 @@
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 37);
             this.m_cmd_exit.TabIndex = 11;
             this.m_cmd_exit.Text = "Thoát (Esc)";
+            this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_exit_Click);
             // 
             // F112_nhan_su_nghiep_vu
             // 

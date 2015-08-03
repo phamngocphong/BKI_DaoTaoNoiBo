@@ -39,13 +39,13 @@
             this.c_ho_ten = new DevExpress.XtraGrid.Columns.GridColumn();
             this.c_ten_mon = new DevExpress.XtraGrid.Columns.GridColumn();
             this.c_ma_trung_tam = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
             this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
             this.m_cmd_view = new SIS.Controls.Button.SiSButton();
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.m_grc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv)).BeginInit();
             this.m_pnl_out_place_dm.SuspendLayout();
@@ -139,6 +139,14 @@
             this.c_ma_trung_tam.Name = "c_ma_trung_tam";
             this.c_ma_trung_tam.Visible = true;
             this.c_ma_trung_tam.VisibleIndex = 4;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "TÊN";
+            this.gridColumn1.FieldName = "TEN";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 3;
             // 
             // ImageList
             // 
@@ -241,14 +249,7 @@
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_exit.TabIndex = 11;
             this.m_cmd_exit.Text = "Thoát (Esc)";
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Caption = "TÊN";
-            this.gridColumn1.FieldName = "TEN";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 3;
+            this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_exit_Click);
             // 
             // F206_Nhan_vien_lop_hoc
             // 

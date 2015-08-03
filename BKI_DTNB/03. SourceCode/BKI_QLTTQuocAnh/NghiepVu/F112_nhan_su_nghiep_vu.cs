@@ -102,5 +102,10 @@ namespace BKI_QLTTQuocAnh.NghiepVu
                 CSystemLog_301.ExceptionHandle(ex);
             }
         }
+
+        private void m_cmd_exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

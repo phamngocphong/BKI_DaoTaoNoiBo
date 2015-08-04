@@ -1,6 +1,6 @@
 ﻿namespace BKI_QLTTQuocAnh.NghiepVu
 {
-    partial class F210_Nhap_diem_xlsx
+    partial class F114_Nhap_chung_chi
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F210_Nhap_diem_xlsx));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F114_Nhap_chung_chi));
             this.m_grc = new DevExpress.XtraGrid.GridControl();
             this.m_grv = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -52,12 +52,12 @@
             // m_grc
             // 
             this.m_grc.Cursor = System.Windows.Forms.Cursors.Default;
-            this.m_grc.Dock = System.Windows.Forms.DockStyle.Top;
+            this.m_grc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.m_grc.Location = new System.Drawing.Point(0, 0);
             this.m_grc.MainView = this.m_grv;
             this.m_grc.Name = "m_grc";
-            this.m_grc.Size = new System.Drawing.Size(654, 271);
-            this.m_grc.TabIndex = 0;
+            this.m_grc.Size = new System.Drawing.Size(703, 263);
+            this.m_grc.TabIndex = 22;
             this.m_grc.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.m_grv});
             // 
@@ -84,6 +84,7 @@
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 1;
+            this.gridColumn1.Width = 65;
             // 
             // gridColumn2
             // 
@@ -92,54 +93,62 @@
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 2;
+            this.gridColumn2.Width = 77;
             // 
             // gridColumn3
             // 
-            this.gridColumn3.Caption = "TÊN NHÂN VIÊN";
-            this.gridColumn3.FieldName = "TEN";
+            this.gridColumn3.Caption = "HỌ ĐỆM";
+            this.gridColumn3.FieldName = "HO_DEM";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 4;
+            this.gridColumn3.VisibleIndex = 3;
+            this.gridColumn3.Width = 77;
             // 
             // gridColumn4
             // 
-            this.gridColumn4.Caption = "SỐ CHỨNG CHỈ";
-            this.gridColumn4.FieldName = "SO_CHUNG_CHI";
+            this.gridColumn4.Caption = "TÊN";
+            this.gridColumn4.FieldName = "TEN";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 5;
+            this.gridColumn4.VisibleIndex = 4;
+            this.gridColumn4.Width = 77;
             // 
             // gridColumn5
             // 
-            this.gridColumn5.Caption = "NGÀY BẮT ĐẦU";
-            this.gridColumn5.FieldName = "NGAY_BAT_DAU";
+            this.gridColumn5.Caption = "SỐ CHỨNG CHỈ";
+            this.gridColumn5.FieldName = "SO_CHUNG_CHI";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 6;
+            this.gridColumn5.VisibleIndex = 5;
+            this.gridColumn5.Width = 77;
             // 
             // gridColumn6
             // 
-            this.gridColumn6.Caption = "NGÀY KẾT THÚC";
-            this.gridColumn6.FieldName = "NGAY_KET_THUC";
+            this.gridColumn6.Caption = "NGÀY CẤP";
+            this.gridColumn6.FieldName = "NGAY_CAP";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 7;
+            this.gridColumn6.VisibleIndex = 6;
+            this.gridColumn6.Width = 77;
             // 
             // gridColumn7
             // 
-            this.gridColumn7.Caption = "Kết quả";
-            this.gridColumn7.FieldName = "KET_QUA";
+            this.gridColumn7.Caption = "NGÀY BẮT ĐẦU";
+            this.gridColumn7.FieldName = "NGAY_BAT_DAU";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 8;
+            this.gridColumn7.VisibleIndex = 7;
+            this.gridColumn7.Width = 83;
             // 
             // gridColumn8
             // 
-            this.gridColumn8.Caption = "Họ đệm";
-            this.gridColumn8.FieldName = "HO_DEM";
+            this.gridColumn8.Caption = "NGÀY KẾT THÚC";
+            this.gridColumn8.FieldName = "NGAY_KET_THUC";
             this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.SortMode = DevExpress.XtraGrid.ColumnSortMode.DisplayText;
             this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 3;
+            this.gridColumn8.VisibleIndex = 8;
+            this.gridColumn8.Width = 77;
             // 
             // ImageList
             // 
@@ -173,11 +182,11 @@
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_update);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 273);
+            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 263);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(654, 36);
-            this.m_pnl_out_place_dm.TabIndex = 21;
+            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(703, 36);
+            this.m_pnl_out_place_dm.TabIndex = 23;
             // 
             // m_cmd_update
             // 
@@ -188,11 +197,11 @@
             this.m_cmd_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_update.ImageIndex = 3;
             this.m_cmd_update.ImageList = this.ImageList;
-            this.m_cmd_update.Location = new System.Drawing.Point(474, 4);
+            this.m_cmd_update.Location = new System.Drawing.Point(499, 4);
             this.m_cmd_update.Name = "m_cmd_update";
-            this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_update.Size = new System.Drawing.Size(112, 28);
             this.m_cmd_update.TabIndex = 13;
-            this.m_cmd_update.Text = "&Nhập điểm";
+            this.m_cmd_update.Text = "&Nhập chứng chỉ";
             this.m_cmd_update.Click += new System.EventHandler(this.m_cmd_update_Click);
             // 
             // m_cmd_exit
@@ -204,22 +213,22 @@
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(562, 4);
+            this.m_cmd_exit.Location = new System.Drawing.Point(611, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_exit.TabIndex = 11;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             // 
-            // F210_Nhap_diem_xlsx
+            // F114_Nhap_chung_chi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(654, 309);
-            this.Controls.Add(this.m_pnl_out_place_dm);
+            this.ClientSize = new System.Drawing.Size(703, 299);
             this.Controls.Add(this.m_grc);
-            this.Name = "F210_Nhap_diem_xlsx";
-            this.Text = "F210_Nhap_diem_xlsx";
-            this.Load += new System.EventHandler(this.F210_Nhap_diem_xlsx_Load);
+            this.Controls.Add(this.m_pnl_out_place_dm);
+            this.Name = "F114_Nhap_chung_chi";
+            this.Text = "F114_Nhap_chung_chi";
+            this.Load += new System.EventHandler(this.F114_Nhap_chung_chi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.m_grc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv)).EndInit();
             this.m_pnl_out_place_dm.ResumeLayout(false);
@@ -238,10 +247,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         internal System.Windows.Forms.ImageList ImageList;
         internal System.Windows.Forms.Panel m_pnl_out_place_dm;
         internal SIS.Controls.Button.SiSButton m_cmd_update;
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
     }
 }

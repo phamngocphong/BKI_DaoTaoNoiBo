@@ -308,6 +308,7 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string ID = "ID";
         public const string ID_GD_DIEM = "ID_GD_DIEM";
         public const string SO_CHUNG_CHI = "SO_CHUNG_CHI";
+        public const string NGAY_CAP = "NGAY_BAT_DAU";
         public const string NGAY_BAT_DAU = "NGAY_BAT_DAU";
         public const string NGAY_KET_THUC = "NGAY_KET_THUC";
         public const string NGAY_LAP = "NGAY_LAP";

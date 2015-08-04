@@ -80,6 +80,7 @@
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.m_cmd_ds_hs_theo_lm = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.m_cmd_nhap_chung_chi = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MdiManager)).BeginInit();
             this.SuspendLayout();
@@ -129,9 +130,10 @@
             this.m_cmd_ngach_nghiep_vu,
             this.m_cmd_tong_quan,
             this.m_cmd_chung_chi,
-            this.m_cmd_nhan_vien_nghiep_vu});
+            this.m_cmd_nhan_vien_nghiep_vu,
+            this.m_cmd_nhap_chung_chi});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 50;
+            this.ribbon.MaxItemId = 51;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -219,8 +221,9 @@
             // m_cmd_nghi_hoc
             // 
             this.m_cmd_nghi_hoc.Caption = "Cập nhật điểm cho học viên";
-            this.m_cmd_nghi_hoc.Glyph = global::BKI_QLTTQuocAnh.Properties.Resources._1425904361_23923;
+            this.m_cmd_nghi_hoc.Glyph = ((System.Drawing.Image)(resources.GetObject("m_cmd_nghi_hoc.Glyph")));
             this.m_cmd_nghi_hoc.Id = 9;
+            this.m_cmd_nghi_hoc.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("m_cmd_nghi_hoc.LargeGlyph")));
             this.m_cmd_nghi_hoc.Name = "m_cmd_nghi_hoc";
             this.m_cmd_nghi_hoc.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -432,7 +435,7 @@
             this.m_cmd_chung_chi.Glyph = ((System.Drawing.Image)(resources.GetObject("m_cmd_chung_chi.Glyph")));
             this.m_cmd_chung_chi.Id = 48;
             this.m_cmd_chung_chi.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("m_cmd_chung_chi.LargeGlyph")));
-            this.m_cmd_chung_chi.LargeWidth = 120;
+            this.m_cmd_chung_chi.LargeWidth = 70;
             this.m_cmd_chung_chi.Name = "m_cmd_chung_chi";
             this.m_cmd_chung_chi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_chung_chi_ItemClick);
             // 
@@ -520,6 +523,7 @@
             // ribbonPageGroup6
             // 
             this.ribbonPageGroup6.ItemLinks.Add(this.m_cmd_chung_chi);
+            this.ribbonPageGroup6.ItemLinks.Add(this.m_cmd_nhap_chung_chi);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             this.ribbonPageGroup6.Text = "Quản lý chứng chỉ";
             // 
@@ -564,6 +568,15 @@
             // 
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
             this.ribbonPageGroup8.Text = "Theo lớp môn";
+            // 
+            // m_cmd_nhap_chung_chi
+            // 
+            this.m_cmd_nhap_chung_chi.Caption = "Nhập chứng chỉ từ XLSX";
+            this.m_cmd_nhap_chung_chi.Id = 50;
+            this.m_cmd_nhap_chung_chi.LargeGlyph = global::BKI_QLTTQuocAnh.Properties.Resources._1425904874_448241;
+            this.m_cmd_nhap_chung_chi.LargeWidth = 70;
+            this.m_cmd_nhap_chung_chi.Name = "m_cmd_nhap_chung_chi";
+            this.m_cmd_nhap_chung_chi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_nhap_chung_chi_ItemClick);
             // 
             // f388_main
             // 
@@ -638,5 +651,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private DevExpress.XtraBars.BarButtonItem m_cmd_nhan_vien_nghiep_vu;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
+        private DevExpress.XtraBars.BarButtonItem m_cmd_nhap_chung_chi;
     }
 }

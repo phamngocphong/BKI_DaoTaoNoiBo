@@ -181,7 +181,7 @@ namespace BKI_QLTTQuocAnh
 
         private void load_data_2_cbo_nghiep_vu()
         {
-            WinFormControls.load_data_to_combobox_with_query(m_cbo_nghiep_vu, "ID", "TEN_NGHIEP_VU", WinFormControls.eTAT_CA.YES, "SELECT DNV.ID, dnv.TEN_NGHIEP_VU FROM DM_NGHIEP_VU AS dnv, DM_NGACH_NGHIEP_VU AS dncnv WHERE dncnv.ID_NGHIEP_VU = dnv.ID AND dncnv.ID_NGACH = " + m_cbo_ngach.SelectedValue + " OR " + m_cbo_ngach.SelectedValue + " = -1");
+            WinFormControls.load_data_to_combobox_with_query(m_cbo_nghiep_vu, "ID", "TEN_NGHIEP_VU", WinFormControls.eTAT_CA.YES, "SELECT DISTINCT dnv.ID, dnv.TEN_NGHIEP_VU FROM DM_NGHIEP_VU AS dnv, DM_NGACH_NGHIEP_VU AS dncnv WHERE dncnv.ID_NGHIEP_VU = dnv.ID AND dncnv.ID_NGACH = " + m_cbo_ngach.SelectedValue + " OR " + m_cbo_ngach.SelectedValue + " = -1");
         }
 
         private void load_data_2_cbo_mon_hoc()
@@ -196,7 +196,7 @@ namespace BKI_QLTTQuocAnh
 
         private void load_data_2_cbo_ngach()
         {
-            WinFormControls.load_data_to_combobox("DM_NGACH", "ID", "MA_NGACH", " WHERE (ID_DIA_PHUONG = " + m_cbo_dia_phuong.SelectedValue + " OR " + m_cbo_dia_phuong.SelectedValue + "=-1)", WinFormControls.eTAT_CA.YES, m_cbo_ngach);
+            WinFormControls.load_data_to_combobox_with_query(m_cbo_ngach, "ID","NGACH", WinFormControls.eTAT_CA.YES, "SELECT DISTINCT dmn.ID, dmn.MA_NGACH + ' - ' + dmn.TEN_NGACH as NGACH FROM DM_NGACH as dmn,  CM_DM_TU_DIEN as cmdmtd WHERE dmn.ID_DIA_PHUONG = cmdmtd.ID AND (cmdmtd.ID = " + m_cbo_dia_phuong.SelectedValue + " OR " + m_cbo_dia_phuong.SelectedValue + " = -1)");
         }
 
         private void m_cbo_nghiep_vu_SelectedIndexChanged(object sender, EventArgs e)

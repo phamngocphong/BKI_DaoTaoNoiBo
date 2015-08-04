@@ -55,21 +55,32 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         {
             try
             {
-                F208_gd_lop_mon_de v_f = new F208_gd_lop_mon_de();
-               // var m_row = m_grv.SelectedRowsCount - 1;
-               // var v_data_row = m_grv.GetDataRow(m_grv.FocusedRowHandle);
-                var v_data_row = m_grv.GetDataRow(m_grv.GetSelectedRows()[0]);
-                var v_us = new US_GD_LOP_MON(CIPConvert.ToDecimal(v_data_row["ID"].ToString()));
-                US_DM_VERSION_MON_HOC us_version = new US_DM_VERSION_MON_HOC();
-                DS_DM_VERSION_MON_HOC v_ds_version = new DS_DM_VERSION_MON_HOC();
-                v_ds_version.EnforceConstraints = false;
-                us_version.FillDataset(v_ds_version,"where ID="+ v_data_row["ID_VERSION_MON_HOC"].ToString());
-                DataRow v_d_r = v_ds_version.Tables[0].Rows[0];
-                decimal v_id_version = CIPConvert.ToDecimal(v_d_r[DM_VERSION_MON_HOC.ID].ToString());
-                us_version = new US_DM_VERSION_MON_HOC(v_id_version);
-                decimal v_index_selected = CIPConvert.ToDecimal(us_version.dcID_MON_HOC.ToString());
-                v_f.Update_form(v_us, v_index_selected);
-                load_data_2_grid();
+                decimal v_count =CIPConvert.ToDecimal(m_grv.SelectedRowsCount);
+                if (v_count==0)
+                {
+                    MessageBox.Show("Bạn phải chọn 1 lớp môn để thực hiện tác vụ này!");
+                }
+
+                else if (v_count > 1)
+                {
+                    MessageBox.Show("Bạn chỉ được chọn duy nhất 1 lớp môn để thực hiện tác vụ này!");
+                }
+                else
+                {
+                    F208_gd_lop_mon_de v_f = new F208_gd_lop_mon_de();
+                    var v_data_row = m_grv.GetDataRow(m_grv.GetSelectedRows()[0]);
+                    var v_us = new US_GD_LOP_MON(CIPConvert.ToDecimal(v_data_row["ID"].ToString()));
+                    US_DM_VERSION_MON_HOC us_version = new US_DM_VERSION_MON_HOC();
+                    DS_DM_VERSION_MON_HOC v_ds_version = new DS_DM_VERSION_MON_HOC();
+                    v_ds_version.EnforceConstraints = false;
+                    us_version.FillDataset(v_ds_version, "where ID=" + v_data_row["ID_VERSION_MON_HOC"].ToString());
+                    DataRow v_d_r = v_ds_version.Tables[0].Rows[0];
+                    decimal v_id_version = CIPConvert.ToDecimal(v_d_r[DM_VERSION_MON_HOC.ID].ToString());
+                    us_version = new US_DM_VERSION_MON_HOC(v_id_version);
+                    decimal v_index_selected = CIPConvert.ToDecimal(us_version.dcID_MON_HOC.ToString());
+                    v_f.Update_form(v_us, v_index_selected);
+                    load_data_2_grid();
+                }
             }
             catch (Exception ex)
             {
@@ -80,12 +91,8 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         }
 
         private void m_cmd_delete_Click(object sender, EventArgs e)
-        {
-
-            
-            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa bản ghi này không?", "Cảnh báo", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
+        {  
+           
                 decimal v_count =CIPConvert.ToDecimal(m_grv.SelectedRowsCount.ToString());
                 if (v_count == 0)
                 {
@@ -93,11 +100,15 @@ namespace BKI_QLTTQuocAnh.NghiepVu
                 }
                 else
                 {
+                    DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa bản ghi này không?", "Cảnh báo", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
                     xoa_lop_mon(v_count);
-                    MessageBox.Show(" Đã xóa thành công "+ v_count.ToString()+ " lớp môn");           
-                }
-            }
-            load_data_2_grid();
+                    MessageBox.Show(" Đã xóa thành công "+ v_count.ToString()+ " lớp môn");
+                    load_data_2_grid();
+                    }
+                 }
+         
         }
 
         private void xoa_lop_mon(decimal v_count)
@@ -118,12 +129,12 @@ namespace BKI_QLTTQuocAnh.NghiepVu
                         
                         var v_id_gdd = CIPConvert.ToDecimal(v_ds.Tables[0].Rows[j]["ID"].ToString());
                         var v_us_gdd= new US_GD_DIEM(v_id_gdd);
-                        v_ds.Tables[0].Clear();
-                        v_ds.Tables.Add(new DataTable());
-                        v_us_dc.FillDatasetWithQuery(v_ds, "Select * from gd_chung_chi where id_gd_diem=" + v_id_gdd.ToString());
-                        if (v_ds.Tables[0].Rows.Count > 0)
+                         var v_ds_gdd = new DataSet();
+                         v_ds_gdd.Tables.Add(new DataTable());
+                         v_us_dc.FillDatasetWithQuery(v_ds_gdd, "Select * from gd_chung_chi where id_gd_diem=" + v_id_gdd.ToString());
+                         if (v_ds_gdd.Tables[0].Rows.Count > 0)
                         {
-                            var v_dtr_gdcc = v_ds.Tables[0].Rows[0];
+                            var v_dtr_gdcc = v_ds_gdd.Tables[0].Rows[0];
                             var v_us_gdcc = new US_GD_CHUNG_CHI(CIPConvert.ToDecimal(v_dtr_gdcc["ID"].ToString()));
                             v_us_gdcc.strDA_XOA = "Y";
                             v_us_gdcc.Update();

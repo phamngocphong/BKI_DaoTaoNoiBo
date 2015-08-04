@@ -318,6 +318,8 @@ namespace BKI_QLTTQuocAnh
             v_cstore.addNVarcharInputParam("@str_query", p);
             v_cstore.fillDataSetByCommand(this, v_ds);
         }
+
+       
     }
 
     public class iParameter

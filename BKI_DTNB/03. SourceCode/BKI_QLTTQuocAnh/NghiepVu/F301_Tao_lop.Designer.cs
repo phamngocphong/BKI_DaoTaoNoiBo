@@ -50,7 +50,7 @@
             // 
             this.m_txt_so_hoc_vien_1_lop.Location = new System.Drawing.Point(208, 80);
             this.m_txt_so_hoc_vien_1_lop.Name = "m_txt_so_hoc_vien_1_lop";
-            this.m_txt_so_hoc_vien_1_lop.Size = new System.Drawing.Size(100, 20);
+            this.m_txt_so_hoc_vien_1_lop.Size = new System.Drawing.Size(189, 20);
             this.m_txt_so_hoc_vien_1_lop.TabIndex = 0;
             // 
             // m_lbl_mon_hoc
@@ -107,7 +107,7 @@
             this.m_cmd_tao_lop.ImageIndex = 2;
             this.m_cmd_tao_lop.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.m_cmd_tao_lop.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
-            this.m_cmd_tao_lop.Location = new System.Drawing.Point(28, 4);
+            this.m_cmd_tao_lop.Location = new System.Drawing.Point(80, 4);
             this.m_cmd_tao_lop.Margin = new System.Windows.Forms.Padding(4);
             this.m_cmd_tao_lop.Name = "m_cmd_tao_lop";
             this.m_cmd_tao_lop.Padding = new System.Windows.Forms.Padding(1);
@@ -125,7 +125,7 @@
             this.m_cmd_huy.ImageIndex = 2;
             this.m_cmd_huy.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.m_cmd_huy.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
-            this.m_cmd_huy.Location = new System.Drawing.Point(198, 4);
+            this.m_cmd_huy.Location = new System.Drawing.Point(247, 4);
             this.m_cmd_huy.Margin = new System.Windows.Forms.Padding(4);
             this.m_cmd_huy.Name = "m_cmd_huy";
             this.m_cmd_huy.Padding = new System.Windows.Forms.Padding(1);
@@ -141,7 +141,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 207);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(337, 41);
+            this.panel1.Size = new System.Drawing.Size(459, 41);
             this.panel1.TabIndex = 17;
             // 
             // panel2
@@ -159,14 +159,14 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(337, 207);
+            this.panel2.Size = new System.Drawing.Size(459, 207);
             this.panel2.TabIndex = 18;
             // 
             // m_txt_diem_qua_mon
             // 
             this.m_txt_diem_qua_mon.Location = new System.Drawing.Point(208, 137);
             this.m_txt_diem_qua_mon.Name = "m_txt_diem_qua_mon";
-            this.m_txt_diem_qua_mon.Size = new System.Drawing.Size(100, 20);
+            this.m_txt_diem_qua_mon.Size = new System.Drawing.Size(189, 20);
             this.m_txt_diem_qua_mon.TabIndex = 9;
             // 
             // label5
@@ -183,7 +183,7 @@
             this.m_cbo_version.FormattingEnabled = true;
             this.m_cbo_version.Location = new System.Drawing.Point(208, 107);
             this.m_cbo_version.Name = "m_cbo_version";
-            this.m_cbo_version.Size = new System.Drawing.Size(100, 21);
+            this.m_cbo_version.Size = new System.Drawing.Size(189, 21);
             this.m_cbo_version.TabIndex = 7;
             // 
             // label3
@@ -199,7 +199,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(337, 248);
+            this.ClientSize = new System.Drawing.Size(459, 248);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "F301_Tao_lop";

@@ -77,7 +77,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(342, 61);
+            this.label3.Location = new System.Drawing.Point(422, 64);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 13);
             this.label3.TabIndex = 5;
@@ -86,16 +86,16 @@
             // m_cbo_ngach
             // 
             this.m_cbo_ngach.FormattingEnabled = true;
-            this.m_cbo_ngach.Location = new System.Drawing.Point(400, 58);
+            this.m_cbo_ngach.Location = new System.Drawing.Point(467, 61);
             this.m_cbo_ngach.Name = "m_cbo_ngach";
-            this.m_cbo_ngach.Size = new System.Drawing.Size(141, 21);
+            this.m_cbo_ngach.Size = new System.Drawing.Size(225, 21);
             this.m_cbo_ngach.TabIndex = 6;
             this.m_cbo_ngach.SelectedIndexChanged += new System.EventHandler(this.m_cbo_ngach_SelectedIndexChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(330, 98);
+            this.label6.Location = new System.Drawing.Point(412, 98);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(49, 13);
             this.label6.TabIndex = 11;
@@ -104,9 +104,9 @@
             // m_cbo_mon_hoc
             // 
             this.m_cbo_mon_hoc.FormattingEnabled = true;
-            this.m_cbo_mon_hoc.Location = new System.Drawing.Point(400, 95);
+            this.m_cbo_mon_hoc.Location = new System.Drawing.Point(467, 95);
             this.m_cbo_mon_hoc.Name = "m_cbo_mon_hoc";
-            this.m_cbo_mon_hoc.Size = new System.Drawing.Size(142, 21);
+            this.m_cbo_mon_hoc.Size = new System.Drawing.Size(225, 21);
             this.m_cbo_mon_hoc.TabIndex = 12;
             // 
             // m_cmd_tao_lop
@@ -119,7 +119,7 @@
             this.m_cmd_tao_lop.ImageIndex = 2;
             this.m_cmd_tao_lop.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.m_cmd_tao_lop.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
-            this.m_cmd_tao_lop.Location = new System.Drawing.Point(589, 0);
+            this.m_cmd_tao_lop.Location = new System.Drawing.Point(800, 0);
             this.m_cmd_tao_lop.Margin = new System.Windows.Forms.Padding(4);
             this.m_cmd_tao_lop.Name = "m_cmd_tao_lop";
             this.m_cmd_tao_lop.Padding = new System.Windows.Forms.Padding(1);
@@ -134,9 +134,9 @@
             this.panel2.Controls.Add(this.m_cmd_xuat_excel);
             this.panel2.Controls.Add(this.m_cmd_tao_lop);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(2, 404);
+            this.panel2.Location = new System.Drawing.Point(2, 506);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(697, 38);
+            this.panel2.Size = new System.Drawing.Size(908, 38);
             this.panel2.TabIndex = 17;
             // 
             // m_cmd_assign
@@ -149,7 +149,7 @@
             this.m_cmd_assign.ImageIndex = 2;
             this.m_cmd_assign.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.m_cmd_assign.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
-            this.m_cmd_assign.Location = new System.Drawing.Point(241, 0);
+            this.m_cmd_assign.Location = new System.Drawing.Point(452, 0);
             this.m_cmd_assign.Margin = new System.Windows.Forms.Padding(4);
             this.m_cmd_assign.Name = "m_cmd_assign";
             this.m_cmd_assign.Padding = new System.Windows.Forms.Padding(1);
@@ -168,7 +168,7 @@
             this.m_cmd_xuat_excel.ImageIndex = 2;
             this.m_cmd_xuat_excel.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.m_cmd_xuat_excel.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
-            this.m_cmd_xuat_excel.Location = new System.Drawing.Point(481, 0);
+            this.m_cmd_xuat_excel.Location = new System.Drawing.Point(692, 0);
             this.m_cmd_xuat_excel.Margin = new System.Windows.Forms.Padding(4);
             this.m_cmd_xuat_excel.Name = "m_cmd_xuat_excel";
             this.m_cmd_xuat_excel.Padding = new System.Windows.Forms.Padding(1);
@@ -192,13 +192,13 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(697, 132);
+            this.panel1.Size = new System.Drawing.Size(908, 132);
             this.panel1.TabIndex = 18;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(91, 98);
+            this.label4.Location = new System.Drawing.Point(107, 98);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 13);
             this.label4.TabIndex = 19;
@@ -207,7 +207,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(85, 61);
+            this.label1.Location = new System.Drawing.Point(101, 61);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 13);
             this.label1.TabIndex = 18;
@@ -218,7 +218,7 @@
             this.m_cbo_nghiep_vu.FormattingEnabled = true;
             this.m_cbo_nghiep_vu.Location = new System.Drawing.Point(169, 95);
             this.m_cbo_nghiep_vu.Name = "m_cbo_nghiep_vu";
-            this.m_cbo_nghiep_vu.Size = new System.Drawing.Size(121, 21);
+            this.m_cbo_nghiep_vu.Size = new System.Drawing.Size(215, 21);
             this.m_cbo_nghiep_vu.TabIndex = 17;
             this.m_cbo_nghiep_vu.SelectedIndexChanged += new System.EventHandler(this.m_cbo_nghiep_vu_SelectedIndexChanged);
             // 
@@ -227,7 +227,7 @@
             this.m_cbo_dia_phuong.FormattingEnabled = true;
             this.m_cbo_dia_phuong.Location = new System.Drawing.Point(169, 58);
             this.m_cbo_dia_phuong.Name = "m_cbo_dia_phuong";
-            this.m_cbo_dia_phuong.Size = new System.Drawing.Size(121, 21);
+            this.m_cbo_dia_phuong.Size = new System.Drawing.Size(215, 21);
             this.m_cbo_dia_phuong.TabIndex = 16;
             this.m_cbo_dia_phuong.SelectedIndexChanged += new System.EventHandler(this.m_cbo_dia_phuong_SelectedIndexChanged);
             // 
@@ -240,7 +240,7 @@
             this.m_cmd_search.ImageIndex = 2;
             this.m_cmd_search.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.m_cmd_search.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
-            this.m_cmd_search.Location = new System.Drawing.Point(579, 83);
+            this.m_cmd_search.Location = new System.Drawing.Point(749, 83);
             this.m_cmd_search.Margin = new System.Windows.Forms.Padding(4);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Padding = new System.Windows.Forms.Padding(1);
@@ -255,7 +255,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(2, 134);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(697, 270);
+            this.panel3.Size = new System.Drawing.Size(908, 372);
             this.panel3.TabIndex = 19;
             // 
             // m_grc
@@ -265,7 +265,7 @@
             this.m_grc.Location = new System.Drawing.Point(0, 0);
             this.m_grc.MainView = this.m_grv;
             this.m_grc.Name = "m_grc";
-            this.m_grc.Size = new System.Drawing.Size(697, 270);
+            this.m_grc.Size = new System.Drawing.Size(908, 372);
             this.m_grc.TabIndex = 0;
             this.m_grc.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.m_grv});
@@ -374,7 +374,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(701, 444);
+            this.ClientSize = new System.Drawing.Size(912, 546);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);

@@ -88,7 +88,7 @@
             this.m_cbo_ngach.FormattingEnabled = true;
             this.m_cbo_ngach.Location = new System.Drawing.Point(467, 61);
             this.m_cbo_ngach.Name = "m_cbo_ngach";
-            this.m_cbo_ngach.Size = new System.Drawing.Size(225, 21);
+            this.m_cbo_ngach.Size = new System.Drawing.Size(306, 21);
             this.m_cbo_ngach.TabIndex = 6;
             this.m_cbo_ngach.SelectedIndexChanged += new System.EventHandler(this.m_cbo_ngach_SelectedIndexChanged);
             // 
@@ -106,7 +106,7 @@
             this.m_cbo_mon_hoc.FormattingEnabled = true;
             this.m_cbo_mon_hoc.Location = new System.Drawing.Point(467, 95);
             this.m_cbo_mon_hoc.Name = "m_cbo_mon_hoc";
-            this.m_cbo_mon_hoc.Size = new System.Drawing.Size(225, 21);
+            this.m_cbo_mon_hoc.Size = new System.Drawing.Size(306, 21);
             this.m_cbo_mon_hoc.TabIndex = 12;
             // 
             // m_cmd_tao_lop
@@ -240,7 +240,7 @@
             this.m_cmd_search.ImageIndex = 2;
             this.m_cmd_search.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.m_cmd_search.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
-            this.m_cmd_search.Location = new System.Drawing.Point(749, 83);
+            this.m_cmd_search.Location = new System.Drawing.Point(780, 83);
             this.m_cmd_search.Margin = new System.Windows.Forms.Padding(4);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Padding = new System.Windows.Forms.Padding(1);

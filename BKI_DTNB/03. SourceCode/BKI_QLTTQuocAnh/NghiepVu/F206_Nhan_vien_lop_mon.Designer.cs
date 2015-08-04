@@ -1,6 +1,6 @@
 ﻿namespace BKI_QLTTQuocAnh.NghiepVu
 {
-    partial class F206_Nhan_vien_lop_hoc
+    partial class F206_Nhan_vien_lop_mon
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F206_Nhan_vien_lop_hoc));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F206_Nhan_vien_lop_mon));
             this.m_grc = new DevExpress.XtraGrid.GridControl();
             this.m_grv = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.c_id = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -46,6 +46,7 @@
             this.m_cmd_view = new SIS.Controls.Button.SiSButton();
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.m_grc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv)).BeginInit();
             this.m_pnl_out_place_dm.SuspendLayout();
@@ -58,7 +59,7 @@
             this.m_grc.Location = new System.Drawing.Point(0, 0);
             this.m_grc.MainView = this.m_grv;
             this.m_grc.Name = "m_grc";
-            this.m_grc.Size = new System.Drawing.Size(635, 306);
+            this.m_grc.Size = new System.Drawing.Size(852, 392);
             this.m_grc.TabIndex = 0;
             this.m_grc.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.m_grv});
@@ -73,17 +74,14 @@
             this.c_ho_ten,
             this.c_ten_mon,
             this.c_ma_trung_tam,
-            this.gridColumn1});
+            this.gridColumn1,
+            this.gridColumn2});
             this.m_grv.GridControl = this.m_grc;
-            this.m_grv.GroupCount = 2;
             this.m_grv.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "MA_NV", null, "(Count={0})")});
             this.m_grv.Name = "m_grv";
             this.m_grv.OptionsSelection.MultiSelect = true;
             this.m_grv.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
-            this.m_grv.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.c_ten_mon, DevExpress.Data.ColumnSortOrder.Ascending),
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.c_ma_lop_hoc, DevExpress.Data.ColumnSortOrder.Ascending)});
             // 
             // c_id
             // 
@@ -99,7 +97,7 @@
             this.c_ma_lop_hoc.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count)});
             this.c_ma_lop_hoc.Visible = true;
-            this.c_ma_lop_hoc.VisibleIndex = 0;
+            this.c_ma_lop_hoc.VisibleIndex = 1;
             // 
             // c_id_nhan_vien
             // 
@@ -113,7 +111,7 @@
             this.c_ma_nv.FieldName = "MA_NV";
             this.c_ma_nv.Name = "c_ma_nv";
             this.c_ma_nv.Visible = true;
-            this.c_ma_nv.VisibleIndex = 1;
+            this.c_ma_nv.VisibleIndex = 3;
             this.c_ma_nv.Width = 83;
             // 
             // c_ho_ten
@@ -122,7 +120,7 @@
             this.c_ho_ten.FieldName = "HO_DEM";
             this.c_ho_ten.Name = "c_ho_ten";
             this.c_ho_ten.Visible = true;
-            this.c_ho_ten.VisibleIndex = 2;
+            this.c_ho_ten.VisibleIndex = 4;
             // 
             // c_ten_mon
             // 
@@ -130,7 +128,7 @@
             this.c_ten_mon.FieldName = "TEN_MON_HOC";
             this.c_ten_mon.Name = "c_ten_mon";
             this.c_ten_mon.Visible = true;
-            this.c_ten_mon.VisibleIndex = 3;
+            this.c_ten_mon.VisibleIndex = 2;
             // 
             // c_ma_trung_tam
             // 
@@ -138,7 +136,7 @@
             this.c_ma_trung_tam.FieldName = "MA_TRUNG_TAM";
             this.c_ma_trung_tam.Name = "c_ma_trung_tam";
             this.c_ma_trung_tam.Visible = true;
-            this.c_ma_trung_tam.VisibleIndex = 4;
+            this.c_ma_trung_tam.VisibleIndex = 6;
             // 
             // gridColumn1
             // 
@@ -146,7 +144,7 @@
             this.gridColumn1.FieldName = "TEN";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 3;
+            this.gridColumn1.VisibleIndex = 5;
             // 
             // ImageList
             // 
@@ -182,10 +180,10 @@
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_delete);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 270);
+            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 356);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(635, 36);
+            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(852, 36);
             this.m_pnl_out_place_dm.TabIndex = 20;
             // 
             // m_cmd_insert
@@ -197,11 +195,11 @@
             this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_insert.ImageIndex = 2;
             this.m_cmd_insert.ImageList = this.ImageList;
-            this.m_cmd_insert.Location = new System.Drawing.Point(367, 4);
+            this.m_cmd_insert.Location = new System.Drawing.Point(478, 4);
             this.m_cmd_insert.Name = "m_cmd_insert";
-            this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_insert.Size = new System.Drawing.Size(194, 28);
             this.m_cmd_insert.TabIndex = 12;
-            this.m_cmd_insert.Text = "&Thêm";
+            this.m_cmd_insert.Text = "&Thêm nhân viên cho lớp môn";
             this.m_cmd_insert.Click += new System.EventHandler(this.m_cmd_insert_Click);
             // 
             // m_cmd_view
@@ -228,7 +226,7 @@
             this.m_cmd_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_delete.ImageIndex = 4;
             this.m_cmd_delete.ImageList = this.ImageList;
-            this.m_cmd_delete.Location = new System.Drawing.Point(455, 4);
+            this.m_cmd_delete.Location = new System.Drawing.Point(672, 4);
             this.m_cmd_delete.Name = "m_cmd_delete";
             this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_delete.TabIndex = 14;
@@ -244,22 +242,28 @@
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(543, 4);
+            this.m_cmd_exit.Location = new System.Drawing.Point(760, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_exit.TabIndex = 11;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_exit_Click);
             // 
-            // F206_Nhan_vien_lop_hoc
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "ID MÔN HỌC";
+            this.gridColumn2.FieldName = "ID_MON_HOC";
+            this.gridColumn2.Name = "gridColumn2";
+            // 
+            // F206_Nhan_vien_lop_mon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(635, 306);
+            this.ClientSize = new System.Drawing.Size(852, 392);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Controls.Add(this.m_grc);
-            this.Name = "F206_Nhan_vien_lop_hoc";
-            this.Text = "F206 - Nhân viên lớp học";
+            this.Name = "F206_Nhan_vien_lop_mon";
+            this.Text = "F206 - Nhân viên lớp môn";
             this.Load += new System.EventHandler(this.F206_Nhan_vien_lop_hoc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.m_grc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv)).EndInit();
@@ -286,5 +290,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn c_ten_mon;
         private DevExpress.XtraGrid.Columns.GridColumn c_ma_trung_tam;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
     }
 }

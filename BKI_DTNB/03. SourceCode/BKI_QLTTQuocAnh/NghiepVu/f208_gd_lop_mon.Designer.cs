@@ -78,13 +78,9 @@
             this.gridColumn7,
             this.gridColumn8});
             this.m_grv.GridControl = this.m_grc;
-            this.m_grv.GroupCount = 2;
             this.m_grv.Name = "m_grv";
             this.m_grv.OptionsSelection.MultiSelect = true;
             this.m_grv.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
-            this.m_grv.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn1, DevExpress.Data.ColumnSortOrder.Ascending),
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn3, DevExpress.Data.ColumnSortOrder.Ascending)});
             this.m_grv.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.m_grv_PopupMenuShowing);
             // 
             // gridColumn1
@@ -93,7 +89,7 @@
             this.gridColumn1.FieldName = "MA_LOP_HOC";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.VisibleIndex = 2;
             // 
             // gridColumn2
             // 
@@ -109,7 +105,7 @@
             this.gridColumn3.FieldName = "MA_VERSION";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 0;
+            this.gridColumn3.VisibleIndex = 3;
             // 
             // gridColumn4
             // 
@@ -117,7 +113,7 @@
             this.gridColumn4.FieldName = "THOI_GIAN";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 2;
+            this.gridColumn4.VisibleIndex = 4;
             // 
             // gridColumn5
             // 
@@ -125,7 +121,7 @@
             this.gridColumn5.FieldName = "DIA_DIEM";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 3;
+            this.gridColumn5.VisibleIndex = 5;
             // 
             // gridColumn6
             // 
@@ -133,7 +129,7 @@
             this.gridColumn6.FieldName = "SO_LUONG";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 5;
+            this.gridColumn6.VisibleIndex = 7;
             // 
             // gridColumn7
             // 
@@ -141,7 +137,7 @@
             this.gridColumn7.FieldName = "DIEM_QUA_MON";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 4;
+            this.gridColumn7.VisibleIndex = 6;
             // 
             // gridColumn8
             // 
@@ -149,7 +145,7 @@
             this.gridColumn8.FieldName = "SO_HOC_VIEN_HIEN_CO";
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 6;
+            this.gridColumn8.VisibleIndex = 8;
             // 
             // ImageList
             // 

@@ -331,7 +331,7 @@ namespace BKI_QLTTQuocAnh
 
         private void m_cmd_nhap_hoc_ItemClick(object sender, ItemClickEventArgs e)
         {
-            F206_Nhan_vien_lop_hoc v_f = new F206_Nhan_vien_lop_hoc();
+            F206_Nhan_vien_lop_mon v_f = new F206_Nhan_vien_lop_mon();
             v_f.MdiParent = this;
             v_f.Show();
         }

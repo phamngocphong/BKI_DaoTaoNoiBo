@@ -11,11 +11,11 @@ using IP.Core.IPCommon;
 
 namespace BKI_QLTTQuocAnh.NghiepVu
 {
-    public partial class F206_Nhan_vien_lop_hoc : Form
+    public partial class F206_Nhan_vien_lop_mon : Form
     {
         decimal m_dc_id_lop_mon = -1;
 
-        public F206_Nhan_vien_lop_hoc()
+        public F206_Nhan_vien_lop_mon()
         {
             InitializeComponent();
         }
@@ -75,8 +75,10 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             try
             {
                 var v_dr = m_grv.GetDataRow(m_grv.GetSelectedRows()[0]);
+                decimal v_dc_id_mon_hoc = CIPConvert.ToDecimal(v_dr["ID_MON_HOC"].ToString());
+                decimal v_dc_id_lop_mon = CIPConvert.ToDecimal(v_dr["ID_LOP_MON"].ToString());
                 F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC v_f = new F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC();
-                v_f.ShowDialog();
+                v_f.display(v_dc_id_lop_mon,v_dc_id_mon_hoc);
                 load_data_2_grid();
             }
             catch (Exception ex)

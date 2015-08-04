@@ -35,7 +35,8 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 
         private void load_data_2_cbo()
         {
-            WinFormControls.load_data_to_combobox("DM_MON_HOC", "ID", "MA_MON_HOC", "", WinFormControls.eTAT_CA.NO, m_cbo_ma_ten_mon_hoc);
+           // WinFormControls.load_data_to_combobox("DM_MON_HOC", "ID", "MA_MON_HOC", "", WinFormControls.eTAT_CA.NO, m_cbo_ma_ten_mon_hoc);
+            WinFormControls.load_data_to_combobox_with_query(m_cbo_ma_ten_mon_hoc, "ID", "TEN_MON_HOC", WinFormControls.eTAT_CA.NO, "SELECT ID, MA_MON_HOC+' - '+ TEN_MON_HOC AS TEN_MON_HOC FROM DM_MON_HOC");
             m_cbo_ma_ten_mon_hoc.SelectedValue = m_dc_ma_ten_mon_hoc;
 
         }

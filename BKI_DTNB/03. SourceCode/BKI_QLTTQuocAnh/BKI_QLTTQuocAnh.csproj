@@ -311,11 +311,11 @@
     <Compile Include="NghiepVu\F205_TAO_MOI_LOP_HOC.designer.cs">
       <DependentUpon>F205_TAO_MOI_LOP_HOC.cs</DependentUpon>
     </Compile>
-    <Compile Include="NghiepVu\F206_Nhan_vien_lop_hoc.cs">
+    <Compile Include="NghiepVu\F206_Nhan_vien_lop_mon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NghiepVu\F206_Nhan_vien_lop_hoc.Designer.cs">
-      <DependentUpon>F206_Nhan_vien_lop_hoc.cs</DependentUpon>
+    <Compile Include="NghiepVu\F206_Nhan_vien_lop_mon.Designer.cs">
+      <DependentUpon>F206_Nhan_vien_lop_mon.cs</DependentUpon>
     </Compile>
     <Compile Include="NghiepVu\F207_Nhap_diem.cs">
       <SubType>Form</SubType>
@@ -477,8 +477,8 @@
     <EmbeddedResource Include="NghiepVu\F205_TAO_MOI_LOP_HOC.resx">
       <DependentUpon>F205_TAO_MOI_LOP_HOC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NghiepVu\F206_Nhan_vien_lop_hoc.resx">
-      <DependentUpon>F206_Nhan_vien_lop_hoc.cs</DependentUpon>
+    <EmbeddedResource Include="NghiepVu\F206_Nhan_vien_lop_mon.resx">
+      <DependentUpon>F206_Nhan_vien_lop_mon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\F207_Nhap_diem.resx">
       <DependentUpon>F207_Nhap_diem.cs</DependentUpon>

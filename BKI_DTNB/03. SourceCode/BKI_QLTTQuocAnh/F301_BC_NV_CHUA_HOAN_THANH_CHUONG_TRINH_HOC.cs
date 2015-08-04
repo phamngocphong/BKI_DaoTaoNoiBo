@@ -35,6 +35,7 @@ namespace BKI_QLTTQuocAnh
             try
             {
                 WinFormControls.load_data_to_combobox("CM_DM_TU_DIEN", "ID", "TEN", " WHERE ID_LOAI_TU_DIEN = 21", WinFormControls.eTAT_CA.YES, m_cbo_dia_phuong);
+
                 load_data_2_grid();
             }
             catch (Exception v_e)
@@ -170,7 +171,7 @@ namespace BKI_QLTTQuocAnh
 
                 CSystemLog_301.ExceptionHandle(ex);
             }
-            
+
         }
 
         private void m_cbo_ngach_SelectedIndexChanged(object sender, EventArgs e)//Combobox ngạch thay đổi giá trị
@@ -216,16 +217,16 @@ namespace BKI_QLTTQuocAnh
                 //    MessageBox.Show("Lưu báo cáo thành công");
                 //}
                 ArrayList v_arr_list = new ArrayList();
-                v_arr_list.Add(new iParameter("iP_tieu_de_bao_cao","Báo cáo nhân viên chưa học môn " + m_cbo_mon_hoc.Text));
-                v_arr_list.Add(new iParameter("iP_trung_tam","TỔ HỢP GIÁO DỤC TOPICA"));
+                v_arr_list.Add(new iParameter("iP_tieu_de_bao_cao", "Báo cáo nhân viên chưa học môn " + m_cbo_mon_hoc.Text));
+                v_arr_list.Add(new iParameter("iP_trung_tam", "TỔ HỢP GIÁO DỤC TOPICA"));
                 v_arr_list.Add(new iParameter("iP_date_time", "Hà Nội, ngày " + DateTime.Now.Date.ToShortDateString()));
-                BKI_QLTTQuocAnh.BaoCao.RPT_XtraReport v_xr = new BKI_QLTTQuocAnh.BaoCao.RPT_XtraReport(m_ds, m_grv,v_arr_list, System.Drawing.Printing.PaperKind.A4, true);
+                BKI_QLTTQuocAnh.BaoCao.RPT_XtraReport v_xr = new BKI_QLTTQuocAnh.BaoCao.RPT_XtraReport(m_ds, m_grv, v_arr_list, System.Drawing.Printing.PaperKind.A4, true);
                 ReportPrintTool v_xrpt = new ReportPrintTool(v_xr);
                 v_xrpt.ShowPreview();
             }
             catch (Exception v_e)
             {
-                CSystemLog_301.ExceptionHandle(v_e);           
+                CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
@@ -261,30 +262,51 @@ namespace BKI_QLTTQuocAnh
 
         private void m_cmd_assign_Click(object sender, EventArgs e)
         {
-            try
+            var v_count = m_grv.SelectedRowsCount;
+            if (v_count == 0)
             {
-                F301_Assign v_f = new F301_Assign();
-                if (m_dc_id_lop_mon == -1)
+                MessageBox.Show("Vui lòng chọn nhân viên để thêm vào lớp học");
+
+
+            }
+            else
+            {
+                US_GD_LOP_MON v_us_gd_LOP_MON = new US_GD_LOP_MON();
+                DS_GD_LOP_MON v_ds_gd_LOP_MON = new DS_GD_LOP_MON();
+                v_ds_gd_LOP_MON.EnforceConstraints = false;
+                v_us_gd_LOP_MON.FillDataset(v_ds_gd_LOP_MON, " WHERE ID_VERSION_MON_HOC IN (SELECT ID FROM DM_VERSION_MON_HOC WHERE ID_MON_HOC = " + m_cbo_mon_hoc.SelectedValue + ")");
+                if (v_ds_gd_LOP_MON.Tables[0].Rows.Count == 0)
                 {
-                    m_dc_id_mon_hoc = CIPConvert.ToDecimal(m_cbo_mon_hoc.SelectedValue.ToString());
-                    v_f.Display(m_dc_id_mon_hoc, ref m_dc_id_lop_mon);
+                    MessageBox.Show("Chưa có lớp học nào cho môn học này. Vui lòng thêm lớp học mới!");
                 }
                 else
                 {
-                    v_f.Display(m_dc_id_lop_mon, m_dc_id_mon_hoc);
+                    try
+                    {
+                        F301_Assign v_f = new F301_Assign();
+                        if (m_dc_id_lop_mon == -1)
+                        {
+                            m_dc_id_mon_hoc = CIPConvert.ToDecimal(m_cbo_mon_hoc.SelectedValue.ToString());
+                            v_f.Display(m_dc_id_mon_hoc, ref m_dc_id_lop_mon);
+                        }
+                        else
+                        {
+                            v_f.Display(m_dc_id_lop_mon, m_dc_id_mon_hoc);
+                        }
+                        if (v_f.DialogResult == System.Windows.Forms.DialogResult.OK)
+                        {
+                            List<decimal> v_lst_id_lop = new List<decimal>();
+                            v_lst_id_lop.Add(m_dc_id_lop_mon);
+                            assignHV(v_lst_id_lop, GetSelectedRows(m_grv).Count);
+                            MessageBox.Show("Assign thành công học viên vào lớp môn.");
+                            load_data_2_grid();
+                        }
+                    }
+                    catch (Exception v_e)
+                    {
+                        CSystemLog_301.ExceptionHandle(v_e);
+                    }
                 }
-                if (v_f.DialogResult == System.Windows.Forms.DialogResult.OK)
-                {
-                    List<decimal> v_lst_id_lop = new List<decimal>();
-                    v_lst_id_lop.Add(m_dc_id_lop_mon);
-                    assignHV(v_lst_id_lop, GetSelectedRows(m_grv).Count);
-                    MessageBox.Show("Assign thành công học viên vào lớp môn.");
-                    load_data_2_grid();
-                }
-            }
-            catch (Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 

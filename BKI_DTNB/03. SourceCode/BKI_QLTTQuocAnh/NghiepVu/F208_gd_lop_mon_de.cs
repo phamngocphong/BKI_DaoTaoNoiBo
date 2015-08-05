@@ -35,7 +35,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 
         private void load_data_2_cbo()
         {
-           // WinFormControls.load_data_to_combobox("DM_MON_HOC", "ID", "MA_MON_HOC", "", WinFormControls.eTAT_CA.NO, m_cbo_ma_ten_mon_hoc);
+            // WinFormControls.load_data_to_combobox("DM_MON_HOC", "ID", "MA_MON_HOC", "", WinFormControls.eTAT_CA.NO, m_cbo_ma_ten_mon_hoc);
             WinFormControls.load_data_to_combobox_with_query(m_cbo_ma_ten_mon_hoc, "ID", "TEN_MON_HOC", WinFormControls.eTAT_CA.NO, "SELECT ID, MA_MON_HOC+' - '+ TEN_MON_HOC AS TEN_MON_HOC FROM DM_MON_HOC");
             m_cbo_ma_ten_mon_hoc.SelectedValue = m_dc_ma_ten_mon_hoc;
 
@@ -84,7 +84,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         }
         private bool check_validate_ma_lop(string ip_ma_lop)
         {
-
+            bool ma_lop_is_ok = true;
             US_DUNG_CHUNG v_us_dc = new US_DUNG_CHUNG();
             DataSet v_ds = new DataSet();
             v_ds.Tables.Add(new DataTable());
@@ -94,25 +94,36 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             {
                 DataRow m_dt_r = v_ds.Tables[0].Rows[i];
                 if (ip_ma_lop == m_dt_r["MA_LOP_HOC"].ToString())
-                    return false;
+                {
+                    ma_lop_is_ok = false;
+                    MessageBox.Show("Trùng mã lớp. Vui lòng nhập lại!");
+                    break;
+                }
             }
-            return true;
+            return ma_lop_is_ok;
         }
         private bool check_validate_data_type()
         {
             string diem_qua_mon = m_txt_diem_qua_mon.Text;
             string so_luong_hoc_vien = m_txt_so_luong.Text;
             decimal value;
-            if ((Decimal.TryParse(diem_qua_mon, out value)) && (Decimal.TryParse(so_luong_hoc_vien, out value)))
-                return true;
-            else
+            if ((Decimal.TryParse(diem_qua_mon, out value)) || (Decimal.TryParse(so_luong_hoc_vien, out value)))
+            {
+                
+                MessageBox.Show("Vui lòng nhập kiểu số cho Số Lượng và Điểm Qua Môn!");
                 return false;
+            }
+            else return true;
         }
 
         private bool check_validate_data_is_OK()
         {
+            
             if ((m_txt_dia_diem.Text == "") || (m_txt_diem_qua_mon.Text == "") || (m_txt_so_luong.Text == "") || (m_txt_ma_lop.Text == "") || (m_cbo_version.SelectedValue == null) || (m_cbo_ma_ten_mon_hoc.SelectedValue == null))
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ các trường dữ liệu!");
                 return false;
+            }
             else
                 return true;
         }
@@ -132,54 +143,30 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             this.ShowDialog();
         }
 
-        private void kiem_tra_dien_du_lieu_trong()
-        {
-            if (check_validate_data_is_OK() != true)
-            {
-                MessageBox.Show("Vui lòng nhập đầy đủ dữ liệu!");
-            }
-            else
-            {
-                kiem_tra_du_lieu_kieu_so();
-            }
-        }
-
-
-        private void kiem_tra_du_lieu_kieu_so()
-        {
-            if (check_validate_data_type() != true)
-            {
-                MessageBox.Show("Vui lòng nhập kiểu số cho Số Lượng và Điểm Qua Môn");
-
-            }
-            else
-            {
-                savedata();
-            }
-        }
-
         private void savedata()
         {
-
-            form_to_us();
-            try
+            if (check_validate_data_is_OK() != true || check_validate_data_type() != true) return;
+            else
             {
-                switch (m_e_form_mode)
+                form_to_us();
+                try
                 {
-                    case DataEntryFormMode.InsertDataState:
-                        m_us.Insert();
-                        break;
-                    case DataEntryFormMode.UpdateDataState:
-                        m_us.Update();
-                        break;
+                    switch (m_e_form_mode)
+                    {
+                        case DataEntryFormMode.InsertDataState:
+                            m_us.Insert();
+                            break;
+                        case DataEntryFormMode.UpdateDataState:
+                            m_us.Update();
+                            break;
+                    }
+                    MessageBox.Show("Lưu lớp môn thành công!");
+                    this.Close();
                 }
-                MessageBox.Show("Lưu lớp môn thành công!");
-                this.Close();
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show("Trùng mã lớp. Xin vui lòng nhập lại thông tin!");
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Trùng mã lớp. Xin vui lòng nhập lại thông tin!");
+                }
             }
         }
 
@@ -188,7 +175,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 
             try
             {
-                kiem_tra_dien_du_lieu_trong();
+                savedata();
             }
             catch (Exception ex)
             {

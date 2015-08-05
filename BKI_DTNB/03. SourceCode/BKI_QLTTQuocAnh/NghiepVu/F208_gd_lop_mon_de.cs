@@ -106,8 +106,8 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         {
             string diem_qua_mon = m_txt_diem_qua_mon.Text;
             string so_luong_hoc_vien = m_txt_so_luong.Text;
-            decimal value;
-            if ((Decimal.TryParse(diem_qua_mon, out value)) || (Decimal.TryParse(so_luong_hoc_vien, out value)))
+            decimal value=0;
+            if (!(Decimal.TryParse(diem_qua_mon, out value)) || !(Decimal.TryParse(so_luong_hoc_vien, out value)))
             {
                 
                 MessageBox.Show("Vui lòng nhập kiểu số cho Số Lượng và Điểm Qua Môn!");

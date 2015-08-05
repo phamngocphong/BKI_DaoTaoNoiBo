@@ -1,0 +1,1029 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B91F4BE2-5024-4012-A4A8-4E52E8609778}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BKI_DTNB</RootNamespace>
+    <AssemblyName>BKI_DTNB</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\BKI_DTNB_V1\trunk\BKI_DTNB\publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>87E4378C127C363D6FCF16BC29A7FD283FD72340</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>BKI_QLTTQuocAnh_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.Common, Version=1.0.20031.116, Culture=neutral, PublicKeyToken=e272bb32d11b1948">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\C1.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1FlexGrid, Version=2.5.20044.189, Culture=neutral, PublicKeyToken=c9c7ad9c0a5706c9">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\C1.Win.C1FlexGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1FlexGrid.Classic, Version=2.5.20044.189, Culture=neutral, PublicKeyToken=c9c7ad9c0a5706c9">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\C1.Win.C1FlexGrid.Classic.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Input">
+      <HintPath>..\DLL\C1.Win.C1Input.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v14.1.Core, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\DevExpress.Data.v14.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v14.1.Core, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v14.1.Core, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v14.1.Core, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v14.1.Core, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v14.1.Core, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\DevExpress.Utils.v14.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v14.1.UI, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\DevExpress.XtraBars.v14.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\DevExpress.XtraEditors.v14.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v14.1.Core, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\DevExpress.XtraGrid.v14.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v14.1.Extensions, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SQL Server\110\SDK\Assemblies\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SQL Server\110\SDK\Assemblies\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SQL Server\110\SDK\Assemblies\Microsoft.SqlServer.Smo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlEnum, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SQL Server\110\SDK\Assemblies\Microsoft.SqlServer.SqlEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="SiSButton, Version=1.0.1494.35082, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\SiSButton.dll</HintPath>
+    </Reference>
+    <Reference Include="SiSMenu">
+      <HintPath>..\DLL\SiSMenu.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddTab.cs" />
+    <Compile Include="ApplicationControl.cs" />
+    <Compile Include="BaoCao\F303_Ket_qua_dao_tao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\F303_Ket_qua_dao_tao.Designer.cs">
+      <DependentUpon>F303_Ket_qua_dao_tao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCao\F303_ket_qua_dao_tao_de.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\F303_ket_qua_dao_tao_de.Designer.cs">
+      <DependentUpon>F303_ket_qua_dao_tao_de.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCao\f305_BAO_CAO_CHUNG_CHI_HET_HAN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\f305_BAO_CAO_CHUNG_CHI_HET_HAN.Designer.cs">
+      <DependentUpon>f305_BAO_CAO_CHUNG_CHI_HET_HAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCao\F305_bao_cao_chung_chi_het_han_de.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\F305_bao_cao_chung_chi_het_han_de.Designer.cs">
+      <DependentUpon>F305_bao_cao_chung_chi_het_han_de.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCao\XtraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\XtraForm.Designer.cs">
+      <DependentUpon>XtraForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCao\RPT_XtraReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaoCao\RPT_XtraReport.Designer.cs">
+      <DependentUpon>RPT_XtraReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CCommon.cs" />
+    <Compile Include="DanhMuc\f115_tong_quan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\f115_tong_quan.Designer.cs">
+      <DependentUpon>f115_tong_quan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f101_danh_muc_hoc_phan_mon_hoc.cs" />
+    <Compile Include="F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC.Designer.cs">
+      <DependentUpon>F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeThong\collection.cs" />
+    <Compile Include="HeThong\f306_HT_USER_GROUP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\f306_HT_USER_GROUP_DE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\f306_HT_USER_GROUP_DE.Designer.cs">
+      <DependentUpon>f306_HT_USER_GROUP_DE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeThong\f308_DOI_MAT_KHAU_NGUOI_SD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\f308_DOI_MAT_KHAU_NGUOI_SD.designer.cs">
+      <DependentUpon>f308_DOI_MAT_KHAU_NGUOI_SD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeThong\f990_ht_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\f992_phan_quyen_he_thong_de.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\f992_phan_quyen_he_thong_de.Designer.cs">
+      <DependentUpon>f992_phan_quyen_he_thong_de.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeThong\f993_phan_quyen_he_thong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\f994_phan_quyen_detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\f994_phan_quyen_detail.Designer.cs">
+      <DependentUpon>f994_phan_quyen_detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeThong\f995_ht_phan_quyen_cho_nhom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\f995_ht_phan_quyen_cho_nhom.Designer.cs">
+      <DependentUpon>f995_ht_phan_quyen_cho_nhom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeThong\f998_ht_nguoi_su_dung_de.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\f999_ht_nguoi_su_dung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\BackupDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\BackupDB.Designer.cs">
+      <DependentUpon>BackupDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NghiepVu\F112_nhan_su_nghiep_vu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\F112_nhan_su_nghiep_vu.Designer.cs">
+      <DependentUpon>F112_nhan_su_nghiep_vu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NghiepVu\F112_nhan_su_nghiep_vu_de.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\F112_nhan_su_nghiep_vu_de.Designer.cs">
+      <DependentUpon>F112_nhan_su_nghiep_vu_de.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NghiepVu\F114_Nhap_chung_chi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\F114_Nhap_chung_chi.Designer.cs">
+      <DependentUpon>F114_Nhap_chung_chi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NghiepVu\F205_TAO_MOI_LOP_HOC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\F205_TAO_MOI_LOP_HOC.designer.cs">
+      <DependentUpon>F205_TAO_MOI_LOP_HOC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NghiepVu\F206_Nhan_vien_lop_mon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\F206_Nhan_vien_lop_mon.Designer.cs">
+      <DependentUpon>F206_Nhan_vien_lop_mon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NghiepVu\F207_Nhap_diem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\F207_Nhap_diem.Designer.cs">
+      <DependentUpon>F207_Nhap_diem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NghiepVu\F207_Nhap_diem_DE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\F207_Nhap_diem_DE.Designer.cs">
+      <DependentUpon>F207_Nhap_diem_DE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NghiepVu\f208_gd_lop_mon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\f208_gd_lop_mon.Designer.cs">
+      <DependentUpon>f208_gd_lop_mon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NghiepVu\F208_gd_lop_mon_de.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\F208_gd_lop_mon_de.Designer.cs">
+      <DependentUpon>F208_gd_lop_mon_de.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NghiepVu\F209_gd_chung_chi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\F209_gd_chung_chi.Designer.cs">
+      <DependentUpon>F209_gd_chung_chi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NghiepVu\F209_gd_chung_chi_de.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\F209_gd_chung_chi_de.Designer.cs">
+      <DependentUpon>F209_gd_chung_chi_de.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NghiepVu\F210_cap_chung_chi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\F210_cap_chung_chi.Designer.cs">
+      <DependentUpon>F210_cap_chung_chi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NghiepVu\F210_Nhap_diem_xlsx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\F210_Nhap_diem_xlsx.Designer.cs">
+      <DependentUpon>F210_Nhap_diem_xlsx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NghiepVu\F210_Nhap_diem_xlsx_de.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\F210_Nhap_diem_xlsx_de.Designer.cs">
+      <DependentUpon>F210_Nhap_diem_xlsx_de.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NghiepVu\F211_Nhan_vien_nghiep_vu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\F211_Nhan_vien_nghiep_vu.Designer.cs">
+      <DependentUpon>F211_Nhan_vien_nghiep_vu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NghiepVu\F211_Nhan_vien_nghiep_vu_de.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\F211_Nhan_vien_nghiep_vu_de.Designer.cs">
+      <DependentUpon>F211_Nhan_vien_nghiep_vu_de.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NghiepVu\F301_Assign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\F301_Assign.Designer.cs">
+      <DependentUpon>F301_Assign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NghiepVu\F301_Tao_lop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\F301_Tao_lop.Designer.cs">
+      <DependentUpon>F301_Tao_lop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="f388_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f388_main.Designer.cs">
+      <DependentUpon>f388_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormControls.cs" />
+    <EmbeddedResource Include="BaoCao\F303_ket_qua_dao_tao_de.resx">
+      <DependentUpon>F303_ket_qua_dao_tao_de.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\f305_BAO_CAO_CHUNG_CHI_HET_HAN.resx">
+      <DependentUpon>f305_BAO_CAO_CHUNG_CHI_HET_HAN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\F303_Ket_qua_dao_tao.resx">
+      <DependentUpon>F303_Ket_qua_dao_tao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\F305_bao_cao_chung_chi_het_han_de.resx">
+      <DependentUpon>F305_bao_cao_chung_chi_het_han_de.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\XtraForm.resx">
+      <DependentUpon>XtraForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\RPT_XtraReport.resx">
+      <DependentUpon>RPT_XtraReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\f115_tong_quan.resx">
+      <DependentUpon>f115_tong_quan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC.resx">
+      <DependentUpon>F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\f306_HT_USER_GROUP.resx">
+      <DependentUpon>f306_HT_USER_GROUP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\f306_HT_USER_GROUP_DE.resx">
+      <DependentUpon>f306_HT_USER_GROUP_DE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\f308_DOI_MAT_KHAU_NGUOI_SD.resx">
+      <DependentUpon>f308_DOI_MAT_KHAU_NGUOI_SD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\f990_ht_form.resx">
+      <DependentUpon>f990_ht_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\f992_phan_quyen_he_thong_de.resx">
+      <DependentUpon>f992_phan_quyen_he_thong_de.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\f993_phan_quyen_he_thong.resx">
+      <DependentUpon>f993_phan_quyen_he_thong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\f994_phan_quyen_detail.resx">
+      <DependentUpon>f994_phan_quyen_detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\f995_ht_phan_quyen_cho_nhom.resx">
+      <DependentUpon>f995_ht_phan_quyen_cho_nhom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\f998_ht_nguoi_su_dung_de.resx">
+      <DependentUpon>f998_ht_nguoi_su_dung_de.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\f999_ht_nguoi_su_dung.resx">
+      <DependentUpon>f999_ht_nguoi_su_dung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\BackupDB.resx">
+      <DependentUpon>BackupDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\F112_nhan_su_nghiep_vu.resx">
+      <DependentUpon>F112_nhan_su_nghiep_vu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\F112_nhan_su_nghiep_vu_de.resx">
+      <DependentUpon>F112_nhan_su_nghiep_vu_de.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\F114_Nhap_chung_chi.resx">
+      <DependentUpon>F114_Nhap_chung_chi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\F205_TAO_MOI_LOP_HOC.resx">
+      <DependentUpon>F205_TAO_MOI_LOP_HOC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\F206_Nhan_vien_lop_mon.resx">
+      <DependentUpon>F206_Nhan_vien_lop_mon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\F207_Nhap_diem.resx">
+      <DependentUpon>F207_Nhap_diem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\F207_Nhap_diem_DE.resx">
+      <DependentUpon>F207_Nhap_diem_DE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\f208_gd_lop_mon.resx">
+      <DependentUpon>f208_gd_lop_mon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\F208_gd_lop_mon_de.resx">
+      <DependentUpon>F208_gd_lop_mon_de.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\F209_gd_chung_chi.resx">
+      <DependentUpon>F209_gd_chung_chi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\F209_gd_chung_chi_de.resx">
+      <DependentUpon>F209_gd_chung_chi_de.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\F210_cap_chung_chi.resx">
+      <DependentUpon>F210_cap_chung_chi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\F210_Nhap_diem_xlsx.resx">
+      <DependentUpon>F210_Nhap_diem_xlsx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\F210_Nhap_diem_xlsx_de.resx">
+      <DependentUpon>F210_Nhap_diem_xlsx_de.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\F211_Nhan_vien_nghiep_vu.resx">
+      <DependentUpon>F211_Nhan_vien_nghiep_vu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\F211_Nhan_vien_nghiep_vu_de.resx">
+      <DependentUpon>F211_Nhan_vien_nghiep_vu_de.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\F301_Assign.resx">
+      <DependentUpon>F301_Assign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\F301_Tao_lop.resx">
+      <DependentUpon>F301_Tao_lop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f388_main.resx">
+      <DependentUpon>f388_main.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BKI_QLTTQuocAnh_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BKI_DTNB.DS\BKI_DTNB.DS.csproj">
+      <Project>{4AEBA63F-E5B5-4D0C-B1B5-E6BCB13E1B5A}</Project>
+      <Name>BKI_DTNB.DS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BKI_DTNB.US\BKI_DTNB.US.csproj">
+      <Project>{CAFDA83F-D091-49BF-816F-F7A7A72C68EC}</Project>
+      <Name>BKI_DTNB.US</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IPBusinessService\IPBusinessService.vbproj">
+      <Project>{73CA732C-2CFB-4A14-B0B9-F43763B1C2F3}</Project>
+      <Name>IPBusinessService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IPCommon\IPCommon.vbproj">
+      <Project>{2A74F1D1-C0EE-41FE-A708-A83B285ACCF2}</Project>
+      <Name>IPCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IPData\IPData.vbproj">
+      <Project>{9ACEDD70-FDA2-44D8-A004-3A7EAF86A954}</Project>
+      <Name>IPData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IPExcelReport\IPExcelReport.vbproj">
+      <Project>{957C06D0-FF42-4C7A-B5E8-7E15C1522B59}</Project>
+      <Name>IPExcelReport</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IPExcelWebReport\IPExcelWebReport.vbproj">
+      <Project>{AB5E4EFF-2002-4309-AE0B-EE58A1C28DF1}</Project>
+      <Name>IPExcelWebReport</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IPException\IPException.vbproj">
+      <Project>{B73156C2-7034-4DEA-A308-5E1782FF8DB4}</Project>
+      <Name>IPException</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IPSystemAdmin\IPSystemAdmin.vbproj">
+      <Project>{455CD3A5-79BA-480A-B9BD-D4A7DDA397A8}</Project>
+      <Name>IPSystemAdmin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IPUserService\IPUserService.vbproj">
+      <Project>{B490EA92-2990-4CBB-B58B-12901AFCCCB5}</Project>
+      <Name>IPUserService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hopstarter-Sleek-Xp-Basic-Close-2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aha-Soft-Security-Secrecy.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hopstarter-Soft-Scraps-User-Group.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hopstarter-Soft-Scraps-User-Group1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ampeross-Qetto-2-Settings.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Custom-Icon-Design-Pretty-Office-2-Man.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons8-Ios7-Household-Room.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Designbolts-Monsters-University-Monsters-Character-Young-Mikes.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons8-Windows-8-Users-Enter-2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425904361_23923.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425904406_289616.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425904521_438788.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425904625_416404.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425904783_54524.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425904874_44824.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425905213_379332.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425905405_243979.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Designbolts-Monsters-University-Monsters-Character-Young-Mikes1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425905592_196740.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons8-Ios7-Household-Room1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425904832_45433.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425904874_448241.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425905865_103845.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425905897_25350.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425904521_4387881.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425906136_315167.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425906224_17014.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425906098_24333.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425912499_173055.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-web.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425905897_253501.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo luyen thi V4.0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Benjigarner-Softdimension-Excel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="DevExpress.Charts.v14.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.CodeParser.v14.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Data.v14.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.DataAccess.v14.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.DataAccess.v14.1.UI">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Office.v14.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.PivotGrid.v14.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Printing.v14.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.RichEdit.v14.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Sparkline.v14.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Utils.v14.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Utils.v14.1.UI">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Xpo.v14.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraBars.v14.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraCharts.v14.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraCharts.v14.1.Extensions">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraCharts.v14.1.Wizard">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraEditors.v14.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraGauges.v14.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraGrid.v14.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraLayout.v14.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraNavBar.v14.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraPivotGrid.v14.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraPrinting.v14.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraReports.v14.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraReports.v14.1.Extensions">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraRichEdit.v14.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraTreeList.v14.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraVerticalGrid.v14.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraWizard.v14.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.DataAccess.v14.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.DataAccess.v14.1.UI.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -88,8 +88,10 @@ namespace BKI_QLTTQuocAnh.NghiepVu
                     // var m_row = m_grv.SelectedRowsCount - 1;
                     var v_data_row = m_grv.GetDataRow(m_grv.GetSelectedRows()[0]);
                     US_V_GD_CHUNG_CHI v_us = new US_V_GD_CHUNG_CHI(CIPConvert.ToDecimal(v_data_row["ID"].ToString()));
-                    v_f.Update_form(v_us);
-                    load_data_2_grid();
+                    
+                        v_f.Update_form(v_us);
+                        load_data_2_grid();
+        
                 }
             }
             catch (Exception ex)

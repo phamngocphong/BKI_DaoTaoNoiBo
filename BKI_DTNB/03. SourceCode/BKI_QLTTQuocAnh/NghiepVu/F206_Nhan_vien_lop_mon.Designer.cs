@@ -76,11 +76,15 @@
             this.gridColumn1,
             this.gridColumn2});
             this.m_grv.GridControl = this.m_grc;
+            this.m_grv.GroupCount = 2;
             this.m_grv.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "MA_NV", null, "(Count={0})")});
             this.m_grv.Name = "m_grv";
             this.m_grv.OptionsSelection.MultiSelect = true;
             this.m_grv.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
+            this.m_grv.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.c_ten_mon, DevExpress.Data.ColumnSortOrder.Ascending),
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.c_ma_lop_hoc, DevExpress.Data.ColumnSortOrder.Ascending)});
             // 
             // c_id
             // 
@@ -110,7 +114,7 @@
             this.c_ma_nv.FieldName = "MA_NV";
             this.c_ma_nv.Name = "c_ma_nv";
             this.c_ma_nv.Visible = true;
-            this.c_ma_nv.VisibleIndex = 3;
+            this.c_ma_nv.VisibleIndex = 1;
             this.c_ma_nv.Width = 83;
             // 
             // c_ho_ten
@@ -119,7 +123,7 @@
             this.c_ho_ten.FieldName = "HO_DEM";
             this.c_ho_ten.Name = "c_ho_ten";
             this.c_ho_ten.Visible = true;
-            this.c_ho_ten.VisibleIndex = 4;
+            this.c_ho_ten.VisibleIndex = 2;
             // 
             // c_ten_mon
             // 
@@ -135,7 +139,7 @@
             this.c_ma_trung_tam.FieldName = "MA_TRUNG_TAM";
             this.c_ma_trung_tam.Name = "c_ma_trung_tam";
             this.c_ma_trung_tam.Visible = true;
-            this.c_ma_trung_tam.VisibleIndex = 6;
+            this.c_ma_trung_tam.VisibleIndex = 4;
             // 
             // gridColumn1
             // 
@@ -143,7 +147,7 @@
             this.gridColumn1.FieldName = "TEN";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 5;
+            this.gridColumn1.VisibleIndex = 3;
             // 
             // gridColumn2
             // 

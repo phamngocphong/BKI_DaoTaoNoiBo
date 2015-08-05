@@ -89,11 +89,19 @@ namespace BKI_QLTTQuocAnh.NghiepVu
                     m_us_gd_chung_chi.Insert();
                     break;
                 case DataEntryFormMode.UpdateDataState:
-                    m_us_gd_chung_chi.Update();
+                    try
+                    {
+                        m_us_gd_chung_chi.Update();
+                        MessageBox.Show("Lưu chứng chỉ thành công!");
+                    }
+                    catch (Exception)
+                    {
+
+                        MessageBox.Show("Chứng chỉ này đã tồn tại trong hệ thống.Vui lòng kiểm tra lại thông tin!");
+                    }
                     break;
             }
-            
-            MessageBox.Show("Lưu chứng chỉ thành công!");
+   
         }
 
         private void m_cmd_luu_Click(object sender, EventArgs e)

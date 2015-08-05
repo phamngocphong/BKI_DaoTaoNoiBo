@@ -54,15 +54,27 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         {
             try
             {
-                for (int i = 0; i < m_grv.SelectedRowsCount; i++)
-                {
-                    var v_dr = m_grv.GetDataRow(m_grv.GetSelectedRows()[i]);
-                    US_GD_DIEM v_us = new US_GD_DIEM(CIPConvert.ToDecimal(v_dr["ID"].ToString()));
-                    v_us.strDA_XOA = "Y";
-                    v_us.Update();
-                }
-                MessageBox.Show("Đã xóa " + m_grv.SelectedRowsCount.ToString() + " học viên.");
-                load_data_2_grid();
+                 decimal v_count =CIPConvert.ToDecimal(m_grv.SelectedRowsCount.ToString());
+                 if (v_count == 0)
+                 {
+                     MessageBox.Show("Bạn phải chọn lớp môn để thực hiện tác vụ này!");
+                 }
+                 else
+                 {
+                     DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa bản ghi này không?", "Cảnh báo", MessageBoxButtons.YesNo);
+                     if (dialogResult == DialogResult.Yes)
+                     {
+                         for (int i = 0; i < m_grv.SelectedRowsCount; i++)
+                         {
+                             var v_dr = m_grv.GetDataRow(m_grv.GetSelectedRows()[i]);
+                             US_GD_DIEM v_us = new US_GD_DIEM(CIPConvert.ToDecimal(v_dr["ID"].ToString()));
+                             v_us.strDA_XOA = "Y";
+                             v_us.Update();
+                         }
+                         MessageBox.Show("Đã xóa " + m_grv.SelectedRowsCount.ToString() + " học viên.");
+                         load_data_2_grid();
+                     }
+                 }
             }
             catch (Exception v_e)
             {
@@ -74,12 +86,24 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         {
             try
             {
-                var v_dr = m_grv.GetDataRow(m_grv.GetSelectedRows()[0]);
-                decimal v_dc_id_mon_hoc = CIPConvert.ToDecimal(v_dr["ID_MON_HOC"].ToString());
-                decimal v_dc_id_lop_mon = CIPConvert.ToDecimal(v_dr["ID_LOP_MON"].ToString());
-                F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC v_f = new F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC();
-                v_f.display(v_dc_id_lop_mon,v_dc_id_mon_hoc);
-                load_data_2_grid();
+                decimal v_selected_row = m_grv.SelectedRowsCount;
+                if (v_selected_row == 0)
+                {
+                    MessageBox.Show("Bạn phải chọn lớp môn để thực hiện tác vụ này!");
+                }
+                else if (v_selected_row > 1)
+                {
+                    MessageBox.Show("Bạn chỉ được chọn 1 lớp môn để thực hiện tác vụ này!");
+                }
+                else
+                {
+                    var v_dr = m_grv.GetDataRow(m_grv.GetSelectedRows()[0]);
+                    decimal v_dc_id_mon_hoc = CIPConvert.ToDecimal(v_dr["ID_MON_HOC"].ToString());
+                    decimal v_dc_id_lop_mon = CIPConvert.ToDecimal(v_dr["ID_LOP_MON"].ToString());
+                    F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC v_f = new F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC();
+                    v_f.display(v_dc_id_lop_mon, v_dc_id_mon_hoc);
+                    load_data_2_grid();
+                }
             }
             catch (Exception ex)
             {

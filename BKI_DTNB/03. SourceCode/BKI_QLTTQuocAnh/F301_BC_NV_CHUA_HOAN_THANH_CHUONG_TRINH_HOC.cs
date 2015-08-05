@@ -105,7 +105,7 @@ namespace BKI_QLTTQuocAnh
                 v_us.dcDIEM_QUA_MON = ip_dc_diem_qua_mon;
                 v_us.dcSO_LUONG = v_so_luong_hoc_vien;
                 v_us.strDA_XOA = "N";
-                v_us.strMA_LOP_HOC = "FAKE-" + v_mon_hoc.strMA_MON_HOC + DateTime.Now.Date.ToShortDateString() + new Random().Next(10, 99);
+                v_us.strMA_LOP_HOC =  v_mon_hoc.strMA_MON_HOC + DateTime.Now.Date.ToShortDateString() + new Random().Next(100, 999);
                 v_us.strNGUOI_LAP = "admin";
                 v_us.IsNGUOI_SUANull();
                 v_us.Insert();

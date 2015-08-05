@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using IP.Core.IPCommon;
 using BKI_DTNB.US;
 using BKI_DTNB.DS;
+using DevExpress.XtraGrid.Views.Grid;
 namespace BKI_DTNB.NghiepVu
 {
     public partial class F209_gd_chung_chi : Form
@@ -61,7 +62,7 @@ namespace BKI_DTNB.NghiepVu
                 }
             }
 
-           
+
         }
 
         private void m_cmd_exit_Click(object sender, EventArgs e)
@@ -73,12 +74,12 @@ namespace BKI_DTNB.NghiepVu
         {
             try
             {
-                decimal v_selected_row = m_grv.SelectedRowsCount;
-                if (v_selected_row == 0)
+                decimal v_selected_row_count = GetSelectedRows(m_grv).Count;
+                if (v_selected_row_count == 0)
                 {
                     MessageBox.Show("Bạn phải chọn chứng chỉ để thực hiện tác vụ này!");
                 }
-                else if (v_selected_row > 1)
+                else if (v_selected_row_count > 1)
                 {
                     MessageBox.Show("Bạn chỉ được chọn 1 chứng chỉ để thực hiện tác vụ này!");
                 }
@@ -88,10 +89,10 @@ namespace BKI_DTNB.NghiepVu
                     // var m_row = m_grv.SelectedRowsCount - 1;
                     var v_data_row = m_grv.GetDataRow(m_grv.GetSelectedRows()[0]);
                     US_V_GD_CHUNG_CHI v_us = new US_V_GD_CHUNG_CHI(CIPConvert.ToDecimal(v_data_row["ID"].ToString()));
-                    
-                        v_f.Update_form(v_us);
-                        load_data_2_grid();
-        
+
+                    v_f.Update_form(v_us);
+                    load_data_2_grid();
+
                 }
             }
             catch (Exception ex)
@@ -99,8 +100,20 @@ namespace BKI_DTNB.NghiepVu
 
                 CSystemLog_301.ExceptionHandle(ex);
             }
-          
+
         }
-      
+
+        private List<int> GetSelectedRows(GridView view)
+        {
+            List<int> v_lst = new List<int>();
+            int[] rows = m_grv.GetSelectedRows();
+            for (int i = 0; i < rows.Length; i++)
+                if (!m_grv.IsGroupRow(rows[i]))
+                {
+                    v_lst.Add(rows[i]);
+                }
+            return v_lst;
+        }
+
     }
 }

@@ -63,6 +63,7 @@
             this.m_cmd_tong_quan = new DevExpress.XtraBars.BarButtonItem();
             this.m_cmd_chung_chi = new DevExpress.XtraBars.BarButtonItem();
             this.m_cmd_nhan_vien_nghiep_vu = new DevExpress.XtraBars.BarButtonItem();
+            this.m_cmd_nhap_chung_chi = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -80,7 +81,6 @@
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.m_cmd_ds_hs_theo_lm = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.m_cmd_nhap_chung_chi = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MdiManager)).BeginInit();
             this.SuspendLayout();
@@ -431,7 +431,7 @@
             // 
             // m_cmd_chung_chi
             // 
-            this.m_cmd_chung_chi.Caption = "Chứng chỉ";
+            this.m_cmd_chung_chi.Caption = "Chứng chỉ- Môn học";
             this.m_cmd_chung_chi.Glyph = ((System.Drawing.Image)(resources.GetObject("m_cmd_chung_chi.Glyph")));
             this.m_cmd_chung_chi.Id = 48;
             this.m_cmd_chung_chi.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("m_cmd_chung_chi.LargeGlyph")));
@@ -448,6 +448,15 @@
             this.m_cmd_nhan_vien_nghiep_vu.LargeWidth = 120;
             this.m_cmd_nhan_vien_nghiep_vu.Name = "m_cmd_nhan_vien_nghiep_vu";
             this.m_cmd_nhan_vien_nghiep_vu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_nhan_vien_nghiep_vu_ItemClick);
+            // 
+            // m_cmd_nhap_chung_chi
+            // 
+            this.m_cmd_nhap_chung_chi.Caption = "Nhập chứng chỉ từ XLSX";
+            this.m_cmd_nhap_chung_chi.Id = 50;
+            this.m_cmd_nhap_chung_chi.LargeGlyph = global::BKI_QLTTQuocAnh.Properties.Resources._1425904874_448241;
+            this.m_cmd_nhap_chung_chi.LargeWidth = 70;
+            this.m_cmd_nhap_chung_chi.Name = "m_cmd_nhap_chung_chi";
+            this.m_cmd_nhap_chung_chi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_nhap_chung_chi_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -568,15 +577,6 @@
             // 
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
             this.ribbonPageGroup8.Text = "Theo lớp môn";
-            // 
-            // m_cmd_nhap_chung_chi
-            // 
-            this.m_cmd_nhap_chung_chi.Caption = "Nhập chứng chỉ từ XLSX";
-            this.m_cmd_nhap_chung_chi.Id = 50;
-            this.m_cmd_nhap_chung_chi.LargeGlyph = global::BKI_QLTTQuocAnh.Properties.Resources._1425904874_448241;
-            this.m_cmd_nhap_chung_chi.LargeWidth = 70;
-            this.m_cmd_nhap_chung_chi.Name = "m_cmd_nhap_chung_chi";
-            this.m_cmd_nhap_chung_chi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_nhap_chung_chi_ItemClick);
             // 
             // f388_main
             // 

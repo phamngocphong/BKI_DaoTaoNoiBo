@@ -45,22 +45,30 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         {
             try
             {
-
-                DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn thực hiện tác vụ này không?", "Cảnh báo", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
+                decimal v_selected_row = m_grv.SelectedRowsCount;
+                if (v_selected_row == 0)
                 {
-                    for (int i = 0; i < m_grv.SelectedRowsCount; i++)
+                    MessageBox.Show("Bạn phải chọn ít nhất 1 bản ghi để thực hiện tác vụ này!");
+                }
+                else
+                {
+
+                    DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn thực hiện tác vụ này không?", "Cảnh báo", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
                     {
-                        var v_data_row = m_grv.GetDataRow(m_grv.GetSelectedRows()[i]);
-                        var v_us = new US_DM_NHAN_SU_NGHIEP_VU(CIPConvert.ToDecimal(v_data_row["ID"].ToString()));
-                        v_us.strDA_XOA_YN = "Y";
-                        v_us.Update();
+                        for (int i = 0; i < m_grv.SelectedRowsCount; i++)
+                        {
+                            var v_data_row = m_grv.GetDataRow(m_grv.GetSelectedRows()[i]);
+                            var v_us = new US_DM_NHAN_SU_NGHIEP_VU(CIPConvert.ToDecimal(v_data_row["ID"].ToString()));
+                            v_us.strDA_XOA_YN = "Y";
+                            v_us.Update();
+                        }
+                        MessageBox.Show("Xóa nghiệp vụ thành công!");
+                        load_data_to_grid();
                     }
-                    MessageBox.Show("Xóa nghiệp vụ thành công!");
-                    load_data_to_grid();
                 }
             }
-            catch ( Exception ex)
+            catch (Exception ex)
             {
                 CSystemLog_301.ExceptionHandle(ex);
             }

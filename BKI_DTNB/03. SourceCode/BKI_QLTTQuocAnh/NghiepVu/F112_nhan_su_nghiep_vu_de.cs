@@ -44,10 +44,19 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             try
             {
                 var v_us = new US_DM_NHAN_SU_NGHIEP_VU();
-                Cap_nhat_du_lieu_cho_us(v_us);
-                v_us.Insert();
-                MessageBox.Show("Lưu nghiệp vụ thành công!");
-                this.Close();
+                try
+                {
+                    Cap_nhat_du_lieu_cho_us(v_us);
+                    v_us.Insert();
+                    MessageBox.Show("Lưu nghiệp vụ thành công!");
+                    this.Close();
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
+                }
+               
 
             }
             catch (Exception ex)

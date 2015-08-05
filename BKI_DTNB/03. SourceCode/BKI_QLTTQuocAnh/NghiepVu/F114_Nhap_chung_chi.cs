@@ -67,8 +67,18 @@ namespace BKI_QLTTQuocAnh.NghiepVu
                     v_int_khong_nhap_duoc++;
                     continue;
                 }
+                try
+                {
+                    get_id_nhan_vien_tu_data_row(v_us_dc, v_data_row, ref v_id_ns, v_dt_r);
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Mã nhân viên " + v_data_row["MA_NHAN_VIEN"].ToString() + " không tồn tại trong hệ thống. Vui lòng kiểm tra lại thông tin!");
+                    v_int_khong_nhap_duoc++;
+                    continue;
+                }
                
-                get_id_nhan_vien_tu_data_row( v_us_dc,v_data_row,ref v_id_ns, v_dt_r);
                 get_id_gd_diem(v_us_dc, v_id_ns, v_id_gdlm, v_dt_r, ref v_int_khong_nhap_duoc, v_data_row,ref v_count);
                
             }
@@ -154,16 +164,9 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             US_GD_LOP_MON v_us_gdlm = new US_GD_LOP_MON();
             DS_GD_LOP_MON v_ds_gdlm = new DS_GD_LOP_MON();
             v_us_dc.FillDatasetWithQuery(v_ds_gdlm, "Select * from gd_lop_mon where MA_LOP_HOC='" + v_data_row["MA_LOP"].ToString() + "'");
-            //if (v_ds_gdlm.Tables[0].Rows.Count == 0)
-            //{
-            //    MessageBox.Show("Không tồn tại mã lớp" + v_data_row["MA_LOP"].ToString() + ".Xin vui lòng kiểm tra lại thông tin!");
-            //}
-            //else
-            //{
-                
-                var v_dt_r = v_ds_gdlm.Tables[0].Rows[0];
-                v_id_gdlm = CIPConvert.ToDecimal(v_dt_r["ID"].ToString());
-                return v_dt_r;
+            var v_dt_r = v_ds_gdlm.Tables[0].Rows[0];
+            v_id_gdlm = CIPConvert.ToDecimal(v_dt_r["ID"].ToString());
+            return v_dt_r;
             //}
         }
 

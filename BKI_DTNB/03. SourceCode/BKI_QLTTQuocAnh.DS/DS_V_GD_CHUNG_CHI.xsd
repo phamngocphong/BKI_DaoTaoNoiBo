@@ -54,10 +54,10 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="TEN_MON_HOC" msprop:Generator_ColumnVarNameInTable="columnTEN_MON_HOC" msprop:Generator_ColumnPropNameInRow="TEN_MON_HOC" msprop:Generator_ColumnPropNameInTable="TEN_MON_HOCColumn" msprop:Generator_UserColumnName="TEN_MON_HOC" minOccurs="0">
+              <xs:element name="TEN_MON_HOC" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTEN_MON_HOC" msprop:Generator_ColumnPropNameInRow="TEN_MON_HOC" msprop:Generator_ColumnPropNameInTable="TEN_MON_HOCColumn" msprop:Generator_UserColumnName="TEN_MON_HOC" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="250" />
+                    <xs:maxLength value="289" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>

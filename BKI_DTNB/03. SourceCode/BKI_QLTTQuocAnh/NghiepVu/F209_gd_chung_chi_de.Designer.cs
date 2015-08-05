@@ -236,10 +236,12 @@
             // m_dat_thoi_gian_ket_thuc
             // 
             this.m_dat_thoi_gian_ket_thuc.CustomFormat = "dd/MM/yyyy";
+            this.m_dat_thoi_gian_ket_thuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.m_dat_thoi_gian_ket_thuc.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.m_dat_thoi_gian_ket_thuc.Location = new System.Drawing.Point(454, 186);
             this.m_dat_thoi_gian_ket_thuc.Name = "m_dat_thoi_gian_ket_thuc";
-            this.m_dat_thoi_gian_ket_thuc.Size = new System.Drawing.Size(233, 20);
+            this.m_dat_thoi_gian_ket_thuc.ShowCheckBox = true;
+            this.m_dat_thoi_gian_ket_thuc.Size = new System.Drawing.Size(233, 22);
             this.m_dat_thoi_gian_ket_thuc.TabIndex = 14;
             // 
             // labelControl3

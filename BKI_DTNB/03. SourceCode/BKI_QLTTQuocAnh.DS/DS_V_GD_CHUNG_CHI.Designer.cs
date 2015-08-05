@@ -546,7 +546,8 @@ namespace BKI_QLTTQuocAnh.DS {
                 this.columnID.Unique = true;
                 this.columnSO_CHUNG_CHI.AllowDBNull = false;
                 this.columnSO_CHUNG_CHI.MaxLength = 35;
-                this.columnTEN_MON_HOC.MaxLength = 250;
+                this.columnTEN_MON_HOC.ReadOnly = true;
+                this.columnTEN_MON_HOC.MaxLength = 289;
                 this.columnMA_VERSION.AllowDBNull = false;
                 this.columnMA_VERSION.MaxLength = 35;
                 this.columnMA_NV.AllowDBNull = false;

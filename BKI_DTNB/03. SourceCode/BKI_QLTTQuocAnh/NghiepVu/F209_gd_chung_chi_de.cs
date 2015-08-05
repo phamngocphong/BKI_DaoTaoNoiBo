@@ -30,7 +30,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         {
             m_txt_ma_nhan_vien.Text = v_us_gd_diem.strMA_NV;
             m_txt_ten_nhan_vien.Text = v_us_gd_diem.strHO_TEN;
-            m_txt_ten_mon_hoc.Text = v_us_gd_diem.strTEN_MON_HOC;
+            m_txt_ten_mon_hoc.Text = v_us_gd_diem.strMA_MON_HOC;
             m_txt_ma_version.Text = v_us_gd_diem.strMA_VERSION;
             m_dc_id_gd_diem = v_us_gd_diem.dcID;
             v_trang_thai = false;
@@ -40,7 +40,14 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         {
           
             m_us_gd_chung_chi.datNGAY_BAT_DAU = m_dat_thoi_gian_bat_dau.Value;
-            m_us_gd_chung_chi.datNGAY_KET_THUC = m_dat_thoi_gian_ket_thuc.Value;
+            if (m_dat_thoi_gian_ket_thuc.Checked == true)
+            {
+                m_us_gd_chung_chi.datNGAY_KET_THUC = m_dat_thoi_gian_ket_thuc.Value;
+            }
+            else
+            {
+                m_us_gd_chung_chi.IsNGAY_KET_THUCNull();
+            }
             m_us_gd_chung_chi.datNGAY_LAP = m_dat_ngay_lap.Value;
             m_us_gd_chung_chi.datNGAY_SUA = DateTime.Now.Date;
             m_us_gd_chung_chi.strNGUOI_LAP = "admin";

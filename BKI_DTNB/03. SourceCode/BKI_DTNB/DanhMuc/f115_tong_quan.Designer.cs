@@ -33,7 +33,6 @@
             this.m_grv = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
@@ -72,7 +71,6 @@
             this.m_grv.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
             this.gridColumn2,
-            this.gridColumn3,
             this.gridColumn4,
             this.gridColumn5});
             this.m_grv.GridControl = this.m_grc;
@@ -82,7 +80,7 @@
             // gridColumn1
             // 
             this.gridColumn1.Caption = "ĐỊA PHƯƠNG";
-            this.gridColumn1.FieldName = "TEN_DIA_PHUONG";
+            this.gridColumn1.FieldName = "TEN";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
@@ -90,26 +88,18 @@
             // gridColumn2
             // 
             this.gridColumn2.Caption = "NGẠCH";
-            this.gridColumn2.FieldName = "TEN_NGACH";
+            this.gridColumn2.FieldName = "NGACH";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
             // 
-            // gridColumn3
-            // 
-            this.gridColumn3.Caption = "TRUNG TÂM";
-            this.gridColumn3.FieldName = "TEN_PHONG";
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
-            // 
             // gridColumn4
             // 
             this.gridColumn4.Caption = "NGHIỆP VỤ";
-            this.gridColumn4.FieldName = "TEN_NGHIEP_VU";
+            this.gridColumn4.FieldName = "NGHIEP_VU";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
+            this.gridColumn4.VisibleIndex = 2;
             // 
             // gridColumn5
             // 
@@ -117,7 +107,7 @@
             this.gridColumn5.FieldName = "TEN_MON_HOC";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 4;
+            this.gridColumn5.VisibleIndex = 3;
             // 
             // panelControl1
             // 
@@ -167,7 +157,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
     }

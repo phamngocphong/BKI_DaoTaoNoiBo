@@ -38,6 +38,9 @@
             this.c_qua_mon = new DevExpress.XtraGrid.Columns.GridColumn();
             this.c_ma_lop_hoc = new DevExpress.XtraGrid.Columns.GridColumn();
             this.c_ma_nv = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.c_diem_chuyen_can = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.c_diem_kiem_tra = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.c_diem_thi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
             this.m_cmd_update = new SIS.Controls.Button.SiSButton();
@@ -70,7 +73,10 @@
             this.c_hoc_xong,
             this.c_qua_mon,
             this.c_ma_lop_hoc,
-            this.c_ma_nv});
+            this.c_ma_nv,
+            this.c_diem_chuyen_can,
+            this.c_diem_kiem_tra,
+            this.c_diem_thi});
             this.m_grv.GridControl = this.m_grc;
             this.m_grv.GroupCount = 3;
             this.m_grv.Name = "m_grv";
@@ -113,7 +119,7 @@
             this.c_qua_mon.FieldName = "QUA_MON";
             this.c_qua_mon.Name = "c_qua_mon";
             this.c_qua_mon.Visible = true;
-            this.c_qua_mon.VisibleIndex = 3;
+            this.c_qua_mon.VisibleIndex = 6;
             // 
             // c_ma_lop_hoc
             // 
@@ -130,6 +136,30 @@
             this.c_ma_nv.Name = "c_ma_nv";
             this.c_ma_nv.Visible = true;
             this.c_ma_nv.VisibleIndex = 1;
+            // 
+            // c_diem_chuyen_can
+            // 
+            this.c_diem_chuyen_can.Caption = "Điểm chuyên cần";
+            this.c_diem_chuyen_can.FieldName = "DIEM_CHUYEN_CAN";
+            this.c_diem_chuyen_can.Name = "c_diem_chuyen_can";
+            this.c_diem_chuyen_can.Visible = true;
+            this.c_diem_chuyen_can.VisibleIndex = 3;
+            // 
+            // c_diem_kiem_tra
+            // 
+            this.c_diem_kiem_tra.Caption = "Điểm kiểm tra";
+            this.c_diem_kiem_tra.FieldName = "DIEM_KIEM_TRA";
+            this.c_diem_kiem_tra.Name = "c_diem_kiem_tra";
+            this.c_diem_kiem_tra.Visible = true;
+            this.c_diem_kiem_tra.VisibleIndex = 4;
+            // 
+            // c_diem_thi
+            // 
+            this.c_diem_thi.Caption = "Điểm thi";
+            this.c_diem_thi.FieldName = "DIEM_THI";
+            this.c_diem_thi.Name = "c_diem_thi";
+            this.c_diem_thi.Visible = true;
+            this.c_diem_thi.VisibleIndex = 5;
             // 
             // ImageList
             // 
@@ -253,5 +283,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn c_qua_mon;
         private DevExpress.XtraGrid.Columns.GridColumn c_ma_lop_hoc;
         private DevExpress.XtraGrid.Columns.GridColumn c_ma_nv;
+        private DevExpress.XtraGrid.Columns.GridColumn c_diem_chuyen_can;
+        private DevExpress.XtraGrid.Columns.GridColumn c_diem_kiem_tra;
+        private DevExpress.XtraGrid.Columns.GridColumn c_diem_thi;
     }
 }

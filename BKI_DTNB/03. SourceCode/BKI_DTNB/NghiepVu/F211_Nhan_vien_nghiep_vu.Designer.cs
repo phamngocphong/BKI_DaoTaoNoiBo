@@ -32,18 +32,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F211_Nhan_vien_nghiep_vu));
             this.m_grc = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.ImageList = new System.Windows.Forms.ImageList(this.components);
-            this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
-            this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
-            this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
-            this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.c_ma_nhan_vien = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.c_ma_nv = new DevExpress.XtraGrid.Columns.GridColumn();
             this.c_trung_tam = new DevExpress.XtraGrid.Columns.GridColumn();
             this.c_chuc_vu = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ImageList = new System.Windows.Forms.ImageList(this.components);
+            this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
             this.m_cmd_insert_nghiep_vu_them = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.m_grc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.m_pnl_out_place_dm.SuspendLayout();
@@ -72,6 +72,42 @@
             this.c_chuc_vu});
             this.gridView1.GridControl = this.m_grc;
             this.gridView1.Name = "gridView1";
+            this.gridView1.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.gridView1_PopupMenuShowing);
+            // 
+            // c_ma_nhan_vien
+            // 
+            this.c_ma_nhan_vien.Caption = "Họ tên";
+            this.c_ma_nhan_vien.Name = "c_ma_nhan_vien";
+            this.c_ma_nhan_vien.Visible = true;
+            this.c_ma_nhan_vien.VisibleIndex = 1;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Nghiệp vụ";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 4;
+            // 
+            // c_ma_nv
+            // 
+            this.c_ma_nv.Caption = "Mã nhân viên";
+            this.c_ma_nv.Name = "c_ma_nv";
+            this.c_ma_nv.Visible = true;
+            this.c_ma_nv.VisibleIndex = 0;
+            // 
+            // c_trung_tam
+            // 
+            this.c_trung_tam.Caption = "Trung tâm";
+            this.c_trung_tam.Name = "c_trung_tam";
+            this.c_trung_tam.Visible = true;
+            this.c_trung_tam.VisibleIndex = 2;
+            // 
+            // c_chuc_vu
+            // 
+            this.c_chuc_vu.Caption = "Chức vụ";
+            this.c_chuc_vu.Name = "c_chuc_vu";
+            this.c_chuc_vu.Visible = true;
+            this.c_chuc_vu.VisibleIndex = 3;
             // 
             // ImageList
             // 
@@ -112,6 +148,22 @@
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(753, 36);
             this.m_pnl_out_place_dm.TabIndex = 22;
+            // 
+            // m_cmd_insert_nghiep_vu_them
+            // 
+            this.m_cmd_insert_nghiep_vu_them.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_insert_nghiep_vu_them.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_insert_nghiep_vu_them.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_insert_nghiep_vu_them.Dock = System.Windows.Forms.DockStyle.Right;
+            this.m_cmd_insert_nghiep_vu_them.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_insert_nghiep_vu_them.ImageIndex = 2;
+            this.m_cmd_insert_nghiep_vu_them.ImageList = this.ImageList;
+            this.m_cmd_insert_nghiep_vu_them.Location = new System.Drawing.Point(127, 4);
+            this.m_cmd_insert_nghiep_vu_them.Name = "m_cmd_insert_nghiep_vu_them";
+            this.m_cmd_insert_nghiep_vu_them.Size = new System.Drawing.Size(178, 28);
+            this.m_cmd_insert_nghiep_vu_them.TabIndex = 15;
+            this.m_cmd_insert_nghiep_vu_them.Text = "&Thêm nghiệp vụ khác";
+            this.m_cmd_insert_nghiep_vu_them.Click += new System.EventHandler(this.m_cmd_insert_nghiep_vu_them_Click);
             // 
             // m_cmd_insert
             // 
@@ -169,57 +221,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(753, 374);
             this.panel1.TabIndex = 23;
-            // 
-            // c_ma_nhan_vien
-            // 
-            this.c_ma_nhan_vien.Caption = "Họ tên";
-            this.c_ma_nhan_vien.Name = "c_ma_nhan_vien";
-            this.c_ma_nhan_vien.Visible = true;
-            this.c_ma_nhan_vien.VisibleIndex = 1;
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.Caption = "Nghiệp vụ";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 4;
-            // 
-            // c_ma_nv
-            // 
-            this.c_ma_nv.Caption = "Mã nhân viên";
-            this.c_ma_nv.Name = "c_ma_nv";
-            this.c_ma_nv.Visible = true;
-            this.c_ma_nv.VisibleIndex = 0;
-            // 
-            // c_trung_tam
-            // 
-            this.c_trung_tam.Caption = "Trung tâm";
-            this.c_trung_tam.Name = "c_trung_tam";
-            this.c_trung_tam.Visible = true;
-            this.c_trung_tam.VisibleIndex = 2;
-            // 
-            // c_chuc_vu
-            // 
-            this.c_chuc_vu.Caption = "Chức vụ";
-            this.c_chuc_vu.Name = "c_chuc_vu";
-            this.c_chuc_vu.Visible = true;
-            this.c_chuc_vu.VisibleIndex = 3;
-            // 
-            // m_cmd_insert_nghiep_vu_them
-            // 
-            this.m_cmd_insert_nghiep_vu_them.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_insert_nghiep_vu_them.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_insert_nghiep_vu_them.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_insert_nghiep_vu_them.Dock = System.Windows.Forms.DockStyle.Right;
-            this.m_cmd_insert_nghiep_vu_them.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_insert_nghiep_vu_them.ImageIndex = 2;
-            this.m_cmd_insert_nghiep_vu_them.ImageList = this.ImageList;
-            this.m_cmd_insert_nghiep_vu_them.Location = new System.Drawing.Point(127, 4);
-            this.m_cmd_insert_nghiep_vu_them.Name = "m_cmd_insert_nghiep_vu_them";
-            this.m_cmd_insert_nghiep_vu_them.Size = new System.Drawing.Size(178, 28);
-            this.m_cmd_insert_nghiep_vu_them.TabIndex = 15;
-            this.m_cmd_insert_nghiep_vu_them.Text = "&Thêm nghiệp vụ khác";
-            this.m_cmd_insert_nghiep_vu_them.Click += new System.EventHandler(this.m_cmd_insert_nghiep_vu_them_Click);
             // 
             // F211_Nhan_vien_nghiep_vu
             // 

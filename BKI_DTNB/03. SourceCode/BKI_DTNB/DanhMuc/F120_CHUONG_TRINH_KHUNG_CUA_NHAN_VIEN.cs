@@ -7,7 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using IP.Core.IPCommon;
-
+using BKI_DTNB.US;
+using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.Utils.Menu;
+using BKI_DTNB.DS;
+using BKI_DTNB.DS.CDBNames;
 namespace BKI_DTNB.DanhMuc
 {
     public partial class F120_CHUONG_TRINH_KHUNG_CUA_NHAN_VIEN : Form
@@ -42,5 +46,19 @@ namespace BKI_DTNB.DanhMuc
             v_us.FillDatasetChuongTrinhKhung(v_ds, CIPConvert.ToDecimal(m_cbo_ma_ten_nhan_vien.SelectedValue));
             m_grc.DataSource = v_ds.Tables[0];
         }
+
+        private void m_grv_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
+        {
+            GridView view = sender as GridView;
+            // Check whether a row is right-clicked.
+            if (e.MenuType == DevExpress.XtraGrid.Views.Grid.GridMenuType.Row)
+            {
+                int rowHandle = e.HitInfo.RowHandle;
+                // Delete existing menu items, if any.
+                e.Menu.Items.Clear();
+                e.Menu.Items.Add(WinFormControls.CreateRowSubMenu(view, rowHandle));
+            }
+        }
     }
+
 }

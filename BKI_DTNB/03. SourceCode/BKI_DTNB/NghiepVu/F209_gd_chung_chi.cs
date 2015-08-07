@@ -115,5 +115,18 @@ namespace BKI_DTNB.NghiepVu
             return v_lst;
         }
 
+        private void m_grv_PopupMenuShowing(object sender, PopupMenuShowingEventArgs e)
+        {
+            GridView view = sender as GridView;
+            // Check whether a row is right-clicked.
+            if (e.MenuType == DevExpress.XtraGrid.Views.Grid.GridMenuType.Row)
+            {
+                int rowHandle = e.HitInfo.RowHandle;
+                // Delete existing menu items, if any.
+                e.Menu.Items.Clear();
+                e.Menu.Items.Add(WinFormControls.CreateRowSubMenu(view, rowHandle));
+            }
+        }
+
     }
 }

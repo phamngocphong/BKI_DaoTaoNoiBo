@@ -79,6 +79,7 @@
             this.m_grv.Name = "m_grv";
             this.m_grv.OptionsSelection.MultiSelect = true;
             this.m_grv.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
+            this.m_grv.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.m_grv_PopupMenuShowing);
             // 
             // gridColumn1
             // 

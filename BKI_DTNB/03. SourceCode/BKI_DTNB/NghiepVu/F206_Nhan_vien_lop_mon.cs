@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using BKI_DTNB.US;
 using IP.Core.IPCommon;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace BKI_DTNB.NghiepVu
 {
@@ -117,6 +118,19 @@ namespace BKI_DTNB.NghiepVu
         {
             this.Close();
 
+        }
+
+        private void m_grv_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
+        {
+            GridView view = sender as GridView;
+            // Check whether a row is right-clicked.
+            if (e.MenuType == DevExpress.XtraGrid.Views.Grid.GridMenuType.Row)
+            {
+                int rowHandle = e.HitInfo.RowHandle;
+                // Delete existing menu items, if any.
+                e.Menu.Items.Clear();
+                e.Menu.Items.Add(WinFormControls.CreateRowSubMenu(view, rowHandle));
+            }
         }
     }
 }

@@ -81,6 +81,7 @@
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.m_cmd_ds_hs_theo_lm = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.m_cmd_chuong_trinh_khung = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MdiManager)).BeginInit();
             this.SuspendLayout();
@@ -131,9 +132,10 @@
             this.m_cmd_tong_quan,
             this.m_cmd_chung_chi,
             this.m_cmd_nhan_vien_nghiep_vu,
-            this.m_cmd_nhap_chung_chi});
+            this.m_cmd_nhap_chung_chi,
+            this.m_cmd_chuong_trinh_khung});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 51;
+            this.ribbon.MaxItemId = 52;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -494,6 +496,7 @@
             // ribbonPageGroup5
             // 
             this.ribbonPageGroup5.ItemLinks.Add(this.m_cmd_tong_quan);
+            this.ribbonPageGroup5.ItemLinks.Add(this.m_cmd_chuong_trinh_khung);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             // 
             // ribbonPageGroup13
@@ -578,6 +581,16 @@
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
             this.ribbonPageGroup8.Text = "Theo lớp môn";
             // 
+            // m_cmd_chuong_trinh_khung
+            // 
+            this.m_cmd_chuong_trinh_khung.Caption = "Chương trình khung của nhân viên";
+            this.m_cmd_chuong_trinh_khung.Glyph = ((System.Drawing.Image)(resources.GetObject("m_cmd_chuong_trinh_khung.Glyph")));
+            this.m_cmd_chuong_trinh_khung.Id = 51;
+            this.m_cmd_chuong_trinh_khung.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("m_cmd_chuong_trinh_khung.LargeGlyph")));
+            this.m_cmd_chuong_trinh_khung.LargeWidth = 130;
+            this.m_cmd_chuong_trinh_khung.Name = "m_cmd_chuong_trinh_khung";
+            this.m_cmd_chuong_trinh_khung.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_chuong_trinh_khung_ItemClick);
+            // 
             // f388_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -652,5 +665,6 @@
         private DevExpress.XtraBars.BarButtonItem m_cmd_nhan_vien_nghiep_vu;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
         private DevExpress.XtraBars.BarButtonItem m_cmd_nhap_chung_chi;
+        private DevExpress.XtraBars.BarButtonItem m_cmd_chuong_trinh_khung;
     }
 }

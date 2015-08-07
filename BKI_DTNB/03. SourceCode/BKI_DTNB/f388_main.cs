@@ -487,5 +487,12 @@ namespace BKI_DTNB
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
+
+        private void m_cmd_chuong_trinh_khung_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            F120_CHUONG_TRINH_KHUNG_CUA_NHAN_VIEN v_f = new F120_CHUONG_TRINH_KHUNG_CUA_NHAN_VIEN();
+            v_f.MdiParent = this;
+            v_f.Show();
+        }
     }
 }

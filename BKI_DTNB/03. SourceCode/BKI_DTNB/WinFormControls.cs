@@ -319,7 +319,14 @@ namespace BKI_DTNB
             v_cstore.fillDataSetByCommand(this, v_ds);
         }
 
-       
+
+
+        internal void FillDatasetChuongTrinhKhung(DataSet v_ds, decimal p)
+        {
+            CStoredProc v_cstore = new CStoredProc("pr_get_chuong_trinh_hoc_cua_1_nhan_vien");
+            v_cstore.addDecimalInputParam("@id_nhan_vien", p);
+            v_cstore.fillDataSetByCommand(this, v_ds);
+        }
     }
 
     public class iParameter

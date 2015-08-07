@@ -67,19 +67,8 @@ namespace BKI_DTNB.NghiepVu
                 }
                 else
                 {
-                    F208_gd_lop_mon_de v_f = new F208_gd_lop_mon_de();
-                    var v_data_row = m_grv.GetDataRow(m_grv.GetSelectedRows()[0]);
-                    var v_us = new US_GD_LOP_MON(CIPConvert.ToDecimal(v_data_row["ID"].ToString()));
-                    US_DM_VERSION_MON_HOC us_version = new US_DM_VERSION_MON_HOC();
-                    DS_DM_VERSION_MON_HOC v_ds_version = new DS_DM_VERSION_MON_HOC();
-                    v_ds_version.EnforceConstraints = false;
-                    us_version.FillDataset(v_ds_version, "where ID=" + v_data_row["ID_VERSION_MON_HOC"].ToString());
-                    DataRow v_d_r = v_ds_version.Tables[0].Rows[0];
-                    decimal v_id_version = CIPConvert.ToDecimal(v_d_r[DM_VERSION_MON_HOC.ID].ToString());
-                    us_version = new US_DM_VERSION_MON_HOC(v_id_version);
-                    decimal v_index_selected = CIPConvert.ToDecimal(us_version.dcID_MON_HOC.ToString());
-                    v_f.Update_form(v_us, v_index_selected);
-                    load_data_2_grid();
+                  var v_data_row = m_grv.GetDataRow(m_grv.GetSelectedRows()[0]);
+                  Update_row_change(v_data_row);
                 }
             }
             catch (Exception ex)
@@ -88,6 +77,23 @@ namespace BKI_DTNB.NghiepVu
                 CSystemLog_301.ExceptionHandle(ex);
             }
           
+        }
+
+        private void Update_row_change(DataRow v_data_row)
+        {
+            F208_gd_lop_mon_de v_f = new F208_gd_lop_mon_de();
+            //var v_data_row = m_grv.GetDataRow(m_grv.GetSelectedRows()[0]);
+            var v_us = new US_GD_LOP_MON(CIPConvert.ToDecimal(v_data_row["ID"].ToString()));
+            US_DM_VERSION_MON_HOC us_version = new US_DM_VERSION_MON_HOC();
+            DS_DM_VERSION_MON_HOC v_ds_version = new DS_DM_VERSION_MON_HOC();
+            v_ds_version.EnforceConstraints = false;
+            us_version.FillDataset(v_ds_version, "where ID=" + v_data_row["ID_VERSION_MON_HOC"].ToString());
+            DataRow v_d_r = v_ds_version.Tables[0].Rows[0];
+            decimal v_id_version = CIPConvert.ToDecimal(v_d_r[DM_VERSION_MON_HOC.ID].ToString());
+            us_version = new US_DM_VERSION_MON_HOC(v_id_version);
+            decimal v_index_selected = CIPConvert.ToDecimal(us_version.dcID_MON_HOC.ToString());
+            v_f.Update_form(v_us, v_index_selected);
+            load_data_2_grid();
         }
 
         private void m_cmd_delete_Click(object sender, EventArgs e)
@@ -177,5 +183,7 @@ namespace BKI_DTNB.NghiepVu
         {
             this.Close();
         }
+
+      
     }
 }

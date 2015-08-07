@@ -80,6 +80,7 @@
             this.m_grv.GridControl = this.m_grc;
             this.m_grv.GroupCount = 3;
             this.m_grv.Name = "m_grv";
+            this.m_grv.OptionsEditForm.ActionOnModifiedRowChange = DevExpress.XtraGrid.Views.Grid.EditFormModifiedAction.Save;
             this.m_grv.OptionsSelection.MultiSelect = true;
             this.m_grv.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
             this.m_grv.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
@@ -93,6 +94,7 @@
             this.c_ten_nhan_vien.Caption = "Tên nhân viên";
             this.c_ten_nhan_vien.FieldName = "HO_TEN";
             this.c_ten_nhan_vien.Name = "c_ten_nhan_vien";
+            this.c_ten_nhan_vien.OptionsColumn.AllowEdit = false;
             this.c_ten_nhan_vien.Visible = true;
             this.c_ten_nhan_vien.VisibleIndex = 2;
             this.c_ten_nhan_vien.Width = 83;
@@ -102,6 +104,7 @@
             this.c_ma_mon_hoc.Caption = "Mã môn học";
             this.c_ma_mon_hoc.FieldName = "MA_MON_HOC";
             this.c_ma_mon_hoc.Name = "c_ma_mon_hoc";
+            this.c_ma_mon_hoc.OptionsColumn.AllowEdit = false;
             this.c_ma_mon_hoc.Visible = true;
             this.c_ma_mon_hoc.VisibleIndex = 3;
             // 
@@ -110,6 +113,7 @@
             this.c_hoc_xong.Caption = "Trạng thái";
             this.c_hoc_xong.FieldName = "HOC_XONG";
             this.c_hoc_xong.Name = "c_hoc_xong";
+            this.c_hoc_xong.OptionsColumn.AllowEdit = false;
             this.c_hoc_xong.Visible = true;
             this.c_hoc_xong.VisibleIndex = 3;
             // 
@@ -118,6 +122,7 @@
             this.c_qua_mon.Caption = "Kết quả";
             this.c_qua_mon.FieldName = "QUA_MON";
             this.c_qua_mon.Name = "c_qua_mon";
+            this.c_qua_mon.OptionsColumn.AllowEdit = false;
             this.c_qua_mon.Visible = true;
             this.c_qua_mon.VisibleIndex = 6;
             // 
@@ -126,6 +131,7 @@
             this.c_ma_lop_hoc.Caption = "Mã lớp môn";
             this.c_ma_lop_hoc.FieldName = "MA_LOP_HOC";
             this.c_ma_lop_hoc.Name = "c_ma_lop_hoc";
+            this.c_ma_lop_hoc.OptionsColumn.AllowEdit = false;
             this.c_ma_lop_hoc.Visible = true;
             this.c_ma_lop_hoc.VisibleIndex = 3;
             // 
@@ -134,6 +140,7 @@
             this.c_ma_nv.Caption = "Mã nhân viên";
             this.c_ma_nv.FieldName = "MA_NV";
             this.c_ma_nv.Name = "c_ma_nv";
+            this.c_ma_nv.OptionsColumn.AllowEdit = false;
             this.c_ma_nv.Visible = true;
             this.c_ma_nv.VisibleIndex = 1;
             // 

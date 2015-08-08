@@ -533,6 +533,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\f208_gd_lop_mon.resx">
       <DependentUpon>f208_gd_lop_mon.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\F208_gd_lop_mon_de.resx">
       <DependentUpon>F208_gd_lop_mon_de.cs</DependentUpon>

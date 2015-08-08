@@ -24,7 +24,6 @@ namespace BKI_DTNB.NghiepVu
         public F208_gd_lop_mon_de()
         {
             InitializeComponent();
-
         }
 
         private void F208_gd_lop_mon_de_Load(object sender, EventArgs e)
@@ -106,10 +105,10 @@ namespace BKI_DTNB.NghiepVu
         {
             string diem_qua_mon = m_txt_diem_qua_mon.Text;
             string so_luong_hoc_vien = m_txt_so_luong.Text;
-            decimal value=0;
+            decimal value = 0;
             if (!(Decimal.TryParse(diem_qua_mon, out value)) || !(Decimal.TryParse(so_luong_hoc_vien, out value)))
             {
-                
+
                 MessageBox.Show("Vui lòng nhập kiểu số cho Số Lượng và Điểm Qua Môn!");
                 return false;
             }
@@ -118,7 +117,7 @@ namespace BKI_DTNB.NghiepVu
 
         private bool check_validate_data_is_OK()
         {
-            
+
             if ((m_txt_dia_diem.Text == "") || (m_txt_diem_qua_mon.Text == "") || (m_txt_so_luong.Text == "") || (m_txt_ma_lop.Text == "") || (m_cbo_version.SelectedValue == null) || (m_cbo_ma_ten_mon_hoc.SelectedValue == null))
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ các trường dữ liệu!");

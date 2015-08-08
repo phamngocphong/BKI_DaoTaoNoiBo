@@ -10,11 +10,13 @@ using BKI_DTNB.US;
 using IP.Core.IPCommon;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.Utils.Menu;
+using BKI_DTNB.DS.CDBNames;
 
 namespace BKI_DTNB.NghiepVu
 {
     public partial class F207_Nhap_diem : Form
     {
+        public List<int> m_lst_index = new List<int>();
         public F207_Nhap_diem()
         {
             InitializeComponent();
@@ -97,6 +99,54 @@ namespace BKI_DTNB.NghiepVu
         private void m_cmd_exit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void m_grv_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            if (!m_lst_index.Exists(x => x == e.RowHandle))
+            {
+                m_lst_index.Add(e.RowHandle);
+            }
+        }
+
+        private void m_cmd_luu_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                luu_du_lieu();
+                //load_data_2_grid();
+                MessageBox.Show("Đã lưu xong");
+            }
+            catch (Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+        private void update_lop_mon(DataRow v_dr) //Lưu dữ liệu từ gridview vào DB
+        {
+            US_GD_DIEM v_us = new US_GD_DIEM(CIPConvert.ToDecimal(v_dr[GD_DIEM.ID].ToString()));//Kiếm tra khác rỗng
+            if (v_dr[GD_DIEM.DIEM_CHUYEN_CAN].ToString().Trim() != "")
+            {
+                v_us.dcDIEM_CHUYEN_CAN = CIPConvert.ToDecimal(v_dr[GD_DIEM.DIEM_CHUYEN_CAN].ToString());
+            }
+            if (v_dr[GD_DIEM.DIEM_KIEM_TRA].ToString().Trim() != "")
+            {
+                v_us.dcDIEM_KIEM_TRA = CIPConvert.ToDecimal(v_dr[GD_DIEM.DIEM_KIEM_TRA].ToString());
+            }
+            if (v_dr[GD_DIEM.DIEM_THI].ToString().Trim() != "")
+            {
+                v_us.dcDIEM_THI = CIPConvert.ToDecimal(v_dr[GD_DIEM.DIEM_THI].ToString());
+            }
+            v_us.Update();
+        }
+        private void luu_du_lieu()
+        {
+            foreach (var item in m_lst_index)
+            {
+                DataRow v_dr = m_grv.GetDataRow(item);
+                update_lop_mon(v_dr);
+            }
         }
     }
 }

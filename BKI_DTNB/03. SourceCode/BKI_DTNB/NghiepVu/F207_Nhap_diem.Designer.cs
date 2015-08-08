@@ -47,6 +47,7 @@
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.m_cmd_luu = new SIS.Controls.Button.SiSButton();
             ((System.ComponentModel.ISupportInitialize)(this.m_grc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv)).BeginInit();
             this.m_pnl_out_place_dm.SuspendLayout();
@@ -88,6 +89,7 @@
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.c_ma_mon_hoc, DevExpress.Data.ColumnSortOrder.Ascending),
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.c_ma_lop_hoc, DevExpress.Data.ColumnSortOrder.Ascending)});
             this.m_grv.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.m_grv_PopupMenuShowing);
+            this.m_grv.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.m_grv_CellValueChanged);
             // 
             // c_ten_nhan_vien
             // 
@@ -106,7 +108,7 @@
             this.c_ma_mon_hoc.Name = "c_ma_mon_hoc";
             this.c_ma_mon_hoc.OptionsColumn.AllowEdit = false;
             this.c_ma_mon_hoc.Visible = true;
-            this.c_ma_mon_hoc.VisibleIndex = 3;
+            this.c_ma_mon_hoc.VisibleIndex = 1;
             // 
             // c_hoc_xong
             // 
@@ -133,7 +135,7 @@
             this.c_ma_lop_hoc.Name = "c_ma_lop_hoc";
             this.c_ma_lop_hoc.OptionsColumn.AllowEdit = false;
             this.c_ma_lop_hoc.Visible = true;
-            this.c_ma_lop_hoc.VisibleIndex = 3;
+            this.c_ma_lop_hoc.VisibleIndex = 1;
             // 
             // c_ma_nv
             // 
@@ -197,6 +199,7 @@
             // 
             // m_pnl_out_place_dm
             // 
+            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_luu);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_update);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -255,6 +258,22 @@
             this.panel2.Size = new System.Drawing.Size(769, 322);
             this.panel2.TabIndex = 22;
             // 
+            // m_cmd_luu
+            // 
+            this.m_cmd_luu.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_luu.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_luu.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_luu.Dock = System.Windows.Forms.DockStyle.Right;
+            this.m_cmd_luu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_luu.ImageIndex = 2;
+            this.m_cmd_luu.ImageList = this.ImageList;
+            this.m_cmd_luu.Location = new System.Drawing.Point(502, 4);
+            this.m_cmd_luu.Name = "m_cmd_luu";
+            this.m_cmd_luu.Size = new System.Drawing.Size(87, 28);
+            this.m_cmd_luu.TabIndex = 16;
+            this.m_cmd_luu.Text = "&Lưu nhanh";
+            this.m_cmd_luu.Click += new System.EventHandler(this.m_cmd_luu_Click);
+            // 
             // F207_Nhap_diem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -293,5 +312,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn c_diem_chuyen_can;
         private DevExpress.XtraGrid.Columns.GridColumn c_diem_kiem_tra;
         private DevExpress.XtraGrid.Columns.GridColumn c_diem_thi;
+        internal SIS.Controls.Button.SiSButton m_cmd_luu;
     }
 }

@@ -42,6 +42,7 @@
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
+            this.m_cmd_luu = new SIS.Controls.Button.SiSButton();
             this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
             this.m_cmd_update = new SIS.Controls.Button.SiSButton();
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
@@ -79,16 +80,17 @@
             this.gridColumn8});
             this.m_grv.GridControl = this.m_grc;
             this.m_grv.Name = "m_grv";
-            this.m_grv.OptionsBehavior.Editable = false;
             this.m_grv.OptionsSelection.MultiSelect = true;
             this.m_grv.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
             this.m_grv.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.m_grv_PopupMenuShowing);
+            this.m_grv.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.m_grv_CellValueChanged);
             // 
             // gridColumn1
             // 
             this.gridColumn1.Caption = "MÃ LỚP MÔN";
             this.gridColumn1.FieldName = "MA_LOP_HOC";
             this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 1;
             // 
@@ -97,6 +99,7 @@
             this.gridColumn2.Caption = "MÃ-TÊN MÔN HỌC";
             this.gridColumn2.FieldName = "MA_TEN_MON_HOC";
             this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 2;
             // 
@@ -105,12 +108,15 @@
             this.gridColumn3.Caption = "MÃ VERSION";
             this.gridColumn3.FieldName = "MA_VERSION";
             this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 3;
             // 
             // gridColumn4
             // 
             this.gridColumn4.Caption = "THỜI GIAN";
+            this.gridColumn4.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.gridColumn4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.gridColumn4.FieldName = "THOI_GIAN";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
@@ -145,6 +151,7 @@
             this.gridColumn8.Caption = "SỐ HỌC VIÊN HIỆN CÓ";
             this.gridColumn8.FieldName = "SO_HOC_VIEN_HIEN_CO";
             this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.OptionsColumn.AllowEdit = false;
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 8;
             // 
@@ -177,6 +184,7 @@
             // 
             // m_pnl_out_place_dm
             // 
+            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_luu);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_insert);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_update);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_delete);
@@ -187,6 +195,22 @@
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(782, 36);
             this.m_pnl_out_place_dm.TabIndex = 21;
+            // 
+            // m_cmd_luu
+            // 
+            this.m_cmd_luu.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_luu.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_luu.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_luu.Dock = System.Windows.Forms.DockStyle.Right;
+            this.m_cmd_luu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_luu.ImageIndex = 2;
+            this.m_cmd_luu.ImageList = this.ImageList;
+            this.m_cmd_luu.Location = new System.Drawing.Point(338, 4);
+            this.m_cmd_luu.Name = "m_cmd_luu";
+            this.m_cmd_luu.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_luu.TabIndex = 15;
+            this.m_cmd_luu.Text = "&Lưu nhanh";
+            this.m_cmd_luu.Click += new System.EventHandler(this.m_cmd_luu_Click);
             // 
             // m_cmd_insert
             // 
@@ -299,5 +323,6 @@
         internal SIS.Controls.Button.SiSButton m_cmd_delete;
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
         private DevExpress.XtraEditors.PanelControl panelControl1;
+        internal SIS.Controls.Button.SiSButton m_cmd_luu;
     }
 }

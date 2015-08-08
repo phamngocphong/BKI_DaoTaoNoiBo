@@ -17,6 +17,7 @@ namespace BKI_DTNB.NghiepVu
     public partial class f208_gd_lop_mon : Form
     {
         public bool m_trang_thai_insert= true;
+        public List<int> m_lst_index = new List<int>();
         public f208_gd_lop_mon()
         {
             InitializeComponent();
@@ -184,6 +185,56 @@ namespace BKI_DTNB.NghiepVu
             this.Close();
         }
 
-      
+        private void m_cmd_luu_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                luu_du_lieu();
+                //load_data_2_grid();
+                MessageBox.Show("Đã lưu xong");
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void luu_du_lieu() {
+            foreach (var item in m_lst_index)
+            {
+                DataRow v_dr = m_grv.GetDataRow(item);
+                update_lop_mon(v_dr);
+            }
+        }
+
+        private void update_lop_mon(DataRow v_dr)
+        {
+            US_GD_LOP_MON v_us = new US_GD_LOP_MON(CIPConvert.ToDecimal(v_dr[GD_LOP_MON.ID].ToString()));
+            if (v_dr[GD_LOP_MON.DIEM_QUA_MON].ToString().Trim() != "")
+            {
+                v_us.dcDIEM_QUA_MON = CIPConvert.ToDecimal(v_dr[GD_LOP_MON.DIEM_QUA_MON].ToString());
+            }
+            if (v_dr[GD_LOP_MON.THOI_GIAN].ToString().Trim() != "")
+            {
+                v_us.datTHOI_GIAN = (DateTime)v_dr[GD_LOP_MON.THOI_GIAN];
+            }
+            if (v_dr[GD_LOP_MON.DIA_DIEM].ToString().Trim() != "")
+            {
+                v_us.strDIA_DIEM = v_dr[GD_LOP_MON.DIA_DIEM].ToString();
+            }
+            if (v_dr[GD_LOP_MON.SO_LUONG].ToString().Trim() != "")
+            {
+                v_us.dcSO_LUONG = CIPConvert.ToDecimal(v_dr[GD_LOP_MON.SO_LUONG].ToString());
+            }
+            v_us.Update();
+        }
+
+        private void m_grv_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            if (!m_lst_index.Exists(x => x == e.RowHandle))
+            {
+                m_lst_index.Add(e.RowHandle);   
+            }
+        }
     }
 }

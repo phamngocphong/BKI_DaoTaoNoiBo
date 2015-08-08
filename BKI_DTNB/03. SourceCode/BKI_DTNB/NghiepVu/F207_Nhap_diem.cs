@@ -11,6 +11,7 @@ using IP.Core.IPCommon;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.Utils.Menu;
 using BKI_DTNB.DS.CDBNames;
+using DevExpress.XtraEditors.Repository;
 
 namespace BKI_DTNB.NghiepVu
 {
@@ -25,6 +26,14 @@ namespace BKI_DTNB.NghiepVu
         private void F207_Nhap_diem_Load(object sender, EventArgs e)
         {
             load_data_2_grid();
+            RepositoryItemComboBox riCombo = new RepositoryItemComboBox();
+            riCombo.Items.AddRange(new string[] { "Đã qua môn", "Không qua môn" });
+            //Add a repository item to the repository items of grid control
+            m_grc.RepositoryItems.Add(riCombo);
+            //Now you can define the repository item as an inplace editor of columns
+            c_qua_mon.ColumnEdit = riCombo;
+           
+
         }
 
         private void load_data_2_grid()
@@ -116,6 +125,7 @@ namespace BKI_DTNB.NghiepVu
                 luu_du_lieu();
                 //load_data_2_grid();
                 MessageBox.Show("Đã lưu xong");
+                load_data_2_grid();
             }
             catch (Exception v_e)
             {
@@ -138,7 +148,25 @@ namespace BKI_DTNB.NghiepVu
             {
                 v_us.dcDIEM_THI = CIPConvert.ToDecimal(v_dr[GD_DIEM.DIEM_THI].ToString());
             }
-            v_us.Update();
+            v_us.strHOC_XONG_YN = "Y";
+            if (v_dr["QUA_MON"].ToString() == "Đã qua môn")
+            {
+                v_us.strQUA_MON = "Y";
+            }
+            else if (v_dr["QUA_MON"].ToString() == "Không qua môn")
+            {
+                v_us.strQUA_MON = "N";
+            }
+            try
+            {
+                v_us.Update();
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Cột Kết quả bạn chỉ được lựa chọn 1 trong 2 trạng thái!");
+            }
+           
         }
         private void luu_du_lieu()
         {

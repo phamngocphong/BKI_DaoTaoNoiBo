@@ -18,6 +18,7 @@ using DevExpress.XtraGrid.Views.Grid;
 using System.Configuration;
 using System.Data.OleDb;
 using DevExpress.XtraReports.UI;
+using System.IO;
 
 
 namespace BKI_DTNB
@@ -170,7 +171,15 @@ namespace BKI_DTNB
 
         public static void load_xls_to_gridview(string ip_str_path, DevExpress.XtraGrid.GridControl ip_grc) {
             string conStr = "";
-            conStr = ConfigurationManager.ConnectionStrings["Excel07ConString"].ConnectionString;
+            string v_file_type = Path.GetExtension(ip_str_path);
+            if (v_file_type == "xls")
+            {
+                conStr = ConfigurationManager.ConnectionStrings["Excel03ConString"].ConnectionString;   
+            }
+            else
+            {
+                conStr = ConfigurationManager.ConnectionStrings["Excel07ConString"].ConnectionString;
+            }
             conStr = String.Format(conStr, ip_str_path, "Yes");
             OleDbConnection con = new OleDbConnection(conStr);
             OleDbCommand ExcelCommand = new OleDbCommand();

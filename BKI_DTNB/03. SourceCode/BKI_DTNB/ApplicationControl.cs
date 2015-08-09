@@ -31,6 +31,13 @@ namespace BKI_DTNB
 
             try
             {
+                // The following line provides localization for the application's user interface. 
+                System.Threading.Thread.CurrentThread.CurrentUICulture =
+                    new System.Globalization.CultureInfo("vi-VN");
+
+                // The following line provides localization for data formats. 
+                System.Threading.Thread.CurrentThread.CurrentCulture =
+                    new System.Globalization.CultureInfo("vi-VN");
                 IP.Core.IPSystemAdmin.f101_Dang_Nhap v_frm_login_form = new f101_Dang_Nhap();
                 US_HT_NGUOI_SU_DUNG v_us_user = new US_HT_NGUOI_SU_DUNG();
                 CLoginInformation_302 v_obj_login_info = new CLoginInformation_302(v_us_user);

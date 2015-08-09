@@ -77,14 +77,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BKI_DTNB.exe" size="2997248">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BKI_DTNB.exe" size="3005440">
       <assemblyIdentity name="BKI_DTNB" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>F32jeXb3H22+7G1F+Rj3+F/vIt0=</dsig:DigestValue>
+        <dsig:DigestValue>7us1+jE7u4YwfLlyu8yTMuub7lQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1816,13 +1816,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="BKI_DTNB.exe.config" size="1927">
+  <file name="BKI_DTNB.exe.config" size="1962">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>nDEP1djxNVvf7riuTSL2/04f3ik=</dsig:DigestValue>
+      <dsig:DigestValue>BQCJAalgfdsTFHr/O97J8P/H0uU=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

@@ -172,7 +172,7 @@ namespace BKI_DTNB
         public static void load_xls_to_gridview(string ip_str_path, DevExpress.XtraGrid.GridControl ip_grc) {
             string conStr = "";
             string v_file_type = Path.GetExtension(ip_str_path);
-            if (v_file_type == "xls")
+            if (v_file_type == ".xls")
             {
                 conStr = ConfigurationManager.ConnectionStrings["Excel03ConString"].ConnectionString;   
             }

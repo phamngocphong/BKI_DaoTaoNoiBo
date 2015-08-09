@@ -229,7 +229,7 @@
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Name = "F120_CHUONG_TRINH_KHUNG_CUA_NHAN_VIEN";
-            this.Text = "F120_CHUONG_TRINH_KHUNG_CUA_NHAN_VIEN";
+            this.Text = "F120 - Chương trình khung của nhân viên";
             this.Load += new System.EventHandler(this.F120_CHUONG_TRINH_KHUNG_CUA_NHAN_VIEN_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);

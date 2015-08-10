@@ -84,7 +84,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>jptzi7u66nDdCaKC7B0sMLCarA0=</dsig:DigestValue>
+        <dsig:DigestValue>mhY7OXyfFiDbWf5HmDsvvKH2rek=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1816,13 +1816,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="BKI_DTNB.exe.config" size="1962">
+  <file name="BKI_DTNB.exe.config" size="1951">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>BQCJAalgfdsTFHr/O97J8P/H0uU=</dsig:DigestValue>
+      <dsig:DigestValue>J9nUbrR4F0tfSuIzkb4uAu1jsNA=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

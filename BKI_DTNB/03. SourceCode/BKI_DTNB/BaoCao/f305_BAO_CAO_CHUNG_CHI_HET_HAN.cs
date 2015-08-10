@@ -53,6 +53,10 @@ namespace BKI_DTNB.BaoCao
             v_ds.EnforceConstraints = false;
             v_us.FillDatasetChungChiHetHan(v_ds, m_dat.Value);
             pivotGridControl1.DataSource = v_ds.Tables[0];
+            if (v_ds.Tables[0].Rows.Count==0)
+            {
+                MessageBox.Show("Không có chứng chỉ nào hết hạn đến thời điểm này!");
+            }
         }
 
         private void m_cmd_hien_thi_Click(object sender, EventArgs e)

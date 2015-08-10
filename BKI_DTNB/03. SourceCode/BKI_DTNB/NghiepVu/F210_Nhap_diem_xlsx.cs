@@ -173,6 +173,11 @@ namespace BKI_DTNB.NghiepVu
             return v_dt_r;
         }
 
+        private void m_cmd_exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         
     }
 }

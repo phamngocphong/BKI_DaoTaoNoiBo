@@ -230,7 +230,7 @@
             this.m_cmd_luu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_luu.ImageIndex = 2;
             this.m_cmd_luu.ImageList = this.ImageList;
-            this.m_cmd_luu.Location = new System.Drawing.Point(502, 4);
+            this.m_cmd_luu.Location = new System.Drawing.Point(454, 4);
             this.m_cmd_luu.Name = "m_cmd_luu";
             this.m_cmd_luu.Size = new System.Drawing.Size(87, 28);
             this.m_cmd_luu.TabIndex = 16;
@@ -246,11 +246,11 @@
             this.m_cmd_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_update.ImageIndex = 3;
             this.m_cmd_update.ImageList = this.ImageList;
-            this.m_cmd_update.Location = new System.Drawing.Point(589, 4);
+            this.m_cmd_update.Location = new System.Drawing.Point(541, 4);
             this.m_cmd_update.Name = "m_cmd_update";
-            this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_update.Size = new System.Drawing.Size(136, 28);
             this.m_cmd_update.TabIndex = 13;
-            this.m_cmd_update.Text = "&Nhập điểm";
+            this.m_cmd_update.Text = "&Nhập điểm từ XLSX";
             this.m_cmd_update.Click += new System.EventHandler(this.m_cmd_update_Click);
             // 
             // m_cmd_exit

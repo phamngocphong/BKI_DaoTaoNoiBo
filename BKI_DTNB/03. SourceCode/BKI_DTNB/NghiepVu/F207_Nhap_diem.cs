@@ -48,35 +48,58 @@ namespace BKI_DTNB.NghiepVu
 
         private void m_cmd_update_Click(object sender, EventArgs e)
         {
+            //try
+            //{
+            //    string v_da_hoc_xong = "";
+            //    string v_da_qua_mon = "";
+            //    decimal v_diem_chuyen_can = -1;
+            //    decimal v_diem_giua_ky = -1;
+            //    decimal v_diem_cuoi_ky = -1;
+            //    F207_Nhap_diem_DE v_f = new F207_Nhap_diem_DE();
+            //    v_f.display(ref v_da_hoc_xong, ref v_da_qua_mon, ref v_diem_chuyen_can, ref v_diem_giua_ky, ref v_diem_cuoi_ky);
+            //    if (v_f.DialogResult == System.Windows.Forms.DialogResult.OK)
+            //    {
+            //        for (int i = 0; i < m_grv.SelectedRowsCount; i++)
+            //        {
+            //            var v_data_row = m_grv.GetDataRow(m_grv.GetSelectedRows()[i]);
+            //            US_GD_DIEM v_us = new US_GD_DIEM(CIPConvert.ToDecimal(v_data_row["ID"].ToString()));
+            //            v_us.strQUA_MON = v_da_qua_mon;
+            //            v_us.strHOC_XONG_YN = v_da_hoc_xong;
+            //            v_us.dcDIEM_CHUYEN_CAN = v_diem_chuyen_can;
+            //            v_us.dcDIEM_KIEM_TRA = v_diem_giua_ky;
+            //            v_us.dcDIEM_THI = v_diem_cuoi_ky;
+            //            v_us.datNGAY_SUA = DateTime.Now.Date;
+            //            v_us.Update();
+            //        }
+            //        MessageBox.Show("Đã cập nhật thành công kết quả học cho " + m_grv.SelectedRowsCount.ToString() + " nhân viên");
+            //        load_data_2_grid();
+            //    }
+            //}
+            //catch (Exception v_e)
+            //{
+            //    CSystemLog_301.ExceptionHandle(v_e);
+            //}
+
+
             try
             {
-                string v_da_hoc_xong = "";
-                string v_da_qua_mon = "";
-                decimal v_diem_chuyen_can = -1;
-                decimal v_diem_giua_ky = -1;
-                decimal v_diem_cuoi_ky = -1;
-                F207_Nhap_diem_DE v_f = new F207_Nhap_diem_DE();
-                v_f.display(ref v_da_hoc_xong, ref v_da_qua_mon, ref v_diem_chuyen_can, ref v_diem_giua_ky, ref v_diem_cuoi_ky);
-                if (v_f.DialogResult == System.Windows.Forms.DialogResult.OK)
+                string v_str_path = "";
+                F210_Nhap_diem_xlsx_de v_f_de = new F210_Nhap_diem_xlsx_de();
+
+                v_f_de.display(ref v_str_path);
+                if (v_f_de.DialogResult == System.Windows.Forms.DialogResult.OK)
                 {
-                    for (int i = 0; i < m_grv.SelectedRowsCount; i++)
-                    {
-                        var v_data_row = m_grv.GetDataRow(m_grv.GetSelectedRows()[i]);
-                        US_GD_DIEM v_us = new US_GD_DIEM(CIPConvert.ToDecimal(v_data_row["ID"].ToString()));
-                        v_us.strQUA_MON = v_da_qua_mon;
-                        v_us.strHOC_XONG_YN = v_da_hoc_xong;
-                        v_us.dcDIEM_CHUYEN_CAN = v_diem_chuyen_can;
-                        v_us.dcDIEM_KIEM_TRA = v_diem_giua_ky;
-                        v_us.dcDIEM_THI = v_diem_cuoi_ky;
-                        v_us.datNGAY_SUA = DateTime.Now.Date;
-                        v_us.Update();
-                    }
-                    MessageBox.Show("Đã cập nhật thành công kết quả học cho " + m_grv.SelectedRowsCount.ToString() + " nhân viên");
-                    load_data_2_grid();
+                    F210_Nhap_diem_xlsx v_f = new F210_Nhap_diem_xlsx();
+                 //   v_f.MdiParent = this;
+                    v_f.display(v_str_path);
                 }
+                //f111_danh_muc_nghiep_vu v_f = new f111_danh_muc_nghiep_vu();
+                //v_f.MdiParent = this;
+                //v_f.Show();
             }
             catch (Exception v_e)
             {
+
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }

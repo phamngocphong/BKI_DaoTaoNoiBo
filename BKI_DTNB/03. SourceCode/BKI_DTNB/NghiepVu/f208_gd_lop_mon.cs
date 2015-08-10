@@ -56,13 +56,13 @@ namespace BKI_DTNB.NghiepVu
         {
             try
             {
-                decimal v_count =CIPConvert.ToDecimal(m_grv.SelectedRowsCount);
-                if (v_count==0)
+                decimal v_selected_row_count = GetSelectedRows(m_grv).Count;
+                if (v_selected_row_count == 0)
                 {
                     MessageBox.Show("Bạn phải chọn 1 lớp môn để thực hiện tác vụ này!");
                 }
 
-                else if (v_count > 1)
+                else if (v_selected_row_count > 1)
                 {
                     MessageBox.Show("Bạn chỉ được chọn duy nhất 1 lớp môn để thực hiện tác vụ này!");
                 }
@@ -98,10 +98,10 @@ namespace BKI_DTNB.NghiepVu
         }
 
         private void m_cmd_delete_Click(object sender, EventArgs e)
-        {  
-           
-                decimal v_count =CIPConvert.ToDecimal(m_grv.SelectedRowsCount.ToString());
-                if (v_count == 0)
+        {
+
+            decimal v_selected_row_count = GetSelectedRows(m_grv).Count;
+            if (v_selected_row_count == 0)
                 {
                     MessageBox.Show("Bạn phải chọn lớp môn để thực hiện tác vụ này!");
                 }
@@ -110,8 +110,8 @@ namespace BKI_DTNB.NghiepVu
                     DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa bản ghi này không?", "Cảnh báo", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
                     {
-                    xoa_lop_mon(v_count);
-                    MessageBox.Show(" Đã xóa thành công "+ v_count.ToString()+ " lớp môn");
+                        xoa_lop_mon(v_selected_row_count);
+                        MessageBox.Show(" Đã xóa thành công " + v_selected_row_count.ToString() + " lớp môn");
                     load_data_2_grid();
                     }
                  }
@@ -235,6 +235,18 @@ namespace BKI_DTNB.NghiepVu
             {
                 m_lst_index.Add(e.RowHandle);   
             }
+        }
+
+        private List<int> GetSelectedRows(GridView view)
+        {
+            List<int> v_lst = new List<int>();
+            int[] rows = m_grv.GetSelectedRows();
+            for (int i = 0; i < rows.Length; i++)
+                if (!m_grv.IsGroupRow(rows[i]))
+                {
+                    v_lst.Add(rows[i]);
+                }
+            return v_lst;
         }
     }
 }

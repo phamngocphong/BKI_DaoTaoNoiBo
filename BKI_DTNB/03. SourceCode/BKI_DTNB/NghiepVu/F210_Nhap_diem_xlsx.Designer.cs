@@ -52,11 +52,11 @@
             // m_grc
             // 
             this.m_grc.Cursor = System.Windows.Forms.Cursors.Default;
-            this.m_grc.Dock = System.Windows.Forms.DockStyle.Top;
+            this.m_grc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.m_grc.Location = new System.Drawing.Point(0, 0);
             this.m_grc.MainView = this.m_grv;
             this.m_grc.Name = "m_grc";
-            this.m_grc.Size = new System.Drawing.Size(654, 271);
+            this.m_grc.Size = new System.Drawing.Size(654, 309);
             this.m_grc.TabIndex = 0;
             this.m_grc.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.m_grv});
@@ -209,6 +209,7 @@
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_exit.TabIndex = 11;
             this.m_cmd_exit.Text = "Thoát (Esc)";
+            this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_exit_Click);
             // 
             // F210_Nhap_diem_xlsx
             // 

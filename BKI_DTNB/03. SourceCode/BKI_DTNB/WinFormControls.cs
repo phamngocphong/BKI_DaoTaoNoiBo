@@ -49,7 +49,7 @@ namespace BKI_DTNB
             if (ip_c.Name.StartsWith(ip_st) && ip_st == "m_tieu_de")
             {
                 ip_c.ForeColor = Color.Maroon;
-                ip_c.Font = new Font("Tahoma", 12, FontStyle.Bold);
+                ip_c.Font = new Font("Arial", 12, FontStyle.Bold);
             }
             if (ip_c.Name.StartsWith(ip_st) && ip_st == "m_cbo")
             {

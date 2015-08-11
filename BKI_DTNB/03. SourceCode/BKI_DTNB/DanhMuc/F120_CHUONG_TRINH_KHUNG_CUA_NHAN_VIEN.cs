@@ -24,6 +24,7 @@ namespace BKI_DTNB.DanhMuc
         public F120_CHUONG_TRINH_KHUNG_CUA_NHAN_VIEN()
         {
             InitializeComponent();
+            WinFormControls.DTNB_ControlFormat(this);
         }
 
         private void F120_CHUONG_TRINH_KHUNG_CUA_NHAN_VIEN_Load(object sender, EventArgs e)

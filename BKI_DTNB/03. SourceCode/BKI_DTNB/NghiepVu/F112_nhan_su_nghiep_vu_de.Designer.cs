@@ -36,10 +36,10 @@
             this.m_rdb_nghiep_vu_chinh = new System.Windows.Forms.RadioButton();
             this.m_cbo_nhan_vien = new System.Windows.Forms.ComboBox();
             this.m_cbo_nghiep_vu = new System.Windows.Forms.ComboBox();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.m_lbl_nghiep_vu = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.m_lbl_nhan_vien = new DevExpress.XtraEditors.LabelControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.m_cmd_huy = new DevExpress.XtraEditors.SimpleButton();
@@ -60,10 +60,10 @@
             this.groupControl1.Controls.Add(this.groupControl2);
             this.groupControl1.Controls.Add(this.m_cbo_nhan_vien);
             this.groupControl1.Controls.Add(this.m_cbo_nghiep_vu);
-            this.groupControl1.Controls.Add(this.labelControl5);
+            this.groupControl1.Controls.Add(this.m_lbl_nghiep_vu);
             this.groupControl1.Controls.Add(this.labelControl3);
             this.groupControl1.Controls.Add(this.labelControl2);
-            this.groupControl1.Controls.Add(this.labelControl1);
+            this.groupControl1.Controls.Add(this.m_lbl_nhan_vien);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(2, 2);
             this.groupControl1.Name = "groupControl1";
@@ -130,13 +130,13 @@
             this.m_cbo_nghiep_vu.Size = new System.Drawing.Size(296, 21);
             this.m_cbo_nghiep_vu.TabIndex = 6;
             // 
-            // labelControl5
+            // m_lbl_nghiep_vu
             // 
-            this.labelControl5.Location = new System.Drawing.Point(20, 111);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(48, 13);
-            this.labelControl5.TabIndex = 4;
-            this.labelControl5.Text = "Nghiệp vụ";
+            this.m_lbl_nghiep_vu.Location = new System.Drawing.Point(20, 111);
+            this.m_lbl_nghiep_vu.Name = "m_lbl_nghiep_vu";
+            this.m_lbl_nghiep_vu.Size = new System.Drawing.Size(48, 13);
+            this.m_lbl_nghiep_vu.TabIndex = 4;
+            this.m_lbl_nghiep_vu.Text = "Nghiệp vụ";
             // 
             // labelControl3
             // 
@@ -152,13 +152,13 @@
             this.labelControl2.Size = new System.Drawing.Size(0, 13);
             this.labelControl2.TabIndex = 1;
             // 
-            // labelControl1
+            // m_lbl_nhan_vien
             // 
-            this.labelControl1.Location = new System.Drawing.Point(20, 63);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(48, 13);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Nhân viên";
+            this.m_lbl_nhan_vien.Location = new System.Drawing.Point(20, 63);
+            this.m_lbl_nhan_vien.Name = "m_lbl_nhan_vien";
+            this.m_lbl_nhan_vien.Size = new System.Drawing.Size(48, 13);
+            this.m_lbl_nhan_vien.TabIndex = 0;
+            this.m_lbl_nhan_vien.Text = "Nhân viên";
             // 
             // panelControl1
             // 
@@ -227,9 +227,9 @@
 
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.LabelControl m_lbl_nhan_vien;
         private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.LabelControl m_lbl_nghiep_vu;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private System.Windows.Forms.ComboBox m_cbo_nghiep_vu;
         private DevExpress.XtraEditors.PanelControl panelControl2;

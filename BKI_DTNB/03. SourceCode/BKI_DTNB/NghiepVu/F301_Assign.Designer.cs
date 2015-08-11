@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F301_Assign));
             this.m_cbo_lop_mon = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.m_lbl = new System.Windows.Forms.Label();
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
             this.m_cmd_update = new SIS.Controls.Button.SiSButton();
@@ -47,14 +47,14 @@
             this.m_cbo_lop_mon.Size = new System.Drawing.Size(186, 21);
             this.m_cbo_lop_mon.TabIndex = 0;
             // 
-            // label1
+            // m_lbl
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Mã lớp môn";
+            this.m_lbl.AutoSize = true;
+            this.m_lbl.Location = new System.Drawing.Point(12, 25);
+            this.m_lbl.Name = "m_lbl";
+            this.m_lbl.Size = new System.Drawing.Size(62, 13);
+            this.m_lbl.TabIndex = 1;
+            this.m_lbl.Text = "Mã lớp môn";
             // 
             // ImageList
             // 
@@ -133,7 +133,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(304, 108);
             this.Controls.Add(this.m_pnl_out_place_dm);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.m_lbl);
             this.Controls.Add(this.m_cbo_lop_mon);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "F301_Assign";
@@ -148,7 +148,7 @@
         #endregion
 
         private System.Windows.Forms.ComboBox m_cbo_lop_mon;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label m_lbl;
         internal System.Windows.Forms.ImageList ImageList;
         internal System.Windows.Forms.Panel m_pnl_out_place_dm;
         internal SIS.Controls.Button.SiSButton m_cmd_update;

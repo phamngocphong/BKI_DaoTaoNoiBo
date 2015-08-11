@@ -24,6 +24,7 @@ namespace BKI_DTNB.BaoCao
         public F303_Ket_qua_dao_tao()
         {
             InitializeComponent();
+            WinFormControls.DTNB_ControlFormat(this);
         }
 
         private void F303_Ket_qua_dao_tao_Load(object sender, EventArgs e)

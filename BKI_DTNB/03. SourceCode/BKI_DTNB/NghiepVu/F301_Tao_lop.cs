@@ -21,6 +21,7 @@ namespace BKI_DTNB.NghiepVu
         public F301_Tao_lop()
         {
             InitializeComponent();
+            WinFormControls.DTNB_ControlFormat(this);
         }
 
         public decimal Display(decimal ip_dc_so_hoc_vien, decimal ip_dc_id_mon_hoc, ref decimal op_dc_id_version_mon, ref decimal op_dc_diem_qua_mon)

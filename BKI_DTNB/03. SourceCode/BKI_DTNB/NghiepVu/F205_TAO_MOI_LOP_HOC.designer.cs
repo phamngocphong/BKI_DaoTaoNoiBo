@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.m_lbl_ngach = new System.Windows.Forms.Label();
+            this.m_lbl_hoc_phan = new System.Windows.Forms.Label();
+            this.m_lbl_mon_hoc = new System.Windows.Forms.Label();
+            this.m_lbl_phong = new System.Windows.Forms.Label();
+            this.m_tieu_de_f205 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.m_lbl_dia_diem = new System.Windows.Forms.Label();
+            this.m_lbl_time_st = new System.Windows.Forms.Label();
+            this.m_lbl_time_end = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -48,57 +48,57 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // m_lbl_ngach
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(59, 62);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Ngạch";
+            this.m_lbl_ngach.AutoSize = true;
+            this.m_lbl_ngach.Location = new System.Drawing.Point(38, 62);
+            this.m_lbl_ngach.Name = "m_lbl_ngach";
+            this.m_lbl_ngach.Size = new System.Drawing.Size(39, 13);
+            this.m_lbl_ngach.TabIndex = 0;
+            this.m_lbl_ngach.Text = "Ngạch";
             // 
-            // label2
+            // m_lbl_hoc_phan
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(59, 105);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Học phần";
+            this.m_lbl_hoc_phan.AutoSize = true;
+            this.m_lbl_hoc_phan.Location = new System.Drawing.Point(38, 105);
+            this.m_lbl_hoc_phan.Name = "m_lbl_hoc_phan";
+            this.m_lbl_hoc_phan.Size = new System.Drawing.Size(54, 13);
+            this.m_lbl_hoc_phan.TabIndex = 1;
+            this.m_lbl_hoc_phan.Text = "Học phần";
             // 
-            // label3
+            // m_lbl_mon_hoc
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(338, 105);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Môn học";
+            this.m_lbl_mon_hoc.AutoSize = true;
+            this.m_lbl_mon_hoc.Location = new System.Drawing.Point(338, 105);
+            this.m_lbl_mon_hoc.Name = "m_lbl_mon_hoc";
+            this.m_lbl_mon_hoc.Size = new System.Drawing.Size(49, 13);
+            this.m_lbl_mon_hoc.TabIndex = 2;
+            this.m_lbl_mon_hoc.Text = "Môn học";
             // 
-            // label4
+            // m_lbl_phong
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(338, 62);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Phòng/Ban";
+            this.m_lbl_phong.AutoSize = true;
+            this.m_lbl_phong.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.m_lbl_phong.Location = new System.Drawing.Point(338, 62);
+            this.m_lbl_phong.Name = "m_lbl_phong";
+            this.m_lbl_phong.Size = new System.Drawing.Size(62, 13);
+            this.m_lbl_phong.TabIndex = 3;
+            this.m_lbl_phong.Text = "Phòng/Ban";
             // 
-            // label5
+            // m_tieu_de_f205
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.Location = new System.Drawing.Point(247, 19);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(153, 19);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "TẠO LỚP HỌC MỚI";
+            this.m_tieu_de_f205.AutoSize = true;
+            this.m_tieu_de_f205.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_tieu_de_f205.Location = new System.Drawing.Point(247, 19);
+            this.m_tieu_de_f205.Name = "m_tieu_de_f205";
+            this.m_tieu_de_f205.Size = new System.Drawing.Size(153, 19);
+            this.m_tieu_de_f205.TabIndex = 4;
+            this.m_tieu_de_f205.Text = "TẠO LỚP HỌC MỚI";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(153, 54);
+            this.comboBox1.Location = new System.Drawing.Point(153, 59);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(165, 21);
             this.comboBox1.TabIndex = 5;
@@ -106,7 +106,7 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(437, 54);
+            this.comboBox2.Location = new System.Drawing.Point(455, 59);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(154, 21);
             this.comboBox2.TabIndex = 6;
@@ -114,7 +114,7 @@
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(153, 97);
+            this.comboBox3.Location = new System.Drawing.Point(153, 102);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(165, 21);
             this.comboBox3.TabIndex = 7;
@@ -122,38 +122,38 @@
             // comboBox4
             // 
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(437, 97);
+            this.comboBox4.Location = new System.Drawing.Point(455, 102);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(154, 21);
             this.comboBox4.TabIndex = 8;
             // 
-            // label6
+            // m_lbl_dia_diem
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(59, 174);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 13);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Địa điểm học";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.m_lbl_dia_diem.AutoSize = true;
+            this.m_lbl_dia_diem.Location = new System.Drawing.Point(38, 178);
+            this.m_lbl_dia_diem.Name = "m_lbl_dia_diem";
+            this.m_lbl_dia_diem.Size = new System.Drawing.Size(70, 13);
+            this.m_lbl_dia_diem.TabIndex = 9;
+            this.m_lbl_dia_diem.Text = "Địa điểm học";
+            this.m_lbl_dia_diem.Click += new System.EventHandler(this.label6_Click);
             // 
-            // label7
+            // m_lbl_time_st
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(59, 144);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(91, 13);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Thời gian bắt đầu";
+            this.m_lbl_time_st.AutoSize = true;
+            this.m_lbl_time_st.Location = new System.Drawing.Point(38, 144);
+            this.m_lbl_time_st.Name = "m_lbl_time_st";
+            this.m_lbl_time_st.Size = new System.Drawing.Size(91, 13);
+            this.m_lbl_time_st.TabIndex = 10;
+            this.m_lbl_time_st.Text = "Thời gian bắt đầu";
             // 
-            // label8
+            // m_lbl_time_end
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(338, 144);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(93, 13);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "Thời gian kết thúc";
+            this.m_lbl_time_end.AutoSize = true;
+            this.m_lbl_time_end.Location = new System.Drawing.Point(338, 144);
+            this.m_lbl_time_end.Name = "m_lbl_time_end";
+            this.m_lbl_time_end.Size = new System.Drawing.Size(93, 13);
+            this.m_lbl_time_end.TabIndex = 11;
+            this.m_lbl_time_end.Text = "Thời gian kết thúc";
             // 
             // dateTimePicker1
             // 
@@ -168,7 +168,7 @@
             // 
             this.dateTimePicker2.CustomFormat = "dd/MM/yyyy";
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(437, 139);
+            this.dateTimePicker2.Location = new System.Drawing.Point(455, 138);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(154, 20);
             this.dateTimePicker2.TabIndex = 14;
@@ -207,18 +207,18 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.m_lbl_time_end);
+            this.Controls.Add(this.m_lbl_time_st);
+            this.Controls.Add(this.m_lbl_dia_diem);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.m_tieu_de_f205);
+            this.Controls.Add(this.m_lbl_phong);
+            this.Controls.Add(this.m_lbl_mon_hoc);
+            this.Controls.Add(this.m_lbl_hoc_phan);
+            this.Controls.Add(this.m_lbl_ngach);
             this.Name = "F205_TAO_MOI_LOP_HOC";
             this.Text = "F205 - Tạo mới lớp học";
             this.Load += new System.EventHandler(this.F205_TAO_MOI_LOP_HOC_Load);
@@ -230,18 +230,18 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label m_lbl_ngach;
+        private System.Windows.Forms.Label m_lbl_hoc_phan;
+        private System.Windows.Forms.Label m_lbl_mon_hoc;
+        private System.Windows.Forms.Label m_lbl_phong;
+        private System.Windows.Forms.Label m_tieu_de_f205;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label m_lbl_dia_diem;
+        private System.Windows.Forms.Label m_lbl_time_st;
+        private System.Windows.Forms.Label m_lbl_time_end;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.TextBox textBox1;

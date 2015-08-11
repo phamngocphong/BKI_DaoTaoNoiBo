@@ -21,6 +21,7 @@ namespace BKI_DTNB.NghiepVu
         public F112_nhan_su_nghiep_vu_de()
         {
             InitializeComponent();
+            WinFormControls.DTNB_ControlFormat(this);
         }
 
 

@@ -219,7 +219,7 @@
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Controls.Add(this.m_grc);
             this.Name = "F210_Nhap_diem_xlsx";
-            this.Text = "F210_Nhap_diem_xlsx";
+            this.Text = "F210 - Nhập điểm xlsx";
             this.Load += new System.EventHandler(this.F210_Nhap_diem_xlsx_Load);
             ((System.ComponentModel.ISupportInitialize)(this.m_grc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv)).EndInit();

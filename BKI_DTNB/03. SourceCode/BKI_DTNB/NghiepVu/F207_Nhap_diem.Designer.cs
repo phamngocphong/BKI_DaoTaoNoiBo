@@ -42,6 +42,7 @@
             this.c_diem_chuyen_can = new DevExpress.XtraGrid.Columns.GridColumn();
             this.c_diem_kiem_tra = new DevExpress.XtraGrid.Columns.GridColumn();
             this.c_diem_thi = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
             this.m_cmd_luu = new SIS.Controls.Button.SiSButton();
@@ -49,11 +50,12 @@
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.m_tieu_de_f207 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.m_grc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             this.m_pnl_out_place_dm.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -184,6 +186,14 @@
             this.c_diem_thi.Visible = true;
             this.c_diem_thi.VisibleIndex = 5;
             // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "CHỨNG CHỈ";
+            this.gridColumn1.FieldName = "CHUNG_CHI";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 7;
+            // 
             // ImageList
             // 
             this.ImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ImageList.ImageStream")));
@@ -273,6 +283,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.m_tieu_de_f207);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -288,13 +299,16 @@
             this.panel2.Size = new System.Drawing.Size(769, 322);
             this.panel2.TabIndex = 22;
             // 
-            // gridColumn1
+            // m_tieu_de_f207
             // 
-            this.gridColumn1.Caption = "CHỨNG CHỈ";
-            this.gridColumn1.FieldName = "CHUNG_CHI";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 7;
+            this.m_tieu_de_f207.AutoSize = true;
+            this.m_tieu_de_f207.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_tieu_de_f207.ForeColor = System.Drawing.Color.Maroon;
+            this.m_tieu_de_f207.Location = new System.Drawing.Point(259, 18);
+            this.m_tieu_de_f207.Name = "m_tieu_de_f207";
+            this.m_tieu_de_f207.Size = new System.Drawing.Size(80, 16);
+            this.m_tieu_de_f207.TabIndex = 0;
+            this.m_tieu_de_f207.Text = "NHẬP ĐIỂM";
             // 
             // F207_Nhap_diem
             // 
@@ -311,6 +325,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.m_grv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
             this.m_pnl_out_place_dm.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -338,5 +354,6 @@
         internal SIS.Controls.Button.SiSButton m_cmd_luu;
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private System.Windows.Forms.Label m_tieu_de_f207;
     }
 }

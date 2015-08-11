@@ -14,6 +14,7 @@ namespace BKI_DTNB
         public F205_TAO_MOI_LOP_HOC()
         {
             InitializeComponent();
+            WinFormControls.DTNB_ControlFormat(this);
         }
 
         private void F205_TAO_MOI_LOP_HOC_Load(object sender, EventArgs e)

@@ -33,25 +33,25 @@
             this.m_dat_thoi_gian_bat_dau = new System.Windows.Forms.DateTimePicker();
             this.m_txt_trang_thai = new System.Windows.Forms.TextBox();
             this.m_txt_ma_version = new System.Windows.Forms.TextBox();
-            this.label11 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.m_lbl_tt = new DevExpress.XtraEditors.LabelControl();
+            this.m_lbl_time_end = new DevExpress.XtraEditors.LabelControl();
+            this.m_lbl_time_start = new DevExpress.XtraEditors.LabelControl();
+            this.m_lbl_ma_ver = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.m_cmd_thoat = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.m_dat_ngay_lap = new System.Windows.Forms.DateTimePicker();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.m_lbl_time_cre = new DevExpress.XtraEditors.LabelControl();
             this.m_txt_so_chung_chi = new System.Windows.Forms.TextBox();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.m_lbl_so_cc = new DevExpress.XtraEditors.LabelControl();
             this.m_txt_ma_nhan_vien = new System.Windows.Forms.TextBox();
             this.m_txt_ten_nhan_vien = new System.Windows.Forms.TextBox();
             this.m_dat_thoi_gian_ket_thuc = new System.Windows.Forms.DateTimePicker();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.m_lbl_ten_mh = new DevExpress.XtraEditors.LabelControl();
+            this.m_lbl_ten_nv = new DevExpress.XtraEditors.LabelControl();
             this.m_txt_ten_mon_hoc = new System.Windows.Forms.TextBox();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.m_lbl_ma_nv = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -74,7 +74,7 @@
             // 
             this.m_dat_thoi_gian_bat_dau.CustomFormat = "dd/MM/yyyy";
             this.m_dat_thoi_gian_bat_dau.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.m_dat_thoi_gian_bat_dau.Location = new System.Drawing.Point(115, 187);
+            this.m_dat_thoi_gian_bat_dau.Location = new System.Drawing.Point(129, 187);
             this.m_dat_thoi_gian_bat_dau.Name = "m_dat_thoi_gian_bat_dau";
             this.m_dat_thoi_gian_bat_dau.Size = new System.Drawing.Size(186, 20);
             this.m_dat_thoi_gian_bat_dau.TabIndex = 13;
@@ -95,37 +95,37 @@
             this.m_txt_ma_version.Size = new System.Drawing.Size(233, 20);
             this.m_txt_ma_version.TabIndex = 10;
             // 
-            // label11
+            // m_lbl_tt
             // 
-            this.label11.Location = new System.Drawing.Point(354, 143);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(49, 13);
-            this.label11.TabIndex = 9;
-            this.label11.Text = "Trạng thái";
+            this.m_lbl_tt.Location = new System.Drawing.Point(354, 143);
+            this.m_lbl_tt.Name = "m_lbl_tt";
+            this.m_lbl_tt.Size = new System.Drawing.Size(49, 13);
+            this.m_lbl_tt.TabIndex = 9;
+            this.m_lbl_tt.Text = "Trạng thái";
             // 
-            // labelControl6
+            // m_lbl_time_end
             // 
-            this.labelControl6.Location = new System.Drawing.Point(350, 193);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(85, 13);
-            this.labelControl6.TabIndex = 8;
-            this.labelControl6.Text = "Thời gian kết thúc";
+            this.m_lbl_time_end.Location = new System.Drawing.Point(350, 193);
+            this.m_lbl_time_end.Name = "m_lbl_time_end";
+            this.m_lbl_time_end.Size = new System.Drawing.Size(85, 13);
+            this.m_lbl_time_end.TabIndex = 8;
+            this.m_lbl_time_end.Text = "Thời gian kết thúc";
             // 
-            // labelControl5
+            // m_lbl_time_start
             // 
-            this.labelControl5.Location = new System.Drawing.Point(25, 193);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(83, 13);
-            this.labelControl5.TabIndex = 7;
-            this.labelControl5.Text = "Thời gian bắt đầu";
+            this.m_lbl_time_start.Location = new System.Drawing.Point(25, 193);
+            this.m_lbl_time_start.Name = "m_lbl_time_start";
+            this.m_lbl_time_start.Size = new System.Drawing.Size(83, 13);
+            this.m_lbl_time_start.TabIndex = 7;
+            this.m_lbl_time_start.Text = "Thời gian bắt đầu";
             // 
-            // labelControl4
+            // m_lbl_ma_ver
             // 
-            this.labelControl4.Location = new System.Drawing.Point(351, 98);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(52, 13);
-            this.labelControl4.TabIndex = 6;
-            this.labelControl4.Text = "Mã version";
+            this.m_lbl_ma_ver.Location = new System.Drawing.Point(351, 98);
+            this.m_lbl_ma_ver.Name = "m_lbl_ma_ver";
+            this.m_lbl_ma_ver.Size = new System.Drawing.Size(52, 13);
+            this.m_lbl_ma_ver.TabIndex = 6;
+            this.m_lbl_ma_ver.Text = "Mã version";
             // 
             // panelControl2
             // 
@@ -161,23 +161,23 @@
             // 
             this.groupControl1.CaptionImage = ((System.Drawing.Image)(resources.GetObject("groupControl1.CaptionImage")));
             this.groupControl1.Controls.Add(this.m_dat_ngay_lap);
-            this.groupControl1.Controls.Add(this.labelControl8);
+            this.groupControl1.Controls.Add(this.m_lbl_time_cre);
             this.groupControl1.Controls.Add(this.m_txt_so_chung_chi);
-            this.groupControl1.Controls.Add(this.labelControl7);
+            this.groupControl1.Controls.Add(this.m_lbl_so_cc);
             this.groupControl1.Controls.Add(this.m_txt_ma_nhan_vien);
             this.groupControl1.Controls.Add(this.m_txt_ten_nhan_vien);
             this.groupControl1.Controls.Add(this.m_dat_thoi_gian_ket_thuc);
             this.groupControl1.Controls.Add(this.m_dat_thoi_gian_bat_dau);
             this.groupControl1.Controls.Add(this.m_txt_trang_thai);
             this.groupControl1.Controls.Add(this.m_txt_ma_version);
-            this.groupControl1.Controls.Add(this.label11);
-            this.groupControl1.Controls.Add(this.labelControl6);
-            this.groupControl1.Controls.Add(this.labelControl5);
-            this.groupControl1.Controls.Add(this.labelControl4);
-            this.groupControl1.Controls.Add(this.labelControl3);
-            this.groupControl1.Controls.Add(this.labelControl2);
+            this.groupControl1.Controls.Add(this.m_lbl_tt);
+            this.groupControl1.Controls.Add(this.m_lbl_time_end);
+            this.groupControl1.Controls.Add(this.m_lbl_time_start);
+            this.groupControl1.Controls.Add(this.m_lbl_ma_ver);
+            this.groupControl1.Controls.Add(this.m_lbl_ten_mh);
+            this.groupControl1.Controls.Add(this.m_lbl_ten_nv);
             this.groupControl1.Controls.Add(this.m_txt_ten_mon_hoc);
-            this.groupControl1.Controls.Add(this.labelControl1);
+            this.groupControl1.Controls.Add(this.m_lbl_ma_nv);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(2, 2);
             this.groupControl1.Name = "groupControl1";
@@ -189,38 +189,38 @@
             // 
             this.m_dat_ngay_lap.CustomFormat = "dd/MM/yyyy";
             this.m_dat_ngay_lap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.m_dat_ngay_lap.Location = new System.Drawing.Point(115, 238);
+            this.m_dat_ngay_lap.Location = new System.Drawing.Point(129, 238);
             this.m_dat_ngay_lap.Name = "m_dat_ngay_lap";
             this.m_dat_ngay_lap.Size = new System.Drawing.Size(186, 20);
             this.m_dat_ngay_lap.TabIndex = 20;
             // 
-            // labelControl8
+            // m_lbl_time_cre
             // 
-            this.labelControl8.Location = new System.Drawing.Point(25, 244);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(42, 13);
-            this.labelControl8.TabIndex = 19;
-            this.labelControl8.Text = "Ngày lập";
+            this.m_lbl_time_cre.Location = new System.Drawing.Point(25, 244);
+            this.m_lbl_time_cre.Name = "m_lbl_time_cre";
+            this.m_lbl_time_cre.Size = new System.Drawing.Size(42, 13);
+            this.m_lbl_time_cre.TabIndex = 19;
+            this.m_lbl_time_cre.Text = "Ngày lập";
             // 
             // m_txt_so_chung_chi
             // 
-            this.m_txt_so_chung_chi.Location = new System.Drawing.Point(115, 140);
+            this.m_txt_so_chung_chi.Location = new System.Drawing.Point(129, 143);
             this.m_txt_so_chung_chi.Name = "m_txt_so_chung_chi";
             this.m_txt_so_chung_chi.Size = new System.Drawing.Size(186, 20);
             this.m_txt_so_chung_chi.TabIndex = 18;
             // 
-            // labelControl7
+            // m_lbl_so_cc
             // 
-            this.labelControl7.Location = new System.Drawing.Point(25, 143);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(61, 13);
-            this.labelControl7.TabIndex = 17;
-            this.labelControl7.Text = "Số chứng chỉ";
+            this.m_lbl_so_cc.Location = new System.Drawing.Point(25, 143);
+            this.m_lbl_so_cc.Name = "m_lbl_so_cc";
+            this.m_lbl_so_cc.Size = new System.Drawing.Size(61, 13);
+            this.m_lbl_so_cc.TabIndex = 17;
+            this.m_lbl_so_cc.Text = "Số chứng chỉ";
             // 
             // m_txt_ma_nhan_vien
             // 
             this.m_txt_ma_nhan_vien.Enabled = false;
-            this.m_txt_ma_nhan_vien.Location = new System.Drawing.Point(115, 51);
+            this.m_txt_ma_nhan_vien.Location = new System.Drawing.Point(129, 51);
             this.m_txt_ma_nhan_vien.Name = "m_txt_ma_nhan_vien";
             this.m_txt_ma_nhan_vien.Size = new System.Drawing.Size(186, 20);
             this.m_txt_ma_nhan_vien.TabIndex = 16;
@@ -244,37 +244,37 @@
             this.m_dat_thoi_gian_ket_thuc.Size = new System.Drawing.Size(233, 22);
             this.m_dat_thoi_gian_ket_thuc.TabIndex = 14;
             // 
-            // labelControl3
+            // m_lbl_ten_mh
             // 
-            this.labelControl3.Location = new System.Drawing.Point(25, 98);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(61, 13);
-            this.labelControl3.TabIndex = 5;
-            this.labelControl3.Text = "Tên môn học";
+            this.m_lbl_ten_mh.Location = new System.Drawing.Point(25, 98);
+            this.m_lbl_ten_mh.Name = "m_lbl_ten_mh";
+            this.m_lbl_ten_mh.Size = new System.Drawing.Size(61, 13);
+            this.m_lbl_ten_mh.TabIndex = 5;
+            this.m_lbl_ten_mh.Text = "Tên môn học";
             // 
-            // labelControl2
+            // m_lbl_ten_nv
             // 
-            this.labelControl2.Location = new System.Drawing.Point(350, 54);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(68, 13);
-            this.labelControl2.TabIndex = 3;
-            this.labelControl2.Text = "Tên nhân viên";
+            this.m_lbl_ten_nv.Location = new System.Drawing.Point(350, 54);
+            this.m_lbl_ten_nv.Name = "m_lbl_ten_nv";
+            this.m_lbl_ten_nv.Size = new System.Drawing.Size(68, 13);
+            this.m_lbl_ten_nv.TabIndex = 3;
+            this.m_lbl_ten_nv.Text = "Tên nhân viên";
             // 
             // m_txt_ten_mon_hoc
             // 
             this.m_txt_ten_mon_hoc.Enabled = false;
-            this.m_txt_ten_mon_hoc.Location = new System.Drawing.Point(115, 95);
+            this.m_txt_ten_mon_hoc.Location = new System.Drawing.Point(129, 95);
             this.m_txt_ten_mon_hoc.Name = "m_txt_ten_mon_hoc";
             this.m_txt_ten_mon_hoc.Size = new System.Drawing.Size(186, 20);
             this.m_txt_ten_mon_hoc.TabIndex = 1;
             // 
-            // labelControl1
+            // m_lbl_ma_nv
             // 
-            this.labelControl1.Location = new System.Drawing.Point(25, 54);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(64, 13);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Mã nhân viên";
+            this.m_lbl_ma_nv.Location = new System.Drawing.Point(25, 54);
+            this.m_lbl_ma_nv.Name = "m_lbl_ma_nv";
+            this.m_lbl_ma_nv.Size = new System.Drawing.Size(64, 13);
+            this.m_lbl_ma_nv.TabIndex = 0;
+            this.m_lbl_ma_nv.Text = "Mã nhân viên";
             // 
             // F209_gd_chung_chi_de
             // 
@@ -303,10 +303,10 @@
         private System.Windows.Forms.DateTimePicker m_dat_thoi_gian_bat_dau;
         private System.Windows.Forms.TextBox m_txt_trang_thai;
         private System.Windows.Forms.TextBox m_txt_ma_version;
-        private DevExpress.XtraEditors.LabelControl label11;
-        private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.LabelControl m_lbl_tt;
+        private DevExpress.XtraEditors.LabelControl m_lbl_time_end;
+        private DevExpress.XtraEditors.LabelControl m_lbl_time_start;
+        private DevExpress.XtraEditors.LabelControl m_lbl_ma_ver;
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraEditors.SimpleButton m_cmd_thoat;
         private DevExpress.XtraEditors.PanelControl panelControl1;
@@ -314,13 +314,13 @@
         private System.Windows.Forms.TextBox m_txt_ma_nhan_vien;
         private System.Windows.Forms.TextBox m_txt_ten_nhan_vien;
         private System.Windows.Forms.DateTimePicker m_dat_thoi_gian_ket_thuc;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.LabelControl m_lbl_ten_mh;
+        private DevExpress.XtraEditors.LabelControl m_lbl_ten_nv;
         private System.Windows.Forms.TextBox m_txt_ten_mon_hoc;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.LabelControl m_lbl_ma_nv;
         private System.Windows.Forms.TextBox m_txt_so_chung_chi;
-        private DevExpress.XtraEditors.LabelControl labelControl7;
+        private DevExpress.XtraEditors.LabelControl m_lbl_so_cc;
         private System.Windows.Forms.DateTimePicker m_dat_ngay_lap;
-        private DevExpress.XtraEditors.LabelControl labelControl8;
+        private DevExpress.XtraEditors.LabelControl m_lbl_time_cre;
     }
 }

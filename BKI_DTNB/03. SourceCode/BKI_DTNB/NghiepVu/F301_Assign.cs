@@ -15,6 +15,7 @@ namespace BKI_DTNB.NghiepVu
         public F301_Assign()
         {
             InitializeComponent();
+            WinFormControls.DTNB_ControlFormat(this);
         }
 
         decimal m_dc_id_lop_mon;

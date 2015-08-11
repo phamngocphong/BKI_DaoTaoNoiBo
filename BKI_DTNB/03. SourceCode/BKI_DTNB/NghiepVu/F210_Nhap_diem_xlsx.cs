@@ -19,6 +19,7 @@ namespace BKI_DTNB.NghiepVu
         public F210_Nhap_diem_xlsx()
         {
             InitializeComponent();
+            WinFormControls.DTNB_ControlFormat(this);
         }
 
         private void F210_Nhap_diem_xlsx_Load(object sender, EventArgs e)

@@ -36,7 +36,7 @@
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.m_tieu_de_f115 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_grc)).BeginInit();
@@ -111,21 +111,21 @@
             // 
             // panelControl1
             // 
-            this.panelControl1.Controls.Add(this.labelControl1);
+            this.panelControl1.Controls.Add(this.m_tieu_de_f115);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(396, 47);
             this.panelControl1.TabIndex = 2;
             // 
-            // labelControl1
+            // m_tieu_de_f115
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelControl1.Location = new System.Drawing.Point(5, 12);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(318, 19);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "TỔNG QUAN CHƯƠNG TRÌNH ĐÀO TẠO";
+            this.m_tieu_de_f115.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_tieu_de_f115.Location = new System.Drawing.Point(5, 12);
+            this.m_tieu_de_f115.Name = "m_tieu_de_f115";
+            this.m_tieu_de_f115.Size = new System.Drawing.Size(318, 19);
+            this.m_tieu_de_f115.TabIndex = 0;
+            this.m_tieu_de_f115.Text = "TỔNG QUAN CHƯƠNG TRÌNH ĐÀO TẠO";
             // 
             // f115_tong_quan
             // 
@@ -154,7 +154,7 @@
         private DevExpress.XtraGrid.GridControl m_grc;
         private DevExpress.XtraGrid.Views.Grid.GridView m_grv;
         private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.LabelControl m_tieu_de_f115;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;

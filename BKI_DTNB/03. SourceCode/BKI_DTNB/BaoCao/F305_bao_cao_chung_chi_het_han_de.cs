@@ -20,6 +20,7 @@ namespace BKI_DTNB.BaoCao
         public F305_bao_cao_chung_chi_het_han_de()
         {
             InitializeComponent();
+            WinFormControls.DTNB_ControlFormat(this);
         }
 
         private void F305_bao_cao_chung_chi_het_han_de_Load(object sender, EventArgs e)

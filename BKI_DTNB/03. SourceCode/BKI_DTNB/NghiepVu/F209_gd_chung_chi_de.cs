@@ -25,6 +25,7 @@ namespace BKI_DTNB.NghiepVu
         public F209_gd_chung_chi_de()
         {
             InitializeComponent();
+            WinFormControls.DTNB_ControlFormat(this);
         }
         public void us_v_gd_diem_to_form(US_V_GD_DIEM v_us_gd_diem)
         {

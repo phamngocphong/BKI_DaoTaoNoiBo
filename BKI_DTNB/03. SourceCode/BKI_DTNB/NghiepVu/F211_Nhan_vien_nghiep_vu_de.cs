@@ -15,6 +15,7 @@ namespace BKI_DTNB.NghiepVu
         public F211_Nhan_vien_nghiep_vu_de()
         {
             InitializeComponent();
+            WinFormControls.DTNB_ControlFormat(this);
         }
 
         public void displayForInsertNghiepVuChuan()

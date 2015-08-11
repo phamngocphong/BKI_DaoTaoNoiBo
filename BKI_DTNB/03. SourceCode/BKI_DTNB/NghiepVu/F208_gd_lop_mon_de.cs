@@ -24,6 +24,7 @@ namespace BKI_DTNB.NghiepVu
         public F208_gd_lop_mon_de()
         {
             InitializeComponent();
+            WinFormControls.DTNB_ControlFormat(this);
         }
 
         private void F208_gd_lop_mon_de_Load(object sender, EventArgs e)

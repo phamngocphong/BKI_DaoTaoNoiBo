@@ -30,18 +30,18 @@
         {
             this.m_txt_so_hoc_vien_1_lop = new System.Windows.Forms.TextBox();
             this.m_lbl_mon_hoc = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.m_lbl_slhv = new System.Windows.Forms.Label();
+            this.m_lbl_mh = new System.Windows.Forms.Label();
             this.m_lbl_so_luong_hoc_vien = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.m_lbl_so_hv_1lop = new System.Windows.Forms.Label();
             this.m_cmd_tao_lop = new DevExpress.XtraEditors.SimpleButton();
             this.m_cmd_huy = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.m_txt_diem_qua_mon = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.m_lbl_diem = new System.Windows.Forms.Label();
             this.m_cbo_version = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.m_lbl_ver = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -60,25 +60,25 @@
             this.m_lbl_mon_hoc.Name = "m_lbl_mon_hoc";
             this.m_lbl_mon_hoc.Size = new System.Drawing.Size(49, 13);
             this.m_lbl_mon_hoc.TabIndex = 1;
-            this.m_lbl_mon_hoc.Text = "Môn hoc";
+            this.m_lbl_mon_hoc.Text = "Môn học";
             // 
-            // label2
+            // m_lbl_slhv
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(55, 55);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Số lượng học viên";
+            this.m_lbl_slhv.AutoSize = true;
+            this.m_lbl_slhv.Location = new System.Drawing.Point(55, 55);
+            this.m_lbl_slhv.Name = "m_lbl_slhv";
+            this.m_lbl_slhv.Size = new System.Drawing.Size(93, 13);
+            this.m_lbl_slhv.TabIndex = 2;
+            this.m_lbl_slhv.Text = "Số lượng học viên";
             // 
-            // label1
+            // m_lbl_mh
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(55, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Môn hoc";
+            this.m_lbl_mh.AutoSize = true;
+            this.m_lbl_mh.Location = new System.Drawing.Point(55, 26);
+            this.m_lbl_mh.Name = "m_lbl_mh";
+            this.m_lbl_mh.Size = new System.Drawing.Size(49, 13);
+            this.m_lbl_mh.TabIndex = 3;
+            this.m_lbl_mh.Text = "Môn hoc";
             // 
             // m_lbl_so_luong_hoc_vien
             // 
@@ -89,14 +89,14 @@
             this.m_lbl_so_luong_hoc_vien.TabIndex = 4;
             this.m_lbl_so_luong_hoc_vien.Text = "Số lượng học viên";
             // 
-            // label4
+            // m_lbl_so_hv_1lop
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(55, 83);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Số học viên 1 lớp";
+            this.m_lbl_so_hv_1lop.AutoSize = true;
+            this.m_lbl_so_hv_1lop.Location = new System.Drawing.Point(55, 83);
+            this.m_lbl_so_hv_1lop.Name = "m_lbl_so_hv_1lop";
+            this.m_lbl_so_hv_1lop.Size = new System.Drawing.Size(90, 13);
+            this.m_lbl_so_hv_1lop.TabIndex = 5;
+            this.m_lbl_so_hv_1lop.Text = "Số học viên 1 lớp";
             // 
             // m_cmd_tao_lop
             // 
@@ -147,15 +147,15 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.m_txt_diem_qua_mon);
-            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.m_lbl_diem);
             this.panel2.Controls.Add(this.m_cbo_version);
-            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.m_lbl_ver);
             this.panel2.Controls.Add(this.m_lbl_mon_hoc);
             this.panel2.Controls.Add(this.m_txt_so_hoc_vien_1_lop);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.m_lbl_so_hv_1lop);
+            this.panel2.Controls.Add(this.m_lbl_slhv);
             this.panel2.Controls.Add(this.m_lbl_so_luong_hoc_vien);
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.m_lbl_mh);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -169,14 +169,14 @@
             this.m_txt_diem_qua_mon.Size = new System.Drawing.Size(189, 20);
             this.m_txt_diem_qua_mon.TabIndex = 9;
             // 
-            // label5
+            // m_lbl_diem
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(55, 140);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Điểm qua môn";
+            this.m_lbl_diem.AutoSize = true;
+            this.m_lbl_diem.Location = new System.Drawing.Point(55, 140);
+            this.m_lbl_diem.Name = "m_lbl_diem";
+            this.m_lbl_diem.Size = new System.Drawing.Size(75, 13);
+            this.m_lbl_diem.TabIndex = 8;
+            this.m_lbl_diem.Text = "Điểm qua môn";
             // 
             // m_cbo_version
             // 
@@ -186,14 +186,14 @@
             this.m_cbo_version.Size = new System.Drawing.Size(189, 21);
             this.m_cbo_version.TabIndex = 7;
             // 
-            // label3
+            // m_lbl_ver
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(55, 110);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Version";
+            this.m_lbl_ver.AutoSize = true;
+            this.m_lbl_ver.Location = new System.Drawing.Point(55, 110);
+            this.m_lbl_ver.Name = "m_lbl_ver";
+            this.m_lbl_ver.Size = new System.Drawing.Size(42, 13);
+            this.m_lbl_ver.TabIndex = 6;
+            this.m_lbl_ver.Text = "Version";
             // 
             // F301_Tao_lop
             // 
@@ -215,17 +215,17 @@
 
         private System.Windows.Forms.TextBox m_txt_so_hoc_vien_1_lop;
         private System.Windows.Forms.Label m_lbl_mon_hoc;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label m_lbl_slhv;
+        private System.Windows.Forms.Label m_lbl_mh;
         private System.Windows.Forms.Label m_lbl_so_luong_hoc_vien;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label m_lbl_so_hv_1lop;
         private DevExpress.XtraEditors.SimpleButton m_cmd_tao_lop;
         private DevExpress.XtraEditors.SimpleButton m_cmd_huy;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox m_cbo_version;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label m_lbl_ver;
         private System.Windows.Forms.TextBox m_txt_diem_qua_mon;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label m_lbl_diem;
     }
 }

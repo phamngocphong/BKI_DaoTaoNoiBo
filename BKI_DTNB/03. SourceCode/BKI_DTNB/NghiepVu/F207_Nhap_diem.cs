@@ -21,6 +21,7 @@ namespace BKI_DTNB.NghiepVu
         public F207_Nhap_diem()
         {
             InitializeComponent();
+            WinFormControls.DTNB_ControlFormat(this);
         }
 
         private void F207_Nhap_diem_Load(object sender, EventArgs e)

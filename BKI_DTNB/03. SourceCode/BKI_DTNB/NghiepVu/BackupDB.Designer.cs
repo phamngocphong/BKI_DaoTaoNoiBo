@@ -39,14 +39,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.m_cbo_db = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.m_lbl_db = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.m_txt_ten_file = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.m_lbl_ten_file = new System.Windows.Forms.Label();
             this.m_cmd_backup = new System.Windows.Forms.Button();
             this.m_cmd_browse_backup = new System.Windows.Forms.Button();
             this.m_txt_location = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.m_lbl_address = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.m_cmd_restore = new System.Windows.Forms.Button();
             this.m_cmd_browse_restore = new System.Windows.Forms.Button();
@@ -150,7 +150,7 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.m_cbo_db);
-            this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Controls.Add(this.m_lbl_db);
             this.groupBox3.Location = new System.Drawing.Point(12, 325);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(587, 52);
@@ -168,23 +168,23 @@
             this.m_cbo_db.Size = new System.Drawing.Size(236, 21);
             this.m_cbo_db.TabIndex = 1;
             // 
-            // label12
+            // m_lbl_db
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(22, 23);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(53, 13);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Database";
+            this.m_lbl_db.AutoSize = true;
+            this.m_lbl_db.Location = new System.Drawing.Point(22, 23);
+            this.m_lbl_db.Name = "m_lbl_db";
+            this.m_lbl_db.Size = new System.Drawing.Size(53, 13);
+            this.m_lbl_db.TabIndex = 0;
+            this.m_lbl_db.Text = "Database";
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.m_txt_ten_file);
-            this.groupBox4.Controls.Add(this.label3);
+            this.groupBox4.Controls.Add(this.m_lbl_ten_file);
             this.groupBox4.Controls.Add(this.m_cmd_backup);
             this.groupBox4.Controls.Add(this.m_cmd_browse_backup);
             this.groupBox4.Controls.Add(this.m_txt_location);
-            this.groupBox4.Controls.Add(this.label10);
+            this.groupBox4.Controls.Add(this.m_lbl_address);
             this.groupBox4.Location = new System.Drawing.Point(12, 12);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(587, 88);
@@ -200,14 +200,14 @@
             this.m_txt_ten_file.Size = new System.Drawing.Size(315, 20);
             this.m_txt_ten_file.TabIndex = 4;
             // 
-            // label3
+            // m_lbl_ten_file
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 52);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Tên file (dạng *.bak)";
+            this.m_lbl_ten_file.AutoSize = true;
+            this.m_lbl_ten_file.Location = new System.Drawing.Point(22, 52);
+            this.m_lbl_ten_file.Name = "m_lbl_ten_file";
+            this.m_lbl_ten_file.Size = new System.Drawing.Size(103, 13);
+            this.m_lbl_ten_file.TabIndex = 3;
+            this.m_lbl_ten_file.Text = "Tên file (dạng *.bak)";
             // 
             // m_cmd_backup
             // 
@@ -235,14 +235,14 @@
             this.m_txt_location.TabIndex = 1;
             this.m_txt_location.Text = "D:\\DuLieuLuuTru\\Du lieu tai chinh";
             // 
-            // label10
+            // m_lbl_address
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(22, 22);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(40, 13);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Địa chỉ";
+            this.m_lbl_address.AutoSize = true;
+            this.m_lbl_address.Location = new System.Drawing.Point(22, 22);
+            this.m_lbl_address.Name = "m_lbl_address";
+            this.m_lbl_address.Size = new System.Drawing.Size(40, 13);
+            this.m_lbl_address.TabIndex = 0;
+            this.m_lbl_address.Text = "Địa chỉ";
             // 
             // groupBox5
             // 
@@ -327,11 +327,11 @@
         private System.Windows.Forms.Button m_cmd_disconnect;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ComboBox m_cbo_db;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label m_lbl_db;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button m_cmd_browse_backup;
         private System.Windows.Forms.TextBox m_txt_location;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label m_lbl_address;
         private System.Windows.Forms.Button m_cmd_backup;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button m_cmd_restore;
@@ -339,6 +339,6 @@
         private System.Windows.Forms.TextBox m_txt_backup_path;
         private System.Windows.Forms.Label Back;
         private System.Windows.Forms.TextBox m_txt_ten_file;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label m_lbl_ten_file;
     }
 }

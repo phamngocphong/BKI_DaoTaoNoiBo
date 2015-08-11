@@ -34,10 +34,10 @@
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
             this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.m_lbl_nhan_su = new System.Windows.Forms.Label();
+            this.m_lbl_donvi = new System.Windows.Forms.Label();
+            this.m_lbl_chucvu = new System.Windows.Forms.Label();
+            this.m_lbl_nghiep_vu = new System.Windows.Forms.Label();
             this.m_lbl_don_vi = new System.Windows.Forms.Label();
             this.m_lbl_chuc_vu = new System.Windows.Forms.Label();
             this.m_cbo_nhan_su = new System.Windows.Forms.ComboBox();
@@ -114,41 +114,41 @@
             this.m_cmd_exit.Text = "Thoát (Esc)";
             this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_exit_Click);
             // 
-            // label1
+            // m_lbl_nhan_su
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(62, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "Nhân sự";
+            this.m_lbl_nhan_su.AutoSize = true;
+            this.m_lbl_nhan_su.Location = new System.Drawing.Point(62, 39);
+            this.m_lbl_nhan_su.Name = "m_lbl_nhan_su";
+            this.m_lbl_nhan_su.Size = new System.Drawing.Size(47, 13);
+            this.m_lbl_nhan_su.TabIndex = 29;
+            this.m_lbl_nhan_su.Text = "Nhân sự";
             // 
-            // label2
+            // m_lbl_donvi
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(62, 65);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Đơn vị";
+            this.m_lbl_donvi.AutoSize = true;
+            this.m_lbl_donvi.Location = new System.Drawing.Point(62, 65);
+            this.m_lbl_donvi.Name = "m_lbl_donvi";
+            this.m_lbl_donvi.Size = new System.Drawing.Size(38, 13);
+            this.m_lbl_donvi.TabIndex = 30;
+            this.m_lbl_donvi.Text = "Đơn vị";
             // 
-            // label3
+            // m_lbl_chucvu
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(62, 91);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
-            this.label3.TabIndex = 31;
-            this.label3.Text = "Chức vụ";
+            this.m_lbl_chucvu.AutoSize = true;
+            this.m_lbl_chucvu.Location = new System.Drawing.Point(62, 91);
+            this.m_lbl_chucvu.Name = "m_lbl_chucvu";
+            this.m_lbl_chucvu.Size = new System.Drawing.Size(47, 13);
+            this.m_lbl_chucvu.TabIndex = 31;
+            this.m_lbl_chucvu.Text = "Chức vụ";
             // 
-            // label4
+            // m_lbl_nghiep_vu
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(62, 117);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 13);
-            this.label4.TabIndex = 32;
-            this.label4.Text = "Nghiệp vụ";
+            this.m_lbl_nghiep_vu.AutoSize = true;
+            this.m_lbl_nghiep_vu.Location = new System.Drawing.Point(62, 117);
+            this.m_lbl_nghiep_vu.Name = "m_lbl_nghiep_vu";
+            this.m_lbl_nghiep_vu.Size = new System.Drawing.Size(56, 13);
+            this.m_lbl_nghiep_vu.TabIndex = 32;
+            this.m_lbl_nghiep_vu.Text = "Nghiệp vụ";
             // 
             // m_lbl_don_vi
             // 
@@ -194,10 +194,10 @@
             this.Controls.Add(this.m_cbo_nhan_su);
             this.Controls.Add(this.m_lbl_chuc_vu);
             this.Controls.Add(this.m_lbl_don_vi);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.m_lbl_nghiep_vu);
+            this.Controls.Add(this.m_lbl_chucvu);
+            this.Controls.Add(this.m_lbl_donvi);
+            this.Controls.Add(this.m_lbl_nhan_su);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "F211_Nhan_vien_nghiep_vu_de";
@@ -214,10 +214,10 @@
         internal System.Windows.Forms.Panel m_pnl_out_place_dm;
         internal SIS.Controls.Button.SiSButton m_cmd_insert;
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label m_lbl_nhan_su;
+        private System.Windows.Forms.Label m_lbl_donvi;
+        private System.Windows.Forms.Label m_lbl_chucvu;
+        private System.Windows.Forms.Label m_lbl_nghiep_vu;
         private System.Windows.Forms.Label m_lbl_don_vi;
         private System.Windows.Forms.Label m_lbl_chuc_vu;
         private System.Windows.Forms.ComboBox m_cbo_nhan_su;

@@ -31,6 +31,26 @@ namespace BKI_DTNB
             // TODO: Add constructor logic here
             //
         }
+
+        public static void DTNB_ControlFormat(Form ip_form) {
+            format_control(ip_form, "m_lbl");
+        }
+
+        private static void format_control(Control ip_c, string ip_st)
+        {
+            if (ip_c.Name.StartsWith(ip_st) && ip_st == "m_lbl")
+            {
+                ip_c.ForeColor = Color.Maroon;
+            }
+            else
+            {
+                foreach (Control child in ip_c.Controls)
+                {
+                    format_control(child, ip_st);
+                }
+            }
+        }
+
         public enum eTAT_CA
         {
             YES,

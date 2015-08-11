@@ -30,17 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC));
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.m_lbl_ngach = new System.Windows.Forms.Label();
             this.m_cbo_ngach = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.m_lbl_mon_hoc = new System.Windows.Forms.Label();
             this.m_cbo_mon_hoc = new System.Windows.Forms.ComboBox();
             this.m_cmd_tao_lop = new DevExpress.XtraEditors.SimpleButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.m_cmd_assign = new DevExpress.XtraEditors.SimpleButton();
             this.m_cmd_xuat_excel = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.m_lbl_nghiep_vu = new System.Windows.Forms.Label();
+            this.m_lbl_dia_phuong = new System.Windows.Forms.Label();
             this.m_cbo_nghiep_vu = new System.Windows.Forms.ComboBox();
             this.m_cbo_dia_phuong = new System.Windows.Forms.ComboBox();
             this.m_cmd_search = new DevExpress.XtraEditors.SimpleButton();
@@ -74,14 +74,14 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "BÁO CÁO NHÂN VIÊN CHƯA HOÀN THÀNH CHƯƠNG TRÌNH HỌC";
             // 
-            // label3
+            // m_lbl_ngach
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(422, 64);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Ngạch";
+            this.m_lbl_ngach.AutoSize = true;
+            this.m_lbl_ngach.Location = new System.Drawing.Point(422, 64);
+            this.m_lbl_ngach.Name = "m_lbl_ngach";
+            this.m_lbl_ngach.Size = new System.Drawing.Size(39, 13);
+            this.m_lbl_ngach.TabIndex = 5;
+            this.m_lbl_ngach.Text = "Ngạch";
             // 
             // m_cbo_ngach
             // 
@@ -92,14 +92,14 @@
             this.m_cbo_ngach.TabIndex = 6;
             this.m_cbo_ngach.SelectedIndexChanged += new System.EventHandler(this.m_cbo_ngach_SelectedIndexChanged);
             // 
-            // label6
+            // m_lbl_mon_hoc
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(412, 98);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 13);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Môn học";
+            this.m_lbl_mon_hoc.AutoSize = true;
+            this.m_lbl_mon_hoc.Location = new System.Drawing.Point(412, 98);
+            this.m_lbl_mon_hoc.Name = "m_lbl_mon_hoc";
+            this.m_lbl_mon_hoc.Size = new System.Drawing.Size(49, 13);
+            this.m_lbl_mon_hoc.TabIndex = 11;
+            this.m_lbl_mon_hoc.Text = "Môn học";
             // 
             // m_cbo_mon_hoc
             // 
@@ -179,39 +179,39 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.m_lbl_nghiep_vu);
+            this.panel1.Controls.Add(this.m_lbl_dia_phuong);
             this.panel1.Controls.Add(this.m_cbo_nghiep_vu);
             this.panel1.Controls.Add(this.m_cbo_dia_phuong);
             this.panel1.Controls.Add(this.m_cmd_search);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.m_lbl_ngach);
             this.panel1.Controls.Add(this.m_cbo_ngach);
             this.panel1.Controls.Add(this.m_cbo_mon_hoc);
-            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.m_lbl_mon_hoc);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(2, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(908, 132);
             this.panel1.TabIndex = 18;
             // 
-            // label4
+            // m_lbl_nghiep_vu
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(107, 98);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 13);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "Nghiệp vụ";
+            this.m_lbl_nghiep_vu.AutoSize = true;
+            this.m_lbl_nghiep_vu.Location = new System.Drawing.Point(107, 98);
+            this.m_lbl_nghiep_vu.Name = "m_lbl_nghiep_vu";
+            this.m_lbl_nghiep_vu.Size = new System.Drawing.Size(56, 13);
+            this.m_lbl_nghiep_vu.TabIndex = 19;
+            this.m_lbl_nghiep_vu.Text = "Nghiệp vụ";
             // 
-            // label1
+            // m_lbl_dia_phuong
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(101, 61);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 13);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Địa phương";
+            this.m_lbl_dia_phuong.AutoSize = true;
+            this.m_lbl_dia_phuong.Location = new System.Drawing.Point(101, 61);
+            this.m_lbl_dia_phuong.Name = "m_lbl_dia_phuong";
+            this.m_lbl_dia_phuong.Size = new System.Drawing.Size(62, 13);
+            this.m_lbl_dia_phuong.TabIndex = 18;
+            this.m_lbl_dia_phuong.Text = "Địa phương";
             // 
             // m_cbo_nghiep_vu
             // 
@@ -396,9 +396,9 @@
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label m_lbl_ngach;
         private System.Windows.Forms.ComboBox m_cbo_ngach;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label m_lbl_mon_hoc;
         private System.Windows.Forms.ComboBox m_cbo_mon_hoc;
         private DevExpress.XtraEditors.SimpleButton m_cmd_tao_lop;
         private System.Windows.Forms.Panel panel2;
@@ -415,8 +415,8 @@
         private DevExpress.XtraEditors.SimpleButton m_cmd_search;
         private System.Windows.Forms.ComboBox m_cbo_dia_phuong;
         private System.Windows.Forms.ComboBox m_cbo_nghiep_vu;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label m_lbl_nghiep_vu;
+        private System.Windows.Forms.Label m_lbl_dia_phuong;
         private DevExpress.XtraEditors.SimpleButton m_cmd_xuat_excel;
         private DevExpress.XtraEditors.SimpleButton m_cmd_assign;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;

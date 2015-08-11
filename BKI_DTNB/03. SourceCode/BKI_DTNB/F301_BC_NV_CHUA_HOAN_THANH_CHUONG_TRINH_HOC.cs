@@ -28,6 +28,7 @@ namespace BKI_DTNB
         public F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC()
         {
             InitializeComponent();
+            WinFormControls.DTNB_ControlFormat(this);
         }
 
         private void F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC_Load(object sender, EventArgs e)

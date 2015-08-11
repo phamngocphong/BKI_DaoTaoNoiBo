@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC));
-            this.label2 = new System.Windows.Forms.Label();
+            this.m_tieu_de_f301 = new System.Windows.Forms.Label();
             this.m_lbl_ngach = new System.Windows.Forms.Label();
             this.m_cbo_ngach = new System.Windows.Forms.ComboBox();
             this.m_lbl_mon_hoc = new System.Windows.Forms.Label();
@@ -64,20 +64,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.m_grv)).BeginInit();
             this.SuspendLayout();
             // 
-            // label2
+            // m_tieu_de_f301
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(91, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(508, 19);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "BÁO CÁO NHÂN VIÊN CHƯA HOÀN THÀNH CHƯƠNG TRÌNH HỌC";
+            this.m_tieu_de_f301.AutoSize = true;
+            this.m_tieu_de_f301.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_tieu_de_f301.Location = new System.Drawing.Point(218, 16);
+            this.m_tieu_de_f301.Name = "m_tieu_de_f301";
+            this.m_tieu_de_f301.Size = new System.Drawing.Size(508, 19);
+            this.m_tieu_de_f301.TabIndex = 3;
+            this.m_tieu_de_f301.Text = "BÁO CÁO NHÂN VIÊN CHƯA HOÀN THÀNH CHƯƠNG TRÌNH HỌC";
             // 
             // m_lbl_ngach
             // 
             this.m_lbl_ngach.AutoSize = true;
-            this.m_lbl_ngach.Location = new System.Drawing.Point(422, 64);
+            this.m_lbl_ngach.Location = new System.Drawing.Point(449, 64);
             this.m_lbl_ngach.Name = "m_lbl_ngach";
             this.m_lbl_ngach.Size = new System.Drawing.Size(39, 13);
             this.m_lbl_ngach.TabIndex = 5;
@@ -86,16 +86,16 @@
             // m_cbo_ngach
             // 
             this.m_cbo_ngach.FormattingEnabled = true;
-            this.m_cbo_ngach.Location = new System.Drawing.Point(467, 61);
+            this.m_cbo_ngach.Location = new System.Drawing.Point(500, 61);
             this.m_cbo_ngach.Name = "m_cbo_ngach";
-            this.m_cbo_ngach.Size = new System.Drawing.Size(306, 21);
+            this.m_cbo_ngach.Size = new System.Drawing.Size(280, 21);
             this.m_cbo_ngach.TabIndex = 6;
             this.m_cbo_ngach.SelectedIndexChanged += new System.EventHandler(this.m_cbo_ngach_SelectedIndexChanged);
             // 
             // m_lbl_mon_hoc
             // 
             this.m_lbl_mon_hoc.AutoSize = true;
-            this.m_lbl_mon_hoc.Location = new System.Drawing.Point(412, 98);
+            this.m_lbl_mon_hoc.Location = new System.Drawing.Point(439, 98);
             this.m_lbl_mon_hoc.Name = "m_lbl_mon_hoc";
             this.m_lbl_mon_hoc.Size = new System.Drawing.Size(49, 13);
             this.m_lbl_mon_hoc.TabIndex = 11;
@@ -104,9 +104,9 @@
             // m_cbo_mon_hoc
             // 
             this.m_cbo_mon_hoc.FormattingEnabled = true;
-            this.m_cbo_mon_hoc.Location = new System.Drawing.Point(467, 95);
+            this.m_cbo_mon_hoc.Location = new System.Drawing.Point(500, 98);
             this.m_cbo_mon_hoc.Name = "m_cbo_mon_hoc";
-            this.m_cbo_mon_hoc.Size = new System.Drawing.Size(306, 21);
+            this.m_cbo_mon_hoc.Size = new System.Drawing.Size(280, 21);
             this.m_cbo_mon_hoc.TabIndex = 12;
             // 
             // m_cmd_tao_lop
@@ -184,7 +184,7 @@
             this.panel1.Controls.Add(this.m_cbo_nghiep_vu);
             this.panel1.Controls.Add(this.m_cbo_dia_phuong);
             this.panel1.Controls.Add(this.m_cmd_search);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.m_tieu_de_f301);
             this.panel1.Controls.Add(this.m_lbl_ngach);
             this.panel1.Controls.Add(this.m_cbo_ngach);
             this.panel1.Controls.Add(this.m_cbo_mon_hoc);
@@ -198,7 +198,7 @@
             // m_lbl_nghiep_vu
             // 
             this.m_lbl_nghiep_vu.AutoSize = true;
-            this.m_lbl_nghiep_vu.Location = new System.Drawing.Point(107, 98);
+            this.m_lbl_nghiep_vu.Location = new System.Drawing.Point(49, 101);
             this.m_lbl_nghiep_vu.Name = "m_lbl_nghiep_vu";
             this.m_lbl_nghiep_vu.Size = new System.Drawing.Size(56, 13);
             this.m_lbl_nghiep_vu.TabIndex = 19;
@@ -207,7 +207,7 @@
             // m_lbl_dia_phuong
             // 
             this.m_lbl_dia_phuong.AutoSize = true;
-            this.m_lbl_dia_phuong.Location = new System.Drawing.Point(101, 61);
+            this.m_lbl_dia_phuong.Location = new System.Drawing.Point(43, 64);
             this.m_lbl_dia_phuong.Name = "m_lbl_dia_phuong";
             this.m_lbl_dia_phuong.Size = new System.Drawing.Size(62, 13);
             this.m_lbl_dia_phuong.TabIndex = 18;
@@ -216,18 +216,18 @@
             // m_cbo_nghiep_vu
             // 
             this.m_cbo_nghiep_vu.FormattingEnabled = true;
-            this.m_cbo_nghiep_vu.Location = new System.Drawing.Point(169, 95);
+            this.m_cbo_nghiep_vu.Location = new System.Drawing.Point(137, 93);
             this.m_cbo_nghiep_vu.Name = "m_cbo_nghiep_vu";
-            this.m_cbo_nghiep_vu.Size = new System.Drawing.Size(215, 21);
+            this.m_cbo_nghiep_vu.Size = new System.Drawing.Size(280, 21);
             this.m_cbo_nghiep_vu.TabIndex = 17;
             this.m_cbo_nghiep_vu.SelectedIndexChanged += new System.EventHandler(this.m_cbo_nghiep_vu_SelectedIndexChanged);
             // 
             // m_cbo_dia_phuong
             // 
             this.m_cbo_dia_phuong.FormattingEnabled = true;
-            this.m_cbo_dia_phuong.Location = new System.Drawing.Point(169, 58);
+            this.m_cbo_dia_phuong.Location = new System.Drawing.Point(137, 61);
             this.m_cbo_dia_phuong.Name = "m_cbo_dia_phuong";
-            this.m_cbo_dia_phuong.Size = new System.Drawing.Size(215, 21);
+            this.m_cbo_dia_phuong.Size = new System.Drawing.Size(280, 21);
             this.m_cbo_dia_phuong.TabIndex = 16;
             this.m_cbo_dia_phuong.SelectedIndexChanged += new System.EventHandler(this.m_cbo_dia_phuong_SelectedIndexChanged);
             // 
@@ -240,7 +240,7 @@
             this.m_cmd_search.ImageIndex = 2;
             this.m_cmd_search.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.m_cmd_search.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
-            this.m_cmd_search.Location = new System.Drawing.Point(780, 83);
+            this.m_cmd_search.Location = new System.Drawing.Point(796, 78);
             this.m_cmd_search.Margin = new System.Windows.Forms.Padding(4);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Padding = new System.Windows.Forms.Padding(1);
@@ -395,7 +395,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label m_tieu_de_f301;
         private System.Windows.Forms.Label m_lbl_ngach;
         private System.Windows.Forms.ComboBox m_cbo_ngach;
         private System.Windows.Forms.Label m_lbl_mon_hoc;

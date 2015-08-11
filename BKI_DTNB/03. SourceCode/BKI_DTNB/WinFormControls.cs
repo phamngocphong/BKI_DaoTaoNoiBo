@@ -34,15 +34,28 @@ namespace BKI_DTNB
 
         public static void DTNB_ControlFormat(Form ip_form) {
             format_control(ip_form, "m_lbl");
+            format_control(ip_form, "m_tieu_de");
+            format_control(ip_form, "m_cbo");
+        
         }
-
         private static void format_control(Control ip_c, string ip_st)
         {
             if (ip_c.Name.StartsWith(ip_st) && ip_st == "m_lbl")
             {
                 ip_c.ForeColor = Color.Maroon;
+                ip_c.Font = new Font("Arial", 10,FontStyle.Bold);  
+               
             }
-            else
+            if (ip_c.Name.StartsWith(ip_st) && ip_st == "m_tieu_de")
+            {
+                ip_c.ForeColor = Color.Maroon;
+                ip_c.Font = new Font("Tahoma", 12, FontStyle.Bold);
+            }
+            if (ip_c.Name.StartsWith(ip_st) && ip_st == "m_cbo")
+            {
+                ip_c.Font = new Font("Arial", 10, FontStyle.Bold);
+            }
+            else 
             {
                 foreach (Control child in ip_c.Controls)
                 {

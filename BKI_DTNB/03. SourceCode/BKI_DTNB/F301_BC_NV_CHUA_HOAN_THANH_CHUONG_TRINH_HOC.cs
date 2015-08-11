@@ -36,7 +36,6 @@ namespace BKI_DTNB
             try
             {
                 WinFormControls.load_data_to_combobox("CM_DM_TU_DIEN", "ID", "TEN", " WHERE ID_LOAI_TU_DIEN = 21", WinFormControls.eTAT_CA.YES, m_cbo_dia_phuong);
-
                 load_data_2_grid();
             }
             catch (Exception v_e)

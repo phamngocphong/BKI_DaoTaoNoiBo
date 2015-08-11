@@ -62,6 +62,7 @@ namespace BKI_DTNB.DanhMuc
             v_ds.Tables.Add(v_dt);
             v_us.FillDatasetWithQuery(v_ds, "Select ID, MA_NV, ho_dem +' '+ Ten as HO_TEN from dm_nhan_su");
             m_search_lookup_edit.Properties.DataSource = v_ds.Tables[0];
+            m_search_lookup_edit.Properties.BestFitMode = BestFitMode.BestFitResizePopup;
           
         }
         

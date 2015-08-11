@@ -17,6 +17,7 @@ using BKI_DTNB.DanhMuc;
 using BKI_DTNB.BaoCao;
 using DevExpress.XtraReports.UI;
 using System.Collections;
+using DevExpress.XtraEditors.Controls;
 
 namespace BKI_DTNB
 {
@@ -35,13 +36,24 @@ namespace BKI_DTNB
         {
             try
             {
-                WinFormControls.load_data_to_combobox("CM_DM_TU_DIEN", "ID", "TEN", " WHERE ID_LOAI_TU_DIEN = 21", WinFormControls.eTAT_CA.YES, m_cbo_dia_phuong);
-                load_data_2_grid();
+                get_nhan_vien();
+                //load_data_2_grid();
             }
             catch (Exception v_e)
             {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
+        }
+
+        private void get_nhan_vien()
+        {
+            US_DUNG_CHUNG v_us = new US_DUNG_CHUNG();
+            DataSet v_ds = new DataSet();
+            DataTable v_dt = new DataTable();
+            v_ds.Tables.Add(v_dt);
+            v_us.FillDatasetWithQuery(v_ds, "Select ID, MA_MON_HOC, TEN_MON_HOC from DM_MON_HOC");
+            m_search_lookup_edit.Properties.DataSource = v_ds.Tables[0];
+            m_search_lookup_edit.Properties.BestFitMode = BestFitMode.BestFitResizePopup;
         }
 
         private void load_data_2_grid()
@@ -51,7 +63,7 @@ namespace BKI_DTNB
             m_ds.Clear();
             DataTable v_dt = new DataTable();
             m_ds.Tables.Add(v_dt);
-            v_us.FillDatasetTheoMonHoc(m_ds, CIPConvert.ToDecimal(m_cbo_mon_hoc.SelectedValue));
+            v_us.FillDatasetTheoMonHoc(m_ds, CIPConvert.ToDecimal(m_search_lookup_edit.EditValue.ToString()));
             m_grc.DataSource = m_ds.Tables[0];
         }
 
@@ -62,7 +74,7 @@ namespace BKI_DTNB
                 decimal v_dc_id_version_mon = -1;
                 decimal v_dc_diem_qua_mon = -1;
                 F301_Tao_lop v_f = new F301_Tao_lop();
-                decimal v_so_luong_hoc_vien = v_f.Display(GetSelectedRows(m_grv).Count, CIPConvert.ToDecimal(m_cbo_mon_hoc.SelectedValue), ref v_dc_id_version_mon, ref v_dc_diem_qua_mon);
+                decimal v_so_luong_hoc_vien = v_f.Display(GetSelectedRows(m_grv).Count, CIPConvert.ToDecimal(m_search_lookup_edit.EditValue), ref v_dc_id_version_mon, ref v_dc_diem_qua_mon);
                 if (v_f.DialogResult == System.Windows.Forms.DialogResult.OK)
                 {
                     List<decimal> v_lst_id_lop = taoLopHoc(v_so_luong_hoc_vien, v_dc_id_version_mon, v_dc_diem_qua_mon);
@@ -95,7 +107,7 @@ namespace BKI_DTNB
         {
             m_so_luong_hoc_vien = v_so_luong_hoc_vien;
             decimal v_dc_so_hoc_vien = GetSelectedRows(m_grv).Count;
-            decimal v_dc_id_mon_hoc = CIPConvert.ToDecimal(m_cbo_mon_hoc.SelectedValue);
+            decimal v_dc_id_mon_hoc = CIPConvert.ToDecimal(m_search_lookup_edit.EditValue);
             List<decimal> v_lst_id_lop = new List<decimal>();
             var v_mon_hoc = new US_DM_MON_HOC(v_dc_id_mon_hoc);
             while (v_dc_so_hoc_vien > 0)
@@ -142,7 +154,7 @@ namespace BKI_DTNB
             US_GD_LOP_MON v_us_gd_LOP_MON = new US_GD_LOP_MON();
             DS_GD_LOP_MON v_ds_gd_LOP_MON = new DS_GD_LOP_MON();
             v_ds_gd_LOP_MON.EnforceConstraints = false;
-            v_us_gd_LOP_MON.FillDataset(v_ds_gd_LOP_MON, " WHERE ID_VERSION_MON_HOC IN (SELECT ID FROM DM_VERSION_MON_HOC WHERE ID_MON_HOC = " + m_cbo_mon_hoc.SelectedValue + ")");
+            v_us_gd_LOP_MON.FillDataset(v_ds_gd_LOP_MON, " WHERE ID_VERSION_MON_HOC IN (SELECT ID FROM DM_VERSION_MON_HOC WHERE ID_MON_HOC = " + m_search_lookup_edit.EditValue + ")");
             for (int i = 0; i < v_ds_gd_LOP_MON.Tables[0].Rows.Count; i++)
             {
                 US_GD_DIEM v_us = new US_GD_DIEM();
@@ -174,35 +186,14 @@ namespace BKI_DTNB
 
         }
 
-        private void m_cbo_ngach_SelectedIndexChanged(object sender, EventArgs e)//Combobox ngạch thay đổi giá trị
-        {
-            load_data_2_cbo_nghiep_vu();
-        }
+       
 
-        private void load_data_2_cbo_nghiep_vu()
-        {
-            WinFormControls.load_data_to_combobox_with_query(m_cbo_nghiep_vu, "ID", "TEN_NGHIEP_VU", WinFormControls.eTAT_CA.YES, "SELECT DISTINCT dnv.ID, dnv.TEN_NGHIEP_VU FROM DM_NGHIEP_VU AS dnv, DM_NGACH_NGHIEP_VU AS dncnv WHERE dncnv.ID_NGHIEP_VU = dnv.ID AND dncnv.ID_NGACH = " + m_cbo_ngach.SelectedValue + " OR " + m_cbo_ngach.SelectedValue + " = -1");
-        }
+       
 
-        private void load_data_2_cbo_mon_hoc()
-        {
-            WinFormControls.load_data_to_combobox_with_query(m_cbo_mon_hoc, "ID", "MON_HOC", WinFormControls.eTAT_CA.NO, "SELECT DISTINCT dmh.ID, dmh.MA_MON_HOC + ' - '+ dmh.TEN_MON_HOC AS MON_HOC FROM DM_MON_HOC AS dmh, DM_NGHIEP_VU_MON_HOC AS dnvmh WHERE dmh.ID =dnvmh.ID_MON_HOC AND (dnvmh.ID_NGHIEP_VU = " + m_cbo_nghiep_vu.SelectedValue + " OR " + m_cbo_nghiep_vu.SelectedValue + " = -1)");
-        }
-
-        private void m_cbo_dia_phuong_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            load_data_2_cbo_ngach();
-        }
-
-        private void load_data_2_cbo_ngach()
-        {
-            WinFormControls.load_data_to_combobox_with_query(m_cbo_ngach, "ID","NGACH", WinFormControls.eTAT_CA.YES, "SELECT DISTINCT dmn.ID, dmn.MA_NGACH + ' - ' + dmn.TEN_NGACH as NGACH FROM DM_NGACH as dmn,  CM_DM_TU_DIEN as cmdmtd WHERE dmn.ID_DIA_PHUONG = cmdmtd.ID AND (cmdmtd.ID = " + m_cbo_dia_phuong.SelectedValue + " OR " + m_cbo_dia_phuong.SelectedValue + " = -1)");
-        }
-
-        private void m_cbo_nghiep_vu_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            load_data_2_cbo_mon_hoc();
-        }
+       
+        
+        
+        
 
         private void m_cmd_xuat_excel_Click(object sender, EventArgs e)
         {
@@ -217,7 +208,7 @@ namespace BKI_DTNB
                 //    MessageBox.Show("Lưu báo cáo thành công");
                 //}
                 ArrayList v_arr_list = new ArrayList();
-                v_arr_list.Add(new iParameter("iP_tieu_de_bao_cao", "Báo cáo nhân viên chưa học môn " + m_cbo_mon_hoc.Text));
+                v_arr_list.Add(new iParameter("iP_tieu_de_bao_cao", "Báo cáo nhân viên chưa học môn " + m_search_lookup_edit.Text));
                 v_arr_list.Add(new iParameter("iP_trung_tam", "TỔ HỢP GIÁO DỤC TOPICA"));
                 v_arr_list.Add(new iParameter("iP_date_time", "Hà Nội, ngày " + DateTime.Now.Date.ToShortDateString()));
                 BKI_DTNB.BaoCao.RPT_XtraReport v_xr = new BKI_DTNB.BaoCao.RPT_XtraReport(m_ds, m_grv, v_arr_list, System.Drawing.Printing.PaperKind.A4, true);
@@ -255,8 +246,8 @@ namespace BKI_DTNB
             m_dc_id_lop_mon = ip_dc_lop_mon;
             m_dc_id_mon_hoc = ip_dc_mon_hoc;
             this.Show();
-            this.m_cbo_mon_hoc.SelectedValue = ip_dc_mon_hoc;
-            m_cbo_mon_hoc.Enabled = false;
+            this.m_search_lookup_edit.EditValue= ip_dc_mon_hoc;
+            m_search_lookup_edit.Enabled = false;
             load_data_2_grid();
         }
 
@@ -274,7 +265,7 @@ namespace BKI_DTNB
                 US_GD_LOP_MON v_us_gd_LOP_MON = new US_GD_LOP_MON();
                 DS_GD_LOP_MON v_ds_gd_LOP_MON = new DS_GD_LOP_MON();
                 v_ds_gd_LOP_MON.EnforceConstraints = false;
-                v_us_gd_LOP_MON.FillDataset(v_ds_gd_LOP_MON, " WHERE ID_VERSION_MON_HOC IN (SELECT ID FROM DM_VERSION_MON_HOC WHERE ID_MON_HOC = " + m_cbo_mon_hoc.SelectedValue + ")");
+                v_us_gd_LOP_MON.FillDataset(v_ds_gd_LOP_MON, " WHERE ID_VERSION_MON_HOC IN (SELECT ID FROM DM_VERSION_MON_HOC WHERE ID_MON_HOC = " + m_search_lookup_edit.EditValue + ")");
                 if (v_ds_gd_LOP_MON.Tables[0].Rows.Count == 0)
                 {
                     MessageBox.Show("Chưa có lớp học nào cho môn học này. Vui lòng thêm lớp học mới!");
@@ -286,7 +277,7 @@ namespace BKI_DTNB
                         F301_Assign v_f = new F301_Assign();
                         if (m_dc_id_lop_mon == -1)
                         {
-                            m_dc_id_mon_hoc = CIPConvert.ToDecimal(m_cbo_mon_hoc.SelectedValue.ToString());
+                            m_dc_id_mon_hoc = CIPConvert.ToDecimal(m_search_lookup_edit.EditValue.ToString());
                             v_f.Display(m_dc_id_mon_hoc, ref m_dc_id_lop_mon);
                         }
                         else

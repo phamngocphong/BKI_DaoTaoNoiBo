@@ -170,8 +170,9 @@ namespace BKI_DTNB.NghiepVu
             if (v_dr[GD_DIEM.DIEM_THI].ToString().Trim() != "")
             {
                 v_us.dcDIEM_THI = CIPConvert.ToDecimal(v_dr[GD_DIEM.DIEM_THI].ToString());
+                v_us.strHOC_XONG_YN = "Y";
             }
-            v_us.strHOC_XONG_YN = "Y";
+            
             if (v_dr["QUA_MON"].ToString() == "Đã qua môn")
             {
                 v_us.strQUA_MON = "Y";

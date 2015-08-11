@@ -49,6 +49,7 @@
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.m_grc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
@@ -81,7 +82,8 @@
             this.c_ma_nv,
             this.c_diem_chuyen_can,
             this.c_diem_kiem_tra,
-            this.c_diem_thi});
+            this.c_diem_thi,
+            this.gridColumn1});
             this.m_grv.GridControl = this.m_grc;
             this.m_grv.GroupCount = 3;
             this.m_grv.Name = "m_grv";
@@ -97,7 +99,7 @@
             // 
             // c_ten_nhan_vien
             // 
-            this.c_ten_nhan_vien.Caption = "Tên nhân viên";
+            this.c_ten_nhan_vien.Caption = "TÊN NHÂN VIÊN";
             this.c_ten_nhan_vien.FieldName = "HO_TEN";
             this.c_ten_nhan_vien.Name = "c_ten_nhan_vien";
             this.c_ten_nhan_vien.OptionsColumn.AllowEdit = false;
@@ -107,7 +109,7 @@
             // 
             // c_ma_mon_hoc
             // 
-            this.c_ma_mon_hoc.Caption = "Mã môn học";
+            this.c_ma_mon_hoc.Caption = "MÃ MÔN HỌC";
             this.c_ma_mon_hoc.FieldName = "MA_MON_HOC";
             this.c_ma_mon_hoc.Name = "c_ma_mon_hoc";
             this.c_ma_mon_hoc.OptionsColumn.AllowEdit = false;
@@ -116,7 +118,7 @@
             // 
             // c_hoc_xong
             // 
-            this.c_hoc_xong.Caption = "Trạng thái";
+            this.c_hoc_xong.Caption = "TRẠNG THÁI";
             this.c_hoc_xong.FieldName = "HOC_XONG";
             this.c_hoc_xong.Name = "c_hoc_xong";
             this.c_hoc_xong.OptionsColumn.AllowEdit = false;
@@ -125,7 +127,7 @@
             // 
             // c_qua_mon
             // 
-            this.c_qua_mon.Caption = "Kết quả";
+            this.c_qua_mon.Caption = "KẾT QUẢ";
             this.c_qua_mon.ColumnEdit = this.repositoryItemComboBox1;
             this.c_qua_mon.FieldName = "QUA_MON";
             this.c_qua_mon.Name = "c_qua_mon";
@@ -142,7 +144,7 @@
             // 
             // c_ma_lop_hoc
             // 
-            this.c_ma_lop_hoc.Caption = "Mã lớp môn";
+            this.c_ma_lop_hoc.Caption = "MÃ LỚP MÔN";
             this.c_ma_lop_hoc.FieldName = "MA_LOP_HOC";
             this.c_ma_lop_hoc.Name = "c_ma_lop_hoc";
             this.c_ma_lop_hoc.OptionsColumn.AllowEdit = false;
@@ -151,7 +153,7 @@
             // 
             // c_ma_nv
             // 
-            this.c_ma_nv.Caption = "Mã nhân viên";
+            this.c_ma_nv.Caption = "MÃ NHÂN VIÊN";
             this.c_ma_nv.FieldName = "MA_NV";
             this.c_ma_nv.Name = "c_ma_nv";
             this.c_ma_nv.OptionsColumn.AllowEdit = false;
@@ -160,7 +162,7 @@
             // 
             // c_diem_chuyen_can
             // 
-            this.c_diem_chuyen_can.Caption = "Điểm chuyên cần";
+            this.c_diem_chuyen_can.Caption = "ĐIỂM CHUYÊN CẦN";
             this.c_diem_chuyen_can.FieldName = "DIEM_CHUYEN_CAN";
             this.c_diem_chuyen_can.Name = "c_diem_chuyen_can";
             this.c_diem_chuyen_can.Visible = true;
@@ -168,7 +170,7 @@
             // 
             // c_diem_kiem_tra
             // 
-            this.c_diem_kiem_tra.Caption = "Điểm kiểm tra";
+            this.c_diem_kiem_tra.Caption = "ĐIỂM KIỂM TRA";
             this.c_diem_kiem_tra.FieldName = "DIEM_KIEM_TRA";
             this.c_diem_kiem_tra.Name = "c_diem_kiem_tra";
             this.c_diem_kiem_tra.Visible = true;
@@ -176,7 +178,7 @@
             // 
             // c_diem_thi
             // 
-            this.c_diem_thi.Caption = "Điểm thi";
+            this.c_diem_thi.Caption = "ĐIỂM THI";
             this.c_diem_thi.FieldName = "DIEM_THI";
             this.c_diem_thi.Name = "c_diem_thi";
             this.c_diem_thi.Visible = true;
@@ -286,6 +288,14 @@
             this.panel2.Size = new System.Drawing.Size(769, 322);
             this.panel2.TabIndex = 22;
             // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "CHỨNG CHỈ";
+            this.gridColumn1.FieldName = "CHUNG_CHI";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 7;
+            // 
             // F207_Nhap_diem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -327,5 +337,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn c_diem_thi;
         internal SIS.Controls.Button.SiSButton m_cmd_luu;
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
     }
 }

@@ -13,6 +13,9 @@ using DevExpress.Utils.Menu;
 using BKI_DTNB.DS;
 using BKI_DTNB.DS.CDBNames;
 using DevExpress.XtraPivotGrid;
+using DevExpress.XtraEditors;
+using DevExpress.XtraEditors.Controls;
+
 namespace BKI_DTNB.DanhMuc
 {
     public partial class F120_CHUONG_TRINH_KHUNG_CUA_NHAN_VIEN : Form
@@ -25,25 +28,41 @@ namespace BKI_DTNB.DanhMuc
 
         private void F120_CHUONG_TRINH_KHUNG_CUA_NHAN_VIEN_Load(object sender, EventArgs e)
         {
-            load_data_to_combobox_ma_ten_nhan_vien();
+            try
+            {
+                get_nhan_vien();
+                
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
-        private void load_data_to_combobox_ma_ten_nhan_vien()
-        {
-            WinFormControls.load_data_to_combobox_with_query(m_cbo_ma_ten_nhan_vien, "ID", "TEN_NHAN_VIEN", WinFormControls.eTAT_CA.NO, "Select dmns.ID, dmns.MA_NV+ ' - '+ dmns.Ho_dem+ ' '+ dmns.Ten as TEN_NHAN_VIEN from dm_nhan_su as dmns");
-            
-        }
+      
 
         private void m_cmd_hien_thi_Click(object sender, EventArgs e)
         {
-            if (m_cbo_ma_ten_nhan_vien.SelectedItem==null)
+            if (m_search_lookup_edit.Text==null)
             {
                 MessageBox.Show("Vui lòng điền vào mã nhân viên");
             }
             else
             {
+               
                 load_data_to_grid();
             }
+        }
+
+        private void get_nhan_vien()
+        {
+              US_DUNG_CHUNG v_us = new US_DUNG_CHUNG();
+            DataSet v_ds = new DataSet();
+            DataTable v_dt = new DataTable();
+            v_ds.Tables.Add(v_dt);
+            v_us.FillDatasetWithQuery(v_ds, "Select ID, MA_NV, ho_dem +' '+ Ten as HO_TEN from dm_nhan_su");
+            m_search_lookup_edit.Properties.DataSource = v_ds.Tables[0];
+          
         }
         
         private void load_data_to_grid()
@@ -53,7 +72,7 @@ namespace BKI_DTNB.DanhMuc
             DataSet v_ds = new DataSet();
             DataTable v_dt = new DataTable();
             v_ds.Tables.Add(v_dt);
-            v_us.FillDatasetChuongTrinhKhung(v_ds, CIPConvert.ToDecimal(m_cbo_ma_ten_nhan_vien.SelectedValue));
+           v_us.FillDatasetChuongTrinhKhung(v_ds, CIPConvert.ToDecimal(m_search_lookup_edit.EditValue.ToString()));
             m_grc.DataSource = v_ds.Tables[0];
             
             if (m_grv.DataRowCount ==0)

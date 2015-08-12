@@ -323,6 +323,7 @@
     <Compile Include="HeThong\f999_ht_nguoi_su_dung.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Mail.cs" />
     <Compile Include="NghiepVu\BackupDB.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -449,6 +450,12 @@
     <Compile Include="f388_main.Designer.cs">
       <DependentUpon>f388_main.cs</DependentUpon>
     </Compile>
+    <Compile Include="WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitForm1.Designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
     <Compile Include="WinFormControls.cs" />
     <EmbeddedResource Include="BaoCao\F303_ket_qua_dao_tao_de.resx">
       <DependentUpon>F303_ket_qua_dao_tao_de.cs</DependentUpon>
@@ -574,6 +581,9 @@
     <EmbeddedResource Include="f388_main.resx">
       <DependentUpon>f388_main.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config">
       <SubType>Designer</SubType>

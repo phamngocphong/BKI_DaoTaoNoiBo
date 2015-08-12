@@ -494,5 +494,17 @@ namespace BKI_DTNB
             v_f.MdiParent = this;
             v_f.Show();
         }
+
+        private void m_cmd_mail_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                Mail.sendEmail();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
     }
 }

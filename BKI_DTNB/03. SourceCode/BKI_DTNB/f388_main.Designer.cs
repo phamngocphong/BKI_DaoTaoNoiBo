@@ -74,6 +74,9 @@
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.m_cmd_ds_hs_theo_lm = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.m_cmd_mail = new DevExpress.XtraBars.BarButtonItem();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::BKI_DTNB.WaitForm1), true, true);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MdiManager)).BeginInit();
             this.SuspendLayout();
@@ -119,9 +122,10 @@
             this.m_cmd_chung_chi,
             this.m_cmd_nhan_vien_nghiep_vu,
             this.m_cmd_nhap_chung_chi,
-            this.m_cmd_chuong_trinh_khung});
+            this.m_cmd_chuong_trinh_khung,
+            this.m_cmd_mail});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 52;
+            this.ribbon.MaxItemId = 53;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -442,7 +446,8 @@
             this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup4,
             this.ribbonPageGroup6,
-            this.ribbonPageGroup7});
+            this.ribbonPageGroup7,
+            this.ribbonPageGroup9});
             this.ribbonPage3.Name = "ribbonPage3";
             this.ribbonPage3.Text = "NGHIỆP VỤ";
             // 
@@ -504,6 +509,21 @@
             // 
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
             this.ribbonPageGroup8.Text = "Theo lớp môn";
+            // 
+            // ribbonPageGroup9
+            // 
+            this.ribbonPageGroup9.ItemLinks.Add(this.m_cmd_mail);
+            this.ribbonPageGroup9.Name = "ribbonPageGroup9";
+            this.ribbonPageGroup9.Text = "ribbonPageGroup9";
+            // 
+            // m_cmd_mail
+            // 
+            this.m_cmd_mail.Caption = "Mail";
+            this.m_cmd_mail.Glyph = ((System.Drawing.Image)(resources.GetObject("m_cmd_mail.Glyph")));
+            this.m_cmd_mail.Id = 52;
+            this.m_cmd_mail.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("m_cmd_mail.LargeGlyph")));
+            this.m_cmd_mail.Name = "m_cmd_mail";
+            this.m_cmd_mail.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_mail_ItemClick);
             // 
             // f388_main
             // 
@@ -572,5 +592,8 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
         private DevExpress.XtraBars.BarButtonItem m_cmd_nhap_chung_chi;
         private DevExpress.XtraBars.BarButtonItem m_cmd_chuong_trinh_khung;
+        private DevExpress.XtraBars.BarButtonItem m_cmd_mail;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

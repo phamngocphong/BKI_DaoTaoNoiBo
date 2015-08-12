@@ -11,7 +11,7 @@ namespace BKI_DTNB_WEB
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            ASPxRibbon.ShowFileTab = false;
         }
     }
 }

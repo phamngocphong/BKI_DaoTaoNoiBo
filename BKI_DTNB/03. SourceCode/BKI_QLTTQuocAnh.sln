@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BKI_DTNB.US", "BKI_DTNB.US\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BKI_DTNB", "BKI_DTNB\BKI_DTNB.csproj", "{B91F4BE2-5024-4012-A4A8-4E52E8609778}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BKI_DTNB_WEB", "BKI_DTNB_WEB\BKI_DTNB_WEB.csproj", "{CA2F72A0-C455-41B2-99E9-89DE31C4A750}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		BondDebug|Any CPU = BondDebug|Any CPU
@@ -439,6 +441,36 @@ Global
 		{B91F4BE2-5024-4012-A4A8-4E52E8609778}.SIPDebug|Mixed Platforms.Build.0 = Debug|x86
 		{B91F4BE2-5024-4012-A4A8-4E52E8609778}.SIPDebug|x86.ActiveCfg = Debug|x86
 		{B91F4BE2-5024-4012-A4A8-4E52E8609778}.SIPDebug|x86.Build.0 = Debug|x86
+		{CA2F72A0-C455-41B2-99E9-89DE31C4A750}.BondDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA2F72A0-C455-41B2-99E9-89DE31C4A750}.BondDebug|Any CPU.Build.0 = Debug|Any CPU
+		{CA2F72A0-C455-41B2-99E9-89DE31C4A750}.BondDebug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{CA2F72A0-C455-41B2-99E9-89DE31C4A750}.BondDebug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{CA2F72A0-C455-41B2-99E9-89DE31C4A750}.BondDebug|x86.ActiveCfg = Debug|Any CPU
+		{CA2F72A0-C455-41B2-99E9-89DE31C4A750}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA2F72A0-C455-41B2-99E9-89DE31C4A750}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA2F72A0-C455-41B2-99E9-89DE31C4A750}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{CA2F72A0-C455-41B2-99E9-89DE31C4A750}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{CA2F72A0-C455-41B2-99E9-89DE31C4A750}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CA2F72A0-C455-41B2-99E9-89DE31C4A750}.iFASDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA2F72A0-C455-41B2-99E9-89DE31C4A750}.iFASDebug|Any CPU.Build.0 = Debug|Any CPU
+		{CA2F72A0-C455-41B2-99E9-89DE31C4A750}.iFASDebug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{CA2F72A0-C455-41B2-99E9-89DE31C4A750}.iFASDebug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{CA2F72A0-C455-41B2-99E9-89DE31C4A750}.iFASDebug|x86.ActiveCfg = Debug|Any CPU
+		{CA2F72A0-C455-41B2-99E9-89DE31C4A750}.PersonalBuild|Any CPU.ActiveCfg = Release|Any CPU
+		{CA2F72A0-C455-41B2-99E9-89DE31C4A750}.PersonalBuild|Any CPU.Build.0 = Release|Any CPU
+		{CA2F72A0-C455-41B2-99E9-89DE31C4A750}.PersonalBuild|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{CA2F72A0-C455-41B2-99E9-89DE31C4A750}.PersonalBuild|Mixed Platforms.Build.0 = Release|Any CPU
+		{CA2F72A0-C455-41B2-99E9-89DE31C4A750}.PersonalBuild|x86.ActiveCfg = Release|Any CPU
+		{CA2F72A0-C455-41B2-99E9-89DE31C4A750}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA2F72A0-C455-41B2-99E9-89DE31C4A750}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA2F72A0-C455-41B2-99E9-89DE31C4A750}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{CA2F72A0-C455-41B2-99E9-89DE31C4A750}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{CA2F72A0-C455-41B2-99E9-89DE31C4A750}.Release|x86.ActiveCfg = Release|Any CPU
+		{CA2F72A0-C455-41B2-99E9-89DE31C4A750}.SIPDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA2F72A0-C455-41B2-99E9-89DE31C4A750}.SIPDebug|Any CPU.Build.0 = Debug|Any CPU
+		{CA2F72A0-C455-41B2-99E9-89DE31C4A750}.SIPDebug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{CA2F72A0-C455-41B2-99E9-89DE31C4A750}.SIPDebug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{CA2F72A0-C455-41B2-99E9-89DE31C4A750}.SIPDebug|x86.ActiveCfg = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

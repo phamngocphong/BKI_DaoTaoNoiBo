@@ -7,33 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BKI_DTNB_WEB.Account
-{
-
-
-    public partial class RegisterExternalLogin
-    {
-
-
-
+namespace BKI_DTNB_WEB.Account {
+    
+    
+    public partial class F101_Login {
+        
         /// <summary>
-        /// userNameForm control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder userNameForm;
-
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        
         /// <summary>
-        /// userName control.
+        /// m_cmd_Login control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox userName;
-
-
+        protected global::System.Web.UI.WebControls.Button m_cmd_Login;
     }
 }

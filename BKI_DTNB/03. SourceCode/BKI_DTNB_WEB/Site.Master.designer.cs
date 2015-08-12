@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BKI_DTNB_WEB
-{
-
-
-    public partial class SiteMaster
-    {
-
+namespace BKI_DTNB_WEB {
+    
+    
+    public partial class SiteMaster {
+        
         /// <summary>
         /// HeadContent control.
         /// </summary>
@@ -22,7 +20,7 @@ namespace BKI_DTNB_WEB
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder HeadContent;
-
+        
         /// <summary>
         /// FeaturedContent control.
         /// </summary>
@@ -31,7 +29,16 @@ namespace BKI_DTNB_WEB
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder FeaturedContent;
-
+        
+        /// <summary>
+        /// ASPxRibbon1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxRibbon.ASPxRibbon ASPxRibbon1;
+        
         /// <summary>
         /// MainContent control.
         /// </summary>

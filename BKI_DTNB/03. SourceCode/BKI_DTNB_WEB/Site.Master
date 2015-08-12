@@ -1,5 +1,7 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="BKI_DTNB_WEB.SiteMaster" %>
 
+<%@ Register assembly="DevExpress.Web.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxRibbon" tagprefix="dx" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head runat="server">
@@ -16,7 +18,22 @@
 <body>
     <form runat="server">
     <div id="body">
-        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" >
+            <dx:ASPxRibbon ID="ASPxRibbon1" runat="server" EnableTheming="True" Theme="Glass">
+                <Tabs>
+                    <dx:RibbonTab Name="m_tab_chuc_nang" Text="Chức Năng">
+                        <Groups>
+                            <dx:RibbonGroup Name="m_gtab_tra_cuu" Text="Tra cứu">
+                                <Items>
+                                    <dx:RibbonButtonItem Name="m_cmd_chuong_trinh_khung" Text="Chương trình khung">
+                                    </dx:RibbonButtonItem>
+                                </Items>
+                            </dx:RibbonGroup>
+                        </Groups>
+                    </dx:RibbonTab>
+                </Tabs>
+            </dx:ASPxRibbon>
+        </asp:ContentPlaceHolder>
         <section class="content-wrapper main-content clear-fix">
             <asp:ContentPlaceHolder runat="server" ID="MainContent" />
         </section>

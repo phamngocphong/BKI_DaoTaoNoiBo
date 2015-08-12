@@ -45,6 +45,7 @@
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_refresh = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.m_grc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -61,7 +62,7 @@
             this.m_grc.Location = new System.Drawing.Point(2, 2);
             this.m_grc.MainView = this.m_grv;
             this.m_grc.Name = "m_grc";
-            this.m_grc.Size = new System.Drawing.Size(611, 258);
+            this.m_grc.Size = new System.Drawing.Size(773, 258);
             this.m_grc.TabIndex = 0;
             this.m_grc.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.m_grv});
@@ -133,7 +134,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(615, 262);
+            this.panelControl1.Size = new System.Drawing.Size(777, 262);
             this.panelControl1.TabIndex = 1;
             // 
             // panelControl2
@@ -142,11 +143,12 @@
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl2.Location = new System.Drawing.Point(0, 213);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(615, 49);
+            this.panelControl2.Size = new System.Drawing.Size(777, 49);
             this.panelControl2.TabIndex = 2;
             // 
             // m_pnl_out_place_dm
             // 
+            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_refresh);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_insert);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_delete);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
@@ -154,7 +156,7 @@
             this.m_pnl_out_place_dm.Location = new System.Drawing.Point(2, 2);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(611, 45);
+            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(773, 45);
             this.m_pnl_out_place_dm.TabIndex = 23;
             // 
             // m_cmd_insert
@@ -166,7 +168,7 @@
             this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_insert.ImageIndex = 2;
             this.m_cmd_insert.ImageList = this.ImageList;
-            this.m_cmd_insert.Location = new System.Drawing.Point(163, 4);
+            this.m_cmd_insert.Location = new System.Drawing.Point(325, 4);
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(178, 37);
             this.m_cmd_insert.TabIndex = 12;
@@ -209,7 +211,7 @@
             this.m_cmd_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_delete.ImageIndex = 4;
             this.m_cmd_delete.ImageList = this.ImageList;
-            this.m_cmd_delete.Location = new System.Drawing.Point(341, 4);
+            this.m_cmd_delete.Location = new System.Drawing.Point(503, 4);
             this.m_cmd_delete.Name = "m_cmd_delete";
             this.m_cmd_delete.Size = new System.Drawing.Size(178, 37);
             this.m_cmd_delete.TabIndex = 14;
@@ -225,18 +227,29 @@
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(519, 4);
+            this.m_cmd_exit.Location = new System.Drawing.Point(681, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 37);
             this.m_cmd_exit.TabIndex = 11;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_exit_Click);
             // 
+            // m_cmd_refresh
+            // 
+            this.m_cmd_refresh.Dock = System.Windows.Forms.DockStyle.Right;
+            this.m_cmd_refresh.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_refresh.Image")));
+            this.m_cmd_refresh.Location = new System.Drawing.Point(190, 4);
+            this.m_cmd_refresh.Name = "m_cmd_refresh";
+            this.m_cmd_refresh.Size = new System.Drawing.Size(135, 37);
+            this.m_cmd_refresh.TabIndex = 15;
+            this.m_cmd_refresh.Text = "Load lại trang";
+            this.m_cmd_refresh.Click += new System.EventHandler(this.m_cmd_refresh_Click);
+            // 
             // F112_nhan_su_nghiep_vu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(615, 262);
+            this.ClientSize = new System.Drawing.Size(777, 262);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Name = "F112_nhan_su_nghiep_vu";
@@ -270,5 +283,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+        private DevExpress.XtraEditors.SimpleButton m_cmd_refresh;
     }
 }

@@ -33,12 +33,11 @@
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.m_search_lookup_edit = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.m_grc = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.m_grv = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -50,14 +49,15 @@
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_search_lookup_edit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_grc)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.SuspendLayout();
@@ -74,6 +74,8 @@
             // 
             // panelControl2
             // 
+            this.panelControl2.Appearance.BackColor = System.Drawing.Color.Maroon;
+            this.panelControl2.Appearance.Options.UseBackColor = true;
             this.panelControl2.Controls.Add(this.m_search_lookup_edit);
             this.panelControl2.Controls.Add(this.labelControl1);
             this.panelControl2.Controls.Add(this.m_cmd_hien_thi);
@@ -106,14 +108,6 @@
             this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
             // 
-            // labelControl1
-            // 
-            this.labelControl1.Location = new System.Drawing.Point(12, 25);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(68, 13);
-            this.labelControl1.TabIndex = 3;
-            this.labelControl1.Text = "Tên nhân viên";
-            // 
             // gridColumn1
             // 
             this.gridColumn1.Caption = "ID";
@@ -126,7 +120,7 @@
             this.gridColumn12.FieldName = "MA_NV";
             this.gridColumn12.Name = "gridColumn12";
             this.gridColumn12.Visible = true;
-            this.gridColumn12.VisibleIndex = 1;
+            this.gridColumn12.VisibleIndex = 0;
             // 
             // gridColumn13
             // 
@@ -134,27 +128,53 @@
             this.gridColumn13.FieldName = "HO_TEN";
             this.gridColumn13.Name = "gridColumn13";
             this.gridColumn13.Visible = true;
-            this.gridColumn13.VisibleIndex = 2;
+            this.gridColumn13.VisibleIndex = 1;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(12, 25);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(68, 13);
+            this.labelControl1.TabIndex = 3;
+            this.labelControl1.Text = "Tên nhân viên";
             // 
             // m_grc
             // 
             this.m_grc.Cursor = System.Windows.Forms.Cursors.Default;
             this.m_grc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.m_grc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.m_grc.Location = new System.Drawing.Point(2, 2);
             this.m_grc.MainView = this.m_grv;
             this.m_grc.Name = "m_grc";
             this.m_grc.Size = new System.Drawing.Size(827, 386);
             this.m_grc.TabIndex = 0;
             this.m_grc.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.m_grv});
-            // 
-            // gridView1
-            // 
-            this.gridView1.GridControl = this.m_grc;
-            this.gridView1.Name = "gridView1";
+            this.m_grv,
+            this.gridView1});
             // 
             // m_grv
             // 
+            this.m_grv.Appearance.ColumnFilterButton.ForeColor = System.Drawing.Color.Maroon;
+            this.m_grv.Appearance.ColumnFilterButton.Options.UseForeColor = true;
+            this.m_grv.Appearance.FixedLine.BackColor = System.Drawing.Color.Maroon;
+            this.m_grv.Appearance.FixedLine.BackColor2 = System.Drawing.Color.Maroon;
+            this.m_grv.Appearance.FixedLine.BorderColor = System.Drawing.Color.Maroon;
+            this.m_grv.Appearance.FixedLine.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_grv.Appearance.FixedLine.ForeColor = System.Drawing.Color.White;
+            this.m_grv.Appearance.FixedLine.Options.UseBackColor = true;
+            this.m_grv.Appearance.FixedLine.Options.UseBorderColor = true;
+            this.m_grv.Appearance.FixedLine.Options.UseFont = true;
+            this.m_grv.Appearance.FixedLine.Options.UseForeColor = true;
+            this.m_grv.Appearance.GroupPanel.BackColor = System.Drawing.Color.Maroon;
+            this.m_grv.Appearance.GroupPanel.BackColor2 = System.Drawing.Color.Maroon;
+            this.m_grv.Appearance.GroupPanel.BorderColor = System.Drawing.Color.Maroon;
+            this.m_grv.Appearance.GroupPanel.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_grv.Appearance.GroupPanel.Options.UseBackColor = true;
+            this.m_grv.Appearance.GroupPanel.Options.UseBorderColor = true;
+            this.m_grv.Appearance.GroupPanel.Options.UseFont = true;
+            this.m_grv.Appearance.GroupPanel.Options.UseForeColor = true;
+            this.m_grv.Appearance.Row.ForeColor = System.Drawing.Color.Maroon;
+            this.m_grv.Appearance.Row.Options.UseForeColor = true;
             this.m_grv.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn2,
             this.gridColumn3,
@@ -169,6 +189,7 @@
             this.m_grv.GridControl = this.m_grc;
             this.m_grv.GroupCount = 5;
             this.m_grv.Name = "m_grv";
+            this.m_grv.OptionsView.EnableAppearanceEvenRow = true;
             this.m_grv.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn2, DevExpress.Data.ColumnSortOrder.Ascending),
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn4, DevExpress.Data.ColumnSortOrder.Ascending),
@@ -261,6 +282,11 @@
             this.gridColumn11.VisibleIndex = 0;
             this.gridColumn11.Width = 146;
             // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.m_grc;
+            this.gridView1.Name = "gridView1";
+            // 
             // panelControl1
             // 
             this.panelControl1.Controls.Add(this.m_grc);
@@ -286,8 +312,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.m_search_lookup_edit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_grc)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.ResumeLayout(false);

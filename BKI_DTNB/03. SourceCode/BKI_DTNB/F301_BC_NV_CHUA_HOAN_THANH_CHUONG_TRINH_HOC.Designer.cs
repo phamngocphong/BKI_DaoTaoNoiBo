@@ -36,6 +36,12 @@
             this.m_cmd_assign = new DevExpress.XtraEditors.SimpleButton();
             this.m_cmd_xuat_excel = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.m_cmd_refresh = new DevExpress.XtraEditors.SimpleButton();
+            this.m_search_lookup_edit = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.m_cmd_search = new DevExpress.XtraEditors.SimpleButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.m_grc = new DevExpress.XtraGrid.GridControl();
@@ -50,18 +56,13 @@
             this.c_trung_tam = new DevExpress.XtraGrid.Columns.GridColumn();
             this.c_trang_thai = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.m_search_lookup_edit = new DevExpress.XtraEditors.SearchLookUpEdit();
-            this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_search_lookup_edit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_grc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.m_search_lookup_edit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
             this.SuspendLayout();
             // 
             // m_tieu_de_f301
@@ -104,6 +105,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.m_cmd_refresh);
             this.panel2.Controls.Add(this.m_cmd_assign);
             this.panel2.Controls.Add(this.m_cmd_xuat_excel);
             this.panel2.Controls.Add(this.m_cmd_tao_lop);
@@ -163,9 +165,70 @@
             this.panel1.Size = new System.Drawing.Size(908, 132);
             this.panel1.TabIndex = 18;
             // 
+            // m_cmd_refresh
+            // 
+            this.m_cmd_refresh.Dock = System.Windows.Forms.DockStyle.Right;
+            this.m_cmd_refresh.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_refresh.Image")));
+            this.m_cmd_refresh.Location = new System.Drawing.Point(321, 0);
+            this.m_cmd_refresh.Name = "m_cmd_refresh";
+            this.m_cmd_refresh.Size = new System.Drawing.Size(131, 38);
+            this.m_cmd_refresh.TabIndex = 17;
+            this.m_cmd_refresh.Text = "Load lại trang";
+            this.m_cmd_refresh.Click += new System.EventHandler(this.m_cmd_refresh_Click);
+            // 
+            // m_search_lookup_edit
+            // 
+            this.m_search_lookup_edit.EditValue = "";
+            this.m_search_lookup_edit.Location = new System.Drawing.Point(114, 55);
+            this.m_search_lookup_edit.Name = "m_search_lookup_edit";
+            this.m_search_lookup_edit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_search_lookup_edit.Properties.Appearance.Options.UseFont = true;
+            this.m_search_lookup_edit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.m_search_lookup_edit.Properties.DisplayMember = "TEN_MON_HOC";
+            this.m_search_lookup_edit.Properties.ValueMember = "ID";
+            this.m_search_lookup_edit.Properties.View = this.searchLookUpEdit1View;
+            this.m_search_lookup_edit.Size = new System.Drawing.Size(290, 22);
+            this.m_search_lookup_edit.TabIndex = 16;
+            // 
+            // searchLookUpEdit1View
+            // 
+            this.searchLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn8,
+            this.gridColumn9,
+            this.gridColumn10});
+            this.searchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.searchLookUpEdit1View.Name = "searchLookUpEdit1View";
+            this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn8
+            // 
+            this.gridColumn8.Caption = "ID";
+            this.gridColumn8.FieldName = "ID";
+            this.gridColumn8.Name = "gridColumn8";
+            // 
+            // gridColumn9
+            // 
+            this.gridColumn9.Caption = "MÃ MÔN HỌC";
+            this.gridColumn9.FieldName = "MA_MON_HOC";
+            this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.Visible = true;
+            this.gridColumn9.VisibleIndex = 0;
+            // 
+            // gridColumn10
+            // 
+            this.gridColumn10.Caption = "TÊN MÔN HỌC";
+            this.gridColumn10.FieldName = "TEN_MON_HOC";
+            this.gridColumn10.Name = "gridColumn10";
+            this.gridColumn10.Visible = true;
+            this.gridColumn10.VisibleIndex = 1;
+            // 
             // m_cmd_search
             // 
-            this.m_cmd_search.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(3)))), ((int)(((byte)(53)))));
+            this.m_cmd_search.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_cmd_search.Appearance.ForeColor = System.Drawing.Color.Maroon;
+            this.m_cmd_search.Appearance.Options.UseFont = true;
             this.m_cmd_search.Appearance.Options.UseForeColor = true;
             this.m_cmd_search.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.m_cmd_search.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_search.Image")));
@@ -194,6 +257,7 @@
             // 
             this.m_grc.Cursor = System.Windows.Forms.Cursors.Default;
             this.m_grc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.m_grc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.m_grc.Location = new System.Drawing.Point(0, 0);
             this.m_grc.MainView = this.m_grv;
             this.m_grc.Name = "m_grc";
@@ -302,51 +366,6 @@
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 5;
             // 
-            // m_search_lookup_edit
-            // 
-            this.m_search_lookup_edit.Location = new System.Drawing.Point(114, 55);
-            this.m_search_lookup_edit.Name = "m_search_lookup_edit";
-            this.m_search_lookup_edit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.m_search_lookup_edit.Properties.DisplayMember = "TEN_MON_HOC";
-            this.m_search_lookup_edit.Properties.ValueMember = "ID";
-            this.m_search_lookup_edit.Properties.View = this.searchLookUpEdit1View;
-            this.m_search_lookup_edit.Size = new System.Drawing.Size(290, 20);
-            this.m_search_lookup_edit.TabIndex = 16;
-            // 
-            // searchLookUpEdit1View
-            // 
-            this.searchLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn8,
-            this.gridColumn9,
-            this.gridColumn10});
-            this.searchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.searchLookUpEdit1View.Name = "searchLookUpEdit1View";
-            this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
-            // 
-            // gridColumn8
-            // 
-            this.gridColumn8.Caption = "ID";
-            this.gridColumn8.FieldName = "ID";
-            this.gridColumn8.Name = "gridColumn8";
-            // 
-            // gridColumn9
-            // 
-            this.gridColumn9.Caption = "MÃ MÔN HỌC";
-            this.gridColumn9.FieldName = "MA_MON_HOC";
-            this.gridColumn9.Name = "gridColumn9";
-            this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 1;
-            // 
-            // gridColumn10
-            // 
-            this.gridColumn10.Caption = "TÊN MÔN HỌC";
-            this.gridColumn10.FieldName = "TEN_MON_HOC";
-            this.gridColumn10.Name = "gridColumn10";
-            this.gridColumn10.Visible = true;
-            this.gridColumn10.VisibleIndex = 2;
-            // 
             // F301_BC_NV_CHUA_HOAN_THANH_CHUONG_TRINH_HOC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -363,11 +382,11 @@
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_search_lookup_edit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_grc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.m_search_lookup_edit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -400,5 +419,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
+        private DevExpress.XtraEditors.SimpleButton m_cmd_refresh;
     }
 }

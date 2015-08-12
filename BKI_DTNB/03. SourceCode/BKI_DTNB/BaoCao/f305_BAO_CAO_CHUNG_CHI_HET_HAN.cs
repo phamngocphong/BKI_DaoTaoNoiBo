@@ -88,6 +88,19 @@ namespace BKI_DTNB.BaoCao
             //v_f1.ShowDialog();
             //v_f1.Dispose();
         }
+
+        private void m_cmd_refresh_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Refresh();
+            }
+            catch (Exception ex)
+            {
+                CSystemLog_301.ExceptionHandle(ex);
+
+            }
+        }
         //private void pivotGridControl1_FieldValueDisplayText(object sender, PivotFieldDisplayTextEventArgs e)
         //{
 

@@ -9,7 +9,7 @@ using System.Text;
 using System.Windows.Forms;
 using BKI_DTNB.US;
 using BKI_DTNB.DS;
-
+using IP.Core.IPCommon;
 namespace BKI_DTNB.BaoCao
 {
     public partial class F303_Ket_qua_dao_tao : Form
@@ -94,6 +94,19 @@ namespace BKI_DTNB.BaoCao
                     e.DisplayText = "Tổng";
                 else
                     e.DisplayText = e.DataField.SummaryType.ToString();
+        }
+
+        private void m_cmd_refresh_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Refresh();
+            }
+            catch (Exception ex)
+            {
+                CSystemLog_301.ExceptionHandle(ex);
+               
+            }
         }
     }
 }

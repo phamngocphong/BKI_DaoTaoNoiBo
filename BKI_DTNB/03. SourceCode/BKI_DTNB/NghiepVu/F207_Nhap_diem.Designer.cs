@@ -49,8 +49,9 @@
             this.m_cmd_update = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.m_tieu_de_f207 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.m_cmd_refresh = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.m_grc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
@@ -68,7 +69,7 @@
             this.m_grc.Name = "m_grc";
             this.m_grc.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemComboBox1});
-            this.m_grc.Size = new System.Drawing.Size(769, 322);
+            this.m_grc.Size = new System.Drawing.Size(769, 312);
             this.m_grc.TabIndex = 0;
             this.m_grc.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.m_grv});
@@ -223,14 +224,15 @@
             // 
             // m_pnl_out_place_dm
             // 
+            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_refresh);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_luu);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_update);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 369);
+            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 359);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(769, 36);
+            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(769, 46);
             this.m_pnl_out_place_dm.TabIndex = 20;
             // 
             // m_cmd_luu
@@ -244,7 +246,7 @@
             this.m_cmd_luu.ImageList = this.ImageList;
             this.m_cmd_luu.Location = new System.Drawing.Point(454, 4);
             this.m_cmd_luu.Name = "m_cmd_luu";
-            this.m_cmd_luu.Size = new System.Drawing.Size(87, 28);
+            this.m_cmd_luu.Size = new System.Drawing.Size(87, 38);
             this.m_cmd_luu.TabIndex = 16;
             this.m_cmd_luu.Text = "&Lưu nhanh";
             this.m_cmd_luu.Click += new System.EventHandler(this.m_cmd_luu_Click);
@@ -260,7 +262,7 @@
             this.m_cmd_update.ImageList = this.ImageList;
             this.m_cmd_update.Location = new System.Drawing.Point(541, 4);
             this.m_cmd_update.Name = "m_cmd_update";
-            this.m_cmd_update.Size = new System.Drawing.Size(136, 28);
+            this.m_cmd_update.Size = new System.Drawing.Size(136, 38);
             this.m_cmd_update.TabIndex = 13;
             this.m_cmd_update.Text = "&Nhập điểm từ XLSX";
             this.m_cmd_update.Click += new System.EventHandler(this.m_cmd_update_Click);
@@ -276,7 +278,7 @@
             this.m_cmd_exit.ImageList = this.ImageList;
             this.m_cmd_exit.Location = new System.Drawing.Point(677, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
-            this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_exit.Size = new System.Drawing.Size(88, 38);
             this.m_cmd_exit.TabIndex = 11;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_exit_Click);
@@ -290,15 +292,6 @@
             this.panel1.Size = new System.Drawing.Size(769, 47);
             this.panel1.TabIndex = 21;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.m_grc);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 47);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(769, 322);
-            this.panel2.TabIndex = 22;
-            // 
             // m_tieu_de_f207
             // 
             this.m_tieu_de_f207.AutoSize = true;
@@ -309,6 +302,26 @@
             this.m_tieu_de_f207.Size = new System.Drawing.Size(80, 16);
             this.m_tieu_de_f207.TabIndex = 0;
             this.m_tieu_de_f207.Text = "NHẬP ĐIỂM";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.m_grc);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 47);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(769, 312);
+            this.panel2.TabIndex = 22;
+            // 
+            // m_cmd_refresh
+            // 
+            this.m_cmd_refresh.Dock = System.Windows.Forms.DockStyle.Right;
+            this.m_cmd_refresh.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_refresh.Image")));
+            this.m_cmd_refresh.Location = new System.Drawing.Point(319, 4);
+            this.m_cmd_refresh.Name = "m_cmd_refresh";
+            this.m_cmd_refresh.Size = new System.Drawing.Size(135, 38);
+            this.m_cmd_refresh.TabIndex = 17;
+            this.m_cmd_refresh.Text = "Load lại trang";
+            this.m_cmd_refresh.Click += new System.EventHandler(this.m_cmd_refresh_Click);
             // 
             // F207_Nhap_diem
             // 
@@ -355,5 +368,6 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private System.Windows.Forms.Label m_tieu_de_f207;
+        private DevExpress.XtraEditors.SimpleButton m_cmd_refresh;
     }
 }

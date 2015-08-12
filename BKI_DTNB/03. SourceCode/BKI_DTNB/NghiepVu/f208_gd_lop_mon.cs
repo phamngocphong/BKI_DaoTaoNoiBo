@@ -248,5 +248,19 @@ namespace BKI_DTNB.NghiepVu
                 }
             return v_lst;
         }
+
+        private void m_cmd_refresh_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                this.Refresh();
+            }
+            catch (Exception ex)
+            {
+                CSystemLog_301.ExceptionHandle(ex);
+
+            }
+        }
     }
 }

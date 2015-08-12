@@ -129,5 +129,18 @@ namespace BKI_DTNB.NghiepVu
                 e.Menu.Items.Add(WinFormControls.CreateRowSubMenu(view, rowHandle));
             }
         }
+
+        private void m_cmd_refresh_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Refresh();
+            }
+            catch (Exception ex)
+            {
+                CSystemLog_301.ExceptionHandle(ex);
+
+            }
+        }
     }
 }

@@ -46,6 +46,7 @@
             this.m_cmd_update = new SIS.Controls.Button.SiSButton();
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_refresh = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.m_grc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv)).BeginInit();
             this.m_pnl_out_place_dm.SuspendLayout();
@@ -58,7 +59,7 @@
             this.m_grc.Location = new System.Drawing.Point(0, 0);
             this.m_grc.MainView = this.m_grv;
             this.m_grc.Name = "m_grc";
-            this.m_grc.Size = new System.Drawing.Size(617, 444);
+            this.m_grc.Size = new System.Drawing.Size(1048, 444);
             this.m_grc.TabIndex = 0;
             this.m_grc.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.m_grv});
@@ -185,14 +186,15 @@
             // 
             // m_pnl_out_place_dm
             // 
+            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_refresh);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_update);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_delete);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 408);
+            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 403);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(617, 36);
+            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(1048, 41);
             this.m_pnl_out_place_dm.TabIndex = 21;
             // 
             // m_cmd_update
@@ -204,9 +206,9 @@
             this.m_cmd_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_update.ImageIndex = 2;
             this.m_cmd_update.ImageList = this.ImageList;
-            this.m_cmd_update.Location = new System.Drawing.Point(328, 4);
+            this.m_cmd_update.Location = new System.Drawing.Point(759, 4);
             this.m_cmd_update.Name = "m_cmd_update";
-            this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_update.Size = new System.Drawing.Size(88, 33);
             this.m_cmd_update.TabIndex = 12;
             this.m_cmd_update.Text = "&Sửa";
             this.m_cmd_update.Click += new System.EventHandler(this.m_cmd_update_Click);
@@ -220,9 +222,9 @@
             this.m_cmd_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_delete.ImageIndex = 4;
             this.m_cmd_delete.ImageList = this.ImageList;
-            this.m_cmd_delete.Location = new System.Drawing.Point(416, 4);
+            this.m_cmd_delete.Location = new System.Drawing.Point(847, 4);
             this.m_cmd_delete.Name = "m_cmd_delete";
-            this.m_cmd_delete.Size = new System.Drawing.Size(109, 28);
+            this.m_cmd_delete.Size = new System.Drawing.Size(109, 33);
             this.m_cmd_delete.TabIndex = 14;
             this.m_cmd_delete.Text = "&Hủy chứng chỉ";
             this.m_cmd_delete.Click += new System.EventHandler(this.m_cmd_delete_Click);
@@ -236,18 +238,29 @@
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(525, 4);
+            this.m_cmd_exit.Location = new System.Drawing.Point(956, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
-            this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_exit.Size = new System.Drawing.Size(88, 33);
             this.m_cmd_exit.TabIndex = 11;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_exit_Click);
+            // 
+            // m_cmd_refresh
+            // 
+            this.m_cmd_refresh.Dock = System.Windows.Forms.DockStyle.Right;
+            this.m_cmd_refresh.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_refresh.Image")));
+            this.m_cmd_refresh.Location = new System.Drawing.Point(624, 4);
+            this.m_cmd_refresh.Name = "m_cmd_refresh";
+            this.m_cmd_refresh.Size = new System.Drawing.Size(135, 33);
+            this.m_cmd_refresh.TabIndex = 19;
+            this.m_cmd_refresh.Text = "Load lại trang";
+            this.m_cmd_refresh.Click += new System.EventHandler(this.m_cmd_refresh_Click);
             // 
             // F209_gd_chung_chi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(617, 444);
+            this.ClientSize = new System.Drawing.Size(1048, 444);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Controls.Add(this.m_grc);
             this.Name = "F209_gd_chung_chi";
@@ -278,5 +291,6 @@
         internal SIS.Controls.Button.SiSButton m_cmd_delete;
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
+        private DevExpress.XtraEditors.SimpleButton m_cmd_refresh;
     }
 }

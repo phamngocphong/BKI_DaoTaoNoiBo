@@ -34,6 +34,7 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.m_cmd_hien_thi = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.m_cmd_refresh = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -46,7 +47,7 @@
             this.pivotGridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pivotGridControl1.Location = new System.Drawing.Point(2, 2);
             this.pivotGridControl1.Name = "pivotGridControl1";
-            this.pivotGridControl1.Size = new System.Drawing.Size(479, 208);
+            this.pivotGridControl1.Size = new System.Drawing.Size(635, 208);
             this.pivotGridControl1.TabIndex = 5;
             this.pivotGridControl1.CellDoubleClick += new DevExpress.XtraPivotGrid.PivotCellEventHandler(this.pivotGridControl1_CellDoubleClick);
             // 
@@ -61,12 +62,13 @@
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.m_cmd_refresh);
             this.panelControl1.Controls.Add(this.m_dat);
             this.panelControl1.Controls.Add(this.m_cmd_hien_thi);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(483, 50);
+            this.panelControl1.Size = new System.Drawing.Size(639, 50);
             this.panelControl1.TabIndex = 4;
             // 
             // m_cmd_hien_thi
@@ -85,14 +87,24 @@
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 50);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(483, 212);
+            this.panelControl2.Size = new System.Drawing.Size(639, 212);
             this.panelControl2.TabIndex = 6;
+            // 
+            // m_cmd_refresh
+            // 
+            this.m_cmd_refresh.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_refresh.Image")));
+            this.m_cmd_refresh.Location = new System.Drawing.Point(492, 5);
+            this.m_cmd_refresh.Name = "m_cmd_refresh";
+            this.m_cmd_refresh.Size = new System.Drawing.Size(135, 31);
+            this.m_cmd_refresh.TabIndex = 20;
+            this.m_cmd_refresh.Text = "Load lại trang";
+            this.m_cmd_refresh.Click += new System.EventHandler(this.m_cmd_refresh_Click);
             // 
             // f305_BAO_CAO_CHUNG_CHI_HET_HAN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(483, 262);
+            this.ClientSize = new System.Drawing.Size(639, 262);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Name = "f305_BAO_CAO_CHUNG_CHI_HET_HAN";
@@ -114,5 +126,6 @@
         private DevExpress.XtraEditors.SimpleButton m_cmd_hien_thi;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.PanelControl panelControl2;
+        private DevExpress.XtraEditors.SimpleButton m_cmd_refresh;
     }
 }

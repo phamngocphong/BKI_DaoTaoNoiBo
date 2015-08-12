@@ -34,6 +34,7 @@
             this.m_cmd_hien_thi = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.m_cmd_refresh = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -72,6 +73,7 @@
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.m_cmd_refresh);
             this.panelControl1.Controls.Add(this.m_dat);
             this.panelControl1.Controls.Add(this.m_cmd_hien_thi);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -88,6 +90,16 @@
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(744, 318);
             this.panelControl2.TabIndex = 4;
+            // 
+            // m_cmd_refresh
+            // 
+            this.m_cmd_refresh.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_refresh.Image")));
+            this.m_cmd_refresh.Location = new System.Drawing.Point(573, 16);
+            this.m_cmd_refresh.Name = "m_cmd_refresh";
+            this.m_cmd_refresh.Size = new System.Drawing.Size(135, 34);
+            this.m_cmd_refresh.TabIndex = 3;
+            this.m_cmd_refresh.Text = "Load lại trang";
+            this.m_cmd_refresh.Click += new System.EventHandler(this.m_cmd_refresh_Click);
             // 
             // F303_Ket_qua_dao_tao
             // 
@@ -115,5 +127,6 @@
         private DevExpress.XtraEditors.SimpleButton m_cmd_hien_thi;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.PanelControl panelControl2;
+        private DevExpress.XtraEditors.SimpleButton m_cmd_refresh;
     }
 }

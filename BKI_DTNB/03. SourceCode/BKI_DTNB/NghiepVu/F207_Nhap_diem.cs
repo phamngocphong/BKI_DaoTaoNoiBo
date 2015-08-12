@@ -201,5 +201,18 @@ namespace BKI_DTNB.NghiepVu
                 update_lop_mon(v_dr);
             }
         }
+
+        private void m_cmd_refresh_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Refresh();
+            }
+            catch (Exception ex)
+            {
+                CSystemLog_301.ExceptionHandle(ex);
+
+            }
+        }
     }
 }

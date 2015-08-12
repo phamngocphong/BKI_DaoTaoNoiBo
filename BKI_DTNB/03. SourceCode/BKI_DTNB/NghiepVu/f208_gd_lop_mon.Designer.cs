@@ -48,6 +48,7 @@
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.m_cmd_refresh = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.m_grc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv)).BeginInit();
             this.m_pnl_out_place_dm.SuspendLayout();
@@ -62,7 +63,7 @@
             this.m_grc.Location = new System.Drawing.Point(2, 2);
             this.m_grc.MainView = this.m_grv;
             this.m_grc.Name = "m_grc";
-            this.m_grc.Size = new System.Drawing.Size(778, 233);
+            this.m_grc.Size = new System.Drawing.Size(778, 227);
             this.m_grc.TabIndex = 0;
             this.m_grc.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.m_grv});
@@ -184,16 +185,17 @@
             // 
             // m_pnl_out_place_dm
             // 
+            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_refresh);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_luu);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_insert);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_update);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_delete);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 237);
+            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 231);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(782, 36);
+            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(782, 42);
             this.m_pnl_out_place_dm.TabIndex = 21;
             // 
             // m_cmd_luu
@@ -207,7 +209,7 @@
             this.m_cmd_luu.ImageList = this.ImageList;
             this.m_cmd_luu.Location = new System.Drawing.Point(338, 4);
             this.m_cmd_luu.Name = "m_cmd_luu";
-            this.m_cmd_luu.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_luu.Size = new System.Drawing.Size(88, 34);
             this.m_cmd_luu.TabIndex = 15;
             this.m_cmd_luu.Text = "&Lưu nhanh";
             this.m_cmd_luu.Click += new System.EventHandler(this.m_cmd_luu_Click);
@@ -223,7 +225,7 @@
             this.m_cmd_insert.ImageList = this.ImageList;
             this.m_cmd_insert.Location = new System.Drawing.Point(426, 4);
             this.m_cmd_insert.Name = "m_cmd_insert";
-            this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_insert.Size = new System.Drawing.Size(88, 34);
             this.m_cmd_insert.TabIndex = 12;
             this.m_cmd_insert.Text = "&Thêm";
             this.m_cmd_insert.Click += new System.EventHandler(this.m_cmd_insert_Click);
@@ -239,7 +241,7 @@
             this.m_cmd_update.ImageList = this.ImageList;
             this.m_cmd_update.Location = new System.Drawing.Point(514, 4);
             this.m_cmd_update.Name = "m_cmd_update";
-            this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_update.Size = new System.Drawing.Size(88, 34);
             this.m_cmd_update.TabIndex = 13;
             this.m_cmd_update.Text = "&Sửa";
             this.m_cmd_update.Click += new System.EventHandler(this.m_cmd_update_Click);
@@ -255,7 +257,7 @@
             this.m_cmd_delete.ImageList = this.ImageList;
             this.m_cmd_delete.Location = new System.Drawing.Point(602, 4);
             this.m_cmd_delete.Name = "m_cmd_delete";
-            this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_delete.Size = new System.Drawing.Size(88, 34);
             this.m_cmd_delete.TabIndex = 14;
             this.m_cmd_delete.Text = "&Xoá";
             this.m_cmd_delete.Click += new System.EventHandler(this.m_cmd_delete_Click);
@@ -271,7 +273,7 @@
             this.m_cmd_exit.ImageList = this.ImageList;
             this.m_cmd_exit.Location = new System.Drawing.Point(690, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
-            this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_exit.Size = new System.Drawing.Size(88, 34);
             this.m_cmd_exit.TabIndex = 11;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_exit_Click);
@@ -282,8 +284,19 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(782, 237);
+            this.panelControl1.Size = new System.Drawing.Size(782, 231);
             this.panelControl1.TabIndex = 22;
+            // 
+            // m_cmd_refresh
+            // 
+            this.m_cmd_refresh.Dock = System.Windows.Forms.DockStyle.Right;
+            this.m_cmd_refresh.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_refresh.Image")));
+            this.m_cmd_refresh.Location = new System.Drawing.Point(203, 4);
+            this.m_cmd_refresh.Name = "m_cmd_refresh";
+            this.m_cmd_refresh.Size = new System.Drawing.Size(135, 34);
+            this.m_cmd_refresh.TabIndex = 18;
+            this.m_cmd_refresh.Text = "Load lại trang";
+            this.m_cmd_refresh.Click += new System.EventHandler(this.m_cmd_refresh_Click);
             // 
             // f208_gd_lop_mon
             // 
@@ -324,5 +337,6 @@
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         internal SIS.Controls.Button.SiSButton m_cmd_luu;
+        private DevExpress.XtraEditors.SimpleButton m_cmd_refresh;
     }
 }

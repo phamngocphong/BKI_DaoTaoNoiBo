@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteDTNB.master.cs" Inherits="BKI_DTNB_WEB.SiteDTNB" %>
+
+<%@ Register assembly="DevExpress.Web.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxRibbon" tagprefix="dx" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div id="menu">
+            <dx:ASPxRibbon ID="ASPxRibbon" runat="server">
+                <Tabs>
+                    <dx:RibbonTab Name="Home" Text="Home">
+                        <Groups>
+                            <dx:RibbonGroup Name="Tasks" Text="Tasks">
+                                <Items>
+                                    <dx:RibbonButtonItem Name="TasksList" 
+                                      Text="Tasks List" Size="Large">
+                                        <LargeImage 
+                                          IconID="tasks_task_32x32" />
+                                    </dx:RibbonButtonItem>
+                                    <dx:RibbonButtonItem Name="NewTask" 
+                                      Text="New" Size="Large">
+                                        <LargeImage 
+                                          IconID="tasks_newtask_32x32" />
+                                    </dx:RibbonButtonItem>
+                                </Items>
+                            </dx:RibbonGroup>
+                            <%-- And other groups with items --%>
+                        </Groups>
+                    </dx:RibbonTab>
+                </Tabs>
+            </dx:ASPxRibbon>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

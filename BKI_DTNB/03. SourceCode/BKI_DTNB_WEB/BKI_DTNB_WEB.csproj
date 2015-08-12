@@ -129,6 +129,7 @@
     <Content Include="Account\F101_Login.aspx" />
     <Content Include="Account\OpenAuthProviders.ascx" />
     <Content Include="ChucNang\F300_Chuong_trinh_khung.aspx" />
+    <Content Include="ChucNang\F301_Dang_ki_hoc.aspx" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -230,6 +231,7 @@
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
+    <Content Include="SiteDTNB.Master" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account\F101_Login.aspx.cs">
@@ -256,6 +258,13 @@
     <Compile Include="ChucNang\F300_Chuong_trinh_khung.aspx.designer.cs">
       <DependentUpon>F300_Chuong_trinh_khung.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ChucNang\F301_Dang_ki_hoc.aspx.cs">
+      <DependentUpon>F301_Dang_ki_hoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChucNang\F301_Dang_ki_hoc.aspx.designer.cs">
+      <DependentUpon>F301_Dang_ki_hoc.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -266,6 +275,13 @@
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SiteDTNB.Master.cs">
+      <DependentUpon>SiteDTNB.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteDTNB.Master.designer.cs">
+      <DependentUpon>SiteDTNB.Master</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

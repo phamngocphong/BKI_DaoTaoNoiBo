@@ -4,30 +4,31 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" runat="server" contentplaceholderid="ContentPlaceHolder1">
-    <dx:ASPxGridView ID="m_grv" runat="server" AutoGenerateColumns="False" Width="799px">
+    <dx:ASPxGridView ID="m_grv" runat="server" AutoGenerateColumns="False" Width="799px" ClientIDMode="Static">
         <Columns>
-            <dx:GridViewDataTextColumn Caption="MÃ NHÂN VIÊN" FieldName="MA_NHAN_VIEN" VisibleIndex="0">
-            </dx:GridViewDataTextColumn>
             <dx:GridViewDataTextColumn Caption="TRUNG TÂM" FieldName="MA_TRUNG_TAM" VisibleIndex="1">
             </dx:GridViewDataTextColumn>
             <dx:GridViewDataTextColumn Caption="NGẠCH" FieldName="MA_NGACH" VisibleIndex="2">
             </dx:GridViewDataTextColumn>
             <dx:GridViewDataTextColumn Caption="CHỨC VỤ" FieldName="CHUC_VU" VisibleIndex="3">
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn Caption="NGHIỆP VỤ" FieldName="NGHIEP_VU" VisibleIndex="4">
+            <dx:GridViewDataTextColumn Caption="NGHIỆP VỤ" FieldName="TEN_NGHIEP_VU" VisibleIndex="4">
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn Caption="MÔN HỌC" FieldName="MON_HOC" VisibleIndex="5">
+            <dx:GridViewDataTextColumn Caption="MÔN HỌC" FieldName="TEN_MON_HOC" VisibleIndex="5">
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn Caption="ĐIỂM CHUYÊN CẦN" FieldName="DIEM_CHUYEN_CAN" VisibleIndex="6">
+            <dx:GridViewDataTextColumn Caption="ĐIỂM CHUYÊN CẦN" FieldName="diem_chuyen_can" VisibleIndex="6">
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn Caption="DIỂM THI" FieldName="DIEM_THI" VisibleIndex="7">
+            <dx:GridViewDataTextColumn Caption="DIỂM THI" FieldName="diem_thi" VisibleIndex="7">
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn Caption="ĐIỂM KIỂM TRA" FieldName="DIEM_KIEM_TRA" VisibleIndex="8">
+            <dx:GridViewDataTextColumn Caption="ĐIỂM KIỂM TRA" FieldName="diem_kiem_tra" VisibleIndex="8">
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn Caption="KẾT QUẢ" FieldName="KET_QUA" VisibleIndex="9">
+            <dx:GridViewDataTextColumn Caption="KẾT QUẢ" FieldName="TEN" VisibleIndex="9">
             </dx:GridViewDataTextColumn>
         </Columns>
+        <SettingsPager PageSize="100">
+        </SettingsPager>
         <Settings ShowGroupPanel="True" />
+        <SettingsDataSecurity AllowDelete="False" AllowEdit="False" AllowInsert="False" />
     </dx:ASPxGridView>
 </asp:Content>
 

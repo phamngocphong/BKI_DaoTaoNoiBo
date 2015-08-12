@@ -34,6 +34,7 @@ namespace BKI_DTNB_WEB.ChucNang
             v_ds.Tables.Add(v_dt);
             v_us.FillDatasetChuongTrinhKhung(v_ds, CIPConvert.ToDecimal(457));
             m_grv.DataSource = v_ds.Tables[0];
+            m_grv.DataBind();
 
             //if (m_grv == 0)
             //{

@@ -172,6 +172,9 @@
     <Reference Include="SiSMenu">
       <HintPath>..\DLL\SiSMenu.dll</HintPath>
     </Reference>
+    <Reference Include="SkinProject1">
+      <HintPath>..\..\..\..\..\..\Documents\My DXSkins\SkinProject1\SkinProject1.dll</HintPath>
+    </Reference>
     <Reference Include="System">
       <Private>True</Private>
     </Reference>
@@ -1073,6 +1076,12 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tuyendung9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

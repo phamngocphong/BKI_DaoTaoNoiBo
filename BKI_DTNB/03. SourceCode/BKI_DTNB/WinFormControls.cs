@@ -36,6 +36,8 @@ namespace BKI_DTNB
             format_control(ip_form, "m_lbl");
             format_control(ip_form, "m_tieu_de");
             format_control(ip_form, "m_cbo");
+            format_control(ip_form, "m_cmd");
+           
         
         }
         private static void format_control(Control ip_c, string ip_st)
@@ -54,6 +56,11 @@ namespace BKI_DTNB
             if (ip_c.Name.StartsWith(ip_st) && ip_st == "m_cbo")
             {
                 ip_c.Font = new Font("Arial", 10, FontStyle.Bold);
+            }
+            if (ip_c.Name.StartsWith(ip_st)&& ip_st=="m_cmd")
+            {
+                ip_c.ForeColor = Color.White;
+                ip_c.BackColor = Color.Maroon;
             }
             else 
             {

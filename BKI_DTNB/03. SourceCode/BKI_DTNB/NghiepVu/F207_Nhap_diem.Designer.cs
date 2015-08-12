@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F207_Nhap_diem));
             this.m_grc = new DevExpress.XtraGrid.GridControl();
             this.m_grv = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -43,15 +42,15 @@
             this.c_diem_kiem_tra = new DevExpress.XtraGrid.Columns.GridColumn();
             this.c_diem_thi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ImageList = new System.Windows.Forms.ImageList(this.components);
+            this.ImageList = new System.Windows.Forms.ImageList();
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
+            this.m_cmd_refresh = new DevExpress.XtraEditors.SimpleButton();
             this.m_cmd_luu = new SIS.Controls.Button.SiSButton();
             this.m_cmd_update = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.m_tieu_de_f207 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.m_cmd_refresh = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.m_grc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
@@ -235,6 +234,17 @@
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(769, 46);
             this.m_pnl_out_place_dm.TabIndex = 20;
             // 
+            // m_cmd_refresh
+            // 
+            this.m_cmd_refresh.Dock = System.Windows.Forms.DockStyle.Right;
+            this.m_cmd_refresh.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_refresh.Image")));
+            this.m_cmd_refresh.Location = new System.Drawing.Point(319, 4);
+            this.m_cmd_refresh.Name = "m_cmd_refresh";
+            this.m_cmd_refresh.Size = new System.Drawing.Size(135, 38);
+            this.m_cmd_refresh.TabIndex = 17;
+            this.m_cmd_refresh.Text = "Load lại trang";
+            this.m_cmd_refresh.Click += new System.EventHandler(this.m_cmd_refresh_Click);
+            // 
             // m_cmd_luu
             // 
             this.m_cmd_luu.AdjustImageLocation = new System.Drawing.Point(0, 0);
@@ -295,13 +305,13 @@
             // m_tieu_de_f207
             // 
             this.m_tieu_de_f207.AutoSize = true;
-            this.m_tieu_de_f207.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_tieu_de_f207.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.m_tieu_de_f207.ForeColor = System.Drawing.Color.Maroon;
-            this.m_tieu_de_f207.Location = new System.Drawing.Point(259, 18);
+            this.m_tieu_de_f207.Location = new System.Drawing.Point(3, 18);
             this.m_tieu_de_f207.Name = "m_tieu_de_f207";
-            this.m_tieu_de_f207.Size = new System.Drawing.Size(80, 16);
+            this.m_tieu_de_f207.Size = new System.Drawing.Size(125, 16);
             this.m_tieu_de_f207.TabIndex = 0;
-            this.m_tieu_de_f207.Text = "NHẬP ĐIỂM";
+            this.m_tieu_de_f207.Text = "F207 - NHẬP ĐIỂM ";
             // 
             // panel2
             // 
@@ -311,17 +321,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(769, 312);
             this.panel2.TabIndex = 22;
-            // 
-            // m_cmd_refresh
-            // 
-            this.m_cmd_refresh.Dock = System.Windows.Forms.DockStyle.Right;
-            this.m_cmd_refresh.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_refresh.Image")));
-            this.m_cmd_refresh.Location = new System.Drawing.Point(319, 4);
-            this.m_cmd_refresh.Name = "m_cmd_refresh";
-            this.m_cmd_refresh.Size = new System.Drawing.Size(135, 38);
-            this.m_cmd_refresh.TabIndex = 17;
-            this.m_cmd_refresh.Text = "Load lại trang";
-            this.m_cmd_refresh.Click += new System.EventHandler(this.m_cmd_refresh_Click);
             // 
             // F207_Nhap_diem
             // 

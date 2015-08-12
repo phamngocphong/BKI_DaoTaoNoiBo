@@ -89,7 +89,7 @@
             // 
             this.m_tieu_de_f205.AutoSize = true;
             this.m_tieu_de_f205.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.m_tieu_de_f205.Location = new System.Drawing.Point(247, 19);
+            this.m_tieu_de_f205.Location = new System.Drawing.Point(37, 20);
             this.m_tieu_de_f205.Name = "m_tieu_de_f205";
             this.m_tieu_de_f205.Size = new System.Drawing.Size(153, 19);
             this.m_tieu_de_f205.TabIndex = 4;

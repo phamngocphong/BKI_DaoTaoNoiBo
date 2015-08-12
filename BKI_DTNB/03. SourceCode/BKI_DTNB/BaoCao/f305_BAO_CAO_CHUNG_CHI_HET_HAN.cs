@@ -22,7 +22,7 @@ namespace BKI_DTNB.BaoCao
         public f305_BAO_CAO_CHUNG_CHI_HET_HAN()
         {
             InitializeComponent();
-            WinFormControls.DTNB_ControlFormat(this);
+           
         }
 
         private void f305_BAO_CAO_CHUNG_CHI_HET_HAN_Load(object sender, EventArgs e)
@@ -62,6 +62,7 @@ namespace BKI_DTNB.BaoCao
 
         private void m_cmd_hien_thi_Click(object sender, EventArgs e)
         {
+            
             try
             {
                 load_data_to_pivot_grid();

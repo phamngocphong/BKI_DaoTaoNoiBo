@@ -87,6 +87,7 @@
             // 
             // m_search_lookup_edit
             // 
+            this.m_search_lookup_edit.EditValue = "Nhập thông tin cần tìm kiếm";
             this.m_search_lookup_edit.Location = new System.Drawing.Point(105, 22);
             this.m_search_lookup_edit.Name = "m_search_lookup_edit";
             this.m_search_lookup_edit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {

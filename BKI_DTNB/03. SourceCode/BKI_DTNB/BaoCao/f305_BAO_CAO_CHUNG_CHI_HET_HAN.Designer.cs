@@ -32,9 +32,9 @@
             this.pivotGridControl1 = new DevExpress.XtraPivotGrid.PivotGridControl();
             this.m_dat = new System.Windows.Forms.DateTimePicker();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.m_cmd_refresh = new DevExpress.XtraEditors.SimpleButton();
             this.m_cmd_hien_thi = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.m_cmd_refresh = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -71,8 +71,27 @@
             this.panelControl1.Size = new System.Drawing.Size(639, 50);
             this.panelControl1.TabIndex = 4;
             // 
+            // m_cmd_refresh
+            // 
+            this.m_cmd_refresh.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_refresh.Image")));
+            this.m_cmd_refresh.Location = new System.Drawing.Point(492, 5);
+            this.m_cmd_refresh.Name = "m_cmd_refresh";
+            this.m_cmd_refresh.Size = new System.Drawing.Size(135, 31);
+            this.m_cmd_refresh.TabIndex = 20;
+            this.m_cmd_refresh.Text = "Load lại trang";
+            this.m_cmd_refresh.Click += new System.EventHandler(this.m_cmd_refresh_Click);
+            // 
             // m_cmd_hien_thi
             // 
+            this.m_cmd_hien_thi.Appearance.BackColor = System.Drawing.Color.Maroon;
+            this.m_cmd_hien_thi.Appearance.BackColor2 = System.Drawing.Color.Maroon;
+            this.m_cmd_hien_thi.Appearance.BorderColor = System.Drawing.Color.Maroon;
+            this.m_cmd_hien_thi.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.m_cmd_hien_thi.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.m_cmd_hien_thi.Appearance.Options.UseBackColor = true;
+            this.m_cmd_hien_thi.Appearance.Options.UseBorderColor = true;
+            this.m_cmd_hien_thi.Appearance.Options.UseFont = true;
+            this.m_cmd_hien_thi.Appearance.Options.UseForeColor = true;
             this.m_cmd_hien_thi.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_hien_thi.Image")));
             this.m_cmd_hien_thi.Location = new System.Drawing.Point(271, 5);
             this.m_cmd_hien_thi.Name = "m_cmd_hien_thi";
@@ -89,16 +108,6 @@
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(639, 212);
             this.panelControl2.TabIndex = 6;
-            // 
-            // m_cmd_refresh
-            // 
-            this.m_cmd_refresh.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_refresh.Image")));
-            this.m_cmd_refresh.Location = new System.Drawing.Point(492, 5);
-            this.m_cmd_refresh.Name = "m_cmd_refresh";
-            this.m_cmd_refresh.Size = new System.Drawing.Size(135, 31);
-            this.m_cmd_refresh.TabIndex = 20;
-            this.m_cmd_refresh.Text = "Load lại trang";
-            this.m_cmd_refresh.Click += new System.EventHandler(this.m_cmd_refresh_Click);
             // 
             // f305_BAO_CAO_CHUNG_CHI_HET_HAN
             // 

@@ -302,6 +302,44 @@
   <ItemGroup>
     <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BKI_DTNB.DS\BKI_DTNB.DS.csproj">
+      <Project>{4aeba63f-e5b5-4d0c-b1b5-e6bcb13e1b5a}</Project>
+      <Name>BKI_DTNB.DS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BKI_DTNB.US\BKI_DTNB.US.csproj">
+      <Project>{cafda83f-d091-49bf-816f-f7a7a72c68ec}</Project>
+      <Name>BKI_DTNB.US</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BKI_DTNB\BKI_DTNB.csproj">
+      <Project>{b91f4be2-5024-4012-a4a8-4e52e8609778}</Project>
+      <Name>BKI_DTNB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IPBusinessService\IPBusinessService.vbproj">
+      <Project>{73ca732c-2cfb-4a14-b0b9-f43763b1c2f3}</Project>
+      <Name>IPBusinessService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IPCommon\IPCommon.vbproj">
+      <Project>{2a74f1d1-c0ee-41fe-a708-a83b285accf2}</Project>
+      <Name>IPCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IPData\IPData.vbproj">
+      <Project>{9acedd70-fda2-44d8-a004-3a7eaf86a954}</Project>
+      <Name>IPData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IPException\IPException.vbproj">
+      <Project>{b73156c2-7034-4dea-a308-5e1782ff8db4}</Project>
+      <Name>IPException</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IPSystemAdmin\IPSystemAdmin.vbproj">
+      <Project>{455cd3a5-79ba-480a-b9bd-d4a7dda397a8}</Project>
+      <Name>IPSystemAdmin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IPUserService\IPUserService.vbproj">
+      <Project>{b490ea92-2990-4cbb-b58b-12901afcccb5}</Project>
+      <Name>IPUserService</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

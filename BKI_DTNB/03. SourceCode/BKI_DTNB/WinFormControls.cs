@@ -370,7 +370,7 @@ namespace BKI_DTNB
 
 
 
-        internal void FillDatasetChuongTrinhKhung(DataSet v_ds, decimal p)
+        public void FillDatasetChuongTrinhKhung(DataSet v_ds, decimal p)
         {
             CStoredProc v_cstore = new CStoredProc("pr_get_chuong_trinh_hoc_cua_1_nhan_vien");
             v_cstore.addDecimalInputParam("@id_nhan_vien", p);

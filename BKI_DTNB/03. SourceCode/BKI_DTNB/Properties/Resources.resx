@@ -217,7 +217,5 @@
   <data name="1425905897_253501" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1425905897_253501.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tuyendung9" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tuyendung9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+ 
 </root>

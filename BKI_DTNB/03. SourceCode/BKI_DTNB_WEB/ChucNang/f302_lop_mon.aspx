@@ -2,9 +2,10 @@
 <%@ Register assembly="DevExpress.Web.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxGridView" tagprefix="dx" %>
 <%@ Register assembly="DevExpress.Web.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxEditors" tagprefix="dx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
 </asp:Content>
 <asp:Content ID="Content2" runat="server" contentplaceholderid="ContentPlaceHolder1">
-    <dx:ASPxGridView ID="m_grv" runat="server" AutoGenerateColumns="False" Width="977px">
+    <dx:ASPxGridView ID="m_grv" runat="server" AutoGenerateColumns="False" Width="977px" KeyFieldName="ID" OnCustomButtonCallback="m_grv_CustomButtonCallback">
         <Columns>
             <dx:GridViewDataTextColumn Caption="MÃ LỚP HỌC" FieldName="MA_LOP_HOC" VisibleIndex="0">
             </dx:GridViewDataTextColumn>
@@ -20,11 +21,13 @@
             </dx:GridViewDataTextColumn>
             <dx:GridViewDataTextColumn Caption="ĐIỂM QUA MÔN" FieldName="DIEM_QUA_MON" VisibleIndex="6">
             </dx:GridViewDataTextColumn>
-          
-                <dx:GridViewCommandColumn VisibleIndex="8" ButtonType="Button" Caption="ĐĂNG KÍ" ShowEditButton="True">
+            <dx:GridViewCommandColumn VisibleIndex="8" ButtonType="Button" Caption="ĐĂNG KÍ">
+                <CustomButtons>
+                    <dx:GridViewCommandColumnCustomButton ID="Clone" Text="ĐĂNG KÍ">
+                        <Image ToolTip="Clone Record" Url="https://demos.devexpress.com/ASPxGridViewDemos/Columns/Images/clone.png" />
+                    </dx:GridViewCommandColumnCustomButton>
+                </CustomButtons>
             </dx:GridViewCommandColumn>
-          
-            
         </Columns>
     </dx:ASPxGridView>
 </asp:Content>

@@ -39,5 +39,10 @@ namespace BKI_DTNB_WEB.ChucNang
             m_grv.DataSource = v_ds.Tables[0];
             m_grv.DataBind();
         }
+
+        protected void m_grv_CustomButtonCallback(object sender, DevExpress.Web.ASPxGridView.ASPxGridViewCustomButtonCallbackEventArgs e)
+        {
+            var z = e.VisibleIndex.ToString();
+        }
     }
 }

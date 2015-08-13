@@ -9,17 +9,11 @@ namespace BKI_DTNB
 {
     public static class Mail
     {
-        public static void sendEmail()
+        public static void sendEmail(string emailFrom, string password, string emailTo, string subject, string body)
         {
             string smtpAddress = "smtp.gmail.com";
             int portNumber = 587;
             bool enableSSL = true;
-
-            string emailFrom = "thaiph.bkhn@gmail.com";
-            string password = "thai14101992";
-            string emailTo = "taquangngoc0501@gmail.com";
-            string subject = "Hello";
-            string body = "Hello, I'm just writing this to say Hi!";
 
             using (MailMessage mail = new MailMessage())
             {
@@ -30,7 +24,7 @@ namespace BKI_DTNB
                 mail.IsBodyHtml = true;
                 // Can set to false, if you are sending pure text.
 
-                mail.Attachments.Add(new Attachment("H:\\cpaior2012_path.pdf"));
+                //mail.Attachments.Add(new Attachment("H:\\cpaior2012_path.pdf"));
 
                 using (SmtpClient smtp = new SmtpClient(smtpAddress, portNumber))
                 {

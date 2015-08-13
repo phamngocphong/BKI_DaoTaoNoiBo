@@ -29,14 +29,40 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraBars.Ribbon.ReduceOperation reduceOperation2 = new DevExpress.XtraBars.Ribbon.ReduceOperation();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F130_Danh_muc_mau_email));
+            DevExpress.XtraBars.Ribbon.ReduceOperation reduceOperation4 = new DevExpress.XtraBars.Ribbon.ReduceOperation();
+            DevExpress.XtraBars.Ribbon.ReduceOperation reduceOperation3 = new DevExpress.XtraBars.Ribbon.ReduceOperation();
             DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup3 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
             DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup4 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
             DevExpress.XtraRichEdit.Model.BorderInfo borderInfo2 = new DevExpress.XtraRichEdit.Model.BorderInfo();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F130_Danh_muc_mau_email));
-            this.richEditControl1 = new DevExpress.XtraRichEdit.RichEditControl();
-            this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
+            this.stylesRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.StylesRibbonPageGroup();
             this.richEditBarController1 = new DevExpress.XtraRichEdit.UI.RichEditBarController();
+            this.m_txt_noi_dung = new DevExpress.XtraRichEdit.RichEditControl();
+            this.homeRibbonPage1 = new DevExpress.XtraRichEdit.UI.HomeRibbonPage();
+            this.clipboardRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.ClipboardRibbonPageGroup();
+            this.fontRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.FontRibbonPageGroup();
+            this.paragraphRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.ParagraphRibbonPageGroup();
+            this.editingRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.EditingRibbonPageGroup();
+            this.insertRibbonPage1 = new DevExpress.XtraRichEdit.UI.InsertRibbonPage();
+            this.pagesRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.PagesRibbonPageGroup();
+            this.tablesRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.TablesRibbonPageGroup();
+            this.illustrationsRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.IllustrationsRibbonPageGroup();
+            this.linksRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.LinksRibbonPageGroup();
+            this.headerFooterRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.HeaderFooterRibbonPageGroup();
+            this.textRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.TextRibbonPageGroup();
+            this.symbolsRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.SymbolsRibbonPageGroup();
+            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
+            this.dockPanel1 = new DevExpress.XtraBars.Docking.DockPanel();
+            this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.m_cmd_insert = new DevExpress.XtraEditors.SimpleButton();
+            this.m_lb_control = new DevExpress.XtraEditors.ListBoxControl();
+            this.m_cmd_send_email = new DevExpress.XtraEditors.SimpleButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.m_txt_tieu_de_mail = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.m_lbl_tieu_de_mail = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.commonRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.CommonRibbonPageGroup();
             this.fileRibbonPage1 = new DevExpress.XtraRichEdit.UI.FileRibbonPage();
             this.undoItem1 = new DevExpress.XtraRichEdit.UI.UndoItem();
@@ -48,13 +74,13 @@
             this.quickPrintItem1 = new DevExpress.XtraRichEdit.UI.QuickPrintItem();
             this.printItem1 = new DevExpress.XtraRichEdit.UI.PrintItem();
             this.printPreviewItem1 = new DevExpress.XtraRichEdit.UI.PrintPreviewItem();
-            this.clipboardRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.ClipboardRibbonPageGroup();
-            this.homeRibbonPage1 = new DevExpress.XtraRichEdit.UI.HomeRibbonPage();
+            this.clipboardRibbonPageGroup2 = new DevExpress.XtraRichEdit.UI.ClipboardRibbonPageGroup();
+            this.homeRibbonPage2 = new DevExpress.XtraRichEdit.UI.HomeRibbonPage();
             this.pasteItem1 = new DevExpress.XtraRichEdit.UI.PasteItem();
             this.cutItem1 = new DevExpress.XtraRichEdit.UI.CutItem();
             this.copyItem1 = new DevExpress.XtraRichEdit.UI.CopyItem();
             this.pasteSpecialItem1 = new DevExpress.XtraRichEdit.UI.PasteSpecialItem();
-            this.fontRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.FontRibbonPageGroup();
+            this.fontRibbonPageGroup2 = new DevExpress.XtraRichEdit.UI.FontRibbonPageGroup();
             this.changeFontNameItem1 = new DevExpress.XtraRichEdit.UI.ChangeFontNameItem();
             this.changeFontSizeItem1 = new DevExpress.XtraRichEdit.UI.ChangeFontSizeItem();
             this.fontSizeIncreaseItem1 = new DevExpress.XtraRichEdit.UI.FontSizeIncreaseItem();
@@ -80,7 +106,7 @@
             this.repositoryItemRichEditFontSizeEdit1 = new DevExpress.XtraRichEdit.Design.RepositoryItemRichEditFontSizeEdit();
             this.barButtonGroup2 = new DevExpress.XtraBars.BarButtonGroup();
             this.barButtonGroup3 = new DevExpress.XtraBars.BarButtonGroup();
-            this.paragraphRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.ParagraphRibbonPageGroup();
+            this.paragraphRibbonPageGroup2 = new DevExpress.XtraRichEdit.UI.ParagraphRibbonPageGroup();
             this.toggleBulletedListItem1 = new DevExpress.XtraRichEdit.UI.ToggleBulletedListItem();
             this.toggleNumberingListItem1 = new DevExpress.XtraRichEdit.UI.ToggleNumberingListItem();
             this.toggleMultiLevelListItem1 = new DevExpress.XtraRichEdit.UI.ToggleMultiLevelListItem();
@@ -105,33 +131,31 @@
             this.barButtonGroup5 = new DevExpress.XtraBars.BarButtonGroup();
             this.barButtonGroup6 = new DevExpress.XtraBars.BarButtonGroup();
             this.barButtonGroup7 = new DevExpress.XtraBars.BarButtonGroup();
-            this.stylesRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.StylesRibbonPageGroup();
+            this.stylesRibbonPageGroup2 = new DevExpress.XtraRichEdit.UI.StylesRibbonPageGroup();
             this.galleryChangeStyleItem1 = new DevExpress.XtraRichEdit.UI.GalleryChangeStyleItem();
-            this.editingRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.EditingRibbonPageGroup();
+            this.editingRibbonPageGroup2 = new DevExpress.XtraRichEdit.UI.EditingRibbonPageGroup();
             this.findItem1 = new DevExpress.XtraRichEdit.UI.FindItem();
             this.replaceItem1 = new DevExpress.XtraRichEdit.UI.ReplaceItem();
-            this.pagesRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.PagesRibbonPageGroup();
-            this.insertRibbonPage1 = new DevExpress.XtraRichEdit.UI.InsertRibbonPage();
+            this.pagesRibbonPageGroup2 = new DevExpress.XtraRichEdit.UI.PagesRibbonPageGroup();
+            this.insertRibbonPage2 = new DevExpress.XtraRichEdit.UI.InsertRibbonPage();
             this.insertPageBreakItem21 = new DevExpress.XtraRichEdit.UI.InsertPageBreakItem2();
-            this.tablesRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.TablesRibbonPageGroup();
+            this.tablesRibbonPageGroup2 = new DevExpress.XtraRichEdit.UI.TablesRibbonPageGroup();
             this.insertTableItem1 = new DevExpress.XtraRichEdit.UI.InsertTableItem();
-            this.illustrationsRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.IllustrationsRibbonPageGroup();
+            this.illustrationsRibbonPageGroup2 = new DevExpress.XtraRichEdit.UI.IllustrationsRibbonPageGroup();
             this.insertPictureItem1 = new DevExpress.XtraRichEdit.UI.InsertPictureItem();
             this.insertFloatingPictureItem1 = new DevExpress.XtraRichEdit.UI.InsertFloatingPictureItem();
-            this.linksRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.LinksRibbonPageGroup();
+            this.linksRibbonPageGroup2 = new DevExpress.XtraRichEdit.UI.LinksRibbonPageGroup();
             this.insertBookmarkItem1 = new DevExpress.XtraRichEdit.UI.InsertBookmarkItem();
             this.insertHyperlinkItem1 = new DevExpress.XtraRichEdit.UI.InsertHyperlinkItem();
-            this.headerFooterRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.HeaderFooterRibbonPageGroup();
+            this.headerFooterRibbonPageGroup2 = new DevExpress.XtraRichEdit.UI.HeaderFooterRibbonPageGroup();
             this.editPageHeaderItem1 = new DevExpress.XtraRichEdit.UI.EditPageHeaderItem();
             this.editPageFooterItem1 = new DevExpress.XtraRichEdit.UI.EditPageFooterItem();
             this.insertPageNumberItem1 = new DevExpress.XtraRichEdit.UI.InsertPageNumberItem();
             this.insertPageCountItem1 = new DevExpress.XtraRichEdit.UI.InsertPageCountItem();
-            this.textRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.TextRibbonPageGroup();
+            this.textRibbonPageGroup2 = new DevExpress.XtraRichEdit.UI.TextRibbonPageGroup();
             this.insertTextBoxItem1 = new DevExpress.XtraRichEdit.UI.InsertTextBoxItem();
-            this.symbolsRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.SymbolsRibbonPageGroup();
+            this.symbolsRibbonPageGroup2 = new DevExpress.XtraRichEdit.UI.SymbolsRibbonPageGroup();
             this.insertSymbolItem1 = new DevExpress.XtraRichEdit.UI.InsertSymbolItem();
-            this.pageSetupRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.PageSetupRibbonPageGroup();
-            this.pageLayoutRibbonPage1 = new DevExpress.XtraRichEdit.UI.PageLayoutRibbonPage();
             this.changeSectionPageMarginsItem1 = new DevExpress.XtraRichEdit.UI.ChangeSectionPageMarginsItem();
             this.setNormalSectionPageMarginsItem1 = new DevExpress.XtraRichEdit.UI.SetNormalSectionPageMarginsItem();
             this.setNarrowSectionPageMarginsItem1 = new DevExpress.XtraRichEdit.UI.SetNarrowSectionPageMarginsItem();
@@ -160,64 +184,7 @@
             this.setSectionLineNumberingRestartNewSectionItem1 = new DevExpress.XtraRichEdit.UI.SetSectionLineNumberingRestartNewSectionItem();
             this.toggleParagraphSuppressLineNumbersItem1 = new DevExpress.XtraRichEdit.UI.ToggleParagraphSuppressLineNumbersItem();
             this.showLineNumberingFormItem1 = new DevExpress.XtraRichEdit.UI.ShowLineNumberingFormItem();
-            this.pageBackgroundRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.PageBackgroundRibbonPageGroup();
             this.changePageColorItem1 = new DevExpress.XtraRichEdit.UI.ChangePageColorItem();
-            this.tableOfContentsRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.TableOfContentsRibbonPageGroup();
-            this.referencesRibbonPage1 = new DevExpress.XtraRichEdit.UI.ReferencesRibbonPage();
-            this.insertTableOfContentsItem1 = new DevExpress.XtraRichEdit.UI.InsertTableOfContentsItem();
-            this.updateTableOfContentsItem1 = new DevExpress.XtraRichEdit.UI.UpdateTableOfContentsItem();
-            this.addParagraphsToTableOfContentItem1 = new DevExpress.XtraRichEdit.UI.AddParagraphsToTableOfContentItem();
-            this.setParagraphHeadingLevelItem1 = new DevExpress.XtraRichEdit.UI.SetParagraphHeadingLevelItem();
-            this.setParagraphHeadingLevelItem2 = new DevExpress.XtraRichEdit.UI.SetParagraphHeadingLevelItem();
-            this.setParagraphHeadingLevelItem3 = new DevExpress.XtraRichEdit.UI.SetParagraphHeadingLevelItem();
-            this.setParagraphHeadingLevelItem4 = new DevExpress.XtraRichEdit.UI.SetParagraphHeadingLevelItem();
-            this.setParagraphHeadingLevelItem5 = new DevExpress.XtraRichEdit.UI.SetParagraphHeadingLevelItem();
-            this.setParagraphHeadingLevelItem6 = new DevExpress.XtraRichEdit.UI.SetParagraphHeadingLevelItem();
-            this.setParagraphHeadingLevelItem7 = new DevExpress.XtraRichEdit.UI.SetParagraphHeadingLevelItem();
-            this.setParagraphHeadingLevelItem8 = new DevExpress.XtraRichEdit.UI.SetParagraphHeadingLevelItem();
-            this.setParagraphHeadingLevelItem9 = new DevExpress.XtraRichEdit.UI.SetParagraphHeadingLevelItem();
-            this.setParagraphHeadingLevelItem10 = new DevExpress.XtraRichEdit.UI.SetParagraphHeadingLevelItem();
-            this.captionsRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.CaptionsRibbonPageGroup();
-            this.insertCaptionPlaceholderItem1 = new DevExpress.XtraRichEdit.UI.InsertCaptionPlaceholderItem();
-            this.insertFiguresCaptionItems1 = new DevExpress.XtraRichEdit.UI.InsertFiguresCaptionItems();
-            this.insertTablesCaptionItems1 = new DevExpress.XtraRichEdit.UI.InsertTablesCaptionItems();
-            this.insertEquationsCaptionItems1 = new DevExpress.XtraRichEdit.UI.InsertEquationsCaptionItems();
-            this.insertTableOfFiguresPlaceholderItem1 = new DevExpress.XtraRichEdit.UI.InsertTableOfFiguresPlaceholderItem();
-            this.insertTableOfFiguresItems1 = new DevExpress.XtraRichEdit.UI.InsertTableOfFiguresItems();
-            this.insertTableOfTablesItems1 = new DevExpress.XtraRichEdit.UI.InsertTableOfTablesItems();
-            this.insertTableOfEquationsItems1 = new DevExpress.XtraRichEdit.UI.InsertTableOfEquationsItems();
-            this.updateTableOfFiguresItem1 = new DevExpress.XtraRichEdit.UI.UpdateTableOfFiguresItem();
-            this.insertMergeFieldItem1 = new DevExpress.XtraRichEdit.UI.InsertMergeFieldItem();
-            this.showAllFieldCodesItem1 = new DevExpress.XtraRichEdit.UI.ShowAllFieldCodesItem();
-            this.showAllFieldResultsItem1 = new DevExpress.XtraRichEdit.UI.ShowAllFieldResultsItem();
-            this.toggleViewMergedDataItem1 = new DevExpress.XtraRichEdit.UI.ToggleViewMergedDataItem();
-            this.checkSpellingItem1 = new DevExpress.XtraRichEdit.UI.CheckSpellingItem();
-            this.changeLanguageItem1 = new DevExpress.XtraRichEdit.UI.ChangeLanguageItem();
-            this.protectDocumentItem1 = new DevExpress.XtraRichEdit.UI.ProtectDocumentItem();
-            this.changeRangeEditingPermissionsItem1 = new DevExpress.XtraRichEdit.UI.ChangeRangeEditingPermissionsItem();
-            this.unprotectDocumentItem1 = new DevExpress.XtraRichEdit.UI.UnprotectDocumentItem();
-            this.changeCommentItem1 = new DevExpress.XtraRichEdit.UI.ChangeCommentItem();
-            this.reviewersItem1 = new DevExpress.XtraRichEdit.UI.ReviewersItem();
-            this.reviewingPaneItem1 = new DevExpress.XtraRichEdit.UI.ReviewingPaneItem();
-            this.documentViewsRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.DocumentViewsRibbonPageGroup();
-            this.viewRibbonPage1 = new DevExpress.XtraRichEdit.UI.ViewRibbonPage();
-            this.switchToSimpleViewItem1 = new DevExpress.XtraRichEdit.UI.SwitchToSimpleViewItem();
-            this.switchToDraftViewItem1 = new DevExpress.XtraRichEdit.UI.SwitchToDraftViewItem();
-            this.switchToPrintLayoutViewItem1 = new DevExpress.XtraRichEdit.UI.SwitchToPrintLayoutViewItem();
-            this.showRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.ShowRibbonPageGroup();
-            this.toggleShowHorizontalRulerItem1 = new DevExpress.XtraRichEdit.UI.ToggleShowHorizontalRulerItem();
-            this.toggleShowVerticalRulerItem1 = new DevExpress.XtraRichEdit.UI.ToggleShowVerticalRulerItem();
-            this.zoomRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.ZoomRibbonPageGroup();
-            this.zoomOutItem1 = new DevExpress.XtraRichEdit.UI.ZoomOutItem();
-            this.zoomInItem1 = new DevExpress.XtraRichEdit.UI.ZoomInItem();
-            this.goToPageHeaderItem1 = new DevExpress.XtraRichEdit.UI.GoToPageHeaderItem();
-            this.goToPageFooterItem1 = new DevExpress.XtraRichEdit.UI.GoToPageFooterItem();
-            this.goToNextHeaderFooterItem1 = new DevExpress.XtraRichEdit.UI.GoToNextHeaderFooterItem();
-            this.goToPreviousHeaderFooterItem1 = new DevExpress.XtraRichEdit.UI.GoToPreviousHeaderFooterItem();
-            this.toggleLinkToPreviousItem1 = new DevExpress.XtraRichEdit.UI.ToggleLinkToPreviousItem();
-            this.toggleDifferentFirstPageItem1 = new DevExpress.XtraRichEdit.UI.ToggleDifferentFirstPageItem();
-            this.toggleDifferentOddAndEvenPagesItem1 = new DevExpress.XtraRichEdit.UI.ToggleDifferentOddAndEvenPagesItem();
-            this.closePageHeaderFooterItem1 = new DevExpress.XtraRichEdit.UI.ClosePageHeaderFooterItem();
             this.tableStyleOptionsRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.TableStyleOptionsRibbonPageGroup();
             this.tableDesignRibbonPage1 = new DevExpress.XtraRichEdit.UI.TableDesignRibbonPage();
             this.tableToolsRibbonPageCategory1 = new DevExpress.XtraRichEdit.UI.TableToolsRibbonPageCategory();
@@ -286,61 +253,395 @@
             this.toggleTableCellsMiddleRightAlignmentItem1 = new DevExpress.XtraRichEdit.UI.ToggleTableCellsMiddleRightAlignmentItem();
             this.toggleTableCellsBottomRightAlignmentItem1 = new DevExpress.XtraRichEdit.UI.ToggleTableCellsBottomRightAlignmentItem();
             this.showTableOptionsFormItem1 = new DevExpress.XtraRichEdit.UI.ShowTableOptionsFormItem();
-            this.floatingPictureToolsShapeStylesPageGroup1 = new DevExpress.XtraRichEdit.UI.FloatingPictureToolsShapeStylesPageGroup();
-            this.floatingPictureToolsFormatPage1 = new DevExpress.XtraRichEdit.UI.FloatingPictureToolsFormatPage();
-            this.floatingPictureToolsRibbonPageCategory1 = new DevExpress.XtraRichEdit.UI.FloatingPictureToolsRibbonPageCategory();
-            this.changeFloatingObjectFillColorItem1 = new DevExpress.XtraRichEdit.UI.ChangeFloatingObjectFillColorItem();
-            this.changeFloatingObjectOutlineColorItem1 = new DevExpress.XtraRichEdit.UI.ChangeFloatingObjectOutlineColorItem();
-            this.changeFloatingObjectOutlineWeightItem1 = new DevExpress.XtraRichEdit.UI.ChangeFloatingObjectOutlineWeightItem();
-            this.repositoryItemFloatingObjectOutlineWeight1 = new DevExpress.XtraRichEdit.Forms.Design.RepositoryItemFloatingObjectOutlineWeight();
-            this.floatingPictureToolsArrangePageGroup1 = new DevExpress.XtraRichEdit.UI.FloatingPictureToolsArrangePageGroup();
-            this.changeFloatingObjectTextWrapTypeItem1 = new DevExpress.XtraRichEdit.UI.ChangeFloatingObjectTextWrapTypeItem();
-            this.setFloatingObjectSquareTextWrapTypeItem1 = new DevExpress.XtraRichEdit.UI.SetFloatingObjectSquareTextWrapTypeItem();
-            this.setFloatingObjectTightTextWrapTypeItem1 = new DevExpress.XtraRichEdit.UI.SetFloatingObjectTightTextWrapTypeItem();
-            this.setFloatingObjectThroughTextWrapTypeItem1 = new DevExpress.XtraRichEdit.UI.SetFloatingObjectThroughTextWrapTypeItem();
-            this.setFloatingObjectTopAndBottomTextWrapTypeItem1 = new DevExpress.XtraRichEdit.UI.SetFloatingObjectTopAndBottomTextWrapTypeItem();
-            this.setFloatingObjectBehindTextWrapTypeItem1 = new DevExpress.XtraRichEdit.UI.SetFloatingObjectBehindTextWrapTypeItem();
-            this.setFloatingObjectInFrontOfTextWrapTypeItem1 = new DevExpress.XtraRichEdit.UI.SetFloatingObjectInFrontOfTextWrapTypeItem();
-            this.changeFloatingObjectAlignmentItem1 = new DevExpress.XtraRichEdit.UI.ChangeFloatingObjectAlignmentItem();
-            this.setFloatingObjectTopLeftAlignmentItem1 = new DevExpress.XtraRichEdit.UI.SetFloatingObjectTopLeftAlignmentItem();
-            this.setFloatingObjectTopCenterAlignmentItem1 = new DevExpress.XtraRichEdit.UI.SetFloatingObjectTopCenterAlignmentItem();
-            this.setFloatingObjectTopRightAlignmentItem1 = new DevExpress.XtraRichEdit.UI.SetFloatingObjectTopRightAlignmentItem();
-            this.setFloatingObjectMiddleLeftAlignmentItem1 = new DevExpress.XtraRichEdit.UI.SetFloatingObjectMiddleLeftAlignmentItem();
-            this.setFloatingObjectMiddleCenterAlignmentItem1 = new DevExpress.XtraRichEdit.UI.SetFloatingObjectMiddleCenterAlignmentItem();
-            this.setFloatingObjectMiddleRightAlignmentItem1 = new DevExpress.XtraRichEdit.UI.SetFloatingObjectMiddleRightAlignmentItem();
-            this.setFloatingObjectBottomLeftAlignmentItem1 = new DevExpress.XtraRichEdit.UI.SetFloatingObjectBottomLeftAlignmentItem();
-            this.setFloatingObjectBottomCenterAlignmentItem1 = new DevExpress.XtraRichEdit.UI.SetFloatingObjectBottomCenterAlignmentItem();
-            this.setFloatingObjectBottomRightAlignmentItem1 = new DevExpress.XtraRichEdit.UI.SetFloatingObjectBottomRightAlignmentItem();
-            this.floatingObjectBringForwardSubItem1 = new DevExpress.XtraRichEdit.UI.FloatingObjectBringForwardSubItem();
-            this.floatingObjectBringForwardItem1 = new DevExpress.XtraRichEdit.UI.FloatingObjectBringForwardItem();
-            this.floatingObjectBringToFrontItem1 = new DevExpress.XtraRichEdit.UI.FloatingObjectBringToFrontItem();
-            this.floatingObjectBringInFrontOfTextItem1 = new DevExpress.XtraRichEdit.UI.FloatingObjectBringInFrontOfTextItem();
-            this.floatingObjectSendBackwardSubItem1 = new DevExpress.XtraRichEdit.UI.FloatingObjectSendBackwardSubItem();
-            this.floatingObjectSendBackwardItem1 = new DevExpress.XtraRichEdit.UI.FloatingObjectSendBackwardItem();
-            this.floatingObjectSendToBackItem1 = new DevExpress.XtraRichEdit.UI.FloatingObjectSendToBackItem();
-            this.floatingObjectSendBehindTextItem1 = new DevExpress.XtraRichEdit.UI.FloatingObjectSendBehindTextItem();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.richEditBarController1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
+            this.dockPanel1.SuspendLayout();
+            this.dockPanel1_Container.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_lb_control)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichEditFontSizeEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemBorderLineStyle1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemBorderLineWeight1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFloatingObjectOutlineWeight1)).BeginInit();
             this.SuspendLayout();
             // 
-            // richEditControl1
+            // stylesRibbonPageGroup1
             // 
-            this.richEditControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richEditControl1.EnableToolTips = true;
-            this.richEditControl1.Location = new System.Drawing.Point(0, 142);
-            this.richEditControl1.MenuManager = this.ribbonControl1;
-            this.richEditControl1.Name = "richEditControl1";
-            this.richEditControl1.Options.CopyPaste.MaintainDocumentSectionSettings = false;
-            this.richEditControl1.Options.Fields.UseCurrentCultureDateTimeFormat = false;
-            this.richEditControl1.Options.MailMerge.KeepLastParagraph = false;
-            this.richEditControl1.Size = new System.Drawing.Size(907, 273);
-            this.richEditControl1.TabIndex = 0;
-            this.richEditControl1.Text = "richEditControl1";
+            this.stylesRibbonPageGroup1.Glyph = ((System.Drawing.Image)(resources.GetObject("stylesRibbonPageGroup1.Glyph")));
+            this.stylesRibbonPageGroup1.Name = "stylesRibbonPageGroup1";
+            this.stylesRibbonPageGroup1.Text = "";
+            // 
+            // richEditBarController1
+            // 
+            this.richEditBarController1.BarItems.Add(this.undoItem1);
+            this.richEditBarController1.BarItems.Add(this.redoItem1);
+            this.richEditBarController1.BarItems.Add(this.fileNewItem1);
+            this.richEditBarController1.BarItems.Add(this.fileOpenItem1);
+            this.richEditBarController1.BarItems.Add(this.fileSaveItem1);
+            this.richEditBarController1.BarItems.Add(this.fileSaveAsItem1);
+            this.richEditBarController1.BarItems.Add(this.quickPrintItem1);
+            this.richEditBarController1.BarItems.Add(this.printItem1);
+            this.richEditBarController1.BarItems.Add(this.printPreviewItem1);
+            this.richEditBarController1.BarItems.Add(this.pasteItem1);
+            this.richEditBarController1.BarItems.Add(this.cutItem1);
+            this.richEditBarController1.BarItems.Add(this.copyItem1);
+            this.richEditBarController1.BarItems.Add(this.pasteSpecialItem1);
+            this.richEditBarController1.BarItems.Add(this.changeFontNameItem1);
+            this.richEditBarController1.BarItems.Add(this.changeFontSizeItem1);
+            this.richEditBarController1.BarItems.Add(this.fontSizeIncreaseItem1);
+            this.richEditBarController1.BarItems.Add(this.fontSizeDecreaseItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleFontBoldItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleFontItalicItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleFontUnderlineItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleFontDoubleUnderlineItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleFontStrikeoutItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleFontDoubleStrikeoutItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleFontSuperscriptItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleFontSubscriptItem1);
+            this.richEditBarController1.BarItems.Add(this.changeFontColorItem1);
+            this.richEditBarController1.BarItems.Add(this.changeFontBackColorItem1);
+            this.richEditBarController1.BarItems.Add(this.changeTextCaseItem1);
+            this.richEditBarController1.BarItems.Add(this.makeTextUpperCaseItem1);
+            this.richEditBarController1.BarItems.Add(this.makeTextLowerCaseItem1);
+            this.richEditBarController1.BarItems.Add(this.capitalizeEachWordCaseItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleTextCaseItem1);
+            this.richEditBarController1.BarItems.Add(this.clearFormattingItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleBulletedListItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleNumberingListItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleMultiLevelListItem1);
+            this.richEditBarController1.BarItems.Add(this.decreaseIndentItem1);
+            this.richEditBarController1.BarItems.Add(this.increaseIndentItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleParagraphAlignmentLeftItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleParagraphAlignmentCenterItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleParagraphAlignmentRightItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleParagraphAlignmentJustifyItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleShowWhitespaceItem1);
+            this.richEditBarController1.BarItems.Add(this.changeParagraphLineSpacingItem1);
+            this.richEditBarController1.BarItems.Add(this.setSingleParagraphSpacingItem1);
+            this.richEditBarController1.BarItems.Add(this.setSesquialteralParagraphSpacingItem1);
+            this.richEditBarController1.BarItems.Add(this.setDoubleParagraphSpacingItem1);
+            this.richEditBarController1.BarItems.Add(this.showLineSpacingFormItem1);
+            this.richEditBarController1.BarItems.Add(this.addSpacingBeforeParagraphItem1);
+            this.richEditBarController1.BarItems.Add(this.removeSpacingBeforeParagraphItem1);
+            this.richEditBarController1.BarItems.Add(this.addSpacingAfterParagraphItem1);
+            this.richEditBarController1.BarItems.Add(this.removeSpacingAfterParagraphItem1);
+            this.richEditBarController1.BarItems.Add(this.changeParagraphBackColorItem1);
+            this.richEditBarController1.BarItems.Add(this.galleryChangeStyleItem1);
+            this.richEditBarController1.BarItems.Add(this.findItem1);
+            this.richEditBarController1.BarItems.Add(this.replaceItem1);
+            this.richEditBarController1.BarItems.Add(this.insertPageBreakItem21);
+            this.richEditBarController1.BarItems.Add(this.insertTableItem1);
+            this.richEditBarController1.BarItems.Add(this.insertPictureItem1);
+            this.richEditBarController1.BarItems.Add(this.insertFloatingPictureItem1);
+            this.richEditBarController1.BarItems.Add(this.insertBookmarkItem1);
+            this.richEditBarController1.BarItems.Add(this.insertHyperlinkItem1);
+            this.richEditBarController1.BarItems.Add(this.editPageHeaderItem1);
+            this.richEditBarController1.BarItems.Add(this.editPageFooterItem1);
+            this.richEditBarController1.BarItems.Add(this.insertPageNumberItem1);
+            this.richEditBarController1.BarItems.Add(this.insertPageCountItem1);
+            this.richEditBarController1.BarItems.Add(this.insertTextBoxItem1);
+            this.richEditBarController1.BarItems.Add(this.insertSymbolItem1);
+            this.richEditBarController1.BarItems.Add(this.changeSectionPageMarginsItem1);
+            this.richEditBarController1.BarItems.Add(this.setNormalSectionPageMarginsItem1);
+            this.richEditBarController1.BarItems.Add(this.setNarrowSectionPageMarginsItem1);
+            this.richEditBarController1.BarItems.Add(this.setModerateSectionPageMarginsItem1);
+            this.richEditBarController1.BarItems.Add(this.setWideSectionPageMarginsItem1);
+            this.richEditBarController1.BarItems.Add(this.showPageMarginsSetupFormItem1);
+            this.richEditBarController1.BarItems.Add(this.changeSectionPageOrientationItem1);
+            this.richEditBarController1.BarItems.Add(this.setPortraitPageOrientationItem1);
+            this.richEditBarController1.BarItems.Add(this.setLandscapePageOrientationItem1);
+            this.richEditBarController1.BarItems.Add(this.changeSectionPaperKindItem1);
+            this.richEditBarController1.BarItems.Add(this.changeSectionColumnsItem1);
+            this.richEditBarController1.BarItems.Add(this.setSectionOneColumnItem1);
+            this.richEditBarController1.BarItems.Add(this.setSectionTwoColumnsItem1);
+            this.richEditBarController1.BarItems.Add(this.setSectionThreeColumnsItem1);
+            this.richEditBarController1.BarItems.Add(this.showColumnsSetupFormItem1);
+            this.richEditBarController1.BarItems.Add(this.insertBreakItem1);
+            this.richEditBarController1.BarItems.Add(this.insertPageBreakItem1);
+            this.richEditBarController1.BarItems.Add(this.insertColumnBreakItem1);
+            this.richEditBarController1.BarItems.Add(this.insertSectionBreakNextPageItem1);
+            this.richEditBarController1.BarItems.Add(this.insertSectionBreakEvenPageItem1);
+            this.richEditBarController1.BarItems.Add(this.insertSectionBreakOddPageItem1);
+            this.richEditBarController1.BarItems.Add(this.changeSectionLineNumberingItem1);
+            this.richEditBarController1.BarItems.Add(this.setSectionLineNumberingNoneItem1);
+            this.richEditBarController1.BarItems.Add(this.setSectionLineNumberingContinuousItem1);
+            this.richEditBarController1.BarItems.Add(this.setSectionLineNumberingRestartNewPageItem1);
+            this.richEditBarController1.BarItems.Add(this.setSectionLineNumberingRestartNewSectionItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleParagraphSuppressLineNumbersItem1);
+            this.richEditBarController1.BarItems.Add(this.showLineNumberingFormItem1);
+            this.richEditBarController1.BarItems.Add(this.changePageColorItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleFirstRowItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleLastRowItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleBandedRowsItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleFirstColumnItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleLastColumnItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleBandedColumnsItem1);
+            this.richEditBarController1.BarItems.Add(this.galleryChangeTableStyleItem1);
+            this.richEditBarController1.BarItems.Add(this.changeTableBorderLineStyleItem1);
+            this.richEditBarController1.BarItems.Add(this.changeTableBorderLineWeightItem1);
+            this.richEditBarController1.BarItems.Add(this.changeTableBorderColorItem1);
+            this.richEditBarController1.BarItems.Add(this.changeTableBordersItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleTableCellsBottomBorderItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleTableCellsTopBorderItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleTableCellsLeftBorderItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleTableCellsRightBorderItem1);
+            this.richEditBarController1.BarItems.Add(this.resetTableCellsAllBordersItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleTableCellsAllBordersItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleTableCellsOutsideBorderItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleTableCellsInsideBorderItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleTableCellsInsideHorizontalBorderItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleTableCellsInsideVerticalBorderItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleShowTableGridLinesItem1);
+            this.richEditBarController1.BarItems.Add(this.changeTableCellsShadingItem1);
+            this.richEditBarController1.BarItems.Add(this.selectTableElementsItem1);
+            this.richEditBarController1.BarItems.Add(this.selectTableCellItem1);
+            this.richEditBarController1.BarItems.Add(this.selectTableColumnItem1);
+            this.richEditBarController1.BarItems.Add(this.selectTableRowItem1);
+            this.richEditBarController1.BarItems.Add(this.selectTableItem1);
+            this.richEditBarController1.BarItems.Add(this.showTablePropertiesFormItem1);
+            this.richEditBarController1.BarItems.Add(this.deleteTableElementsItem1);
+            this.richEditBarController1.BarItems.Add(this.showDeleteTableCellsFormItem1);
+            this.richEditBarController1.BarItems.Add(this.deleteTableColumnsItem1);
+            this.richEditBarController1.BarItems.Add(this.deleteTableRowsItem1);
+            this.richEditBarController1.BarItems.Add(this.deleteTableItem1);
+            this.richEditBarController1.BarItems.Add(this.insertTableRowAboveItem1);
+            this.richEditBarController1.BarItems.Add(this.insertTableRowBelowItem1);
+            this.richEditBarController1.BarItems.Add(this.insertTableColumnToLeftItem1);
+            this.richEditBarController1.BarItems.Add(this.insertTableColumnToRightItem1);
+            this.richEditBarController1.BarItems.Add(this.mergeTableCellsItem1);
+            this.richEditBarController1.BarItems.Add(this.showSplitTableCellsForm1);
+            this.richEditBarController1.BarItems.Add(this.splitTableItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleTableAutoFitItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleTableAutoFitContentsItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleTableAutoFitWindowItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleTableFixedColumnWidthItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleTableCellsTopLeftAlignmentItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleTableCellsMiddleLeftAlignmentItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleTableCellsBottomLeftAlignmentItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleTableCellsTopCenterAlignmentItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleTableCellsMiddleCenterAlignmentItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleTableCellsBottomCenterAlignmentItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleTableCellsTopRightAlignmentItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleTableCellsMiddleRightAlignmentItem1);
+            this.richEditBarController1.BarItems.Add(this.toggleTableCellsBottomRightAlignmentItem1);
+            this.richEditBarController1.BarItems.Add(this.showTableOptionsFormItem1);
+            this.richEditBarController1.Control = this.m_txt_noi_dung;
+            // 
+            // m_txt_noi_dung
+            // 
+            this.m_txt_noi_dung.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.m_txt_noi_dung.EnableToolTips = true;
+            this.m_txt_noi_dung.Location = new System.Drawing.Point(0, 0);
+            this.m_txt_noi_dung.MenuManager = this.ribbonControl1;
+            this.m_txt_noi_dung.Name = "m_txt_noi_dung";
+            this.m_txt_noi_dung.Options.CopyPaste.MaintainDocumentSectionSettings = false;
+            this.m_txt_noi_dung.Options.Fields.UseCurrentCultureDateTimeFormat = false;
+            this.m_txt_noi_dung.Options.MailMerge.KeepLastParagraph = false;
+            this.m_txt_noi_dung.Size = new System.Drawing.Size(689, 210);
+            this.m_txt_noi_dung.TabIndex = 1;
+            // 
+            // homeRibbonPage1
+            // 
+            this.homeRibbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.clipboardRibbonPageGroup1,
+            this.fontRibbonPageGroup1,
+            this.paragraphRibbonPageGroup1,
+            this.stylesRibbonPageGroup1,
+            this.editingRibbonPageGroup1});
+            this.homeRibbonPage1.Name = "homeRibbonPage1";
+            reduceOperation4.Behavior = DevExpress.XtraBars.Ribbon.ReduceOperationBehavior.UntilAvailable;
+            reduceOperation4.Group = this.stylesRibbonPageGroup1;
+            reduceOperation4.ItemLinkIndex = 0;
+            reduceOperation4.ItemLinksCount = 0;
+            reduceOperation4.Operation = DevExpress.XtraBars.Ribbon.ReduceOperationType.Gallery;
+            this.homeRibbonPage1.ReduceOperations.Add(reduceOperation4);
+            // 
+            // clipboardRibbonPageGroup1
+            // 
+            this.clipboardRibbonPageGroup1.Name = "clipboardRibbonPageGroup1";
+            this.clipboardRibbonPageGroup1.Text = "";
+            // 
+            // fontRibbonPageGroup1
+            // 
+            this.fontRibbonPageGroup1.Name = "fontRibbonPageGroup1";
+            this.fontRibbonPageGroup1.Text = "";
+            // 
+            // paragraphRibbonPageGroup1
+            // 
+            this.paragraphRibbonPageGroup1.Name = "paragraphRibbonPageGroup1";
+            this.paragraphRibbonPageGroup1.Text = "";
+            // 
+            // editingRibbonPageGroup1
+            // 
+            this.editingRibbonPageGroup1.Name = "editingRibbonPageGroup1";
+            this.editingRibbonPageGroup1.Text = "";
+            // 
+            // insertRibbonPage1
+            // 
+            this.insertRibbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.pagesRibbonPageGroup1,
+            this.tablesRibbonPageGroup1,
+            this.illustrationsRibbonPageGroup1,
+            this.linksRibbonPageGroup1,
+            this.headerFooterRibbonPageGroup1,
+            this.textRibbonPageGroup1,
+            this.symbolsRibbonPageGroup1});
+            this.insertRibbonPage1.Name = "insertRibbonPage1";
+            // 
+            // pagesRibbonPageGroup1
+            // 
+            this.pagesRibbonPageGroup1.AllowTextClipping = false;
+            this.pagesRibbonPageGroup1.Name = "pagesRibbonPageGroup1";
+            this.pagesRibbonPageGroup1.Text = "";
+            // 
+            // tablesRibbonPageGroup1
+            // 
+            this.tablesRibbonPageGroup1.AllowTextClipping = false;
+            this.tablesRibbonPageGroup1.Name = "tablesRibbonPageGroup1";
+            this.tablesRibbonPageGroup1.Text = "";
+            // 
+            // illustrationsRibbonPageGroup1
+            // 
+            this.illustrationsRibbonPageGroup1.Name = "illustrationsRibbonPageGroup1";
+            this.illustrationsRibbonPageGroup1.Text = "";
+            // 
+            // linksRibbonPageGroup1
+            // 
+            this.linksRibbonPageGroup1.Name = "linksRibbonPageGroup1";
+            this.linksRibbonPageGroup1.Text = "";
+            // 
+            // headerFooterRibbonPageGroup1
+            // 
+            this.headerFooterRibbonPageGroup1.Name = "headerFooterRibbonPageGroup1";
+            this.headerFooterRibbonPageGroup1.Text = "";
+            // 
+            // textRibbonPageGroup1
+            // 
+            this.textRibbonPageGroup1.Glyph = ((System.Drawing.Image)(resources.GetObject("textRibbonPageGroup1.Glyph")));
+            this.textRibbonPageGroup1.Name = "textRibbonPageGroup1";
+            this.textRibbonPageGroup1.Text = "";
+            // 
+            // symbolsRibbonPageGroup1
+            // 
+            this.symbolsRibbonPageGroup1.AllowTextClipping = false;
+            this.symbolsRibbonPageGroup1.Name = "symbolsRibbonPageGroup1";
+            this.symbolsRibbonPageGroup1.Text = "";
+            // 
+            // dockManager1
+            // 
+            this.dockManager1.Form = this;
+            this.dockManager1.RootPanels.AddRange(new DevExpress.XtraBars.Docking.DockPanel[] {
+            this.dockPanel1});
+            this.dockManager1.TopZIndexControls.AddRange(new string[] {
+            "DevExpress.XtraBars.BarDockControl",
+            "DevExpress.XtraBars.StandaloneBarDockControl",
+            "System.Windows.Forms.StatusBar",
+            "System.Windows.Forms.MenuStrip",
+            "System.Windows.Forms.StatusStrip",
+            "DevExpress.XtraBars.Ribbon.RibbonStatusBar",
+            "DevExpress.XtraBars.Ribbon.RibbonControl",
+            "DevExpress.XtraBars.Navigation.OfficeNavigationBar",
+            "DevExpress.XtraBars.Navigation.TileNavPane"});
+            // 
+            // dockPanel1
+            // 
+            this.dockPanel1.Controls.Add(this.dockPanel1_Container);
+            this.dockPanel1.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
+            this.dockPanel1.ID = new System.Guid("30e82b91-9bf9-4c8a-9a26-7e6ca854f362");
+            this.dockPanel1.Location = new System.Drawing.Point(0, 142);
+            this.dockPanel1.Name = "dockPanel1";
+            this.dockPanel1.OriginalSize = new System.Drawing.Size(200, 200);
+            this.dockPanel1.Size = new System.Drawing.Size(200, 273);
+            this.dockPanel1.Text = "dockPanel1";
+            // 
+            // dockPanel1_Container
+            // 
+            this.dockPanel1_Container.Controls.Add(this.m_cmd_insert);
+            this.dockPanel1_Container.Controls.Add(this.m_lb_control);
+            this.dockPanel1_Container.Controls.Add(this.m_cmd_send_email);
+            this.dockPanel1_Container.Location = new System.Drawing.Point(4, 23);
+            this.dockPanel1_Container.Name = "dockPanel1_Container";
+            this.dockPanel1_Container.Size = new System.Drawing.Size(192, 246);
+            this.dockPanel1_Container.TabIndex = 0;
+            // 
+            // m_cmd_insert
+            // 
+            this.m_cmd_insert.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.m_cmd_insert.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_insert.Image")));
+            this.m_cmd_insert.Location = new System.Drawing.Point(0, 180);
+            this.m_cmd_insert.Name = "m_cmd_insert";
+            this.m_cmd_insert.Size = new System.Drawing.Size(192, 33);
+            this.m_cmd_insert.TabIndex = 2;
+            this.m_cmd_insert.Text = "Chèn nội dung";
+            this.m_cmd_insert.Click += new System.EventHandler(this.m_cmd_insert_Click);
+            // 
+            // m_lb_control
+            // 
+            this.m_lb_control.Location = new System.Drawing.Point(8, 3);
+            this.m_lb_control.Name = "m_lb_control";
+            this.m_lb_control.Size = new System.Drawing.Size(181, 313);
+            this.m_lb_control.TabIndex = 1;
+            // 
+            // m_cmd_send_email
+            // 
+            this.m_cmd_send_email.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.m_cmd_send_email.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_send_email.Image")));
+            this.m_cmd_send_email.Location = new System.Drawing.Point(0, 213);
+            this.m_cmd_send_email.Name = "m_cmd_send_email";
+            this.m_cmd_send_email.Size = new System.Drawing.Size(192, 33);
+            this.m_cmd_send_email.TabIndex = 0;
+            this.m_cmd_send_email.Text = "Gửi Email";
+            this.m_cmd_send_email.Click += new System.EventHandler(this.m_cmd_send_email_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.m_txt_tieu_de_mail);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(200, 142);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(689, 63);
+            this.panel1.TabIndex = 3;
+            // 
+            // m_txt_tieu_de_mail
+            // 
+            this.m_txt_tieu_de_mail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.m_txt_tieu_de_mail.Location = new System.Drawing.Point(109, 0);
+            this.m_txt_tieu_de_mail.Multiline = true;
+            this.m_txt_tieu_de_mail.Name = "m_txt_tieu_de_mail";
+            this.m_txt_tieu_de_mail.Size = new System.Drawing.Size(580, 63);
+            this.m_txt_tieu_de_mail.TabIndex = 1;
+            this.m_txt_tieu_de_mail.Text = "V/v:";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.m_lbl_tieu_de_mail);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(109, 63);
+            this.panel3.TabIndex = 0;
+            // 
+            // m_lbl_tieu_de_mail
+            // 
+            this.m_lbl_tieu_de_mail.AutoSize = true;
+            this.m_lbl_tieu_de_mail.Location = new System.Drawing.Point(21, 23);
+            this.m_lbl_tieu_de_mail.Name = "m_lbl_tieu_de_mail";
+            this.m_lbl_tieu_de_mail.Size = new System.Drawing.Size(65, 13);
+            this.m_lbl_tieu_de_mail.TabIndex = 0;
+            this.m_lbl_tieu_de_mail.Text = "Tiêu đề mail";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.m_txt_noi_dung);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(200, 205);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(689, 210);
+            this.panel2.TabIndex = 4;
             // 
             // ribbonControl1
             // 
@@ -451,55 +752,6 @@
             this.toggleParagraphSuppressLineNumbersItem1,
             this.showLineNumberingFormItem1,
             this.changePageColorItem1,
-            this.insertTableOfContentsItem1,
-            this.updateTableOfContentsItem1,
-            this.addParagraphsToTableOfContentItem1,
-            this.setParagraphHeadingLevelItem1,
-            this.setParagraphHeadingLevelItem2,
-            this.setParagraphHeadingLevelItem3,
-            this.setParagraphHeadingLevelItem4,
-            this.setParagraphHeadingLevelItem5,
-            this.setParagraphHeadingLevelItem6,
-            this.setParagraphHeadingLevelItem7,
-            this.setParagraphHeadingLevelItem8,
-            this.setParagraphHeadingLevelItem9,
-            this.setParagraphHeadingLevelItem10,
-            this.insertCaptionPlaceholderItem1,
-            this.insertFiguresCaptionItems1,
-            this.insertTablesCaptionItems1,
-            this.insertEquationsCaptionItems1,
-            this.insertTableOfFiguresPlaceholderItem1,
-            this.insertTableOfFiguresItems1,
-            this.insertTableOfTablesItems1,
-            this.insertTableOfEquationsItems1,
-            this.updateTableOfFiguresItem1,
-            this.insertMergeFieldItem1,
-            this.showAllFieldCodesItem1,
-            this.showAllFieldResultsItem1,
-            this.toggleViewMergedDataItem1,
-            this.checkSpellingItem1,
-            this.changeLanguageItem1,
-            this.protectDocumentItem1,
-            this.changeRangeEditingPermissionsItem1,
-            this.unprotectDocumentItem1,
-            this.changeCommentItem1,
-            this.reviewersItem1,
-            this.reviewingPaneItem1,
-            this.switchToSimpleViewItem1,
-            this.switchToDraftViewItem1,
-            this.switchToPrintLayoutViewItem1,
-            this.toggleShowHorizontalRulerItem1,
-            this.toggleShowVerticalRulerItem1,
-            this.zoomOutItem1,
-            this.zoomInItem1,
-            this.goToPageHeaderItem1,
-            this.goToPageFooterItem1,
-            this.goToNextHeaderFooterItem1,
-            this.goToPreviousHeaderFooterItem1,
-            this.toggleLinkToPreviousItem1,
-            this.toggleDifferentFirstPageItem1,
-            this.toggleDifferentOddAndEvenPagesItem1,
-            this.closePageHeaderFooterItem1,
             this.toggleFirstRowItem1,
             this.toggleLastRowItem1,
             this.toggleBandedRowsItem1,
@@ -554,288 +806,22 @@
             this.toggleTableCellsTopRightAlignmentItem1,
             this.toggleTableCellsMiddleRightAlignmentItem1,
             this.toggleTableCellsBottomRightAlignmentItem1,
-            this.showTableOptionsFormItem1,
-            this.changeFloatingObjectFillColorItem1,
-            this.changeFloatingObjectOutlineColorItem1,
-            this.changeFloatingObjectOutlineWeightItem1,
-            this.changeFloatingObjectTextWrapTypeItem1,
-            this.setFloatingObjectSquareTextWrapTypeItem1,
-            this.setFloatingObjectTightTextWrapTypeItem1,
-            this.setFloatingObjectThroughTextWrapTypeItem1,
-            this.setFloatingObjectTopAndBottomTextWrapTypeItem1,
-            this.setFloatingObjectBehindTextWrapTypeItem1,
-            this.setFloatingObjectInFrontOfTextWrapTypeItem1,
-            this.changeFloatingObjectAlignmentItem1,
-            this.setFloatingObjectTopLeftAlignmentItem1,
-            this.setFloatingObjectTopCenterAlignmentItem1,
-            this.setFloatingObjectTopRightAlignmentItem1,
-            this.setFloatingObjectMiddleLeftAlignmentItem1,
-            this.setFloatingObjectMiddleCenterAlignmentItem1,
-            this.setFloatingObjectMiddleRightAlignmentItem1,
-            this.setFloatingObjectBottomLeftAlignmentItem1,
-            this.setFloatingObjectBottomCenterAlignmentItem1,
-            this.setFloatingObjectBottomRightAlignmentItem1,
-            this.floatingObjectBringForwardSubItem1,
-            this.floatingObjectBringForwardItem1,
-            this.floatingObjectBringToFrontItem1,
-            this.floatingObjectBringInFrontOfTextItem1,
-            this.floatingObjectSendBackwardSubItem1,
-            this.floatingObjectSendBackwardItem1,
-            this.floatingObjectSendToBackItem1,
-            this.floatingObjectSendBehindTextItem1});
+            this.showTableOptionsFormItem1});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 237;
+            this.ribbonControl1.MaxItemId = 160;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
-            this.tableToolsRibbonPageCategory1,
-            this.floatingPictureToolsRibbonPageCategory1});
+            this.tableToolsRibbonPageCategory1});
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.fileRibbonPage1,
-            this.homeRibbonPage1,
-            this.insertRibbonPage1,
-            this.pageLayoutRibbonPage1,
-            this.referencesRibbonPage1,
-            this.viewRibbonPage1});
+            this.homeRibbonPage2,
+            this.insertRibbonPage2});
             this.ribbonControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemFontEdit1,
             this.repositoryItemRichEditFontSizeEdit1,
             this.repositoryItemBorderLineStyle1,
-            this.repositoryItemBorderLineWeight1,
-            this.repositoryItemFloatingObjectOutlineWeight1});
-            this.ribbonControl1.Size = new System.Drawing.Size(907, 142);
-            // 
-            // richEditBarController1
-            // 
-            this.richEditBarController1.BarItems.Add(this.undoItem1);
-            this.richEditBarController1.BarItems.Add(this.redoItem1);
-            this.richEditBarController1.BarItems.Add(this.fileNewItem1);
-            this.richEditBarController1.BarItems.Add(this.fileOpenItem1);
-            this.richEditBarController1.BarItems.Add(this.fileSaveItem1);
-            this.richEditBarController1.BarItems.Add(this.fileSaveAsItem1);
-            this.richEditBarController1.BarItems.Add(this.quickPrintItem1);
-            this.richEditBarController1.BarItems.Add(this.printItem1);
-            this.richEditBarController1.BarItems.Add(this.printPreviewItem1);
-            this.richEditBarController1.BarItems.Add(this.pasteItem1);
-            this.richEditBarController1.BarItems.Add(this.cutItem1);
-            this.richEditBarController1.BarItems.Add(this.copyItem1);
-            this.richEditBarController1.BarItems.Add(this.pasteSpecialItem1);
-            this.richEditBarController1.BarItems.Add(this.changeFontNameItem1);
-            this.richEditBarController1.BarItems.Add(this.changeFontSizeItem1);
-            this.richEditBarController1.BarItems.Add(this.fontSizeIncreaseItem1);
-            this.richEditBarController1.BarItems.Add(this.fontSizeDecreaseItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleFontBoldItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleFontItalicItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleFontUnderlineItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleFontDoubleUnderlineItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleFontStrikeoutItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleFontDoubleStrikeoutItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleFontSuperscriptItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleFontSubscriptItem1);
-            this.richEditBarController1.BarItems.Add(this.changeFontColorItem1);
-            this.richEditBarController1.BarItems.Add(this.changeFontBackColorItem1);
-            this.richEditBarController1.BarItems.Add(this.changeTextCaseItem1);
-            this.richEditBarController1.BarItems.Add(this.makeTextUpperCaseItem1);
-            this.richEditBarController1.BarItems.Add(this.makeTextLowerCaseItem1);
-            this.richEditBarController1.BarItems.Add(this.capitalizeEachWordCaseItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleTextCaseItem1);
-            this.richEditBarController1.BarItems.Add(this.clearFormattingItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleBulletedListItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleNumberingListItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleMultiLevelListItem1);
-            this.richEditBarController1.BarItems.Add(this.decreaseIndentItem1);
-            this.richEditBarController1.BarItems.Add(this.increaseIndentItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleParagraphAlignmentLeftItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleParagraphAlignmentCenterItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleParagraphAlignmentRightItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleParagraphAlignmentJustifyItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleShowWhitespaceItem1);
-            this.richEditBarController1.BarItems.Add(this.changeParagraphLineSpacingItem1);
-            this.richEditBarController1.BarItems.Add(this.setSingleParagraphSpacingItem1);
-            this.richEditBarController1.BarItems.Add(this.setSesquialteralParagraphSpacingItem1);
-            this.richEditBarController1.BarItems.Add(this.setDoubleParagraphSpacingItem1);
-            this.richEditBarController1.BarItems.Add(this.showLineSpacingFormItem1);
-            this.richEditBarController1.BarItems.Add(this.addSpacingBeforeParagraphItem1);
-            this.richEditBarController1.BarItems.Add(this.removeSpacingBeforeParagraphItem1);
-            this.richEditBarController1.BarItems.Add(this.addSpacingAfterParagraphItem1);
-            this.richEditBarController1.BarItems.Add(this.removeSpacingAfterParagraphItem1);
-            this.richEditBarController1.BarItems.Add(this.changeParagraphBackColorItem1);
-            this.richEditBarController1.BarItems.Add(this.galleryChangeStyleItem1);
-            this.richEditBarController1.BarItems.Add(this.findItem1);
-            this.richEditBarController1.BarItems.Add(this.replaceItem1);
-            this.richEditBarController1.BarItems.Add(this.insertPageBreakItem21);
-            this.richEditBarController1.BarItems.Add(this.insertTableItem1);
-            this.richEditBarController1.BarItems.Add(this.insertPictureItem1);
-            this.richEditBarController1.BarItems.Add(this.insertFloatingPictureItem1);
-            this.richEditBarController1.BarItems.Add(this.insertBookmarkItem1);
-            this.richEditBarController1.BarItems.Add(this.insertHyperlinkItem1);
-            this.richEditBarController1.BarItems.Add(this.editPageHeaderItem1);
-            this.richEditBarController1.BarItems.Add(this.editPageFooterItem1);
-            this.richEditBarController1.BarItems.Add(this.insertPageNumberItem1);
-            this.richEditBarController1.BarItems.Add(this.insertPageCountItem1);
-            this.richEditBarController1.BarItems.Add(this.insertTextBoxItem1);
-            this.richEditBarController1.BarItems.Add(this.insertSymbolItem1);
-            this.richEditBarController1.BarItems.Add(this.changeSectionPageMarginsItem1);
-            this.richEditBarController1.BarItems.Add(this.setNormalSectionPageMarginsItem1);
-            this.richEditBarController1.BarItems.Add(this.setNarrowSectionPageMarginsItem1);
-            this.richEditBarController1.BarItems.Add(this.setModerateSectionPageMarginsItem1);
-            this.richEditBarController1.BarItems.Add(this.setWideSectionPageMarginsItem1);
-            this.richEditBarController1.BarItems.Add(this.showPageMarginsSetupFormItem1);
-            this.richEditBarController1.BarItems.Add(this.changeSectionPageOrientationItem1);
-            this.richEditBarController1.BarItems.Add(this.setPortraitPageOrientationItem1);
-            this.richEditBarController1.BarItems.Add(this.setLandscapePageOrientationItem1);
-            this.richEditBarController1.BarItems.Add(this.changeSectionPaperKindItem1);
-            this.richEditBarController1.BarItems.Add(this.changeSectionColumnsItem1);
-            this.richEditBarController1.BarItems.Add(this.setSectionOneColumnItem1);
-            this.richEditBarController1.BarItems.Add(this.setSectionTwoColumnsItem1);
-            this.richEditBarController1.BarItems.Add(this.setSectionThreeColumnsItem1);
-            this.richEditBarController1.BarItems.Add(this.showColumnsSetupFormItem1);
-            this.richEditBarController1.BarItems.Add(this.insertBreakItem1);
-            this.richEditBarController1.BarItems.Add(this.insertPageBreakItem1);
-            this.richEditBarController1.BarItems.Add(this.insertColumnBreakItem1);
-            this.richEditBarController1.BarItems.Add(this.insertSectionBreakNextPageItem1);
-            this.richEditBarController1.BarItems.Add(this.insertSectionBreakEvenPageItem1);
-            this.richEditBarController1.BarItems.Add(this.insertSectionBreakOddPageItem1);
-            this.richEditBarController1.BarItems.Add(this.changeSectionLineNumberingItem1);
-            this.richEditBarController1.BarItems.Add(this.setSectionLineNumberingNoneItem1);
-            this.richEditBarController1.BarItems.Add(this.setSectionLineNumberingContinuousItem1);
-            this.richEditBarController1.BarItems.Add(this.setSectionLineNumberingRestartNewPageItem1);
-            this.richEditBarController1.BarItems.Add(this.setSectionLineNumberingRestartNewSectionItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleParagraphSuppressLineNumbersItem1);
-            this.richEditBarController1.BarItems.Add(this.showLineNumberingFormItem1);
-            this.richEditBarController1.BarItems.Add(this.changePageColorItem1);
-            this.richEditBarController1.BarItems.Add(this.insertTableOfContentsItem1);
-            this.richEditBarController1.BarItems.Add(this.updateTableOfContentsItem1);
-            this.richEditBarController1.BarItems.Add(this.addParagraphsToTableOfContentItem1);
-            this.richEditBarController1.BarItems.Add(this.setParagraphHeadingLevelItem1);
-            this.richEditBarController1.BarItems.Add(this.setParagraphHeadingLevelItem2);
-            this.richEditBarController1.BarItems.Add(this.setParagraphHeadingLevelItem3);
-            this.richEditBarController1.BarItems.Add(this.setParagraphHeadingLevelItem4);
-            this.richEditBarController1.BarItems.Add(this.setParagraphHeadingLevelItem5);
-            this.richEditBarController1.BarItems.Add(this.setParagraphHeadingLevelItem6);
-            this.richEditBarController1.BarItems.Add(this.setParagraphHeadingLevelItem7);
-            this.richEditBarController1.BarItems.Add(this.setParagraphHeadingLevelItem8);
-            this.richEditBarController1.BarItems.Add(this.setParagraphHeadingLevelItem9);
-            this.richEditBarController1.BarItems.Add(this.setParagraphHeadingLevelItem10);
-            this.richEditBarController1.BarItems.Add(this.insertCaptionPlaceholderItem1);
-            this.richEditBarController1.BarItems.Add(this.insertFiguresCaptionItems1);
-            this.richEditBarController1.BarItems.Add(this.insertTablesCaptionItems1);
-            this.richEditBarController1.BarItems.Add(this.insertEquationsCaptionItems1);
-            this.richEditBarController1.BarItems.Add(this.insertTableOfFiguresPlaceholderItem1);
-            this.richEditBarController1.BarItems.Add(this.insertTableOfFiguresItems1);
-            this.richEditBarController1.BarItems.Add(this.insertTableOfTablesItems1);
-            this.richEditBarController1.BarItems.Add(this.insertTableOfEquationsItems1);
-            this.richEditBarController1.BarItems.Add(this.updateTableOfFiguresItem1);
-            this.richEditBarController1.BarItems.Add(this.insertMergeFieldItem1);
-            this.richEditBarController1.BarItems.Add(this.showAllFieldCodesItem1);
-            this.richEditBarController1.BarItems.Add(this.showAllFieldResultsItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleViewMergedDataItem1);
-            this.richEditBarController1.BarItems.Add(this.checkSpellingItem1);
-            this.richEditBarController1.BarItems.Add(this.changeLanguageItem1);
-            this.richEditBarController1.BarItems.Add(this.protectDocumentItem1);
-            this.richEditBarController1.BarItems.Add(this.changeRangeEditingPermissionsItem1);
-            this.richEditBarController1.BarItems.Add(this.unprotectDocumentItem1);
-            this.richEditBarController1.BarItems.Add(this.changeCommentItem1);
-            this.richEditBarController1.BarItems.Add(this.reviewersItem1);
-            this.richEditBarController1.BarItems.Add(this.reviewingPaneItem1);
-            this.richEditBarController1.BarItems.Add(this.switchToSimpleViewItem1);
-            this.richEditBarController1.BarItems.Add(this.switchToDraftViewItem1);
-            this.richEditBarController1.BarItems.Add(this.switchToPrintLayoutViewItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleShowHorizontalRulerItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleShowVerticalRulerItem1);
-            this.richEditBarController1.BarItems.Add(this.zoomOutItem1);
-            this.richEditBarController1.BarItems.Add(this.zoomInItem1);
-            this.richEditBarController1.BarItems.Add(this.goToPageHeaderItem1);
-            this.richEditBarController1.BarItems.Add(this.goToPageFooterItem1);
-            this.richEditBarController1.BarItems.Add(this.goToNextHeaderFooterItem1);
-            this.richEditBarController1.BarItems.Add(this.goToPreviousHeaderFooterItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleLinkToPreviousItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleDifferentFirstPageItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleDifferentOddAndEvenPagesItem1);
-            this.richEditBarController1.BarItems.Add(this.closePageHeaderFooterItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleFirstRowItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleLastRowItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleBandedRowsItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleFirstColumnItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleLastColumnItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleBandedColumnsItem1);
-            this.richEditBarController1.BarItems.Add(this.galleryChangeTableStyleItem1);
-            this.richEditBarController1.BarItems.Add(this.changeTableBorderLineStyleItem1);
-            this.richEditBarController1.BarItems.Add(this.changeTableBorderLineWeightItem1);
-            this.richEditBarController1.BarItems.Add(this.changeTableBorderColorItem1);
-            this.richEditBarController1.BarItems.Add(this.changeTableBordersItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleTableCellsBottomBorderItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleTableCellsTopBorderItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleTableCellsLeftBorderItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleTableCellsRightBorderItem1);
-            this.richEditBarController1.BarItems.Add(this.resetTableCellsAllBordersItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleTableCellsAllBordersItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleTableCellsOutsideBorderItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleTableCellsInsideBorderItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleTableCellsInsideHorizontalBorderItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleTableCellsInsideVerticalBorderItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleShowTableGridLinesItem1);
-            this.richEditBarController1.BarItems.Add(this.changeTableCellsShadingItem1);
-            this.richEditBarController1.BarItems.Add(this.selectTableElementsItem1);
-            this.richEditBarController1.BarItems.Add(this.selectTableCellItem1);
-            this.richEditBarController1.BarItems.Add(this.selectTableColumnItem1);
-            this.richEditBarController1.BarItems.Add(this.selectTableRowItem1);
-            this.richEditBarController1.BarItems.Add(this.selectTableItem1);
-            this.richEditBarController1.BarItems.Add(this.showTablePropertiesFormItem1);
-            this.richEditBarController1.BarItems.Add(this.deleteTableElementsItem1);
-            this.richEditBarController1.BarItems.Add(this.showDeleteTableCellsFormItem1);
-            this.richEditBarController1.BarItems.Add(this.deleteTableColumnsItem1);
-            this.richEditBarController1.BarItems.Add(this.deleteTableRowsItem1);
-            this.richEditBarController1.BarItems.Add(this.deleteTableItem1);
-            this.richEditBarController1.BarItems.Add(this.insertTableRowAboveItem1);
-            this.richEditBarController1.BarItems.Add(this.insertTableRowBelowItem1);
-            this.richEditBarController1.BarItems.Add(this.insertTableColumnToLeftItem1);
-            this.richEditBarController1.BarItems.Add(this.insertTableColumnToRightItem1);
-            this.richEditBarController1.BarItems.Add(this.mergeTableCellsItem1);
-            this.richEditBarController1.BarItems.Add(this.showSplitTableCellsForm1);
-            this.richEditBarController1.BarItems.Add(this.splitTableItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleTableAutoFitItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleTableAutoFitContentsItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleTableAutoFitWindowItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleTableFixedColumnWidthItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleTableCellsTopLeftAlignmentItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleTableCellsMiddleLeftAlignmentItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleTableCellsBottomLeftAlignmentItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleTableCellsTopCenterAlignmentItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleTableCellsMiddleCenterAlignmentItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleTableCellsBottomCenterAlignmentItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleTableCellsTopRightAlignmentItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleTableCellsMiddleRightAlignmentItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleTableCellsBottomRightAlignmentItem1);
-            this.richEditBarController1.BarItems.Add(this.showTableOptionsFormItem1);
-            this.richEditBarController1.BarItems.Add(this.changeFloatingObjectFillColorItem1);
-            this.richEditBarController1.BarItems.Add(this.changeFloatingObjectOutlineColorItem1);
-            this.richEditBarController1.BarItems.Add(this.changeFloatingObjectOutlineWeightItem1);
-            this.richEditBarController1.BarItems.Add(this.changeFloatingObjectTextWrapTypeItem1);
-            this.richEditBarController1.BarItems.Add(this.setFloatingObjectSquareTextWrapTypeItem1);
-            this.richEditBarController1.BarItems.Add(this.setFloatingObjectTightTextWrapTypeItem1);
-            this.richEditBarController1.BarItems.Add(this.setFloatingObjectThroughTextWrapTypeItem1);
-            this.richEditBarController1.BarItems.Add(this.setFloatingObjectTopAndBottomTextWrapTypeItem1);
-            this.richEditBarController1.BarItems.Add(this.setFloatingObjectBehindTextWrapTypeItem1);
-            this.richEditBarController1.BarItems.Add(this.setFloatingObjectInFrontOfTextWrapTypeItem1);
-            this.richEditBarController1.BarItems.Add(this.changeFloatingObjectAlignmentItem1);
-            this.richEditBarController1.BarItems.Add(this.setFloatingObjectTopLeftAlignmentItem1);
-            this.richEditBarController1.BarItems.Add(this.setFloatingObjectTopCenterAlignmentItem1);
-            this.richEditBarController1.BarItems.Add(this.setFloatingObjectTopRightAlignmentItem1);
-            this.richEditBarController1.BarItems.Add(this.setFloatingObjectMiddleLeftAlignmentItem1);
-            this.richEditBarController1.BarItems.Add(this.setFloatingObjectMiddleCenterAlignmentItem1);
-            this.richEditBarController1.BarItems.Add(this.setFloatingObjectMiddleRightAlignmentItem1);
-            this.richEditBarController1.BarItems.Add(this.setFloatingObjectBottomLeftAlignmentItem1);
-            this.richEditBarController1.BarItems.Add(this.setFloatingObjectBottomCenterAlignmentItem1);
-            this.richEditBarController1.BarItems.Add(this.setFloatingObjectBottomRightAlignmentItem1);
-            this.richEditBarController1.BarItems.Add(this.floatingObjectBringForwardSubItem1);
-            this.richEditBarController1.BarItems.Add(this.floatingObjectBringForwardItem1);
-            this.richEditBarController1.BarItems.Add(this.floatingObjectBringToFrontItem1);
-            this.richEditBarController1.BarItems.Add(this.floatingObjectBringInFrontOfTextItem1);
-            this.richEditBarController1.BarItems.Add(this.floatingObjectSendBackwardSubItem1);
-            this.richEditBarController1.BarItems.Add(this.floatingObjectSendBackwardItem1);
-            this.richEditBarController1.BarItems.Add(this.floatingObjectSendToBackItem1);
-            this.richEditBarController1.BarItems.Add(this.floatingObjectSendBehindTextItem1);
-            this.richEditBarController1.Control = this.richEditControl1;
+            this.repositoryItemBorderLineWeight1});
+            this.ribbonControl1.Size = new System.Drawing.Size(889, 142);
             // 
             // commonRibbonPageGroup1
             // 
@@ -901,29 +887,29 @@
             this.printPreviewItem1.Id = 9;
             this.printPreviewItem1.Name = "printPreviewItem1";
             // 
-            // clipboardRibbonPageGroup1
+            // clipboardRibbonPageGroup2
             // 
-            this.clipboardRibbonPageGroup1.ItemLinks.Add(this.pasteItem1);
-            this.clipboardRibbonPageGroup1.ItemLinks.Add(this.cutItem1);
-            this.clipboardRibbonPageGroup1.ItemLinks.Add(this.copyItem1);
-            this.clipboardRibbonPageGroup1.ItemLinks.Add(this.pasteSpecialItem1);
-            this.clipboardRibbonPageGroup1.Name = "clipboardRibbonPageGroup1";
+            this.clipboardRibbonPageGroup2.ItemLinks.Add(this.pasteItem1);
+            this.clipboardRibbonPageGroup2.ItemLinks.Add(this.cutItem1);
+            this.clipboardRibbonPageGroup2.ItemLinks.Add(this.copyItem1);
+            this.clipboardRibbonPageGroup2.ItemLinks.Add(this.pasteSpecialItem1);
+            this.clipboardRibbonPageGroup2.Name = "clipboardRibbonPageGroup2";
             // 
-            // homeRibbonPage1
+            // homeRibbonPage2
             // 
-            this.homeRibbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.clipboardRibbonPageGroup1,
-            this.fontRibbonPageGroup1,
-            this.paragraphRibbonPageGroup1,
-            this.stylesRibbonPageGroup1,
-            this.editingRibbonPageGroup1});
-            this.homeRibbonPage1.Name = "homeRibbonPage1";
-            reduceOperation2.Behavior = DevExpress.XtraBars.Ribbon.ReduceOperationBehavior.UntilAvailable;
-            reduceOperation2.Group = this.stylesRibbonPageGroup1;
-            reduceOperation2.ItemLinkIndex = 0;
-            reduceOperation2.ItemLinksCount = 0;
-            reduceOperation2.Operation = DevExpress.XtraBars.Ribbon.ReduceOperationType.Gallery;
-            this.homeRibbonPage1.ReduceOperations.Add(reduceOperation2);
+            this.homeRibbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.clipboardRibbonPageGroup2,
+            this.fontRibbonPageGroup2,
+            this.paragraphRibbonPageGroup2,
+            this.stylesRibbonPageGroup2,
+            this.editingRibbonPageGroup2});
+            this.homeRibbonPage2.Name = "homeRibbonPage2";
+            reduceOperation3.Behavior = DevExpress.XtraBars.Ribbon.ReduceOperationBehavior.UntilAvailable;
+            reduceOperation3.Group = this.stylesRibbonPageGroup2;
+            reduceOperation3.ItemLinkIndex = 0;
+            reduceOperation3.ItemLinksCount = 0;
+            reduceOperation3.Operation = DevExpress.XtraBars.Ribbon.ReduceOperationType.Gallery;
+            this.homeRibbonPage2.ReduceOperations.Add(reduceOperation3);
             // 
             // pasteItem1
             // 
@@ -945,14 +931,14 @@
             this.pasteSpecialItem1.Id = 20;
             this.pasteSpecialItem1.Name = "pasteSpecialItem1";
             // 
-            // fontRibbonPageGroup1
+            // fontRibbonPageGroup2
             // 
-            this.fontRibbonPageGroup1.ItemLinks.Add(this.barButtonGroup1);
-            this.fontRibbonPageGroup1.ItemLinks.Add(this.barButtonGroup2);
-            this.fontRibbonPageGroup1.ItemLinks.Add(this.barButtonGroup3);
-            this.fontRibbonPageGroup1.ItemLinks.Add(this.changeTextCaseItem1);
-            this.fontRibbonPageGroup1.ItemLinks.Add(this.clearFormattingItem1);
-            this.fontRibbonPageGroup1.Name = "fontRibbonPageGroup1";
+            this.fontRibbonPageGroup2.ItemLinks.Add(this.barButtonGroup1);
+            this.fontRibbonPageGroup2.ItemLinks.Add(this.barButtonGroup2);
+            this.fontRibbonPageGroup2.ItemLinks.Add(this.barButtonGroup3);
+            this.fontRibbonPageGroup2.ItemLinks.Add(this.changeTextCaseItem1);
+            this.fontRibbonPageGroup2.ItemLinks.Add(this.clearFormattingItem1);
+            this.fontRibbonPageGroup2.Name = "fontRibbonPageGroup2";
             // 
             // changeFontNameItem1
             // 
@@ -1083,7 +1069,7 @@
             this.repositoryItemRichEditFontSizeEdit1.AutoHeight = false;
             this.repositoryItemRichEditFontSizeEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemRichEditFontSizeEdit1.Control = this.richEditControl1;
+            this.repositoryItemRichEditFontSizeEdit1.Control = this.m_txt_noi_dung;
             this.repositoryItemRichEditFontSizeEdit1.Name = "repositoryItemRichEditFontSizeEdit1";
             // 
             // barButtonGroup2
@@ -1108,13 +1094,13 @@
             this.barButtonGroup3.Name = "barButtonGroup3";
             this.barButtonGroup3.Tag = "{DF8C5334-EDE3-47c9-A42C-FE9A9247E180}";
             // 
-            // paragraphRibbonPageGroup1
+            // paragraphRibbonPageGroup2
             // 
-            this.paragraphRibbonPageGroup1.ItemLinks.Add(this.barButtonGroup4);
-            this.paragraphRibbonPageGroup1.ItemLinks.Add(this.barButtonGroup5);
-            this.paragraphRibbonPageGroup1.ItemLinks.Add(this.barButtonGroup6);
-            this.paragraphRibbonPageGroup1.ItemLinks.Add(this.barButtonGroup7);
-            this.paragraphRibbonPageGroup1.Name = "paragraphRibbonPageGroup1";
+            this.paragraphRibbonPageGroup2.ItemLinks.Add(this.barButtonGroup4);
+            this.paragraphRibbonPageGroup2.ItemLinks.Add(this.barButtonGroup5);
+            this.paragraphRibbonPageGroup2.ItemLinks.Add(this.barButtonGroup6);
+            this.paragraphRibbonPageGroup2.ItemLinks.Add(this.barButtonGroup7);
+            this.paragraphRibbonPageGroup2.Name = "paragraphRibbonPageGroup2";
             // 
             // toggleBulletedListItem1
             // 
@@ -1261,11 +1247,11 @@
             this.barButtonGroup7.Name = "barButtonGroup7";
             this.barButtonGroup7.Tag = "{9A8DEAD8-3890-4857-A395-EC625FD02217}";
             // 
-            // stylesRibbonPageGroup1
+            // stylesRibbonPageGroup2
             // 
-            this.stylesRibbonPageGroup1.Glyph = ((System.Drawing.Image)(resources.GetObject("stylesRibbonPageGroup1.Glyph")));
-            this.stylesRibbonPageGroup1.ItemLinks.Add(this.galleryChangeStyleItem1);
-            this.stylesRibbonPageGroup1.Name = "stylesRibbonPageGroup1";
+            this.stylesRibbonPageGroup2.Glyph = ((System.Drawing.Image)(resources.GetObject("stylesRibbonPageGroup2.Glyph")));
+            this.stylesRibbonPageGroup2.ItemLinks.Add(this.galleryChangeStyleItem1);
+            this.stylesRibbonPageGroup2.Name = "stylesRibbonPageGroup2";
             // 
             // galleryChangeStyleItem1
             // 
@@ -1279,11 +1265,11 @@
             this.galleryChangeStyleItem1.Id = 61;
             this.galleryChangeStyleItem1.Name = "galleryChangeStyleItem1";
             // 
-            // editingRibbonPageGroup1
+            // editingRibbonPageGroup2
             // 
-            this.editingRibbonPageGroup1.ItemLinks.Add(this.findItem1);
-            this.editingRibbonPageGroup1.ItemLinks.Add(this.replaceItem1);
-            this.editingRibbonPageGroup1.Name = "editingRibbonPageGroup1";
+            this.editingRibbonPageGroup2.ItemLinks.Add(this.findItem1);
+            this.editingRibbonPageGroup2.ItemLinks.Add(this.replaceItem1);
+            this.editingRibbonPageGroup2.Name = "editingRibbonPageGroup2";
             // 
             // findItem1
             // 
@@ -1295,45 +1281,45 @@
             this.replaceItem1.Id = 63;
             this.replaceItem1.Name = "replaceItem1";
             // 
-            // pagesRibbonPageGroup1
+            // pagesRibbonPageGroup2
             // 
-            this.pagesRibbonPageGroup1.AllowTextClipping = false;
-            this.pagesRibbonPageGroup1.ItemLinks.Add(this.insertPageBreakItem21);
-            this.pagesRibbonPageGroup1.Name = "pagesRibbonPageGroup1";
+            this.pagesRibbonPageGroup2.AllowTextClipping = false;
+            this.pagesRibbonPageGroup2.ItemLinks.Add(this.insertPageBreakItem21);
+            this.pagesRibbonPageGroup2.Name = "pagesRibbonPageGroup2";
             // 
-            // insertRibbonPage1
+            // insertRibbonPage2
             // 
-            this.insertRibbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.pagesRibbonPageGroup1,
-            this.tablesRibbonPageGroup1,
-            this.illustrationsRibbonPageGroup1,
-            this.linksRibbonPageGroup1,
-            this.headerFooterRibbonPageGroup1,
-            this.textRibbonPageGroup1,
-            this.symbolsRibbonPageGroup1});
-            this.insertRibbonPage1.Name = "insertRibbonPage1";
+            this.insertRibbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.pagesRibbonPageGroup2,
+            this.tablesRibbonPageGroup2,
+            this.illustrationsRibbonPageGroup2,
+            this.linksRibbonPageGroup2,
+            this.headerFooterRibbonPageGroup2,
+            this.textRibbonPageGroup2,
+            this.symbolsRibbonPageGroup2});
+            this.insertRibbonPage2.Name = "insertRibbonPage2";
             // 
             // insertPageBreakItem21
             // 
             this.insertPageBreakItem21.Id = 64;
             this.insertPageBreakItem21.Name = "insertPageBreakItem21";
             // 
-            // tablesRibbonPageGroup1
+            // tablesRibbonPageGroup2
             // 
-            this.tablesRibbonPageGroup1.AllowTextClipping = false;
-            this.tablesRibbonPageGroup1.ItemLinks.Add(this.insertTableItem1);
-            this.tablesRibbonPageGroup1.Name = "tablesRibbonPageGroup1";
+            this.tablesRibbonPageGroup2.AllowTextClipping = false;
+            this.tablesRibbonPageGroup2.ItemLinks.Add(this.insertTableItem1);
+            this.tablesRibbonPageGroup2.Name = "tablesRibbonPageGroup2";
             // 
             // insertTableItem1
             // 
             this.insertTableItem1.Id = 65;
             this.insertTableItem1.Name = "insertTableItem1";
             // 
-            // illustrationsRibbonPageGroup1
+            // illustrationsRibbonPageGroup2
             // 
-            this.illustrationsRibbonPageGroup1.ItemLinks.Add(this.insertPictureItem1);
-            this.illustrationsRibbonPageGroup1.ItemLinks.Add(this.insertFloatingPictureItem1);
-            this.illustrationsRibbonPageGroup1.Name = "illustrationsRibbonPageGroup1";
+            this.illustrationsRibbonPageGroup2.ItemLinks.Add(this.insertPictureItem1);
+            this.illustrationsRibbonPageGroup2.ItemLinks.Add(this.insertFloatingPictureItem1);
+            this.illustrationsRibbonPageGroup2.Name = "illustrationsRibbonPageGroup2";
             // 
             // insertPictureItem1
             // 
@@ -1345,11 +1331,11 @@
             this.insertFloatingPictureItem1.Id = 67;
             this.insertFloatingPictureItem1.Name = "insertFloatingPictureItem1";
             // 
-            // linksRibbonPageGroup1
+            // linksRibbonPageGroup2
             // 
-            this.linksRibbonPageGroup1.ItemLinks.Add(this.insertBookmarkItem1);
-            this.linksRibbonPageGroup1.ItemLinks.Add(this.insertHyperlinkItem1);
-            this.linksRibbonPageGroup1.Name = "linksRibbonPageGroup1";
+            this.linksRibbonPageGroup2.ItemLinks.Add(this.insertBookmarkItem1);
+            this.linksRibbonPageGroup2.ItemLinks.Add(this.insertHyperlinkItem1);
+            this.linksRibbonPageGroup2.Name = "linksRibbonPageGroup2";
             // 
             // insertBookmarkItem1
             // 
@@ -1361,13 +1347,13 @@
             this.insertHyperlinkItem1.Id = 69;
             this.insertHyperlinkItem1.Name = "insertHyperlinkItem1";
             // 
-            // headerFooterRibbonPageGroup1
+            // headerFooterRibbonPageGroup2
             // 
-            this.headerFooterRibbonPageGroup1.ItemLinks.Add(this.editPageHeaderItem1);
-            this.headerFooterRibbonPageGroup1.ItemLinks.Add(this.editPageFooterItem1);
-            this.headerFooterRibbonPageGroup1.ItemLinks.Add(this.insertPageNumberItem1);
-            this.headerFooterRibbonPageGroup1.ItemLinks.Add(this.insertPageCountItem1);
-            this.headerFooterRibbonPageGroup1.Name = "headerFooterRibbonPageGroup1";
+            this.headerFooterRibbonPageGroup2.ItemLinks.Add(this.editPageHeaderItem1);
+            this.headerFooterRibbonPageGroup2.ItemLinks.Add(this.editPageFooterItem1);
+            this.headerFooterRibbonPageGroup2.ItemLinks.Add(this.insertPageNumberItem1);
+            this.headerFooterRibbonPageGroup2.ItemLinks.Add(this.insertPageCountItem1);
+            this.headerFooterRibbonPageGroup2.Name = "headerFooterRibbonPageGroup2";
             // 
             // editPageHeaderItem1
             // 
@@ -1389,44 +1375,27 @@
             this.insertPageCountItem1.Id = 73;
             this.insertPageCountItem1.Name = "insertPageCountItem1";
             // 
-            // textRibbonPageGroup1
+            // textRibbonPageGroup2
             // 
-            this.textRibbonPageGroup1.Glyph = ((System.Drawing.Image)(resources.GetObject("textRibbonPageGroup1.Glyph")));
-            this.textRibbonPageGroup1.ItemLinks.Add(this.insertTextBoxItem1);
-            this.textRibbonPageGroup1.Name = "textRibbonPageGroup1";
+            this.textRibbonPageGroup2.Glyph = ((System.Drawing.Image)(resources.GetObject("textRibbonPageGroup2.Glyph")));
+            this.textRibbonPageGroup2.ItemLinks.Add(this.insertTextBoxItem1);
+            this.textRibbonPageGroup2.Name = "textRibbonPageGroup2";
             // 
             // insertTextBoxItem1
             // 
             this.insertTextBoxItem1.Id = 74;
             this.insertTextBoxItem1.Name = "insertTextBoxItem1";
             // 
-            // symbolsRibbonPageGroup1
+            // symbolsRibbonPageGroup2
             // 
-            this.symbolsRibbonPageGroup1.AllowTextClipping = false;
-            this.symbolsRibbonPageGroup1.ItemLinks.Add(this.insertSymbolItem1);
-            this.symbolsRibbonPageGroup1.Name = "symbolsRibbonPageGroup1";
+            this.symbolsRibbonPageGroup2.AllowTextClipping = false;
+            this.symbolsRibbonPageGroup2.ItemLinks.Add(this.insertSymbolItem1);
+            this.symbolsRibbonPageGroup2.Name = "symbolsRibbonPageGroup2";
             // 
             // insertSymbolItem1
             // 
             this.insertSymbolItem1.Id = 75;
             this.insertSymbolItem1.Name = "insertSymbolItem1";
-            // 
-            // pageSetupRibbonPageGroup1
-            // 
-            this.pageSetupRibbonPageGroup1.ItemLinks.Add(this.changeSectionPageMarginsItem1);
-            this.pageSetupRibbonPageGroup1.ItemLinks.Add(this.changeSectionPageOrientationItem1);
-            this.pageSetupRibbonPageGroup1.ItemLinks.Add(this.changeSectionPaperKindItem1);
-            this.pageSetupRibbonPageGroup1.ItemLinks.Add(this.changeSectionColumnsItem1);
-            this.pageSetupRibbonPageGroup1.ItemLinks.Add(this.insertBreakItem1);
-            this.pageSetupRibbonPageGroup1.ItemLinks.Add(this.changeSectionLineNumberingItem1);
-            this.pageSetupRibbonPageGroup1.Name = "pageSetupRibbonPageGroup1";
-            // 
-            // pageLayoutRibbonPage1
-            // 
-            this.pageLayoutRibbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.pageSetupRibbonPageGroup1,
-            this.pageBackgroundRibbonPageGroup1});
-            this.pageLayoutRibbonPage1.Name = "pageLayoutRibbonPage1";
             // 
             // changeSectionPageMarginsItem1
             // 
@@ -1595,338 +1564,10 @@
             this.showLineNumberingFormItem1.Id = 103;
             this.showLineNumberingFormItem1.Name = "showLineNumberingFormItem1";
             // 
-            // pageBackgroundRibbonPageGroup1
-            // 
-            this.pageBackgroundRibbonPageGroup1.AllowTextClipping = false;
-            this.pageBackgroundRibbonPageGroup1.ItemLinks.Add(this.changePageColorItem1);
-            this.pageBackgroundRibbonPageGroup1.Name = "pageBackgroundRibbonPageGroup1";
-            // 
             // changePageColorItem1
             // 
             this.changePageColorItem1.Id = 104;
             this.changePageColorItem1.Name = "changePageColorItem1";
-            // 
-            // tableOfContentsRibbonPageGroup1
-            // 
-            this.tableOfContentsRibbonPageGroup1.ItemLinks.Add(this.insertTableOfContentsItem1);
-            this.tableOfContentsRibbonPageGroup1.ItemLinks.Add(this.updateTableOfContentsItem1);
-            this.tableOfContentsRibbonPageGroup1.ItemLinks.Add(this.addParagraphsToTableOfContentItem1);
-            this.tableOfContentsRibbonPageGroup1.Name = "tableOfContentsRibbonPageGroup1";
-            // 
-            // referencesRibbonPage1
-            // 
-            this.referencesRibbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.tableOfContentsRibbonPageGroup1,
-            this.captionsRibbonPageGroup1});
-            this.referencesRibbonPage1.Name = "referencesRibbonPage1";
-            // 
-            // insertTableOfContentsItem1
-            // 
-            this.insertTableOfContentsItem1.Id = 105;
-            this.insertTableOfContentsItem1.Name = "insertTableOfContentsItem1";
-            // 
-            // updateTableOfContentsItem1
-            // 
-            this.updateTableOfContentsItem1.Id = 106;
-            this.updateTableOfContentsItem1.Name = "updateTableOfContentsItem1";
-            // 
-            // addParagraphsToTableOfContentItem1
-            // 
-            this.addParagraphsToTableOfContentItem1.Id = 107;
-            this.addParagraphsToTableOfContentItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.setParagraphHeadingLevelItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.setParagraphHeadingLevelItem2),
-            new DevExpress.XtraBars.LinkPersistInfo(this.setParagraphHeadingLevelItem3),
-            new DevExpress.XtraBars.LinkPersistInfo(this.setParagraphHeadingLevelItem4),
-            new DevExpress.XtraBars.LinkPersistInfo(this.setParagraphHeadingLevelItem5),
-            new DevExpress.XtraBars.LinkPersistInfo(this.setParagraphHeadingLevelItem6),
-            new DevExpress.XtraBars.LinkPersistInfo(this.setParagraphHeadingLevelItem7),
-            new DevExpress.XtraBars.LinkPersistInfo(this.setParagraphHeadingLevelItem8),
-            new DevExpress.XtraBars.LinkPersistInfo(this.setParagraphHeadingLevelItem9),
-            new DevExpress.XtraBars.LinkPersistInfo(this.setParagraphHeadingLevelItem10)});
-            this.addParagraphsToTableOfContentItem1.Name = "addParagraphsToTableOfContentItem1";
-            // 
-            // setParagraphHeadingLevelItem1
-            // 
-            this.setParagraphHeadingLevelItem1.Id = 108;
-            this.setParagraphHeadingLevelItem1.Name = "setParagraphHeadingLevelItem1";
-            this.setParagraphHeadingLevelItem1.OutlineLevel = 0;
-            // 
-            // setParagraphHeadingLevelItem2
-            // 
-            this.setParagraphHeadingLevelItem2.Id = 109;
-            this.setParagraphHeadingLevelItem2.Name = "setParagraphHeadingLevelItem2";
-            this.setParagraphHeadingLevelItem2.OutlineLevel = 1;
-            // 
-            // setParagraphHeadingLevelItem3
-            // 
-            this.setParagraphHeadingLevelItem3.Id = 110;
-            this.setParagraphHeadingLevelItem3.Name = "setParagraphHeadingLevelItem3";
-            this.setParagraphHeadingLevelItem3.OutlineLevel = 2;
-            // 
-            // setParagraphHeadingLevelItem4
-            // 
-            this.setParagraphHeadingLevelItem4.Id = 111;
-            this.setParagraphHeadingLevelItem4.Name = "setParagraphHeadingLevelItem4";
-            this.setParagraphHeadingLevelItem4.OutlineLevel = 3;
-            // 
-            // setParagraphHeadingLevelItem5
-            // 
-            this.setParagraphHeadingLevelItem5.Id = 112;
-            this.setParagraphHeadingLevelItem5.Name = "setParagraphHeadingLevelItem5";
-            this.setParagraphHeadingLevelItem5.OutlineLevel = 4;
-            // 
-            // setParagraphHeadingLevelItem6
-            // 
-            this.setParagraphHeadingLevelItem6.Id = 113;
-            this.setParagraphHeadingLevelItem6.Name = "setParagraphHeadingLevelItem6";
-            this.setParagraphHeadingLevelItem6.OutlineLevel = 5;
-            // 
-            // setParagraphHeadingLevelItem7
-            // 
-            this.setParagraphHeadingLevelItem7.Id = 114;
-            this.setParagraphHeadingLevelItem7.Name = "setParagraphHeadingLevelItem7";
-            this.setParagraphHeadingLevelItem7.OutlineLevel = 6;
-            // 
-            // setParagraphHeadingLevelItem8
-            // 
-            this.setParagraphHeadingLevelItem8.Id = 115;
-            this.setParagraphHeadingLevelItem8.Name = "setParagraphHeadingLevelItem8";
-            this.setParagraphHeadingLevelItem8.OutlineLevel = 7;
-            // 
-            // setParagraphHeadingLevelItem9
-            // 
-            this.setParagraphHeadingLevelItem9.Id = 116;
-            this.setParagraphHeadingLevelItem9.Name = "setParagraphHeadingLevelItem9";
-            this.setParagraphHeadingLevelItem9.OutlineLevel = 8;
-            // 
-            // setParagraphHeadingLevelItem10
-            // 
-            this.setParagraphHeadingLevelItem10.Id = 117;
-            this.setParagraphHeadingLevelItem10.Name = "setParagraphHeadingLevelItem10";
-            this.setParagraphHeadingLevelItem10.OutlineLevel = 9;
-            // 
-            // captionsRibbonPageGroup1
-            // 
-            this.captionsRibbonPageGroup1.ItemLinks.Add(this.insertCaptionPlaceholderItem1);
-            this.captionsRibbonPageGroup1.ItemLinks.Add(this.insertTableOfFiguresPlaceholderItem1);
-            this.captionsRibbonPageGroup1.ItemLinks.Add(this.updateTableOfFiguresItem1);
-            this.captionsRibbonPageGroup1.Name = "captionsRibbonPageGroup1";
-            // 
-            // insertCaptionPlaceholderItem1
-            // 
-            this.insertCaptionPlaceholderItem1.Id = 118;
-            this.insertCaptionPlaceholderItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.insertFiguresCaptionItems1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.insertTablesCaptionItems1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.insertEquationsCaptionItems1)});
-            this.insertCaptionPlaceholderItem1.Name = "insertCaptionPlaceholderItem1";
-            // 
-            // insertFiguresCaptionItems1
-            // 
-            this.insertFiguresCaptionItems1.Id = 119;
-            this.insertFiguresCaptionItems1.Name = "insertFiguresCaptionItems1";
-            // 
-            // insertTablesCaptionItems1
-            // 
-            this.insertTablesCaptionItems1.Id = 120;
-            this.insertTablesCaptionItems1.Name = "insertTablesCaptionItems1";
-            // 
-            // insertEquationsCaptionItems1
-            // 
-            this.insertEquationsCaptionItems1.Id = 121;
-            this.insertEquationsCaptionItems1.Name = "insertEquationsCaptionItems1";
-            // 
-            // insertTableOfFiguresPlaceholderItem1
-            // 
-            this.insertTableOfFiguresPlaceholderItem1.Id = 122;
-            this.insertTableOfFiguresPlaceholderItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.insertTableOfFiguresItems1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.insertTableOfTablesItems1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.insertTableOfEquationsItems1)});
-            this.insertTableOfFiguresPlaceholderItem1.Name = "insertTableOfFiguresPlaceholderItem1";
-            // 
-            // insertTableOfFiguresItems1
-            // 
-            this.insertTableOfFiguresItems1.Id = 123;
-            this.insertTableOfFiguresItems1.Name = "insertTableOfFiguresItems1";
-            // 
-            // insertTableOfTablesItems1
-            // 
-            this.insertTableOfTablesItems1.Id = 124;
-            this.insertTableOfTablesItems1.Name = "insertTableOfTablesItems1";
-            // 
-            // insertTableOfEquationsItems1
-            // 
-            this.insertTableOfEquationsItems1.Id = 125;
-            this.insertTableOfEquationsItems1.Name = "insertTableOfEquationsItems1";
-            // 
-            // updateTableOfFiguresItem1
-            // 
-            this.updateTableOfFiguresItem1.Id = 126;
-            this.updateTableOfFiguresItem1.Name = "updateTableOfFiguresItem1";
-            // 
-            // insertMergeFieldItem1
-            // 
-            this.insertMergeFieldItem1.Id = 127;
-            this.insertMergeFieldItem1.Name = "insertMergeFieldItem1";
-            // 
-            // showAllFieldCodesItem1
-            // 
-            this.showAllFieldCodesItem1.Id = 128;
-            this.showAllFieldCodesItem1.Name = "showAllFieldCodesItem1";
-            // 
-            // showAllFieldResultsItem1
-            // 
-            this.showAllFieldResultsItem1.Id = 129;
-            this.showAllFieldResultsItem1.Name = "showAllFieldResultsItem1";
-            // 
-            // toggleViewMergedDataItem1
-            // 
-            this.toggleViewMergedDataItem1.Id = 130;
-            this.toggleViewMergedDataItem1.Name = "toggleViewMergedDataItem1";
-            // 
-            // checkSpellingItem1
-            // 
-            this.checkSpellingItem1.Id = 131;
-            this.checkSpellingItem1.Name = "checkSpellingItem1";
-            // 
-            // changeLanguageItem1
-            // 
-            this.changeLanguageItem1.Id = 132;
-            this.changeLanguageItem1.Name = "changeLanguageItem1";
-            // 
-            // protectDocumentItem1
-            // 
-            this.protectDocumentItem1.Id = 133;
-            this.protectDocumentItem1.Name = "protectDocumentItem1";
-            // 
-            // changeRangeEditingPermissionsItem1
-            // 
-            this.changeRangeEditingPermissionsItem1.Id = 134;
-            this.changeRangeEditingPermissionsItem1.Name = "changeRangeEditingPermissionsItem1";
-            // 
-            // unprotectDocumentItem1
-            // 
-            this.unprotectDocumentItem1.Id = 135;
-            this.unprotectDocumentItem1.Name = "unprotectDocumentItem1";
-            // 
-            // changeCommentItem1
-            // 
-            this.changeCommentItem1.Id = 136;
-            this.changeCommentItem1.Name = "changeCommentItem1";
-            // 
-            // reviewersItem1
-            // 
-            this.reviewersItem1.Id = 137;
-            this.reviewersItem1.Name = "reviewersItem1";
-            // 
-            // reviewingPaneItem1
-            // 
-            this.reviewingPaneItem1.Id = 138;
-            this.reviewingPaneItem1.Name = "reviewingPaneItem1";
-            // 
-            // documentViewsRibbonPageGroup1
-            // 
-            this.documentViewsRibbonPageGroup1.ItemLinks.Add(this.switchToSimpleViewItem1);
-            this.documentViewsRibbonPageGroup1.ItemLinks.Add(this.switchToDraftViewItem1);
-            this.documentViewsRibbonPageGroup1.ItemLinks.Add(this.switchToPrintLayoutViewItem1);
-            this.documentViewsRibbonPageGroup1.Name = "documentViewsRibbonPageGroup1";
-            // 
-            // viewRibbonPage1
-            // 
-            this.viewRibbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.documentViewsRibbonPageGroup1,
-            this.showRibbonPageGroup1,
-            this.zoomRibbonPageGroup1});
-            this.viewRibbonPage1.Name = "viewRibbonPage1";
-            // 
-            // switchToSimpleViewItem1
-            // 
-            this.switchToSimpleViewItem1.Id = 139;
-            this.switchToSimpleViewItem1.Name = "switchToSimpleViewItem1";
-            // 
-            // switchToDraftViewItem1
-            // 
-            this.switchToDraftViewItem1.Id = 140;
-            this.switchToDraftViewItem1.Name = "switchToDraftViewItem1";
-            // 
-            // switchToPrintLayoutViewItem1
-            // 
-            this.switchToPrintLayoutViewItem1.Id = 141;
-            this.switchToPrintLayoutViewItem1.Name = "switchToPrintLayoutViewItem1";
-            // 
-            // showRibbonPageGroup1
-            // 
-            this.showRibbonPageGroup1.ItemLinks.Add(this.toggleShowHorizontalRulerItem1);
-            this.showRibbonPageGroup1.ItemLinks.Add(this.toggleShowVerticalRulerItem1);
-            this.showRibbonPageGroup1.Name = "showRibbonPageGroup1";
-            // 
-            // toggleShowHorizontalRulerItem1
-            // 
-            this.toggleShowHorizontalRulerItem1.Id = 142;
-            this.toggleShowHorizontalRulerItem1.Name = "toggleShowHorizontalRulerItem1";
-            // 
-            // toggleShowVerticalRulerItem1
-            // 
-            this.toggleShowVerticalRulerItem1.Id = 143;
-            this.toggleShowVerticalRulerItem1.Name = "toggleShowVerticalRulerItem1";
-            // 
-            // zoomRibbonPageGroup1
-            // 
-            this.zoomRibbonPageGroup1.ItemLinks.Add(this.zoomOutItem1);
-            this.zoomRibbonPageGroup1.ItemLinks.Add(this.zoomInItem1);
-            this.zoomRibbonPageGroup1.Name = "zoomRibbonPageGroup1";
-            // 
-            // zoomOutItem1
-            // 
-            this.zoomOutItem1.Id = 144;
-            this.zoomOutItem1.Name = "zoomOutItem1";
-            // 
-            // zoomInItem1
-            // 
-            this.zoomInItem1.Id = 145;
-            this.zoomInItem1.Name = "zoomInItem1";
-            // 
-            // goToPageHeaderItem1
-            // 
-            this.goToPageHeaderItem1.Id = 146;
-            this.goToPageHeaderItem1.Name = "goToPageHeaderItem1";
-            // 
-            // goToPageFooterItem1
-            // 
-            this.goToPageFooterItem1.Id = 147;
-            this.goToPageFooterItem1.Name = "goToPageFooterItem1";
-            // 
-            // goToNextHeaderFooterItem1
-            // 
-            this.goToNextHeaderFooterItem1.Id = 148;
-            this.goToNextHeaderFooterItem1.Name = "goToNextHeaderFooterItem1";
-            // 
-            // goToPreviousHeaderFooterItem1
-            // 
-            this.goToPreviousHeaderFooterItem1.Id = 149;
-            this.goToPreviousHeaderFooterItem1.Name = "goToPreviousHeaderFooterItem1";
-            // 
-            // toggleLinkToPreviousItem1
-            // 
-            this.toggleLinkToPreviousItem1.Id = 150;
-            this.toggleLinkToPreviousItem1.Name = "toggleLinkToPreviousItem1";
-            // 
-            // toggleDifferentFirstPageItem1
-            // 
-            this.toggleDifferentFirstPageItem1.Id = 151;
-            this.toggleDifferentFirstPageItem1.Name = "toggleDifferentFirstPageItem1";
-            // 
-            // toggleDifferentOddAndEvenPagesItem1
-            // 
-            this.toggleDifferentOddAndEvenPagesItem1.Id = 152;
-            this.toggleDifferentOddAndEvenPagesItem1.Name = "toggleDifferentOddAndEvenPagesItem1";
-            // 
-            // closePageHeaderFooterItem1
-            // 
-            this.closePageHeaderFooterItem1.Id = 153;
-            this.closePageHeaderFooterItem1.Name = "closePageHeaderFooterItem1";
             // 
             // tableStyleOptionsRibbonPageGroup1
             // 
@@ -1949,7 +1590,7 @@
             // tableToolsRibbonPageCategory1
             // 
             this.tableToolsRibbonPageCategory1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(233)))), ((int)(((byte)(20)))));
-            this.tableToolsRibbonPageCategory1.Control = this.richEditControl1;
+            this.tableToolsRibbonPageCategory1.Control = this.m_txt_noi_dung;
             this.tableToolsRibbonPageCategory1.Name = "tableToolsRibbonPageCategory1";
             this.tableToolsRibbonPageCategory1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.tableDesignRibbonPage1,
@@ -1958,37 +1599,37 @@
             // toggleFirstRowItem1
             // 
             this.toggleFirstRowItem1.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
-            this.toggleFirstRowItem1.Id = 154;
+            this.toggleFirstRowItem1.Id = 105;
             this.toggleFirstRowItem1.Name = "toggleFirstRowItem1";
             // 
             // toggleLastRowItem1
             // 
             this.toggleLastRowItem1.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
-            this.toggleLastRowItem1.Id = 155;
+            this.toggleLastRowItem1.Id = 106;
             this.toggleLastRowItem1.Name = "toggleLastRowItem1";
             // 
             // toggleBandedRowsItem1
             // 
             this.toggleBandedRowsItem1.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
-            this.toggleBandedRowsItem1.Id = 156;
+            this.toggleBandedRowsItem1.Id = 107;
             this.toggleBandedRowsItem1.Name = "toggleBandedRowsItem1";
             // 
             // toggleFirstColumnItem1
             // 
             this.toggleFirstColumnItem1.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
-            this.toggleFirstColumnItem1.Id = 157;
+            this.toggleFirstColumnItem1.Id = 108;
             this.toggleFirstColumnItem1.Name = "toggleFirstColumnItem1";
             // 
             // toggleLastColumnItem1
             // 
             this.toggleLastColumnItem1.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
-            this.toggleLastColumnItem1.Id = 158;
+            this.toggleLastColumnItem1.Id = 109;
             this.toggleLastColumnItem1.Name = "toggleLastColumnItem1";
             // 
             // toggleBandedColumnsItem1
             // 
             this.toggleBandedColumnsItem1.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
-            this.toggleBandedColumnsItem1.Id = 159;
+            this.toggleBandedColumnsItem1.Id = 110;
             this.toggleBandedColumnsItem1.Name = "toggleBandedColumnsItem1";
             // 
             // tableStylesRibbonPageGroup1
@@ -2009,7 +1650,7 @@
             this.galleryChangeTableStyleItem1.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
             galleryItemGroup4});
             this.galleryChangeTableStyleItem1.Gallery.ImageSize = new System.Drawing.Size(65, 46);
-            this.galleryChangeTableStyleItem1.Id = 160;
+            this.galleryChangeTableStyleItem1.Id = 111;
             this.galleryChangeTableStyleItem1.ModifyItemLink = null;
             this.galleryChangeTableStyleItem1.Name = "galleryChangeTableStyleItem1";
             this.galleryChangeTableStyleItem1.NewItemLink = null;
@@ -2034,24 +1675,24 @@
             borderInfo2.Style = DevExpress.XtraRichEdit.Model.BorderLineStyle.Single;
             borderInfo2.Width = 10;
             this.changeTableBorderLineStyleItem1.EditValue = borderInfo2;
-            this.changeTableBorderLineStyleItem1.Id = 161;
+            this.changeTableBorderLineStyleItem1.Id = 112;
             this.changeTableBorderLineStyleItem1.Name = "changeTableBorderLineStyleItem1";
             // 
             // changeTableBorderLineWeightItem1
             // 
             this.changeTableBorderLineWeightItem1.Edit = this.repositoryItemBorderLineWeight1;
             this.changeTableBorderLineWeightItem1.EditValue = 20;
-            this.changeTableBorderLineWeightItem1.Id = 162;
+            this.changeTableBorderLineWeightItem1.Id = 113;
             this.changeTableBorderLineWeightItem1.Name = "changeTableBorderLineWeightItem1";
             // 
             // changeTableBorderColorItem1
             // 
-            this.changeTableBorderColorItem1.Id = 163;
+            this.changeTableBorderColorItem1.Id = 114;
             this.changeTableBorderColorItem1.Name = "changeTableBorderColorItem1";
             // 
             // changeTableBordersItem1
             // 
-            this.changeTableBordersItem1.Id = 164;
+            this.changeTableBordersItem1.Id = 115;
             this.changeTableBordersItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.toggleTableCellsBottomBorderItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.toggleTableCellsTopBorderItem1),
@@ -2068,62 +1709,62 @@
             // 
             // toggleTableCellsBottomBorderItem1
             // 
-            this.toggleTableCellsBottomBorderItem1.Id = 165;
+            this.toggleTableCellsBottomBorderItem1.Id = 116;
             this.toggleTableCellsBottomBorderItem1.Name = "toggleTableCellsBottomBorderItem1";
             // 
             // toggleTableCellsTopBorderItem1
             // 
-            this.toggleTableCellsTopBorderItem1.Id = 166;
+            this.toggleTableCellsTopBorderItem1.Id = 117;
             this.toggleTableCellsTopBorderItem1.Name = "toggleTableCellsTopBorderItem1";
             // 
             // toggleTableCellsLeftBorderItem1
             // 
-            this.toggleTableCellsLeftBorderItem1.Id = 167;
+            this.toggleTableCellsLeftBorderItem1.Id = 118;
             this.toggleTableCellsLeftBorderItem1.Name = "toggleTableCellsLeftBorderItem1";
             // 
             // toggleTableCellsRightBorderItem1
             // 
-            this.toggleTableCellsRightBorderItem1.Id = 168;
+            this.toggleTableCellsRightBorderItem1.Id = 119;
             this.toggleTableCellsRightBorderItem1.Name = "toggleTableCellsRightBorderItem1";
             // 
             // resetTableCellsAllBordersItem1
             // 
-            this.resetTableCellsAllBordersItem1.Id = 169;
+            this.resetTableCellsAllBordersItem1.Id = 120;
             this.resetTableCellsAllBordersItem1.Name = "resetTableCellsAllBordersItem1";
             // 
             // toggleTableCellsAllBordersItem1
             // 
-            this.toggleTableCellsAllBordersItem1.Id = 170;
+            this.toggleTableCellsAllBordersItem1.Id = 121;
             this.toggleTableCellsAllBordersItem1.Name = "toggleTableCellsAllBordersItem1";
             // 
             // toggleTableCellsOutsideBorderItem1
             // 
-            this.toggleTableCellsOutsideBorderItem1.Id = 171;
+            this.toggleTableCellsOutsideBorderItem1.Id = 122;
             this.toggleTableCellsOutsideBorderItem1.Name = "toggleTableCellsOutsideBorderItem1";
             // 
             // toggleTableCellsInsideBorderItem1
             // 
-            this.toggleTableCellsInsideBorderItem1.Id = 172;
+            this.toggleTableCellsInsideBorderItem1.Id = 123;
             this.toggleTableCellsInsideBorderItem1.Name = "toggleTableCellsInsideBorderItem1";
             // 
             // toggleTableCellsInsideHorizontalBorderItem1
             // 
-            this.toggleTableCellsInsideHorizontalBorderItem1.Id = 173;
+            this.toggleTableCellsInsideHorizontalBorderItem1.Id = 124;
             this.toggleTableCellsInsideHorizontalBorderItem1.Name = "toggleTableCellsInsideHorizontalBorderItem1";
             // 
             // toggleTableCellsInsideVerticalBorderItem1
             // 
-            this.toggleTableCellsInsideVerticalBorderItem1.Id = 174;
+            this.toggleTableCellsInsideVerticalBorderItem1.Id = 125;
             this.toggleTableCellsInsideVerticalBorderItem1.Name = "toggleTableCellsInsideVerticalBorderItem1";
             // 
             // toggleShowTableGridLinesItem1
             // 
-            this.toggleShowTableGridLinesItem1.Id = 175;
+            this.toggleShowTableGridLinesItem1.Id = 126;
             this.toggleShowTableGridLinesItem1.Name = "toggleShowTableGridLinesItem1";
             // 
             // changeTableCellsShadingItem1
             // 
-            this.changeTableCellsShadingItem1.Id = 176;
+            this.changeTableCellsShadingItem1.Id = 127;
             this.changeTableCellsShadingItem1.Name = "changeTableCellsShadingItem1";
             // 
             // repositoryItemBorderLineStyle1
@@ -2131,7 +1772,7 @@
             this.repositoryItemBorderLineStyle1.AutoHeight = false;
             this.repositoryItemBorderLineStyle1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemBorderLineStyle1.Control = this.richEditControl1;
+            this.repositoryItemBorderLineStyle1.Control = this.m_txt_noi_dung;
             this.repositoryItemBorderLineStyle1.Name = "repositoryItemBorderLineStyle1";
             // 
             // repositoryItemBorderLineWeight1
@@ -2139,7 +1780,7 @@
             this.repositoryItemBorderLineWeight1.AutoHeight = false;
             this.repositoryItemBorderLineWeight1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemBorderLineWeight1.Control = this.richEditControl1;
+            this.repositoryItemBorderLineWeight1.Control = this.m_txt_noi_dung;
             this.repositoryItemBorderLineWeight1.Name = "repositoryItemBorderLineWeight1";
             // 
             // tableTableRibbonPageGroup1
@@ -2161,7 +1802,7 @@
             // 
             // selectTableElementsItem1
             // 
-            this.selectTableElementsItem1.Id = 177;
+            this.selectTableElementsItem1.Id = 128;
             this.selectTableElementsItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.selectTableCellItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.selectTableColumnItem1),
@@ -2171,27 +1812,27 @@
             // 
             // selectTableCellItem1
             // 
-            this.selectTableCellItem1.Id = 178;
+            this.selectTableCellItem1.Id = 129;
             this.selectTableCellItem1.Name = "selectTableCellItem1";
             // 
             // selectTableColumnItem1
             // 
-            this.selectTableColumnItem1.Id = 179;
+            this.selectTableColumnItem1.Id = 130;
             this.selectTableColumnItem1.Name = "selectTableColumnItem1";
             // 
             // selectTableRowItem1
             // 
-            this.selectTableRowItem1.Id = 180;
+            this.selectTableRowItem1.Id = 131;
             this.selectTableRowItem1.Name = "selectTableRowItem1";
             // 
             // selectTableItem1
             // 
-            this.selectTableItem1.Id = 181;
+            this.selectTableItem1.Id = 132;
             this.selectTableItem1.Name = "selectTableItem1";
             // 
             // showTablePropertiesFormItem1
             // 
-            this.showTablePropertiesFormItem1.Id = 182;
+            this.showTablePropertiesFormItem1.Id = 133;
             this.showTablePropertiesFormItem1.Name = "showTablePropertiesFormItem1";
             // 
             // tableRowsAndColumnsRibbonPageGroup1
@@ -2205,7 +1846,7 @@
             // 
             // deleteTableElementsItem1
             // 
-            this.deleteTableElementsItem1.Id = 183;
+            this.deleteTableElementsItem1.Id = 134;
             this.deleteTableElementsItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.showDeleteTableCellsFormItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.deleteTableColumnsItem1),
@@ -2215,42 +1856,42 @@
             // 
             // showDeleteTableCellsFormItem1
             // 
-            this.showDeleteTableCellsFormItem1.Id = 184;
+            this.showDeleteTableCellsFormItem1.Id = 135;
             this.showDeleteTableCellsFormItem1.Name = "showDeleteTableCellsFormItem1";
             // 
             // deleteTableColumnsItem1
             // 
-            this.deleteTableColumnsItem1.Id = 185;
+            this.deleteTableColumnsItem1.Id = 136;
             this.deleteTableColumnsItem1.Name = "deleteTableColumnsItem1";
             // 
             // deleteTableRowsItem1
             // 
-            this.deleteTableRowsItem1.Id = 186;
+            this.deleteTableRowsItem1.Id = 137;
             this.deleteTableRowsItem1.Name = "deleteTableRowsItem1";
             // 
             // deleteTableItem1
             // 
-            this.deleteTableItem1.Id = 187;
+            this.deleteTableItem1.Id = 138;
             this.deleteTableItem1.Name = "deleteTableItem1";
             // 
             // insertTableRowAboveItem1
             // 
-            this.insertTableRowAboveItem1.Id = 188;
+            this.insertTableRowAboveItem1.Id = 139;
             this.insertTableRowAboveItem1.Name = "insertTableRowAboveItem1";
             // 
             // insertTableRowBelowItem1
             // 
-            this.insertTableRowBelowItem1.Id = 189;
+            this.insertTableRowBelowItem1.Id = 140;
             this.insertTableRowBelowItem1.Name = "insertTableRowBelowItem1";
             // 
             // insertTableColumnToLeftItem1
             // 
-            this.insertTableColumnToLeftItem1.Id = 190;
+            this.insertTableColumnToLeftItem1.Id = 141;
             this.insertTableColumnToLeftItem1.Name = "insertTableColumnToLeftItem1";
             // 
             // insertTableColumnToRightItem1
             // 
-            this.insertTableColumnToRightItem1.Id = 191;
+            this.insertTableColumnToRightItem1.Id = 142;
             this.insertTableColumnToRightItem1.Name = "insertTableColumnToRightItem1";
             // 
             // tableMergeRibbonPageGroup1
@@ -2262,17 +1903,17 @@
             // 
             // mergeTableCellsItem1
             // 
-            this.mergeTableCellsItem1.Id = 192;
+            this.mergeTableCellsItem1.Id = 143;
             this.mergeTableCellsItem1.Name = "mergeTableCellsItem1";
             // 
             // showSplitTableCellsForm1
             // 
-            this.showSplitTableCellsForm1.Id = 193;
+            this.showSplitTableCellsForm1.Id = 144;
             this.showSplitTableCellsForm1.Name = "showSplitTableCellsForm1";
             // 
             // splitTableItem1
             // 
-            this.splitTableItem1.Id = 194;
+            this.splitTableItem1.Id = 145;
             this.splitTableItem1.Name = "splitTableItem1";
             // 
             // tableCellSizeRibbonPageGroup1
@@ -2283,7 +1924,7 @@
             // 
             // toggleTableAutoFitItem1
             // 
-            this.toggleTableAutoFitItem1.Id = 195;
+            this.toggleTableAutoFitItem1.Id = 146;
             this.toggleTableAutoFitItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.toggleTableAutoFitContentsItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.toggleTableAutoFitWindowItem1),
@@ -2292,17 +1933,17 @@
             // 
             // toggleTableAutoFitContentsItem1
             // 
-            this.toggleTableAutoFitContentsItem1.Id = 196;
+            this.toggleTableAutoFitContentsItem1.Id = 147;
             this.toggleTableAutoFitContentsItem1.Name = "toggleTableAutoFitContentsItem1";
             // 
             // toggleTableAutoFitWindowItem1
             // 
-            this.toggleTableAutoFitWindowItem1.Id = 197;
+            this.toggleTableAutoFitWindowItem1.Id = 148;
             this.toggleTableAutoFitWindowItem1.Name = "toggleTableAutoFitWindowItem1";
             // 
             // toggleTableFixedColumnWidthItem1
             // 
-            this.toggleTableFixedColumnWidthItem1.Id = 198;
+            this.toggleTableFixedColumnWidthItem1.Id = 149;
             this.toggleTableFixedColumnWidthItem1.Name = "toggleTableFixedColumnWidthItem1";
             // 
             // tableAlignmentRibbonPageGroup1
@@ -2322,275 +1963,80 @@
             // 
             // toggleTableCellsTopLeftAlignmentItem1
             // 
-            this.toggleTableCellsTopLeftAlignmentItem1.Id = 199;
+            this.toggleTableCellsTopLeftAlignmentItem1.Id = 150;
             this.toggleTableCellsTopLeftAlignmentItem1.Name = "toggleTableCellsTopLeftAlignmentItem1";
             // 
             // toggleTableCellsMiddleLeftAlignmentItem1
             // 
-            this.toggleTableCellsMiddleLeftAlignmentItem1.Id = 200;
+            this.toggleTableCellsMiddleLeftAlignmentItem1.Id = 151;
             this.toggleTableCellsMiddleLeftAlignmentItem1.Name = "toggleTableCellsMiddleLeftAlignmentItem1";
             // 
             // toggleTableCellsBottomLeftAlignmentItem1
             // 
-            this.toggleTableCellsBottomLeftAlignmentItem1.Id = 201;
+            this.toggleTableCellsBottomLeftAlignmentItem1.Id = 152;
             this.toggleTableCellsBottomLeftAlignmentItem1.Name = "toggleTableCellsBottomLeftAlignmentItem1";
             // 
             // toggleTableCellsTopCenterAlignmentItem1
             // 
-            this.toggleTableCellsTopCenterAlignmentItem1.Id = 202;
+            this.toggleTableCellsTopCenterAlignmentItem1.Id = 153;
             this.toggleTableCellsTopCenterAlignmentItem1.Name = "toggleTableCellsTopCenterAlignmentItem1";
             // 
             // toggleTableCellsMiddleCenterAlignmentItem1
             // 
-            this.toggleTableCellsMiddleCenterAlignmentItem1.Id = 203;
+            this.toggleTableCellsMiddleCenterAlignmentItem1.Id = 154;
             this.toggleTableCellsMiddleCenterAlignmentItem1.Name = "toggleTableCellsMiddleCenterAlignmentItem1";
             // 
             // toggleTableCellsBottomCenterAlignmentItem1
             // 
-            this.toggleTableCellsBottomCenterAlignmentItem1.Id = 204;
+            this.toggleTableCellsBottomCenterAlignmentItem1.Id = 155;
             this.toggleTableCellsBottomCenterAlignmentItem1.Name = "toggleTableCellsBottomCenterAlignmentItem1";
             // 
             // toggleTableCellsTopRightAlignmentItem1
             // 
-            this.toggleTableCellsTopRightAlignmentItem1.Id = 205;
+            this.toggleTableCellsTopRightAlignmentItem1.Id = 156;
             this.toggleTableCellsTopRightAlignmentItem1.Name = "toggleTableCellsTopRightAlignmentItem1";
             // 
             // toggleTableCellsMiddleRightAlignmentItem1
             // 
-            this.toggleTableCellsMiddleRightAlignmentItem1.Id = 206;
+            this.toggleTableCellsMiddleRightAlignmentItem1.Id = 157;
             this.toggleTableCellsMiddleRightAlignmentItem1.Name = "toggleTableCellsMiddleRightAlignmentItem1";
             // 
             // toggleTableCellsBottomRightAlignmentItem1
             // 
-            this.toggleTableCellsBottomRightAlignmentItem1.Id = 207;
+            this.toggleTableCellsBottomRightAlignmentItem1.Id = 158;
             this.toggleTableCellsBottomRightAlignmentItem1.Name = "toggleTableCellsBottomRightAlignmentItem1";
             // 
             // showTableOptionsFormItem1
             // 
-            this.showTableOptionsFormItem1.Id = 208;
+            this.showTableOptionsFormItem1.Id = 159;
             this.showTableOptionsFormItem1.Name = "showTableOptionsFormItem1";
-            // 
-            // floatingPictureToolsShapeStylesPageGroup1
-            // 
-            this.floatingPictureToolsShapeStylesPageGroup1.ItemLinks.Add(this.changeFloatingObjectFillColorItem1);
-            this.floatingPictureToolsShapeStylesPageGroup1.ItemLinks.Add(this.changeFloatingObjectOutlineColorItem1);
-            this.floatingPictureToolsShapeStylesPageGroup1.ItemLinks.Add(this.changeFloatingObjectOutlineWeightItem1);
-            this.floatingPictureToolsShapeStylesPageGroup1.Name = "floatingPictureToolsShapeStylesPageGroup1";
-            // 
-            // floatingPictureToolsFormatPage1
-            // 
-            this.floatingPictureToolsFormatPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.floatingPictureToolsShapeStylesPageGroup1,
-            this.floatingPictureToolsArrangePageGroup1});
-            this.floatingPictureToolsFormatPage1.Name = "floatingPictureToolsFormatPage1";
-            // 
-            // floatingPictureToolsRibbonPageCategory1
-            // 
-            this.floatingPictureToolsRibbonPageCategory1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(0)))), ((int)(((byte)(119)))));
-            this.floatingPictureToolsRibbonPageCategory1.Control = this.richEditControl1;
-            this.floatingPictureToolsRibbonPageCategory1.Name = "floatingPictureToolsRibbonPageCategory1";
-            this.floatingPictureToolsRibbonPageCategory1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.floatingPictureToolsFormatPage1});
-            // 
-            // changeFloatingObjectFillColorItem1
-            // 
-            this.changeFloatingObjectFillColorItem1.Id = 209;
-            this.changeFloatingObjectFillColorItem1.Name = "changeFloatingObjectFillColorItem1";
-            // 
-            // changeFloatingObjectOutlineColorItem1
-            // 
-            this.changeFloatingObjectOutlineColorItem1.Id = 210;
-            this.changeFloatingObjectOutlineColorItem1.Name = "changeFloatingObjectOutlineColorItem1";
-            // 
-            // changeFloatingObjectOutlineWeightItem1
-            // 
-            this.changeFloatingObjectOutlineWeightItem1.Edit = this.repositoryItemFloatingObjectOutlineWeight1;
-            this.changeFloatingObjectOutlineWeightItem1.EditValue = 20;
-            this.changeFloatingObjectOutlineWeightItem1.Id = 211;
-            this.changeFloatingObjectOutlineWeightItem1.Name = "changeFloatingObjectOutlineWeightItem1";
-            // 
-            // repositoryItemFloatingObjectOutlineWeight1
-            // 
-            this.repositoryItemFloatingObjectOutlineWeight1.AutoHeight = false;
-            this.repositoryItemFloatingObjectOutlineWeight1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemFloatingObjectOutlineWeight1.Control = this.richEditControl1;
-            this.repositoryItemFloatingObjectOutlineWeight1.Name = "repositoryItemFloatingObjectOutlineWeight1";
-            // 
-            // floatingPictureToolsArrangePageGroup1
-            // 
-            this.floatingPictureToolsArrangePageGroup1.ItemLinks.Add(this.changeFloatingObjectTextWrapTypeItem1);
-            this.floatingPictureToolsArrangePageGroup1.ItemLinks.Add(this.changeFloatingObjectAlignmentItem1);
-            this.floatingPictureToolsArrangePageGroup1.ItemLinks.Add(this.floatingObjectBringForwardSubItem1);
-            this.floatingPictureToolsArrangePageGroup1.ItemLinks.Add(this.floatingObjectSendBackwardSubItem1);
-            this.floatingPictureToolsArrangePageGroup1.Name = "floatingPictureToolsArrangePageGroup1";
-            // 
-            // changeFloatingObjectTextWrapTypeItem1
-            // 
-            this.changeFloatingObjectTextWrapTypeItem1.Id = 212;
-            this.changeFloatingObjectTextWrapTypeItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.setFloatingObjectSquareTextWrapTypeItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.setFloatingObjectTightTextWrapTypeItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.setFloatingObjectThroughTextWrapTypeItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.setFloatingObjectTopAndBottomTextWrapTypeItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.setFloatingObjectBehindTextWrapTypeItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.setFloatingObjectInFrontOfTextWrapTypeItem1)});
-            this.changeFloatingObjectTextWrapTypeItem1.Name = "changeFloatingObjectTextWrapTypeItem1";
-            // 
-            // setFloatingObjectSquareTextWrapTypeItem1
-            // 
-            this.setFloatingObjectSquareTextWrapTypeItem1.Id = 213;
-            this.setFloatingObjectSquareTextWrapTypeItem1.Name = "setFloatingObjectSquareTextWrapTypeItem1";
-            // 
-            // setFloatingObjectTightTextWrapTypeItem1
-            // 
-            this.setFloatingObjectTightTextWrapTypeItem1.Id = 214;
-            this.setFloatingObjectTightTextWrapTypeItem1.Name = "setFloatingObjectTightTextWrapTypeItem1";
-            // 
-            // setFloatingObjectThroughTextWrapTypeItem1
-            // 
-            this.setFloatingObjectThroughTextWrapTypeItem1.Id = 215;
-            this.setFloatingObjectThroughTextWrapTypeItem1.Name = "setFloatingObjectThroughTextWrapTypeItem1";
-            // 
-            // setFloatingObjectTopAndBottomTextWrapTypeItem1
-            // 
-            this.setFloatingObjectTopAndBottomTextWrapTypeItem1.Id = 216;
-            this.setFloatingObjectTopAndBottomTextWrapTypeItem1.Name = "setFloatingObjectTopAndBottomTextWrapTypeItem1";
-            // 
-            // setFloatingObjectBehindTextWrapTypeItem1
-            // 
-            this.setFloatingObjectBehindTextWrapTypeItem1.Id = 217;
-            this.setFloatingObjectBehindTextWrapTypeItem1.Name = "setFloatingObjectBehindTextWrapTypeItem1";
-            // 
-            // setFloatingObjectInFrontOfTextWrapTypeItem1
-            // 
-            this.setFloatingObjectInFrontOfTextWrapTypeItem1.Id = 218;
-            this.setFloatingObjectInFrontOfTextWrapTypeItem1.Name = "setFloatingObjectInFrontOfTextWrapTypeItem1";
-            // 
-            // changeFloatingObjectAlignmentItem1
-            // 
-            this.changeFloatingObjectAlignmentItem1.Id = 219;
-            this.changeFloatingObjectAlignmentItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.setFloatingObjectTopLeftAlignmentItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.setFloatingObjectTopCenterAlignmentItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.setFloatingObjectTopRightAlignmentItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.setFloatingObjectMiddleLeftAlignmentItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.setFloatingObjectMiddleCenterAlignmentItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.setFloatingObjectMiddleRightAlignmentItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.setFloatingObjectBottomLeftAlignmentItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.setFloatingObjectBottomCenterAlignmentItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.setFloatingObjectBottomRightAlignmentItem1)});
-            this.changeFloatingObjectAlignmentItem1.Name = "changeFloatingObjectAlignmentItem1";
-            // 
-            // setFloatingObjectTopLeftAlignmentItem1
-            // 
-            this.setFloatingObjectTopLeftAlignmentItem1.Id = 220;
-            this.setFloatingObjectTopLeftAlignmentItem1.Name = "setFloatingObjectTopLeftAlignmentItem1";
-            // 
-            // setFloatingObjectTopCenterAlignmentItem1
-            // 
-            this.setFloatingObjectTopCenterAlignmentItem1.Id = 221;
-            this.setFloatingObjectTopCenterAlignmentItem1.Name = "setFloatingObjectTopCenterAlignmentItem1";
-            // 
-            // setFloatingObjectTopRightAlignmentItem1
-            // 
-            this.setFloatingObjectTopRightAlignmentItem1.Id = 222;
-            this.setFloatingObjectTopRightAlignmentItem1.Name = "setFloatingObjectTopRightAlignmentItem1";
-            // 
-            // setFloatingObjectMiddleLeftAlignmentItem1
-            // 
-            this.setFloatingObjectMiddleLeftAlignmentItem1.Id = 223;
-            this.setFloatingObjectMiddleLeftAlignmentItem1.Name = "setFloatingObjectMiddleLeftAlignmentItem1";
-            // 
-            // setFloatingObjectMiddleCenterAlignmentItem1
-            // 
-            this.setFloatingObjectMiddleCenterAlignmentItem1.Id = 224;
-            this.setFloatingObjectMiddleCenterAlignmentItem1.Name = "setFloatingObjectMiddleCenterAlignmentItem1";
-            // 
-            // setFloatingObjectMiddleRightAlignmentItem1
-            // 
-            this.setFloatingObjectMiddleRightAlignmentItem1.Id = 225;
-            this.setFloatingObjectMiddleRightAlignmentItem1.Name = "setFloatingObjectMiddleRightAlignmentItem1";
-            // 
-            // setFloatingObjectBottomLeftAlignmentItem1
-            // 
-            this.setFloatingObjectBottomLeftAlignmentItem1.Id = 226;
-            this.setFloatingObjectBottomLeftAlignmentItem1.Name = "setFloatingObjectBottomLeftAlignmentItem1";
-            // 
-            // setFloatingObjectBottomCenterAlignmentItem1
-            // 
-            this.setFloatingObjectBottomCenterAlignmentItem1.Id = 227;
-            this.setFloatingObjectBottomCenterAlignmentItem1.Name = "setFloatingObjectBottomCenterAlignmentItem1";
-            // 
-            // setFloatingObjectBottomRightAlignmentItem1
-            // 
-            this.setFloatingObjectBottomRightAlignmentItem1.Id = 228;
-            this.setFloatingObjectBottomRightAlignmentItem1.Name = "setFloatingObjectBottomRightAlignmentItem1";
-            // 
-            // floatingObjectBringForwardSubItem1
-            // 
-            this.floatingObjectBringForwardSubItem1.Id = 229;
-            this.floatingObjectBringForwardSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.floatingObjectBringForwardItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.floatingObjectBringToFrontItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.floatingObjectBringInFrontOfTextItem1)});
-            this.floatingObjectBringForwardSubItem1.Name = "floatingObjectBringForwardSubItem1";
-            // 
-            // floatingObjectBringForwardItem1
-            // 
-            this.floatingObjectBringForwardItem1.Id = 230;
-            this.floatingObjectBringForwardItem1.Name = "floatingObjectBringForwardItem1";
-            // 
-            // floatingObjectBringToFrontItem1
-            // 
-            this.floatingObjectBringToFrontItem1.Id = 231;
-            this.floatingObjectBringToFrontItem1.Name = "floatingObjectBringToFrontItem1";
-            // 
-            // floatingObjectBringInFrontOfTextItem1
-            // 
-            this.floatingObjectBringInFrontOfTextItem1.Id = 232;
-            this.floatingObjectBringInFrontOfTextItem1.Name = "floatingObjectBringInFrontOfTextItem1";
-            // 
-            // floatingObjectSendBackwardSubItem1
-            // 
-            this.floatingObjectSendBackwardSubItem1.Id = 233;
-            this.floatingObjectSendBackwardSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.floatingObjectSendBackwardItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.floatingObjectSendToBackItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.floatingObjectSendBehindTextItem1)});
-            this.floatingObjectSendBackwardSubItem1.Name = "floatingObjectSendBackwardSubItem1";
-            // 
-            // floatingObjectSendBackwardItem1
-            // 
-            this.floatingObjectSendBackwardItem1.Id = 234;
-            this.floatingObjectSendBackwardItem1.Name = "floatingObjectSendBackwardItem1";
-            // 
-            // floatingObjectSendToBackItem1
-            // 
-            this.floatingObjectSendToBackItem1.Id = 235;
-            this.floatingObjectSendToBackItem1.Name = "floatingObjectSendToBackItem1";
-            // 
-            // floatingObjectSendBehindTextItem1
-            // 
-            this.floatingObjectSendBehindTextItem1.Id = 236;
-            this.floatingObjectSendBehindTextItem1.Name = "floatingObjectSendBehindTextItem1";
             // 
             // F130_Danh_muc_mau_email
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(907, 415);
-            this.Controls.Add(this.richEditControl1);
+            this.ClientSize = new System.Drawing.Size(889, 415);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.dockPanel1);
             this.Controls.Add(this.ribbonControl1);
             this.Name = "F130_Danh_muc_mau_email";
             this.Text = "F130_Danh_muc_mau_email";
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.richEditBarController1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
+            this.dockPanel1.ResumeLayout(false);
+            this.dockPanel1_Container.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.m_lb_control)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichEditFontSizeEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemBorderLineStyle1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemBorderLineWeight1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFloatingObjectOutlineWeight1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2598,8 +2044,33 @@
 
         #endregion
 
-        private DevExpress.XtraRichEdit.RichEditControl richEditControl1;
-        private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
+        private DevExpress.XtraRichEdit.UI.RichEditBarController richEditBarController1;
+        private DevExpress.XtraBars.Docking.DockManager dockManager1;
+        private DevExpress.XtraBars.Docking.DockPanel dockPanel1;
+        private DevExpress.XtraBars.Docking.ControlContainer dockPanel1_Container;
+        private DevExpress.XtraRichEdit.RichEditControl m_txt_noi_dung;
+        private DevExpress.XtraEditors.SimpleButton m_cmd_send_email;
+        private DevExpress.XtraEditors.ListBoxControl m_lb_control;
+        private DevExpress.XtraEditors.SimpleButton m_cmd_insert;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox m_txt_tieu_de_mail;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label m_lbl_tieu_de_mail;
+        private DevExpress.XtraRichEdit.UI.HomeRibbonPage homeRibbonPage1;
+        private DevExpress.XtraRichEdit.UI.ClipboardRibbonPageGroup clipboardRibbonPageGroup1;
+        private DevExpress.XtraRichEdit.UI.FontRibbonPageGroup fontRibbonPageGroup1;
+        private DevExpress.XtraRichEdit.UI.ParagraphRibbonPageGroup paragraphRibbonPageGroup1;
+        private DevExpress.XtraRichEdit.UI.StylesRibbonPageGroup stylesRibbonPageGroup1;
+        private DevExpress.XtraRichEdit.UI.EditingRibbonPageGroup editingRibbonPageGroup1;
+        private DevExpress.XtraRichEdit.UI.InsertRibbonPage insertRibbonPage1;
+        private DevExpress.XtraRichEdit.UI.PagesRibbonPageGroup pagesRibbonPageGroup1;
+        private DevExpress.XtraRichEdit.UI.TablesRibbonPageGroup tablesRibbonPageGroup1;
+        private DevExpress.XtraRichEdit.UI.IllustrationsRibbonPageGroup illustrationsRibbonPageGroup1;
+        private DevExpress.XtraRichEdit.UI.LinksRibbonPageGroup linksRibbonPageGroup1;
+        private DevExpress.XtraRichEdit.UI.HeaderFooterRibbonPageGroup headerFooterRibbonPageGroup1;
+        private DevExpress.XtraRichEdit.UI.TextRibbonPageGroup textRibbonPageGroup1;
+        private DevExpress.XtraRichEdit.UI.SymbolsRibbonPageGroup symbolsRibbonPageGroup1;
         private DevExpress.XtraRichEdit.UI.UndoItem undoItem1;
         private DevExpress.XtraRichEdit.UI.RedoItem redoItem1;
         private DevExpress.XtraRichEdit.UI.FileNewItem fileNewItem1;
@@ -2613,11 +2084,12 @@
         private DevExpress.XtraRichEdit.UI.CutItem cutItem1;
         private DevExpress.XtraRichEdit.UI.CopyItem copyItem1;
         private DevExpress.XtraRichEdit.UI.PasteSpecialItem pasteSpecialItem1;
-        private DevExpress.XtraBars.BarButtonGroup barButtonGroup1;
         private DevExpress.XtraRichEdit.UI.ChangeFontNameItem changeFontNameItem1;
         private DevExpress.XtraEditors.Repository.RepositoryItemFontEdit repositoryItemFontEdit1;
         private DevExpress.XtraRichEdit.UI.ChangeFontSizeItem changeFontSizeItem1;
         private DevExpress.XtraRichEdit.Design.RepositoryItemRichEditFontSizeEdit repositoryItemRichEditFontSizeEdit1;
+        private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
+        private DevExpress.XtraBars.BarButtonGroup barButtonGroup1;
         private DevExpress.XtraRichEdit.UI.FontSizeIncreaseItem fontSizeIncreaseItem1;
         private DevExpress.XtraRichEdit.UI.FontSizeDecreaseItem fontSizeDecreaseItem1;
         private DevExpress.XtraBars.BarButtonGroup barButtonGroup2;
@@ -2706,55 +2178,6 @@
         private DevExpress.XtraRichEdit.UI.ToggleParagraphSuppressLineNumbersItem toggleParagraphSuppressLineNumbersItem1;
         private DevExpress.XtraRichEdit.UI.ShowLineNumberingFormItem showLineNumberingFormItem1;
         private DevExpress.XtraRichEdit.UI.ChangePageColorItem changePageColorItem1;
-        private DevExpress.XtraRichEdit.UI.InsertTableOfContentsItem insertTableOfContentsItem1;
-        private DevExpress.XtraRichEdit.UI.UpdateTableOfContentsItem updateTableOfContentsItem1;
-        private DevExpress.XtraRichEdit.UI.AddParagraphsToTableOfContentItem addParagraphsToTableOfContentItem1;
-        private DevExpress.XtraRichEdit.UI.SetParagraphHeadingLevelItem setParagraphHeadingLevelItem1;
-        private DevExpress.XtraRichEdit.UI.SetParagraphHeadingLevelItem setParagraphHeadingLevelItem2;
-        private DevExpress.XtraRichEdit.UI.SetParagraphHeadingLevelItem setParagraphHeadingLevelItem3;
-        private DevExpress.XtraRichEdit.UI.SetParagraphHeadingLevelItem setParagraphHeadingLevelItem4;
-        private DevExpress.XtraRichEdit.UI.SetParagraphHeadingLevelItem setParagraphHeadingLevelItem5;
-        private DevExpress.XtraRichEdit.UI.SetParagraphHeadingLevelItem setParagraphHeadingLevelItem6;
-        private DevExpress.XtraRichEdit.UI.SetParagraphHeadingLevelItem setParagraphHeadingLevelItem7;
-        private DevExpress.XtraRichEdit.UI.SetParagraphHeadingLevelItem setParagraphHeadingLevelItem8;
-        private DevExpress.XtraRichEdit.UI.SetParagraphHeadingLevelItem setParagraphHeadingLevelItem9;
-        private DevExpress.XtraRichEdit.UI.SetParagraphHeadingLevelItem setParagraphHeadingLevelItem10;
-        private DevExpress.XtraRichEdit.UI.InsertCaptionPlaceholderItem insertCaptionPlaceholderItem1;
-        private DevExpress.XtraRichEdit.UI.InsertFiguresCaptionItems insertFiguresCaptionItems1;
-        private DevExpress.XtraRichEdit.UI.InsertTablesCaptionItems insertTablesCaptionItems1;
-        private DevExpress.XtraRichEdit.UI.InsertEquationsCaptionItems insertEquationsCaptionItems1;
-        private DevExpress.XtraRichEdit.UI.InsertTableOfFiguresPlaceholderItem insertTableOfFiguresPlaceholderItem1;
-        private DevExpress.XtraRichEdit.UI.InsertTableOfFiguresItems insertTableOfFiguresItems1;
-        private DevExpress.XtraRichEdit.UI.InsertTableOfTablesItems insertTableOfTablesItems1;
-        private DevExpress.XtraRichEdit.UI.InsertTableOfEquationsItems insertTableOfEquationsItems1;
-        private DevExpress.XtraRichEdit.UI.UpdateTableOfFiguresItem updateTableOfFiguresItem1;
-        private DevExpress.XtraRichEdit.UI.InsertMergeFieldItem insertMergeFieldItem1;
-        private DevExpress.XtraRichEdit.UI.ShowAllFieldCodesItem showAllFieldCodesItem1;
-        private DevExpress.XtraRichEdit.UI.ShowAllFieldResultsItem showAllFieldResultsItem1;
-        private DevExpress.XtraRichEdit.UI.ToggleViewMergedDataItem toggleViewMergedDataItem1;
-        private DevExpress.XtraRichEdit.UI.CheckSpellingItem checkSpellingItem1;
-        private DevExpress.XtraRichEdit.UI.ChangeLanguageItem changeLanguageItem1;
-        private DevExpress.XtraRichEdit.UI.ProtectDocumentItem protectDocumentItem1;
-        private DevExpress.XtraRichEdit.UI.ChangeRangeEditingPermissionsItem changeRangeEditingPermissionsItem1;
-        private DevExpress.XtraRichEdit.UI.UnprotectDocumentItem unprotectDocumentItem1;
-        private DevExpress.XtraRichEdit.UI.ChangeCommentItem changeCommentItem1;
-        private DevExpress.XtraRichEdit.UI.ReviewersItem reviewersItem1;
-        private DevExpress.XtraRichEdit.UI.ReviewingPaneItem reviewingPaneItem1;
-        private DevExpress.XtraRichEdit.UI.SwitchToSimpleViewItem switchToSimpleViewItem1;
-        private DevExpress.XtraRichEdit.UI.SwitchToDraftViewItem switchToDraftViewItem1;
-        private DevExpress.XtraRichEdit.UI.SwitchToPrintLayoutViewItem switchToPrintLayoutViewItem1;
-        private DevExpress.XtraRichEdit.UI.ToggleShowHorizontalRulerItem toggleShowHorizontalRulerItem1;
-        private DevExpress.XtraRichEdit.UI.ToggleShowVerticalRulerItem toggleShowVerticalRulerItem1;
-        private DevExpress.XtraRichEdit.UI.ZoomOutItem zoomOutItem1;
-        private DevExpress.XtraRichEdit.UI.ZoomInItem zoomInItem1;
-        private DevExpress.XtraRichEdit.UI.GoToPageHeaderItem goToPageHeaderItem1;
-        private DevExpress.XtraRichEdit.UI.GoToPageFooterItem goToPageFooterItem1;
-        private DevExpress.XtraRichEdit.UI.GoToNextHeaderFooterItem goToNextHeaderFooterItem1;
-        private DevExpress.XtraRichEdit.UI.GoToPreviousHeaderFooterItem goToPreviousHeaderFooterItem1;
-        private DevExpress.XtraRichEdit.UI.ToggleLinkToPreviousItem toggleLinkToPreviousItem1;
-        private DevExpress.XtraRichEdit.UI.ToggleDifferentFirstPageItem toggleDifferentFirstPageItem1;
-        private DevExpress.XtraRichEdit.UI.ToggleDifferentOddAndEvenPagesItem toggleDifferentOddAndEvenPagesItem1;
-        private DevExpress.XtraRichEdit.UI.ClosePageHeaderFooterItem closePageHeaderFooterItem1;
         private DevExpress.XtraRichEdit.UI.ToggleFirstRowItem toggleFirstRowItem1;
         private DevExpress.XtraRichEdit.UI.ToggleLastRowItem toggleLastRowItem1;
         private DevExpress.XtraRichEdit.UI.ToggleBandedRowsItem toggleBandedRowsItem1;
@@ -2812,35 +2235,6 @@
         private DevExpress.XtraRichEdit.UI.ToggleTableCellsMiddleRightAlignmentItem toggleTableCellsMiddleRightAlignmentItem1;
         private DevExpress.XtraRichEdit.UI.ToggleTableCellsBottomRightAlignmentItem toggleTableCellsBottomRightAlignmentItem1;
         private DevExpress.XtraRichEdit.UI.ShowTableOptionsFormItem showTableOptionsFormItem1;
-        private DevExpress.XtraRichEdit.UI.ChangeFloatingObjectFillColorItem changeFloatingObjectFillColorItem1;
-        private DevExpress.XtraRichEdit.UI.ChangeFloatingObjectOutlineColorItem changeFloatingObjectOutlineColorItem1;
-        private DevExpress.XtraRichEdit.UI.ChangeFloatingObjectOutlineWeightItem changeFloatingObjectOutlineWeightItem1;
-        private DevExpress.XtraRichEdit.Forms.Design.RepositoryItemFloatingObjectOutlineWeight repositoryItemFloatingObjectOutlineWeight1;
-        private DevExpress.XtraRichEdit.UI.ChangeFloatingObjectTextWrapTypeItem changeFloatingObjectTextWrapTypeItem1;
-        private DevExpress.XtraRichEdit.UI.SetFloatingObjectSquareTextWrapTypeItem setFloatingObjectSquareTextWrapTypeItem1;
-        private DevExpress.XtraRichEdit.UI.SetFloatingObjectTightTextWrapTypeItem setFloatingObjectTightTextWrapTypeItem1;
-        private DevExpress.XtraRichEdit.UI.SetFloatingObjectThroughTextWrapTypeItem setFloatingObjectThroughTextWrapTypeItem1;
-        private DevExpress.XtraRichEdit.UI.SetFloatingObjectTopAndBottomTextWrapTypeItem setFloatingObjectTopAndBottomTextWrapTypeItem1;
-        private DevExpress.XtraRichEdit.UI.SetFloatingObjectBehindTextWrapTypeItem setFloatingObjectBehindTextWrapTypeItem1;
-        private DevExpress.XtraRichEdit.UI.SetFloatingObjectInFrontOfTextWrapTypeItem setFloatingObjectInFrontOfTextWrapTypeItem1;
-        private DevExpress.XtraRichEdit.UI.ChangeFloatingObjectAlignmentItem changeFloatingObjectAlignmentItem1;
-        private DevExpress.XtraRichEdit.UI.SetFloatingObjectTopLeftAlignmentItem setFloatingObjectTopLeftAlignmentItem1;
-        private DevExpress.XtraRichEdit.UI.SetFloatingObjectTopCenterAlignmentItem setFloatingObjectTopCenterAlignmentItem1;
-        private DevExpress.XtraRichEdit.UI.SetFloatingObjectTopRightAlignmentItem setFloatingObjectTopRightAlignmentItem1;
-        private DevExpress.XtraRichEdit.UI.SetFloatingObjectMiddleLeftAlignmentItem setFloatingObjectMiddleLeftAlignmentItem1;
-        private DevExpress.XtraRichEdit.UI.SetFloatingObjectMiddleCenterAlignmentItem setFloatingObjectMiddleCenterAlignmentItem1;
-        private DevExpress.XtraRichEdit.UI.SetFloatingObjectMiddleRightAlignmentItem setFloatingObjectMiddleRightAlignmentItem1;
-        private DevExpress.XtraRichEdit.UI.SetFloatingObjectBottomLeftAlignmentItem setFloatingObjectBottomLeftAlignmentItem1;
-        private DevExpress.XtraRichEdit.UI.SetFloatingObjectBottomCenterAlignmentItem setFloatingObjectBottomCenterAlignmentItem1;
-        private DevExpress.XtraRichEdit.UI.SetFloatingObjectBottomRightAlignmentItem setFloatingObjectBottomRightAlignmentItem1;
-        private DevExpress.XtraRichEdit.UI.FloatingObjectBringForwardSubItem floatingObjectBringForwardSubItem1;
-        private DevExpress.XtraRichEdit.UI.FloatingObjectBringForwardItem floatingObjectBringForwardItem1;
-        private DevExpress.XtraRichEdit.UI.FloatingObjectBringToFrontItem floatingObjectBringToFrontItem1;
-        private DevExpress.XtraRichEdit.UI.FloatingObjectBringInFrontOfTextItem floatingObjectBringInFrontOfTextItem1;
-        private DevExpress.XtraRichEdit.UI.FloatingObjectSendBackwardSubItem floatingObjectSendBackwardSubItem1;
-        private DevExpress.XtraRichEdit.UI.FloatingObjectSendBackwardItem floatingObjectSendBackwardItem1;
-        private DevExpress.XtraRichEdit.UI.FloatingObjectSendToBackItem floatingObjectSendToBackItem1;
-        private DevExpress.XtraRichEdit.UI.FloatingObjectSendBehindTextItem floatingObjectSendBehindTextItem1;
         private DevExpress.XtraRichEdit.UI.TableToolsRibbonPageCategory tableToolsRibbonPageCategory1;
         private DevExpress.XtraRichEdit.UI.TableDesignRibbonPage tableDesignRibbonPage1;
         private DevExpress.XtraRichEdit.UI.TableStyleOptionsRibbonPageGroup tableStyleOptionsRibbonPageGroup1;
@@ -2852,36 +2246,21 @@
         private DevExpress.XtraRichEdit.UI.TableMergeRibbonPageGroup tableMergeRibbonPageGroup1;
         private DevExpress.XtraRichEdit.UI.TableCellSizeRibbonPageGroup tableCellSizeRibbonPageGroup1;
         private DevExpress.XtraRichEdit.UI.TableAlignmentRibbonPageGroup tableAlignmentRibbonPageGroup1;
-        private DevExpress.XtraRichEdit.UI.FloatingPictureToolsRibbonPageCategory floatingPictureToolsRibbonPageCategory1;
-        private DevExpress.XtraRichEdit.UI.FloatingPictureToolsFormatPage floatingPictureToolsFormatPage1;
-        private DevExpress.XtraRichEdit.UI.FloatingPictureToolsShapeStylesPageGroup floatingPictureToolsShapeStylesPageGroup1;
-        private DevExpress.XtraRichEdit.UI.FloatingPictureToolsArrangePageGroup floatingPictureToolsArrangePageGroup1;
         private DevExpress.XtraRichEdit.UI.FileRibbonPage fileRibbonPage1;
         private DevExpress.XtraRichEdit.UI.CommonRibbonPageGroup commonRibbonPageGroup1;
-        private DevExpress.XtraRichEdit.UI.HomeRibbonPage homeRibbonPage1;
-        private DevExpress.XtraRichEdit.UI.ClipboardRibbonPageGroup clipboardRibbonPageGroup1;
-        private DevExpress.XtraRichEdit.UI.FontRibbonPageGroup fontRibbonPageGroup1;
-        private DevExpress.XtraRichEdit.UI.ParagraphRibbonPageGroup paragraphRibbonPageGroup1;
-        private DevExpress.XtraRichEdit.UI.StylesRibbonPageGroup stylesRibbonPageGroup1;
-        private DevExpress.XtraRichEdit.UI.EditingRibbonPageGroup editingRibbonPageGroup1;
-        private DevExpress.XtraRichEdit.UI.InsertRibbonPage insertRibbonPage1;
-        private DevExpress.XtraRichEdit.UI.PagesRibbonPageGroup pagesRibbonPageGroup1;
-        private DevExpress.XtraRichEdit.UI.TablesRibbonPageGroup tablesRibbonPageGroup1;
-        private DevExpress.XtraRichEdit.UI.IllustrationsRibbonPageGroup illustrationsRibbonPageGroup1;
-        private DevExpress.XtraRichEdit.UI.LinksRibbonPageGroup linksRibbonPageGroup1;
-        private DevExpress.XtraRichEdit.UI.HeaderFooterRibbonPageGroup headerFooterRibbonPageGroup1;
-        private DevExpress.XtraRichEdit.UI.TextRibbonPageGroup textRibbonPageGroup1;
-        private DevExpress.XtraRichEdit.UI.SymbolsRibbonPageGroup symbolsRibbonPageGroup1;
-        private DevExpress.XtraRichEdit.UI.PageLayoutRibbonPage pageLayoutRibbonPage1;
-        private DevExpress.XtraRichEdit.UI.PageSetupRibbonPageGroup pageSetupRibbonPageGroup1;
-        private DevExpress.XtraRichEdit.UI.PageBackgroundRibbonPageGroup pageBackgroundRibbonPageGroup1;
-        private DevExpress.XtraRichEdit.UI.ReferencesRibbonPage referencesRibbonPage1;
-        private DevExpress.XtraRichEdit.UI.TableOfContentsRibbonPageGroup tableOfContentsRibbonPageGroup1;
-        private DevExpress.XtraRichEdit.UI.CaptionsRibbonPageGroup captionsRibbonPageGroup1;
-        private DevExpress.XtraRichEdit.UI.ViewRibbonPage viewRibbonPage1;
-        private DevExpress.XtraRichEdit.UI.DocumentViewsRibbonPageGroup documentViewsRibbonPageGroup1;
-        private DevExpress.XtraRichEdit.UI.ShowRibbonPageGroup showRibbonPageGroup1;
-        private DevExpress.XtraRichEdit.UI.ZoomRibbonPageGroup zoomRibbonPageGroup1;
-        private DevExpress.XtraRichEdit.UI.RichEditBarController richEditBarController1;
+        private DevExpress.XtraRichEdit.UI.HomeRibbonPage homeRibbonPage2;
+        private DevExpress.XtraRichEdit.UI.ClipboardRibbonPageGroup clipboardRibbonPageGroup2;
+        private DevExpress.XtraRichEdit.UI.FontRibbonPageGroup fontRibbonPageGroup2;
+        private DevExpress.XtraRichEdit.UI.ParagraphRibbonPageGroup paragraphRibbonPageGroup2;
+        private DevExpress.XtraRichEdit.UI.StylesRibbonPageGroup stylesRibbonPageGroup2;
+        private DevExpress.XtraRichEdit.UI.EditingRibbonPageGroup editingRibbonPageGroup2;
+        private DevExpress.XtraRichEdit.UI.InsertRibbonPage insertRibbonPage2;
+        private DevExpress.XtraRichEdit.UI.PagesRibbonPageGroup pagesRibbonPageGroup2;
+        private DevExpress.XtraRichEdit.UI.TablesRibbonPageGroup tablesRibbonPageGroup2;
+        private DevExpress.XtraRichEdit.UI.IllustrationsRibbonPageGroup illustrationsRibbonPageGroup2;
+        private DevExpress.XtraRichEdit.UI.LinksRibbonPageGroup linksRibbonPageGroup2;
+        private DevExpress.XtraRichEdit.UI.HeaderFooterRibbonPageGroup headerFooterRibbonPageGroup2;
+        private DevExpress.XtraRichEdit.UI.TextRibbonPageGroup textRibbonPageGroup2;
+        private DevExpress.XtraRichEdit.UI.SymbolsRibbonPageGroup symbolsRibbonPageGroup2;
     }
 }

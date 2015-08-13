@@ -499,7 +499,7 @@ namespace BKI_DTNB
         {
             try
             {
-                Mail.sendEmail();
+                Mail.sendEmail("thaiph.bkhn@gmail.com", "thai14101992", "thaiph@bkindex.com", "", "");
             }
             catch (Exception v_e)
             {

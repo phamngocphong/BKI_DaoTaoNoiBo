@@ -12,6 +12,7 @@ using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.Utils.Menu;
 using BKI_DTNB.DS.CDBNames;
 using DevExpress.XtraEditors.Repository;
+using BKI_DTNB.DanhMuc;
 
 namespace BKI_DTNB.NghiepVu
 {
@@ -213,6 +214,52 @@ namespace BKI_DTNB.NghiepVu
                 CSystemLog_301.ExceptionHandle(ex);
 
             }
+        }
+
+        private void m_cmd_email_Click(object sender, EventArgs e)
+        {
+            List<DataRow> v_lst_dr = get_selected_rows();
+            List<iParameter> v_lst_field = get_all_field();
+
+            F130_Danh_muc_mau_email v_f = new F130_Danh_muc_mau_email();
+            v_f.display(v_lst_field, v_lst_dr);
+        }
+
+        private List<iParameter> get_all_field()
+        {
+            List<iParameter> v_lst_field = new List<iParameter>();
+            for (int i = 0; i < m_grv.Columns.Count; i++)
+            {
+                if (m_grv.Columns[i].Visible)
+                {
+                    iParameter v_ip = new iParameter(m_grv.Columns[i].Caption, m_grv.Columns[i].FieldName);
+                    v_lst_field.Add(v_ip);
+                }
+            }
+            return v_lst_field;
+        }
+
+        private List<DataRow> get_selected_rows()
+        {
+            List<DataRow> v_lst_dr = new List<DataRow>();
+            var v_lst = GetSelectedRows(m_grv);
+            foreach (var v_i in v_lst)
+            {
+                v_lst_dr.Add(m_grv.GetDataRow(v_i));
+            }
+            return v_lst_dr;
+        }
+
+        private List<int> GetSelectedRows(GridView view)
+        {
+            List<int> v_lst = new List<int>();
+            int[] rows = m_grv.GetSelectedRows();
+            for (int i = 0; i < rows.Length; i++)
+                if (!m_grv.IsGroupRow(rows[i]))
+                {
+                    v_lst.Add(rows[i]);
+                }
+            return v_lst;
         }
     }
 }

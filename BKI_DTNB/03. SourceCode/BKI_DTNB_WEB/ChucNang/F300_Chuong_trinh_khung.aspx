@@ -4,25 +4,27 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" runat="server" contentplaceholderid="ContentPlaceHolder1">
-    <dx:ASPxGridView ID="m_grv" runat="server" AutoGenerateColumns="False" Width="799px" ClientIDMode="Static">
+    <dx:ASPxGridView ID="m_grv" runat="server" AutoGenerateColumns="False" Width="1023px" ClientIDMode="Static">
         <Columns>
-            <dx:GridViewDataTextColumn Caption="TRUNG TÂM" FieldName="MA_TRUNG_TAM" VisibleIndex="1">
+            <dx:GridViewDataTextColumn Caption="TRUNG TÂM" FieldName="MA_TRUNG_TAM" VisibleIndex="2" GroupIndex="2" SortIndex="2" SortOrder="Ascending">
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn Caption="NGẠCH" FieldName="MA_NGACH" VisibleIndex="2">
+            <dx:GridViewDataTextColumn Caption="NGẠCH" FieldName="MA_NGACH" VisibleIndex="3" GroupIndex="1" SortIndex="1" SortOrder="Ascending">
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn Caption="CHỨC VỤ" FieldName="CHUC_VU" VisibleIndex="3">
+            <dx:GridViewDataTextColumn Caption="CHỨC VỤ" FieldName="CHUC_VU" VisibleIndex="4" GroupIndex="3" SortIndex="3" SortOrder="Ascending">
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn Caption="NGHIỆP VỤ" FieldName="TEN_NGHIEP_VU" VisibleIndex="4">
+            <dx:GridViewDataTextColumn Caption="NGHIỆP VỤ" FieldName="TEN_NGHIEP_VU" VisibleIndex="5">
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn Caption="MÔN HỌC" FieldName="TEN_MON_HOC" VisibleIndex="5">
+            <dx:GridViewDataTextColumn Caption="MÔN HỌC" FieldName="TEN_MON_HOC" VisibleIndex="6">
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn Caption="ĐIỂM CHUYÊN CẦN" FieldName="diem_chuyen_can" VisibleIndex="6">
+            <dx:GridViewDataTextColumn Caption="ĐIỂM CHUYÊN CẦN" FieldName="diem_chuyen_can" VisibleIndex="7">
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn Caption="DIỂM THI" FieldName="diem_thi" VisibleIndex="7">
+            <dx:GridViewDataTextColumn Caption="DIỂM THI" FieldName="diem_thi" VisibleIndex="8">
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn Caption="ĐIỂM KIỂM TRA" FieldName="diem_kiem_tra" VisibleIndex="8">
+            <dx:GridViewDataTextColumn Caption="ĐIỂM KIỂM TRA" FieldName="diem_kiem_tra" VisibleIndex="9">
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn Caption="KẾT QUẢ" FieldName="TEN" VisibleIndex="9">
+            <dx:GridViewDataTextColumn Caption="KẾT QUẢ" FieldName="TEN" VisibleIndex="10">
+            </dx:GridViewDataTextColumn>
+            <dx:GridViewDataTextColumn Caption="TÊN NHÂN VIÊN" FieldName="TEN_NHAN_VIEN" GroupIndex="0" Name="TEN_NHAN_VIEN" SortIndex="0" SortOrder="Ascending" VisibleIndex="1">
             </dx:GridViewDataTextColumn>
         </Columns>
         <SettingsPager PageSize="100">

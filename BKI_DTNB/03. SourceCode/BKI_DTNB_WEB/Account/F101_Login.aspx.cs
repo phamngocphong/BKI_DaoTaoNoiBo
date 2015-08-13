@@ -17,7 +17,7 @@ namespace BKI_DTNB_WEB.Account
 
         protected void m_cmd_Login_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/ChucNang/F300_Chuong_trinh_khung.aspx");
+            Response.Redirect("/ChucNang/f302_lop_mon.aspx");
         }
     }
 }

@@ -129,6 +129,7 @@
     <Content Include="Account\F101_Login.aspx" />
     <Content Include="ChucNang\F300_Chuong_trinh_khung.aspx" />
     <Content Include="ChucNang\F301_Dang_ki_hoc.aspx" />
+    <Content Include="ChucNang\f302_lop_mon.aspx" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -228,6 +229,7 @@
     <Content Include="Scripts\_references.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Style\Style.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -258,6 +260,13 @@
     </Compile>
     <Compile Include="ChucNang\F301_Dang_ki_hoc.aspx.designer.cs">
       <DependentUpon>F301_Dang_ki_hoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChucNang\f302_lop_mon.aspx.cs">
+      <DependentUpon>f302_lop_mon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChucNang\f302_lop_mon.aspx.designer.cs">
+      <DependentUpon>f302_lop_mon.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

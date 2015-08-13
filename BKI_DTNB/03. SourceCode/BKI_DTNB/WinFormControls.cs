@@ -376,6 +376,13 @@ namespace BKI_DTNB
             v_cstore.addDecimalInputParam("@id_nhan_vien", p);
             v_cstore.fillDataSetByCommand(this, v_ds);
         }
+
+        public void FillLopMonChoNhanVien(DataSet v_ds, decimal p)
+        {
+            CStoredProc v_cstore = new CStoredProc("get_lop_mon_cua_nhan_vien");
+            v_cstore.addDecimalInputParam("@ip_id_nhan_vien", p);
+            v_cstore.fillDataSetByCommand(this, v_ds);
+        }
     }
 
     public class iParameter

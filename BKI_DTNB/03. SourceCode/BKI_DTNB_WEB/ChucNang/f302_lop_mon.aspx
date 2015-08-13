@@ -5,7 +5,7 @@
 
 </asp:Content>
 <asp:Content ID="Content2" runat="server" contentplaceholderid="ContentPlaceHolder1">
-    <dx:ASPxGridView ID="m_grv" runat="server" AutoGenerateColumns="False" Width="977px" KeyFieldName="ID" OnCustomButtonCallback="m_grv_CustomButtonCallback">
+    <dx:ASPxGridView ID="m_grv" runat="server" AutoGenerateColumns="False" Width="977px" KeyFieldName="ID" OnCustomButtonCallback="m_grv_CustomButtonCallback" ClientIDMode="Static">
         <Columns>
             <dx:GridViewDataTextColumn Caption="MÃ LỚP HỌC" FieldName="MA_LOP_HOC" VisibleIndex="0">
             </dx:GridViewDataTextColumn>

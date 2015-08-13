@@ -455,7 +455,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="f388_main.cs" />
+    <Compile Include="f388_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="f388_main.Designer.cs">
       <DependentUpon>f388_main.cs</DependentUpon>
     </Compile>

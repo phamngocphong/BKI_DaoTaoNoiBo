@@ -7,6 +7,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+         <script src="Scripts/jquery-1.7.1.js"></script>
+    <script src="Scripts/jquery-ui-1.8.20.js"></script>
+    <script src="Scripts/jquery-ui-1.8.20.min.js"></script>
+    <link href="Style/Style.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -18,17 +22,19 @@
                 <Tabs>
                     <dx:RibbonTab Name="Home" Text="Home">
                         <Groups>
-                            <dx:RibbonGroup Name="Tasks" Text="Tasks">
+                            <dx:RibbonGroup Name="Tasks" Text="Tra cứu">
                                 <Items>
-                                    <dx:RibbonButtonItem Name="TasksList" 
-                                      Text="Tasks List" Size="Large">
+                                    <dx:RibbonButtonItem Name="Chương trình khung" 
+                                      Text="Chương trình khung" Size="Large" NavigateUrl="/ChucNang/F300_CHUONG_TRINH_KHUNG.aspx">
                                         <LargeImage 
                                           IconID="tasks_task_32x32" />
+                                        <ItemStyle Width="100px" />
                                     </dx:RibbonButtonItem>
-                                    <dx:RibbonButtonItem Name="NewTask" 
-                                      Text="New" Size="Large">
+                                    <dx:RibbonButtonItem Name="Lớp môn" 
+                                      Text="Lớp môn" Size="Large" NavigateUrl="/ChucNang/f302_lop_mon.aspx">
                                         <LargeImage 
                                           IconID="tasks_newtask_32x32" />
+                                        <ItemStyle Width="100px" />
                                     </dx:RibbonButtonItem>
                                 </Items>
                             </dx:RibbonGroup>

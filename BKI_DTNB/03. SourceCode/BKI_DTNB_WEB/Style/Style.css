@@ -1,1 +1,19 @@
-﻿
+﻿#m_grv {
+background-color: white;
+color: maroon !important;
+}
+.dxgvTable {
+background-color:white;
+}
+#m_grv_DXHeadersRow0 {
+background-color:maroon;
+color:  white !important;
+}
+.dxgvHeader {
+background-color: maroon;
+color:  white !important;
+}
+
+.dxgvHeader table {
+    color: white;
+}

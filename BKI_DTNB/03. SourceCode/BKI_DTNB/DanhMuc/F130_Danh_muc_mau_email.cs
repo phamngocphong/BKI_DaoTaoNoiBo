@@ -12,6 +12,9 @@ using System.Windows.Forms;
 using IP.Core.IPCommon;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
+using System.Windows;
+using DevExpress.XtraRichEdit.API.Native;
+using DevExpress.Office.Utils;
 
 namespace BKI_DTNB.DanhMuc
 {
@@ -40,7 +43,7 @@ namespace BKI_DTNB.DanhMuc
             string v_noi_dung = ExportHtml();
             for (int i = 0; i < m_lst_dr.Count; i++)
             {
-                string v_email = get_email(CIPConvert.ToDecimal(m_lst_dr[i]["ID"].ToString()));
+                string v_email = get_email(CIPConvert.ToDecimal(m_lst_dr[i]["ID_NHAN_VIEN"].ToString()));
                 var v_noi_dung_merge = MergeMail(v_noi_dung, i);
                 Mail.sendEmail("thaiph.bkhn@gmail.com", "thai14101992", v_email, m_txt_tieu_de_mail.Text, v_noi_dung_merge);
             }
@@ -60,6 +63,8 @@ namespace BKI_DTNB.DanhMuc
 
         private string get_email(decimal ip_id_nhan_vien)
         {
+            //US_DM_NHAN_VIEN v_us = new US_DM_NHAN_VIEN(ip_id_nhan_vien);
+            //return v_us.strEMAIL;
             return "thaiph@bkindex.com";
         }
 

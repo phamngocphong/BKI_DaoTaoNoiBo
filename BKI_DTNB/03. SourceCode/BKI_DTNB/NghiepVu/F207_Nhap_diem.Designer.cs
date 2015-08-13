@@ -45,14 +45,14 @@
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
-            this.m_cmd_refresh = new DevExpress.XtraEditors.SimpleButton();
-            this.m_cmd_luu = new SIS.Controls.Button.SiSButton();
-            this.m_cmd_update = new SIS.Controls.Button.SiSButton();
-            this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.m_tieu_de_f207 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.m_cmd_exit = new DevExpress.XtraEditors.SimpleButton();
+            this.m_cmd_luu = new DevExpress.XtraEditors.SimpleButton();
+            this.m_cmd_update = new DevExpress.XtraEditors.SimpleButton();
             this.m_cmd_email = new DevExpress.XtraEditors.SimpleButton();
+            this.m_cmd_refresh = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.m_grc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
@@ -70,7 +70,7 @@
             this.m_grc.Name = "m_grc";
             this.m_grc.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemComboBox1});
-            this.m_grc.Size = new System.Drawing.Size(769, 312);
+            this.m_grc.Size = new System.Drawing.Size(769, 318);
             this.m_grc.TabIndex = 0;
             this.m_grc.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.m_grv});
@@ -225,76 +225,17 @@
             // 
             // m_pnl_out_place_dm
             // 
-            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_email);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_refresh);
-            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_luu);
+            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_email);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_update);
+            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_luu);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 359);
+            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 365);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(769, 46);
             this.m_pnl_out_place_dm.TabIndex = 20;
-            // 
-            // m_cmd_refresh
-            // 
-            this.m_cmd_refresh.Dock = System.Windows.Forms.DockStyle.Right;
-            this.m_cmd_refresh.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_refresh.Image")));
-            this.m_cmd_refresh.Location = new System.Drawing.Point(319, 4);
-            this.m_cmd_refresh.Name = "m_cmd_refresh";
-            this.m_cmd_refresh.Size = new System.Drawing.Size(135, 38);
-            this.m_cmd_refresh.TabIndex = 17;
-            this.m_cmd_refresh.Text = "Load lại trang";
-            this.m_cmd_refresh.Click += new System.EventHandler(this.m_cmd_refresh_Click);
-            // 
-            // m_cmd_luu
-            // 
-            this.m_cmd_luu.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_luu.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_luu.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_luu.Dock = System.Windows.Forms.DockStyle.Right;
-            this.m_cmd_luu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_luu.ImageIndex = 2;
-            this.m_cmd_luu.ImageList = this.ImageList;
-            this.m_cmd_luu.Location = new System.Drawing.Point(454, 4);
-            this.m_cmd_luu.Name = "m_cmd_luu";
-            this.m_cmd_luu.Size = new System.Drawing.Size(87, 38);
-            this.m_cmd_luu.TabIndex = 16;
-            this.m_cmd_luu.Text = "&Lưu nhanh";
-            this.m_cmd_luu.Click += new System.EventHandler(this.m_cmd_luu_Click);
-            // 
-            // m_cmd_update
-            // 
-            this.m_cmd_update.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_update.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_update.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_update.Dock = System.Windows.Forms.DockStyle.Right;
-            this.m_cmd_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_update.ImageIndex = 3;
-            this.m_cmd_update.ImageList = this.ImageList;
-            this.m_cmd_update.Location = new System.Drawing.Point(541, 4);
-            this.m_cmd_update.Name = "m_cmd_update";
-            this.m_cmd_update.Size = new System.Drawing.Size(136, 38);
-            this.m_cmd_update.TabIndex = 13;
-            this.m_cmd_update.Text = "&Nhập điểm từ XLSX";
-            this.m_cmd_update.Click += new System.EventHandler(this.m_cmd_update_Click);
-            // 
-            // m_cmd_exit
-            // 
-            this.m_cmd_exit.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_exit.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_exit.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_exit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_exit.ImageIndex = 12;
-            this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(677, 4);
-            this.m_cmd_exit.Name = "m_cmd_exit";
-            this.m_cmd_exit.Size = new System.Drawing.Size(88, 38);
-            this.m_cmd_exit.TabIndex = 11;
-            this.m_cmd_exit.Text = "Thoát (Esc)";
-            this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_exit_Click);
             // 
             // panel1
             // 
@@ -322,25 +263,65 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 47);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(769, 312);
+            this.panel2.Size = new System.Drawing.Size(769, 318);
             this.panel2.TabIndex = 22;
+            // 
+            // m_cmd_exit
+            // 
+            this.m_cmd_exit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.m_cmd_exit.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_exit.Image")));
+            this.m_cmd_exit.Location = new System.Drawing.Point(689, 4);
+            this.m_cmd_exit.Name = "m_cmd_exit";
+            this.m_cmd_exit.Size = new System.Drawing.Size(76, 38);
+            this.m_cmd_exit.TabIndex = 21;
+            this.m_cmd_exit.Text = "Thoát";
+            this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_exit_Click);
+            // 
+            // m_cmd_luu
+            // 
+            this.m_cmd_luu.Dock = System.Windows.Forms.DockStyle.Right;
+            this.m_cmd_luu.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_luu.Image")));
+            this.m_cmd_luu.Location = new System.Drawing.Point(578, 4);
+            this.m_cmd_luu.Name = "m_cmd_luu";
+            this.m_cmd_luu.Size = new System.Drawing.Size(111, 38);
+            this.m_cmd_luu.TabIndex = 22;
+            this.m_cmd_luu.Text = "Lưu nhanh";
+            // 
+            // m_cmd_update
+            // 
+            this.m_cmd_update.Dock = System.Windows.Forms.DockStyle.Right;
+            this.m_cmd_update.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_update.Image")));
+            this.m_cmd_update.Location = new System.Drawing.Point(414, 4);
+            this.m_cmd_update.Name = "m_cmd_update";
+            this.m_cmd_update.Size = new System.Drawing.Size(164, 38);
+            this.m_cmd_update.TabIndex = 23;
+            this.m_cmd_update.Text = "Nhập điểm từ File Excel";
             // 
             // m_cmd_email
             // 
             this.m_cmd_email.Dock = System.Windows.Forms.DockStyle.Right;
             this.m_cmd_email.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_email.Image")));
-            this.m_cmd_email.Location = new System.Drawing.Point(184, 4);
+            this.m_cmd_email.Location = new System.Drawing.Point(285, 4);
             this.m_cmd_email.Name = "m_cmd_email";
-            this.m_cmd_email.Size = new System.Drawing.Size(135, 38);
-            this.m_cmd_email.TabIndex = 18;
+            this.m_cmd_email.Size = new System.Drawing.Size(129, 38);
+            this.m_cmd_email.TabIndex = 24;
             this.m_cmd_email.Text = "Gửi email";
-            this.m_cmd_email.Click += new System.EventHandler(this.m_cmd_email_Click);
+            // 
+            // m_cmd_refresh
+            // 
+            this.m_cmd_refresh.Dock = System.Windows.Forms.DockStyle.Right;
+            this.m_cmd_refresh.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_refresh.Image")));
+            this.m_cmd_refresh.Location = new System.Drawing.Point(150, 4);
+            this.m_cmd_refresh.Name = "m_cmd_refresh";
+            this.m_cmd_refresh.Size = new System.Drawing.Size(135, 38);
+            this.m_cmd_refresh.TabIndex = 25;
+            this.m_cmd_refresh.Text = "Load lại trang";
             // 
             // F207_Nhap_diem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(769, 405);
+            this.ClientSize = new System.Drawing.Size(769, 411);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.m_pnl_out_place_dm);
@@ -364,8 +345,6 @@
         private DevExpress.XtraGrid.Views.Grid.GridView m_grv;
         internal System.Windows.Forms.ImageList ImageList;
         internal System.Windows.Forms.Panel m_pnl_out_place_dm;
-        internal SIS.Controls.Button.SiSButton m_cmd_update;
-        internal SIS.Controls.Button.SiSButton m_cmd_exit;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private DevExpress.XtraGrid.Columns.GridColumn c_ten_nhan_vien;
@@ -377,11 +356,13 @@
         private DevExpress.XtraGrid.Columns.GridColumn c_diem_chuyen_can;
         private DevExpress.XtraGrid.Columns.GridColumn c_diem_kiem_tra;
         private DevExpress.XtraGrid.Columns.GridColumn c_diem_thi;
-        internal SIS.Controls.Button.SiSButton m_cmd_luu;
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private System.Windows.Forms.Label m_tieu_de_f207;
+        private DevExpress.XtraEditors.SimpleButton m_cmd_exit;
         private DevExpress.XtraEditors.SimpleButton m_cmd_refresh;
         private DevExpress.XtraEditors.SimpleButton m_cmd_email;
+        private DevExpress.XtraEditors.SimpleButton m_cmd_update;
+        private DevExpress.XtraEditors.SimpleButton m_cmd_luu;
     }
 }

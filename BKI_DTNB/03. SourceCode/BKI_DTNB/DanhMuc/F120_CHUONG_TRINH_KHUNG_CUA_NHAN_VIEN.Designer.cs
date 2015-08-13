@@ -64,6 +64,8 @@
             // 
             // m_cmd_hien_thi
             // 
+            this.m_cmd_hien_thi.Appearance.ForeColor = System.Drawing.Color.Maroon;
+            this.m_cmd_hien_thi.Appearance.Options.UseForeColor = true;
             this.m_cmd_hien_thi.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_hien_thi.Image")));
             this.m_cmd_hien_thi.Location = new System.Drawing.Point(370, 12);
             this.m_cmd_hien_thi.Name = "m_cmd_hien_thi";

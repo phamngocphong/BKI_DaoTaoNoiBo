@@ -183,6 +183,9 @@ namespace BKI_DTNB.NghiepVu
             }
         }
 
-        
+        private void m_cmd_exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

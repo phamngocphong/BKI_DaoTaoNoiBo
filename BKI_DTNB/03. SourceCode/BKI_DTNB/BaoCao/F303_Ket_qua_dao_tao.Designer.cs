@@ -33,8 +33,8 @@
             this.m_dat = new System.Windows.Forms.DateTimePicker();
             this.m_cmd_hien_thi = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.m_cmd_refresh = new DevExpress.XtraEditors.SimpleButton();
+            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -63,6 +63,10 @@
             // 
             // m_cmd_hien_thi
             // 
+            this.m_cmd_hien_thi.Appearance.ForeColor = System.Drawing.Color.Maroon;
+            this.m_cmd_hien_thi.Appearance.Options.UseForeColor = true;
+            this.m_cmd_hien_thi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("m_cmd_hien_thi.BackgroundImage")));
+            this.m_cmd_hien_thi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.m_cmd_hien_thi.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_hien_thi.Image")));
             this.m_cmd_hien_thi.Location = new System.Drawing.Point(309, 16);
             this.m_cmd_hien_thi.Name = "m_cmd_hien_thi";
@@ -82,6 +86,18 @@
             this.panelControl1.Size = new System.Drawing.Size(744, 56);
             this.panelControl1.TabIndex = 3;
             // 
+            // m_cmd_refresh
+            // 
+            this.m_cmd_refresh.Appearance.ForeColor = System.Drawing.Color.Maroon;
+            this.m_cmd_refresh.Appearance.Options.UseForeColor = true;
+            this.m_cmd_refresh.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_refresh.Image")));
+            this.m_cmd_refresh.Location = new System.Drawing.Point(573, 16);
+            this.m_cmd_refresh.Name = "m_cmd_refresh";
+            this.m_cmd_refresh.Size = new System.Drawing.Size(135, 34);
+            this.m_cmd_refresh.TabIndex = 3;
+            this.m_cmd_refresh.Text = "Load lại trang";
+            this.m_cmd_refresh.Click += new System.EventHandler(this.m_cmd_refresh_Click);
+            // 
             // panelControl2
             // 
             this.panelControl2.Controls.Add(this.pivotGridControl1);
@@ -90,16 +106,6 @@
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(744, 318);
             this.panelControl2.TabIndex = 4;
-            // 
-            // m_cmd_refresh
-            // 
-            this.m_cmd_refresh.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_refresh.Image")));
-            this.m_cmd_refresh.Location = new System.Drawing.Point(573, 16);
-            this.m_cmd_refresh.Name = "m_cmd_refresh";
-            this.m_cmd_refresh.Size = new System.Drawing.Size(135, 34);
-            this.m_cmd_refresh.TabIndex = 3;
-            this.m_cmd_refresh.Text = "Load lại trang";
-            this.m_cmd_refresh.Click += new System.EventHandler(this.m_cmd_refresh_Click);
             // 
             // F303_Ket_qua_dao_tao
             // 

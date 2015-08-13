@@ -39,11 +39,11 @@
             this.c_chuc_vu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
-            this.m_cmd_insert_nghiep_vu_them = new SIS.Controls.Button.SiSButton();
-            this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
-            this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
-            this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.m_cmd_exit = new DevExpress.XtraEditors.SimpleButton();
+            this.m_cmd_delete = new DevExpress.XtraEditors.SimpleButton();
+            this.m_cmd_insert = new DevExpress.XtraEditors.SimpleButton();
+            this.m_cmd_insert_nghiep_vu_them = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.m_grc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.m_pnl_out_place_dm.SuspendLayout();
@@ -149,70 +149,6 @@
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(753, 36);
             this.m_pnl_out_place_dm.TabIndex = 22;
             // 
-            // m_cmd_insert_nghiep_vu_them
-            // 
-            this.m_cmd_insert_nghiep_vu_them.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_insert_nghiep_vu_them.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_insert_nghiep_vu_them.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_insert_nghiep_vu_them.Dock = System.Windows.Forms.DockStyle.Right;
-            this.m_cmd_insert_nghiep_vu_them.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_insert_nghiep_vu_them.ImageIndex = 2;
-            this.m_cmd_insert_nghiep_vu_them.ImageList = this.ImageList;
-            this.m_cmd_insert_nghiep_vu_them.Location = new System.Drawing.Point(127, 4);
-            this.m_cmd_insert_nghiep_vu_them.Name = "m_cmd_insert_nghiep_vu_them";
-            this.m_cmd_insert_nghiep_vu_them.Size = new System.Drawing.Size(178, 28);
-            this.m_cmd_insert_nghiep_vu_them.TabIndex = 15;
-            this.m_cmd_insert_nghiep_vu_them.Text = "&Thêm nghiệp vụ khác";
-            this.m_cmd_insert_nghiep_vu_them.Click += new System.EventHandler(this.m_cmd_insert_nghiep_vu_them_Click);
-            // 
-            // m_cmd_insert
-            // 
-            this.m_cmd_insert.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_insert.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_insert.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_insert.Dock = System.Windows.Forms.DockStyle.Right;
-            this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_insert.ImageIndex = 2;
-            this.m_cmd_insert.ImageList = this.ImageList;
-            this.m_cmd_insert.Location = new System.Drawing.Point(305, 4);
-            this.m_cmd_insert.Name = "m_cmd_insert";
-            this.m_cmd_insert.Size = new System.Drawing.Size(178, 28);
-            this.m_cmd_insert.TabIndex = 12;
-            this.m_cmd_insert.Text = "&Thêm nghiệp vụ";
-            this.m_cmd_insert.Click += new System.EventHandler(this.m_cmd_insert_Click);
-            // 
-            // m_cmd_delete
-            // 
-            this.m_cmd_delete.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_delete.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_delete.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_delete.Dock = System.Windows.Forms.DockStyle.Right;
-            this.m_cmd_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_delete.ImageIndex = 4;
-            this.m_cmd_delete.ImageList = this.ImageList;
-            this.m_cmd_delete.Location = new System.Drawing.Point(483, 4);
-            this.m_cmd_delete.Name = "m_cmd_delete";
-            this.m_cmd_delete.Size = new System.Drawing.Size(178, 28);
-            this.m_cmd_delete.TabIndex = 14;
-            this.m_cmd_delete.Text = "&Hủy nghiệp vụ của nhân sự";
-            this.m_cmd_delete.Click += new System.EventHandler(this.m_cmd_delete_Click);
-            // 
-            // m_cmd_exit
-            // 
-            this.m_cmd_exit.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_exit.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_exit.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_exit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_exit.ImageIndex = 12;
-            this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(661, 4);
-            this.m_cmd_exit.Name = "m_cmd_exit";
-            this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_exit.TabIndex = 11;
-            this.m_cmd_exit.Text = "Thoát (Esc)";
-            this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_exit_Click);
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.m_grc);
@@ -221,6 +157,50 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(753, 374);
             this.panel1.TabIndex = 23;
+            // 
+            // m_cmd_exit
+            // 
+            this.m_cmd_exit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.m_cmd_exit.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_exit.Image")));
+            this.m_cmd_exit.Location = new System.Drawing.Point(666, 4);
+            this.m_cmd_exit.Name = "m_cmd_exit";
+            this.m_cmd_exit.Size = new System.Drawing.Size(83, 28);
+            this.m_cmd_exit.TabIndex = 21;
+            this.m_cmd_exit.Text = "Thoát";
+            this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_exit_Click);
+            // 
+            // m_cmd_delete
+            // 
+            this.m_cmd_delete.Dock = System.Windows.Forms.DockStyle.Right;
+            this.m_cmd_delete.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_delete.Image")));
+            this.m_cmd_delete.Location = new System.Drawing.Point(488, 4);
+            this.m_cmd_delete.Name = "m_cmd_delete";
+            this.m_cmd_delete.Size = new System.Drawing.Size(178, 28);
+            this.m_cmd_delete.TabIndex = 22;
+            this.m_cmd_delete.Text = "Hủy nghiệp vụ của nhân sự";
+            this.m_cmd_delete.Click += new System.EventHandler(this.m_cmd_delete_Click);
+            // 
+            // m_cmd_insert
+            // 
+            this.m_cmd_insert.Dock = System.Windows.Forms.DockStyle.Right;
+            this.m_cmd_insert.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_insert.Image")));
+            this.m_cmd_insert.Location = new System.Drawing.Point(353, 4);
+            this.m_cmd_insert.Name = "m_cmd_insert";
+            this.m_cmd_insert.Size = new System.Drawing.Size(135, 28);
+            this.m_cmd_insert.TabIndex = 23;
+            this.m_cmd_insert.Text = "Thêm nghiệp vụ";
+            this.m_cmd_insert.Click += new System.EventHandler(this.m_cmd_insert_Click);
+            // 
+            // m_cmd_insert_nghiep_vu_them
+            // 
+            this.m_cmd_insert_nghiep_vu_them.Dock = System.Windows.Forms.DockStyle.Right;
+            this.m_cmd_insert_nghiep_vu_them.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_insert_nghiep_vu_them.Image")));
+            this.m_cmd_insert_nghiep_vu_them.Location = new System.Drawing.Point(199, 4);
+            this.m_cmd_insert_nghiep_vu_them.Name = "m_cmd_insert_nghiep_vu_them";
+            this.m_cmd_insert_nghiep_vu_them.Size = new System.Drawing.Size(154, 28);
+            this.m_cmd_insert_nghiep_vu_them.TabIndex = 24;
+            this.m_cmd_insert_nghiep_vu_them.Text = "Thêm nghiệp vụ khác";
+            this.m_cmd_insert_nghiep_vu_them.Click += new System.EventHandler(this.m_cmd_insert_nghiep_vu_them_Click);
             // 
             // F211_Nhan_vien_nghiep_vu
             // 
@@ -246,15 +226,15 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         internal System.Windows.Forms.ImageList ImageList;
         internal System.Windows.Forms.Panel m_pnl_out_place_dm;
-        internal SIS.Controls.Button.SiSButton m_cmd_insert;
-        internal SIS.Controls.Button.SiSButton m_cmd_delete;
-        internal SIS.Controls.Button.SiSButton m_cmd_exit;
         private System.Windows.Forms.Panel panel1;
         private DevExpress.XtraGrid.Columns.GridColumn c_ma_nhan_vien;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn c_ma_nv;
         private DevExpress.XtraGrid.Columns.GridColumn c_trung_tam;
         private DevExpress.XtraGrid.Columns.GridColumn c_chuc_vu;
-        internal SIS.Controls.Button.SiSButton m_cmd_insert_nghiep_vu_them;
+        private DevExpress.XtraEditors.SimpleButton m_cmd_delete;
+        private DevExpress.XtraEditors.SimpleButton m_cmd_exit;
+        private DevExpress.XtraEditors.SimpleButton m_cmd_insert_nghiep_vu_them;
+        private DevExpress.XtraEditors.SimpleButton m_cmd_insert;
     }
 }

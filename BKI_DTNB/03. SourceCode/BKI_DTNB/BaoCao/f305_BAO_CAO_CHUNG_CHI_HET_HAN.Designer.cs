@@ -73,6 +73,8 @@
             // 
             // m_cmd_refresh
             // 
+            this.m_cmd_refresh.Appearance.ForeColor = System.Drawing.Color.Maroon;
+            this.m_cmd_refresh.Appearance.Options.UseForeColor = true;
             this.m_cmd_refresh.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_refresh.Image")));
             this.m_cmd_refresh.Location = new System.Drawing.Point(492, 5);
             this.m_cmd_refresh.Name = "m_cmd_refresh";
@@ -87,7 +89,7 @@
             this.m_cmd_hien_thi.Appearance.BackColor2 = System.Drawing.Color.Maroon;
             this.m_cmd_hien_thi.Appearance.BorderColor = System.Drawing.Color.Maroon;
             this.m_cmd_hien_thi.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.m_cmd_hien_thi.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.m_cmd_hien_thi.Appearance.ForeColor = System.Drawing.Color.Maroon;
             this.m_cmd_hien_thi.Appearance.Options.UseBackColor = true;
             this.m_cmd_hien_thi.Appearance.Options.UseBorderColor = true;
             this.m_cmd_hien_thi.Appearance.Options.UseFont = true;
